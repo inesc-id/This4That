@@ -1,0 +1,60 @@
+2017-03-08 19:17:16,463 DEBUG InitServerInstance 64 
+ [Debug Message] - Valid Hostname: [localhost] Port: [4001]
+2017-03-08 19:18:11,581 DEBUG InitServerInstance 64 
+ [Debug Message] - Valid Hostname: [localhost] Port: [4001]
+2017-03-08 19:20:32,911 DEBUG InitServerInstance 64 
+ [Debug Message] - Valid Hostname: [localhost] Port: [4001]
+2017-03-08 19:20:34,052 DEBUG InitServerInstance 74 
+ [Debug Message] - ServerManager: [tcp://localhost:4000/ServerManager]
+2017-03-08 19:23:00,205 DEBUG InitServerInstance 64 
+ [Debug Message] - Valid Hostname: [localhost] Port: [4001]
+2017-03-08 19:23:23,749 DEBUG InitServerInstance 74 
+ [Debug Message] - ServerManager: [tcp://localhost:4000/ServerManager]
+2017-03-08 22:36:43,978 DEBUG InitServerInstance 64 
+ [Debug Message] - Valid Hostname: [localhost] Port: [4001]
+2017-03-08 22:36:48,753 DEBUG InitServerInstance 74 
+ [Debug Message] - ServerManager: [tcp://localhost:4000/ServerManager]
+2017-03-08 23:44:12,835 DEBUG StartInstances 87 
+ [Debug Message] - Valid Hostname: [localhost] Port: [4001]
+2017-03-08 23:44:16,628 DEBUG ConnectServerManager 64 
+ [Debug Message] - ServerManager: [tcp://localhost:4000/ServerManager]
+2017-03-09 10:42:03,006 DEBUG StartConnectRemoteIntance 130 
+ [Debug Message] - Valid Hostname: [localhost] Port: [4001]
+2017-03-09 10:42:03,084 DEBUG StartConnectRemoteIntance 134 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-09 10:42:07,162 ERROR ConnectServerManager 36 
+ [Debug Message] - No connection could be made because the target machine actively refused it 127.0.0.1:4000
+2017-03-09 10:42:07,162 ERROR ConnectServerManager 37 
+ [Debug Message] - Cannot connect TaskCreator to ServerManager: [tcp://localhost:4000/ServerManager
+2017-03-09 10:43:34,245 DEBUG StartConnectRemoteIntance 130 
+ [Debug Message] - Valid Hostname: [localhost] Port: [4001]
+2017-03-09 10:43:34,288 DEBUG StartConnectRemoteIntance 134 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-09 10:43:35,332 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:4000/ServerManager]
+2017-03-09 10:46:48,293 DEBUG StartConnectRemoteIntance 129 
+ [Debug Message] - Valid Hostname: [localhost] Port: [4001]
+2017-03-09 10:46:48,321 DEBUG StartConnectRemoteIntance 133 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-09 10:46:49,353 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:4000/ServerManager]
+2017-03-09 10:48:01,506 DEBUG StartConnectRemoteIntance 129 
+ [Debug Message] - Valid Hostname: [localhost] Port: [4001]
+2017-03-09 10:48:01,554 DEBUG StartConnectRemoteIntance 133 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-09 10:48:02,593 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:4000/ServerManager]
+2017-03-09 10:48:11,878 DEBUG StartConnectRemoteIntance 129 
+ [Debug Message] - Valid Hostname: [localhost] Port: [4002]
+2017-03-09 10:48:11,900 ERROR StartConnectRemoteIntance 141 
+ [Debug Message] - The channel 'tcp' is already registered.
+2017-03-09 10:48:38,132 DEBUG StartConnectRemoteIntance 129 
+ [Debug Message] - Valid Hostname: [localhost] Port: [4001]
+2017-03-09 10:48:38,179 DEBUG StartConnectRemoteIntance 133 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-09 10:48:39,210 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:4000/ServerManager]
+2017-03-09 10:48:39,210 DEBUG StartConnectRemoteIntance 129 
+ [Debug Message] - Valid Hostname: [localhost] Port: [4003]
+2017-03-09 10:48:39,225 ERROR StartConnectRemoteIntance 141 
+ [Debug Message] - The channel 'tcp' is already registered.

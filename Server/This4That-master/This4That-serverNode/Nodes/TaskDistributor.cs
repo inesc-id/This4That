@@ -1,0 +1,42 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using This4That_library;
+
+namespace This4That_serverNode.Nodes
+{
+    public class TaskDistributor : Node, ITaskDistributor
+    {
+        public TaskDistributor(string hostName, int port, string name) : base(hostName, port, name)
+        {
+
+        }
+
+        /// <summary>
+        /// Get Remote reference to Server Manager.
+        /// </summary>
+        /// <param name="serverMgrURL"></param>
+        /// <returns></returns>
+        public override bool ConnectServerManager(string serverMgrURL)
+        {
+            try
+            {
+                this.ServerMgr = (IServerManager)Activator.GetObject(typeof(IServerManager), serverMgrURL);
+                if (!this.ServerMgr.RegisterTaskDistributorNode($"tcp://{this.HostName}:{this.Port}/{Global.TASK_DISTRIBUTOR_NAME}"))
+                {
+                    Program.Log.Error("Cannot connect to Server Manager!");
+                }
+                Program.Log.DebugFormat("ServerManager: [{0}]", serverMgrURL);
+                Console.WriteLine("Connected to Server Manager!");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Program.Log.Error(ex.Message);
+                Program.Log.ErrorFormat("Cannot connect TaskCreator to ServerManager: [{0}", serverMgrURL);
+                return false;
+            }
+        }
+    }
+}
