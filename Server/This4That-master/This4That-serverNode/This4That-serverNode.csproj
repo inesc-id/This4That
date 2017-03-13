@@ -48,6 +48,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Nodes\Node.cs" />
+    <Compile Include="Nodes\ReportAggregator.cs" />
+    <Compile Include="Nodes\IncentiveEngine.cs" />
+    <Compile Include="Nodes\Repository.cs" />
     <Compile Include="Nodes\TaskDistributor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

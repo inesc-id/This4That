@@ -1,4 +1,3 @@
 <Config>
-  <ServerManager hostName="localhost" port="4000"/>
-  <TaskCreator hostName="localhost" port="4001"/>
+  <ServerManager hostName="localhost" port="5000"/>
 </Config>

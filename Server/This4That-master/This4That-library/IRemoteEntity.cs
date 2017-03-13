@@ -14,15 +14,33 @@ namespace This4That_library
     {
         bool RegisterTaskCreatorNode(string tcpUrl);
         bool RegisterTaskDistributorNode(string tcpUrl);
-
+        bool RegisterReportAggregatorNode(string tcpUrl);
+        bool RegisterIncentiveEngineNode(string tcpUrl);
+        bool RegisterRepositoryNode(string tcpUrl);
     }
 
     public interface ITaskCreator : IRemoteEntity
     {
-
+        bool CreateTask(string encryptedTask, out int taskID);
     }
 
     public interface ITaskDistributor : IRemoteEntity
+    {
+
+    }
+
+    public interface IReportAggregator : IRemoteEntity
+    {
+
+    }
+
+    public interface IIncentiveEngine : IRemoteEntity
+    {
+        bool CalcTaskCost(string taskSpec, out object incentiveValue);
+        bool IsTaskPaid();
+    }
+
+    public interface IRepository : IRemoteEntity
     {
 
     }

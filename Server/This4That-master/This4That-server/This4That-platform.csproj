@@ -111,7 +111,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config\App_Start\WebApiConfig.cs" />
-    <Compile Include="Nodes\ServerManager.cs" />
+    <Compile Include="Handlers\APIRequestHandler.cs" />
+    <Compile Include="ServerManager.cs" />
     <Compile Include="_ServiceLayer\ServerAPIController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -119,7 +120,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Library\" />
     <Folder Include="_SecurityLayer\" />
   </ItemGroup>
   <ItemGroup>

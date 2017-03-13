@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.Remoting;
 using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Tcp;
-using System.Web;
 using System.Xml;
 using This4That_library;
 
@@ -15,7 +12,7 @@ namespace This4That_serverNode.Nodes
         string hostName;
         int port;
         string name;
-        IServerManager serverMgr;
+        IServerManager remoteServerMgr;
 
         #region PROPERTIES
         public string HostName
@@ -56,16 +53,16 @@ namespace This4That_serverNode.Nodes
             }
         }
 
-        public IServerManager ServerMgr
+        public IServerManager RemoteServerMgr
         {
             get
             {
-                return serverMgr;
+                return remoteServerMgr;
             }
 
             set
             {
-                serverMgr = value;
+                remoteServerMgr = value;
             }
         }
         #endregion
@@ -85,28 +82,39 @@ namespace This4That_serverNode.Nodes
         /// <returns></returns>
         public abstract bool ConnectServerManager(string serverMgrURL);
 
-        private bool LoadXMLConfiguration(string configXMLFileName, string configXSDFileName, string targetNS, out XmlDocument xmlDoc)
+        /// <summary>
+        /// Register Remote Object.
+        /// </summary>
+        /// <param name="networkNode"></param>
+        /// <returns></returns>
+        public bool StartConnectRemoteIntance(string serverMgrURL)
         {
-            xmlDoc = null;
+            TcpServerChannel channel;
             try
             {
-                XMLParser xmlParser = null;
-                if (String.IsNullOrEmpty(configXMLFileName))
+                if (String.IsNullOrEmpty(this.HostName) || this.Port < 0)
                 {
-                    Program.Log.ErrorFormat("Invalid XML File Name: [{0}]", configXMLFileName);
+                    Program.Log.ErrorFormat("Invalid Hostname: [{0}] or Port: [{1}]", this.HostName, this.Port);
                     return false;
                 }
-                xmlParser = new XMLParser(configXMLFileName, configXSDFileName, targetNS);
-                if (!xmlParser.ValidateXML())
+                //register remote instance
+                Program.Log.DebugFormat("Valid Hostname: [{0}] Port: [{1}]", this.HostName, this.Port);
+                channel = new TcpServerChannel(this.Name, this.Port);
+                ChannelServices.RegisterChannel(channel, false);
+                RemotingServices.Marshal(this, this.Name, this.GetType());
+                Program.Log.DebugFormat("Node: [{0}] IS RUNNING!", this.Name);
+                //connect remote instance to server manager
+                if (!this.ConnectServerManager(serverMgrURL))
                     return false;
-                xmlDoc = xmlParser.XmlDoc;
                 return true;
             }
             catch (Exception ex)
             {
-                Program.Log.ErrorFormat(ex.Message);
+                Program.Log.Error(ex.Message);
                 return false;
             }
         }
+
+        
     }
 }

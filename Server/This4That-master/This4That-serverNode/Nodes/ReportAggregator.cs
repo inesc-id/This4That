@@ -6,9 +6,9 @@ using This4That_library;
 
 namespace This4That_serverNode.Nodes
 {
-    public class TaskDistributor : Node, ITaskDistributor
+    public class ReportAggregator : Node, IReportAggregator
     {
-        public TaskDistributor(string hostName, int port, string name) : base(hostName, port, name)
+        public ReportAggregator(string hostName, int port, string name) : base(hostName, port, name)
         {
 
         }
@@ -23,12 +23,12 @@ namespace This4That_serverNode.Nodes
             try
             {
                 this.RemoteServerMgr = (IServerManager)Activator.GetObject(typeof(IServerManager), serverMgrURL);
-                if (!this.RemoteServerMgr.RegisterTaskDistributorNode($"tcp://{this.HostName}:{this.Port}/{Global.TASK_DISTRIBUTOR_NAME}"))
+                if (!this.RemoteServerMgr.RegisterReportAggregatorNode($"tcp://{this.HostName}:{this.Port}/{Global.REPORT_AGGREGATOR_NAME}"))
                 {
                     Program.Log.Error("Cannot connect to Server Manager!");
                 }
                 Program.Log.DebugFormat("ServerManager: [{0}]", serverMgrURL);
-                Console.WriteLine("TASK DISTRIBUTOR");
+                Console.WriteLine("REPORT AGGREGATOR");
                 Console.WriteLine($"HOST: {this.HostName} PORT: {this.Port} CONNECTED to ServerManager");
                 Console.WriteLine("----------------------------");
                 return true;
@@ -36,7 +36,7 @@ namespace This4That_serverNode.Nodes
             catch (Exception ex)
             {
                 Program.Log.Error(ex.Message);
-                Program.Log.ErrorFormat("Cannot connect Task Distributor to ServerManager: [{0}", serverMgrURL);
+                Program.Log.ErrorFormat("Cannot connect Report Aggregator to ServerManager: [{0}", serverMgrURL);
                 return false;
             }
         }

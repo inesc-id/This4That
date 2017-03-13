@@ -28,53 +28,48 @@ namespace This4That_serverNode
 
         static void Main(string[] args)
         {
-            XmlDocument xmlDoc;
+            XMLParser xmlParser;
+            string errorMessage = null;
+
             TaskCreator taskCreator;
             TaskDistributor taskDistributor;
+            ReportAggregator reportAggregator;
+            IncentiveEngine incentiveEngine;
+            Repository repository;
+
             Console.WriteLine("Press a Key to Start...");
             Console.ReadLine();
-            if (!LoadXMLConfiguration(@"..\..\Config\configInstances.xml", @"..\..\Config\configInstances.xsd", "This4ThatNS", out xmlDoc))
+            //parsing config file
+            xmlParser = new XMLParser(@"..\..\Config\configInstances.xml", @"..\..\Config\configInstances.xsd", "This4ThatNS");
+            if (!xmlParser.LoadXMLConfiguration(ref errorMessage))
+            {
+                Log.Error(errorMessage);
                 return;
-            if (!StartInstances(xmlDoc, out taskCreator, out taskDistributor))
+            }
+            else
+                Log.Debug(errorMessage);
+                
+            if (!StartInstances(xmlParser.XmlDoc, out taskCreator, out taskDistributor, out reportAggregator, out incentiveEngine, out repository))
                 return;
 
             Console.ReadLine();
         }
 
 
-        private static bool LoadXMLConfiguration(string configXMLFileName, string configXSDFileName, string targetNS, out XmlDocument xmlDoc)
-        {
-            xmlDoc = null;
-            try
-            {
-                XMLParser xmlParser = null;
-                if (String.IsNullOrEmpty(configXMLFileName))
-                {
-                    Log.ErrorFormat("Invalid XML File Name: [{0}]", configXMLFileName);
-                    return false;
-                }
-                xmlParser = new XMLParser(configXMLFileName, configXSDFileName, targetNS);
-                if (!xmlParser.ValidateXML())
-                    return false;
-                xmlDoc = xmlParser.XmlDoc;
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Log.ErrorFormat(ex.Message);
-                return false;
-            }
-        }
-
-        private static bool StartInstances(XmlDocument xmlDoc, out TaskCreator taskCreator, out TaskDistributor taskDistributor)
+        private static bool StartInstances(XmlDocument xmlDoc, out TaskCreator taskCreator, out TaskDistributor taskDistributor, 
+                                           out ReportAggregator reportAggregator, out IncentiveEngine incentiveEngine, out Repository repository)
         {
             taskCreator = null;
             taskDistributor = null;
+            reportAggregator = null;
+            incentiveEngine = null;
+            repository = null;
             int port;
             string serverMgrURL;
             XmlNode xmlNode;
             try
             {
+                
                 xmlNode = xmlDoc.GetElementsByTagName(Global.SERVER_MANAGER_NAME)[0];
                 if (xmlNode != null)
                 {
@@ -85,12 +80,15 @@ namespace This4That_serverNode
                     Program.Log.Error("Server Manager Parameters are not defined in the XML!");
                     return false;
                 }
+                Console.WriteLine("SERVER MANAGER");
+                Console.WriteLine(serverMgrURL);
+                Console.WriteLine("----------------------------");
                 xmlNode = xmlDoc.GetElementsByTagName(Global.TASK_CREATOR_NAME)[0];
                 if (xmlNode != null)
                 {
                     int.TryParse(xmlNode.Attributes["port"].Value, out port);
                     taskCreator = new TaskCreator(xmlNode.Attributes["hostName"].Value, port, Global.TASK_CREATOR_NAME);
-                    if (!StartConnectRemoteIntance(taskCreator, serverMgrURL))
+                    if (!taskCreator.StartConnectRemoteIntance(serverMgrURL))
                         return false;                   
                 }
                 xmlNode = xmlDoc.GetElementsByTagName(Global.TASK_DISTRIBUTOR_NAME)[0];
@@ -98,7 +96,31 @@ namespace This4That_serverNode
                 {
                     int.TryParse(xmlNode.Attributes["port"].Value, out port);
                     taskDistributor = new TaskDistributor(xmlNode.Attributes["hostName"].Value, port, Global.TASK_DISTRIBUTOR_NAME);
-                    if (!StartConnectRemoteIntance(taskDistributor, serverMgrURL))
+                    if (!taskDistributor.StartConnectRemoteIntance(serverMgrURL))
+                        return false;
+                }
+                xmlNode = xmlDoc.GetElementsByTagName(Global.REPORT_AGGREGATOR_NAME)[0];
+                if (xmlNode != null)
+                {
+                    int.TryParse(xmlNode.Attributes["port"].Value, out port);
+                    reportAggregator = new ReportAggregator(xmlNode.Attributes["hostName"].Value, port, Global.REPORT_AGGREGATOR_NAME);
+                    if (!reportAggregator.StartConnectRemoteIntance(serverMgrURL))
+                        return false;
+                }
+                xmlNode = xmlDoc.GetElementsByTagName(Global.INCENTIVE_ENGINE_NAME)[0];
+                if (xmlNode != null)
+                {
+                    int.TryParse(xmlNode.Attributes["port"].Value, out port);
+                    incentiveEngine = new IncentiveEngine(xmlNode.Attributes["hostName"].Value, port, Global.INCENTIVE_ENGINE_NAME);
+                    if (!incentiveEngine.StartConnectRemoteIntance(serverMgrURL))
+                        return false;
+                }
+                xmlNode = xmlDoc.GetElementsByTagName(Global.REPOSITORY_NAME)[0];
+                if (xmlNode != null)
+                {
+                    int.TryParse(xmlNode.Attributes["port"].Value, out port);
+                    repository = new Repository(xmlNode.Attributes["hostName"].Value, port, Global.REPOSITORY_NAME);
+                    if (!repository.StartConnectRemoteIntance(serverMgrURL))
                         return false;
                 }
                 return true;
@@ -110,37 +132,5 @@ namespace This4That_serverNode
             }
         }
 
-        /// <summary>
-        /// Register Remote Object.
-        /// </summary>
-        /// <param name="networkNode"></param>
-        /// <returns></returns>
-        private static bool StartConnectRemoteIntance(Node networkNode, string serverMgrURL)
-        {
-            TcpChannel channel;
-            try
-            {
-                if (String.IsNullOrEmpty(networkNode.HostName) || networkNode.Port < 0)
-                {
-                    Log.ErrorFormat("Invalid Hostname: [{0}] or Port: [{1}]", networkNode.HostName, networkNode.Port);
-                    return false;
-                }
-                //register remote instance
-                Log.DebugFormat("Valid Hostname: [{0}] Port: [{1}]", networkNode.HostName, networkNode.Port);
-                channel = new TcpChannel(networkNode.Port);
-                ChannelServices.RegisterChannel(channel, false);
-                RemotingServices.Marshal(networkNode, networkNode.Name, networkNode.GetType());
-                Log.DebugFormat("Node: [{0}] IS RUNNING!", networkNode.Name);
-                //connect remote instance to server manager
-                if (!networkNode.ConnectServerManager(serverMgrURL))
-                    return false;
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Log.Error(ex.Message);
-                return false;
-            }
-        }
     }
 }

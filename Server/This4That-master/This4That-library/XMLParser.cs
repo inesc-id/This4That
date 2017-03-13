@@ -52,7 +52,29 @@ namespace This4That_library
             this.targetNS = targetNS;
         }
 
-        public bool ValidateXML()
+        public bool LoadXMLConfiguration(ref string errorMessage)
+        {
+            xmlDoc = null;
+            try
+            {
+                if (String.IsNullOrEmpty(this.XmlFileName))
+                {
+                    errorMessage = "Invalid XML file name!";
+                    return false;
+                }
+                if (!ValidateXML(ref errorMessage))
+                    return false;
+                errorMessage = "Valid XML File!";
+                return true;
+            }
+            catch (Exception ex)
+            {
+                errorMessage = ex.Message;
+                return false;
+            }
+        }
+
+        private bool ValidateXML(ref string errorMessage)
         {
             XmlReaderSettings settings;
             XmlReader reader;
@@ -73,8 +95,9 @@ namespace This4That_library
                 this.xmlDoc = document;
                 return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                errorMessage = ex.Message;
                 return false;
             }
         }
@@ -90,6 +113,5 @@ namespace This4That_library
             }
         }
 
-        
     }
 }

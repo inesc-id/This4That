@@ -2,9 +2,9 @@
 using System;
 using System.Diagnostics;
 using System.Reflection;
+using System.Web;
 using System.Web.Http;
 using This4That_platform.App_Start;
-using This4That_platform.Nodes;
 
 namespace This4That_platform
 {
@@ -21,22 +21,22 @@ namespace This4That_platform
             }
         }
 
-        public static ServerManager GetCreateServerManager()
+        public static ServerManager GetCreateServerManager(HttpServerUtility server)
         {
             if (serverMgr == null)
             {
                 serverMgr = new ServerManager();
             }
+            serverMgr.LoadServerInstance(server.MapPath("~/Config/configInstances.xml"), server.MapPath("~/Config/configInstances.xsd"),
+                                          "This4ThatNS");
+
             return serverMgr;
         }
 
         protected void Application_Start(object sender, EventArgs e)
         {
             GlobalConfiguration.Configure(WebApiConfig.Configure);
-            GetCreateServerManager();
-            
-            serverMgr.LoadServerInstance(Server.MapPath("~/Config/configInstances.xml"), Server.MapPath("~/Config/configInstances.xsd"),
-                                          "This4ThatNS");
+            GetCreateServerManager(Server);
             
         }
 

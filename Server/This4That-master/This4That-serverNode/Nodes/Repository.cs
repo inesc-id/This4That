@@ -6,12 +6,13 @@ using This4That_library;
 
 namespace This4That_serverNode.Nodes
 {
-    public class TaskDistributor : Node, ITaskDistributor
+    public class Repository : Node, IRepository
     {
-        public TaskDistributor(string hostName, int port, string name) : base(hostName, port, name)
+        public Repository(string hostName, int port, string name) : base(hostName, port, name)
         {
 
         }
+
 
         /// <summary>
         /// Get Remote reference to Server Manager.
@@ -23,12 +24,12 @@ namespace This4That_serverNode.Nodes
             try
             {
                 this.RemoteServerMgr = (IServerManager)Activator.GetObject(typeof(IServerManager), serverMgrURL);
-                if (!this.RemoteServerMgr.RegisterTaskDistributorNode($"tcp://{this.HostName}:{this.Port}/{Global.TASK_DISTRIBUTOR_NAME}"))
+                if (!this.RemoteServerMgr.RegisterRepositoryNode($"tcp://{this.HostName}:{this.Port}/{Global.REPOSITORY_NAME}"))
                 {
                     Program.Log.Error("Cannot connect to Server Manager!");
                 }
                 Program.Log.DebugFormat("ServerManager: [{0}]", serverMgrURL);
-                Console.WriteLine("TASK DISTRIBUTOR");
+                Console.WriteLine("REPOSITORY");
                 Console.WriteLine($"HOST: {this.HostName} PORT: {this.Port} CONNECTED to ServerManager");
                 Console.WriteLine("----------------------------");
                 return true;
@@ -36,9 +37,10 @@ namespace This4That_serverNode.Nodes
             catch (Exception ex)
             {
                 Program.Log.Error(ex.Message);
-                Program.Log.ErrorFormat("Cannot connect Task Distributor to ServerManager: [{0}", serverMgrURL);
+                Program.Log.ErrorFormat("Cannot connect Repository to ServerManager: [{0}", serverMgrURL);
                 return false;
             }
         }
+
     }
 }

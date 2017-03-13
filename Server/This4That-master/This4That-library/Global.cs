@@ -13,5 +13,6 @@ namespace This4That_library
         public static string TASK_DISTRIBUTOR_NAME = "TaskDistributor";
         public static string INCENTIVE_ENGINE_NAME = "IncentiveEngine";
         public static string REPORT_AGGREGATOR_NAME = "ReportAggregator";
+        public static string REPOSITORY_NAME = "Repository";
     }
 }
