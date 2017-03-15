@@ -2235,3 +2235,323 @@
  [Debug Message] - Encrypted Task: {
 	id: 1
 }
+2017-03-14 17:44:25,470 DEBUG LoadServerInstance 107 
+ [Debug Message] - Valid XML File!
+2017-03-14 17:44:25,632 DEBUG RegisterServerManagerNode 140 
+ [Debug Message] - ServerManager INITIATED!
+2017-03-14 17:44:25,633 DEBUG LoadServerInstance 111 
+ [Debug Message] - ServerManager LOADED!
+2017-03-14 17:44:45,480 DEBUG RegisterTaskCreatorNode 166 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-03-14 17:44:45,496 DEBUG RegisterTaskDistributorNode 186 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-03-14 17:44:45,512 DEBUG RegisterReportAggregatorNode 204 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-03-14 17:44:45,512 DEBUG RegisterIncentiveEngineNode 216 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-03-14 17:44:45,512 DEBUG RegisterRepositoryNode 228 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-03-14 17:45:07,092 DEBUG LoadServerInstance 107 
+ [Debug Message] - Valid XML File!
+2017-03-14 17:45:07,186 ERROR RegisterServerManagerNode 137 
+ [Debug Message] - Only one usage of each socket address (protocol/network address/port) is normally permitted
+2017-03-14 17:46:10,714 DEBUG CalcCrowdSensingTaskCost 23 
+ [Debug Message] - Encrypted Task: 
+2017-03-14 17:46:14,812 ERROR CalcCrowdSensingTaskCost 24 
+ [Debug Message] - No connection could be made because the target machine actively refused it 127.0.0.1:5004
+2017-03-14 17:47:44,608 DEBUG LoadServerInstance 107 
+ [Debug Message] - Valid XML File!
+2017-03-14 17:47:44,631 DEBUG RegisterServerManagerNode 140 
+ [Debug Message] - ServerManager INITIATED!
+2017-03-14 17:47:44,631 DEBUG LoadServerInstance 111 
+ [Debug Message] - ServerManager LOADED!
+2017-03-14 17:48:52,235 DEBUG LoadServerInstance 107 
+ [Debug Message] - Valid XML File!
+2017-03-14 17:48:52,287 DEBUG RegisterServerManagerNode 140 
+ [Debug Message] - ServerManager INITIATED!
+2017-03-14 17:48:52,289 DEBUG LoadServerInstance 111 
+ [Debug Message] - ServerManager LOADED!
+2017-03-14 17:48:52,924 DEBUG RegisterTaskCreatorNode 166 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-03-14 17:48:52,938 DEBUG RegisterTaskDistributorNode 186 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-03-14 17:48:52,945 DEBUG RegisterReportAggregatorNode 204 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-03-14 17:48:52,947 DEBUG RegisterIncentiveEngineNode 216 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-03-14 17:48:52,947 DEBUG RegisterRepositoryNode 228 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-03-14 17:49:02,598 DEBUG LoadServerInstance 107 
+ [Debug Message] - Valid XML File!
+2017-03-14 17:49:02,676 ERROR RegisterServerManagerNode 137 
+ [Debug Message] - Only one usage of each socket address (protocol/network address/port) is normally permitted
+2017-03-14 17:49:12,145 DEBUG CalcCrowdSensingTaskCost 23 
+ [Debug Message] - Encrypted Task: 
+2017-03-14 17:49:13,417 DEBUG CalcCrowdSensingTaskCost 34 
+ [Debug Message] - Incentive Value: [1]
+2017-03-14 17:50:09,986 DEBUG RegisterTaskCreatorNode 166 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-03-14 17:50:09,986 DEBUG RegisterTaskDistributorNode 186 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-03-14 17:50:10,001 DEBUG RegisterReportAggregatorNode 204 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-03-14 17:50:10,001 DEBUG RegisterIncentiveEngineNode 216 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-03-14 17:50:10,001 DEBUG RegisterRepositoryNode 228 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-03-14 17:50:45,275 DEBUG LoadServerInstance 107 
+ [Debug Message] - Valid XML File!
+2017-03-14 17:50:45,379 ERROR RegisterServerManagerNode 137 
+ [Debug Message] - Only one usage of each socket address (protocol/network address/port) is normally permitted
+2017-03-14 17:50:55,132 DEBUG CalcCrowdSensingTaskCost 23 
+ [Debug Message] - Encrypted Task: 
+2017-03-14 17:51:00,184 ERROR CalcCrowdSensingTaskCost 24 
+ [Debug Message] - No connection could be made because the target machine actively refused it 127.0.0.1:5004
+2017-03-14 17:53:37,779 DEBUG LoadServerInstance 116 
+ [Debug Message] - Valid XML File!
+2017-03-14 17:53:37,821 DEBUG RegisterServerManagerNode 149 
+ [Debug Message] - ServerManager INITIATED!
+2017-03-14 17:53:37,823 DEBUG LoadServerInstance 120 
+ [Debug Message] - ServerManager LOADED!
+2017-03-14 17:53:39,558 DEBUG RegisterTaskCreatorNode 176 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-03-14 17:53:39,575 DEBUG RegisterTaskDistributorNode 196 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-03-14 17:53:39,575 DEBUG RegisterReportAggregatorNode 214 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-03-14 17:53:39,575 DEBUG RegisterIncentiveEngineNode 226 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-03-14 17:53:39,590 DEBUG RegisterRepositoryNode 238 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-03-14 17:55:13,098 DEBUG CalcCrowdSensingTaskCost 23 
+ [Debug Message] - Encrypted Task: 
+2017-03-14 17:55:14,171 DEBUG CalcCrowdSensingTaskCost 34 
+ [Debug Message] - Incentive Value: [1]
+2017-03-14 17:56:37,836 DEBUG CalcCrowdSensingTaskCost 23 
+ [Debug Message] - Encrypted Task: 
+2017-03-14 17:56:42,867 ERROR CalcCrowdSensingTaskCost 24 
+ [Debug Message] - No connection could be made because the target machine actively refused it 127.0.0.1:5004
+2017-03-14 17:58:00,904 DEBUG LoadServerInstance 116 
+ [Debug Message] - Valid XML File!
+2017-03-14 17:58:00,951 DEBUG RegisterServerManagerNode 149 
+ [Debug Message] - ServerManager INITIATED!
+2017-03-14 17:58:00,958 DEBUG LoadServerInstance 120 
+ [Debug Message] - ServerManager LOADED!
+2017-03-14 17:58:12,532 DEBUG RegisterTaskCreatorNode 176 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-03-14 17:58:12,547 DEBUG RegisterTaskDistributorNode 196 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-03-14 17:58:12,547 DEBUG RegisterReportAggregatorNode 214 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-03-14 17:58:12,563 DEBUG RegisterIncentiveEngineNode 226 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-03-14 17:58:12,563 DEBUG RegisterRepositoryNode 238 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-03-14 17:58:47,114 DEBUG CalcCrowdSensingTaskCost 23 
+ [Debug Message] - Encrypted Task: 
+2017-03-14 17:58:51,162 ERROR CalcCrowdSensingTaskCost 24 
+ [Debug Message] - No connection could be made because the target machine actively refused it 127.0.0.1:5004
+2017-03-14 17:59:21,279 DEBUG LoadServerInstance 116 
+ [Debug Message] - Valid XML File!
+2017-03-14 17:59:21,333 DEBUG RegisterServerManagerNode 149 
+ [Debug Message] - ServerManager INITIATED!
+2017-03-14 17:59:21,336 DEBUG LoadServerInstance 120 
+ [Debug Message] - ServerManager LOADED!
+2017-03-14 18:00:17,251 ERROR CalcCrowdSensingTaskCost 20 
+ [Debug Message] - Unable to cast object of type 'This4That_library.Models.Domain.TriggerSensor' to type 'This4That_library.Models.Domain.GPSSensor'.
+2017-03-14 18:00:33,367 DEBUG RegisterTaskCreatorNode 176 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-03-14 18:00:33,383 DEBUG RegisterTaskDistributorNode 196 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-03-14 18:00:33,383 DEBUG RegisterReportAggregatorNode 214 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-03-14 18:00:33,398 DEBUG RegisterIncentiveEngineNode 226 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-03-14 18:00:33,398 DEBUG RegisterRepositoryNode 238 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-03-14 18:01:33,141 DEBUG LoadServerInstance 116 
+ [Debug Message] - Valid XML File!
+2017-03-14 18:01:33,204 DEBUG RegisterServerManagerNode 149 
+ [Debug Message] - ServerManager INITIATED!
+2017-03-14 18:01:33,206 DEBUG LoadServerInstance 120 
+ [Debug Message] - ServerManager LOADED!
+2017-03-14 18:01:36,182 DEBUG RegisterTaskCreatorNode 176 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-03-14 18:01:36,200 DEBUG RegisterTaskDistributorNode 196 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-03-14 18:01:36,205 DEBUG RegisterReportAggregatorNode 214 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-03-14 18:01:36,211 DEBUG RegisterIncentiveEngineNode 226 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-03-14 18:01:36,217 DEBUG RegisterRepositoryNode 238 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-03-14 18:01:59,416 ERROR CalcCrowdSensingTaskCost 20 
+ [Debug Message] - Could not create an instance of type This4That_library.Models.Domain.TriggerSensor. Type is an interface or abstract class and cannot be instantiated. Path 'encryptedTask.trigger.sensor.type', line 9, position 12.
+2017-03-14 18:08:36,920 DEBUG LoadServerInstance 116 
+ [Debug Message] - Valid XML File!
+2017-03-14 18:08:36,973 DEBUG RegisterServerManagerNode 149 
+ [Debug Message] - ServerManager INITIATED!
+2017-03-14 18:08:36,978 DEBUG LoadServerInstance 120 
+ [Debug Message] - ServerManager LOADED!
+2017-03-14 18:08:43,037 DEBUG RegisterTaskCreatorNode 176 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-03-14 18:08:43,053 DEBUG RegisterTaskDistributorNode 196 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-03-14 18:08:43,053 DEBUG RegisterReportAggregatorNode 214 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-03-14 18:08:43,053 DEBUG RegisterIncentiveEngineNode 226 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-03-14 18:08:43,069 DEBUG RegisterRepositoryNode 238 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-03-14 18:09:06,039 ERROR CalcCrowdSensingTaskCost 20 
+ [Debug Message] - Could not create an instance of type This4That_library.Models.Domain.TriggerSensor. Type is an interface or abstract class and cannot be instantiated. Path 'encryptedTask.trigger.sensor.type', line 9, position 12.
+2017-03-14 18:28:40,962 DEBUG LoadServerInstance 116 
+ [Debug Message] - Valid XML File!
+2017-03-14 18:28:41,012 DEBUG RegisterServerManagerNode 149 
+ [Debug Message] - ServerManager INITIATED!
+2017-03-14 18:28:41,014 DEBUG LoadServerInstance 120 
+ [Debug Message] - ServerManager LOADED!
+2017-03-14 18:28:41,612 DEBUG RegisterTaskCreatorNode 176 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-03-14 18:28:41,629 DEBUG RegisterTaskDistributorNode 196 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-03-14 18:28:41,637 DEBUG RegisterReportAggregatorNode 214 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-03-14 18:28:41,646 DEBUG RegisterIncentiveEngineNode 226 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-03-14 18:28:41,646 DEBUG RegisterRepositoryNode 238 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-03-14 18:28:56,587 DEBUG CalcCrowdSensingTaskCost 23 
+ [Debug Message] - Encrypted Task: 
+2017-03-14 18:28:57,631 DEBUG CalcCrowdSensingTaskCost 34 
+ [Debug Message] - Incentive Value: [1]
+2017-03-14 18:29:40,478 DEBUG CalcCrowdSensingTaskCost 23 
+ [Debug Message] - Encrypted Task: 
+2017-03-14 18:29:40,493 DEBUG CalcCrowdSensingTaskCost 34 
+ [Debug Message] - Incentive Value: [1]
+2017-03-14 18:30:07,557 DEBUG CalcCrowdSensingTaskCost 23 
+ [Debug Message] - Encrypted Task: 
+2017-03-14 18:30:07,588 DEBUG CalcCrowdSensingTaskCost 34 
+ [Debug Message] - Incentive Value: [1]
+2017-03-15 17:26:57,957 DEBUG LoadServerInstance 131 
+ [Debug Message] - Valid XML File!
+2017-03-15 17:26:58,067 DEBUG RegisterServerManagerNode 166 
+ [Debug Message] - ServerManager INITIATED!
+2017-03-15 17:26:58,071 DEBUG LoadServerInstance 137 
+ [Debug Message] - ServerManager LOADED!
+2017-03-15 17:27:00,935 DEBUG RegisterTaskCreatorNode 193 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-03-15 17:27:00,951 DEBUG RegisterTaskDistributorNode 213 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-03-15 17:27:00,951 DEBUG RegisterReportAggregatorNode 231 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-03-15 17:27:00,966 DEBUG RegisterIncentiveEngineNode 243 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-03-15 17:27:00,982 DEBUG RegisterRepositoryNode 255 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-03-15 17:27:36,387 ERROR GetEncryptedTask 21 
+ [Debug Message] - Unexpected character encountered while parsing value: {. Path 'encryptedTask', line 3, position 19.
+2017-03-15 17:28:51,327 ERROR GetEncryptedTask 21 
+ [Debug Message] - Unexpected character encountered while parsing value: {. Path 'encryptedTask', line 3, position 20.
+2017-03-15 17:30:51,441 ERROR GetEncryptedTask 21 
+ [Debug Message] - Unexpected character encountered while parsing value: {. Path 'encryptedTask', line 3, position 20.
+2017-03-15 17:31:58,977 ERROR GetEncryptedTask 21 
+ [Debug Message] - Unexpected character encountered while parsing value: {. Path 'encryptedTask', line 3, position 19.
+2017-03-15 17:34:37,754 DEBUG LoadServerInstance 131 
+ [Debug Message] - Valid XML File!
+2017-03-15 17:34:37,873 DEBUG RegisterServerManagerNode 166 
+ [Debug Message] - ServerManager INITIATED!
+2017-03-15 17:34:37,876 DEBUG LoadServerInstance 137 
+ [Debug Message] - ServerManager LOADED!
+2017-03-15 17:34:42,398 DEBUG RegisterTaskCreatorNode 193 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-03-15 17:34:42,413 DEBUG RegisterTaskDistributorNode 213 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-03-15 17:34:42,429 DEBUG RegisterReportAggregatorNode 231 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-03-15 17:34:42,429 DEBUG RegisterIncentiveEngineNode 243 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-03-15 17:34:42,445 DEBUG RegisterRepositoryNode 255 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-03-15 17:34:58,882 ERROR GetEncryptedTask 21 
+ [Debug Message] - Unexpected character encountered while parsing value: {. Path 'encryptedTask', line 3, position 19.
+2017-03-15 17:38:35,392 DEBUG LoadServerInstance 131 
+ [Debug Message] - Valid XML File!
+2017-03-15 17:38:35,445 DEBUG RegisterServerManagerNode 166 
+ [Debug Message] - ServerManager INITIATED!
+2017-03-15 17:38:35,446 DEBUG LoadServerInstance 137 
+ [Debug Message] - ServerManager LOADED!
+2017-03-15 17:38:37,657 DEBUG RegisterTaskCreatorNode 193 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-03-15 17:38:37,670 DEBUG RegisterTaskDistributorNode 213 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-03-15 17:38:37,676 DEBUG RegisterReportAggregatorNode 231 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-03-15 17:38:37,681 DEBUG RegisterIncentiveEngineNode 243 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-03-15 17:38:37,688 DEBUG RegisterRepositoryNode 255 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-03-15 17:38:50,323 DEBUG GetEncryptedTask 24 
+ [Debug Message] - User ID: [1234] Encrypted Task: encryptedTask==
+2017-03-15 17:38:56,825 ERROR CalcCrowdSensingTaskCost 22 
+ [Debug Message] - The method or operation is not implemented.
+2017-03-15 17:50:53,046 DEBUG LoadServerInstance 131 
+ [Debug Message] - Valid XML File!
+2017-03-15 17:50:53,115 DEBUG RegisterServerManagerNode 166 
+ [Debug Message] - ServerManager INITIATED!
+2017-03-15 17:50:53,151 DEBUG LoadServerInstance 137 
+ [Debug Message] - ServerManager LOADED!
+2017-03-15 17:50:55,550 DEBUG RegisterTaskCreatorNode 193 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-03-15 17:50:55,567 DEBUG RegisterTaskDistributorNode 213 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-03-15 17:50:55,574 DEBUG RegisterReportAggregatorNode 231 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-03-15 17:50:55,579 DEBUG RegisterIncentiveEngineNode 243 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-03-15 17:50:55,584 DEBUG RegisterRepositoryNode 255 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-03-15 17:51:24,928 ERROR GetEncryptedTask 21 
+ [Debug Message] - Unexpected character encountered while parsing value: {. Path 'encryptedTask', line 3, position 19.
+2017-03-15 17:51:40,493 DEBUG GetEncryptedTask 24 
+ [Debug Message] - User ID: [1234] Encrypted Task: encryptedTask==
+2017-03-15 17:51:42,831 DEBUG CalcCrowdSensingTaskCost 30 
+ [Debug Message] - Incentive Value: [1]
+2017-03-15 17:54:18,328 DEBUG GetEncryptedTask 24 
+ [Debug Message] - User ID: [1234] Encrypted Task: encryptedTask==
+2017-03-15 17:54:18,328 DEBUG CreateCrowdSensingTask 50 
+ [Debug Message] - Encrypted Task: This4That_library.Models.Integration.JSONEncryptedTaskDTO
+2017-03-15 17:55:33,368 DEBUG GetEncryptedTask 0 
+ [Debug Message] - User ID: [1234] Encrypted Task: encryptedTask==
+2017-03-15 17:55:33,368 DEBUG CreateCrowdSensingTask 0 
+ [Debug Message] - Encrypted Task: This4That_library.Models.Integration.JSONEncryptedTaskDTO
+2017-03-15 17:55:49,456 ERROR GetEncryptedTask 0 
+ [Debug Message] - After parsing a value an unexpected character was encountered: ". Path 'transactionId', line 4, position 1.
+2017-03-15 17:55:59,163 DEBUG GetEncryptedTask 0 
+ [Debug Message] - User ID: [1234] Encrypted Task: encryptedTask==
+2017-03-15 17:55:59,166 DEBUG CreateCrowdSensingTask 0 
+ [Debug Message] - Encrypted Task: This4That_library.Models.Integration.JSONEncryptedTaskDTO
+2017-03-15 17:56:00,287 ERROR CreateCrowdSensingTask 0 
+ [Debug Message] - Requested Service not found
+2017-03-15 17:59:21,801 DEBUG LoadServerInstance 131 
+ [Debug Message] - Valid XML File!
+2017-03-15 17:59:21,924 DEBUG RegisterServerManagerNode 166 
+ [Debug Message] - ServerManager INITIATED!
+2017-03-15 17:59:21,929 DEBUG LoadServerInstance 137 
+ [Debug Message] - ServerManager LOADED!
+2017-03-15 17:59:37,864 DEBUG RegisterTaskCreatorNode 193 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-03-15 17:59:37,888 DEBUG RegisterTaskDistributorNode 213 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-03-15 17:59:37,899 DEBUG RegisterReportAggregatorNode 231 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-03-15 17:59:37,904 DEBUG RegisterIncentiveEngineNode 243 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-03-15 17:59:37,909 DEBUG RegisterRepositoryNode 255 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-03-15 17:59:48,600 DEBUG GetEncryptedTask 24 
+ [Debug Message] - User ID: [1234] Encrypted Task: encryptedTask==
+2017-03-15 17:59:48,608 DEBUG CreateCrowdSensingTask 50 
+ [Debug Message] - Encrypted Task: This4That_library.Models.Integration.JSONEncryptedTaskDTO
+2017-03-15 17:59:50,732 DEBUG CreateCrowdSensingTask 60 
+ [Debug Message] - Task with the ID: [cfb93074-8af4-47bf-947e-2c8f9c714110] created with Success!

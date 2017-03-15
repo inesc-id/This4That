@@ -3,8 +3,10 @@ using System.Runtime.Remoting;
 using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Tcp;
 using System.Threading;
+using System.Web;
 using System.Xml;
 using This4That_library;
+using This4That_platform.SecurityLayer;
 
 namespace This4That_platform
 {
@@ -15,6 +17,10 @@ namespace This4That_platform
         private IReportAggregator remoteReportAggregator;
         private IIncentiveEngine remoteIncentiveEngine;
         private IRepository remoteRepository;
+        private ServerAuthority srvAuth;
+        private static string CONFIG_XML_PATH = @"~/Config/configInstances.xml";
+        private static string CONFIG_XSD_PATH = @"~/Config/configInstances.xsd";
+        private static string TARGETNAMESPACE = "This4ThatNS";
 
         #region PROPERTIES
         public ITaskCreator RemoteTaskCreator
@@ -82,7 +88,25 @@ namespace This4That_platform
             }
         }
 
+        public ServerAuthority SrvAuth
+        {
+            get
+            {
+                return srvAuth;
+            }
+
+            set
+            {
+                srvAuth = value;
+            }
+        }
+
         #endregion
+
+        public ServerManager(HttpServerUtility server)
+        {
+            LoadServerInstance(server.MapPath(CONFIG_XML_PATH), server.MapPath(CONFIG_XSD_PATH), TARGETNAMESPACE);
+        }
 
         /// <summary>
         /// Read from the config file and register the ServerManager instance.
@@ -91,7 +115,7 @@ namespace This4That_platform
         /// <param name="configXSDFileName"></param>
         /// <param name="targetNS"></param>
         /// <returns></returns>
-        public bool LoadServerInstance(string configXMLFileName, string configXSDFileName, string targetNS)
+        private bool LoadServerInstance(string configXMLFileName, string configXSDFileName, string targetNS)
         {
             XMLParser xmlParser;
             string errorMessage = null;
@@ -108,6 +132,8 @@ namespace This4That_platform
 
                 if (!RegisterServerManagerNode(xmlParser.XmlDoc))
                     return false;
+                //init Server Authority
+                this.SrvAuth = new ServerAuthority();
                 Global.Log.Debug("ServerManager LOADED!");
                 return true;
             }
@@ -146,6 +172,7 @@ namespace This4That_platform
                 return false;
             }
         }
+
 
         #region REMOTE_METHODS
         /// <summary>

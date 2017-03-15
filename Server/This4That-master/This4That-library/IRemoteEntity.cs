@@ -21,7 +21,7 @@ namespace This4That_library
 
     public interface ITaskCreator : IRemoteEntity
     {
-        bool CreateTask(string encryptedTask, out int taskID);
+        bool CreateTask(string encryptedTask, out string taskID);
     }
 
     public interface ITaskDistributor : IRemoteEntity
@@ -31,17 +31,18 @@ namespace This4That_library
 
     public interface IReportAggregator : IRemoteEntity
     {
+        bool CreateReport(string jsonBody);
 
     }
 
     public interface IIncentiveEngine : IRemoteEntity
     {
         bool CalcTaskCost(string taskSpec, out object incentiveValue);
-        bool IsTaskPaid();
+        bool IsTaskPaid(string transactionId);
     }
 
     public interface IRepository : IRemoteEntity
     {
-
+        bool AuthtenticateUser(string userID);
     }
 }

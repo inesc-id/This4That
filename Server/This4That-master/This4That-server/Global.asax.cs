@@ -13,6 +13,7 @@ namespace This4That_platform
         private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
         private static ServerManager serverMgr;
 
+
         public static ILog Log
         {
             get
@@ -25,11 +26,8 @@ namespace This4That_platform
         {
             if (serverMgr == null)
             {
-                serverMgr = new ServerManager();
+                serverMgr = new ServerManager(server);
             }
-            serverMgr.LoadServerInstance(server.MapPath("~/Config/configInstances.xml"), server.MapPath("~/Config/configInstances.xsd"),
-                                          "This4ThatNS");
-
             return serverMgr;
         }
 

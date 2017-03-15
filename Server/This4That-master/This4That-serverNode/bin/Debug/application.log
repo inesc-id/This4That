@@ -348,3 +348,493 @@
  [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
 2017-03-13 17:43:42,638 DEBUG ConnectServerManager 30 
  [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 17:44:44,325 DEBUG Main 50 
+ [Debug Message] - Valid XML File!
+2017-03-14 17:44:44,372 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-14 17:44:44,403 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-14 17:44:45,496 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 17:44:45,496 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5002]
+2017-03-14 17:44:45,496 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskDistributor] IS RUNNING!
+2017-03-14 17:44:45,496 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 17:44:45,496 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-14 17:44:45,496 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-14 17:44:45,512 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 17:44:45,512 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-14 17:44:45,512 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-14 17:44:45,512 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 17:44:45,512 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5005]
+2017-03-14 17:44:45,512 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [Repository] IS RUNNING!
+2017-03-14 17:44:45,512 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 17:48:51,447 DEBUG Main 50 
+ [Debug Message] - Valid XML File!
+2017-03-14 17:48:51,481 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-14 17:48:51,655 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-14 17:48:52,933 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 17:48:52,934 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5002]
+2017-03-14 17:48:52,935 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskDistributor] IS RUNNING!
+2017-03-14 17:48:52,939 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 17:48:52,940 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-14 17:48:52,941 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-14 17:48:52,946 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 17:48:52,947 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-14 17:48:52,947 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-14 17:48:52,947 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 17:48:52,947 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5005]
+2017-03-14 17:48:52,947 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [Repository] IS RUNNING!
+2017-03-14 17:48:52,947 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 17:50:08,896 DEBUG Main 50 
+ [Debug Message] - Valid XML File!
+2017-03-14 17:50:08,912 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-14 17:50:08,943 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-14 17:50:09,986 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 17:50:09,986 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5002]
+2017-03-14 17:50:09,986 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskDistributor] IS RUNNING!
+2017-03-14 17:50:10,001 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 17:50:10,001 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-14 17:50:10,001 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-14 17:50:10,001 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 17:50:10,001 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-14 17:50:10,001 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-14 17:50:10,001 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 17:50:10,001 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5005]
+2017-03-14 17:50:10,001 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [Repository] IS RUNNING!
+2017-03-14 17:50:10,001 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 17:53:38,461 DEBUG Main 50 
+ [Debug Message] - Valid XML File!
+2017-03-14 17:53:38,493 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-14 17:53:38,512 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-14 17:53:39,575 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 17:53:39,575 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5002]
+2017-03-14 17:53:39,575 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskDistributor] IS RUNNING!
+2017-03-14 17:53:39,575 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 17:53:39,575 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-14 17:53:39,575 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-14 17:53:39,575 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 17:53:39,575 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-14 17:53:39,575 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-14 17:53:39,590 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 17:53:39,590 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5005]
+2017-03-14 17:53:39,590 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [Repository] IS RUNNING!
+2017-03-14 17:53:39,590 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 17:58:11,421 DEBUG Main 50 
+ [Debug Message] - Valid XML File!
+2017-03-14 17:58:11,452 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-14 17:58:11,468 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-14 17:58:12,547 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 17:58:12,547 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5002]
+2017-03-14 17:58:12,547 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskDistributor] IS RUNNING!
+2017-03-14 17:58:12,547 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 17:58:12,547 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-14 17:58:12,547 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-14 17:58:12,547 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 17:58:12,547 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-14 17:58:12,547 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-14 17:58:12,563 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 17:58:12,563 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5005]
+2017-03-14 17:58:12,563 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [Repository] IS RUNNING!
+2017-03-14 17:58:12,563 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 18:00:32,267 DEBUG Main 50 
+ [Debug Message] - Valid XML File!
+2017-03-14 18:00:32,283 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-14 18:00:32,314 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-14 18:00:33,383 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 18:00:33,383 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5002]
+2017-03-14 18:00:33,383 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskDistributor] IS RUNNING!
+2017-03-14 18:00:33,383 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 18:00:33,383 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-14 18:00:33,383 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-14 18:00:33,383 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 18:00:33,398 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-14 18:00:33,398 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-14 18:00:33,398 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 18:00:33,398 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5005]
+2017-03-14 18:00:33,398 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [Repository] IS RUNNING!
+2017-03-14 18:00:33,398 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 18:01:35,009 DEBUG Main 50 
+ [Debug Message] - Valid XML File!
+2017-03-14 18:01:35,024 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-14 18:01:35,056 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-14 18:01:36,182 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 18:01:36,197 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5002]
+2017-03-14 18:01:36,198 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskDistributor] IS RUNNING!
+2017-03-14 18:01:36,202 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 18:01:36,202 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-14 18:01:36,203 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-14 18:01:36,206 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 18:01:36,207 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-14 18:01:36,208 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-14 18:01:36,212 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 18:01:36,213 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5005]
+2017-03-14 18:01:36,214 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [Repository] IS RUNNING!
+2017-03-14 18:01:36,217 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 18:08:41,928 DEBUG Main 50 
+ [Debug Message] - Valid XML File!
+2017-03-14 18:08:41,959 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-14 18:08:41,990 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-14 18:08:43,037 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 18:08:43,037 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5002]
+2017-03-14 18:08:43,037 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskDistributor] IS RUNNING!
+2017-03-14 18:08:43,053 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 18:08:43,053 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-14 18:08:43,053 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-14 18:08:43,053 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 18:08:43,053 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-14 18:08:43,053 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-14 18:08:43,053 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 18:08:43,053 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5005]
+2017-03-14 18:08:43,053 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [Repository] IS RUNNING!
+2017-03-14 18:08:43,069 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 18:28:39,870 DEBUG Main 50 
+ [Debug Message] - Valid XML File!
+2017-03-14 18:28:40,094 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-14 18:28:40,460 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-14 18:28:41,624 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 18:28:41,625 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5002]
+2017-03-14 18:28:41,627 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskDistributor] IS RUNNING!
+2017-03-14 18:28:41,631 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 18:28:41,632 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-14 18:28:41,633 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-14 18:28:41,644 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 18:28:41,645 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-14 18:28:41,646 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-14 18:28:41,646 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-14 18:28:41,646 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5005]
+2017-03-14 18:28:41,646 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [Repository] IS RUNNING!
+2017-03-14 18:28:41,646 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-15 17:26:59,807 DEBUG Main 50 
+ [Debug Message] - Valid XML File!
+2017-03-15 17:26:59,854 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-15 17:26:59,869 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-15 17:27:00,951 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-15 17:27:00,951 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5002]
+2017-03-15 17:27:00,951 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskDistributor] IS RUNNING!
+2017-03-15 17:27:00,951 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-15 17:27:00,951 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-15 17:27:00,951 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-15 17:27:00,966 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-15 17:27:00,966 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-15 17:27:00,966 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-15 17:27:00,966 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-15 17:27:00,966 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5005]
+2017-03-15 17:27:00,966 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [Repository] IS RUNNING!
+2017-03-15 17:27:00,982 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-15 17:32:15,954 DEBUG Main 50 
+ [Debug Message] - Valid XML File!
+2017-03-15 17:32:15,981 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-15 17:32:16,026 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-15 17:32:17,347 ERROR ConnectServerManager 39 
+ [Debug Message] - Object '/ServerManager' has been disconnected or does not exist at the server.
+2017-03-15 17:32:17,352 ERROR ConnectServerManager 40 
+ [Debug Message] - Cannot connect TaskCreator to ServerManager: [tcp://localhost:5000/ServerManager
+2017-03-15 17:32:46,526 DEBUG Main 50 
+ [Debug Message] - Valid XML File!
+2017-03-15 17:32:46,552 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-15 17:32:46,621 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-15 17:32:47,676 ERROR ConnectServerManager 39 
+ [Debug Message] - Object '/ServerManager' has been disconnected or does not exist at the server.
+2017-03-15 17:32:47,677 ERROR ConnectServerManager 40 
+ [Debug Message] - Cannot connect TaskCreator to ServerManager: [tcp://localhost:5000/ServerManager
+2017-03-15 17:33:55,339 DEBUG Main 50 
+ [Debug Message] - Valid XML File!
+2017-03-15 17:33:55,388 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-15 17:33:55,412 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-15 17:33:59,462 ERROR ConnectServerManager 39 
+ [Debug Message] - No connection could be made because the target machine actively refused it 127.0.0.1:5000
+2017-03-15 17:33:59,463 ERROR ConnectServerManager 40 
+ [Debug Message] - Cannot connect TaskCreator to ServerManager: [tcp://localhost:5000/ServerManager
+2017-03-15 17:34:41,309 DEBUG Main 50 
+ [Debug Message] - Valid XML File!
+2017-03-15 17:34:41,332 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-15 17:34:41,348 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-15 17:34:42,413 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-15 17:34:42,413 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5002]
+2017-03-15 17:34:42,413 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskDistributor] IS RUNNING!
+2017-03-15 17:34:42,413 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-15 17:34:42,413 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-15 17:34:42,429 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-15 17:34:42,429 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-15 17:34:42,429 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-15 17:34:42,429 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-15 17:34:42,429 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-15 17:34:42,429 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5005]
+2017-03-15 17:34:42,429 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [Repository] IS RUNNING!
+2017-03-15 17:34:42,445 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-15 17:38:36,474 DEBUG Main 50 
+ [Debug Message] - Valid XML File!
+2017-03-15 17:38:36,514 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-15 17:38:36,539 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-15 17:38:37,665 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-15 17:38:37,666 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5002]
+2017-03-15 17:38:37,667 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskDistributor] IS RUNNING!
+2017-03-15 17:38:37,672 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-15 17:38:37,673 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-15 17:38:37,674 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-15 17:38:37,677 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-15 17:38:37,678 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-15 17:38:37,678 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-15 17:38:37,682 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-15 17:38:37,683 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5005]
+2017-03-15 17:38:37,684 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [Repository] IS RUNNING!
+2017-03-15 17:38:37,689 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-15 17:50:54,455 DEBUG Main 50 
+ [Debug Message] - Valid XML File!
+2017-03-15 17:50:54,490 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-15 17:50:54,518 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-15 17:50:55,561 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-15 17:50:55,562 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5002]
+2017-03-15 17:50:55,562 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskDistributor] IS RUNNING!
+2017-03-15 17:50:55,568 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-15 17:50:55,570 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-15 17:50:55,571 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-15 17:50:55,574 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-15 17:50:55,576 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-15 17:50:55,576 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-15 17:50:55,580 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-15 17:50:55,581 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5005]
+2017-03-15 17:50:55,582 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [Repository] IS RUNNING!
+2017-03-15 17:50:55,586 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-15 17:59:13,439 DEBUG Main 50 
+ [Debug Message] - Valid XML File!
+2017-03-15 17:59:13,668 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-15 17:59:14,239 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-15 17:59:18,612 ERROR ConnectServerManager 39 
+ [Debug Message] - No connection could be made because the target machine actively refused it 127.0.0.1:5000
+2017-03-15 17:59:18,614 ERROR ConnectServerManager 40 
+ [Debug Message] - Cannot connect TaskCreator to ServerManager: [tcp://localhost:5000/ServerManager
+2017-03-15 17:59:36,781 DEBUG Main 50 
+ [Debug Message] - Valid XML File!
+2017-03-15 17:59:36,802 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-15 17:59:36,824 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-15 17:59:37,878 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-15 17:59:37,880 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5002]
+2017-03-15 17:59:37,881 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [TaskDistributor] IS RUNNING!
+2017-03-15 17:59:37,889 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-15 17:59:37,895 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-15 17:59:37,896 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-15 17:59:37,900 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-15 17:59:37,901 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-15 17:59:37,903 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-15 17:59:37,906 DEBUG ConnectServerManager 30 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-15 17:59:37,907 DEBUG StartConnectRemoteIntance 101 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5005]
+2017-03-15 17:59:37,908 DEBUG StartConnectRemoteIntance 105 
+ [Debug Message] - Node: [Repository] IS RUNNING!
+2017-03-15 17:59:37,911 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-15 17:59:50,732 DEBUG CreateTask 51 
+ [Debug Message] - TaskCreator : TaskID: [cfb93074-8af4-47bf-947e-2c8f9c714110]

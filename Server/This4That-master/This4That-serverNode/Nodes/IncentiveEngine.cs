@@ -58,9 +58,11 @@ namespace This4That_serverNode.Nodes
             }
         }
 
-        public bool IsTaskPaid()
+        public bool IsTaskPaid(string transactionId)
         {
-            return true;
+            if (transactionId != null)
+                return true;
+            return false;
         }
         #endregion
     }

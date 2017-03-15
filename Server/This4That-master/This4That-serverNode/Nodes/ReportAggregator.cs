@@ -40,5 +40,10 @@ namespace This4That_serverNode.Nodes
                 return false;
             }
         }
+
+        public bool CreateReport(string jsonBody)
+        {
+            return true;
+        }
     }
 }

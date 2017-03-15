@@ -42,5 +42,14 @@ namespace This4That_serverNode.Nodes
             }
         }
 
+        
+        
+        #region REMOTE_INTERFACE
+        public bool AuthtenticateUser(string userID)
+        {
+            return true;
+        }
+        #endregion
+
     }
 }

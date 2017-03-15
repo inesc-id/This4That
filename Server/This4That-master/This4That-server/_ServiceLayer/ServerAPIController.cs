@@ -22,7 +22,7 @@ namespace This4That_platform.ServiceLayer
                 {
                     return Content(HttpStatusCode.InternalServerError, "ERROR");
                 }
-                return Content(HttpStatusCode.OK, incentiveValue);
+                return Content(HttpStatusCode.OK, "Incentive Value: " + incentiveValue);
             }
             catch (Exception ex)
             {
@@ -36,11 +36,34 @@ namespace This4That_platform.ServiceLayer
         public IHttpActionResult CreateCrowdSensingTask()
         {
             ServerManager serverMgr = null;
+            string taskID;
             
             try
             {
                 serverMgr = Global.GetCreateServerManager(HttpContext.Current.Server);
-                if (!APIRequestHandler.CreateCrowdSensingTask(HttpContext.Current.Request))
+                if (!APIRequestHandler.CreateCrowdSensingTask(HttpContext.Current.Request, serverMgr, out taskID))
+                {
+                    return Content(HttpStatusCode.InternalServerError, "ERROR");
+                }
+                return Content(HttpStatusCode.OK, "Task ID: " + taskID);
+            }
+            catch (Exception ex)
+            {
+                Global.Log.Error(ex.Message);
+                return Content(HttpStatusCode.InternalServerError, "ERROR");
+            }
+        }
+
+        [HttpPost]
+        [Route("report")]
+        public IHttpActionResult ReportTaskResults()
+        {
+            ServerManager serverMgr = null;
+
+            try
+            {
+                serverMgr = Global.GetCreateServerManager(HttpContext.Current.Server);
+                if (!APIRequestHandler.ReportTaskResults(HttpContext.Current.Request, serverMgr))
                 {
                     return Content(HttpStatusCode.InternalServerError, "ERROR");
                 }

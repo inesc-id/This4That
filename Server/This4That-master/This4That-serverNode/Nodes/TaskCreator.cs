@@ -8,22 +8,6 @@ namespace This4That_serverNode.Nodes
 {
     public class TaskCreator : Node, ITaskCreator
     {
-        private IRepository remoteRepository;
-
-        public IRepository RemoteRepository
-        {
-            get
-            {
-                return remoteRepository;
-            }
-
-            set
-            {
-                remoteRepository = value;
-            }
-        }
-
-
         public TaskCreator(string hostName, int port, string name) : base(hostName, port, name)
         {
 
@@ -48,7 +32,6 @@ namespace This4That_serverNode.Nodes
                 Console.WriteLine("TASK CREATOR");
                 Console.WriteLine($"HOST: {this.HostName} PORT: {this.Port} CONNECTED to ServerManager");
                 Console.WriteLine("----------------------------");
-                ConnectRepository()
                 return true;
             }
             catch (Exception ex)
@@ -59,36 +42,13 @@ namespace This4That_serverNode.Nodes
             }
         }
 
-        /// <summary>
-        /// Get Remote reference to Repository.
-        /// </summary>
-        /// <param name="serverMgrURL"></param>
-        /// <returns></returns>
-        public bool ConnectRepository(string repoURL)
-        {
-            try
-            {
-                this.RemoteRepository = (IRepository)Activator.GetObject(typeof(IRepository), repoURL);
-                Program.Log.DebugFormat("TaskCreator Connected to Repository on: [{0}]", repoURL);
-                Console.WriteLine($"HOST: {this.HostName} PORT: {this.Port} CONNECTED to Repository");
-                Console.WriteLine("----------------------------");
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Program.Log.Error(ex.Message);
-                Program.Log.ErrorFormat("Cannot connect TaskCreator to Repository: [{0}", repoURL);
-                return false;
-            }
-        }
-
-
 
         #region REMOTE_INTERFACE
 
-        public bool CreateTask(string encryptedTask, out int taskID)
+        public bool CreateTask(string encryptedTask, out string taskID)
         {
-            taskID = 1;
+            taskID = Guid.NewGuid().ToString();
+            Program.Log.DebugFormat("TaskCreator : TaskID: [{0}]", taskID);
             return true;
         }
 
