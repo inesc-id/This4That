@@ -10,3 +10,7 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+.vs
+/Server/This4That-master/This4That-library/obj
+/Server/This4That-master/This4That-server/obj
+/Server/This4That-master/This4That-serverNode/obj
