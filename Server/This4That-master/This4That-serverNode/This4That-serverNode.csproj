@@ -32,6 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Emitter, Version=1.0.41.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Emitter.1.0.41\lib\net45\Emitter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
       <Private>True</Private>
@@ -47,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Nodes\EmitterServer.cs" />
     <Compile Include="Nodes\Node.cs" />
     <Compile Include="Nodes\ReportAggregator.cs" />
     <Compile Include="Nodes\IncentiveEngine.cs" />

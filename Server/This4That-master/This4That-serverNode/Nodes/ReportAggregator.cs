@@ -1,4 +1,5 @@
-﻿using System;
+﻿using log4net;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,7 +11,7 @@ namespace This4That_serverNode.Nodes
     {
         public ReportAggregator(string hostName, int port, string name) : base(hostName, port, name)
         {
-
+            Log = LogManager.GetLogger("ReportAggregatorLOG");
         }
 
         /// <summary>
@@ -25,9 +26,9 @@ namespace This4That_serverNode.Nodes
                 this.RemoteServerMgr = (IServerManager)Activator.GetObject(typeof(IServerManager), serverMgrURL);
                 if (!this.RemoteServerMgr.RegisterReportAggregatorNode($"tcp://{this.HostName}:{this.Port}/{Global.REPORT_AGGREGATOR_NAME}"))
                 {
-                    Program.Log.Error("Cannot connect to Server Manager!");
+                    Log.Error("Cannot connect to Server Manager!");
                 }
-                Program.Log.DebugFormat("ServerManager: [{0}]", serverMgrURL);
+                Log.DebugFormat("ServerManager: [{0}]", serverMgrURL);
                 Console.WriteLine("REPORT AGGREGATOR");
                 Console.WriteLine($"HOST: {this.HostName} PORT: {this.Port} CONNECTED to ServerManager");
                 Console.WriteLine("----------------------------");
@@ -35,8 +36,8 @@ namespace This4That_serverNode.Nodes
             }
             catch (Exception ex)
             {
-                Program.Log.Error(ex.Message);
-                Program.Log.ErrorFormat("Cannot connect Report Aggregator to ServerManager: [{0}", serverMgrURL);
+                Log.Error(ex.Message);
+                Log.ErrorFormat("Cannot connect Report Aggregator to ServerManager: [{0}", serverMgrURL);
                 return false;
             }
         }

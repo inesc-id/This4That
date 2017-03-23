@@ -16,16 +16,6 @@ namespace This4That_serverNode
 {
     class Program
     {
-        private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
-
-        public static ILog Log
-        {
-            get
-            {
-                return log;
-            }
-        }
-
         static void Main(string[] args)
         {
             XMLParser xmlParser;
@@ -43,14 +33,13 @@ namespace This4That_serverNode
             xmlParser = new XMLParser(@"..\..\Config\configInstances.xml", @"..\..\Config\configInstances.xsd", "This4ThatNS");
             if (!xmlParser.LoadXMLConfiguration(ref errorMessage))
             {
-                Log.Error(errorMessage);
+                Console.WriteLine(errorMessage);
                 return;
             }
             else
-                Log.Debug(errorMessage);
-                
-            if (!StartInstances(xmlParser.XmlDoc, out taskCreator, out taskDistributor, out reportAggregator, out incentiveEngine, out repository))
-                return;
+                Console.WriteLine(errorMessage);
+
+            StartInstances(xmlParser.XmlDoc, out taskCreator, out taskDistributor, out reportAggregator, out incentiveEngine, out repository);
 
             Console.ReadLine();
         }
@@ -77,7 +66,7 @@ namespace This4That_serverNode
                 }
                 else
                 {
-                    Program.Log.Error("Server Manager Parameters are not defined in the XML!");
+                    Console.WriteLine("Server Manager Parameters are not defined in the XML!");
                     return false;
                 }
                 Console.WriteLine("SERVER MANAGER");
@@ -89,7 +78,7 @@ namespace This4That_serverNode
                     int.TryParse(xmlNode.Attributes["port"].Value, out port);
                     taskCreator = new TaskCreator(xmlNode.Attributes["hostName"].Value, port, Global.TASK_CREATOR_NAME);
                     if (!taskCreator.StartConnectRemoteIntance(serverMgrURL))
-                        return false;                   
+                        return false;    
                 }
                 xmlNode = xmlDoc.GetElementsByTagName(Global.TASK_DISTRIBUTOR_NAME)[0];
                 if (xmlNode != null)
@@ -127,7 +116,7 @@ namespace This4That_serverNode
             }
             catch (Exception ex)
             {
-                Log.Error(ex.Message);
+                Console.WriteLine(ex.Message);
                 return false;
             }
         }

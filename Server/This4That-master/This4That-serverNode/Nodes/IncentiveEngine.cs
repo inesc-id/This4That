@@ -1,8 +1,10 @@
-﻿using System;
+﻿using log4net;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using This4That_library;
+using This4That_library.Models.Domain;
 
 namespace This4That_serverNode.Nodes
 {
@@ -10,7 +12,7 @@ namespace This4That_serverNode.Nodes
     {
         public IncentiveEngine(string hostName, int port, string name) : base(hostName, port, name)
         {
-
+            Log = LogManager.GetLogger("IncentiveEngineLOG");
         }
 
         /// <summary>
@@ -25,9 +27,9 @@ namespace This4That_serverNode.Nodes
                 this.RemoteServerMgr = (IServerManager)Activator.GetObject(typeof(IServerManager), serverMgrURL);
                 if (!this.RemoteServerMgr.RegisterIncentiveEngineNode($"tcp://{this.HostName}:{this.Port}/{Global.INCENTIVE_ENGINE_NAME}"))
                 {
-                    Program.Log.Error("Cannot connect to Server Manager!");
+                    Log.Error("Cannot connect to Server Manager!");
                 }
-                Program.Log.DebugFormat("ServerManager: [{0}]", serverMgrURL);
+                Log.DebugFormat("ServerManager: [{0}]", serverMgrURL);
                 Console.WriteLine("INCENTIVE ENGINE");
                 Console.WriteLine($"HOST: {this.HostName} PORT: {this.Port} CONNECTED to ServerManager");
                 Console.WriteLine("----------------------------");
@@ -35,15 +37,15 @@ namespace This4That_serverNode.Nodes
             }
             catch (Exception ex)
             {
-                Program.Log.Error(ex.Message);
-                Program.Log.ErrorFormat("Cannot connect Incentive Engine to ServerManager: [{0}", serverMgrURL);
+                Log.Error(ex.Message);
+                Log.ErrorFormat("Cannot connect Incentive Engine to ServerManager: [{0}", serverMgrURL);
                 return false;
             }
         }
 
 
         #region REMOTE_INTERFACE
-        public bool CalcTaskCost(string taskSpec, out object incentiveValue)
+        public bool CalcTaskCost(CSTask taskSpec, out object incentiveValue)
         {
             try
             {
@@ -52,7 +54,7 @@ namespace This4That_serverNode.Nodes
             }
             catch (Exception ex)
             {
-                Program.Log.Error(ex.Message);
+                Log.Error(ex.Message);
                 incentiveValue = null;
                 return false;
             }

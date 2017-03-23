@@ -20,14 +20,14 @@ namespace This4That_platform.ServiceLayer
                 serverMgr = Global.GetCreateServerManager(HttpContext.Current.Server);
                 if (!APIRequestHandler.CalcCrowdSensingTaskCost(HttpContext.Current.Request, serverMgr, out incentiveValue))
                 {
-                    return Content(HttpStatusCode.InternalServerError, "ERROR");
+                    return Content(HttpStatusCode.InternalServerError, "ERROR: Cannot calc the sensing task value.");
                 }
                 return Content(HttpStatusCode.OK, "Incentive Value: " + incentiveValue);
             }
             catch (Exception ex)
             {
                 Global.Log.Error(ex.Message);
-                return Content(HttpStatusCode.InternalServerError, "ERROR");
+                return Content(HttpStatusCode.InternalServerError, "ERROR: " + ex.Message);
             }
         }
         

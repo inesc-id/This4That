@@ -10,21 +10,21 @@ namespace This4That_library
 {
     public class Library
     {
-        private static bool GetEncryptedTaskFromPostBody(string postBody, out JSONEncryptedTaskDTO encryptedTask, ref string errorMessage)
+        private static bool GetTaskFromPostBody(string postBody, out JSONTaskDTO csTask, ref string errorMessage)
         {
-            encryptedTask = null;
+            csTask = null;
 
             try
             {
                 if (String.IsNullOrEmpty(postBody))
                     return false;
-                encryptedTask = JsonConvert.DeserializeObject<JSONEncryptedTaskDTO>(postBody);
+                csTask = JsonConvert.DeserializeObject<JSONTaskDTO>(postBody);
                 return true;
             }
             catch (Exception ex)
             {
                 errorMessage = ex.Message;
-                encryptedTask = null;
+                csTask = null;
                 return false;
             }
         }
@@ -44,11 +44,10 @@ namespace This4That_library
             
         }
 
-        public static bool GetEncryptedTask(HttpRequest request, out JSONEncryptedTaskDTO encryptedTask, object serverMgrKey, ref string errorMessage)
+        public static bool GetCSTaskFromRequest(HttpRequest request, out JSONTaskDTO csTask, ref string errorMessage)
         {
             string postBody;
-            string decryptedPostBody;
-            encryptedTask = null;
+            csTask = null;
 
             try
             {
@@ -57,13 +56,8 @@ namespace This4That_library
                 {
                     return false;
                 }
-                //get the post body decrypted
-                if (!SecurityLibrary.DecryptString(postBody, out decryptedPostBody, null, ref errorMessage))
-                {
-                    return false;
-                }
                 //get the userID and the encrypted Task
-                if (!GetEncryptedTaskFromPostBody(postBody, out encryptedTask, ref errorMessage))
+                if (!GetTaskFromPostBody(postBody, out csTask, ref errorMessage))
                 {
                     return false;
                 }

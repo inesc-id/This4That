@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using This4That_library.Models.Domain;
 
 namespace This4That_library
 {
@@ -21,11 +22,12 @@ namespace This4That_library
 
     public interface ITaskCreator : IRemoteEntity
     {
-        bool CreateTask(string encryptedTask, out string taskID);
+        bool CreateTask(CSTask task, out string taskID);
     }
 
     public interface ITaskDistributor : IRemoteEntity
     {
+        bool ReceiveTask(CSTask task);
 
     }
 
@@ -37,12 +39,12 @@ namespace This4That_library
 
     public interface IIncentiveEngine : IRemoteEntity
     {
-        bool CalcTaskCost(string taskSpec, out object incentiveValue);
+        bool CalcTaskCost(CSTask taskSpec, out object incentiveValue);
         bool IsTaskPaid(string transactionId);
     }
 
     public interface IRepository : IRemoteEntity
     {
-        bool AuthtenticateUser(string userID);
+        bool AuthenticateUser(string userID);
     }
 }

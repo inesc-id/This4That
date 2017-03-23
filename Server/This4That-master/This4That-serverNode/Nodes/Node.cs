@@ -1,4 +1,5 @@
-﻿using System;
+﻿using log4net;
+using System;
 using System.Runtime.Remoting;
 using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Tcp;
@@ -9,10 +10,11 @@ namespace This4That_serverNode.Nodes
 {
     public abstract class Node : MarshalByRefObject
     {
-        string hostName;
-        int port;
-        string name;
-        IServerManager remoteServerMgr;
+        private string hostName;
+        private int port;
+        private string name;
+        private IServerManager remoteServerMgr;
+        protected ILog log;
 
         #region PROPERTIES
         public string HostName
@@ -65,6 +67,19 @@ namespace This4That_serverNode.Nodes
                 remoteServerMgr = value;
             }
         }
+
+        protected ILog Log
+        {
+            get
+            {
+                return log;
+            }
+
+            set
+            {
+                log = value;
+            }
+        }
         #endregion
 
 
@@ -94,15 +109,15 @@ namespace This4That_serverNode.Nodes
             {
                 if (String.IsNullOrEmpty(this.HostName) || this.Port < 0)
                 {
-                    Program.Log.ErrorFormat("Invalid Hostname: [{0}] or Port: [{1}]", this.HostName, this.Port);
+                    Log.ErrorFormat("Invalid Hostname: [{0}] or Port: [{1}]", this.HostName, this.Port);
                     return false;
                 }
                 //register remote instance
-                Program.Log.DebugFormat("Valid Hostname: [{0}] Port: [{1}]", this.HostName, this.Port);
+                Log.DebugFormat("Valid Hostname: [{0}] Port: [{1}]", this.HostName, this.Port);
                 channel = new TcpServerChannel(this.Name, this.Port);
                 ChannelServices.RegisterChannel(channel, false);
                 RemotingServices.Marshal(this, this.Name, this.GetType());
-                Program.Log.DebugFormat("Node: [{0}] IS RUNNING!", this.Name);
+                Log.DebugFormat("Node: [{0}] IS RUNNING!", this.Name);
                 //connect remote instance to server manager
                 if (!this.ConnectServerManager(serverMgrURL))
                     return false;
@@ -110,7 +125,7 @@ namespace This4That_serverNode.Nodes
             }
             catch (Exception ex)
             {
-                Program.Log.Error(ex.Message);
+                Log.Error(ex.Message);
                 return false;
             }
         }

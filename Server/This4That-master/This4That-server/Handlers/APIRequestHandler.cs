@@ -12,17 +12,17 @@ namespace This4That_platform.Handlers
         internal static bool CalcCrowdSensingTaskCost(HttpRequest request, ServerManager serverMgr, out Object incentiveValue)
         {
             incentiveValue = null;
-            JSONEncryptedTaskDTO encryptedTask;
+            JSONTaskDTO csTask;
             try
             {
                 //get the DTO containing the UserID and the encrypted Task
-                if (!serverMgr.SrvAuth.GetEncryptedTask(request, out encryptedTask, null) || encryptedTask == null)
+                if (!GetCrowdSensingTask(request, out csTask))
                     return false;
                 //authenticate the user identification
-                if (!serverMgr.RemoteRepository.AuthtenticateUser(encryptedTask.UserID))
+                if (!serverMgr.RemoteRepository.AuthenticateUser(csTask.UserID))
                     return false;
 
-                if (!serverMgr.RemoteIncentiveEngine.CalcTaskCost(encryptedTask.EncryptedTask, out incentiveValue) || incentiveValue == null)
+                if (!serverMgr.RemoteIncentiveEngine.CalcTaskCost(csTask.Task, out incentiveValue) || incentiveValue == null)
                 {
                     Global.Log.Error("Cannot calculate incentive value!");
                     return false;
@@ -36,23 +36,22 @@ namespace This4That_platform.Handlers
                 return false;
             }
         }
-
+        
         internal static bool CreateCrowdSensingTask(HttpRequest request, ServerManager serverMgr, out string taskID)
         {
-            JSONEncryptedTaskDTO encryptedTask;
+            JSONTaskDTO csTask;
             taskID = null;
             try
             {
                 //get the DTO containing the UserID and the encrypted Task
-                if (!serverMgr.SrvAuth.GetEncryptedTask(request, out encryptedTask, null) || encryptedTask == null)
+                if (!GetCrowdSensingTask(request, out csTask))
                     return false;
 
-                Global.Log.DebugFormat("Encrypted Task: {0}", encryptedTask);
-                if (!serverMgr.RemoteIncentiveEngine.IsTaskPaid(encryptedTask.TransactionID))
+                if (!serverMgr.RemoteIncentiveEngine.IsTaskPaid(csTask.TransactionID))
                 {
                     return false;
                 }
-                if (!serverMgr.RemoteTaskCreator.CreateTask(encryptedTask.EncryptedTask, out taskID))
+                if (!serverMgr.RemoteTaskCreator.CreateTask(csTask.Task, out taskID))
                 {
                     Global.Log.Error("Cannot create crowd-sensing task!");
                     return false;
@@ -92,5 +91,28 @@ namespace This4That_platform.Handlers
                 return false;
             }
         }
+
+        private static bool GetCrowdSensingTask(HttpRequest request, out JSONTaskDTO csTask)
+        {
+            string errorMessage = null;
+            csTask = null;
+
+            try
+            {
+                if (!Library.GetCSTaskFromRequest(HttpContext.Current.Request, out csTask, ref errorMessage))
+                {
+                    Global.Log.Error(errorMessage);
+                    return false;
+                }
+                Global.Log.DebugFormat("User ID: [{0}] Task: {1}", csTask.UserID, csTask.Task.ToString());
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Global.Log.Error(ex.Message);
+                return false;
+            }
+        }
+
     }
 }
