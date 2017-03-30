@@ -14,3 +14,6 @@ hs_err_pid*
 /Server/This4That-master/This4That-library/obj
 /Server/This4That-master/This4That-server/obj
 /Server/This4That-master/This4That-serverNode/obj
+/Server/This4That-master/packages
+/Server/This4That-master/This4That-server/*.user
+/Server/This4That-master/This4That-serverNode/*.user
