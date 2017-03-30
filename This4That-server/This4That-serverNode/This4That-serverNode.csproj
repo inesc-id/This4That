@@ -51,7 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Nodes\EmitterServer.cs" />
     <Compile Include="Nodes\Node.cs" />
     <Compile Include="Nodes\ReportAggregator.cs" />
     <Compile Include="Nodes\IncentiveEngine.cs" />
