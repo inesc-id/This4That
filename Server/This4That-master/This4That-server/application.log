@@ -3175,3 +3175,169 @@ Trigger: Sensor: GPS Info1: 10.2 Info2: 5.1
 SensingTask: Sensor: TEMPERATURE 
 2017-03-23 00:12:30,797 DEBUG CreateCrowdSensingTask 59 
  [Debug Message] - Task with the ID: [791d5939-bf2a-481b-b601-1e96133f4e02] created with Success!
+2017-03-23 10:09:54,460 DEBUG LoadServerInstance 131 
+ [Debug Message] - Valid XML File!
+2017-03-23 10:09:54,599 DEBUG RegisterServerManagerNode 166 
+ [Debug Message] - ServerManager INITIATED!
+2017-03-23 10:09:54,601 DEBUG LoadServerInstance 137 
+ [Debug Message] - ServerManager LOADED!
+2017-03-23 10:10:06,333 DEBUG RegisterTaskCreatorNode 193 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-03-23 10:10:06,357 DEBUG RegisterTaskDistributorNode 213 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-03-23 10:10:06,364 DEBUG RegisterReportAggregatorNode 231 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-03-23 10:10:06,375 DEBUG RegisterIncentiveEngineNode 243 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-03-23 10:10:06,381 DEBUG RegisterRepositoryNode 255 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-03-23 10:10:37,555 DEBUG GetCrowdSensingTask 107 
+ [Debug Message] - User ID: [1234] Task: Name: Teste Exp: 04/03/2017 17:41:00 Topic: TestTopic 
+Trigger: Sensor: GPS Info1: 10.2 Info2: 5.1 
+SensingTask: Sensor: TEMPERATURE 
+2017-03-23 10:10:46,438 DEBUG CreateCrowdSensingTask 59 
+ [Debug Message] - Task with the ID: [966cf72c-28e4-4393-82a0-d61407982289] created with Success!
+2017-03-23 10:33:14,559 DEBUG LoadServerInstance 131 
+ [Debug Message] - Valid XML File!
+2017-03-23 10:33:14,613 DEBUG RegisterServerManagerNode 166 
+ [Debug Message] - ServerManager INITIATED!
+2017-03-23 10:33:14,615 DEBUG LoadServerInstance 137 
+ [Debug Message] - ServerManager LOADED!
+2017-03-23 10:33:21,049 DEBUG RegisterTaskCreatorNode 193 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-03-23 10:33:21,065 DEBUG RegisterTaskDistributorNode 213 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-03-23 10:33:21,065 DEBUG RegisterReportAggregatorNode 231 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-03-23 10:33:21,080 DEBUG RegisterIncentiveEngineNode 243 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-03-23 10:33:21,080 DEBUG RegisterRepositoryNode 255 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-03-23 10:33:25,974 DEBUG GetCrowdSensingTask 107 
+ [Debug Message] - User ID: [1234] Task: Name: Teste Exp: 04/03/2017 17:41:00 Topic: TestTopic 
+Trigger: Sensor: GPS Info1: 10.2 Info2: 5.1 
+SensingTask: Sensor: TEMPERATURE 
+2017-03-23 10:33:43,174 DEBUG CreateCrowdSensingTask 59 
+ [Debug Message] - Task with the ID: [e50634bc-4eab-419e-b045-91007c7f0be8] created with Success!
+2017-03-23 10:36:40,275 DEBUG LoadServerInstance 131 
+ [Debug Message] - Valid XML File!
+2017-03-23 10:36:40,446 DEBUG RegisterServerManagerNode 166 
+ [Debug Message] - ServerManager INITIATED!
+2017-03-23 10:36:40,449 DEBUG LoadServerInstance 137 
+ [Debug Message] - ServerManager LOADED!
+2017-03-23 10:37:20,296 DEBUG LoadServerInstance 131 
+ [Debug Message] - Valid XML File!
+2017-03-23 10:37:20,370 DEBUG RegisterServerManagerNode 166 
+ [Debug Message] - ServerManager INITIATED!
+2017-03-23 10:37:20,373 DEBUG LoadServerInstance 137 
+ [Debug Message] - ServerManager LOADED!
+2017-03-23 10:38:49,122 DEBUG LoadServerInstance 131 
+ [Debug Message] - Valid XML File!
+2017-03-23 10:38:49,176 DEBUG RegisterServerManagerNode 166 
+ [Debug Message] - ServerManager INITIATED!
+2017-03-23 10:38:49,179 DEBUG LoadServerInstance 137 
+ [Debug Message] - ServerManager LOADED!
+2017-03-23 10:39:17,255 DEBUG LoadServerInstance 131 
+ [Debug Message] - Valid XML File!
+2017-03-23 10:39:17,374 DEBUG RegisterServerManagerNode 166 
+ [Debug Message] - ServerManager INITIATED!
+2017-03-23 10:39:17,376 DEBUG LoadServerInstance 137 
+ [Debug Message] - ServerManager LOADED!
+2017-03-23 10:39:30,482 DEBUG RegisterTaskCreatorNode 193 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-03-23 10:39:30,498 DEBUG RegisterTaskDistributorNode 213 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-03-23 10:39:30,498 DEBUG RegisterReportAggregatorNode 231 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-03-23 10:39:30,513 DEBUG RegisterIncentiveEngineNode 243 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-03-23 10:39:30,513 DEBUG RegisterRepositoryNode 255 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-03-23 10:39:35,581 DEBUG GetCrowdSensingTask 107 
+ [Debug Message] - User ID: [1234] Task: Name: Teste Exp: 04/03/2017 17:41:00 Topic: TestTopic 
+Trigger: Sensor: GPS Info1: 10.2 Info2: 5.1 
+SensingTask: Sensor: TEMPERATURE 
+2017-03-23 10:40:58,405 ERROR CreateCrowdSensingTask 54 
+ [Debug Message] - Underlying connection was closed: Either there was a fatal error on the server or client authentication failed
+2017-03-23 10:42:07,162 DEBUG LoadServerInstance 131 
+ [Debug Message] - Valid XML File!
+2017-03-23 10:42:07,223 DEBUG RegisterServerManagerNode 166 
+ [Debug Message] - ServerManager INITIATED!
+2017-03-23 10:42:07,225 DEBUG LoadServerInstance 137 
+ [Debug Message] - ServerManager LOADED!
+2017-03-23 10:43:14,393 DEBUG RegisterTaskCreatorNode 193 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-03-23 10:43:14,409 DEBUG RegisterTaskDistributorNode 213 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-03-23 10:43:14,430 DEBUG RegisterReportAggregatorNode 231 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-03-23 10:43:14,437 DEBUG RegisterIncentiveEngineNode 243 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-03-23 10:43:14,437 DEBUG RegisterRepositoryNode 255 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-03-23 10:43:20,968 DEBUG GetCrowdSensingTask 107 
+ [Debug Message] - User ID: [1234] Task: Name: Teste Exp: 04/03/2017 17:41:00 Topic: TestTopic 
+Trigger: Sensor: GPS Info1: 10.2 Info2: 5.1 
+SensingTask: Sensor: TEMPERATURE 
+2017-03-23 10:43:29,764 DEBUG CreateCrowdSensingTask 59 
+ [Debug Message] - Task with the ID: [171f61cd-c119-4e66-b9b1-b59c1ed9d8d2] created with Success!
+2017-03-23 10:44:37,065 DEBUG RegisterTaskCreatorNode 193 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-03-23 10:44:37,077 DEBUG RegisterTaskDistributorNode 213 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-03-23 10:44:37,081 DEBUG RegisterReportAggregatorNode 231 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-03-23 10:44:37,090 DEBUG RegisterIncentiveEngineNode 243 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-03-23 10:44:37,096 DEBUG RegisterRepositoryNode 255 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-03-23 10:44:42,222 DEBUG GetCrowdSensingTask 107 
+ [Debug Message] - User ID: [1234] Task: Name: Teste Exp: 04/03/2017 17:41:00 Topic: TestTopic 
+Trigger: Sensor: GPS Info1: 10.2 Info2: 5.1 
+SensingTask: Sensor: TEMPERATURE 
+2017-03-23 10:44:45,222 DEBUG CreateCrowdSensingTask 59 
+ [Debug Message] - Task with the ID: [70067736-e1f9-46db-b383-f91474dd42d9] created with Success!
+2017-03-23 11:44:57,534 DEBUG LoadServerInstance 131 
+ [Debug Message] - Valid XML File!
+2017-03-23 11:44:57,588 DEBUG RegisterServerManagerNode 166 
+ [Debug Message] - ServerManager INITIATED!
+2017-03-23 11:44:57,594 DEBUG LoadServerInstance 137 
+ [Debug Message] - ServerManager LOADED!
+2017-03-23 11:45:05,102 DEBUG RegisterTaskCreatorNode 193 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-03-23 11:45:05,118 DEBUG RegisterTaskDistributorNode 213 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-03-23 11:45:05,126 DEBUG RegisterReportAggregatorNode 231 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-03-23 11:45:05,134 DEBUG RegisterIncentiveEngineNode 243 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-03-23 11:45:05,139 DEBUG RegisterRepositoryNode 255 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-03-23 11:46:01,980 DEBUG GetCrowdSensingTask 107 
+ [Debug Message] - User ID: [1234] Task: Name: Teste Exp: 04/03/2017 17:41:00 Topic: TestTopic 
+Trigger: Sensor: GPS Info1: 10.2 Info2: 5.1 
+SensingTask: Sensor: TEMPERATURE 
+2017-03-23 11:46:14,024 DEBUG CreateCrowdSensingTask 59 
+ [Debug Message] - Task with the ID: [f0c968db-5a4d-4055-b5b4-29b63485bb95] created with Success!
+2017-03-23 15:10:12,215 DEBUG LoadServerInstance 131 
+ [Debug Message] - Valid XML File!
+2017-03-23 15:10:12,284 DEBUG RegisterServerManagerNode 166 
+ [Debug Message] - ServerManager INITIATED!
+2017-03-23 15:10:12,288 DEBUG LoadServerInstance 137 
+ [Debug Message] - ServerManager LOADED!
+2017-03-23 15:10:26,647 DEBUG RegisterTaskCreatorNode 193 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-03-23 15:10:26,663 DEBUG RegisterTaskDistributorNode 213 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-03-23 15:10:26,679 DEBUG RegisterReportAggregatorNode 231 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-03-23 15:10:26,694 DEBUG RegisterIncentiveEngineNode 243 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-03-23 15:10:26,710 DEBUG RegisterRepositoryNode 255 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-03-23 15:10:59,513 DEBUG GetCrowdSensingTask 107 
+ [Debug Message] - User ID: [1234] Task: Name: Teste Exp: 04/03/2017 17:41:00 Topic: TestTopic 
+Trigger: Sensor: GPS Info1: 10.2 Info2: 5.1 
+SensingTask: Sensor: TEMPERATURE 
+2017-03-23 15:11:08,240 DEBUG CreateCrowdSensingTask 59 
+ [Debug Message] - Task with the ID: [a2596a0f-1376-4fe7-a8e6-aa11e229670f] created with Success!

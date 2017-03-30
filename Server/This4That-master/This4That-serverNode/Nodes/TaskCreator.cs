@@ -65,11 +65,14 @@ namespace This4That_serverNode.Nodes
         private bool ConnectToEmmiterBroker()
         {
             string channelKey = null;
+            //CustomServer 
             string serverKey = "MMVo_zBg1ZpRxMtxVIBixil3ofpIxdeZ";
+            //Emitter Server string serverKey = "eqOEeIgF1TsSD4SqpfHQajafy4c072tg";
 
             try
             {
                 this.emitterConn = new Connection("192.168.128.128", 5010, serverKey);
+                //this.emitterConn = new Connection();
                 this.emitterConn.Connect();
                 this.emitterConn.GenerateKey(
                                  serverKey,
@@ -107,8 +110,7 @@ namespace This4That_serverNode.Nodes
             taskID = Guid.NewGuid().ToString();
             Log.DebugFormat("TaskCreator : TaskID: [{0}]", taskID);
             EmitterReceiver(channelKey);
-            emitterConn.Publish("This4That", "Teste");
-            emitterConn.Disconnect();
+            emitterConn.Publish(channelKey, "This4That", task.ToString());
             return true;
         }
 
