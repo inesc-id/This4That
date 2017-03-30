@@ -13,6 +13,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.Date;
+
+import pt.ulisboa.tecnico.this4that_client.Domain.CSTask.CSTask;
+import pt.ulisboa.tecnico.this4that_client.Domain.CSTask.SensingTask;
+import pt.ulisboa.tecnico.this4that_client.Domain.CSTask.TriggerSensor;
+import pt.ulisboa.tecnico.this4that_client.Enums.SensorType;
+import pt.ulisboa.tecnico.this4that_client.applicationLayer.HttpClient;
+import pt.ulisboa.tecnico.this4that_client.serviceLayer.ServerAPI;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -40,6 +49,24 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        ServerAPI serverAPI = new ServerAPI("http://localhost:58949/");
+        CSTask csTask = new CSTask();
+        SensingTask sensingTask = new SensingTask();
+        sensingTask.setSensor(SensorType.TEMPERATURE);
+        TriggerSensor triggerSensor = new TriggerSensor();
+        triggerSensor.setType(SensorType.GPS);
+        triggerSensor.setParam1("50.2");
+        triggerSensor.setParam2("10");
+
+        csTask.setExpirationDate(new Date());
+        csTask.setName("TaskTeste");
+        csTask.setTopic("temperature");
+        csTask.setSensingTask(sensingTask);
+        csTask.setTrigger(triggerSensor);
+
+        serverAPI.CalcTaskCostAPI(csTask);
+
+
     }
 
     @Override

@@ -3341,3 +3341,51 @@ Trigger: Sensor: GPS Info1: 10.2 Info2: 5.1
 SensingTask: Sensor: TEMPERATURE 
 2017-03-23 15:11:08,240 DEBUG CreateCrowdSensingTask 59 
  [Debug Message] - Task with the ID: [a2596a0f-1376-4fe7-a8e6-aa11e229670f] created with Success!
+2017-03-30 17:26:25,780 DEBUG LoadServerInstance 131 
+ [Debug Message] - Valid XML File!
+2017-03-30 17:26:25,875 DEBUG RegisterServerManagerNode 166 
+ [Debug Message] - ServerManager INITIATED!
+2017-03-30 17:26:25,886 DEBUG LoadServerInstance 137 
+ [Debug Message] - ServerManager LOADED!
+2017-03-30 17:27:20,527 DEBUG RegisterTaskCreatorNode 193 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-03-30 17:27:20,563 DEBUG RegisterTaskDistributorNode 213 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-03-30 17:27:20,586 DEBUG RegisterReportAggregatorNode 231 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-03-30 17:27:20,613 DEBUG RegisterIncentiveEngineNode 243 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-03-30 17:27:20,636 DEBUG RegisterRepositoryNode 255 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-03-30 18:43:35,135 DEBUG LoadServerInstance 131 
+ [Debug Message] - Valid XML File!
+2017-03-30 18:43:35,218 DEBUG RegisterServerManagerNode 166 
+ [Debug Message] - ServerManager INITIATED!
+2017-03-30 18:43:35,225 DEBUG LoadServerInstance 137 
+ [Debug Message] - ServerManager LOADED!
+2017-03-30 18:44:04,198 DEBUG RegisterTaskCreatorNode 193 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-03-30 18:44:04,239 DEBUG RegisterTaskDistributorNode 213 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-03-30 18:44:04,279 DEBUG RegisterReportAggregatorNode 231 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-03-30 18:44:04,319 DEBUG RegisterIncentiveEngineNode 243 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-03-30 18:44:04,353 DEBUG RegisterRepositoryNode 255 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-03-30 18:55:29,623 DEBUG LoadServerInstance 131 
+ [Debug Message] - Valid XML File!
+2017-03-30 18:55:29,791 DEBUG RegisterServerManagerNode 166 
+ [Debug Message] - ServerManager INITIATED!
+2017-03-30 18:55:29,803 DEBUG LoadServerInstance 137 
+ [Debug Message] - ServerManager LOADED!
+2017-03-30 18:55:56,460 DEBUG RegisterTaskCreatorNode 193 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-03-30 18:55:57,718 DEBUG RegisterTaskDistributorNode 213 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-03-30 18:55:58,095 DEBUG RegisterReportAggregatorNode 231 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-03-30 18:55:58,151 DEBUG RegisterIncentiveEngineNode 243 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-03-30 18:55:58,202 DEBUG RegisterRepositoryNode 255 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]

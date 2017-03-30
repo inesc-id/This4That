@@ -25,7 +25,8 @@ namespace This4That_serverNode.Nodes
 
         ~TaskCreator()
         {
-            emitterConn.Disconnect();
+            if (emitterConn != null)
+                emitterConn.Disconnect();
         }
 
         /// <summary>
