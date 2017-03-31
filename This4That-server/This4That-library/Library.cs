@@ -5,6 +5,7 @@ using System.IO;
 using System.Web;
 using This4That_library.Models.Domain;
 using This4That_library.Models.Integration;
+using This4That_library.Properties;
 
 namespace This4That_library
 {
@@ -21,9 +22,9 @@ namespace This4That_library
                 csTask = JsonConvert.DeserializeObject<JSONTaskDTO>(postBody);
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                errorMessage = ex.Message;
+                errorMessage = Resources.InvalidJSONFormat;
                 csTask = null;
                 return false;
             }

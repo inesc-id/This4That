@@ -21,6 +21,9 @@ public class SensingTask {
 
 
     public Object toJSON(){
-        return new HashMap<String, String>().put("sensor", (sensor == null ? null : sensor.toString()));
+        HashMap<String, String> hashSensingTask = new HashMap<>();
+
+        hashSensingTask.put("sensor", (sensor == null ? null : sensor.toString()));
+        return  hashSensingTask;
     }
 }

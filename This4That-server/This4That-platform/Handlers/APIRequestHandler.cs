@@ -9,14 +9,14 @@ namespace This4That_platform.Handlers
 {
     public class APIRequestHandler
     {
-        internal static bool CalcCrowdSensingTaskCost(HttpRequest request, ServerManager serverMgr, out Object incentiveValue)
+        public bool CalcCrowdSensingTaskCost(HttpRequest request, ServerManager serverMgr, out Object incentiveValue, ref string errorMessage)
         {
             incentiveValue = null;
             JSONTaskDTO csTask;
             try
             {
                 //get the DTO containing the UserID and the encrypted Task
-                if (!GetCrowdSensingTask(request, out csTask))
+                if (!GetCrowdSensingTask(request, out csTask, ref errorMessage))
                     return false;
                 //authenticate the user identification
                 if (!serverMgr.RemoteRepository.AuthenticateUser(csTask.UserID))
@@ -37,14 +37,14 @@ namespace This4That_platform.Handlers
             }
         }
         
-        internal static bool CreateCrowdSensingTask(HttpRequest request, ServerManager serverMgr, out string taskID)
+        public bool CreateCrowdSensingTask(HttpRequest request, ServerManager serverMgr, out string taskID, ref string errorMessage)
         {
             JSONTaskDTO csTask;
             taskID = null;
             try
             {
                 //get the DTO containing the UserID and the encrypted Task
-                if (!GetCrowdSensingTask(request, out csTask))
+                if (!GetCrowdSensingTask(request, out csTask, ref errorMessage))
                     return false;
 
                 if (!serverMgr.RemoteIncentiveEngine.IsTaskPaid(csTask.TransactionID))
@@ -66,7 +66,12 @@ namespace This4That_platform.Handlers
             }
         }
 
-        internal static bool ReportTaskResults(HttpRequest request, ServerManager serverMgr)
+        internal bool PayCrowdSensingTask(HttpRequest request, ServerManager serverMgr, out string transactionId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool ReportTaskResults(HttpRequest request, ServerManager serverMgr)
         {
             string errorMessage = null;
             string jsonBody;
@@ -92,9 +97,8 @@ namespace This4That_platform.Handlers
             }
         }
 
-        private static bool GetCrowdSensingTask(HttpRequest request, out JSONTaskDTO csTask)
+        private bool GetCrowdSensingTask(HttpRequest request, out JSONTaskDTO csTask, ref string errorMessage)
         {
-            string errorMessage = null;
             csTask = null;
 
             try

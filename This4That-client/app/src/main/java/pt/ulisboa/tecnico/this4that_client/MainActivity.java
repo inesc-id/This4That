@@ -13,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import pt.ulisboa.tecnico.this4that_client.Domain.CSTask.CSTask;
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        ServerAPI serverAPI = new ServerAPI("http://localhost:58949/");
+        ServerAPI serverAPI = new ServerAPI("http://192.168.1.101:58949/api/", "1234");
         CSTask csTask = new CSTask();
         SensingTask sensingTask = new SensingTask();
         sensingTask.setSensor(SensorType.TEMPERATURE);
@@ -64,7 +65,10 @@ public class MainActivity extends AppCompatActivity
         csTask.setSensingTask(sensingTask);
         csTask.setTrigger(triggerSensor);
 
-        serverAPI.CalcTaskCostAPI(csTask);
+
+        serverAPI.CalcTaskCostAPI(csTask, this);
+        serverAPI.CreateCSTask(csTask, this);
+
 
 
     }

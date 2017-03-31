@@ -10,17 +10,20 @@ namespace This4That_platform.ServiceLayer
     public class ServerAPIController : ApiController
     {
         [HttpPost]
-        [Route("taskCost")]
+        [Route("task/cost")]
         public IHttpActionResult GetTaskCost()
         {
             ServerManager serverMgr = null;
+            APIRequestHandler handler = null;
             object incentiveValue;
+            string errorMessage = null;
             try
             {
+
                 serverMgr = Global.GetCreateServerManager(HttpContext.Current.Server);
-                if (!APIRequestHandler.CalcCrowdSensingTaskCost(HttpContext.Current.Request, serverMgr, out incentiveValue))
+                if (!handler.CalcCrowdSensingTaskCost(HttpContext.Current.Request, serverMgr, out incentiveValue, ref errorMessage))
                 {
-                    return Content(HttpStatusCode.InternalServerError, "ERROR: Cannot calc the sensing task value.");
+                    return Content(HttpStatusCode.InternalServerError, errorMessage);
                 }
                 return Content(HttpStatusCode.OK, "Incentive Value: " + incentiveValue);
             }
@@ -30,20 +33,47 @@ namespace This4That_platform.ServiceLayer
                 return Content(HttpStatusCode.InternalServerError, "ERROR: " + ex.Message);
             }
         }
-        
+
+        [HttpPost]
+        [Route("task/pay")]
+        public IHttpActionResult PayTask()
+        {
+            ServerManager serverMgr = null;
+            APIRequestHandler handler = null;
+            String transactionId;
+            string errorMessage = null;
+            try
+            {
+
+                serverMgr = Global.GetCreateServerManager(HttpContext.Current.Server);
+                if (!handler.PayCrowdSensingTask(HttpContext.Current.Request, serverMgr, out transactionId))
+                {
+                    return Content(HttpStatusCode.InternalServerError, errorMessage);
+                }
+                return Content(HttpStatusCode.OK, transactionId);
+            }
+            catch (Exception ex)
+            {
+                Global.Log.Error(ex.Message);
+                return Content(HttpStatusCode.InternalServerError, "ERROR: " + ex.Message);
+            }
+        }
+
         [HttpPost]
         [Route("task")]
         public IHttpActionResult CreateCrowdSensingTask()
         {
             ServerManager serverMgr = null;
+            APIRequestHandler handler = null;
             string taskID;
+            string errorMessage = null;
             
             try
             {
                 serverMgr = Global.GetCreateServerManager(HttpContext.Current.Server);
-                if (!APIRequestHandler.CreateCrowdSensingTask(HttpContext.Current.Request, serverMgr, out taskID))
+                if (!handler.CreateCrowdSensingTask(HttpContext.Current.Request, serverMgr, out taskID, ref errorMessage))
                 {
-                    return Content(HttpStatusCode.InternalServerError, "ERROR");
+                    return Content(HttpStatusCode.InternalServerError, errorMessage);
                 }
                 return Content(HttpStatusCode.OK, "Task ID: " + taskID);
             }
@@ -59,11 +89,11 @@ namespace This4That_platform.ServiceLayer
         public IHttpActionResult ReportTaskResults()
         {
             ServerManager serverMgr = null;
-
+            APIRequestHandler handler = null;
             try
             {
                 serverMgr = Global.GetCreateServerManager(HttpContext.Current.Server);
-                if (!APIRequestHandler.ReportTaskResults(HttpContext.Current.Request, serverMgr))
+                if (!handler.ReportTaskResults(HttpContext.Current.Request, serverMgr))
                 {
                     return Content(HttpStatusCode.InternalServerError, "ERROR");
                 }

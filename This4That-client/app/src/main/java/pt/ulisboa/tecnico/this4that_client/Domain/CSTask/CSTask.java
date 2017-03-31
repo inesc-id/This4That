@@ -1,5 +1,6 @@
 package pt.ulisboa.tecnico.this4that_client.Domain.CSTask;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 
@@ -61,7 +62,7 @@ public class CSTask {
         HashMap<String, Object> jsonElements = new HashMap<>();
 
         jsonElements.put("name", name);
-        jsonElements.put("expDate", expirationDate.toString());
+        jsonElements.put("expDate", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(expirationDate));
         jsonElements.put("topic", topic);
         jsonElements.put("trigger", trigger.toJSON());
         jsonElements.put("sensingTask", sensingTask.toJSON());

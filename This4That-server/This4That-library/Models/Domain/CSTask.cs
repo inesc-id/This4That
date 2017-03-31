@@ -43,7 +43,7 @@ namespace This4That_library.Models.Domain
             }
         }
 
-        [JsonProperty(PropertyName = "expires")]
+        [JsonProperty(PropertyName = "expDate")]
         public DateTime ExpirationDate
         {
             get
@@ -117,10 +117,12 @@ namespace This4That_library.Models.Domain
     [Serializable]
     public class Trigger
     {
-        private TriggerSensor sensor;
+        private SensorType sensor;
+        private string param1;
+        private string triggerInfo2;
 
         [JsonProperty(PropertyName = "sensor")]
-        public TriggerSensor Sensor
+        public SensorType Sensor
         {
             get
             {
@@ -133,58 +135,22 @@ namespace This4That_library.Models.Domain
             }
         }
 
-        public override string ToString()
-        {
-            if (Sensor != null)
-                return Sensor.ToString();
-            else
-                return "NULL";
-        }
-    }
-
-    public enum SensorType
-    {
-        NONE,
-        GPS,
-        TEMPERATURE
-    }
-    [Serializable]
-    public class TriggerSensor
-    {
-        private SensorType type;
-        private string triggerInfo1;
-        private string triggerInfo2;
-
-        [JsonProperty(PropertyName = "type")]
-        public SensorType Type
+        [JsonProperty(PropertyName = "param1")]
+        public string Param1
         {
             get
             {
-                return type;
+                return param1;
             }
 
             set
             {
-                type = value;
+                param1 = value;
             }
         }
 
-        [JsonProperty(PropertyName = "info1")]
-        public string TriggerInfo1
-        {
-            get
-            {
-                return triggerInfo1;
-            }
-
-            set
-            {
-                triggerInfo1 = value;
-            }
-        }
-
-        [JsonProperty(PropertyName = "info2")]
-        public string TriggerInfo2
+        [JsonProperty(PropertyName = "param2")]
+        public string Param2
         {
             get
             {
@@ -201,14 +167,21 @@ namespace This4That_library.Models.Domain
         {
             String result = null;
 
-            result += $"Sensor: {Type.ToString()} ";
-            if (TriggerInfo1 != null)
-                result += $"Info1: {TriggerInfo1.ToString()} ";
-            if (TriggerInfo2 != null)
-                result += $"Info2: {TriggerInfo2.ToString()}";
+            result += $"Sensor: {Sensor.ToString()} ";
+            if (Param1 != null)
+                result += $"Param1: {Param1.ToString()} ";
+            if (Param2 != null)
+                result += $"Param2: {Param2.ToString()}";
 
             return result;
         }
+    }
+
+    public enum SensorType
+    {
+        NONE,
+        GPS,
+        TEMPERATURE
     }
 
     [Serializable]

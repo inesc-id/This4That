@@ -1,0 +1,12 @@
+Exec Server:
+
+dotnet restore
+cd src/Emitter.Server
+dotnet run
+
+-------------
+
+Emitter License:
+tg9iie_WifjVACyV5Hck9O9lPP4AAAAAAAAAAAAAAAI ->This key should be placed in the emitter.conf file.
+ServerKey:
+rzBrYBqh2nlglDHBC0oDQq10KCCEjjCw

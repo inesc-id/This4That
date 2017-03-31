@@ -1,0 +1,8 @@
+Para permitir o acesso externo à pagina web:
+netsh http add urlacl url=http://192.168.1.101:58949/ user=todos
+
+No .vs\applicationhost.config :
+
+<bindings>
+	<binding protocol="http" bindingInformation="*:58949:192.168.1.101" />
+</bindings>

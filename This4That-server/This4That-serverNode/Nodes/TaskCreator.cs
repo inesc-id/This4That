@@ -67,12 +67,12 @@ namespace This4That_serverNode.Nodes
         {
             string channelKey = null;
             //CustomServer 
-            string serverKey = "MMVo_zBg1ZpRxMtxVIBixil3ofpIxdeZ";
+            string serverKey = "rzBrYBqh2nlglDHBC0oDQq10KCCEjjCw";
             //Emitter Server string serverKey = "eqOEeIgF1TsSD4SqpfHQajafy4c072tg";
 
             try
             {
-                this.emitterConn = new Connection("192.168.128.128", 5010, serverKey);
+                this.emitterConn = new Connection("192.168.1.101", 5010, serverKey);
                 //this.emitterConn = new Connection();
                 this.emitterConn.Connect();
                 this.emitterConn.GenerateKey(
@@ -92,7 +92,6 @@ namespace This4That_serverNode.Nodes
             catch (Exception ex)
             {
                 Log.Error(ex.Message);
-                this.emitterConn = null;
                 return false;
             }
         }
