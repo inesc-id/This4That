@@ -1,0 +1,454 @@
+2017-03-30 17:27:20,602 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-30 17:27:20,607 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-30 17:27:20,620 DEBUG ConnectServerManager 32 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-30 18:44:04,300 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-30 18:44:04,310 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-30 18:44:04,326 DEBUG ConnectServerManager 32 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-30 18:55:58,117 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-30 18:55:58,136 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-30 18:55:58,178 DEBUG ConnectServerManager 32 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-30 20:07:36,534 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-30 20:07:36,546 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-30 20:07:36,571 DEBUG ConnectServerManager 32 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 13:07:45,289 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-31 13:07:45,293 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-31 13:07:45,305 DEBUG ConnectServerManager 32 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 13:09:50,120 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-31 13:09:50,125 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-31 13:09:50,150 DEBUG ConnectServerManager 32 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 13:10:42,855 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-31 13:10:42,864 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-31 13:10:42,884 DEBUG ConnectServerManager 32 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 13:34:46,883 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-31 13:34:46,891 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-31 13:34:46,908 DEBUG ConnectServerManager 32 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 14:19:56,318 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-31 14:19:56,324 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-31 14:19:56,337 DEBUG ConnectServerManager 32 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 15:01:26,978 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-31 15:01:26,984 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-31 15:01:27,000 DEBUG ConnectServerManager 32 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 15:02:32,080 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-31 15:02:32,087 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-31 15:02:32,108 DEBUG ConnectServerManager 32 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 16:07:55,149 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-31 16:07:55,156 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-31 16:07:55,170 DEBUG ConnectServerManager 32 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 16:24:16,045 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-31 16:24:16,056 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-31 16:24:16,081 DEBUG ConnectServerManager 32 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 18:16:51,068 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-31 18:16:51,084 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-31 18:16:51,101 DEBUG ConnectServerManager 32 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 18:24:45,214 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-31 18:24:45,225 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-31 18:24:45,243 DEBUG ConnectServerManager 32 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 18:37:23,407 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-31 18:37:23,412 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-31 18:37:23,424 DEBUG ConnectServerManager 32 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 18:46:32,005 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-03-31 18:46:32,010 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-03-31 18:46:32,013 DEBUG ConnectServerManager 32 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 15:38:42,092 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-03 15:38:42,098 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-03 15:38:42,112 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 15:38:42,118 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-03 15:40:01,942 ERROR GetUserIncentiveScheme 116 
+ [Debug Message] - O tipo 'This4That_serverNode.IncentiveModels.CentralIncentiveScheme' na assemblagem 'This4That-library, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' não está marcado como serializável.
+2017-04-03 15:40:01,948 ERROR CalcTaskCost 133 
+ [Debug Message] - Cannot obtain User incentive scheme!
+2017-04-03 15:42:11,506 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-03 15:42:11,511 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-03 15:42:11,538 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 15:42:11,546 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-03 15:43:44,522 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-03 15:43:44,527 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-03 15:43:44,539 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 15:43:44,545 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-03 15:43:56,966 ERROR GetUserIncentiveScheme 116 
+ [Debug Message] - O tipo 'This4That_serverNode.IncentiveModels.IncentiveSchemeBase' na assemblagem 'This4That-library, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' não está marcado como serializável.
+2017-04-03 15:43:56,971 ERROR CalcTaskCost 133 
+ [Debug Message] - Cannot obtain User incentive scheme!
+2017-04-03 15:44:34,621 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-03 15:44:34,627 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-03 15:44:34,643 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 15:44:34,651 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-03 15:51:21,944 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-03 15:51:21,949 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-03 15:51:21,967 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 15:51:21,977 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-03 15:56:54,292 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-03 15:56:54,298 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-03 15:56:54,313 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 15:56:54,320 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-03 17:08:53,183 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-03 17:08:53,188 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-03 17:08:53,200 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 17:08:53,206 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-03 21:56:28,012 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-03 21:56:28,028 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-03 21:56:28,043 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 21:56:28,059 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-03 21:57:39,671 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-03 21:57:39,687 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-03 21:57:39,702 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 21:57:39,702 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-03 22:49:07,000 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-03 22:49:07,000 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-03 22:49:07,016 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 22:49:07,031 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-03 23:42:44,321 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-03 23:42:44,328 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-03 23:42:44,343 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 23:42:44,351 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-03 23:49:29,942 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-03 23:49:29,947 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-03 23:49:29,962 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 23:49:29,970 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-03 23:57:09,661 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-03 23:57:09,678 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-03 23:57:09,696 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 23:57:09,706 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-04 00:02:34,859 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-04 00:02:34,867 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-04 00:02:34,882 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 00:02:34,890 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-04 00:15:50,360 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-04 00:15:50,366 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-04 00:15:50,378 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 00:15:50,384 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-04 16:22:43,421 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-04 16:22:43,428 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-04 16:22:43,445 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 16:22:43,452 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-04 16:38:38,676 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-04 16:38:38,682 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-04 16:38:38,709 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 16:38:38,721 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-04 16:44:53,087 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-04 16:44:53,094 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-04 16:44:53,115 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 16:44:53,123 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-04 16:53:42,927 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-04 16:53:42,935 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-04 16:53:42,956 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 16:53:42,963 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-04 16:59:16,847 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-04 16:59:16,853 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-04 16:59:16,866 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 16:59:16,872 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-04 17:00:35,059 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-04 17:00:35,066 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-04 17:00:35,081 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 17:00:35,087 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-04 17:05:39,018 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-04 17:05:39,023 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-04 17:05:39,038 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 17:05:39,045 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-04 17:08:54,959 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-04 17:08:54,964 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-04 17:08:54,978 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 17:08:54,985 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-04 17:20:06,922 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-04 17:20:06,927 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-04 17:20:06,945 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 17:20:06,953 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-04 17:46:40,261 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-04 17:46:40,266 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-04 17:46:40,281 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 17:46:40,288 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-04 18:14:27,828 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-04 18:14:27,843 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-04 18:14:27,859 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 18:14:27,859 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-04 19:34:04,086 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-04 19:34:04,092 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-04 19:34:04,109 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 19:34:04,117 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-04 20:02:53,738 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-04 20:02:53,753 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-04 20:02:53,769 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 20:02:53,769 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-04 20:36:16,725 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-04 20:36:16,732 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-04 20:36:16,751 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 20:36:16,765 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-04 21:42:55,342 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-04 21:42:55,349 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-04 21:42:55,366 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 21:42:55,373 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-05 12:10:39,557 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [194.210.134.200] Port: [5004]
+2017-04-05 12:10:39,564 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-05 12:10:39,579 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://194.210.134.200:5000/ServerManager]
+2017-04-05 12:10:39,586 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-05 12:13:25,403 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [194.210.134.200] Port: [5004]
+2017-04-05 12:13:25,409 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-05 12:13:25,425 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://194.210.134.200:5000/ServerManager]
+2017-04-05 12:13:25,434 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-05 12:20:06,890 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [194.210.134.200] Port: [5004]
+2017-04-05 12:20:06,897 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-05 12:20:06,919 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://194.210.134.200:5000/ServerManager]
+2017-04-05 12:20:06,928 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-05 12:22:02,427 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [194.210.134.200] Port: [5004]
+2017-04-05 12:22:02,439 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-05 12:22:02,465 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://194.210.134.200:5000/ServerManager]
+2017-04-05 12:22:02,476 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-05 13:16:00,232 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [194.210.134.200] Port: [5004]
+2017-04-05 13:16:00,242 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-05 13:16:00,272 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://194.210.134.200:5000/ServerManager]
+2017-04-05 13:16:00,282 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-05 13:29:45,934 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [194.210.134.200] Port: [5004]
+2017-04-05 13:29:45,945 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-05 13:29:45,979 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://194.210.134.200:5000/ServerManager]
+2017-04-05 13:29:45,993 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-05 16:21:51,340 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-05 16:21:51,351 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-05 16:21:51,380 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-05 16:21:51,391 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-05 16:22:57,232 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-05 16:22:57,246 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-05 16:22:57,267 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-05 16:22:57,276 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-05 16:26:18,398 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-05 16:26:18,405 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-05 16:26:18,421 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-05 16:26:18,428 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-05 17:46:52,982 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-05 17:46:52,988 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-05 17:46:53,001 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-05 17:46:53,006 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-05 18:40:14,123 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-05 18:40:14,128 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-05 18:40:14,142 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-05 18:40:14,148 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-05 19:34:39,619 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-05 19:34:39,625 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-05 19:34:39,645 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-05 19:34:39,652 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.
+2017-04-05 22:18:54,126 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5004]
+2017-04-05 22:18:54,133 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [IncentiveEngine] IS RUNNING!
+2017-04-05 22:18:54,153 DEBUG ConnectServerManager 63 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-05 22:18:54,159 DEBUG ConnectToRepository 82 
+ [Debug Message] - [INFO] Incentive Engine connected to Repository.

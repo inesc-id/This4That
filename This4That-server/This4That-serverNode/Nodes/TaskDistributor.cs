@@ -1,5 +1,4 @@
-﻿using Emitter;
-using log4net;
+﻿using log4net;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,12 +10,24 @@ namespace This4That_serverNode.Nodes
 {
     public class TaskDistributor : Node, ITaskDistributor
     {
-        private List<CSTask> onGoingTasks = new List<CSTask>();
+        private IRepository remoteRepository = null;
 
         public TaskDistributor(string hostName, int port, string name) : base(hostName, port, name)
         {
             Log = LogManager.GetLogger("TaskDistributorLOG");
-            //ConnectToEmmiterBroker(out emitterConn);
+        }
+
+        public IRepository RemoteRepository
+        {
+            get
+            {
+                return remoteRepository;
+            }
+
+            set
+            {
+                remoteRepository = value;
+            }
         }
 
 
@@ -48,12 +59,12 @@ namespace This4That_serverNode.Nodes
             }
         }
 
-
-        #region REMOTE_INTERFACE
-        public bool ReceiveTask(CSTask task)
+        public bool ConnectToRepository(string repositoryUrl)
         {
             try
             {
+                this.RemoteRepository = (IRepository)Activator.GetObject(typeof(IRepository), repositoryUrl);
+                Log.DebugFormat("[INFO-Task Distributor] Connected to Repository.");
                 return true;
             }
             catch (Exception ex)
@@ -62,6 +73,35 @@ namespace This4That_serverNode.Nodes
                 return false;
             }
         }
+
+        #region REMOTE_INTERFACE
+
+        public Topic GetTopic(string topicName)
+        {
+            try
+            {
+                return this.RemoteRepository.GetTopicFromRepository(topicName);
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return null;
+            }
+        }
+
+        public List<Topic> GetTopics()
+        {
+            try
+            {
+                return this.RemoteRepository.GetTopicsFromRepository();
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return null;
+            }
+        }
+
         #endregion
     }
 }

@@ -2,14 +2,11 @@ package pt.ulisboa.tecnico.this4that_client.serviceLayer;
 
 import android.content.Context;
 import android.util.Log;
-import android.widget.Toast;
 
 import java.util.HashMap;
 
 import pt.ulisboa.tecnico.this4that_client.Domain.CSTask.CSTask;
-import pt.ulisboa.tecnico.this4that_client.MainActivity;
 import pt.ulisboa.tecnico.this4that_client.applicationLayer.HttpClient;
-
 import static android.content.ContentValues.TAG;
 
 /**
@@ -32,16 +29,15 @@ public class ServerAPI {
 
     public boolean CalcTaskCostAPI(CSTask task, Context ctx) {
 
-        HttpClient clientHttp;
+        CalcTaskCostService calcTaskCostService;
         String postBody;
         HashMap<String, Object> postParams = new HashMap<>();
         try {
-            clientHttp = new HttpClient(ctx);
+            calcTaskCostService = new CalcTaskCostService(ctx);
             postParams.put("userId", userId);
-            postParams.put("transactionId", null);
             postParams.put("task", task.toHashMap());
             postBody = HttpClient.convertToJSON(postParams).toString();
-            clientHttp.postJSON(serverURL + CALCTASK, postBody);
+            calcTaskCostService.execute(this.serverURL + CALCTASK, postBody);
             return true;
 
         } catch (Exception ex) {
@@ -50,18 +46,18 @@ public class ServerAPI {
         }
     }
 
-    public boolean CreateCSTask(CSTask csTask, Context ctx) {
+    public boolean CreateCSTask(CSTask csTask, Context ctx, String refToPay) {
 
-        HttpClient clientHttp;
+        CreateTaskService createTaskService;
         String postBody;
         HashMap<String, Object> postParams = new HashMap<>();
         try {
-            clientHttp = new HttpClient(ctx);
+            createTaskService = new CreateTaskService(ctx);
             postParams.put("userId", userId);
-            postParams.put("transactionId", "12345");
+            postParams.put("refToPay", refToPay);
             postParams.put("task", csTask.toHashMap());
             postBody = HttpClient.convertToJSON(postParams).toString();
-            clientHttp.postJSON(serverURL + CREATETASK, postBody);
+            createTaskService.execute(this.serverURL + CREATETASK, postBody);
             return true;
 
         } catch (Exception ex) {
@@ -69,11 +65,12 @@ public class ServerAPI {
             return false;
         }
     }
-
+/*
     public String GetTopics(Context ctx) {
 
         HttpClient clientHttp;
 
+        /*
         try {
             clientHttp = new HttpClient(ctx);
             return clientHttp.getRequestFromServer(serverURL + GETTOPICS);
@@ -81,7 +78,7 @@ public class ServerAPI {
             Log.d(TAG, ex.getMessage());
             return  null;
         }
-    }
+    }*/
 
 
 }

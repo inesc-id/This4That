@@ -4793,3 +4793,307 @@ Trigger: Sensor: GPS Param1: 50.2 Param2: 10
 SensingTask: Sensor: TEMPERATURE 
 2017-04-05 16:29:20,842 DEBUG CreateCSTask 175 
  [Debug Message] - Task with the ID: [750354bd-0353-4508-8fac-dfbc449b65f7] created with Success!
+2017-04-05 17:46:47,385 DEBUG LoadServerInstance 131 
+ [Debug Message] - Valid XML File!
+2017-04-05 17:46:47,469 DEBUG RegisterServerManagerNode 166 
+ [Debug Message] - ServerManager INITIATED!
+2017-04-05 17:46:47,476 DEBUG LoadServerInstance 137 
+ [Debug Message] - ServerManager LOADED!
+2017-04-05 17:46:52,849 DEBUG RegisterRepositoryNode 255 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-04-05 17:46:52,883 DEBUG RegisterTaskCreatorNode 193 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-04-05 17:46:52,915 DEBUG RegisterTaskDistributorNode 213 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-04-05 17:46:52,968 DEBUG RegisterReportAggregatorNode 231 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-04-05 17:46:52,994 DEBUG RegisterIncentiveEngineNode 243 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-04-05 17:47:10,079 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 04-03-2017 17:41:00 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 17:47:13,147 DEBUG CreateCSTask 193 
+ [Debug Message] - Task with the ID: [2e1dcb9d-9584-4b8c-acc3-a76f5468b2a0] created with Success!
+2017-04-05 17:47:49,170 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 04-03-2017 17:41:00 Topic: gps 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 17:47:49,291 DEBUG CreateCSTask 193 
+ [Debug Message] - Task with the ID: [b89ff8ad-3f87-4718-afbf-f015b5066be6] created with Success!
+2017-04-05 18:40:06,578 DEBUG LoadServerInstance 131 
+ [Debug Message] - Valid XML File!
+2017-04-05 18:40:06,676 DEBUG RegisterServerManagerNode 166 
+ [Debug Message] - ServerManager INITIATED!
+2017-04-05 18:40:06,685 DEBUG LoadServerInstance 137 
+ [Debug Message] - ServerManager LOADED!
+2017-04-05 18:40:13,966 DEBUG RegisterRepositoryNode 255 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-04-05 18:40:14,029 DEBUG RegisterTaskCreatorNode 193 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-04-05 18:40:14,077 DEBUG RegisterTaskDistributorNode 213 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-04-05 18:40:14,110 DEBUG RegisterReportAggregatorNode 231 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-04-05 18:40:14,134 DEBUG RegisterIncentiveEngineNode 243 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-04-05 18:40:27,496 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 04-03-2017 17:41:00 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 18:40:29,562 DEBUG CalcCostCSTask 56 
+ [Debug Message] - User ID: [1234] has to Pay [50] to Reference: [4f81d748-8050-4042-9d4b-d03345713ef9]
+2017-04-05 19:34:35,619 DEBUG LoadServerInstance 131 
+ [Debug Message] - Valid XML File!
+2017-04-05 19:34:35,681 DEBUG RegisterServerManagerNode 166 
+ [Debug Message] - ServerManager INITIATED!
+2017-04-05 19:34:35,688 DEBUG LoadServerInstance 137 
+ [Debug Message] - ServerManager LOADED!
+2017-04-05 19:34:39,448 DEBUG RegisterRepositoryNode 255 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-04-05 19:34:39,499 DEBUG RegisterTaskCreatorNode 193 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-04-05 19:34:39,559 DEBUG RegisterTaskDistributorNode 213 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-04-05 19:34:39,600 DEBUG RegisterReportAggregatorNode 231 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-04-05 19:34:39,635 DEBUG RegisterIncentiveEngineNode 243 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-04-05 19:35:09,282 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 04-03-2017 17:41:00 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 19:35:11,344 DEBUG CalcCostCSTask 56 
+ [Debug Message] - User ID: [1234] has to Pay [50] to Reference: [6898fb35-ad46-48f1-b280-d99c236b6e30]
+2017-04-05 19:38:12,471 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 19:36:46 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 19:38:12,486 DEBUG CalcCostCSTask 56 
+ [Debug Message] - User ID: [1234] has to Pay [50] to Reference: [c1fd8788-c3ef-4a6a-819e-244454e5d527]
+2017-04-05 19:40:14,684 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 19:39:54 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 19:40:14,707 DEBUG CalcCostCSTask 56 
+ [Debug Message] - User ID: [1234] has to Pay [50] to Reference: [581fd417-6c30-4154-a123-78691dbc5b64]
+2017-04-05 19:40:40,162 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 19:40:27 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 19:40:40,181 DEBUG CalcCostCSTask 56 
+ [Debug Message] - User ID: [1234] has to Pay [50] to Reference: [f682d6d0-85a9-4d22-bb78-91dac3bc7575]
+2017-04-05 19:41:14,870 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 19:41:02 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 19:41:14,904 DEBUG CalcCostCSTask 56 
+ [Debug Message] - User ID: [1234] has to Pay [50] to Reference: [804cbb44-111d-4bee-80c3-ec29c3c48ccf]
+2017-04-05 19:41:25,913 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 19:41:13 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 19:41:25,955 DEBUG CalcCostCSTask 56 
+ [Debug Message] - User ID: [1234] has to Pay [50] to Reference: [16d98774-385b-4c3d-9420-01d832ab7d5e]
+2017-04-05 19:44:29,383 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 19:44:17 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 19:44:29,416 DEBUG CalcCostCSTask 56 
+ [Debug Message] - User ID: [1234] has to Pay [50] to Reference: [043fda41-6d2a-4b90-bcf1-4ed9c3679f9e]
+2017-04-05 19:44:31,401 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 19:44:19 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 19:44:31,411 DEBUG CalcCostCSTask 56 
+ [Debug Message] - User ID: [1234] has to Pay [50] to Reference: [63ce773b-e13f-4e46-a1c2-6764472670bf]
+2017-04-05 19:44:32,530 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 19:44:20 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 19:44:32,538 DEBUG CalcCostCSTask 56 
+ [Debug Message] - User ID: [1234] has to Pay [50] to Reference: [e1506a2d-c137-4eec-91d7-9ff187d181e8]
+2017-04-05 19:44:43,719 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 19:44:31 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 19:44:43,728 DEBUG CalcCostCSTask 56 
+ [Debug Message] - User ID: [1234] has to Pay [50] to Reference: [7fcf51c3-18eb-4ff2-8d20-7e8068f28da6]
+2017-04-05 22:18:35,041 DEBUG LoadServerInstance 131 
+ [Debug Message] - Valid XML File!
+2017-04-05 22:18:35,145 DEBUG RegisterServerManagerNode 166 
+ [Debug Message] - ServerManager INITIATED!
+2017-04-05 22:18:35,153 DEBUG LoadServerInstance 137 
+ [Debug Message] - ServerManager LOADED!
+2017-04-05 22:18:53,998 DEBUG RegisterRepositoryNode 255 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-04-05 22:18:54,038 DEBUG RegisterTaskCreatorNode 193 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-04-05 22:18:54,076 DEBUG RegisterTaskDistributorNode 213 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-04-05 22:18:54,112 DEBUG RegisterReportAggregatorNode 231 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-04-05 22:18:54,142 DEBUG RegisterIncentiveEngineNode 243 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-04-05 22:19:06,217 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 04-03-2017 17:41:00 Topic: gps 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 22:19:09,330 DEBUG CreateCSTask 193 
+ [Debug Message] - Task with the ID: [92affa7b-8cb4-4706-b8c9-cfad0046a061] created with Success!
+2017-04-05 23:00:10,382 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 04-03-2017 17:41:00 Topic: gps 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 23:00:10,452 DEBUG CreateCSTask 193 
+ [Debug Message] - Task with the ID: [6b888b6a-8ff8-480a-b554-7273e543a152] created with Success!
+2017-04-05 23:00:27,382 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 04-03-2017 17:41:00 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 23:00:27,404 DEBUG CalcCostCSTask 56 
+ [Debug Message] - User ID: [1234] has to Pay [50] to Reference: [36598864-81f1-4a5f-8a7b-affaa5b757c2]
+2017-04-05 23:02:34,759 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 23:02:22 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 23:02:34,788 DEBUG CalcCostCSTask 56 
+ [Debug Message] - User ID: [1234] has to Pay [50] to Reference: [b8aa9666-983c-4a55-ba54-e9467d45b953]
+2017-04-05 23:02:47,558 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 23:02:35 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 23:02:47,602 DEBUG CreateCSTask 193 
+ [Debug Message] - Task with the ID: [e5de742e-f2b5-4fd3-ae0a-c2926fd42de4] created with Success!
+2017-04-05 23:02:56,035 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 23:02:43 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 23:02:56,065 DEBUG CreateCSTask 193 
+ [Debug Message] - Task with the ID: [6b32366e-d356-4307-bce4-5312c0b52d32] created with Success!
+2017-04-05 23:03:46,035 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 23:02:49 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 23:03:46,077 DEBUG CreateCSTask 193 
+ [Debug Message] - Task with the ID: [b7936ffa-48de-4891-85b7-9ce09225ef18] created with Success!
+2017-04-05 23:04:32,037 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 23:04:01 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 23:04:32,066 DEBUG CreateCSTask 193 
+ [Debug Message] - Task with the ID: [ca0dc904-06cc-4557-8987-b957bb0d3a4d] created with Success!
+2017-04-05 23:05:58,138 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 23:05:45 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 23:05:58,155 DEBUG CalcCostCSTask 56 
+ [Debug Message] - User ID: [1234] has to Pay [50] to Reference: [7643e47f-a7f2-4347-ad36-fb3303d5dd1a]
+2017-04-05 23:06:01,707 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 23:05:47 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 23:06:01,731 DEBUG CreateCSTask 193 
+ [Debug Message] - Task with the ID: [6fbb5a6a-a3df-49b1-91b1-b23c59b68e5a] created with Success!
+2017-04-05 23:06:17,446 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 23:05:57 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 23:06:17,491 DEBUG CreateCSTask 193 
+ [Debug Message] - Task with the ID: [3e532999-5855-4bc4-9836-2a63a2928852] created with Success!
+2017-04-05 23:08:25,271 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 23:08:12 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 23:08:25,288 DEBUG CalcCostCSTask 56 
+ [Debug Message] - User ID: [1234] has to Pay [50] to Reference: [3df05ce3-9a90-4dc8-8b6d-3676dbbc85c4]
+2017-04-05 23:08:33,675 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 23:08:21 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 23:08:33,708 DEBUG CreateCSTask 193 
+ [Debug Message] - Task with the ID: [ed1575a7-cdee-483d-a86f-f3419d823f3a] created with Success!
+2017-04-05 23:08:35,649 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 23:08:23 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 23:08:35,652 DEBUG CalcCostCSTask 56 
+ [Debug Message] - User ID: [1234] has to Pay [50] to Reference: [bf77367d-6830-42be-a977-a4539af7689d]
+2017-04-05 23:08:38,895 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 23:08:26 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 23:08:38,905 DEBUG CalcCostCSTask 56 
+ [Debug Message] - User ID: [1234] has to Pay [50] to Reference: [cc7ac84e-6ecc-494c-a1d8-9990fb4075fb]
+2017-04-05 23:09:02,959 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 23:08:50 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 23:09:02,984 DEBUG CalcCostCSTask 56 
+ [Debug Message] - User ID: [1234] has to Pay [50] to Reference: [09d0d11e-3a77-40d6-8a20-103db2bdda5c]
+2017-04-05 23:09:18,256 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 23:09:05 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 23:09:18,290 DEBUG CreateCSTask 193 
+ [Debug Message] - Task with the ID: [d132c2e9-6031-4c99-bd22-9f2ab8f5eb7b] created with Success!
+2017-04-05 23:15:39,038 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 23:15:26 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 23:15:39,071 DEBUG CalcCostCSTask 56 
+ [Debug Message] - User ID: [1234] has to Pay [50] to Reference: [13c1eabe-1462-422c-894a-4d676af3aa0c]
+2017-04-05 23:15:48,960 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 23:15:36 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 23:15:49,016 DEBUG CreateCSTask 193 
+ [Debug Message] - Task with the ID: [4a7341f6-2f85-43eb-94a5-051c1edef82f] created with Success!
+2017-04-05 23:20:12,955 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 23:20:00 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 23:20:12,977 DEBUG CalcCostCSTask 56 
+ [Debug Message] - User ID: [1234] has to Pay [50] to Reference: [4f2a7271-345c-475a-a74f-b5c6f024ad16]
+2017-04-05 23:20:29,198 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 23:20:16 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 23:20:29,229 DEBUG CreateCSTask 193 
+ [Debug Message] - Task with the ID: [9e041491-1268-4dda-af55-242aaf18f50d] created with Success!
+2017-04-05 23:20:41,107 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 23:20:28 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 23:20:41,136 DEBUG CreateCSTask 193 
+ [Debug Message] - Task with the ID: [c084520a-d5af-4dc0-ba5e-e4352c561aad] created with Success!
+2017-04-05 23:20:42,381 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 23:20:29 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 23:20:42,395 DEBUG CreateCSTask 193 
+ [Debug Message] - Task with the ID: [9f91fcb4-3edc-48b0-80bc-b98d2cf72467] created with Success!
+2017-04-05 23:20:43,282 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 23:20:30 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 23:20:43,292 DEBUG CalcCostCSTask 56 
+ [Debug Message] - User ID: [1234] has to Pay [50] to Reference: [6b9032e7-d94b-460d-9336-f901828d8fde]
+2017-04-05 23:20:44,810 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 23:20:32 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 23:20:44,837 DEBUG CreateCSTask 193 
+ [Debug Message] - Task with the ID: [9cf46871-c310-4a0d-a3f8-27b328516787] created with Success!
+2017-04-05 23:21:07,659 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 23:20:55 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 23:21:07,681 DEBUG CalcCostCSTask 56 
+ [Debug Message] - User ID: [1234] has to Pay [50] to Reference: [a2887796-b3c1-4e5f-aa35-9d79255f0c11]
+2017-04-05 23:21:11,888 DEBUG GetCrowdSensingTask 233 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 05-04-2017 23:20:59 Topic: temperature 
+Trigger: Sensor: GPS Param1: 50.2 Param2: 10 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-05 23:21:11,914 DEBUG CreateCSTask 193 
+ [Debug Message] - Task with the ID: [aefcd7f9-6475-461b-9f46-c3a964ad8b6a] created with Success!

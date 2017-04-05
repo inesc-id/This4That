@@ -11,7 +11,34 @@ namespace This4That_serverNode.Nodes
 {
     public class Repository : Node, IRepository
     {
-        private List<Topic> topics = new List<Topic>();
+        private Dictionary<string, Topic> colTopics = new Dictionary<string, Topic>();
+        private Dictionary<string, CSTask> colTasks = new Dictionary<string, CSTask>();
+
+        public Dictionary<string, Topic> ColTopics
+        {
+            get
+            {
+                return colTopics;
+            }
+
+            set
+            {
+                colTopics = value;
+            }
+        }
+
+        public Dictionary<string, CSTask> ColTasks
+        {
+            get
+            {
+                return colTasks;
+            }
+
+            set
+            {
+                colTasks = value;
+            }
+        }
 
         public Repository(string hostName, int port, string name) : base(hostName, port, name)
         {
@@ -61,19 +88,51 @@ namespace This4That_serverNode.Nodes
            return true;
         }
 
-        public bool SaveTopics(string topicName, string channelKey)
+        public bool SaveTask(CSTask task, out string taskID)
         {
-            Topic topic = new Topic(topicName, channelKey);
-            if (!topics.Contains(topic))
+            taskID = null;
+            Topic topic;
+            try
             {
-                topics.Add(topic);
+                if (task == null || task.TopicName == null)
+                {
+                    Log.Error("Task or Topic IS NULL");
+                    return false;
+                }
+                //save task
+                taskID = Guid.NewGuid().ToString();
+                while (ColTasks.ContainsKey(taskID))
+                {
+                    taskID = Guid.NewGuid().ToString();
+                }
+                task.TaskID = taskID;
+                ColTasks.Add(taskID, task);
+                Log.DebugFormat("Generated TaskID: [{0}]", taskID);
+                Log.Debug("Task Saved with sucess!");
+                //save topic
+                if (ColTopics.ContainsKey(task.TopicName))
+                {
+                    ColTopics[task.TopicName].ListOfTaskIDs.Add(task.TaskID);
+                }
+                //topico nao existe
+                else
+                {
+                    topic = new Topic(task.TopicName);
+                    topic.ListOfTaskIDs.Add(task.TaskID);
+                    ColTopics.Add(task.TopicName, topic);
+                }
+                return true;
             }
-            return true;
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return false;
+            }            
         }
 
-        public Topic GetTopic(string topicName)
+        public Topic GetTopicFromRepository(string topicName)
         {
-            foreach (Topic aux_topic in topics)
+            foreach (Topic aux_topic in ColTopics.Values)
             {
                 if (aux_topic.Name.Equals(topicName))
                 {
@@ -83,9 +142,9 @@ namespace This4That_serverNode.Nodes
             return null;
         }
 
-        public List<Topic> GetTopics()
+        public List<Topic> GetTopicsFromRepository()
         {
-            return topics;
+            return ColTopics.Values.ToList();
         }
 
         #endregion

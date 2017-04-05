@@ -1,0 +1,696 @@
+2017-03-30 17:27:19,218 ERROR ConnectToEmmiterBroker 93 
+ [Debug Message] - Exception connecting to the broker
+2017-03-30 17:27:19,284 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-30 17:27:19,359 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-30 17:27:20,547 DEBUG ConnectServerManager 45 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-30 18:44:03,098 ERROR ConnectToEmmiterBroker 94 
+ [Debug Message] - Exception connecting to the broker
+2017-03-30 18:44:03,121 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-30 18:44:03,166 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-30 18:44:04,214 DEBUG ConnectServerManager 46 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-30 18:55:54,540 ERROR ConnectToEmmiterBroker 94 
+ [Debug Message] - Exception connecting to the broker
+2017-03-30 18:55:54,596 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-30 18:55:55,162 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-30 18:55:56,485 DEBUG ConnectServerManager 46 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-30 20:07:35,107 ERROR ConnectToEmmiterBroker 94 
+ [Debug Message] - Exception connecting to the broker
+2017-03-30 20:07:35,143 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-30 20:07:35,191 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-30 20:07:36,351 DEBUG ConnectServerManager 46 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 13:07:44,144 ERROR ConnectToEmmiterBroker 94 
+ [Debug Message] - Exception connecting to the broker
+2017-03-31 13:07:44,169 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-31 13:07:44,187 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-31 13:07:45,237 DEBUG ConnectServerManager 46 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 13:08:20,196 DEBUG CreateTask 112 
+ [Debug Message] - TaskCreator : TaskID: [82e5e4a6-fb84-49d4-b017-fd6367da25bd]
+2017-03-31 13:08:46,432 DEBUG CreateTask 112 
+ [Debug Message] - TaskCreator : TaskID: [af20bbfe-8f74-4e55-bdcc-19eb324bc961]
+2017-03-31 13:09:37,223 ERROR ConnectToEmmiterBroker 94 
+ [Debug Message] - Exception connecting to the broker
+2017-03-31 13:09:48,876 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-31 13:09:48,902 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-31 13:09:49,992 DEBUG ConnectServerManager 46 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 13:10:41,688 DEBUG ConnectToEmmiterBroker 88 
+ [Debug Message] - Emitter Generated Channel Key: [FgEtULqVqKivRfvlHWGMpl4kbbnN9cPv]
+2017-03-31 13:10:41,713 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-31 13:10:41,749 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-31 13:10:42,788 DEBUG ConnectServerManager 46 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 13:10:49,773 DEBUG CreateTask 111 
+ [Debug Message] - TaskCreator : TaskID: [3d71e3e6-cf7f-425a-aa5b-3fb8b57291d9]
+2017-03-31 13:34:45,703 DEBUG ConnectToEmmiterBroker 88 
+ [Debug Message] - Emitter Generated Channel Key: [qzxd1AF8qcaT2xheUZUA8P9t5-3tRcdM]
+2017-03-31 13:34:45,730 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-31 13:34:45,750 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-31 13:34:46,805 DEBUG ConnectServerManager 46 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 14:19:55,169 DEBUG ConnectToEmmiterBroker 88 
+ [Debug Message] - Emitter Generated Channel Key: [WHNclkBMMvFOiOrVBqQbUFRQRAa12N2G]
+2017-03-31 14:19:55,191 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-31 14:19:55,213 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-31 14:19:56,261 DEBUG ConnectServerManager 46 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 14:55:26,108 DEBUG ConnectToEmmiterBroker 88 
+ [Debug Message] - Emitter Generated Channel Key: [Nlc6XL3Fzr7ARjY5Jp-hOqOBGAr2AzkG]
+2017-03-31 14:55:26,141 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-31 14:55:26,192 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-31 14:55:30,243 ERROR ConnectServerManager 54 
+ [Debug Message] - Nenhuma ligação pôde ser feita porque o computador de destino
+as recusou activamente 127.0.0.1:5000
+2017-03-31 14:55:30,255 ERROR ConnectServerManager 55 
+ [Debug Message] - Cannot connect TaskCreator to ServerManager: [tcp://localhost:5000/ServerManager
+2017-03-31 15:01:25,725 DEBUG ConnectToEmmiterBroker 88 
+ [Debug Message] - Emitter Generated Channel Key: [NkidiYxqmhmJ2fLmW26z3b6_1oeUARl_]
+2017-03-31 15:01:25,762 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-31 15:01:25,795 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-31 15:01:26,842 DEBUG ConnectServerManager 46 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 15:02:30,894 DEBUG ConnectToEmmiterBroker 88 
+ [Debug Message] - Emitter Generated Channel Key: [Z58Peox2enrzTErrE491XPPdI5J0vxIX]
+2017-03-31 15:02:30,918 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-31 15:02:30,956 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-31 15:02:32,003 DEBUG ConnectServerManager 46 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 15:05:52,642 DEBUG CreateTask 111 
+ [Debug Message] - TaskCreator : TaskID: [99e52497-9fdf-4f77-8403-2e8abfaec6c8]
+2017-03-31 16:07:53,985 DEBUG ConnectToEmmiterBroker 88 
+ [Debug Message] - Emitter Generated Channel Key: [Dqs3_8aTTqtZWRwPdJMf3v0Aa-Gib66q]
+2017-03-31 16:07:54,008 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-31 16:07:54,033 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-31 16:07:55,071 DEBUG ConnectServerManager 46 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 16:24:14,769 DEBUG ConnectToEmmiterBroker 88 
+ [Debug Message] - Emitter Generated Channel Key: [w8KjyIzA6TOmAtAu1GXSME5uZWLotl0d]
+2017-03-31 16:24:14,792 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-31 16:24:14,820 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-31 16:24:15,933 DEBUG ConnectServerManager 46 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 18:16:49,878 DEBUG ConnectToEmmiterBroker 88 
+ [Debug Message] - Emitter Generated Channel Key: [hfrG2zWObUHI1VqFSsUdteDmmblXjWZL]
+2017-03-31 18:16:49,905 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-31 18:16:49,934 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-31 18:16:50,993 DEBUG ConnectServerManager 46 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 18:24:44,035 DEBUG ConnectToEmmiterBroker 88 
+ [Debug Message] - Emitter Generated Channel Key: [kSzbydf31A9qN2kINVq2YGjZoB__zDHn]
+2017-03-31 18:24:44,080 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-31 18:24:44,105 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-31 18:24:45,158 DEBUG ConnectServerManager 46 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 18:37:22,249 DEBUG ConnectToEmmiterBroker 88 
+ [Debug Message] - Emitter Generated Channel Key: [wg1jxIMcbqhP6x_RvGyi-seMVSs4Pg2Q]
+2017-03-31 18:37:22,272 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-31 18:37:22,306 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-31 18:37:23,344 DEBUG ConnectServerManager 46 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 18:46:30,841 DEBUG ConnectToEmmiterBroker 88 
+ [Debug Message] - Emitter Generated Channel Key: [NkIgyhFv6s8iNSeO_weaBWMbZ7YNOzrr]
+2017-03-31 18:46:30,864 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-03-31 18:46:30,890 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-03-31 18:46:31,935 DEBUG ConnectServerManager 46 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 18:47:09,741 DEBUG CreateTask 111 
+ [Debug Message] - TaskCreator : TaskID: [1b25de28-48c5-4d5d-8b88-5487d22ecb5b]
+2017-04-03 15:38:40,880 ERROR ConnectToEmmiterBroker 93 
+ [Debug Message] - Exception connecting to the broker
+2017-04-03 15:38:40,904 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-03 15:38:40,984 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-03 15:38:42,036 DEBUG ConnectServerManager 46 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 15:42:10,324 ERROR ConnectToEmmiterBroker 93 
+ [Debug Message] - Exception connecting to the broker
+2017-04-03 15:42:10,345 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-03 15:42:10,380 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-03 15:42:11,444 DEBUG ConnectServerManager 46 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 15:43:43,349 DEBUG ConnectToEmmiterBroker 88 
+ [Debug Message] - Emitter Generated Channel Key: [kLn5bnbSzSbqDhObzdA_X_MooG27Kygs]
+2017-04-03 15:43:43,376 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-03 15:43:43,402 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-03 15:43:44,445 DEBUG ConnectServerManager 46 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 15:44:33,449 DEBUG ConnectToEmmiterBroker 88 
+ [Debug Message] - Emitter Generated Channel Key: [ETuTNDicV6xGdOxw8BZxdvdwallGJIvo]
+2017-04-03 15:44:33,471 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-03 15:44:33,495 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-03 15:44:34,548 DEBUG ConnectServerManager 46 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 15:47:08,226 DEBUG CreateTask 113 
+ [Debug Message] - TaskCreator : TaskID: [e9ce3cef-59df-4d91-9c8f-62f8cc5f36d3]
+2017-04-03 15:51:20,803 DEBUG ConnectToEmmiterBroker 88 
+ [Debug Message] - Emitter Generated Channel Key: [JIHyoykkw4VDH5TpQ48vECyD2U6g5nGJ]
+2017-04-03 15:51:20,823 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-03 15:51:20,847 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-03 15:51:21,889 DEBUG ConnectServerManager 46 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 15:51:45,180 DEBUG CreateTask 113 
+ [Debug Message] - TaskCreator : TaskID: [07029172-b600-4d1b-b4cd-f1b0de8e61fb]
+2017-04-03 15:55:48,374 DEBUG ConnectToEmmiterBroker 88 
+ [Debug Message] - Emitter Generated Channel Key: [hkUCJXo4G_ytP9lxTo-XeP56VrNCnbgF]
+2017-04-03 15:55:48,419 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-03 15:55:48,487 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-03 15:55:52,558 ERROR ConnectServerManager 54 
+ [Debug Message] - Nenhuma ligação pôde ser feita porque o computador de destino
+as recusou activamente 127.0.0.1:5000
+2017-04-03 15:55:52,564 ERROR ConnectServerManager 55 
+ [Debug Message] - Cannot connect TaskCreator to ServerManager: [tcp://localhost:5000/ServerManager
+2017-04-03 15:56:53,141 DEBUG ConnectToEmmiterBroker 88 
+ [Debug Message] - Emitter Generated Channel Key: [Q0T31jkVr1Uwlt0Vjd6txSwCVnotp31_]
+2017-04-03 15:56:53,165 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-03 15:56:53,186 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-03 15:56:54,228 DEBUG ConnectServerManager 46 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 15:57:01,762 DEBUG CreateTask 113 
+ [Debug Message] - TaskCreator : TaskID: [f6a8beb0-adc3-4cd0-ae36-45b64c5fefdf]
+2017-04-03 17:08:52,019 DEBUG ConnectToEmmiterBroker 88 
+ [Debug Message] - Emitter Generated Channel Key: [4xCF67jm8kvFD5F5zLq6CXXwizKeRovS]
+2017-04-03 17:08:52,047 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-03 17:08:52,084 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-03 17:08:53,132 DEBUG ConnectServerManager 46 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 21:56:26,842 ERROR ConnectToEmmiterBroker 94 
+ [Debug Message] - Exception connecting to the broker
+2017-04-03 21:56:26,858 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-03 21:56:26,889 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-03 21:56:27,950 DEBUG ConnectServerManager 46 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 21:57:38,454 DEBUG ConnectToEmmiterBroker 88 
+ [Debug Message] - Emitter Generated Channel Key: [PaYWkjqrWRGSAahN1u1nr42APilaWs1T]
+2017-04-03 21:57:38,486 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-03 21:57:38,532 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-03 21:57:39,593 DEBUG ConnectServerManager 46 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 21:59:04,989 DEBUG CreateTask 113 
+ [Debug Message] - TaskCreator : TaskID: [2aa013ea-20ef-4d89-acab-72e8d06f4b84]
+2017-04-03 22:49:05,813 DEBUG ConnectToEmmiterBroker 132 
+ [Debug Message] - Emitter Generated Channel Key: []
+2017-04-03 22:49:05,844 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-03 22:49:05,877 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-03 22:49:06,938 DEBUG ConnectServerManager 86 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 22:49:06,938 DEBUG ConnectToRepository 105 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-03 22:49:23,111 DEBUG CreateTask 158 
+ [Debug Message] - TaskCreator : TaskID: [dd711c87-0493-4452-85e8-56c37651ebe9]
+2017-04-03 22:50:09,570 DEBUG CreateTask 158 
+ [Debug Message] - TaskCreator : TaskID: [04507efb-9fa5-4c06-9c0b-aff6714143f1]
+2017-04-03 23:42:43,087 DEBUG ConnectToEmmiterBroker 132 
+ [Debug Message] - Emitter Generated Channel Key: []
+2017-04-03 23:42:43,113 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-03 23:42:43,141 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-03 23:42:44,234 DEBUG ConnectServerManager 86 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 23:42:44,245 DEBUG ConnectToRepository 105 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-03 23:43:00,380 DEBUG CreateTask 158 
+ [Debug Message] - TaskCreator : TaskID: [6c8b7a56-70e1-42d8-be2d-1ba936501872]
+2017-04-03 23:43:10,247 DEBUG CreateTask 158 
+ [Debug Message] - TaskCreator : TaskID: [cc49d0cf-acd7-40a2-9c9d-0e39a4e5a07d]
+2017-04-03 23:49:28,739 DEBUG ConnectToEmmiterBroker 132 
+ [Debug Message] - Emitter Generated Channel Key: []
+2017-04-03 23:49:28,766 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-03 23:49:28,794 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-03 23:49:29,849 DEBUG ConnectServerManager 86 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 23:49:29,858 DEBUG ConnectToRepository 105 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-03 23:49:39,308 DEBUG CreateTask 158 
+ [Debug Message] - TaskCreator : TaskID: [3b54f1e7-fafc-4c33-a66f-16c8340c70c7]
+2017-04-03 23:57:08,462 DEBUG ConnectToEmmiterBroker 132 
+ [Debug Message] - Emitter Generated Channel Key: []
+2017-04-03 23:57:08,495 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-03 23:57:08,517 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-03 23:57:09,569 DEBUG ConnectServerManager 86 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 23:57:09,576 DEBUG ConnectToRepository 105 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-03 23:57:19,837 DEBUG CreateTask 158 
+ [Debug Message] - TaskCreator : TaskID: [a635759e-0aca-4535-bf8f-da3b9d5ef409]
+2017-04-04 00:02:33,606 DEBUG ConnectToEmmiterBroker 132 
+ [Debug Message] - Emitter Generated Channel Key: []
+2017-04-04 00:02:33,636 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-04 00:02:33,690 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-04 00:02:34,763 DEBUG ConnectServerManager 86 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 00:02:34,773 DEBUG ConnectToRepository 105 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-04 00:05:25,020 DEBUG CreateTask 158 
+ [Debug Message] - TaskCreator : TaskID: [026b2db0-df6f-4fef-8a05-35d2fe973a75]
+2017-04-04 00:15:49,172 DEBUG ConnectToEmmiterBroker 132 
+ [Debug Message] - Emitter Generated Channel Key: []
+2017-04-04 00:15:49,200 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-04 00:15:49,239 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-04 00:15:50,296 DEBUG ConnectServerManager 86 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 00:15:50,303 DEBUG ConnectToRepository 105 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-04 00:16:25,314 DEBUG CreateTask 158 
+ [Debug Message] - TaskCreator : TaskID: [0a0689cc-28b2-4bec-8d25-30fb35e7d53a]
+2017-04-04 16:22:42,220 DEBUG ConnectToEmmiterBroker 132 
+ [Debug Message] - Emitter Generated Channel Key: []
+2017-04-04 16:22:42,246 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-04 16:22:42,273 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-04 16:22:43,321 DEBUG ConnectServerManager 86 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 16:22:43,331 DEBUG ConnectToRepository 105 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-04 16:23:43,534 DEBUG CreateTask 158 
+ [Debug Message] - TaskCreator : TaskID: [40673e45-4f2f-4a21-8637-7589732b9c26]
+2017-04-04 16:38:37,477 DEBUG ConnectToEmmiterBroker 132 
+ [Debug Message] - Emitter Generated Channel Key: []
+2017-04-04 16:38:37,508 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-04 16:38:37,537 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-04 16:38:38,590 DEBUG ConnectServerManager 86 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 16:38:38,599 DEBUG ConnectToRepository 105 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-04 16:38:46,191 DEBUG CreateTask 158 
+ [Debug Message] - TaskCreator : TaskID: [ce88bf81-dce1-42ab-a52c-88531e7f8686]
+2017-04-04 16:44:51,915 DEBUG ConnectToEmmiterBroker 132 
+ [Debug Message] - Emitter Generated Channel Key: []
+2017-04-04 16:44:51,941 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-04 16:44:51,966 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-04 16:44:53,010 DEBUG ConnectServerManager 86 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 16:44:53,017 DEBUG ConnectToRepository 105 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-04 16:45:02,881 DEBUG CreateTask 158 
+ [Debug Message] - TaskCreator : TaskID: [c62e58e0-1845-434e-b01b-4c0f81088625]
+2017-04-04 16:53:41,737 DEBUG ConnectToEmmiterBroker 132 
+ [Debug Message] - Emitter Generated Channel Key: []
+2017-04-04 16:53:41,765 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-04 16:53:41,788 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-04 16:53:42,844 DEBUG ConnectServerManager 86 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 16:53:42,853 DEBUG ConnectToRepository 105 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-04 16:53:50,716 DEBUG CreateTask 158 
+ [Debug Message] - TaskCreator : TaskID: [49c4087b-8b7c-4400-bd12-c7d454ad3283]
+2017-04-04 16:58:16,077 DEBUG CreateTask 158 
+ [Debug Message] - TaskCreator : TaskID: [7aed548d-3d34-4951-9236-294a0b0e1be9]
+2017-04-04 16:58:18,089 ERROR CreateTask 161 
+ [Debug Message] - Cannot generate a channel key!
+2017-04-04 16:58:22,753 DEBUG CreateTask 158 
+ [Debug Message] - TaskCreator : TaskID: [b78a818d-d26e-4c04-b570-d3c63189008e]
+2017-04-04 16:58:24,761 ERROR CreateTask 161 
+ [Debug Message] - Cannot generate a channel key!
+2017-04-04 16:59:15,652 DEBUG ConnectToEmmiterBroker 132 
+ [Debug Message] - Emitter Generated Channel Key: []
+2017-04-04 16:59:15,690 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-04 16:59:15,710 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-04 16:59:16,758 DEBUG ConnectServerManager 86 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 16:59:16,766 DEBUG ConnectToRepository 105 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-04 16:59:29,561 DEBUG CreateTask 158 
+ [Debug Message] - TaskCreator : TaskID: [83143207-7ae2-4311-8c7f-9391c43e51bd]
+2017-04-04 17:00:33,874 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-04 17:00:33,922 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-04 17:00:34,978 DEBUG ConnectServerManager 86 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 17:00:34,987 DEBUG ConnectToRepository 105 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-04 17:00:48,756 DEBUG CreateTask 156 
+ [Debug Message] - TaskCreator : TaskID: [2d0d9ef1-bde5-4a03-bd00-f5fb43fc0bcf]
+2017-04-04 17:00:49,274 DEBUG CreateTask 162 
+ [Debug Message] - Emitter Generated Channel Key: [yStDng4Xud5PY1hlx5gN7MLGws7Z-NYL]
+2017-04-04 17:05:37,832 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-04 17:05:37,903 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-04 17:05:38,948 DEBUG ConnectServerManager 86 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 17:05:38,954 DEBUG ConnectToRepository 105 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-04 17:06:30,325 DEBUG CreateTask 156 
+ [Debug Message] - TaskCreator : TaskID: [fa5da8d1-9548-4dad-bf51-b27f4dfe1321]
+2017-04-04 17:06:30,841 DEBUG CreateTask 162 
+ [Debug Message] - Emitter Generated Channel Key: [ogMFT0MANwdJ6LNEPSTU3KXOKGh6_SQF]
+2017-04-04 17:08:53,789 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-04 17:08:53,834 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-04 17:08:54,879 DEBUG ConnectServerManager 86 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 17:08:54,886 DEBUG ConnectToRepository 105 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-04 17:09:05,274 DEBUG CreateTask 156 
+ [Debug Message] - TaskCreator : TaskID: [6545736d-8543-4e90-98ec-3c62020eceed]
+2017-04-04 17:09:05,792 DEBUG CreateTask 162 
+ [Debug Message] - Emitter Generated Channel Key: [lRAAxrSNGaDxTKZy0_7soVRp17dFFVVL]
+2017-04-04 17:20:05,716 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-04 17:20:05,763 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-04 17:20:06,836 DEBUG ConnectServerManager 86 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 17:20:06,843 DEBUG ConnectToRepository 105 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-04 17:20:17,734 DEBUG CreateTask 156 
+ [Debug Message] - TaskCreator : TaskID: [91a06f09-633a-498d-b21c-79c4eb1d556f]
+2017-04-04 17:20:18,248 DEBUG CreateTask 162 
+ [Debug Message] - Emitter Generated Channel Key: [Uj2PurkdmuRj3DQSrXeLNxB2sISJWSet]
+2017-04-04 17:46:39,090 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-04 17:46:39,144 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-04 17:46:40,187 DEBUG ConnectServerManager 86 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 17:46:40,194 DEBUG ConnectToRepository 105 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-04 17:46:49,161 DEBUG CreateTask 156 
+ [Debug Message] - TaskCreator : TaskID: [285fba5b-0a46-482b-a143-ff31483bb1cf]
+2017-04-04 17:46:49,678 DEBUG CreateTask 162 
+ [Debug Message] - Emitter Generated Channel Key: [cqWvBU6-DBGWWgeu7S7tdJ3UdqMBisvK]
+2017-04-04 18:14:26,604 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-04 18:14:26,682 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-04 18:14:27,750 DEBUG ConnectServerManager 86 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 18:14:27,750 DEBUG ConnectToRepository 105 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-04 18:15:09,438 DEBUG CreateTask 156 
+ [Debug Message] - TaskCreator : TaskID: [15ced9c2-b634-453d-b5fe-abc9a2494f71]
+2017-04-04 18:15:09,952 DEBUG CreateTask 162 
+ [Debug Message] - Emitter Generated Channel Key: [jxyDVwAUwaSblwW41G0lfJkoSMi7QnGD]
+2017-04-04 19:34:02,841 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-04 19:34:02,879 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-04 19:34:03,976 DEBUG ConnectServerManager 86 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 19:34:03,983 DEBUG ConnectToRepository 105 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-04 19:34:25,246 DEBUG CreateTask 156 
+ [Debug Message] - TaskCreator : TaskID: [3bf84851-58b2-43a3-80b7-667e9650e269]
+2017-04-04 19:34:25,760 DEBUG CreateTask 162 
+ [Debug Message] - Emitter Generated Channel Key: [GplYawdnTUcwj-xO_qPTd2Dj6Yp9DjSe]
+2017-04-04 20:02:52,543 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-04 20:02:52,590 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-04 20:02:53,644 DEBUG ConnectServerManager 86 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 20:02:53,660 DEBUG ConnectToRepository 105 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-04 20:03:07,699 DEBUG CreateTask 156 
+ [Debug Message] - TaskCreator : TaskID: [8196ef82-475c-4ff8-a1a0-a37cf5786d24]
+2017-04-04 20:03:08,215 DEBUG CreateTask 162 
+ [Debug Message] - Emitter Generated Channel Key: [cBURmuqjvS7g_ieUCZHp-Sy49Hir4FT5]
+2017-04-04 20:36:15,552 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-04 20:36:15,593 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-04 20:36:16,644 DEBUG ConnectServerManager 86 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 20:36:16,651 DEBUG ConnectToRepository 105 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-04 20:36:23,614 DEBUG CreateTask 156 
+ [Debug Message] - TaskCreator : TaskID: [7d65a750-bab1-410c-8bce-9c995633e49d]
+2017-04-04 20:36:24,145 DEBUG CreateTask 162 
+ [Debug Message] - Emitter Generated Channel Key: [x1xV0Wauf75OgYRFCgY8sNPMNhe3Bi6A]
+2017-04-04 21:42:54,135 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-04 21:42:54,176 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-04 21:42:55,231 DEBUG ConnectServerManager 86 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 21:42:55,240 DEBUG ConnectToRepository 105 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-04 21:43:11,308 DEBUG CreateTask 156 
+ [Debug Message] - TaskCreator : TaskID: [ee61c5f9-dee4-4203-aaa6-f87d0fdd2a36]
+2017-04-04 21:43:11,824 DEBUG CreateTask 162 
+ [Debug Message] - Emitter Generated Channel Key: [PCHpCPafLsJP_aV4ci9TKkXofkYsyTDR]
+2017-04-05 12:09:50,459 ERROR ConnectToEmmiterBroker 135 
+ [Debug Message] - Exception connecting to the broker
+2017-04-05 12:09:50,664 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [194.210.134.200] Port: [5001]
+2017-04-05 12:10:39,321 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [194.210.134.200] Port: [5001]
+2017-04-05 12:10:39,373 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-05 12:10:39,472 DEBUG ConnectServerManager 86 
+ [Debug Message] - ServerManager: [tcp://194.210.134.200:5000/ServerManager]
+2017-04-05 12:10:39,483 DEBUG ConnectToRepository 105 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-05 12:12:00,491 DEBUG CreateTask 159 
+ [Debug Message] - TaskCreator : TaskID: [de5c55ec-d474-4a84-bf45-3ae73bdcbdf0]
+2017-04-05 12:12:32,595 DEBUG CreateTask 172 
+ [Debug Message] - Emitter Generated Channel Key: [WYcjomFarMZtpfxMa-8OdyOGM9AqwM4Z]
+2017-04-05 12:13:25,226 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [194.210.134.200] Port: [5001]
+2017-04-05 12:13:25,275 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-05 12:13:25,322 DEBUG ConnectServerManager 86 
+ [Debug Message] - ServerManager: [tcp://194.210.134.200:5000/ServerManager]
+2017-04-05 12:13:25,330 DEBUG ConnectToRepository 105 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-05 12:13:33,425 DEBUG CreateTask 159 
+ [Debug Message] - TaskCreator : TaskID: [6511a85d-f902-4dad-8088-0aa0657f8d22]
+2017-04-05 12:13:36,623 DEBUG CreateTask 172 
+ [Debug Message] - Emitter Generated Channel Key: [rrqTCXdMSMyQLNJBhls7ltk9pZmfv7Te]
+2017-04-05 12:17:24,517 DEBUG CreateTask 159 
+ [Debug Message] - TaskCreator : TaskID: [4e0a353b-92db-4a11-83c3-363f569500a0]
+2017-04-05 12:17:29,974 ERROR CreateTask 185 
+ [Debug Message] - A referência de objecto não foi definida como uma instância de um objecto.
+2017-04-05 12:20:06,698 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [194.210.134.200] Port: [5001]
+2017-04-05 12:20:06,747 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-05 12:20:06,799 DEBUG ConnectServerManager 86 
+ [Debug Message] - ServerManager: [tcp://194.210.134.200:5000/ServerManager]
+2017-04-05 12:20:06,807 DEBUG ConnectToRepository 105 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-05 12:20:11,903 DEBUG CreateTask 159 
+ [Debug Message] - TaskCreator : TaskID: [1c735038-cbdc-4645-9bfc-1a9d3b733885]
+2017-04-05 12:20:13,774 DEBUG CreateTask 172 
+ [Debug Message] - Emitter Generated Channel Key: [3ii6UQ9F9KCQunImsrxAhueAwvc9pk2r]
+2017-04-05 12:21:18,277 DEBUG CreateTask 159 
+ [Debug Message] - TaskCreator : TaskID: [13580397-0b61-4f7b-951d-f4982cdf0208]
+2017-04-05 12:21:21,435 ERROR CreateTask 185 
+ [Debug Message] - A referência de objecto não foi definida como uma instância de um objecto.
+2017-04-05 12:22:02,165 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [194.210.134.200] Port: [5001]
+2017-04-05 12:22:02,227 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-05 12:22:02,310 DEBUG ConnectServerManager 86 
+ [Debug Message] - ServerManager: [tcp://194.210.134.200:5000/ServerManager]
+2017-04-05 12:22:02,325 DEBUG ConnectToRepository 105 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-05 12:22:08,333 DEBUG CreateTask 159 
+ [Debug Message] - TaskCreator : TaskID: [28f8f086-6096-410c-90fc-62812545a1c0]
+2017-04-05 12:22:10,762 DEBUG CreateTask 172 
+ [Debug Message] - Emitter Generated Channel Key: [JQmhdc3YarphCKfRcLHA1_jlfnxSsZL1]
+2017-04-05 12:23:19,423 DEBUG CreateTask 159 
+ [Debug Message] - TaskCreator : TaskID: [1834d4d3-7a08-43d2-9a70-bbce0e8df7e4]
+2017-04-05 12:24:29,593 DEBUG CreateTask 159 
+ [Debug Message] - TaskCreator : TaskID: [c20328cf-73b9-4033-881a-6b6dea99c913]
+2017-04-05 12:26:18,121 DEBUG CreateTask 159 
+ [Debug Message] - TaskCreator : TaskID: [f79d9edd-a47b-4f07-874f-c3d72263cf25]
+2017-04-05 12:26:44,837 DEBUG CreateTask 159 
+ [Debug Message] - TaskCreator : TaskID: [5b95e260-49fc-41a1-847d-ec22e1e80ee9]
+2017-04-05 12:26:59,740 DEBUG CreateTask 159 
+ [Debug Message] - TaskCreator : TaskID: [f865177d-2d02-43b7-a8f4-64d53a2645fb]
+2017-04-05 12:27:27,585 DEBUG CreateTask 159 
+ [Debug Message] - TaskCreator : TaskID: [9e7ec231-9d3c-4501-802a-5fcdbb087e02]
+2017-04-05 12:28:12,124 DEBUG CreateTask 159 
+ [Debug Message] - TaskCreator : TaskID: [4681111a-6db4-426f-8fbb-23f983b3c4b7]
+2017-04-05 12:28:18,739 DEBUG CreateTask 159 
+ [Debug Message] - TaskCreator : TaskID: [76e87f3f-7865-4e50-a89b-b986bbcc76ce]
+2017-04-05 12:28:38,363 DEBUG CreateTask 159 
+ [Debug Message] - TaskCreator : TaskID: [e7941ae0-2860-40dc-bacc-2a088db87787]
+2017-04-05 12:28:54,296 DEBUG CreateTask 159 
+ [Debug Message] - TaskCreator : TaskID: [39a07e2c-8e69-4f10-b07b-8ab92849aa14]
+2017-04-05 13:15:59,924 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [194.210.134.200] Port: [5001]
+2017-04-05 13:16:00,017 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-05 13:16:00,100 DEBUG ConnectServerManager 86 
+ [Debug Message] - ServerManager: [tcp://194.210.134.200:5000/ServerManager]
+2017-04-05 13:16:00,113 DEBUG ConnectToRepository 105 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-05 13:16:29,840 DEBUG CreateTask 159 
+ [Debug Message] - TaskCreator : TaskID: [79857f88-e962-4832-889f-4924ffcb5859]
+2017-04-05 13:16:30,372 DEBUG CreateTask 172 
+ [Debug Message] - Emitter Generated Channel Key: [EYPDfx-Tc_-X3GgeYrG5aT7RPWqQzruY]
+2017-04-05 13:17:51,002 DEBUG CreateTask 159 
+ [Debug Message] - TaskCreator : TaskID: [5b1073f1-8d4c-4808-b828-5175b6a36f1f]
+2017-04-05 13:19:18,325 DEBUG CreateTask 159 
+ [Debug Message] - TaskCreator : TaskID: [56b67781-656c-4b32-8c98-5865c66d622d]
+2017-04-05 13:29:45,558 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [194.210.134.200] Port: [5001]
+2017-04-05 13:29:45,629 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-05 13:29:45,738 DEBUG ConnectServerManager 86 
+ [Debug Message] - ServerManager: [tcp://194.210.134.200:5000/ServerManager]
+2017-04-05 13:29:45,763 DEBUG ConnectToRepository 105 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-05 13:29:58,985 DEBUG CreateTask 159 
+ [Debug Message] - TaskCreator : TaskID: [95d7d118-ef17-4904-b36a-036e5a95b06b]
+2017-04-05 13:29:59,520 DEBUG CreateTask 172 
+ [Debug Message] - Emitter Generated Channel Key: [iEMbYZI17x1hnRDserMNwQHTJiFPPL1j]
+2017-04-05 13:32:15,141 DEBUG CreateTask 159 
+ [Debug Message] - TaskCreator : TaskID: [4c1c50a7-f636-4232-81a8-aa7bb8f12909]
+2017-04-05 13:44:42,912 DEBUG CreateTask 159 
+ [Debug Message] - TaskCreator : TaskID: [67a255af-992d-442a-89c3-de5e3a895306]
+2017-04-05 16:21:49,972 ERROR ConnectToEmmiterBroker 135 
+ [Debug Message] - Exception connecting to the broker
+2017-04-05 16:21:50,011 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-05 16:21:50,055 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-05 16:21:51,181 DEBUG ConnectServerManager 86 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-05 16:21:51,195 DEBUG ConnectToRepository 105 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-05 16:22:55,998 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-05 16:22:56,043 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-05 16:22:57,107 DEBUG ConnectServerManager 86 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-05 16:22:57,117 DEBUG ConnectToRepository 105 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-05 16:23:23,272 DEBUG CreateTask 159 
+ [Debug Message] - TaskCreator : TaskID: [bd7fbd78-dbf3-4ba1-a0c1-aec7f13ac512]
+2017-04-05 16:23:24,813 DEBUG CreateTask 172 
+ [Debug Message] - Emitter Generated Channel Key: [Bn2E65nbhMvIJzRI4S4U3CxWvFnr7VlZ]
+2017-04-05 16:26:17,210 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-05 16:26:17,247 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-05 16:26:18,294 DEBUG ConnectServerManager 86 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-05 16:26:18,302 DEBUG ConnectToRepository 105 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-05 16:26:45,819 DEBUG CreateTask 159 
+ [Debug Message] - TaskCreator : TaskID: [138ea1a5-e8ae-4646-9367-007f7c11c2b7]
+2017-04-05 16:26:47,341 DEBUG CreateTask 172 
+ [Debug Message] - Emitter Generated Channel Key: [rJPGAEDK6Ac38JEiDpE8kQ26X5yn7ZcC]
+2017-04-05 16:28:04,959 DEBUG CreateTask 159 
+ [Debug Message] - TaskCreator : TaskID: [8dc36484-c564-4cbe-8acd-e05aadee1813]
+2017-04-05 16:28:54,190 DEBUG CreateTask 159 
+ [Debug Message] - TaskCreator : TaskID: [fdb1d1f0-ce01-4441-b622-80953774db53]
+2017-04-05 16:29:20,827 DEBUG CreateTask 159 
+ [Debug Message] - TaskCreator : TaskID: [750354bd-0353-4508-8fac-dfbc449b65f7]
+2017-04-05 17:46:52,868 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-05 17:46:52,874 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-05 17:46:52,889 DEBUG ConnectServerManager 50 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-05 17:46:52,896 DEBUG ConnectToRepository 69 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-05 18:40:14,008 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-05 18:40:14,017 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-05 18:40:14,041 DEBUG ConnectServerManager 50 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-05 18:40:14,055 DEBUG ConnectToRepository 69 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-05 19:34:39,478 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-05 19:34:39,487 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-05 19:34:39,514 DEBUG ConnectServerManager 50 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-05 19:34:39,525 DEBUG ConnectToRepository 69 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-05 22:18:54,022 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5001]
+2017-04-05 22:18:54,029 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-05 22:18:54,046 DEBUG ConnectServerManager 50 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-05 22:18:54,054 DEBUG ConnectToRepository 69 
+ [Debug Message] - [INFO] Task Creator connected to Repository.

@@ -7,31 +7,31 @@ namespace This4That_platform.Domain
 {
     public class APIResponse
     {
-        private int errorCode = -1;
-        private object response = null;
+        private int _errorCode = -1;
+        private object _response = null;
 
-        public int ErrorCode
+        public int errorCode
         {
             get
             {
-                return errorCode;
+                return _errorCode;
             }
 
             set
             {
-                errorCode = value;
+                _errorCode = value;
             }
         }
-        public object Response
+        public object response
         {
             get
             {
-                return response;
+                return _response;
             }
 
             set
             {
-                response = value;
+                _response = value;
             }
         }
 
@@ -42,8 +42,8 @@ namespace This4That_platform.Domain
         
         public void SetResponse(object response, RESULT_TYPE type)
         {
-            this.Response = response;
-            ErrorCode = (int)type;
+            this.response = response;
+            errorCode = (int)type;
             if (type == RESULT_TYPE.ERROR)
                 Global.Log.Error(response.ToString());
         }

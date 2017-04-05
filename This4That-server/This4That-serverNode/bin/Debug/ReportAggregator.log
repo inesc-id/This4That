@@ -1,0 +1,360 @@
+2017-03-30 17:27:20,575 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-30 17:27:20,581 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-30 17:27:20,593 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-30 18:44:04,261 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-30 18:44:04,269 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-30 18:44:04,291 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-30 18:55:57,741 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-30 18:55:58,080 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-30 18:55:58,108 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-30 20:07:36,484 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-30 20:07:36,492 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-30 20:07:36,524 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 13:07:45,265 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-31 13:07:45,272 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-31 13:07:45,284 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 13:09:50,080 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-31 13:09:50,095 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-31 13:09:50,113 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 13:10:42,819 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-31 13:10:42,828 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-31 13:10:42,847 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 13:34:46,852 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-31 13:34:46,861 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-31 13:34:46,878 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 14:19:56,292 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-31 14:19:56,300 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-31 14:19:56,313 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 15:01:26,936 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-31 15:01:26,950 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-31 15:01:26,971 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 15:02:32,043 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-31 15:02:32,051 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-31 15:02:32,073 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 16:07:55,110 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-31 16:07:55,124 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-31 16:07:55,144 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 16:24:15,994 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-31 16:24:16,008 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-31 16:24:16,030 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 18:16:51,031 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-31 18:16:51,041 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-31 18:16:51,059 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 18:24:45,189 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-31 18:24:45,194 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-31 18:24:45,208 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 18:37:23,381 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-31 18:37:23,388 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-31 18:37:23,402 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-03-31 18:46:31,973 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-03-31 18:46:31,978 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-03-31 18:46:31,998 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 15:38:42,067 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-03 15:38:42,072 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-03 15:38:42,085 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 15:42:11,474 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-03 15:42:11,479 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-03 15:42:11,496 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 15:43:44,484 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-03 15:43:44,500 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-03 15:43:44,516 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 15:44:34,591 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-03 15:44:34,599 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-03 15:44:34,615 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 15:51:21,919 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-03 15:51:21,925 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-03 15:51:21,938 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 15:56:54,261 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-03 15:56:54,270 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-03 15:56:54,286 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 17:08:53,161 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-03 17:08:53,166 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-03 17:08:53,177 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 21:56:27,981 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-03 21:56:27,996 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-03 21:56:28,012 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 21:57:39,640 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-03 21:57:39,656 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-03 21:57:39,671 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 22:49:06,969 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-03 22:49:06,984 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-03 22:49:06,984 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 23:42:44,293 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-03 23:42:44,301 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-03 23:42:44,315 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 23:49:29,907 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-03 23:49:29,918 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-03 23:49:29,935 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-03 23:57:09,607 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-03 23:57:09,614 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-03 23:57:09,652 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 00:02:34,807 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-04 00:02:34,816 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-04 00:02:34,839 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 00:15:50,332 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-04 00:15:50,340 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-04 00:15:50,354 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 16:22:43,384 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-04 16:22:43,395 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-04 16:22:43,413 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 16:38:38,639 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-04 16:38:38,649 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-04 16:38:38,669 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 16:44:53,056 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-04 16:44:53,062 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-04 16:44:53,078 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 16:53:42,887 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-04 16:53:42,899 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-04 16:53:42,917 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 16:59:16,812 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-04 16:59:16,824 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-04 16:59:16,841 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 17:00:35,026 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-04 17:00:35,033 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-04 17:00:35,052 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 17:05:38,989 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-04 17:05:38,994 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-04 17:05:39,011 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 17:08:54,928 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-04 17:08:54,933 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-04 17:08:54,951 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 17:20:06,885 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-04 17:20:06,893 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-04 17:20:06,913 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 17:46:40,229 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-04 17:46:40,235 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-04 17:46:40,255 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 18:14:27,796 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-04 18:14:27,812 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-04 18:14:27,828 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 19:34:04,037 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-04 19:34:04,056 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-04 19:34:04,079 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 20:02:53,706 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-04 20:02:53,706 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-04 20:02:53,722 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 20:36:16,690 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-04 20:36:16,697 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-04 20:36:16,718 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-04 21:42:55,308 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-04 21:42:55,315 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-04 21:42:55,334 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-05 12:10:39,526 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [194.210.134.200] Port: [5003]
+2017-04-05 12:10:39,533 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-05 12:10:39,551 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://194.210.134.200:5000/ServerManager]
+2017-04-05 12:13:25,372 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [194.210.134.200] Port: [5003]
+2017-04-05 12:13:25,378 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-05 12:13:25,395 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://194.210.134.200:5000/ServerManager]
+2017-04-05 12:20:06,849 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [194.210.134.200] Port: [5003]
+2017-04-05 12:20:06,857 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-05 12:20:06,880 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://194.210.134.200:5000/ServerManager]
+2017-04-05 12:22:02,373 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [194.210.134.200] Port: [5003]
+2017-04-05 12:22:02,381 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-05 12:22:02,415 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://194.210.134.200:5000/ServerManager]
+2017-04-05 13:16:00,160 DEBUG StartConnectRemoteIntance 116 
+ [Debug Message] - Valid Hostname: [194.210.134.200] Port: [5003]
+2017-04-05 13:16:00,168 DEBUG StartConnectRemoteIntance 120 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-05 13:16:00,200 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://194.210.134.200:5000/ServerManager]
+2017-04-05 13:29:45,846 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [194.210.134.200] Port: [5003]
+2017-04-05 13:29:45,859 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-05 13:29:45,908 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://194.210.134.200:5000/ServerManager]
+2017-04-05 16:21:51,254 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-05 16:21:51,263 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-05 16:21:51,328 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-05 16:22:57,170 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-05 16:22:57,179 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-05 16:22:57,218 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-05 16:26:18,359 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-05 16:26:18,366 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-05 16:26:18,390 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-05 17:46:52,945 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-05 17:46:52,957 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-05 17:46:52,976 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-05 18:40:14,098 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-05 18:40:14,103 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-05 18:40:14,117 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-05 19:34:39,584 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-05 19:34:39,591 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-05 19:34:39,610 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
+2017-04-05 22:18:54,099 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [localhost] Port: [5003]
+2017-04-05 22:18:54,104 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [ReportAggregator] IS RUNNING!
+2017-04-05 22:18:54,119 DEBUG ConnectServerManager 31 
+ [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]

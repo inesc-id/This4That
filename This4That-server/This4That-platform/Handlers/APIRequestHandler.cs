@@ -71,7 +71,7 @@ namespace This4That_platform.Handlers
             try
             {
                 response.SetResponse(new Dictionary<string, object>() {
-                                    { "topics", serverMgr.RemoteRepository.GetTopics() } }
+                                    { "topics", serverMgr.RemoteTaskDistributor.GetTopics() } }
                                     , APIResponse.RESULT_TYPE.SUCCESS);
                 return true;
             }
@@ -131,6 +131,24 @@ namespace This4That_platform.Handlers
                 return false;
             }
 
+        }
+
+        public bool GetTopicByName(string topicName, out APIResponse response)
+        {
+            response = new APIResponse();
+            try
+            {
+                response.SetResponse(new Dictionary<string, object>() {
+                                    { "topic", serverMgr.RemoteTaskDistributor.GetTopic(topicName) } }
+                                    , APIResponse.RESULT_TYPE.SUCCESS);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Global.Log.Error(ex.Message);
+                response.SetResponse("Cannot obtain topic from server. Please try again!", APIResponse.RESULT_TYPE.ERROR);
+                return false;
+            }
         }
 
         public bool ReportResultsCSTask()

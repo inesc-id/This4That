@@ -28,7 +28,8 @@ namespace This4That_library
 
     public interface ITaskDistributor : IRemoteEntity
     {
-        bool ReceiveTask(CSTask task);
+        Topic GetTopic(string topicName);
+        List<Topic> GetTopics();
 
     }
 
@@ -48,8 +49,8 @@ namespace This4That_library
     {
         bool AuthenticateUser(string userID);
         bool GetUserIncentiveMechanism(string userID, out IncentiveSchemeBase incentiveScheme);
-        bool SaveTopics(string topic, string channelKey);
-        Topic GetTopic(string topicName);
-        List<Topic> GetTopics();
+        bool SaveTask(CSTask topic, out string taskID);
+        Topic GetTopicFromRepository(string topicName);
+        List<Topic> GetTopicsFromRepository();
     }
 }

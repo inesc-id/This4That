@@ -10,12 +10,11 @@ namespace This4That_library.Models.Domain
     public class Topic
     {
         private string name;
-        private string channelKey;
+        private List<string> listOfTaskIDs = new List<string>();
 
-        public Topic(string topicName, string channelKey)
+        public Topic(string topicName)
         {
             this.Name = topicName;
-            this.ChannelKey = channelKey;
         }
 
         public string Name
@@ -31,16 +30,16 @@ namespace This4That_library.Models.Domain
             }
         }
 
-        public string ChannelKey
+        public List<string> ListOfTaskIDs
         {
             get
             {
-                return channelKey;
+                return listOfTaskIDs;
             }
 
             set
             {
-                channelKey = value;
+                listOfTaskIDs = value;
             }
         }
     }

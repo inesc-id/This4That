@@ -1,5 +1,4 @@
-﻿using Emitter;
-using log4net;
+﻿using log4net;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,8 +14,6 @@ namespace This4That_serverNode.Nodes
     public class TaskCreator : Node, ITaskCreator
     {
         private IRepository remoteRepository = null;
-        private List<CSTask> onGoingTasks = new List<CSTask>();
-        private EmitterConn emitter = null;
 
         public IRepository RemoteRepository
         {
@@ -31,42 +28,9 @@ namespace This4That_serverNode.Nodes
             }
         }
 
-        public List<CSTask> OnGoingTasks
-        {
-            get
-            {
-                return onGoingTasks;
-            }
-
-            set
-            {
-                onGoingTasks = value;
-            }
-        }
-
-        public EmitterConn Emitter
-        {
-            get
-            {
-                return emitter;
-            }
-
-            set
-            {
-                emitter = value;
-            }
-        }
-
         public TaskCreator(string hostName, int port, string name) : base(hostName, port, name)
         {
             Log = LogManager.GetLogger("TaskCreatorLOG");
-            ConnectToEmmiterBroker();
-        }
-
-        ~TaskCreator()
-        {
-            if (this.Emitter.Connection != null)
-                this.Emitter.Connection.Disconnect();
         }
 
         /// <summary>
@@ -112,71 +76,20 @@ namespace This4That_serverNode.Nodes
             }
         }
 
-        /// <summary>
-        /// Connects to Emitter broker
-        /// </summary>
-        /// <param name="emitter"></param>
-        /// <returns></returns>
-        private bool ConnectToEmmiterBroker()
-        {
-            //CustomServer 
-            string serverKey = "rzBrYBqh2nlglDHBC0oDQq10KCCEjjCw";
-
-            try
-            {
-                Emitter = new EmitterConn(serverKey);
-                Emitter.Connection = new Connection("192.168.1.101", 5010, serverKey);
-                //config do emmiter tem de ser carregado a partir de ficheiro
-                this.Emitter.Connection.Connect();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Log.Error(ex.Message);
-                return false;
-            }
-        }
-
-        public void EmitterReceiver(string channelKey, string topic)
-        {
-            this.Emitter.Connection.On(channelKey, topic, (channel, msg) =>
-            {
-                Console.WriteLine("[MQTT - Message]: " + Encoding.UTF8.GetString(msg));
-            }, 10);
-        }
+        
 
         #region REMOTE_INTERFACE
 
         public bool CreateTask(CSTask task, out string taskID)
         {
-            string channelKey = null;
-            Topic topic;
             taskID = null;
             try
             {                
-                Console.WriteLine("Going to create a new Task!");
-                taskID = Guid.NewGuid().ToString();
-                Log.DebugFormat("TaskCreator : TaskID: [{0}]", taskID);
-                topic = this.RemoteRepository.GetTopic(task.Topic);
-                if (topic != null)
+                Console.WriteLine("[INFO-TaskCreator] - Going to create a new Task!");
+                if (!this.RemoteRepository.SaveTask(task, out taskID))
                 {
-                    this.Emitter.Connection.Publish(topic.ChannelKey, topic.Name, task.ToString(), 10080);
-                }
-                else
-                {
-                    if (!Emitter.GenerateKey(task.Topic, out channelKey))
-                    {
-                        Log.Error("Cannot generate a channel key!");
-                        return false;
-                    }
-                    Log.DebugFormat("Emitter Generated Channel Key: [{0}]", channelKey);
-                    if (!this.RemoteRepository.SaveTopics(task.Topic, channelKey))
-                    {
-                        Log.Error("Cannot save topic on Repository!");
-                        return false;
-                    }
-                    this.Emitter.Connection.Publish(channelKey, task.Topic, task.ToString(), 10080);
-                    EmitterReceiver(channelKey, task.Topic);
+                    Log.Error("Cannot save task on Repository!");
+                    return false;
                 }
                 return true;
             }

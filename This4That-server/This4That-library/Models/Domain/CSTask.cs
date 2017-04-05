@@ -58,7 +58,7 @@ namespace This4That_library.Models.Domain
         }
 
         [JsonProperty(PropertyName = "topic")]
-        public string Topic
+        public string TopicName
         {
             get
             {

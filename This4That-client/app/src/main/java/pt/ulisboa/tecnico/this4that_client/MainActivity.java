@@ -14,7 +14,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.util.Date;
 
@@ -29,13 +32,22 @@ import pt.ulisboa.tecnico.this4that_client.serviceLayer.ServerAPI;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private Button btnSubscribeTopic;
+    private Button btnCalcTaskCost;
+    private Button btnCreateTask;
+    private TextView txtRefToPay;
+    private TextView txtValToPay;
+    private TextView txtTaskID;
     private ServerAPI serverAPI;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btnSubscribeTopic = (Button) findViewById(R.id.subscribeTopic);
+        btnCalcTaskCost = (Button) findViewById(R.id.btnCalcTaskCost);
+        btnCreateTask = (Button) findViewById(R.id.btnCreateTask);
+        txtRefToPay = (TextView) findViewById(R.id.txtRefToPayFill);
+        txtValToPay = (TextView) findViewById(R.id.txtValToPayFill);
+        txtTaskID = (TextView) findViewById(R.id.txtTaskIDFill);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -57,6 +69,23 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         serverAPI = new ServerAPI("http://192.168.1.101:58949/api/", "1234");
+
+
+        btnCalcTaskCost.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                CSTask task = CreateDummyTask();
+                serverAPI.CalcTaskCostAPI(task, MainActivity.this);
+            }
+        });
+        btnCreateTask.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                CSTask task = CreateDummyTask();
+                serverAPI.CreateCSTask(task, MainActivity.this, getTxtRefToPay().getText().toString());
+            }
+        });
+    }
+
+    public CSTask CreateDummyTask(){
         CSTask csTask = new CSTask();
         SensingTask sensingTask = new SensingTask();
         sensingTask.setSensor(SensorType.TEMPERATURE);
@@ -70,17 +99,7 @@ public class MainActivity extends AppCompatActivity
         csTask.setTopic("temperature");
         csTask.setSensingTask(sensingTask);
         csTask.setTrigger(triggerSensor);
-
-
-        //serverAPI.CalcTaskCostAPI(csTask, this);
-        //serverAPI.CreateCSTask(csTask, this);
-
-        btnSubscribeTopic.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
-
-            }
-        });
+        return  csTask;
     }
 
 
@@ -139,5 +158,45 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public Button getBtnCalcTaskCost() {
+        return btnCalcTaskCost;
+    }
+
+    public void setBtnCalcTaskCost(Button btnCalcTaskCost) {
+        this.btnCalcTaskCost = btnCalcTaskCost;
+    }
+
+    public Button getBtnCreateTask() {
+        return btnCreateTask;
+    }
+
+    public void setBtnCreateTask(Button btnCreateTask) {
+        this.btnCreateTask = btnCreateTask;
+    }
+
+    public TextView getTxtRefToPay() {
+        return txtRefToPay;
+    }
+
+    public void setTxtRefToPay(TextView txtRefToPay) {
+        this.txtRefToPay = txtRefToPay;
+    }
+
+    public TextView getTxtValToPay() {
+        return txtValToPay;
+    }
+
+    public void setTxtValToPay(TextView txtValToPay) {
+        this.txtValToPay = txtValToPay;
+    }
+
+    public TextView getTxtTaskID() {
+        return txtTaskID;
+    }
+
+    public void setTxtTaskID(TextView txtTaskID) {
+        this.txtTaskID = txtTaskID;
     }
 }

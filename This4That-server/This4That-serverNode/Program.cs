@@ -55,7 +55,7 @@ namespace This4That_serverNode
             repository = null;
             int port;
             string serverMgrURL;
-            string repositoryURL;
+            string repositoryURL = null;
             XmlNode xmlNode;
             try
             {
@@ -70,9 +70,21 @@ namespace This4That_serverNode
                     Console.WriteLine("Server Manager Parameters are not defined in the XML!");
                     return false;
                 }
-                Console.WriteLine("SERVER MANAGER");
+                Console.WriteLine("[INFO - SERVER MANAGER] - Node Started");
                 Console.WriteLine(serverMgrURL);
                 Console.WriteLine("----------------------------");
+                
+                /*********REPOSITORY**************/
+                xmlNode = xmlDoc.GetElementsByTagName(Global.REPOSITORY_NAME)[0];
+                if (xmlNode != null)
+                {
+                    repositoryURL = $"tcp://{xmlNode.Attributes["hostName"].Value}:{xmlNode.Attributes["port"].Value}/{Global.REPOSITORY_NAME}";
+                    int.TryParse(xmlNode.Attributes["port"].Value, out port);
+                    repository = new Repository(xmlNode.Attributes["hostName"].Value, port, Global.REPOSITORY_NAME);
+                    if (!repository.StartConnectRemoteIntance(serverMgrURL))
+                        return false;
+                }
+                /**************TASK CREATOR********/
                 xmlNode = xmlDoc.GetElementsByTagName(Global.TASK_CREATOR_NAME)[0];
                 if (xmlNode != null)
                 {
@@ -80,14 +92,10 @@ namespace This4That_serverNode
                     taskCreator = new TaskCreator(xmlNode.Attributes["hostName"].Value, port, Global.TASK_CREATOR_NAME);
                     if (!taskCreator.StartConnectRemoteIntance(serverMgrURL))
                         return false;
-                    //get url to repository
-                    xmlNode = xmlDoc.GetElementsByTagName(Global.REPOSITORY_NAME)[0];
-                    if (xmlNode != null)
-                    {
-                        repositoryURL = $"tcp://{xmlNode.Attributes["hostName"].Value}:{xmlNode.Attributes["port"].Value}/{Global.REPOSITORY_NAME}";
-                        taskCreator.ConnectToRepository(repositoryURL);
-                    }
+                    //Connect to repository
+                    taskCreator.ConnectToRepository(repositoryURL);
                 }
+                /***********TASK DISTRIBUTOR********/
                 xmlNode = xmlDoc.GetElementsByTagName(Global.TASK_DISTRIBUTOR_NAME)[0];
                 if (xmlNode != null)
                 {
@@ -95,7 +103,10 @@ namespace This4That_serverNode
                     taskDistributor = new TaskDistributor(xmlNode.Attributes["hostName"].Value, port, Global.TASK_DISTRIBUTOR_NAME);
                     if (!taskDistributor.StartConnectRemoteIntance(serverMgrURL))
                         return false;
+                    //Connect to repository
+                    taskDistributor.ConnectToRepository(repositoryURL);
                 }
+                /*********REPORT AGGREGATOR**********/
                 xmlNode = xmlDoc.GetElementsByTagName(Global.REPORT_AGGREGATOR_NAME)[0];
                 if (xmlNode != null)
                 {
@@ -104,6 +115,7 @@ namespace This4That_serverNode
                     if (!reportAggregator.StartConnectRemoteIntance(serverMgrURL))
                         return false;
                 }
+                /***********INCENTIVE ENGINE********/
                 xmlNode = xmlDoc.GetElementsByTagName(Global.INCENTIVE_ENGINE_NAME)[0];
                 if (xmlNode != null)
                 {
@@ -112,21 +124,7 @@ namespace This4That_serverNode
                     //connect to server manager
                     if (!incentiveEngine.StartConnectRemoteIntance(serverMgrURL))
                         return false;
-                    //get url to repository
-                    xmlNode = xmlDoc.GetElementsByTagName(Global.REPOSITORY_NAME)[0];
-                    if (xmlNode != null)
-                    {
-                        repositoryURL = $"tcp://{xmlNode.Attributes["hostName"].Value}:{xmlNode.Attributes["port"].Value}/{Global.REPOSITORY_NAME}";
-                        incentiveEngine.ConnectToRepository(repositoryURL);
-                    }
-                }
-                xmlNode = xmlDoc.GetElementsByTagName(Global.REPOSITORY_NAME)[0];
-                if (xmlNode != null)
-                {
-                    int.TryParse(xmlNode.Attributes["port"].Value, out port);
-                    repository = new Repository(xmlNode.Attributes["hostName"].Value, port, Global.REPOSITORY_NAME);
-                    if (!repository.StartConnectRemoteIntance(serverMgrURL))
-                        return false;
+                    incentiveEngine.ConnectToRepository(repositoryURL);
                 }
                 return true;
             }

@@ -89,6 +89,32 @@ namespace This4That_platform.ServiceLayer
             }
         }
 
+        [HttpGet]
+        [Route("topic/{topicName}")]
+        public IHttpActionResult GetTopics(string topicName)
+        {
+            ServerManager serverMgr = null;
+            APIRequestHandler handler = null;
+            APIResponse response = new APIResponse();
+
+            try
+            {
+                serverMgr = Global.GetCreateServerManager(HttpContext.Current.Server);
+                handler = new APIRequestHandler(HttpContext.Current.Request, serverMgr);
+                if (!handler.GetTopicByName(topicName, out response))
+                {
+                    return Content(HttpStatusCode.InternalServerError, response);
+                }
+                return Content(HttpStatusCode.OK, response);
+            }
+            catch (Exception ex)
+            {
+                Global.Log.Error(ex.Message);
+                response.SetResponse("Cannot obtain topic from server. Please try again!", APIResponse.RESULT_TYPE.ERROR);
+                return Content(HttpStatusCode.InternalServerError, response);
+            }
+        }
+
         [HttpPost]
         [Route("report")]
         public IHttpActionResult ReportTaskResults()
@@ -98,7 +124,8 @@ namespace This4That_platform.ServiceLayer
             try
             {
                 serverMgr = Global.GetCreateServerManager(HttpContext.Current.Server);
-                
+                handler = new APIRequestHandler(HttpContext.Current.Request, serverMgr);
+
                 return Content(HttpStatusCode.OK, "OK");
             }
             catch (Exception ex)
