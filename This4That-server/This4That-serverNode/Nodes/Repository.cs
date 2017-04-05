@@ -4,11 +4,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using This4That_library;
+using This4That_library.Models.Domain;
+using This4That_serverNode.IncentiveModels;
 
 namespace This4That_serverNode.Nodes
 {
     public class Repository : Node, IRepository
     {
+        private List<Topic> topics = new List<Topic>();
+
         public Repository(string hostName, int port, string name) : base(hostName, port, name)
         {
             Log = LogManager.GetLogger("RepositoryLOG");
@@ -50,6 +54,40 @@ namespace This4That_serverNode.Nodes
         {
             return true;
         }
+
+        public bool GetUserIncentiveMechanism(string userID, out IncentiveSchemeBase incentiveScheme)
+        {
+           incentiveScheme = new CentralIncentiveScheme();
+           return true;
+        }
+
+        public bool SaveTopics(string topicName, string channelKey)
+        {
+            Topic topic = new Topic(topicName, channelKey);
+            if (!topics.Contains(topic))
+            {
+                topics.Add(topic);
+            }
+            return true;
+        }
+
+        public Topic GetTopic(string topicName)
+        {
+            foreach (Topic aux_topic in topics)
+            {
+                if (aux_topic.Name.Equals(topicName))
+                {
+                    return aux_topic;
+                }
+            }
+            return null;
+        }
+
+        public List<Topic> GetTopics()
+        {
+            return topics;
+        }
+
         #endregion
 
     }

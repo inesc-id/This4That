@@ -8,14 +8,54 @@ using System.Threading;
 using System.Web;
 using This4That_library;
 using This4That_library.Models.Domain;
+using This4That_serverNode.Domain;
 
 namespace This4That_serverNode.Nodes
 {
     public class TaskCreator : Node, ITaskCreator
     {
+        private IRepository remoteRepository = null;
         private List<CSTask> onGoingTasks = new List<CSTask>();
-        private Connection emitterConn = null;
-        private string channelKey;
+        private EmitterConn emitter = null;
+
+        public IRepository RemoteRepository
+        {
+            get
+            {
+                return remoteRepository;
+            }
+
+            set
+            {
+                remoteRepository = value;
+            }
+        }
+
+        public List<CSTask> OnGoingTasks
+        {
+            get
+            {
+                return onGoingTasks;
+            }
+
+            set
+            {
+                onGoingTasks = value;
+            }
+        }
+
+        public EmitterConn Emitter
+        {
+            get
+            {
+                return emitter;
+            }
+
+            set
+            {
+                emitter = value;
+            }
+        }
 
         public TaskCreator(string hostName, int port, string name) : base(hostName, port, name)
         {
@@ -25,8 +65,8 @@ namespace This4That_serverNode.Nodes
 
         ~TaskCreator()
         {
-            if (emitterConn != null)
-                emitterConn.Disconnect();
+            if (this.Emitter.Connection != null)
+                this.Emitter.Connection.Disconnect();
         }
 
         /// <summary>
@@ -57,36 +97,12 @@ namespace This4That_serverNode.Nodes
             }
         }
 
-
-        /// <summary>
-        /// Connects to Emitter broker
-        /// </summary>
-        /// <param name="emitter"></param>
-        /// <returns></returns>
-        private bool ConnectToEmmiterBroker()
+        public bool ConnectToRepository(string repositoryUrl)
         {
-            string channelKey = null;
-            //CustomServer 
-            string serverKey = "rzBrYBqh2nlglDHBC0oDQq10KCCEjjCw";
-            //Emitter Server string serverKey = "eqOEeIgF1TsSD4SqpfHQajafy4c072tg";
-
             try
             {
-                this.emitterConn = new Connection("192.168.1.101", 5010, serverKey);
-                //this.emitterConn = new Connection();
-                this.emitterConn.Connect();
-                this.emitterConn.GenerateKey(
-                                 serverKey,
-                                 "This4That", Emitter.Messages.EmitterKeyType.ReadWrite,
-                                 (response) => channelKey = response.Key);
-
-                //await for generatedKey
-                while (channelKey == null)
-                {
-                    Thread.Sleep(500);
-                }
-                Log.DebugFormat("Emitter Generated Channel Key: [{0}]", channelKey);
-                this.channelKey = channelKey;
+                this.RemoteRepository = (IRepository)Activator.GetObject(typeof(IRepository), repositoryUrl);
+                Log.DebugFormat("[INFO] Task Creator connected to Repository.");
                 return true;
             }
             catch (Exception ex)
@@ -96,22 +112,80 @@ namespace This4That_serverNode.Nodes
             }
         }
 
-        public void EmitterReceiver(string channelKey)
+        /// <summary>
+        /// Connects to Emitter broker
+        /// </summary>
+        /// <param name="emitter"></param>
+        /// <returns></returns>
+        private bool ConnectToEmmiterBroker()
         {
-            this.emitterConn.On(channelKey, "This4That", (channel, msg) =>
+            //CustomServer 
+            string serverKey = "rzBrYBqh2nlglDHBC0oDQq10KCCEjjCw";
+
+            try
+            {
+                Emitter = new EmitterConn(serverKey);
+                Emitter.Connection = new Connection("192.168.1.101", 5010, serverKey);
+                //config do emmiter tem de ser carregado a partir de ficheiro
+                this.Emitter.Connection.Connect();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return false;
+            }
+        }
+
+        public void EmitterReceiver(string channelKey, string topic)
+        {
+            this.Emitter.Connection.On(channelKey, topic, (channel, msg) =>
             {
                 Console.WriteLine("[MQTT - Message]: " + Encoding.UTF8.GetString(msg));
-            });
+            }, 10);
         }
+
         #region REMOTE_INTERFACE
 
         public bool CreateTask(CSTask task, out string taskID)
         {
-            taskID = Guid.NewGuid().ToString();
-            Log.DebugFormat("TaskCreator : TaskID: [{0}]", taskID);
-            EmitterReceiver(channelKey);
-            emitterConn.Publish(channelKey, "This4That", task.ToString());
-            return true;
+            string channelKey = null;
+            Topic topic;
+            taskID = null;
+            try
+            {                
+                Console.WriteLine("Going to create a new Task!");
+                taskID = Guid.NewGuid().ToString();
+                Log.DebugFormat("TaskCreator : TaskID: [{0}]", taskID);
+                topic = this.RemoteRepository.GetTopic(task.Topic);
+                if (topic != null)
+                {
+                    this.Emitter.Connection.Publish(topic.ChannelKey, topic.Name, task.ToString(), 10080);
+                }
+                else
+                {
+                    if (!Emitter.GenerateKey(task.Topic, out channelKey))
+                    {
+                        Log.Error("Cannot generate a channel key!");
+                        return false;
+                    }
+                    Log.DebugFormat("Emitter Generated Channel Key: [{0}]", channelKey);
+                    if (!this.RemoteRepository.SaveTopics(task.Topic, channelKey))
+                    {
+                        Log.Error("Cannot save topic on Repository!");
+                        return false;
+                    }
+                    this.Emitter.Connection.Publish(channelKey, task.Topic, task.ToString(), 10080);
+                    EmitterReceiver(channelKey, task.Topic);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return false;
+            }
+            
         }
 
         #endregion

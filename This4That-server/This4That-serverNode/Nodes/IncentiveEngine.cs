@@ -2,14 +2,45 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using This4That_library;
 using This4That_library.Models.Domain;
+using This4That_serverNode.Domain;
+using This4That_serverNode.IncentiveModels;
 
 namespace This4That_serverNode.Nodes
 {
     public class IncentiveEngine : Node, IIncentiveEngine
     {
+        private IRepository repository = null;
+
+        private Dictionary<string, PendingPayment> pendingPayments = new Dictionary<string, PendingPayment>();
+
+        public Dictionary<string, PendingPayment> PendingPayments
+        {
+            get
+            {
+                return pendingPayments;
+            }
+
+            set
+            {
+                pendingPayments = value;
+            }
+        }
+
+        public IRepository Repository
+        {
+            get
+            {
+                return repository;
+            }
+
+            set
+            {
+                repository = value;
+            }
+        }
+
         public IncentiveEngine(string hostName, int port, string name) : base(hostName, port, name)
         {
             Log = LogManager.GetLogger("IncentiveEngineLOG");
@@ -43,13 +74,76 @@ namespace This4That_serverNode.Nodes
             }
         }
 
-
-        #region REMOTE_INTERFACE
-        public bool CalcTaskCost(CSTask taskSpec, out object incentiveValue)
+        public bool ConnectToRepository(string repositoryUrl)
         {
             try
             {
-                incentiveValue = 1;
+                this.Repository = (IRepository)Activator.GetObject(typeof(IRepository), repositoryUrl);
+                Log.DebugFormat("[INFO] Incentive Engine connected to Repository.");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return false;
+            }
+        }
+
+        private string GenerateReferenceToPay()
+        {
+            string guid = Guid.NewGuid().ToString();
+            lock (this)
+            {
+                while (PendingPayments.Keys.Contains(guid))
+                {
+                    guid = Guid.NewGuid().ToString();
+                }
+                return guid;
+            }
+        }
+
+        private bool GetUserIncentiveScheme(string userID, out IncentiveSchemeBase incentiveScheme)
+        {
+            incentiveScheme = null;
+            try
+            {
+                if (!this.Repository.GetUserIncentiveMechanism(userID, out incentiveScheme))
+                    return false;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return false;
+            }
+        }
+
+        #region REMOTE_INTERFACE
+        public bool CalcTaskCost(CSTask taskSpec, string userID, out object incentiveValue, out string reftoPay)
+        {
+            IncentiveSchemeBase incentiveScheme;
+            PendingPayment payment;
+            incentiveValue = null;
+            reftoPay = null;
+            try
+            {
+                Console.WriteLine("New Request from User: " + userID);
+                if (!GetUserIncentiveScheme(userID, out incentiveScheme))
+                {
+                    Log.Error("Cannot obtain User incentive scheme!");
+                    return false;
+                }
+                if (!incentiveScheme.CalcTaskCost(taskSpec, out incentiveValue))
+                {
+                    Log.Error("Cannot calculate the incentive value!");
+                    return false;
+                }
+                reftoPay = GenerateReferenceToPay();
+                payment = new PendingPayment(userID, reftoPay, incentiveValue);
+                lock (this)
+                {
+                    PendingPayments.Add(reftoPay, payment);
+                }                
                 return true;
             }
             catch (Exception ex)
@@ -60,12 +154,24 @@ namespace This4That_serverNode.Nodes
             }
         }
 
-        public bool IsTaskPaid(string transactionId)
+
+        public bool PayTask(string refToPay, out string transactionId)
         {
-            if (transactionId != null)
+            transactionId = null;
+            try
+            {
+                //pagar a task consoante o mecanismo de incentivos.
+                PendingPayments.Remove(refToPay);
+                transactionId = Guid.NewGuid().ToString();
                 return true;
-            return false;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return false;
+            }
         }
+
         #endregion
     }
 }

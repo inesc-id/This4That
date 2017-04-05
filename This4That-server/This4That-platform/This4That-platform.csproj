@@ -108,7 +108,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config\App_Start\WebApiConfig.cs" />
+    <Compile Include="Domain\APIResponse.cs" />
     <Compile Include="Handlers\APIRequestHandler.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="ServerManager.cs" />
     <Compile Include="_SecurityLayer\ServerAuthority.cs" />
     <Compile Include="_ServiceLayer\ServerAPIController.cs" />
@@ -117,7 +123,12 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\This4That-library\This4That-library.csproj">
       <Project>{30844b3a-646c-4339-9678-85c5d0fb230b}</Project>
@@ -139,7 +150,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>58949</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://192.168.1.101:58949/</IISUrl>
+          <IISUrl>http://localhost:58949/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

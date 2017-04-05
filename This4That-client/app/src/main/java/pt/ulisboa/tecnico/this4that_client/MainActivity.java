@@ -3,6 +3,7 @@ package pt.ulisboa.tecnico.this4that_client;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,9 +13,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.Toast;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
+
 
 import pt.ulisboa.tecnico.this4that_client.Domain.CSTask.CSTask;
 import pt.ulisboa.tecnico.this4that_client.Domain.CSTask.SensingTask;
@@ -26,10 +29,13 @@ import pt.ulisboa.tecnico.this4that_client.serviceLayer.ServerAPI;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private Button btnSubscribeTopic;
+    private ServerAPI serverAPI;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        btnSubscribeTopic = (Button) findViewById(R.id.subscribeTopic);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -50,7 +56,7 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        ServerAPI serverAPI = new ServerAPI("http://192.168.1.101:58949/api/", "1234");
+        serverAPI = new ServerAPI("http://192.168.1.101:58949/api/", "1234");
         CSTask csTask = new CSTask();
         SensingTask sensingTask = new SensingTask();
         sensingTask.setSensor(SensorType.TEMPERATURE);
@@ -66,12 +72,17 @@ public class MainActivity extends AppCompatActivity
         csTask.setTrigger(triggerSensor);
 
 
-        serverAPI.CalcTaskCostAPI(csTask, this);
-        serverAPI.CreateCSTask(csTask, this);
+        //serverAPI.CalcTaskCostAPI(csTask, this);
+        //serverAPI.CreateCSTask(csTask, this);
+
+        btnSubscribeTopic.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
 
 
-
+            }
+        });
     }
+
 
     @Override
     public void onBackPressed() {

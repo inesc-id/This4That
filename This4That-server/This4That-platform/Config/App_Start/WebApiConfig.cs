@@ -1,4 +1,5 @@
-﻿using System.Web.Http;
+﻿using Newtonsoft.Json;
+using System.Web.Http;
 
 namespace This4That_platform.App_Start
 {
@@ -9,9 +10,12 @@ namespace This4That_platform.App_Start
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
-                name: "T4TApi",
+                name: "This4ThatAPI",
                 routeTemplate: "api/{controller}"
             );
+            //response JSON format
+            config.Formatters.XmlFormatter.SupportedMediaTypes.Clear();
+            config.Formatters.JsonFormatter.SerializerSettings.Formatting = Formatting.Indented;
         }
     }
 }

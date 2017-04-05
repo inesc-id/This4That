@@ -55,6 +55,7 @@ namespace This4That_serverNode
             repository = null;
             int port;
             string serverMgrURL;
+            string repositoryURL;
             XmlNode xmlNode;
             try
             {
@@ -78,7 +79,14 @@ namespace This4That_serverNode
                     int.TryParse(xmlNode.Attributes["port"].Value, out port);
                     taskCreator = new TaskCreator(xmlNode.Attributes["hostName"].Value, port, Global.TASK_CREATOR_NAME);
                     if (!taskCreator.StartConnectRemoteIntance(serverMgrURL))
-                        return false;    
+                        return false;
+                    //get url to repository
+                    xmlNode = xmlDoc.GetElementsByTagName(Global.REPOSITORY_NAME)[0];
+                    if (xmlNode != null)
+                    {
+                        repositoryURL = $"tcp://{xmlNode.Attributes["hostName"].Value}:{xmlNode.Attributes["port"].Value}/{Global.REPOSITORY_NAME}";
+                        taskCreator.ConnectToRepository(repositoryURL);
+                    }
                 }
                 xmlNode = xmlDoc.GetElementsByTagName(Global.TASK_DISTRIBUTOR_NAME)[0];
                 if (xmlNode != null)
@@ -101,8 +109,16 @@ namespace This4That_serverNode
                 {
                     int.TryParse(xmlNode.Attributes["port"].Value, out port);
                     incentiveEngine = new IncentiveEngine(xmlNode.Attributes["hostName"].Value, port, Global.INCENTIVE_ENGINE_NAME);
+                    //connect to server manager
                     if (!incentiveEngine.StartConnectRemoteIntance(serverMgrURL))
                         return false;
+                    //get url to repository
+                    xmlNode = xmlDoc.GetElementsByTagName(Global.REPOSITORY_NAME)[0];
+                    if (xmlNode != null)
+                    {
+                        repositoryURL = $"tcp://{xmlNode.Attributes["hostName"].Value}:{xmlNode.Attributes["port"].Value}/{Global.REPOSITORY_NAME}";
+                        incentiveEngine.ConnectToRepository(repositoryURL);
+                    }
                 }
                 xmlNode = xmlDoc.GetElementsByTagName(Global.REPOSITORY_NAME)[0];
                 if (xmlNode != null)

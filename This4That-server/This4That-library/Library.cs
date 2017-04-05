@@ -11,7 +11,7 @@ namespace This4That_library
 {
     public class Library
     {
-        private static bool GetTaskFromPostBody(string postBody, out JSONTaskDTO csTask, ref string errorMessage)
+        private static bool GetTaskFromPostBody(string postBody, out TaskPayCreationDTO csTask, ref string errorMessage)
         {
             csTask = null;
 
@@ -19,7 +19,7 @@ namespace This4That_library
             {
                 if (String.IsNullOrEmpty(postBody))
                     return false;
-                csTask = JsonConvert.DeserializeObject<JSONTaskDTO>(postBody);
+                csTask = JsonConvert.DeserializeObject<TaskPayCreationDTO>(postBody);
                 return true;
             }
             catch (Exception)
@@ -45,7 +45,7 @@ namespace This4That_library
             
         }
 
-        public static bool GetCSTaskFromRequest(HttpRequest request, out JSONTaskDTO csTask, ref string errorMessage)
+        public static bool GetCSTaskFromRequest(HttpRequest request, out TaskPayCreationDTO csTask, ref string errorMessage)
         {
             string postBody;
             csTask = null;

@@ -5,7 +5,6 @@ namespace This4That_library.Models.Integration
     public abstract class JSONRequestDTO
     {
         private string userID;
-        private string transactionID;
 
         [JsonProperty(PropertyName = "userId")]
         public string UserID
@@ -21,18 +20,5 @@ namespace This4That_library.Models.Integration
             }
         }
 
-        [JsonProperty(PropertyName = "transactionId")]
-        public string TransactionID
-        {
-            get
-            {
-                return transactionID;
-            }
-
-            set
-            {
-                transactionID = value;
-            }
-        }
     }
 }

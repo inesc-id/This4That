@@ -23,27 +23,28 @@ public class ServerAPI {
 
     private final String CALCTASK = "task/cost";
     private final String CREATETASK = "task";
+    private String GETTOPICS = "topic/";
 
-    public ServerAPI(String serverURL, String userId){
+    public ServerAPI(String serverURL, String userId) {
         this.serverURL = serverURL;
         this.userId = userId;
     }
 
-    public boolean CalcTaskCostAPI(CSTask task, Context ctx){
+    public boolean CalcTaskCostAPI(CSTask task, Context ctx) {
 
         HttpClient clientHttp;
         String postBody;
         HashMap<String, Object> postParams = new HashMap<>();
-        try{
+        try {
             clientHttp = new HttpClient(ctx);
             postParams.put("userId", userId);
             postParams.put("transactionId", null);
             postParams.put("task", task.toHashMap());
             postBody = HttpClient.convertToJSON(postParams).toString();
             clientHttp.postJSON(serverURL + CALCTASK, postBody);
-            return  true;
+            return true;
 
-        }catch (Exception ex){
+        } catch (Exception ex) {
             Log.d(TAG, ex.getMessage());
             return false;
         }
@@ -54,18 +55,33 @@ public class ServerAPI {
         HttpClient clientHttp;
         String postBody;
         HashMap<String, Object> postParams = new HashMap<>();
-        try{
+        try {
             clientHttp = new HttpClient(ctx);
             postParams.put("userId", userId);
             postParams.put("transactionId", "12345");
             postParams.put("task", csTask.toHashMap());
             postBody = HttpClient.convertToJSON(postParams).toString();
             clientHttp.postJSON(serverURL + CREATETASK, postBody);
-            return  true;
+            return true;
 
-        }catch (Exception ex){
+        } catch (Exception ex) {
             Log.d(TAG, ex.getMessage());
             return false;
         }
     }
+
+    public String GetTopics(Context ctx) {
+
+        HttpClient clientHttp;
+
+        try {
+            clientHttp = new HttpClient(ctx);
+            return clientHttp.getRequestFromServer(serverURL + GETTOPICS);
+        } catch (Exception ex) {
+            Log.d(TAG, ex.getMessage());
+            return  null;
+        }
+    }
+
+
 }

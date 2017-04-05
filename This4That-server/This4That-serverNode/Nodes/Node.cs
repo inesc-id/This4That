@@ -3,6 +3,7 @@ using System;
 using System.Runtime.Remoting;
 using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Tcp;
+using System.Runtime.Remoting.Lifetime;
 using System.Xml;
 using This4That_library;
 
@@ -88,6 +89,20 @@ namespace This4That_serverNode.Nodes
             this.HostName = hostName;
             this.Port = port;
             this.Name = name;
+
+        }
+
+        public override Object InitializeLifetimeService()
+        {
+            ILease lease = (ILease)base.InitializeLifetimeService();
+
+            // Normally, the initial lease time would be much longer.
+            // It is shortened here for demonstration purposes.
+            if (lease.CurrentState == LeaseState.Initial)
+            {
+                lease.InitialLeaseTime = TimeSpan.FromSeconds(0);
+            }
+            return lease;
         }
 
         /// <summary>

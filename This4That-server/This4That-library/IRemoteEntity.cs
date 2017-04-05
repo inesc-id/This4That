@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using This4That_library.Models.Domain;
+using This4That_serverNode.IncentiveModels;
 
 namespace This4That_library
 {
@@ -39,12 +40,16 @@ namespace This4That_library
 
     public interface IIncentiveEngine : IRemoteEntity
     {
-        bool CalcTaskCost(CSTask taskSpec, out object incentiveValue);
-        bool IsTaskPaid(string transactionId);
+        bool CalcTaskCost(CSTask taskSpec, string userID, out object incentiveValue, out string txID);
+        bool PayTask(string refToPay, out string transactionId);
     }
 
     public interface IRepository : IRemoteEntity
     {
         bool AuthenticateUser(string userID);
+        bool GetUserIncentiveMechanism(string userID, out IncentiveSchemeBase incentiveScheme);
+        bool SaveTopics(string topic, string channelKey);
+        Topic GetTopic(string topicName);
+        List<Topic> GetTopics();
     }
 }
