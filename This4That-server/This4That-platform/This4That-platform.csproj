@@ -89,7 +89,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Config\configInstances.xml" />
+    <Content Include="Config\configInstances.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -97,6 +99,7 @@
     <Content Include="Web.config" />
     <None Include="Config\configInstances.xsd">
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Properties\PublishProfiles\This4ThatIIS.pubxml" />
     <None Include="Web.Debug.config">
@@ -108,7 +111,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config\App_Start\WebApiConfig.cs" />
-    <Compile Include="Domain\APIResponse.cs" />
     <Compile Include="Handlers\APIRequestHandler.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -135,6 +137,9 @@
       <Name>This4That-library</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Domain\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -150,7 +155,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>58949</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://192.168.1.101:58949/</IISUrl>
+          <IISUrl>http://192.168.42.102:58949/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

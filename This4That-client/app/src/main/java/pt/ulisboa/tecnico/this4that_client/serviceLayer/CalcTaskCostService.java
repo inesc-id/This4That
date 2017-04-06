@@ -46,12 +46,15 @@ public class CalcTaskCostService extends AsyncTask<String,Integer, String>{
         Gson gson = new Gson();
         MainActivity activity;
         TaskCostResponseDTO taskCostResponseDTO;
-        if (ex != null && ex instanceof SocketTimeoutException)
+        if (ex != null && ex instanceof SocketTimeoutException){
             Toast.makeText(context, "Cannot connect to server!", Toast.LENGTH_LONG).show();
-
+            return;
+        }
+        if (result == null){
+            Toast.makeText(context, "Cannot calculate Task Cost!", Toast.LENGTH_LONG).show();
+            return;
+        }
         taskCostResponseDTO = gson.fromJson(result, TaskCostResponseDTO.class);
-        //Toast.makeText(context, "Task Reference: " + taskCostResponseDTO.getResponse().getRefToPay() +
-        //                        "\nTask Value: " + taskCostResponseDTO.getResponse().getValToPay(), Toast.LENGTH_LONG).show();
         activity = (MainActivity) context;
         activity.getTxtRefToPay().setText(taskCostResponseDTO.getResponse().getRefToPay());
         activity.getTxtValToPay().setText(taskCostResponseDTO.getResponse().getValToPay());

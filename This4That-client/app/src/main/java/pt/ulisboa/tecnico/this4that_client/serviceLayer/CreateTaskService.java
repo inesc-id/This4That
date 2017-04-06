@@ -48,12 +48,17 @@ public class CreateTaskService extends AsyncTask<String,Integer, String> {
         CreateTaskResponseDTO createTaskResponse;
         MainActivity activity;
 
-        if (ex != null && ex instanceof SocketTimeoutException)
+        if (ex != null && ex instanceof SocketTimeoutException){
             Toast.makeText(context, "Cannot connect to server!", Toast.LENGTH_LONG).show();
-
+            return;
+        }
+        if (result == null){
+            Toast.makeText(context, "Cannot Create Task!", Toast.LENGTH_LONG).show();
+            return;
+        }
         createTaskResponse = gson.fromJson(result, CreateTaskResponseDTO.class);
-        //Toast.makeText(context, "Task ID: " + createTaskResponse.getResponse().getTaskId(), Toast.LENGTH_LONG).show();
         activity = (MainActivity) context;
         activity.getTxtTaskID().setText(createTaskResponse.getResponse().getTaskId());
+        activity.getTxtTxID().setText(createTaskResponse.getResponse().getTransactionId());
     }
 }

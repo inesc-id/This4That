@@ -366,3 +366,59 @@
  [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
 2017-04-05 22:18:54,091 DEBUG ConnectToRepository 67 
  [Debug Message] - [INFO-Task Distributor] Connected to Repository.
+2017-04-06 09:20:37,783 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [192.168.42.102] Port: [5002]
+2017-04-06 09:20:37,788 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [TaskDistributor] IS RUNNING!
+2017-04-06 09:20:37,810 DEBUG ConnectServerManager 48 
+ [Debug Message] - ServerManager: [tcp://192.168.42.102:5000/ServerManager]
+2017-04-06 09:20:37,819 DEBUG ConnectToRepository 67 
+ [Debug Message] - [INFO-Task Distributor] Connected to Repository.
+2017-04-06 09:42:22,954 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [192.168.42.102] Port: [5002]
+2017-04-06 09:42:22,962 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [TaskDistributor] IS RUNNING!
+2017-04-06 09:42:22,980 DEBUG ConnectServerManager 48 
+ [Debug Message] - ServerManager: [tcp://192.168.42.102:5000/ServerManager]
+2017-04-06 09:42:22,993 DEBUG ConnectToRepository 67 
+ [Debug Message] - [INFO-Task Distributor] Connected to Repository.
+2017-04-06 09:47:12,287 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [192.168.42.102] Port: [5002]
+2017-04-06 09:47:12,298 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [TaskDistributor] IS RUNNING!
+2017-04-06 09:47:12,318 DEBUG ConnectServerManager 48 
+ [Debug Message] - ServerManager: [tcp://192.168.42.102:5000/ServerManager]
+2017-04-06 09:47:12,335 DEBUG ConnectToRepository 67 
+ [Debug Message] - [INFO-Task Distributor] Connected to Repository.
+2017-04-06 09:55:33,727 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [192.168.42.102] Port: [5002]
+2017-04-06 09:55:33,745 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [TaskDistributor] IS RUNNING!
+2017-04-06 09:55:33,855 DEBUG ConnectServerManager 48 
+ [Debug Message] - ServerManager: [tcp://192.168.42.102:5000/ServerManager]
+2017-04-06 09:55:33,867 DEBUG ConnectToRepository 67 
+ [Debug Message] - [INFO-Task Distributor] Connected to Repository.
+2017-04-06 10:03:45,068 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [192.168.42.102] Port: [5002]
+2017-04-06 10:03:45,075 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [TaskDistributor] IS RUNNING!
+2017-04-06 10:03:45,094 DEBUG ConnectServerManager 48 
+ [Debug Message] - ServerManager: [tcp://192.168.42.102:5000/ServerManager]
+2017-04-06 10:03:45,106 DEBUG ConnectToRepository 67 
+ [Debug Message] - [INFO-Task Distributor] Connected to Repository.
+2017-04-06 10:14:59,932 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [192.168.42.102] Port: [5002]
+2017-04-06 10:14:59,938 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [TaskDistributor] IS RUNNING!
+2017-04-06 10:14:59,952 DEBUG ConnectServerManager 48 
+ [Debug Message] - ServerManager: [tcp://192.168.42.102:5000/ServerManager]
+2017-04-06 10:14:59,960 DEBUG ConnectToRepository 67 
+ [Debug Message] - [INFO-Task Distributor] Connected to Repository.
+2017-04-06 10:36:59,046 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [192.168.42.102] Port: [5002]
+2017-04-06 10:36:59,055 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [TaskDistributor] IS RUNNING!
+2017-04-06 10:36:59,070 DEBUG ConnectServerManager 48 
+ [Debug Message] - ServerManager: [tcp://192.168.42.102:5000/ServerManager]
+2017-04-06 10:36:59,077 DEBUG ConnectToRepository 67 
+ [Debug Message] - [INFO-Task Distributor] Connected to Repository.

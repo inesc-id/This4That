@@ -24,3 +24,5 @@ C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\T
 C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-serverNode\bin\Debug\log4net.xml
 C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-serverNode\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-serverNode\obj\Debug\This4That-serverNode.csprojResolveAssemblyReference.cache
+C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-serverNode\bin\Debug\Config\configInstances.xml
+C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-serverNode\bin\Debug\Config\configInstances.xsd

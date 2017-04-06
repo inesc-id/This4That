@@ -2,7 +2,7 @@
 using System.Net;
 using System.Web;
 using System.Web.Http;
-using This4That_platform.Domain;
+using This4That_platform.Integration;
 using This4That_platform.Handlers;
 
 namespace This4That_platform.ServiceLayer
@@ -16,7 +16,7 @@ namespace This4That_platform.ServiceLayer
         {
             ServerManager serverMgr = null;
             APIRequestHandler handler = null;
-            APIResponse response = new APIResponse();
+            APIResponseDTO response = new APIResponseDTO();
             try
             {
 
@@ -32,7 +32,7 @@ namespace This4That_platform.ServiceLayer
             catch (Exception ex)
             {
                 Global.Log.Error(ex.Message);
-                response.SetResponse("Cannot calculate the task cost. Please try again!", APIResponse.RESULT_TYPE.ERROR);
+                response.SetResponse("Cannot calculate the task cost. Please try again!", APIResponseDTO.RESULT_TYPE.ERROR);
                 return Content(HttpStatusCode.InternalServerError, response);
             }
         }
@@ -43,7 +43,7 @@ namespace This4That_platform.ServiceLayer
         {
             ServerManager serverMgr = null;
             APIRequestHandler handler = null;
-            APIResponse response = new APIResponse();
+            APIResponseDTO response = new APIResponseDTO();
             
             try
             {
@@ -58,7 +58,7 @@ namespace This4That_platform.ServiceLayer
             catch (Exception ex)
             {
                 Global.Log.Error(ex.Message);
-                response.SetResponse("Cannot pay and create the crowd-sensing task. Please try again!", APIResponse.RESULT_TYPE.ERROR);
+                response.SetResponse("Cannot pay and create the crowd-sensing task. Please try again!", APIResponseDTO.RESULT_TYPE.ERROR);
                 return Content(HttpStatusCode.InternalServerError, response);
             }
         }
@@ -69,7 +69,7 @@ namespace This4That_platform.ServiceLayer
         {
             ServerManager serverMgr = null;
             APIRequestHandler handler = null;
-            APIResponse response = new APIResponse();
+            APIResponseDTO response = new APIResponseDTO();
 
             try
             {
@@ -84,24 +84,24 @@ namespace This4That_platform.ServiceLayer
             catch (Exception ex)
             {
                 Global.Log.Error(ex.Message);
-                response.SetResponse("Cannot obtain topics from server. Please try again!", APIResponse.RESULT_TYPE.ERROR);
+                response.SetResponse("Cannot obtain topics from server. Please try again!", APIResponseDTO.RESULT_TYPE.ERROR);
                 return Content(HttpStatusCode.InternalServerError, response);
             }
         }
 
         [HttpGet]
         [Route("topic/{topicName}")]
-        public IHttpActionResult GetTopics(string topicName)
+        public IHttpActionResult GetTasksByTopic(string topicName)
         {
             ServerManager serverMgr = null;
             APIRequestHandler handler = null;
-            APIResponse response = new APIResponse();
+            APIResponseDTO response = new APIResponseDTO();
 
             try
             {
                 serverMgr = Global.GetCreateServerManager(HttpContext.Current.Server);
                 handler = new APIRequestHandler(HttpContext.Current.Request, serverMgr);
-                if (!handler.GetTopicByName(topicName, out response))
+                if (!handler.GetTasksByTopicName(topicName, out response))
                 {
                     return Content(HttpStatusCode.InternalServerError, response);
                 }
@@ -110,7 +110,7 @@ namespace This4That_platform.ServiceLayer
             catch (Exception ex)
             {
                 Global.Log.Error(ex.Message);
-                response.SetResponse("Cannot obtain topic from server. Please try again!", APIResponse.RESULT_TYPE.ERROR);
+                response.SetResponse("Cannot obtain topic from server. Please try again!", APIResponseDTO.RESULT_TYPE.ERROR);
                 return Content(HttpStatusCode.InternalServerError, response);
             }
         }

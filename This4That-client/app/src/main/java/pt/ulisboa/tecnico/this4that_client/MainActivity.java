@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity
     private TextView txtRefToPay;
     private TextView txtValToPay;
     private TextView txtTaskID;
+    private TextView txtTxID;
     private ServerAPI serverAPI;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity
         txtRefToPay = (TextView) findViewById(R.id.txtRefToPayFill);
         txtValToPay = (TextView) findViewById(R.id.txtValToPayFill);
         txtTaskID = (TextView) findViewById(R.id.txtTaskIDFill);
+        txtTxID = (TextView) findViewById(R.id.txtTxFill);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -68,7 +70,7 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        serverAPI = new ServerAPI("http://192.168.1.101:58949/api/", "1234");
+        serverAPI = new ServerAPI("http://192.168.42.102:58949/api/", "1234");
 
 
         btnCalcTaskCost.setOnClickListener(new View.OnClickListener() {
@@ -198,5 +200,9 @@ public class MainActivity extends AppCompatActivity
 
     public void setTxtTaskID(TextView txtTaskID) {
         this.txtTaskID = txtTaskID;
+    }
+
+    public TextView getTxtTxID() {
+        return txtTxID;
     }
 }

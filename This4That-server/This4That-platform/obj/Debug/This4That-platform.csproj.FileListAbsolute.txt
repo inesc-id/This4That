@@ -140,3 +140,5 @@ C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\T
 C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-platform\obj\Debug\This4That-platform.pdb
 C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-platform\obj\Debug\This4That_platform.Properties.Resources.resources
 C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-platform\obj\Debug\This4That-platform.csproj.GenerateResource.Cache
+C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-platform\bin\Config\configInstances.xml
+C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-platform\bin\Config\configInstances.xsd

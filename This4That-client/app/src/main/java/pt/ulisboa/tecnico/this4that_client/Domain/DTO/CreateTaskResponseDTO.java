@@ -19,9 +19,14 @@ public class CreateTaskResponseDTO {
     //nested class
     public class CreateTaskResponse{
         private String taskId;
+        private String transactionId;
 
         public String getTaskId() {
             return taskId;
+        }
+
+        public String getTransactionId() {
+            return transactionId;
         }
     }
 }

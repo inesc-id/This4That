@@ -81,6 +81,22 @@
         android:layout_toEndOf="@+id/txtValToPay"
         android:text="" />
 
+    <TextView
+        android:id="@+id/txtTxID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtTaskID"
+        android:layout_marginTop="15dp"
+        android:text="Tx ID : " />
+
+    <TextView
+        android:id="@+id/txtTxFill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtTaskIDFill"
+        android:layout_alignTop="@+id/txtTxID"
+        android:text="" />
 
 </android.widget.RelativeLayout>
 

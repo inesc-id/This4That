@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using This4That_library;
-using This4That_library.Models.Domain;
-using This4That_library.Models.Integration;
-using This4That_platform.Domain;
+using This4That_library.Models.Integration.CalcTaskCostDTO;
+using This4That_library.Models.Integration.TaskPayDTO;
+using This4That_platform.Integration;
 using This4That_platform.Properties;
 
 namespace This4That_platform.Handlers
@@ -27,13 +26,14 @@ namespace This4That_platform.Handlers
         /// </summary>
         /// <param name="response"></param>
         /// <returns></returns>
-        public bool CalcCostCSTask(out APIResponse response)
+        public bool CalcCostCSTask(out APIResponseDTO response)
         {
             object incentiveValue = null;
             string refToPay = null;
             TaskPayCreationDTO csTask;
-            Dictionary<string, object> taskCost;
-            response = new APIResponse();
+            CalcTaskCostResponseDTO calcCostDTO = new CalcTaskCostResponseDTO();
+
+            response = new APIResponseDTO();
 
             try
             {
@@ -41,18 +41,19 @@ namespace This4That_platform.Handlers
                 if (!GetCrowdSensingTask(out csTask))
                 {
                     response.SetResponse(new Dictionary<string, string>() { { "errorMessage", "Invalid Request please try again!" } }
-                                        , APIResponse.RESULT_TYPE.ERROR);
+                                        , APIResponseDTO.RESULT_TYPE.ERROR);
                     return false;
                 }                    
                 if (!serverMgr.RemoteIncentiveEngine.CalcTaskCost(csTask.Task, csTask.UserID, out incentiveValue, out refToPay) 
                     || incentiveValue == null)
                 {
                     response.SetResponse(new Dictionary<string, string>() { { "errorMessage", "Cannot calculate the task cost. Please try again!" } }
-                                        , APIResponse.RESULT_TYPE.ERROR);
+                                        , APIResponseDTO.RESULT_TYPE.ERROR);
                     return false;
                 }
-                taskCost = new Dictionary<string, object>() { { "refToPay", refToPay }, { "valToPay", incentiveValue.ToString() } };
-                response.SetResponse(taskCost, APIResponse.RESULT_TYPE.SUCCESS);
+                calcCostDTO.RefToPay = refToPay;
+                calcCostDTO.ValToPay = incentiveValue.ToString();
+                response.SetResponse(calcCostDTO, APIResponseDTO.RESULT_TYPE.SUCCESS);
                 Global.Log.DebugFormat("User ID: [{0}] has to Pay [{1}] to Reference: [{2}]", csTask.UserID, incentiveValue.ToString(), refToPay);
                 return true;
             }
@@ -60,25 +61,25 @@ namespace This4That_platform.Handlers
             {
                 Global.Log.Error(ex.Message);
                 response.SetResponse(new Dictionary<string, string>() { { "errorMessage", "Cannot calculate the task cost. Please try again!" } }
-                                    , APIResponse.RESULT_TYPE.ERROR);
+                                    , APIResponseDTO.RESULT_TYPE.ERROR);
                 return false;
             }
         }
 
-        public bool GetTopics(out APIResponse response)
+        public bool GetTopics(out APIResponseDTO response)
         {
-            response = new APIResponse();
+            response = new APIResponseDTO();
             try
             {
                 response.SetResponse(new Dictionary<string, object>() {
                                     { "topics", serverMgr.RemoteTaskDistributor.GetTopics() } }
-                                    , APIResponse.RESULT_TYPE.SUCCESS);
+                                    , APIResponseDTO.RESULT_TYPE.SUCCESS);
                 return true;
             }
             catch (Exception ex)
             {
                 Global.Log.Error(ex.Message);
-                response.SetResponse("Cannot obtain topics from server. Please try again!", APIResponse.RESULT_TYPE.ERROR);
+                response.SetResponse("Cannot obtain topics from server. Please try again!", APIResponseDTO.RESULT_TYPE.ERROR);
                 return false;
             }
         }
@@ -88,41 +89,44 @@ namespace This4That_platform.Handlers
         /// </summary>
         /// <param name="response"></param>
         /// <returns></returns>
-        public bool PayCreateCSTask(out APIResponse response)
+        public bool PayCreateCSTask(out APIResponseDTO response)
         {
             string txId = null;
             string taskId = null;
             TaskPayCreationDTO csTask = null;
-            response = new APIResponse();
+            TaskPayResponseDTO payResponse = new TaskPayResponseDTO();
+            response = new APIResponseDTO();
             try
             {
                 //get the DTO containing the userID, refToPay and task meta-info
                 if (!GetCrowdSensingTask(out csTask))
                 {
                     response.SetResponse(new Dictionary<string, string>() { { "errorMessage", "Invalid Request please try again!" } }
-                    , APIResponse.RESULT_TYPE.ERROR);
+                    , APIResponseDTO.RESULT_TYPE.ERROR);
                     return false;
                 }
                 //try to pay the task
                 if (!PayCSTask(out txId, csTask.RefToPay))
                 {
                     response.SetResponse(new Dictionary<string, string>() { { "errorMessage", "Cannot perform the payment!" } }
-                    , APIResponse.RESULT_TYPE.ERROR);
+                    , APIResponseDTO.RESULT_TYPE.ERROR);
                     return false;
                 }
                 if (txId.Equals(Resources.InsufficientFunds))
                 {
                     response.SetResponse(new Dictionary<string, string>() { { "errorMessage", "Insufficient Credits!" } }
-                                        , APIResponse.RESULT_TYPE.ERROR);
+                                        , APIResponseDTO.RESULT_TYPE.ERROR);
                     return true;
                 }
                 if (!CreateCSTask(out taskId, csTask))
                 {
                     response.SetResponse(new Dictionary<string, string>() { { "errorMessage", "Cannot create the crowd-sensing task, please try again!" } }
-                    , APIResponse.RESULT_TYPE.ERROR);
+                    , APIResponseDTO.RESULT_TYPE.ERROR);
                     return false;
                 }
-                response.SetResponse(new Dictionary<string, string>() { { "taskId", taskId } }, APIResponse.RESULT_TYPE.SUCCESS);
+                payResponse.TaskID = taskId;
+                payResponse.TransactionID = txId;
+                response.SetResponse(payResponse, APIResponseDTO.RESULT_TYPE.SUCCESS);
                 return true;
             }
             catch (Exception ex)
@@ -133,35 +137,29 @@ namespace This4That_platform.Handlers
 
         }
 
-        public bool GetTopicByName(string topicName, out APIResponse response)
+        public bool GetTasksByTopicName(string topicName, out APIResponseDTO response)
         {
-            response = new APIResponse();
+            response = new APIResponseDTO();
             try
             {
                 response.SetResponse(new Dictionary<string, object>() {
                                     { "topic", serverMgr.RemoteTaskDistributor.GetTopic(topicName) } }
-                                    , APIResponse.RESULT_TYPE.SUCCESS);
+                                    , APIResponseDTO.RESULT_TYPE.SUCCESS);
                 return true;
             }
             catch (Exception ex)
             {
                 Global.Log.Error(ex.Message);
-                response.SetResponse("Cannot obtain topic from server. Please try again!", APIResponse.RESULT_TYPE.ERROR);
+                response.SetResponse("Cannot obtain topic from server. Please try again!", APIResponseDTO.RESULT_TYPE.ERROR);
                 return false;
             }
         }
 
         public bool ReportResultsCSTask()
         {
-            string errorMessage = null;
-            string jsonBody;
+            string jsonBody = null;
             try
             {
-                if (!Library.GetEncryptedReport(request, out jsonBody, null, ref errorMessage))
-                {
-                    Global.Log.Error(errorMessage);
-                    return false;
-                }
                 if (!serverMgr.RemoteReportAggregator.CreateReport(jsonBody))
                 {
                     Global.Log.Error("Cannot generate Report from user results!");

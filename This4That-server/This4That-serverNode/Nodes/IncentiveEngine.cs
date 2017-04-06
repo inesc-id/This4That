@@ -127,7 +127,7 @@ namespace This4That_serverNode.Nodes
             reftoPay = null;
             try
             {
-                Console.WriteLine("New Request from User: " + userID);
+                Console.WriteLine("[INFO-Incentive engine] - Calc Task Cost for User: " + userID);
                 if (!GetUserIncentiveScheme(userID, out incentiveScheme))
                 {
                     Log.Error("Cannot obtain User incentive scheme!");

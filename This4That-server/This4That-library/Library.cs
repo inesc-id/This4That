@@ -1,10 +1,10 @@
 ﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System;
 using System.IO;
+using System.Net;
+using System.Text;
 using System.Web;
-using This4That_library.Models.Domain;
-using This4That_library.Models.Integration;
+using This4That_library.Models.Integration.TaskPayDTO;
 using This4That_library.Properties;
 
 namespace This4That_library
@@ -71,10 +71,29 @@ namespace This4That_library
             }
         }
 
-        public static bool GetEncryptedReport(HttpRequest request, out string encryptedTask, object serverMgrKey, ref string errorMessage)
+        public static string makeHttpJSONRequest(string url, string postBody)
         {
-            encryptedTask = null;
-            return true;
+            try
+            {
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
+                httpWebRequest.Method = "POST";
+                httpWebRequest.ContentType = "application/json";
+                httpWebRequest.ContentLength = Encoding.UTF8.GetBytes(postBody).Length;
+
+                using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+                {
+                    streamWriter.Write(postBody);
+                }
+                HttpWebResponse httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                {
+                    return streamReader.ReadToEnd();
+                }
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
     }
     

@@ -20,7 +20,7 @@ import static android.content.ContentValues.TAG;
 
 public class HttpClient {
 
-    public static String makePOSTRequest(String postBody, String endpointURL) {
+    public static String makePOSTRequest(String postBody, String endpointURL) throws Exception {
         URL url;
         HttpURLConnection connection = null;
         DataOutputStream outStream;
@@ -57,14 +57,14 @@ public class HttpClient {
             return response.toString();
         } catch (Exception ex) {
             Log.d(TAG, "makePOSTRequest: " + ex.getMessage());
-            return null;
+            throw ex;
         } finally {
             if (connection != null)
                 connection.disconnect();
         }
     }
 
-    public static String makeGETRequest(String endpointURL) {
+    public static String makeGETRequest(String endpointURL) throws Exception {
         URL url;
         HttpURLConnection connection = null;
         InputStream inStream;
@@ -93,7 +93,7 @@ public class HttpClient {
             return response.toString();
         } catch (Exception ex) {
             Log.d(TAG, "makeGETRequest: " + ex.getMessage());
-            return null;
+            throw ex;
         } finally {
             if (connection != null)
                 connection.disconnect();

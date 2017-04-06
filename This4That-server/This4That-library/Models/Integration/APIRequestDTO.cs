@@ -2,7 +2,7 @@
 
 namespace This4That_library.Models.Integration
 {
-    public abstract class JSONRequestDTO
+    public abstract class APIRequestDTO
     {
         private string userID;
 

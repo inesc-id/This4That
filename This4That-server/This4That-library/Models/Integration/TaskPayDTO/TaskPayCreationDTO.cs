@@ -1,9 +1,9 @@
 ﻿using Newtonsoft.Json;
 using This4That_library.Models.Domain;
 
-namespace This4That_library.Models.Integration
+namespace This4That_library.Models.Integration.TaskPayDTO
 {
-    public class TaskPayCreationDTO : JSONRequestDTO
+    public class TaskPayCreationDTO : APIRequestDTO
     {
         private CSTask task;
         private string refToPay;

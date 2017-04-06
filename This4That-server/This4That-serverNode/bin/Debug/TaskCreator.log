@@ -694,3 +694,59 @@ as recusou activamente 127.0.0.1:5000
  [Debug Message] - ServerManager: [tcp://localhost:5000/ServerManager]
 2017-04-05 22:18:54,054 DEBUG ConnectToRepository 69 
  [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-06 09:20:37,742 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [192.168.42.102] Port: [5001]
+2017-04-06 09:20:37,752 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-06 09:20:37,767 DEBUG ConnectServerManager 50 
+ [Debug Message] - ServerManager: [tcp://192.168.42.102:5000/ServerManager]
+2017-04-06 09:20:37,776 DEBUG ConnectToRepository 69 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-06 09:42:22,911 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [192.168.42.102] Port: [5001]
+2017-04-06 09:42:22,917 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-06 09:42:22,936 DEBUG ConnectServerManager 50 
+ [Debug Message] - ServerManager: [tcp://192.168.42.102:5000/ServerManager]
+2017-04-06 09:42:22,947 DEBUG ConnectToRepository 69 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-06 09:47:12,247 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [192.168.42.102] Port: [5001]
+2017-04-06 09:47:12,255 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-06 09:47:12,273 DEBUG ConnectServerManager 50 
+ [Debug Message] - ServerManager: [tcp://192.168.42.102:5000/ServerManager]
+2017-04-06 09:47:12,281 DEBUG ConnectToRepository 69 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-06 09:55:33,636 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [192.168.42.102] Port: [5001]
+2017-04-06 09:55:33,646 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-06 09:55:33,686 DEBUG ConnectServerManager 50 
+ [Debug Message] - ServerManager: [tcp://192.168.42.102:5000/ServerManager]
+2017-04-06 09:55:33,703 DEBUG ConnectToRepository 69 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-06 10:03:45,015 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [192.168.42.102] Port: [5001]
+2017-04-06 10:03:45,032 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-06 10:03:45,051 DEBUG ConnectServerManager 50 
+ [Debug Message] - ServerManager: [tcp://192.168.42.102:5000/ServerManager]
+2017-04-06 10:03:45,060 DEBUG ConnectToRepository 69 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-06 10:14:59,898 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [192.168.42.102] Port: [5001]
+2017-04-06 10:14:59,904 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-06 10:14:59,919 DEBUG ConnectServerManager 50 
+ [Debug Message] - ServerManager: [tcp://192.168.42.102:5000/ServerManager]
+2017-04-06 10:14:59,926 DEBUG ConnectToRepository 69 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
+2017-04-06 10:36:59,006 DEBUG StartConnectRemoteIntance 131 
+ [Debug Message] - Valid Hostname: [192.168.42.102] Port: [5001]
+2017-04-06 10:36:59,013 DEBUG StartConnectRemoteIntance 135 
+ [Debug Message] - Node: [TaskCreator] IS RUNNING!
+2017-04-06 10:36:59,029 DEBUG ConnectServerManager 50 
+ [Debug Message] - ServerManager: [tcp://192.168.42.102:5000/ServerManager]
+2017-04-06 10:36:59,037 DEBUG ConnectToRepository 69 
+ [Debug Message] - [INFO] Task Creator connected to Repository.
