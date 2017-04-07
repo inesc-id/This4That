@@ -1,9 +1,9 @@
 ﻿using Newtonsoft.Json;
 using This4That_library.Models.Domain;
 
-namespace This4That_library.Models.Integration.TaskPayDTO
+namespace This4That_library.Models.Integration.TaskPayCreateDTO
 {
-    public class TaskPayResponseDTO
+    public class TaskPayCreateResponseDTO
     {
         private string taskID;
         private string transactionID;

@@ -58,10 +58,11 @@
     <Compile Include="Models\IncentiveModels\CentralIncentiveScheme.cs" />
     <Compile Include="Models\IncentiveModels\IncentiveSchemeBase.cs" />
     <Compile Include="Models\Integration\APIResponseDTO.cs" />
-    <Compile Include="Models\Integration\CalcTaskCostDTO\CalcTaskCostRequest.cs" />
+    <Compile Include="Models\Integration\CalcTaskCostDTO\CalcTaskCostRequestDTO.cs" />
     <Compile Include="Models\Integration\CalcTaskCostDTO\CalcTaskCostResponseDTO.cs" />
-    <Compile Include="Models\Integration\TaskPayDTO\TaskPayResponseDTO.cs" />
-    <Compile Include="Models\Integration\TaskPayDTO\TaskPayCreationDTO.cs" />
+    <Compile Include="Models\Integration\GetTasksByTopicDTO\GetTasksDTO.cs" />
+    <Compile Include="Models\Integration\TaskPayCreateDTO\TaskPayCreateResponseDTO.cs" />
+    <Compile Include="Models\Integration\TaskPayCreateDTO\TaskPayCreateRequestDTO.cs" />
     <Compile Include="Models\Integration\APIRequestDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">

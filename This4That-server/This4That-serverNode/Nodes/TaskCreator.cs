@@ -80,13 +80,13 @@ namespace This4That_serverNode.Nodes
 
         #region REMOTE_INTERFACE
 
-        public bool CreateTask(CSTask task, out string taskID)
+        public bool CreateTask(CSTask task, string userID, out string taskID)
         {
             taskID = null;
             try
             {                
                 Console.WriteLine("[INFO-TaskCreator] - Going to create a new Task!");
-                if (!this.RemoteRepository.SaveTask(task, out taskID))
+                if (!this.RemoteRepository.RegisterTask(task, userID, out taskID))
                 {
                     Log.Error("Cannot save task on Repository!");
                     return false;

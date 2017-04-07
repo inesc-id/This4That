@@ -47,7 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\PendingPayment.cs" />
+    <Compile Include="Domain\User.cs" />
+    <Compile Include="Domain\UserStorage.cs" />
     <Compile Include="Nodes\Node.cs" />
     <Compile Include="Nodes\ReportAggregator.cs" />
     <Compile Include="Nodes\IncentiveEngine.cs" />

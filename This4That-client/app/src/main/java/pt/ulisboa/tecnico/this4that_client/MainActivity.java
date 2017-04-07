@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        serverAPI = new ServerAPI("http://192.168.42.102:58949/api/", "1234");
+        serverAPI = new ServerAPI("http://http://194.210.232.1:58949/api/", "1234");
 
 
         btnCalcTaskCost.setOnClickListener(new View.OnClickListener() {

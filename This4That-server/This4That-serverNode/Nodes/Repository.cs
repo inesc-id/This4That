@@ -5,6 +5,8 @@ using System.Linq;
 using System.Web;
 using This4That_library;
 using This4That_library.Models.Domain;
+using This4That_library.Models.Integration.GetTasksByTopicDTO;
+using This4That_serverNode.Domain;
 using This4That_serverNode.IncentiveModels;
 
 namespace This4That_serverNode.Nodes
@@ -13,6 +15,7 @@ namespace This4That_serverNode.Nodes
     {
         private Dictionary<string, Topic> colTopics = new Dictionary<string, Topic>();
         private Dictionary<string, CSTask> colTasks = new Dictionary<string, CSTask>();
+        private UserStorage userStorage = new UserStorage();
 
         public Dictionary<string, Topic> ColTopics
         {
@@ -26,7 +29,6 @@ namespace This4That_serverNode.Nodes
                 colTopics = value;
             }
         }
-
         public Dictionary<string, CSTask> ColTasks
         {
             get
@@ -37,6 +39,18 @@ namespace This4That_serverNode.Nodes
             set
             {
                 colTasks = value;
+            }
+        }
+        public UserStorage UserStorage
+        {
+            get
+            {
+                return userStorage;
+            }
+
+            set
+            {
+                userStorage = value;
             }
         }
 
@@ -74,21 +88,8 @@ namespace This4That_serverNode.Nodes
             }
         }
 
-        
-        
-        #region REMOTE_INTERFACE
-        public bool AuthenticateUser(string userID)
-        {
-            return true;
-        }
-
-        public bool GetUserIncentiveMechanism(string userID, out IncentiveSchemeBase incentiveScheme)
-        {
-           incentiveScheme = new CentralIncentiveScheme();
-           return true;
-        }
-
-        public bool SaveTask(CSTask task, out string taskID)
+        #region PRIVATE_METHODS
+        private bool SaveTask(CSTask task, out string taskID)
         {
             taskID = null;
             Topic topic;
@@ -127,24 +128,116 @@ namespace This4That_serverNode.Nodes
             {
                 Log.Error(ex.Message);
                 return false;
+            }
+        }
+
+        #endregion
+
+        #region REMOTE_INTERFACE
+        public bool AuthenticateUser(string userID)
+        {
+            return true;
+        }
+
+        public bool GetUserIncentiveMechanism(string userID, out IncentiveSchemeBase incentiveScheme)
+        {
+           incentiveScheme = new CentralIncentiveScheme();
+           return true;
+        }
+
+        public bool RegisterTask(CSTask task, string userID, out string taskID)
+        {
+            User user;
+            taskID = null;
+            try {
+
+                if (!SaveTask(task, out taskID))
+                    return false;
+                if (!UserStorage.Users.TryGetValue(userID, out user))
+                {
+                    Log.ErrorFormat("Invalid User ID: [{0}]", userID);
+                    return false;
+                }
+                user.ColTasks.Add(task);
+                return true;                            
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return false;
             }            
         }
 
-        public Topic GetTopicFromRepository(string topicName)
+        public bool GetTasksByTopicName(out List<GetTasksDTO> listTaskDTO, string topicName)
         {
-            foreach (Topic aux_topic in ColTopics.Values)
+            Topic topic;
+            GetTasksDTO taskDTO = null;
+            CSTask task;
+            listTaskDTO = null;
+
+            try
             {
-                if (aux_topic.Name.Equals(topicName))
+                if (!ColTopics.TryGetValue(topicName, out topic))
                 {
-                    return aux_topic;
+                    Log.ErrorFormat("Invalid Topic Name: [{0}]", topicName);
+                    return false;
                 }
+                listTaskDTO = new List<GetTasksDTO>();
+                foreach (string taskID in topic.ListOfTaskIDs)
+                {
+                    taskDTO = new GetTasksDTO();
+                    if (!ColTasks.TryGetValue(taskID, out task))
+                    {
+                        Log.ErrorFormat("TaskID: [{0}] already does not exist!. Going to remove from Topics.");
+                        topic.ListOfTaskIDs.Remove(taskID);
+                    }
+                    else
+                    {
+                        taskDTO.TaskID = task.TaskID;
+                        taskDTO.TaskName = task.Name;
+                        listTaskDTO.Add(taskDTO);
+                    }
+                }
+                return true;
             }
-            return null;
+            catch (Exception ex)
+            {
+                Log.Error(ex);
+                return false;
+            }
         }
 
-        public List<Topic> GetTopicsFromRepository()
+        public Dictionary<string, string> GetTopicsFromRepository()
         {
-            return ColTopics.Values.ToList();
+            Dictionary<string, string> topics = new Dictionary<string, string>();
+            try
+            {
+                foreach (Topic topic in ColTopics.Values)
+                {
+                    topics.Add("name", topic.Name);
+                }
+                return topics;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return null;
+            }
+        }
+
+        public string RegisterUser()
+        {
+            User user;
+            string userId = Guid.NewGuid().ToString();
+
+            while (UserStorage.Users.ContainsKey(userId))
+            {
+                userId = Guid.NewGuid().ToString();
+            }
+            user = new User();
+            user.UserID = userId;
+            UserStorage.Users.Add(userId, user);
+            return userId;
         }
 
         #endregion

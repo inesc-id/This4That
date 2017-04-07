@@ -13,21 +13,6 @@ namespace This4That_serverNode.Nodes
     {
         private IRepository repository = null;
 
-        private Dictionary<string, PendingPayment> pendingPayments = new Dictionary<string, PendingPayment>();
-
-        public Dictionary<string, PendingPayment> PendingPayments
-        {
-            get
-            {
-                return pendingPayments;
-            }
-
-            set
-            {
-                pendingPayments = value;
-            }
-        }
-
         public IRepository Repository
         {
             get
@@ -89,19 +74,6 @@ namespace This4That_serverNode.Nodes
             }
         }
 
-        private string GenerateReferenceToPay()
-        {
-            string guid = Guid.NewGuid().ToString();
-            lock (this)
-            {
-                while (PendingPayments.Keys.Contains(guid))
-                {
-                    guid = Guid.NewGuid().ToString();
-                }
-                return guid;
-            }
-        }
-
         private bool GetUserIncentiveScheme(string userID, out IncentiveSchemeBase incentiveScheme)
         {
             incentiveScheme = null;
@@ -119,12 +91,10 @@ namespace This4That_serverNode.Nodes
         }
 
         #region REMOTE_INTERFACE
-        public bool CalcTaskCost(CSTask taskSpec, string userID, out object incentiveValue, out string reftoPay)
+        public bool CalcTaskCost(CSTask taskSpec, string userID, out object incentiveValue)
         {
             IncentiveSchemeBase incentiveScheme;
-            PendingPayment payment;
             incentiveValue = null;
-            reftoPay = null;
             try
             {
                 Console.WriteLine("[INFO-Incentive engine] - Calc Task Cost for User: " + userID);
@@ -137,13 +107,7 @@ namespace This4That_serverNode.Nodes
                 {
                     Log.Error("Cannot calculate the incentive value!");
                     return false;
-                }
-                reftoPay = GenerateReferenceToPay();
-                payment = new PendingPayment(userID, reftoPay, incentiveValue);
-                lock (this)
-                {
-                    PendingPayments.Add(reftoPay, payment);
-                }                
+                }               
                 return true;
             }
             catch (Exception ex)
@@ -154,14 +118,12 @@ namespace This4That_serverNode.Nodes
             }
         }
 
-
         public bool PayTask(string refToPay, out string transactionId)
         {
             transactionId = null;
             try
             {
-                //pagar a task consoante o mecanismo de incentivos.
-                PendingPayments.Remove(refToPay);
+                //FIXME : Registar os incentivos com base no esquema de incentivo
                 transactionId = Guid.NewGuid().ToString();
                 return true;
             }

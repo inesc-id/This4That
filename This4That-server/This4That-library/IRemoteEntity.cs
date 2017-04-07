@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using This4That_library.Models.Domain;
+using This4That_library.Models.Integration.GetTasksByTopicDTO;
 using This4That_serverNode.IncentiveModels;
 
 namespace This4That_library
@@ -23,13 +24,13 @@ namespace This4That_library
 
     public interface ITaskCreator : IRemoteEntity
     {
-        bool CreateTask(CSTask task, out string taskID);
+        bool CreateTask(CSTask task, string userID, out string taskID);
     }
 
     public interface ITaskDistributor : IRemoteEntity
     {
-        Topic GetTopic(string topicName);
-        List<Topic> GetTopics();
+        List<GetTasksDTO> GetTasksByTopicName(string topicName);
+        Dictionary<string, string> GetTopics();
 
     }
 
@@ -41,16 +42,17 @@ namespace This4That_library
 
     public interface IIncentiveEngine : IRemoteEntity
     {
-        bool CalcTaskCost(CSTask taskSpec, string userID, out object incentiveValue, out string txID);
-        bool PayTask(string refToPay, out string transactionId);
+        bool CalcTaskCost(CSTask taskSpec, string userID, out object incentiveValue);
+        bool PayTask(string userId, out string transactionId);
     }
 
     public interface IRepository : IRemoteEntity
     {
         bool AuthenticateUser(string userID);
         bool GetUserIncentiveMechanism(string userID, out IncentiveSchemeBase incentiveScheme);
-        bool SaveTask(CSTask topic, out string taskID);
-        Topic GetTopicFromRepository(string topicName);
-        List<Topic> GetTopicsFromRepository();
+        bool RegisterTask(CSTask topic, string userID, out string taskID);
+        bool GetTasksByTopicName(out List<GetTasksDTO> listTaskDTO, string topicName);
+        Dictionary<string, string> GetTopicsFromRepository();
+        string RegisterUser();
     }
 }

@@ -6,7 +6,6 @@ using System.Threading;
 using System.Web;
 using System.Xml;
 using This4That_library;
-using This4That_platform.SecurityLayer;
 
 namespace This4That_platform
 {
@@ -17,7 +16,6 @@ namespace This4That_platform
         private IReportAggregator remoteReportAggregator;
         private IIncentiveEngine remoteIncentiveEngine;
         private IRepository remoteRepository;
-        private ServerAuthority srvAuth;
         private static string CONFIG_XML_PATH = @"~/Config/configInstances.xml";
         private static string CONFIG_XSD_PATH = @"~/Config/configInstances.xsd";
         private static string TARGETNAMESPACE = "This4ThatNS";
@@ -88,18 +86,6 @@ namespace This4That_platform
             }
         }
 
-        public ServerAuthority SrvAuth
-        {
-            get
-            {
-                return srvAuth;
-            }
-
-            set
-            {
-                srvAuth = value;
-            }
-        }
 
         #endregion
 
@@ -132,8 +118,6 @@ namespace This4That_platform
 
                 if (!RegisterServerManagerNode(xmlParser.XmlDoc))
                     return false;
-                //init Server Authority
-                this.SrvAuth = new ServerAuthority();
                 Global.Log.Debug("ServerManager LOADED!");
                 return true;
             }

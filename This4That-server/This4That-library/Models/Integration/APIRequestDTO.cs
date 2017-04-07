@@ -6,7 +6,7 @@ namespace This4That_library.Models.Integration
     {
         private string userID;
 
-        [JsonProperty(PropertyName = "userId")]
+        [JsonProperty(PropertyName = "userId", Required = Required.Always)]
         public string UserID
         {
             get

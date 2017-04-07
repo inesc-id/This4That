@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 
 namespace This4That_library.Models.Domain
 {
@@ -12,24 +13,11 @@ namespace This4That_library.Models.Domain
         private string topic;
         private Trigger trigger;
         private SensingTask sensingTask;
+        private InteractiveTask interactiveTask;
 
-        public override string ToString()
-        {
-            string result = null;
-
-            result = $"Name: {name} Exp: {expirationDate.ToString()} Topic: {topic} " + Environment.NewLine;
-            if (Trigger != null)
-                result += $"Trigger: {trigger.ToString()} " + Environment.NewLine;
-            else
-                result += $"Trigger: NULL ";
-            if (SensingTask != null)
-                result += $"SensingTask: {sensingTask.ToString()} ";
-            else
-                result += $"SensingTask: NULL ";
-            return result;
-        }
+        
         #region PROPERTIES
-        [JsonProperty(PropertyName = "name")]
+        [JsonProperty(PropertyName = "name", Required = Required.Always)]
         public string Name
         {
             get
@@ -43,7 +31,7 @@ namespace This4That_library.Models.Domain
             }
         }
 
-        [JsonProperty(PropertyName = "expDate")]
+        [JsonProperty(PropertyName = "expDate", Required = Required.Always)]
         public DateTime ExpirationDate
         {
             get
@@ -57,7 +45,7 @@ namespace This4That_library.Models.Domain
             }
         }
 
-        [JsonProperty(PropertyName = "topic")]
+        [JsonProperty(PropertyName = "topic", Required = Required.Always)]
         public string TopicName
         {
             get
@@ -111,7 +99,37 @@ namespace This4That_library.Models.Domain
                 taskID = value;
             }
         }
+
+        [JsonProperty(PropertyName = "interactiveTask", Required = Required.Always)]
+        public InteractiveTask InteractiveTask
+        {
+            get
+            {
+                return interactiveTask;
+            }
+
+            set
+            {
+                interactiveTask = value;
+            }
+        }
         #endregion
+
+        public override string ToString()
+        {
+            string result = null;
+
+            result = $"Name: {name} Exp: {expirationDate.ToString()} Topic: {topic} " + Environment.NewLine;
+            if (Trigger != null)
+                result += $"Trigger: {trigger.ToString()} " + Environment.NewLine;
+            else
+                result += $"Trigger: NULL ";
+            if (SensingTask != null)
+                result += $"SensingTask: {sensingTask.ToString()} ";
+            else
+                result += $"SensingTask: NULL ";
+            return result;
+        }
     }
 
     [Serializable]
@@ -121,7 +139,7 @@ namespace This4That_library.Models.Domain
         private string param1;
         private string triggerInfo2;
 
-        [JsonProperty(PropertyName = "sensor")]
+        [JsonProperty(PropertyName = "sensor", Required = Required.Always)]
         public SensorType Sensor
         {
             get
@@ -189,7 +207,7 @@ namespace This4That_library.Models.Domain
     {
         private SensorType sensor;
 
-        [JsonProperty(PropertyName = "sensor")]
+        [JsonProperty(PropertyName = "sensor", Required = Required.Always)]
         public SensorType Sensor
         {
             get
@@ -207,6 +225,24 @@ namespace This4That_library.Models.Domain
         {
             return "Sensor: " + Sensor.ToString();
         }
+    }
+
+    [Serializable]
+    public class InteractiveTask
+    {
+        [JsonProperty(PropertyName = "question", Required = Required.Always)]
+        private string question;
+
+        [JsonProperty(PropertyName ="answers", Required = Required.Always)]
+        List<TaskAnswer> answers;
+    }
+
+    [Serializable]
+    public class TaskAnswer
+    {
+        [JsonProperty(PropertyName = "answer")]
+        private string answer;
+
     }
 
     

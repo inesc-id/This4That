@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading;
 using This4That_library;
 using This4That_library.Models.Domain;
+using This4That_library.Models.Integration.GetTasksByTopicDTO;
 
 namespace This4That_serverNode.Nodes
 {
@@ -76,11 +77,17 @@ namespace This4That_serverNode.Nodes
 
         #region REMOTE_INTERFACE
 
-        public Topic GetTopic(string topicName)
+        public List<GetTasksDTO> GetTasksByTopicName(string topicName)
         {
+            List<GetTasksDTO> listTaskDTO = null;
             try
             {
-                return this.RemoteRepository.GetTopicFromRepository(topicName);
+                if (!this.RemoteRepository.GetTasksByTopicName(out listTaskDTO, topicName))
+                {
+                    Log.Error("Cannot retrieve tasks from Repository");
+                    return null;
+                }
+                return listTaskDTO;
             }
             catch (Exception ex)
             {
@@ -89,7 +96,7 @@ namespace This4That_serverNode.Nodes
             }
         }
 
-        public List<Topic> GetTopics()
+        public Dictionary<string, string> GetTopics()
         {
             try
             {

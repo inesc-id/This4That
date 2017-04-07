@@ -135,5 +135,32 @@ namespace This4That_platform.ServiceLayer
             }
         }
 
+
+        [HttpPost]
+        [Route("user")]
+        public IHttpActionResult RegisterNewUser()
+        {
+            ServerManager serverMgr = null;
+            APIRequestHandler handler;
+            APIResponseDTO response = new APIResponseDTO();
+
+            try
+            {
+                serverMgr = Global.GetCreateServerManager(HttpContext.Current.Server);
+                handler = new APIRequestHandler(HttpContext.Current.Request, serverMgr);
+                if (!handler.RegisterUser(out response))
+                {
+                    return Content(HttpStatusCode.InternalServerError, response);
+                }
+                return Content(HttpStatusCode.OK, response);
+            }
+            catch (Exception ex)
+            {
+                Global.Log.Error(ex.Message);
+                response.SetResponse("Registration failed. Please try again!", APIResponseDTO.RESULT_TYPE.ERROR);
+                return Content(HttpStatusCode.InternalServerError, response);
+            }
+        }
+
     }
 }

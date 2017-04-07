@@ -4,23 +4,35 @@ using System.IO;
 using System.Net;
 using System.Text;
 using System.Web;
-using This4That_library.Models.Integration.TaskPayDTO;
+using This4That_library.Models.Integration;
+using This4That_library.Models.Integration.CalcTaskCostDTO;
+using This4That_library.Models.Integration.TaskPayCreateDTO;
 using This4That_library.Properties;
 
 namespace This4That_library
 {
     public class Library
     {
-        private static bool GetTaskFromPostBody(string postBody, out TaskPayCreationDTO csTask, ref string errorMessage)
+        private static bool GetTaskFromPostBody(string postBody, out APIRequestDTO csTask, string typeFullName, ref string errorMessage)
         {
             csTask = null;
-
+            string calcTaskCostType = typeof(CalcTaskCostRequestDTO).FullName;
             try
             {
                 if (String.IsNullOrEmpty(postBody))
                     return false;
-                csTask = JsonConvert.DeserializeObject<TaskPayCreationDTO>(postBody);
-                return true;
+                if (typeof(CalcTaskCostRequestDTO).FullName.Equals(typeFullName))
+                {
+                    csTask = JsonConvert.DeserializeObject<CalcTaskCostRequestDTO>(postBody);
+                    return true;
+                }
+                if (typeof(TaskPayCreateRequestDTO).FullName.Equals(typeFullName))
+                {
+                    csTask = JsonConvert.DeserializeObject<TaskPayCreateRequestDTO>(postBody);
+                    return true;
+                }
+                return false;
+
             }
             catch (Exception)
             {
@@ -45,7 +57,7 @@ namespace This4That_library
             
         }
 
-        public static bool GetCSTaskFromRequest(HttpRequest request, out TaskPayCreationDTO csTask, ref string errorMessage)
+        public static bool GetCSTaskFromRequest(HttpRequest request, out APIRequestDTO csTask, string typeFullName, ref string errorMessage)
         {
             string postBody;
             csTask = null;
@@ -58,7 +70,7 @@ namespace This4That_library
                     return false;
                 }
                 //get the userID and the encrypted Task
-                if (!GetTaskFromPostBody(postBody, out csTask, ref errorMessage))
+                if (!GetTaskFromPostBody(postBody, out csTask, typeFullName, ref errorMessage))
                 {
                     return false;
                 }
@@ -94,15 +106,6 @@ namespace This4That_library
             {
                 return null;
             }
-        }
-    }
-    
-    public class SecurityLibrary
-    {
-        public static bool DecryptString(string inputString, out string outputString, object key, ref string errorMessage)
-        {
-            outputString = null;
-            return true;
         }
     }
 }

@@ -1,8 +1,8 @@
 <Config>
-  <ServerManager hostName="192.168.42.102" port="5000"/>
-  <TaskCreator hostName="192.168.42.102" port="5001"/>
-  <TaskDistributor hostName="192.168.42.102" port="5002"/>
-  <ReportAggregator hostName="192.168.42.102" port="5003"/>
-  <IncentiveEngine hostName="192.168.42.102" port="5004"/>
-  <Repository hostName="192.168.42.102" port="5005"/>
+  <ServerManager hostName="localhost" port="5000"/>
+  <TaskCreator hostName="localhost" port="5001"/>
+  <TaskDistributor hostName="localhost" port="5002"/>
+  <ReportAggregator hostName="localhost" port="5003"/>
+  <IncentiveEngine hostName="localhost" port="5004"/>
+  <Repository hostName="localhost" port="5005"/>
 </Config>
