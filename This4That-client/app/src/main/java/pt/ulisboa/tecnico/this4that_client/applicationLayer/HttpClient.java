@@ -2,6 +2,9 @@ package pt.ulisboa.tecnico.this4that_client.applicationLayer;
 
 import android.util.Log;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -10,7 +13,10 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Date;
 import java.util.HashMap;
+
+import pt.ulisboa.tecnico.this4that_client.JSON.DateDeserializer;
 
 import static android.content.ContentValues.TAG;
 
@@ -78,7 +84,7 @@ public class HttpClient {
             connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
             connection.setUseCaches(false);
-            connection.setConnectTimeout(2000);
+            connection.setConnectTimeout(5000);
             if (connection.getResponseCode() != 200)
                 inStream = connection.getErrorStream();
             else
@@ -98,6 +104,11 @@ public class HttpClient {
             if (connection != null)
                 connection.disconnect();
         }
+    }
+
+    public static Gson getGsonAPI(){
+        GsonBuilder builder = new GsonBuilder().registerTypeAdapter(Date.class, new DateDeserializer());
+        return builder.create();
     }
 
     public static JSONObject convertToJSON(HashMap<String, Object> elements) {

@@ -96,7 +96,7 @@ namespace This4That_serverNode.Nodes
             }
         }
 
-        public Dictionary<string, string> GetTopics()
+        public List<String> GetTopics()
         {
             try
             {
@@ -108,6 +108,70 @@ namespace This4That_serverNode.Nodes
                 return null;
             }
         }
+
+        public bool SubscribeTopic(string userId, string topicName)
+        {
+            try
+            {
+                Console.WriteLine("[INFO - TASK DISTRIBUTOR] : Going to Subscribe Topic: [{0}]", topicName);
+                Log.DebugFormat("Going to subscribe Topic: [{0}] for UserID: [{1}]", topicName, userId);
+                return this.RemoteRepository.SubscribeTopic(userId, topicName);
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return false;
+            }
+        }
+
+        public List<CSTask> GetUserSubscribedTasks(string userID)
+        {
+            try
+            {
+                Console.WriteLine("[INFO - TASK DISTRIBUTOR] : Fetching User Subscribed Tasks");
+                Log.DebugFormat("Going to fetch all subscribed tasks for UserID: [{0}]", userID);
+                return this.RemoteRepository.GetSubscribedTasksbyUserID(userID);
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return null;
+            }
+        }
+
+        public List<CSTask> GetSubscribedTasksByTopicName(string userID, string topicName)
+        {
+            try
+            {
+                Console.WriteLine("[INFO - TASK DISTRIBUTOR] : Fetching User Subscribed Tasks by Topic:[{0}]", topicName);
+                Log.DebugFormat("Going to fetch all tasks belonging to topicName: [{1}] for UserID: [{0}]", userID, topicName);
+                return this.RemoteRepository.GetSubscribedTasksbyTopic(userID, topicName);
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return null;
+            }
+        }
+
+        public List<CSTask> GetUserTasks(string userID)
+        {
+            try
+            {
+                Console.WriteLine("[INFO - TASK DISTRIBUTOR] : Fetching User Tasks");
+                Log.DebugFormat("Going to fetch all created tasks by UserID: [{0}]", userID);
+                return this.RemoteRepository.GetTasksByUserID(userID);
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return null;
+            }
+        }
+
+
+
+
 
         #endregion
     }

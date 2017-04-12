@@ -71,8 +71,7 @@ namespace This4That_platform.Handlers
 
             try
             {
-                response.SetResponse(new Dictionary<string, object>() {
-                                    { "topics", serverMgr.RemoteTaskDistributor.GetTopics() } }
+                response.SetResponse(serverMgr.RemoteTaskDistributor.GetTopics()
                                     , APIResponseDTO.RESULT_TYPE.SUCCESS);
                 return true;
             }
@@ -184,6 +183,108 @@ namespace This4That_platform.Handlers
                 userId = this.serverMgr.RemoteRepository.RegisterUser();
                 response.SetResponse(new Dictionary<string, object>() {
                                     { "userId", userId} }
+                                    , APIResponseDTO.RESULT_TYPE.SUCCESS);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Global.Log.Error(ex.Message);
+                return false;
+            }
+        }
+
+        public bool GetUserTasks(string userID, out APIResponseDTO response)
+        {
+            response = new APIResponseDTO();
+            List<CSTask> myTasks;
+            try
+            {
+                myTasks = this.serverMgr.RemoteTaskDistributor.GetUserTasks(userID);
+                if (myTasks == null)
+                {
+                    Global.Log.ErrorFormat("Invalid User ID: [{0}]", userID);
+                    response.SetResponse(new Dictionary<string, string>() { { "errorMessage", "Invalid User ID!" } },
+                                        APIResponseDTO.RESULT_TYPE.ERROR);
+                    return false;
+                }
+                Global.Log.DebugFormat("Number of Tasks: [{0}]", myTasks.Count);
+                response.SetResponse(myTasks
+                                    , APIResponseDTO.RESULT_TYPE.SUCCESS);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Global.Log.Error(ex.Message);
+                return false;
+            }
+        }
+
+        internal bool SubscribeTopic(string userId, string topicName, out APIResponseDTO response)
+        {
+            response = new APIResponseDTO();
+
+            try
+            {
+                if (!this.serverMgr.RemoteTaskDistributor.SubscribeTopic(userId, topicName))
+                {
+                    Global.Log.ErrorFormat("Invalid User ID: [{0}] OR Invalid Topic: [{1}]", userId, topicName);
+                    response.SetResponse(new Dictionary<string, string>() { { "errorMessage", "Invalid User ID OR Invalid Topic!" } },
+                                        APIResponseDTO.RESULT_TYPE.ERROR);
+                    return false;
+                }
+                Global.Log.DebugFormat("Topic: [{0}] SUBSCRIBED by User ID: [{1}]", topicName, userId);
+                response.SetResponse("Subscribed"
+                                    , APIResponseDTO.RESULT_TYPE.SUCCESS);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Global.Log.Error(ex.Message);
+                return false;
+            }
+        }
+
+        public bool GetSubscribedTasks(string userID, out APIResponseDTO response)
+        {
+            response = new APIResponseDTO();
+            List<CSTask> subscribedTasks;
+            try
+            {
+                subscribedTasks = this.serverMgr.RemoteTaskDistributor.GetUserSubscribedTasks(userID);
+                if (subscribedTasks == null)
+                {
+                    Global.Log.ErrorFormat("Invalid User ID: [{0}]", userID);
+                    response.SetResponse(new Dictionary<string, string>() { { "errorMessage", "Invalid User ID!" } },
+                                        APIResponseDTO.RESULT_TYPE.ERROR);
+                    return false;
+                }
+                Global.Log.DebugFormat("Number of Tasks: [{0}]", subscribedTasks.Count);
+                response.SetResponse(subscribedTasks
+                                    , APIResponseDTO.RESULT_TYPE.SUCCESS);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Global.Log.Error(ex.Message);
+                return false;
+            }
+        }
+
+        internal bool GetSubscribedTasksByTopicName(string userId, string topicName, out APIResponseDTO response)
+        {
+            response = new APIResponseDTO();
+            List<CSTask> subscribedTasks;
+            try
+            {
+                subscribedTasks = this.serverMgr.RemoteTaskDistributor.GetSubscribedTasksByTopicName(userId, topicName);
+                if (subscribedTasks == null)
+                {
+                    Global.Log.ErrorFormat("Invalid User ID: [{0}] OR Invalid Topic: [{1}]", userId, topicName);
+                    response.SetResponse(new Dictionary<string, string>() { { "errorMessage", "Invalid User ID OR Invalid Topic!" } },
+                                        APIResponseDTO.RESULT_TYPE.ERROR);
+                    return false;
+                }
+                response.SetResponse(subscribedTasks
                                     , APIResponseDTO.RESULT_TYPE.SUCCESS);
                 return true;
             }

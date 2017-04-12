@@ -158,7 +158,7 @@ namespace This4That_serverNode.Nodes
                     Log.ErrorFormat("Invalid User ID: [{0}]", userID);
                     return false;
                 }
-                user.ColTasks.Add(task);
+                user.MyTasks.Add(taskID);
                 return true;                            
             }
             catch (Exception ex)
@@ -207,16 +207,16 @@ namespace This4That_serverNode.Nodes
             }
         }
 
-        public Dictionary<string, string> GetTopicsFromRepository()
+        public List<String> GetTopicsFromRepository()
         {
-            Dictionary<string, string> topics = new Dictionary<string, string>();
+            List<String> allTopics = new List<string>();
             try
             {
                 foreach (Topic topic in ColTopics.Values)
                 {
-                    topics.Add("name", topic.Name);
+                    allTopics.Add(topic.Name);
                 }
-                return topics;
+                return allTopics;
             }
             catch (Exception ex)
             {
@@ -228,16 +228,135 @@ namespace This4That_serverNode.Nodes
         public string RegisterUser()
         {
             User user;
-            string userId = Guid.NewGuid().ToString();
+            string userId = Guid.NewGuid().ToString().Substring(0,8);
 
             while (UserStorage.Users.ContainsKey(userId))
             {
-                userId = Guid.NewGuid().ToString();
+                userId = Guid.NewGuid().ToString().Substring(0, 8);
             }
             user = new User();
             user.UserID = userId;
             UserStorage.Users.Add(userId, user);
             return userId;
+        }
+
+        public bool SubscribeTopic(string userId, string topicName)
+        {
+            try
+            {
+                Console.WriteLine("[INFO - REPOSITORY] : Going to Subscribe Task");
+                if (UserStorage.Users.ContainsKey(userId) && ColTopics.ContainsKey(topicName))
+                {
+                    if (!UserStorage.Users[userId].SubscribedTopics.Contains(topicName))
+                        UserStorage.Users[userId].SubscribedTopics.Add(topicName);
+                    return true;
+                }
+                else
+                    return false;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return false;
+            }
+        }
+
+        public List<CSTask> GetTasksByUserID(string userID)
+        {
+            List<string> myTasksID = new List<string>();
+            List<CSTask> myTasks = new List<CSTask>();
+            try
+            {
+                Console.WriteLine("[INFO - REPOSITORY] : Fetching My Tasks");
+                if (UserStorage.Users.ContainsKey(userID))
+                {
+                    myTasksID = UserStorage.Users[userID].MyTasks;
+                    foreach (string taskID in myTasksID)
+                    {
+                        if (ColTasks.ContainsKey(taskID))
+                        {
+                            myTasks.Add(ColTasks[taskID]);
+                        }
+                    }
+                    return myTasks;
+                }                    
+                else
+                    return null;                    
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return null;
+            }
+        }
+
+        public List<CSTask> GetSubscribedTasksbyUserID(string userID)
+        {
+            List<string> subscribedTopics = new List<string>();
+            List<CSTask> subscribedTasks = new List<CSTask>();
+            Topic auxTopic;
+            try
+            {
+                Console.WriteLine("[INFO - REPOSITORY] : Fetching Subscribed Tasks");
+                if (UserStorage.Users.ContainsKey(userID))
+                {
+                    subscribedTopics = UserStorage.Users[userID].SubscribedTopics;
+                    foreach (string topicName in subscribedTopics)
+                    {
+                        if (ColTopics.ContainsKey(topicName))
+                        {
+                            auxTopic = ColTopics[topicName];
+                            foreach (string taskId in auxTopic.ListOfTaskIDs)
+                            {
+                                if (ColTasks.ContainsKey(taskId) && !UserStorage.Users[userID].MyTasks.Contains(taskId))
+                                {
+                                    subscribedTasks.Add(ColTasks[taskId]);
+                                }
+                            }
+                        }
+                        else
+                            return null;                                             
+                    }
+                    return subscribedTasks;
+                }
+                else
+                    return null;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return null;
+            }
+        }
+
+        public List<CSTask> GetSubscribedTasksbyTopic(string userID, string topicName)
+        {
+            List<string> subscribedTopics = new List<string>();
+            List<CSTask> subscribedTasks = new List<CSTask>();
+            Topic auxTopic;
+            try
+            {
+                Console.WriteLine("[INFO - REPOSITORY] : Fetching Subscribed Tasks");
+                if (UserStorage.Users.ContainsKey(userID) && (ColTopics.ContainsKey(topicName)))
+                {
+                    auxTopic = ColTopics[topicName];
+                    foreach (string taskId in auxTopic.ListOfTaskIDs)
+                    {
+                        if (ColTasks.ContainsKey(taskId))
+                        {
+                            subscribedTasks.Add(ColTasks[taskId]);
+                        }
+                    }
+                    return subscribedTasks;
+                }
+                else
+                    return null;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return null;
+            }
         }
 
         #endregion

@@ -44,7 +44,7 @@ namespace This4That_platform.ServiceLayer
             ServerManager serverMgr = null;
             APIRequestHandler handler = null;
             APIResponseDTO response = new APIResponseDTO();
-            
+
             try
             {
                 serverMgr = Global.GetCreateServerManager(HttpContext.Current.Server);
@@ -160,6 +160,113 @@ namespace This4That_platform.ServiceLayer
                 response.SetResponse("Registration failed. Please try again!", APIResponseDTO.RESULT_TYPE.ERROR);
                 return Content(HttpStatusCode.InternalServerError, response);
             }
+        }
+
+        [HttpGet]
+        [Route("user/{userId}/task")]
+        public IHttpActionResult GetMyTasks(string userId)
+        {
+            ServerManager serverMgr = null;
+            APIRequestHandler handler;
+            APIResponseDTO response = new APIResponseDTO();
+
+            try
+            {
+                serverMgr = Global.GetCreateServerManager(HttpContext.Current.Server);
+                handler = new APIRequestHandler(HttpContext.Current.Request, serverMgr);
+                if (!handler.GetUserTasks(userId, out response))
+                {
+                    return Content(HttpStatusCode.InternalServerError, response);
+                }
+                return Content(HttpStatusCode.OK, response);
+            }
+            catch (Exception ex)
+            {
+                Global.Log.Error(ex.Message);
+                response.SetResponse("Cannot obtain my tasks. Please try again!", APIResponseDTO.RESULT_TYPE.ERROR);
+                return Content(HttpStatusCode.InternalServerError, response);
+            }
+        }
+
+        [HttpGet]
+        [Route("user/{userId}/topic/{topicName}/subscribe")]
+        public IHttpActionResult SubscribeTask(string userId, string topicName)
+        {
+            ServerManager serverMgr = null;
+            APIRequestHandler handler;
+            APIResponseDTO response = new APIResponseDTO();
+
+            try
+            {
+                serverMgr = Global.GetCreateServerManager(HttpContext.Current.Server);
+                handler = new APIRequestHandler(HttpContext.Current.Request, serverMgr);
+                if (!handler.SubscribeTopic(userId, topicName, out response))
+                {
+                    return Content(HttpStatusCode.InternalServerError, response);
+                }
+                return Content(HttpStatusCode.OK, response);
+            }
+            catch (Exception ex)
+            {
+                Global.Log.Error(ex.Message);
+                response.SetResponse("Cannot obtain subscribed tasks. Please try again!", APIResponseDTO.RESULT_TYPE.ERROR);
+                return Content(HttpStatusCode.InternalServerError, response);
+            }
+
+        }
+
+        [HttpGet]
+        [Route("user/{userId}/subscribedtasks")]
+        public IHttpActionResult GetSubscribedTasks(string userId)
+        {
+            ServerManager serverMgr = null;
+            APIRequestHandler handler;
+            APIResponseDTO response = new APIResponseDTO();
+
+            try
+            {
+                serverMgr = Global.GetCreateServerManager(HttpContext.Current.Server);
+                handler = new APIRequestHandler(HttpContext.Current.Request, serverMgr);
+                if (!handler.GetSubscribedTasks(userId, out response))
+                {
+                    return Content(HttpStatusCode.InternalServerError, response);
+                }
+                return Content(HttpStatusCode.OK, response);
+            }
+            catch (Exception ex)
+            {
+                Global.Log.Error(ex.Message);
+                response.SetResponse("Cannot obtain subscribed tasks. Please try again!", APIResponseDTO.RESULT_TYPE.ERROR);
+                return Content(HttpStatusCode.InternalServerError, response);
+            }
+
+        }
+
+        [HttpGet]
+        [Route("user/{userId}/topic/{topicName}/subscribedtasks")]
+        public IHttpActionResult GetSubscribedTasksByTopicName(string userId, string topicName)
+        {
+            ServerManager serverMgr = null;
+            APIRequestHandler handler;
+            APIResponseDTO response = new APIResponseDTO();
+
+            try
+            {
+                serverMgr = Global.GetCreateServerManager(HttpContext.Current.Server);
+                handler = new APIRequestHandler(HttpContext.Current.Request, serverMgr);
+                if (!handler.GetSubscribedTasksByTopicName(userId, topicName, out response))
+                {
+                    return Content(HttpStatusCode.InternalServerError, response);
+                }
+                return Content(HttpStatusCode.OK, response);
+            }
+            catch (Exception ex)
+            {
+                Global.Log.Error(ex.Message);
+                response.SetResponse("Cannot obtain subscribed tasks. Please try again!", APIResponseDTO.RESULT_TYPE.ERROR);
+                return Content(HttpStatusCode.InternalServerError, response);
+            }
+
         }
 
     }

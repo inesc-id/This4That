@@ -10,8 +10,7 @@ import com.google.gson.Gson;
 import java.net.SocketTimeoutException;
 
 import pt.ulisboa.tecnico.this4that_client.Domain.DTO.CreateTaskResponseDTO;
-import pt.ulisboa.tecnico.this4that_client.Domain.DTO.TaskCostResponseDTO;
-import pt.ulisboa.tecnico.this4that_client.MainActivity;
+import pt.ulisboa.tecnico.this4that_client.activity.MainActivity;
 import pt.ulisboa.tecnico.this4that_client.applicationLayer.HttpClient;
 
 /**

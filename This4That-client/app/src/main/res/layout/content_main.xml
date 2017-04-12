@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="pt.ulisboa.tecnico.this4that_client.MainActivity"
-    tools:showIn="@layout/app_bar_main">
+    tools:context="pt.ulisboa.tecnico.this4that_client.activity.MainActivity">
 
     <Button
         android:id="@+id/btnCalcTaskCost"

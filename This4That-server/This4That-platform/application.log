@@ -5738,3 +5738,680 @@ Trigger: Sensor: GPS Param1: 50.2 Param2: 10
 SensingTask: Sensor: TEMPERATURE 
 2017-04-07 17:01:07,600 DEBUG CreateCSTask 210 
  [Debug Message] - Task with the ID: [4db23e46-150f-418e-99cd-75fceaf02838] created with Success!
+2017-04-08 15:10:20,527 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-04-08 15:10:21,263 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-04-08 15:10:21,327 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-04-08 15:10:31,338 ERROR RegisterUser 192 
+ [Debug Message] - A referência de objecto não foi definida como uma instância de um objecto.
+2017-04-08 15:10:40,847 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-04-08 15:10:40,884 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-04-08 15:10:40,941 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-04-08 15:10:40,990 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-04-08 15:10:41,015 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-04-11 12:24:41,577 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-04-11 12:24:41,694 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-04-11 12:24:41,702 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-04-11 12:24:49,097 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-04-11 12:24:49,133 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-04-11 12:24:49,169 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-04-11 12:24:49,204 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-04-11 12:24:49,235 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-04-11 12:25:21,593 ERROR GetUserTasks 206 
+ [Debug Message] - Invalid User ID: [12345]
+2017-04-11 12:25:50,054 DEBUG GetUserTasks 211 
+ [Debug Message] - Number of Tasks: [0]
+2017-04-11 12:26:12,193 DEBUG GetUserTasks 211 
+ [Debug Message] - Number of Tasks: [0]
+2017-04-11 13:10:54,704 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-04-11 13:10:54,777 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-04-11 13:10:54,785 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-04-11 13:11:26,831 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-04-11 13:11:26,973 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-04-11 13:11:27,039 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-04-11 13:11:27,095 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-04-11 13:11:27,128 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-04-11 13:12:34,351 DEBUG GetCSTaskToCreate 287 
+ [Debug Message] - User ID: [13be5c00-6600-45b5-86ff-8cd61eae1e77] Task: Name: TaskTeste Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-11 13:12:37,595 ERROR CreateCSTask 234 
+ [Debug Message] - Cannot create crowd-sensing task!
+2017-04-11 13:13:21,028 DEBUG GetCSTaskToCreate 287 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-11 13:13:21,093 DEBUG CreateCSTask 237 
+ [Debug Message] - Task with the ID: [ec106ad4-14fd-4074-9c37-0ad64916c0d3] created with Success!
+2017-04-11 15:21:20,214 DEBUG GetCSTaskToCreate 287 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-11 15:21:20,280 DEBUG CreateCSTask 237 
+ [Debug Message] - Task with the ID: [6e2322d5-e812-4d67-b072-80d275c931fe] created with Success!
+2017-04-11 15:21:51,944 DEBUG GetUserTasks 211 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-11 15:50:00,291 DEBUG GetUserTasks 211 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-11 15:50:05,080 DEBUG GetUserTasks 211 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-11 15:50:47,876 DEBUG GetUserTasks 211 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-11 15:55:40,337 DEBUG GetUserTasks 211 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-11 15:58:27,960 DEBUG GetUserTasks 211 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-11 16:10:37,786 DEBUG GetUserTasks 211 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-11 16:11:52,908 DEBUG GetUserTasks 211 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-11 16:17:15,943 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-04-11 16:17:16,103 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-04-11 16:17:16,114 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-04-11 16:17:17,755 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-04-11 16:17:17,823 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-04-11 16:17:17,889 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-04-11 16:17:17,961 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-04-11 16:17:18,002 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-04-11 16:17:37,342 DEBUG GetUserTasks 211 
+ [Debug Message] - Number of Tasks: [0]
+2017-04-11 16:18:42,296 DEBUG GetCSTaskToCreate 287 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-11 16:18:44,345 DEBUG CreateCSTask 237 
+ [Debug Message] - Task with the ID: [a3337047-b191-4574-b73e-4a1e147d74f1] created with Success!
+2017-04-11 16:18:47,090 DEBUG GetCSTaskToCreate 287 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-11 16:18:47,140 DEBUG CreateCSTask 237 
+ [Debug Message] - Task with the ID: [5ec4f7b0-f5a8-4279-8a77-5dfa0a4ba161] created with Success!
+2017-04-11 16:18:56,825 DEBUG GetUserTasks 211 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-11 16:19:48,888 DEBUG GetUserTasks 211 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-11 16:21:40,916 DEBUG GetUserTasks 211 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-11 16:22:08,788 DEBUG GetUserTasks 211 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-11 16:26:12,365 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-04-11 16:26:12,465 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-04-11 16:26:12,475 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-04-11 16:26:16,784 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-04-11 16:26:16,819 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-04-11 16:26:16,855 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-04-11 16:26:16,895 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-04-11 16:26:16,925 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-04-11 16:28:29,117 DEBUG GetUserTasks 211 
+ [Debug Message] - Number of Tasks: [0]
+2017-04-11 16:28:54,101 DEBUG GetCSTaskToCreate 287 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-11 16:28:56,150 DEBUG CreateCSTask 237 
+ [Debug Message] - Task with the ID: [dd8247b1-38e2-4f69-89b5-68b05393ef6e] created with Success!
+2017-04-11 16:28:57,124 DEBUG GetCSTaskToCreate 287 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-11 16:28:57,150 DEBUG CreateCSTask 237 
+ [Debug Message] - Task with the ID: [4a98f1b4-c536-4b76-84eb-efb09253034a] created with Success!
+2017-04-11 16:29:01,858 DEBUG GetUserTasks 211 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-11 16:31:49,675 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-04-11 16:31:49,763 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-04-11 16:31:49,777 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-04-11 16:31:56,522 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-04-11 16:31:56,564 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-04-11 16:31:56,608 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-04-11 16:31:56,658 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-04-11 16:31:56,687 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-04-11 16:32:53,889 DEBUG GetUserTasks 211 
+ [Debug Message] - Number of Tasks: [0]
+2017-04-11 16:33:01,094 DEBUG GetCSTaskToCreate 287 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-11 16:33:03,139 DEBUG CreateCSTask 237 
+ [Debug Message] - Task with the ID: [47d27a1a-3aeb-480f-8f03-fcc3c6bba00d] created with Success!
+2017-04-11 16:33:03,754 DEBUG GetCSTaskToCreate 287 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-11 16:33:03,794 DEBUG CreateCSTask 237 
+ [Debug Message] - Task with the ID: [7410cada-9161-4d1c-98a4-72d068c0b849] created with Success!
+2017-04-11 16:33:08,146 DEBUG GetUserTasks 211 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-11 16:36:39,334 DEBUG GetUserTasks 211 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-11 16:40:15,287 DEBUG GetUserTasks 211 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-11 16:41:15,783 DEBUG GetUserTasks 211 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-11 17:00:51,409 DEBUG GetUserTasks 211 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-11 17:01:05,349 DEBUG GetUserTasks 211 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-11 17:33:21,561 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-04-11 17:33:21,653 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-04-11 17:33:21,661 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-04-11 17:33:30,906 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-04-11 17:33:30,949 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-04-11 17:33:30,982 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-04-11 17:33:31,022 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-04-11 17:33:31,058 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-04-11 17:37:26,924 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [0]
+2017-04-11 17:37:35,325 DEBUG GetCSTaskToCreate 286 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-11 17:37:37,383 DEBUG CreateCSTask 236 
+ [Debug Message] - Task with the ID: [19d2821a-2cc0-4c55-9ff2-2879285460e6] created with Success!
+2017-04-11 17:37:39,394 DEBUG GetCSTaskToCreate 286 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-11 17:37:39,435 DEBUG CreateCSTask 236 
+ [Debug Message] - Task with the ID: [6729208e-576c-438f-aabb-c724fc8a63cd] created with Success!
+2017-04-11 17:37:39,999 DEBUG GetCSTaskToCreate 286 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-11 17:37:40,039 DEBUG CreateCSTask 236 
+ [Debug Message] - Task with the ID: [e7e740ff-7393-4338-b008-cd467bc3f23a] created with Success!
+2017-04-11 17:37:48,392 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [3]
+2017-04-11 17:50:28,736 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [3]
+2017-04-11 17:50:38,080 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [3]
+2017-04-11 17:50:46,521 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [3]
+2017-04-11 17:55:31,751 DEBUG GetCSTaskToCreate 286 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 04-03-2017 17:41:00 Topic: gps 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-11 17:55:31,797 DEBUG CreateCSTask 236 
+ [Debug Message] - Task with the ID: [38c427ae-d98f-46ea-9734-d3f1573b4afc] created with Success!
+2017-04-11 18:04:02,844 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-04-11 18:04:02,921 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-04-11 18:04:02,928 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-04-11 18:04:16,122 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-04-11 18:04:16,161 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-04-11 18:04:16,197 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-04-11 18:04:16,231 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-04-11 18:04:16,259 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-04-11 18:04:28,720 DEBUG GetCSTaskToCreate 286 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 04-03-2017 17:41:00 Topic: gps 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-11 18:04:30,843 DEBUG CreateCSTask 236 
+ [Debug Message] - Task with the ID: [3c08bf25-f927-4480-b877-498e34e53992] created with Success!
+2017-04-11 18:04:35,095 DEBUG GetCSTaskToCreate 286 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-11 18:04:35,124 DEBUG CreateCSTask 236 
+ [Debug Message] - Task with the ID: [a65eff02-789f-4bf9-8333-fba8b6532846] created with Success!
+2017-04-11 18:04:45,467 DEBUG GetCSTaskToCreate 286 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-11 18:04:45,500 DEBUG CreateCSTask 236 
+ [Debug Message] - Task with the ID: [9352c735-c12f-48fc-9741-2d0cdad67d6f] created with Success!
+2017-04-11 18:10:09,509 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [3]
+2017-04-11 18:10:18,840 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [3]
+2017-04-12 17:29:03,827 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-04-12 17:29:03,916 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-04-12 17:29:03,926 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-04-12 17:29:07,836 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-04-12 17:29:07,869 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-04-12 17:29:07,900 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-04-12 17:29:07,928 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-04-12 17:29:07,955 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-04-12 17:29:45,179 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [0]
+2017-04-12 17:29:59,405 DEBUG GetCSTaskToCreate 336 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 17:30:01,479 DEBUG CreateCSTask 286 
+ [Debug Message] - Task with the ID: [1c77a723-990c-4bd4-8b8e-2997716b7796] created with Success!
+2017-04-12 17:31:17,061 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [0]
+2017-04-12 17:31:53,277 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [1]
+2017-04-12 17:31:58,433 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [0]
+2017-04-12 17:32:30,436 DEBUG SubscribeTask 235 
+ [Debug Message] - Task ID: [1c77a723-990c-4bd4-8b8e-2997716b7796] SUBSCRIBED by User ID: [1234]
+2017-04-12 17:32:44,074 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [1]
+2017-04-12 17:32:51,450 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [1]
+2017-04-12 17:38:13,787 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-04-12 17:38:13,915 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-04-12 17:38:13,926 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-04-12 17:38:54,837 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-04-12 17:38:54,877 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-04-12 17:38:54,915 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-04-12 17:38:54,947 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-04-12 17:38:54,970 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-04-12 17:44:30,414 DEBUG GetCSTaskToCreate 336 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 17:44:33,681 DEBUG CreateCSTask 286 
+ [Debug Message] - Task with the ID: [04490fde-6b84-4842-94bb-1d63e1ec91e5] created with Success!
+2017-04-12 17:44:56,571 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [0]
+2017-04-12 17:45:05,011 DEBUG SubscribeTask 235 
+ [Debug Message] - Task ID: [04490fde-6b84-4842-94bb-1d63e1ec91e5] SUBSCRIBED by User ID: [1234]
+2017-04-12 17:45:14,905 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [1]
+2017-04-12 17:45:23,196 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [1]
+2017-04-12 17:45:30,026 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [1]
+2017-04-12 17:45:31,959 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [1]
+2017-04-12 17:46:14,932 DEBUG GetCSTaskToCreate 336 
+ [Debug Message] - User ID: [12fac80f] Task: Name: TaskTeste Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 17:46:14,995 DEBUG CreateCSTask 286 
+ [Debug Message] - Task with the ID: [a4bbbd46-d447-4338-9b45-734c9121bebf] created with Success!
+2017-04-12 17:46:23,414 DEBUG SubscribeTask 235 
+ [Debug Message] - Task ID: [a4bbbd46-d447-4338-9b45-734c9121bebf] SUBSCRIBED by User ID: [1234]
+2017-04-12 17:46:28,278 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-12 17:46:30,325 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [1]
+2017-04-12 17:46:39,165 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [1]
+2017-04-12 17:46:40,922 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-12 18:23:34,204 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-04-12 18:23:34,280 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-04-12 18:23:34,287 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-04-12 18:23:52,509 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-04-12 18:23:52,564 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-04-12 18:23:52,612 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-04-12 18:23:52,642 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-04-12 18:23:52,665 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-04-12 18:24:50,079 DEBUG GetCSTaskToCreate 361 
+ [Debug Message] - User ID: [12fac80f] Task: Name: TaskTeste Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 18:24:53,186 ERROR CreateCSTask 308 
+ [Debug Message] - Cannot create crowd-sensing task!
+2017-04-12 18:25:12,801 DEBUG GetCSTaskToCreate 361 
+ [Debug Message] - User ID: [5e2123b9] Task: Name: TaskTeste Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 18:25:12,857 DEBUG CreateCSTask 311 
+ [Debug Message] - Task with the ID: [f43bafba-283a-4efe-910e-1f804d393046] created with Success!
+2017-04-12 18:26:08,967 DEBUG SubscribeTopic 235 
+ [Debug Message] - Topic: [temperature] SUBSCRIBED by User ID: [1234]
+2017-04-12 18:26:13,921 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-12 18:26:22,158 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [0]
+2017-04-12 18:26:34,573 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [0]
+2017-04-12 18:26:37,611 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-12 18:26:44,511 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [0]
+2017-04-12 18:26:56,234 DEBUG GetCSTaskToCreate 361 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste2 Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 18:26:56,277 DEBUG CreateCSTask 311 
+ [Debug Message] - Task with the ID: [12017313-b8fd-4dcc-9153-e42af958de2a] created with Success!
+2017-04-12 18:27:02,944 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [1]
+2017-04-12 18:27:09,012 DEBUG GetCSTaskToCreate 361 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste2 Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 18:27:09,052 DEBUG CreateCSTask 311 
+ [Debug Message] - Task with the ID: [39343fd8-e8a3-4b9d-a250-167e4e5b3e3c] created with Success!
+2017-04-12 18:27:09,538 DEBUG GetCSTaskToCreate 361 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste2 Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 18:27:09,577 DEBUG CreateCSTask 311 
+ [Debug Message] - Task with the ID: [2b50cc4e-a029-4b11-a057-779bb1245433] created with Success!
+2017-04-12 18:27:10,059 DEBUG GetCSTaskToCreate 361 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste2 Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 18:27:10,086 DEBUG CreateCSTask 311 
+ [Debug Message] - Task with the ID: [49556c3d-acfc-4021-b972-e2f4a05d01a8] created with Success!
+2017-04-12 18:27:10,461 DEBUG GetCSTaskToCreate 361 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste2 Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 18:27:10,485 DEBUG CreateCSTask 311 
+ [Debug Message] - Task with the ID: [f173eda7-6bc9-473b-9e40-cc2a3067e33d] created with Success!
+2017-04-12 18:27:10,955 DEBUG GetCSTaskToCreate 361 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste2 Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 18:27:10,979 DEBUG CreateCSTask 311 
+ [Debug Message] - Task with the ID: [f6ba5895-bbad-49b9-8202-2abe419f7f7a] created with Success!
+2017-04-12 18:27:11,412 DEBUG GetCSTaskToCreate 361 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste2 Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 18:27:11,448 DEBUG CreateCSTask 311 
+ [Debug Message] - Task with the ID: [903611f5-8605-46ca-84ee-c0d9e872ae08] created with Success!
+2017-04-12 18:27:11,853 DEBUG GetCSTaskToCreate 361 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste2 Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 18:27:11,879 DEBUG CreateCSTask 311 
+ [Debug Message] - Task with the ID: [1cce165f-d797-4bcf-93ad-60ee06742d55] created with Success!
+2017-04-12 18:27:12,308 DEBUG GetCSTaskToCreate 361 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste2 Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 18:27:12,350 DEBUG CreateCSTask 311 
+ [Debug Message] - Task with the ID: [ef4a8577-09d3-4c89-8f62-eeeacd652ec0] created with Success!
+2017-04-12 18:27:12,784 DEBUG GetCSTaskToCreate 361 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste2 Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 18:27:12,814 DEBUG CreateCSTask 311 
+ [Debug Message] - Task with the ID: [ad72ee7c-0158-41a0-b4a7-498a372ba80b] created with Success!
+2017-04-12 18:27:14,158 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [12]
+2017-04-12 18:27:22,658 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [10]
+2017-04-12 18:27:32,828 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [12]
+2017-04-12 18:27:50,664 DEBUG GetCSTaskToCreate 361 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste3 Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 18:27:50,733 DEBUG CreateCSTask 311 
+ [Debug Message] - Task with the ID: [f8bc3554-556b-4658-aaec-919065a69f87] created with Success!
+2017-04-12 18:27:51,289 DEBUG GetCSTaskToCreate 361 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste3 Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 18:27:51,321 DEBUG CreateCSTask 311 
+ [Debug Message] - Task with the ID: [6332009c-e875-48d3-8aed-635740a6ede3] created with Success!
+2017-04-12 18:27:51,703 DEBUG GetCSTaskToCreate 361 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste3 Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 18:27:51,739 DEBUG CreateCSTask 311 
+ [Debug Message] - Task with the ID: [c44456ef-feb9-4acc-a255-aa5b6cd39aca] created with Success!
+2017-04-12 18:27:51,905 DEBUG GetCSTaskToCreate 361 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste3 Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 18:27:51,934 DEBUG CreateCSTask 311 
+ [Debug Message] - Task with the ID: [867a3c25-b788-42c5-918b-b806cc0cbee1] created with Success!
+2017-04-12 18:27:52,092 DEBUG GetCSTaskToCreate 361 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste3 Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 18:27:52,123 DEBUG CreateCSTask 311 
+ [Debug Message] - Task with the ID: [03bda949-6297-4a3d-9678-6076afccc925] created with Success!
+2017-04-12 18:27:52,263 DEBUG GetCSTaskToCreate 361 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste3 Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 18:27:52,305 DEBUG CreateCSTask 311 
+ [Debug Message] - Task with the ID: [d974d0db-1ae6-4da8-87cc-fd1ab2a03fe3] created with Success!
+2017-04-12 18:27:52,448 DEBUG GetCSTaskToCreate 361 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste3 Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 18:27:52,482 DEBUG CreateCSTask 311 
+ [Debug Message] - Task with the ID: [904948de-0307-41f3-bdbe-8b55af3b3dc2] created with Success!
+2017-04-12 18:27:52,611 DEBUG GetCSTaskToCreate 361 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste3 Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 18:27:52,637 DEBUG CreateCSTask 311 
+ [Debug Message] - Task with the ID: [a9adad47-7161-4398-a08e-407473f191bc] created with Success!
+2017-04-12 18:27:54,616 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [18]
+2017-04-12 18:28:26,784 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [20]
+2017-04-12 18:28:30,680 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [18]
+2017-04-12 18:28:33,582 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [18]
+2017-04-12 18:29:23,336 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [18]
+2017-04-12 18:30:19,733 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [18]
+2017-04-12 18:32:27,161 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-04-12 18:32:27,259 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-04-12 18:32:27,270 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-04-12 18:32:30,195 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-04-12 18:32:30,246 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-04-12 18:32:30,300 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-04-12 18:32:30,343 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-04-12 18:32:30,374 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-04-12 18:32:37,075 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [0]
+2017-04-12 18:32:38,267 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [0]
+2017-04-12 18:32:43,229 DEBUG GetCSTaskToCreate 361 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste3 Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 18:32:45,322 DEBUG CreateCSTask 311 
+ [Debug Message] - Task with the ID: [e16b47fe-50d1-4a97-a648-026c57e16d12] created with Success!
+2017-04-12 18:32:51,177 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [0]
+2017-04-12 18:32:54,979 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [1]
+2017-04-12 18:33:02,046 DEBUG SubscribeTopic 235 
+ [Debug Message] - Topic: [temperature] SUBSCRIBED by User ID: [1234]
+2017-04-12 18:33:05,146 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [1]
+2017-04-12 18:33:35,080 DEBUG GetCSTaskToCreate 361 
+ [Debug Message] - User ID: [6a58224c] Task: Name: TaskTeste4 Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 18:33:35,136 DEBUG CreateCSTask 311 
+ [Debug Message] - Task with the ID: [edd8b7ea-1c8e-49fb-acf4-cc897c4b1e1a] created with Success!
+2017-04-12 18:33:37,517 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [1]
+2017-04-12 18:33:39,501 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-12 18:35:56,234 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-04-12 18:35:56,342 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-04-12 18:35:56,351 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-04-12 18:35:59,630 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-04-12 18:35:59,675 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-04-12 18:35:59,720 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-04-12 18:35:59,762 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-04-12 18:35:59,811 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-04-12 18:36:26,221 DEBUG GetCSTaskToCreate 361 
+ [Debug Message] - User ID: [1bbe5c28] Task: Name: TaskTeste4 Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 18:36:29,311 DEBUG CreateCSTask 311 
+ [Debug Message] - Task with the ID: [402a6d2c-5f27-48ab-90e6-87c010eb7bfb] created with Success!
+2017-04-12 18:36:34,035 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [0]
+2017-04-12 18:36:34,777 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [0]
+2017-04-12 18:36:43,873 DEBUG GetCSTaskToCreate 361 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste4 Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 18:36:43,951 DEBUG CreateCSTask 311 
+ [Debug Message] - Task with the ID: [ea10809d-9660-44d1-af38-9761129178f5] created with Success!
+2017-04-12 18:36:47,895 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [1]
+2017-04-12 18:36:49,603 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [0]
+2017-04-12 18:37:08,871 DEBUG SubscribeTopic 235 
+ [Debug Message] - Topic: [temperature] SUBSCRIBED by User ID: [1234]
+2017-04-12 18:37:11,296 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [1]
+2017-04-12 18:37:13,202 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [1]
+2017-04-12 18:37:19,474 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [1]
+2017-04-12 18:37:27,719 DEBUG GetCSTaskToCreate 361 
+ [Debug Message] - User ID: [1234] Task: Name: TaskTeste3 Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 18:37:27,762 DEBUG CreateCSTask 311 
+ [Debug Message] - Task with the ID: [e659342e-bc99-4007-84af-baae66eec5db] created with Success!
+2017-04-12 18:37:29,935 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [1]
+2017-04-12 18:37:31,653 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-12 18:37:33,502 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [1]
+2017-04-12 18:37:53,952 DEBUG GetCSTaskToCreate 361 
+ [Debug Message] - User ID: [1bbe5c28] Task: Name: TaskTeste5 Exp: 04-03-2017 17:41:00 Topic: temperature 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 18:37:54,021 DEBUG CreateCSTask 311 
+ [Debug Message] - Task with the ID: [6281816d-1168-4dac-8da6-eb6060a620e9] created with Success!
+2017-04-12 18:37:56,243 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-12 18:37:58,712 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-12 18:38:47,777 DEBUG GetCSTaskToCreate 361 
+ [Debug Message] - User ID: [1bbe5c28] Task: Name: TaskTeste5 Exp: 04-03-2017 17:41:00 Topic: temperature/lisbon 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 18:38:47,834 DEBUG CreateCSTask 311 
+ [Debug Message] - Task with the ID: [0c19131f-992d-4ebd-96e7-8c3c6101e97b] created with Success!
+2017-04-12 18:38:57,778 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-12 18:39:38,801 ERROR SubscribeTopic 230 
+ [Debug Message] - Invalid User ID: [1234] OR Invalid Topic: [temperaturelisbon]
+2017-04-12 18:40:20,612 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-12 18:40:33,378 DEBUG GetCSTaskToCreate 361 
+ [Debug Message] - User ID: [1bbe5c28] Task: Name: TaskTesteGPS Exp: 04-03-2017 17:41:00 Topic: GPS 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-12 18:40:33,445 DEBUG CreateCSTask 311 
+ [Debug Message] - Task with the ID: [432a4207-0889-4c72-a566-a2d147d96b20] created with Success!
+2017-04-12 18:40:46,130 DEBUG SubscribeTopic 235 
+ [Debug Message] - Topic: [GPS] SUBSCRIBED by User ID: [1234]
+2017-04-12 18:40:48,571 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [3]
+2017-04-12 18:40:52,051 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-12 18:40:58,731 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [3]
+2017-04-12 18:41:26,212 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-12 19:01:33,846 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-12 19:01:39,303 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [3]
+2017-04-12 19:01:47,731 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-12 19:02:03,182 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [3]
+2017-04-12 19:02:07,365 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [3]
+2017-04-12 19:02:44,009 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [3]
+2017-04-12 19:02:58,628 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-12 19:03:23,783 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-12 19:04:35,950 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-12 19:05:03,191 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [3]
+2017-04-12 19:05:05,326 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-12 19:05:10,931 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [3]
+2017-04-12 19:05:14,540 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-12 19:05:23,892 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [3]
+2017-04-12 19:05:25,729 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-12 19:05:40,307 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [3]
+2017-04-12 19:05:43,392 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-12 19:05:56,777 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [3]
+2017-04-12 19:05:59,503 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-12 19:06:07,728 DEBUG GetSubscribedTasks 261 
+ [Debug Message] - Number of Tasks: [3]
+2017-04-12 19:06:09,531 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [2]

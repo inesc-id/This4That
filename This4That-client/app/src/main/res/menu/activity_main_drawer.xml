@@ -3,21 +3,18 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/myTasksitem"
             android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:title="My Tasks" />
+
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/subscribedTasks"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:title="Subscribed Tasks" />
         <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:id="@+id/searchTasks"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Search Tasks" />
     </group>
 
     <item android:title="Communicate">

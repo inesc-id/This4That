@@ -22,5 +22,12 @@ namespace This4That_serverNode.Domain
                 users = value;
             }
         }
+
+        public UserStorage()
+        {
+            User user = new User();
+            user.UserID = "1234";
+            this.Users.Add("1234", user);
+        }
     }
 }

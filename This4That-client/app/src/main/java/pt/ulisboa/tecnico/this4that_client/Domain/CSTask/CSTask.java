@@ -15,8 +15,17 @@ public class CSTask {
     private String name;
     private Date expirationDate;
     private String topic;
-    private TriggerSensor trigger;
     private SensingTask sensingTask;
+    private String taskID;
+    private InteractiveTask interactiveTask;
+
+    public String getTaskID() {
+        return taskID;
+    }
+
+    public void setTaskID(String taskID) {
+        this.taskID = taskID;
+    }
 
     public String getName() {
         return name;
@@ -42,14 +51,6 @@ public class CSTask {
         this.topic = topic;
     }
 
-    public TriggerSensor getTrigger() {
-        return trigger;
-    }
-
-    public void setTrigger(TriggerSensor trigger) {
-        this.trigger = trigger;
-    }
-
     public SensingTask getSensingTask() {
         return sensingTask;
     }
@@ -58,13 +59,20 @@ public class CSTask {
         this.sensingTask = sensingTask;
     }
 
+    public InteractiveTask getInteractiveTask() {
+        return interactiveTask;
+    }
+
+    public void setInteractiveTask(InteractiveTask interactiveTask) {
+        this.interactiveTask = interactiveTask;
+    }
+
     public HashMap toHashMap() {
         HashMap<String, Object> jsonElements = new HashMap<>();
 
         jsonElements.put("name", name);
         jsonElements.put("expDate", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(expirationDate));
         jsonElements.put("topic", topic);
-        jsonElements.put("trigger", trigger.toJSON());
         jsonElements.put("sensingTask", sensingTask.toJSON());
 
         return jsonElements;

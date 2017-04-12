@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using System;
 using System.Collections.Generic;
 
@@ -11,12 +12,27 @@ namespace This4That_library.Models.Domain
         private string name;
         private DateTime expirationDate;
         private string topic;
-        private Trigger trigger;
         private SensingTask sensingTask;
         private InteractiveTask interactiveTask;
 
-        
+
         #region PROPERTIES
+
+
+        [JsonProperty(PropertyName = "taskId")]
+        public string TaskID
+        {
+            get
+            {
+                return taskID;
+            }
+
+            set
+            {
+                taskID = value;
+            }
+        }
+
         [JsonProperty(PropertyName = "name", Required = Required.Always)]
         public string Name
         {
@@ -59,20 +75,6 @@ namespace This4That_library.Models.Domain
             }
         }
 
-        [JsonProperty(PropertyName = "trigger")]
-        public Trigger Trigger
-        {
-            get
-            {
-                return trigger;
-            }
-
-            set
-            {
-                trigger = value;
-            }
-        }
-
         [JsonProperty(PropertyName = "sensingTask")]
         public SensingTask SensingTask
         {
@@ -84,19 +86,6 @@ namespace This4That_library.Models.Domain
             set
             {
                 sensingTask = value;
-            }
-        }
-
-        public string TaskID
-        {
-            get
-            {
-                return taskID;
-            }
-
-            set
-            {
-                taskID = value;
             }
         }
 
@@ -120,10 +109,6 @@ namespace This4That_library.Models.Domain
             string result = null;
 
             result = $"Name: {name} Exp: {expirationDate.ToString()} Topic: {topic} " + Environment.NewLine;
-            if (Trigger != null)
-                result += $"Trigger: {trigger.ToString()} " + Environment.NewLine;
-            else
-                result += $"Trigger: NULL ";
             if (SensingTask != null)
                 result += $"SensingTask: {sensingTask.ToString()} ";
             else
@@ -132,69 +117,7 @@ namespace This4That_library.Models.Domain
         }
     }
 
-    [Serializable]
-    public class Trigger
-    {
-        private SensorType sensor;
-        private string param1;
-        private string triggerInfo2;
-
-        [JsonProperty(PropertyName = "sensor", Required = Required.Always)]
-        public SensorType Sensor
-        {
-            get
-            {
-                return sensor;
-            }
-
-            set
-            {
-                sensor = value;
-            }
-        }
-
-        [JsonProperty(PropertyName = "param1")]
-        public string Param1
-        {
-            get
-            {
-                return param1;
-            }
-
-            set
-            {
-                param1 = value;
-            }
-        }
-
-        [JsonProperty(PropertyName = "param2")]
-        public string Param2
-        {
-            get
-            {
-                return triggerInfo2;
-            }
-
-            set
-            {
-                triggerInfo2 = value;
-            }
-        }
-
-        public override string ToString()
-        {
-            String result = null;
-
-            result += $"Sensor: {Sensor.ToString()} ";
-            if (Param1 != null)
-                result += $"Param1: {Param1.ToString()} ";
-            if (Param2 != null)
-                result += $"Param2: {Param2.ToString()}";
-
-            return result;
-        }
-    }
-
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum SensorType
     {
         NONE,
@@ -207,7 +130,7 @@ namespace This4That_library.Models.Domain
     {
         private SensorType sensor;
 
-        [JsonProperty(PropertyName = "sensor", Required = Required.Always)]
+        [JsonProperty(PropertyName = "sensor", Required = Required.Always), JsonConverter(typeof(StringEnumConverter))]
         public SensorType Sensor
         {
             get

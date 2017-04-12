@@ -10,7 +10,8 @@ namespace This4That_serverNode.Domain
     public class User
     {
         private string userID;
-        private List<CSTask> colTasks = new List<CSTask>();
+        private List<string> myTasks = new List<string>();
+        private List<string> subscribedTopics = new List<string>();
 
         public string UserID
         {
@@ -25,16 +26,29 @@ namespace This4That_serverNode.Domain
             }
         }
 
-        public List<CSTask> ColTasks
+        public List<string> MyTasks
         {
             get
             {
-                return colTasks;
+                return myTasks;
             }
 
             set
             {
-                colTasks = value;
+                myTasks = value;
+            }
+        }
+
+        public List<string> SubscribedTopics
+        {
+            get
+            {
+                return subscribedTopics;
+            }
+
+            set
+            {
+                subscribedTopics = value;
             }
         }
     }
