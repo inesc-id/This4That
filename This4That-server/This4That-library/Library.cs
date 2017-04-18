@@ -69,7 +69,6 @@ namespace This4That_library
                 {
                     return false;
                 }
-                //get the userID and the encrypted Task
                 if (!GetTaskFromPostBody(postBody, out csTask, typeFullName, ref errorMessage))
                 {
                     return false;

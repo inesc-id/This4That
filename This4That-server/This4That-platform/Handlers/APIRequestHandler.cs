@@ -228,8 +228,7 @@ namespace This4That_platform.Handlers
                 if (!this.serverMgr.RemoteTaskDistributor.SubscribeTopic(userId, topicName))
                 {
                     Global.Log.ErrorFormat("Invalid User ID: [{0}] OR Invalid Topic: [{1}]", userId, topicName);
-                    response.SetResponse(new Dictionary<string, string>() { { "errorMessage", "Invalid User ID OR Invalid Topic!" } },
-                                        APIResponseDTO.RESULT_TYPE.ERROR);
+                    response.SetErrorResponse("Invalid User ID OR Invalid Topic!", APIResponseDTO.RESULT_TYPE.ERROR);
                     return false;
                 }
                 Global.Log.DebugFormat("Topic: [{0}] SUBSCRIBED by User ID: [{1}]", topicName, userId);

@@ -3,18 +3,12 @@ package pt.ulisboa.tecnico.this4that_client.serviceLayer;
 import android.content.Context;
 import android.util.Log;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
-import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
 
 import pt.ulisboa.tecnico.this4that_client.Domain.CSTask.CSTask;
-import pt.ulisboa.tecnico.this4that_client.JSON.DateDeserializer;
 import pt.ulisboa.tecnico.this4that_client.applicationLayer.HttpClient;
 import pt.ulisboa.tecnico.this4that_client.fragment.MyTasksFragment;
-import pt.ulisboa.tecnico.this4that_client.fragment.SearchTasksFragment;
+import pt.ulisboa.tecnico.this4that_client.fragment.SearchTopicsFragment;
 import pt.ulisboa.tecnico.this4that_client.fragment.SubscribedTasksFragment;
 
 import static android.content.ContentValues.TAG;
@@ -32,7 +26,7 @@ public class ServerAPI {
     private String GETTOPICS = "topic/";
 
     public ServerAPI() {
-        this.serverURL = "http://192.168.1.101:58949/api/";
+        this.serverURL = "http://192.168.1.111:58949/api/";
     }
 
     public boolean calcTaskCostAPI(CSTask task, Context ctx) {
@@ -78,11 +72,11 @@ public class ServerAPI {
         return  true;
     }
 
-    public boolean getTopics(SearchTasksFragment fragment) {
+    public boolean getTopics(SearchTopicsFragment fragment) {
 
-        GetTopicsService topicsService;
+        SearchTopicsService topicsService;
         try {
-            topicsService = new GetTopicsService(fragment);
+            topicsService = new SearchTopicsService(fragment);
             topicsService.execute(this.serverURL + GETTOPICS);
             return true;
         } catch (Exception ex) {
@@ -111,6 +105,19 @@ public class ServerAPI {
         try {
             subscribedTasks = new GetSubscribedTasksService(fragment);
             subscribedTasks.execute(this.serverURL + subTasksURL);
+            return true;
+        } catch (Exception ex) {
+            Log.d(TAG, ex.getMessage());
+            return false;
+        }
+    }
+
+    public boolean subscribeTopic(Context context, String topicName, String userID){
+        SubscribeTopicService subscribeTopicService;
+        String subTasksURL = "user/" + userID + "/topic/" + topicName + "/subscribe";
+        try {
+            subscribeTopicService = new SubscribeTopicService(context);
+            subscribeTopicService.execute(this.serverURL + subTasksURL);
             return true;
         } catch (Exception ex) {
             Log.d(TAG, ex.getMessage());

@@ -10,7 +10,7 @@ import java.net.SocketTimeoutException;
 import java.util.List;
 
 import pt.ulisboa.tecnico.this4that_client.Domain.CSTask.CSTask;
-import pt.ulisboa.tecnico.this4that_client.Domain.DTO.GetMyTasksResponseDTO;
+import pt.ulisboa.tecnico.this4that_client.JSON.DTO.GetMyTasksResponseDTO;
 import pt.ulisboa.tecnico.this4that_client.GlobalApp;
 import pt.ulisboa.tecnico.this4that_client.adapters.MyTasksAdapter;
 import pt.ulisboa.tecnico.this4that_client.applicationLayer.HttpClient;
@@ -62,10 +62,17 @@ public class GetMyTasksService extends AsyncTask<String,Integer, String> {
             gson = HttpClient.getGsonAPI();
             responseDTO = gson.fromJson(result, GetMyTasksResponseDTO.class);
 
+            if (responseDTO.getErrorCode() != 1){
+                Toast.makeText(myTasksFragment.getContext()
+                               , "Cannot obtain my Tasks!"
+                               , Toast.LENGTH_LONG).show();
+                return;
+            }
             globalApp = (GlobalApp) myTasksFragment.getParentActivity().getApplicationContext();
             myTasks = responseDTO.getResponse();
             globalApp.setMyTasks(myTasks);
             MyTasksAdapter tasksAdapter = new MyTasksAdapter(myTasks);
+            //new tasks list
             this.myTasksFragment.getRecyclerView().setAdapter(tasksAdapter);
 
         }catch (Exception ex){

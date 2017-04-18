@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="pt.ulisboa.tecnico.this4that_client.activity.CreateTaskActivity">
+
+    <item
+        android:id="@+id/action_create_task"
+        android:title="Create Task"
+        android:icon="@drawable/createnew1_white"
+        app:showAsAction="always"/>
+</menu>

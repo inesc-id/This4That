@@ -9,9 +9,11 @@ import com.google.gson.Gson;
 
 import java.net.SocketTimeoutException;
 
-import pt.ulisboa.tecnico.this4that_client.Domain.DTO.TaskCostResponseDTO;
+import pt.ulisboa.tecnico.this4that_client.JSON.DTO.TaskCostResponseDTO;
+import pt.ulisboa.tecnico.this4that_client.activity.CreateTaskActivity;
 import pt.ulisboa.tecnico.this4that_client.activity.MainActivity;
 import pt.ulisboa.tecnico.this4that_client.applicationLayer.HttpClient;
+import pt.ulisboa.tecnico.this4that_client.fragment.ConfirmTaskCreation;
 
 /**
  * Created by Calado on 05-04-2017.
@@ -44,8 +46,10 @@ public class CalcTaskCostService extends AsyncTask<String,Integer, String>{
     @Override
     protected void onPostExecute(String result){
         Gson gson = new Gson();
-        MainActivity activity;
+        CreateTaskActivity activity;
         TaskCostResponseDTO taskCostResponseDTO;
+        ConfirmTaskCreation confirmTaskCreation;
+
         if (ex != null && ex instanceof SocketTimeoutException){
             Toast.makeText(context, "Cannot connect to server!", Toast.LENGTH_LONG).show();
             return;
@@ -55,8 +59,9 @@ public class CalcTaskCostService extends AsyncTask<String,Integer, String>{
             return;
         }
         taskCostResponseDTO = gson.fromJson(result, TaskCostResponseDTO.class);
-        activity = (MainActivity) context;
-        activity.getTxtRefToPay().setText(taskCostResponseDTO.getResponse().getRefToPay());
-        activity.getTxtValToPay().setText(taskCostResponseDTO.getResponse().getValToPay());
+        activity = (CreateTaskActivity) context;
+
+        confirmTaskCreation = new ConfirmTaskCreation();
+        confirmTaskCreation.show(activity.getSupportFragmentManager(), "confirmTaskDialog");
     }
 }

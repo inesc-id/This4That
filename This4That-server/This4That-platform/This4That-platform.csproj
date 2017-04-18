@@ -97,10 +97,13 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
-    <None Include="Config\configInstances.xsd">
+    <Content Include="Config\configInstances.xsd">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+      <BrowseToURL>~/Config/configInstances.xsd</BrowseToURL>
+    </Content>
+    <None Include="Properties\PublishProfiles\This4That - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\This4That - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\This4ThatIIS.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -155,7 +158,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>58949</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://192.168.1.101:58949/</IISUrl>
+          <IISUrl>http://192.168.1.111:58949/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

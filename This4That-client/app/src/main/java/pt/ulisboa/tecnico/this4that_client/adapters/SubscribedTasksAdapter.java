@@ -30,7 +30,6 @@ public class SubscribedTasksAdapter extends RecyclerView.Adapter<SubscribedTasks
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.subscribed_tasks_row, parent, false);
         ViewHolder viewHolder = new ViewHolder(view);
 
-
         return viewHolder;
     }
 

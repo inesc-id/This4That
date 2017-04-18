@@ -68,3 +68,7 @@ C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\T
 C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-platform\obj\Release\This4That-platform.csprojResolveAssemblyReference.cache
 C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-platform\obj\Release\This4That-platform.dll
 C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-platform\obj\Release\This4That-platform.pdb
+C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-platform\bin\Config\configInstances.xml
+C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-platform\bin\Config\configInstances.xsd
+C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-platform\obj\Release\This4That_platform.Properties.Resources.resources
+C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-platform\obj\Release\This4That-platform.csproj.GenerateResource.Cache

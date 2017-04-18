@@ -9,6 +9,7 @@ namespace This4That_platform.Integration
     public class APIResponseDTO
     {
         private int errorCode = -1;
+        private string errorMessage = null;
         private object response = null;
 
         [JsonProperty(PropertyName = "errorCode")]
@@ -22,6 +23,20 @@ namespace This4That_platform.Integration
             set
             {
                 errorCode = value;
+            }
+        }
+
+        [JsonProperty(PropertyName = "errorMessage")]
+        public string ErrorMessage
+        {
+            get
+            {
+                return errorMessage;
+            }
+
+            set
+            {
+                errorMessage = value;
             }
         }
 
@@ -39,6 +54,7 @@ namespace This4That_platform.Integration
             }
         }
 
+
         public enum RESULT_TYPE{
             SUCCESS = 1,
             ERROR = -1
@@ -48,6 +64,13 @@ namespace This4That_platform.Integration
         {
             this.Response = response;
             ErrorCode = (int)type;
+        }
+
+        public void SetErrorResponse(string errorMessage, RESULT_TYPE type)
+        {
+            this.ErrorCode = (int)type;
+            this.ErrorMessage = errorMessage;
+            this.Response = null;
         }
     }
 }

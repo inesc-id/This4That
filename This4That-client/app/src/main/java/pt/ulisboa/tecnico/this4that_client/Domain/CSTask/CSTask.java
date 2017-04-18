@@ -1,6 +1,7 @@
 package pt.ulisboa.tecnico.this4that_client.Domain.CSTask;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 
@@ -40,7 +41,12 @@ public class CSTask {
     }
 
     public void setExpirationDate(Date expirationDate) {
-        this.expirationDate = expirationDate;
+
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(expirationDate);
+        //add one week
+        cal.add(Calendar.DATE, 7);//7 days
+        this.expirationDate = cal.getTime();
     }
 
     public String getTopic() {

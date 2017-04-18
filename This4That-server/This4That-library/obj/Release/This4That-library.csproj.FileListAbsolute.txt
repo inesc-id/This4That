@@ -6,3 +6,5 @@ C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\T
 C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-library\obj\Release\This4That-library.csprojResolveAssemblyReference.cache
 C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-library\obj\Release\This4That-library.dll
 C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-library\obj\Release\This4That-library.pdb
+C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-library\obj\Release\This4That_library.Properties.Resources.resources
+C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-library\obj\Release\This4That-library.csproj.GenerateResource.Cache

@@ -9,7 +9,7 @@ import pt.ulisboa.tecnico.this4that_client.Enums.SensorType;
  */
 
 public class SensingTask {
-    private SensorType sensor;
+    private SensorType sensor = null;
 
     public SensorType getSensor() {
         return sensor;
@@ -20,7 +20,7 @@ public class SensingTask {
     }
 
 
-    public Object toJSON(){
+    public HashMap<String, String> toJSON(){
         HashMap<String, String> hashSensingTask = new HashMap<>();
 
         hashSensingTask.put("sensor", (sensor == null ? null : sensor.toString()));

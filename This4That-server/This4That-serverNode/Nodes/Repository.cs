@@ -308,6 +308,7 @@ namespace This4That_serverNode.Nodes
                             auxTopic = ColTopics[topicName];
                             foreach (string taskId in auxTopic.ListOfTaskIDs)
                             {
+                                //is asubscribed task but not created by the user
                                 if (ColTasks.ContainsKey(taskId) && !UserStorage.Users[userID].MyTasks.Contains(taskId))
                                 {
                                     subscribedTasks.Add(ColTasks[taskId]);

@@ -89,7 +89,7 @@ namespace This4That_library.Models.Domain
             }
         }
 
-        [JsonProperty(PropertyName = "interactiveTask", Required = Required.Always)]
+        [JsonProperty(PropertyName = "interactiveTask")]
         public InteractiveTask InteractiveTask
         {
             get

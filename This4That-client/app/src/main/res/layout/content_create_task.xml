@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="pt.ulisboa.tecnico.this4that_client.activity.CreateTaskActivity"
+        tools:showIn="@layout/activity_create_task"
+        android:id="@+id/content_create_task">
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingRight="8dp"
+            android:paddingLeft="8dp"
+            android:id="@+id/layout_txtCreateTask">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:hint="Task Name"
+                android:id="@+id/txtTaskName"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:paddingRight="8dp"
+            android:paddingLeft="8dp"
+            android:layout_below="@+id/layout_txtCreateTask"
+            android:layout_alignParentStart="true"
+            android:id="@+id/layout_txtTopicName">
+
+            <EditText
+                android:id="@+id/txtTopicName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/layout_txtCreateTask"
+                android:hint="Topic Name (use '-' for sub-topics)"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_txtTopicName"
+            android:paddingLeft="12dp"
+            android:paddingTop="16dp"
+            android:id="@+id/lblTaskType"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18dp"
+            android:text="Type of Task"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_below="@id/lblTaskType"
+            android:layout_marginLeft="11dp"
+            android:id="@+id/lineTask"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/lineTask"
+            android:paddingTop="8dp"
+            android:paddingLeft="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_alignParentStart="true"
+            android:id="@+id/radioGroupTaskType">
+
+            <RadioButton
+                android:id="@+id/radBtnSensingTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="8dp"
+                android:text="SensingTask" />
+
+            <RadioButton
+                android:id="@+id/radBtnInteractiveTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="InteractiveTask"/>
+        </RadioGroup>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/radioGroupTaskType"
+            android:layout_marginLeft="8dp"
+            android:visibility="gone"
+            android:id="@+id/layout_SensingTask">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingLeft="12dp"
+                android:id="@+id/lblSensorType"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp"
+                android:text="Please choose a sensor..."/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/lblSensorType"
+                android:paddingLeft="8dp"
+                android:layout_alignParentStart="true"
+                android:id="@+id/radioGroupSensorType">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Camera"
+                    android:id="@+id/radBtnCamera"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Temperature"
+                    android:id="@+id/radBtnTemperature"/>
+            </RadioGroup>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radioGroupTaskType"
+            android:layout_marginLeft="8dp"
+            android:visibility="gone"
+            android:id="@+id/layout_Interactive_Task">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingRight="8dp"
+                android:paddingLeft="8dp"
+                android:layout_alignParentStart="true"
+                android:id="@+id/layout_txtQuestion">
+
+                <EditText
+                    android:id="@+id/txtQuestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:hint="Question"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12dp"
+                android:paddingTop="16dp"
+                android:layout_below="@+id/layout_txtQuestion"
+                android:id="@+id/lblAnswers"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp"
+                android:text="Answers"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="@color/colorPrimaryDark"
+                android:layout_below="@id/lblAnswers"
+                android:layout_marginLeft="11dp"
+                android:id="@+id/lineAnswers"/>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingRight="8dp"
+                android:paddingLeft="8dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/lblAnswers"
+                android:id="@+id/layout_txtAnswer1">
+
+                <EditText
+                    android:id="@+id/txtAnswer1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:hint="Possible answer"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingRight="8dp"
+                android:paddingLeft="8dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/layout_txtAnswer1"
+                android:id="@+id/layout_txtAnswer2">
+
+                <EditText
+                    android:id="@+id/txtAnswer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:hint="Possible answer"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingRight="8dp"
+                android:paddingLeft="8dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/layout_txtAnswer2"
+                android:id="@+id/layout_txtAnswer3">
+
+                <EditText
+                    android:id="@+id/txtAnswer3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:hint="Possible answer"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingRight="8dp"
+                android:paddingLeft="8dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/layout_txtAnswer3"
+                android:id="@+id/layout_txtAnswer4">
+
+                <EditText
+                    android:id="@+id/txtAnswer4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:hint="Possible answer"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp" />
+            </android.support.design.widget.TextInputLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

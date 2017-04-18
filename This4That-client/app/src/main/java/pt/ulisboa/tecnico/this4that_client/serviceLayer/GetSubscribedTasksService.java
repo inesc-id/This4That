@@ -10,12 +10,10 @@ import java.net.SocketTimeoutException;
 import java.util.List;
 
 import pt.ulisboa.tecnico.this4that_client.Domain.CSTask.CSTask;
-import pt.ulisboa.tecnico.this4that_client.Domain.DTO.GetMyTasksResponseDTO;
+import pt.ulisboa.tecnico.this4that_client.JSON.DTO.GetMyTasksResponseDTO;
 import pt.ulisboa.tecnico.this4that_client.GlobalApp;
-import pt.ulisboa.tecnico.this4that_client.adapters.MyTasksAdapter;
 import pt.ulisboa.tecnico.this4that_client.adapters.SubscribedTasksAdapter;
 import pt.ulisboa.tecnico.this4that_client.applicationLayer.HttpClient;
-import pt.ulisboa.tecnico.this4that_client.fragment.MyTasksFragment;
 import pt.ulisboa.tecnico.this4that_client.fragment.SubscribedTasksFragment;
 
 /**
@@ -30,7 +28,6 @@ public class GetSubscribedTasksService extends AsyncTask<String, Integer, String
     public GetSubscribedTasksService(SubscribedTasksFragment fragment){
         this.fragment = fragment;
     }
-
 
     @Override
     protected String doInBackground(String... params) {
@@ -63,6 +60,11 @@ public class GetSubscribedTasksService extends AsyncTask<String, Integer, String
             //get gson object with the date serializer
             gson = HttpClient.getGsonAPI();
             responseDTO = gson.fromJson(result, GetMyTasksResponseDTO.class);
+            if (responseDTO.getErrorCode() != 1){
+                Toast.makeText(fragment.getContext(), "Cannot obtain my Tasks! \n" + responseDTO.getErrorMessage()
+                               , Toast.LENGTH_LONG).show();
+                return;
+            }
 
             globalApp = (GlobalApp) fragment.getParentActivity().getApplicationContext();
             subscribedTasks = responseDTO.getResponse();

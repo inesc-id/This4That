@@ -1,15 +1,9 @@
 package pt.ulisboa.tecnico.this4that_client.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.ViewGroupCompat;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -18,9 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.Date;
@@ -34,7 +26,7 @@ import pt.ulisboa.tecnico.this4that_client.Enums.SensorType;
 import pt.ulisboa.tecnico.this4that_client.GlobalApp;
 import pt.ulisboa.tecnico.this4that_client.R;
 import pt.ulisboa.tecnico.this4that_client.fragment.MyTasksFragment;
-import pt.ulisboa.tecnico.this4that_client.fragment.SearchTasksFragment;
+import pt.ulisboa.tecnico.this4that_client.fragment.SearchTopicsFragment;
 import pt.ulisboa.tecnico.this4that_client.fragment.SubscribedTasksFragment;
 import pt.ulisboa.tecnico.this4that_client.serviceLayer.ServerAPI;
 
@@ -172,7 +164,7 @@ public class MainActivity extends AppCompatActivity
             replaceFragment(fragment, false, false);
 
         }else if (id == R.id.searchTasks) {
-            Fragment fragment = new SearchTasksFragment();
+            Fragment fragment = new SearchTopicsFragment();
             replaceFragment(fragment, false, false);
         }else if (id == R.id.nav_share) {
 
@@ -186,19 +178,8 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-    public TextView getTxtRefToPay() {
-        return txtRefToPay;
-    }
-
     public TextView getTxtValToPay() {
         return txtValToPay;
     }
 
-    public TextView getTxtTaskID() {
-        return txtTaskID;
-    }
-
-    public TextView getTxtTxID() {
-        return txtTxID;
-    }
 }

@@ -1,6 +1,7 @@
 package pt.ulisboa.tecnico.this4that_client.adapters;
 
 import android.content.Context;
+import android.provider.Settings;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.Toast;
 import java.util.List;
 
 import pt.ulisboa.tecnico.this4that_client.Domain.CSTask.CSTask;
+import pt.ulisboa.tecnico.this4that_client.GlobalApp;
 import pt.ulisboa.tecnico.this4that_client.R;
 
 /**
@@ -38,6 +40,7 @@ public class TopicsAdapter extends RecyclerView.Adapter<TopicsAdapter.ViewHolder
     @Override
     public void onBindViewHolder(TopicsAdapter.ViewHolder holder, int position) {
         holder.txtTaskName.setText(this.topics.get(position));
+
     }
 
     @Override
@@ -49,16 +52,18 @@ public class TopicsAdapter extends RecyclerView.Adapter<TopicsAdapter.ViewHolder
 
         private TextView txtTaskName;
         private Button btnSubscribe;
+        private static GlobalApp globalApp;
 
         public ViewHolder(View view, final Context context) {
             super(view);
+            this.globalApp = (GlobalApp) context.getApplicationContext();
             txtTaskName = (TextView) view.findViewById(R.id.txtTopicName);
             btnSubscribe = (Button) view.findViewById(R.id.btnSubscribeTask);
             btnSubscribe.setOnClickListener(new View.OnClickListener(){
-
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(context, "Subscribe", Toast.LENGTH_SHORT).show();
+                    globalApp.getServerAPI().subscribeTopic(context,txtTaskName.getText().toString(),
+                                                            globalApp.getUserInfo().getUserId());
                 }
             });
         }

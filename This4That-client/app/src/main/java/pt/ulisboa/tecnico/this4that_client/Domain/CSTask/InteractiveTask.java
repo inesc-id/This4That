@@ -1,6 +1,6 @@
 package pt.ulisboa.tecnico.this4that_client.Domain.CSTask;
 
-import java.util.List;
+import java.util.ArrayList;
 
 /**
  * Created by Calado on 11-04-2017.
@@ -9,12 +9,25 @@ import java.util.List;
 public class InteractiveTask {
 
     private String question;
-    private List<Answers> answers;
+    private ArrayList<Answer> answers = new ArrayList<>();
 
     public InteractiveTask() {
+
     }
 
-    public class Answers{
-        private String answer;
+    public String getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
+    public ArrayList<Answer> getAnswers() {
+        return answers;
+    }
+
+    public void setAnswers(ArrayList<Answer> answers) {
+        this.answers = answers;
     }
 }

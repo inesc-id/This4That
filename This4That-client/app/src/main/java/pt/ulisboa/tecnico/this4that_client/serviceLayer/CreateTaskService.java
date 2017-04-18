@@ -9,7 +9,7 @@ import com.google.gson.Gson;
 
 import java.net.SocketTimeoutException;
 
-import pt.ulisboa.tecnico.this4that_client.Domain.DTO.CreateTaskResponseDTO;
+import pt.ulisboa.tecnico.this4that_client.JSON.DTO.CreateTaskResponseDTO;
 import pt.ulisboa.tecnico.this4that_client.activity.MainActivity;
 import pt.ulisboa.tecnico.this4that_client.applicationLayer.HttpClient;
 
@@ -57,7 +57,5 @@ public class CreateTaskService extends AsyncTask<String,Integer, String> {
         }
         createTaskResponse = gson.fromJson(result, CreateTaskResponseDTO.class);
         activity = (MainActivity) context;
-        activity.getTxtTaskID().setText(createTaskResponse.getResponse().getTaskId());
-        activity.getTxtTxID().setText(createTaskResponse.getResponse().getTransactionId());
     }
 }

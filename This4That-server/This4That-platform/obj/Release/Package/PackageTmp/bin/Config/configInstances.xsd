@@ -1,0 +1,17 @@
+<xs:schema targetNamespace="This4ThatNS" attributeFormDefault="unqualified" elementFormDefault="qualified" 
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:element xmlns="This4ThatNS" name="Config" type="configType"/>
+
+
+  <xs:complexType name="configType">
+    <xs:sequence>
+      <xs:element xmlns="This4ThatNS" type="NodeType" name="ServerManager" maxOccurs="1" minOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="NodeType">
+      <xs:attribute name="hostname" type="xs:string"  use="required"/>
+      <xs:attribute name="port" type="xs:int"  use="required"/>
+  </xs:complexType>
+</xs:schema>

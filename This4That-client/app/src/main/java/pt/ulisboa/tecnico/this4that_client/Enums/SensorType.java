@@ -8,5 +8,6 @@ public enum SensorType
 {
     NONE,
     GPS,
-    TEMPERATURE
+    TEMPERATURE,
+    CAMERA
 }
