@@ -46,7 +46,7 @@ public class HttpClient {
             connection.setConnectTimeout(2000);
             //send the request
             outStream = new DataOutputStream(connection.getOutputStream());
-            outStream.writeBytes(postBody);
+            outStream.write(postBody.getBytes("UTF-8"));
             outStream.close();
 
             if (connection.getResponseCode() != 200)
@@ -85,8 +85,10 @@ public class HttpClient {
             connection.setRequestMethod("GET");
             connection.setUseCaches(false);
             connection.setConnectTimeout(5000);
-            if (connection.getResponseCode() != 200)
+
+            if (connection.getResponseCode() != 200){
                 inStream = connection.getErrorStream();
+            }
             else
                 inStream = connection.getInputStream();
             bufReader = new BufferedReader(new InputStreamReader(inStream));

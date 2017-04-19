@@ -15,5 +15,20 @@
             android:text="TextView"
             android:layout_centerVertical="true"
             android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/btnExecuteTask"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Execute"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lineRow"
+            android:layout_below="@id/btnExecuteTask"
+            android:id="@+id/lineTask"/>
     </RelativeLayout>
 </LinearLayout>

@@ -15,14 +15,8 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.Date;
 
-
-import pt.ulisboa.tecnico.this4that_client.Domain.CSTask.CSTask;
-import pt.ulisboa.tecnico.this4that_client.Domain.CSTask.SensingTask;
-import pt.ulisboa.tecnico.this4that_client.Domain.CSTask.TriggerSensor;
 import pt.ulisboa.tecnico.this4that_client.Domain.UserInfo;
-import pt.ulisboa.tecnico.this4that_client.Enums.SensorType;
 import pt.ulisboa.tecnico.this4that_client.GlobalApp;
 import pt.ulisboa.tecnico.this4that_client.R;
 import pt.ulisboa.tecnico.this4that_client.fragment.MyTasksFragment;
@@ -99,22 +93,6 @@ public class MainActivity extends AppCompatActivity
             ft.addToBackStack(backStateName);
             ft.commit();
         }
-    }
-
-    public CSTask CreateDummyTask(){
-        CSTask csTask = new CSTask();
-        SensingTask sensingTask = new SensingTask();
-        sensingTask.setSensor(SensorType.TEMPERATURE);
-        TriggerSensor triggerSensor = new TriggerSensor();
-        triggerSensor.setType(SensorType.GPS);
-        triggerSensor.setParam1("50.2");
-        triggerSensor.setParam2("10");
-
-        csTask.setExpirationDate(new Date());
-        csTask.setName("TaskTeste");
-        csTask.setTopic("temperature");
-        csTask.setSensingTask(sensingTask);
-        return  csTask;
     }
 
 

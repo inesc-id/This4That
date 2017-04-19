@@ -63,6 +63,7 @@ public class SubscribeTopicService extends AsyncTask<String, Integer, String> {
             }
             Toast.makeText(context, "Topic Subscribed!", Toast.LENGTH_LONG).show();
         }catch (Exception ex){
+            Toast.makeText(context, "Cannot subscribe Task!", Toast.LENGTH_LONG).show();
             Log.d("This4That", ex.getMessage());
         }
 

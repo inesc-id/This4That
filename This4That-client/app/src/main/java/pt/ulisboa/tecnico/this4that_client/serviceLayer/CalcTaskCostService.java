@@ -21,12 +21,14 @@ import pt.ulisboa.tecnico.this4that_client.fragment.ConfirmTaskCreation;
 
 public class CalcTaskCostService extends AsyncTask<String,Integer, String>{
 
-    public Context context;
+    public CreateTaskActivity context;
     final String TAG = "CalcTaskCostService";
     private Exception ex;
+    private String postBody;
 
-    public CalcTaskCostService(Context context){
+    public CalcTaskCostService(CreateTaskActivity context, String postBody){
         this.context = context;
+        this.postBody = postBody;
     }
 
 
@@ -49,6 +51,7 @@ public class CalcTaskCostService extends AsyncTask<String,Integer, String>{
         CreateTaskActivity activity;
         TaskCostResponseDTO taskCostResponseDTO;
         ConfirmTaskCreation confirmTaskCreation;
+        String message = null;
 
         if (ex != null && ex instanceof SocketTimeoutException){
             Toast.makeText(context, "Cannot connect to server!", Toast.LENGTH_LONG).show();
@@ -59,9 +62,10 @@ public class CalcTaskCostService extends AsyncTask<String,Integer, String>{
             return;
         }
         taskCostResponseDTO = gson.fromJson(result, TaskCostResponseDTO.class);
-        activity = (CreateTaskActivity) context;
-
-        confirmTaskCreation = new ConfirmTaskCreation();
-        confirmTaskCreation.show(activity.getSupportFragmentManager(), "confirmTaskDialog");
+        message = "In order to create the task you need to pay " + taskCostResponseDTO.getResponse().getValToPay();
+        //the postBody to CalcCost and CreateTask are the same, so we can pass it as argument
+        //to the CreateTask Service
+        confirmTaskCreation = ConfirmTaskCreation.newInstance(message, postBody);
+        confirmTaskCreation.show(context.getSupportFragmentManager(), "confirmTaskDialog");
     }
 }

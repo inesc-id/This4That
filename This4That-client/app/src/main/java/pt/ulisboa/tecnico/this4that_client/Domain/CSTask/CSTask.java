@@ -5,8 +5,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 
-import pt.ulisboa.tecnico.this4that_client.Enums.SensorType;
-
 /**
  * Created by Calado on 30-03-2017.
  */
@@ -79,7 +77,7 @@ public class CSTask {
         jsonElements.put("name", name);
         jsonElements.put("expDate", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(expirationDate));
         jsonElements.put("topic", topic);
-        jsonElements.put("sensingTask", sensingTask.toJSON());
+        jsonElements.put("interactiveTask", interactiveTask.toHashMap());
 
         return jsonElements;
     }

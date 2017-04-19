@@ -17,3 +17,8 @@ hs_err_pid*
 /Server/This4That-master/packages
 /Server/This4That-master/This4That-server/*.user
 /Server/This4That-master/This4That-serverNode/*.user
+/This4That-server/This4That-platform/obj/Release
+/This4That-server/This4That-serverNode/bin/Debug
+/This4That-server/This4That-library/obj/Release/TempPE
+/This4That-server/This4That-test/obj/Release
+*.user

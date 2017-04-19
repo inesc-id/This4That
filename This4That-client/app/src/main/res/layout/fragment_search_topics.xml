@@ -7,10 +7,28 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_txtTopicName"
+            android:paddingLeft="12dp"
+            android:paddingTop="4dp"
+            android:id="@+id/lblTopics"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18dp"
+            android:text="Topics"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_below="@id/lblTopics"
+            android:id="@+id/lineTask"/>
+
         <android.support.v4.widget.SwipeRefreshLayout
             android:id="@+id/refreshSearchTopics"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lineTask">
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/searchTasksRecycleView"
                 android:layout_width="match_parent"

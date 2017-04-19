@@ -20,7 +20,7 @@ public class SensingTask {
     }
 
 
-    public HashMap<String, String> toJSON(){
+    public HashMap<String, String> toHashMap(){
         HashMap<String, String> hashSensingTask = new HashMap<>();
 
         hashSensingTask.put("sensor", (sensor == null ? null : sensor.toString()));

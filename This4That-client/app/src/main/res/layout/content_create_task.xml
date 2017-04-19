@@ -68,7 +68,6 @@
             android:layout_height="1.5dp"
             android:background="@color/colorPrimaryDark"
             android:layout_below="@id/lblTaskType"
-            android:layout_marginLeft="11dp"
             android:id="@+id/lineTask"/>
         <RadioGroup
             android:layout_width="match_parent"

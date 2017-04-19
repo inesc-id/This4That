@@ -114,8 +114,10 @@ public class CreateTaskActivity extends AppCompatActivity {
 
         switch (item.getItemId()){
             case R.id.action_create_task:
-                task = createTask();
-                validateTask(task);
+                /*task = createTask();
+                validateTask(task);*/
+                task = createDummyTask();
+                globalApp.getServerAPI().calcTaskCostAPI(task, this);
                 return  true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -138,7 +140,7 @@ public class CreateTaskActivity extends AppCompatActivity {
             //validate topic name
             matcher = pattern.matcher(task.getTopic());
             if (task.getTopic().isEmpty() || !matcher.find()){
-                txtTopicName.setError("Invalid Topic name!");
+                txtTopicName.setError("Avoid special characters!");
                 txtTopicName.requestFocus();
                 return false;
             }
@@ -215,5 +217,28 @@ public class CreateTaskActivity extends AppCompatActivity {
             Log.d("This4That", ex.getMessage());
             return null;
         }
+    }
+
+    public CSTask createDummyTask(){
+        CSTask task = new CSTask();
+        InteractiveTask interactiveTask;
+
+        try{
+            task.setName("Cantina do Social");
+            task.setTopic("TecnicoLisboa");
+            task.setExpirationDate(new Date());
+
+            interactiveTask = new InteractiveTask();
+            interactiveTask.setQuestion("Como está a fila para almoçar?");
+            interactiveTask.getAnswers().add(new Answer("Vazia"));
+            interactiveTask.getAnswers().add(new Answer("Algumas Pessoas"));
+            interactiveTask.getAnswers().add(new Answer("Muitas pessoas"));
+            task.setInteractiveTask(interactiveTask);
+            return task;
+        }catch (Exception ex){
+            Log.d("This4That", ex.getMessage());
+            return null;
+        }
+
     }
 }

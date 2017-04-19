@@ -10,6 +10,7 @@ import com.google.gson.Gson;
 import java.net.SocketTimeoutException;
 
 import pt.ulisboa.tecnico.this4that_client.JSON.DTO.CreateTaskResponseDTO;
+import pt.ulisboa.tecnico.this4that_client.activity.CreateTaskActivity;
 import pt.ulisboa.tecnico.this4that_client.activity.MainActivity;
 import pt.ulisboa.tecnico.this4that_client.applicationLayer.HttpClient;
 
@@ -19,11 +20,11 @@ import pt.ulisboa.tecnico.this4that_client.applicationLayer.HttpClient;
 
 public class CreateTaskService extends AsyncTask<String,Integer, String> {
 
-    public Context context;
+    public CreateTaskActivity context;
     final String TAG = "CalcTaskCostService";
     private Exception ex;
 
-    public CreateTaskService(Context context) {
+    public CreateTaskService(CreateTaskActivity context) {
         this.context = context;
     }
 
@@ -56,6 +57,12 @@ public class CreateTaskService extends AsyncTask<String,Integer, String> {
             return;
         }
         createTaskResponse = gson.fromJson(result, CreateTaskResponseDTO.class);
-        activity = (MainActivity) context;
+        if (createTaskResponse.getErrorCode() != 1){
+            Toast.makeText(context
+                    , "Cannot create Task!"
+                    , Toast.LENGTH_LONG).show();
+            return;
+        }
+        Toast.makeText(context, "Task created with Sucess!", Toast.LENGTH_LONG).show();
     }
 }

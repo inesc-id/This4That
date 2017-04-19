@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import pt.ulisboa.tecnico.this4that_client.GlobalApp;
 import pt.ulisboa.tecnico.this4that_client.R;
@@ -58,10 +59,13 @@ public class MyTasksFragment extends Fragment {
                 startActivity(intent);
             }
         });
-
-        this.globalApp.getServerAPI().getMyTasks(this.globalApp.getUserInfo().getUserId()
-                                                 , this);
         return view;
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        this.globalApp.getServerAPI().getMyTasks(this.globalApp.getUserInfo().getUserId(), this);
     }
 
     public RecyclerView getRecyclerView() {
