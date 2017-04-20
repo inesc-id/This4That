@@ -109,13 +109,13 @@ namespace This4That_serverNode.Nodes
             }
         }
 
-        public bool SubscribeTopic(string userId, string topicName)
+        public bool SubscribeTopic(string userId, string topicName, ref string errorMessage)
         {
             try
             {
-                Console.WriteLine("[INFO - TASK DISTRIBUTOR] : Going to Subscribe Topic: [{0}]", topicName);
+                Console.WriteLine("[INFO - TASK DISTRIBUTOR] : Going to Subscribe Topic: [{0}] for UserID: [{1}]", topicName, userId);
                 Log.DebugFormat("Going to subscribe Topic: [{0}] for UserID: [{1}]", topicName, userId);
-                return this.RemoteRepository.SubscribeTopic(userId, topicName);
+                return this.RemoteRepository.SubscribeTopic(userId, topicName, ref errorMessage);
             }
             catch (Exception ex)
             {
@@ -139,13 +139,13 @@ namespace This4That_serverNode.Nodes
             }
         }
 
-        public List<CSTask> GetSubscribedTasksByTopicName(string userID, string topicName)
+        public List<CSTask> GetSubscribedTasksByTopicName(string userID, string topicName, ref string errorMessage)
         {
             try
             {
-                Console.WriteLine("[INFO - TASK DISTRIBUTOR] : Fetching User Subscribed Tasks by Topic:[{0}]", topicName);
+                Console.WriteLine("[INFO - TASK DISTRIBUTOR] : Fetching User: [{0}] Subscribed Tasks by Topic:[{0}]", userID, topicName);
                 Log.DebugFormat("Going to fetch all tasks belonging to topicName: [{1}] for UserID: [{0}]", userID, topicName);
-                return this.RemoteRepository.GetSubscribedTasksbyTopic(userID, topicName);
+                return this.RemoteRepository.GetSubscribedTasksbyTopic(userID, topicName, ref errorMessage);
             }
             catch (Exception ex)
             {

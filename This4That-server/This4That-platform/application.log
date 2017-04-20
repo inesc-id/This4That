@@ -6930,3 +6930,160 @@ SensingTask: Sensor: TEMPERATURE
  [Debug Message] - Number of Tasks: [3]
 2017-04-19 22:35:46,185 DEBUG GetSubscribedTasks 260 
  [Debug Message] - Number of Tasks: [1]
+2017-04-19 22:45:54,951 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-04-19 22:45:55,071 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-04-19 22:45:55,077 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-04-19 22:47:28,123 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-04-19 22:47:28,255 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-04-19 22:47:28,278 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-04-19 22:47:38,711 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-04-19 22:47:38,756 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-04-19 22:47:38,799 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-04-19 22:47:38,845 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-04-19 22:47:38,891 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-04-19 22:54:09,991 DEBUG GetSubscribedTasks 260 
+ [Debug Message] - Number of Tasks: [0]
+2017-04-19 22:54:15,588 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [0]
+2017-04-19 22:54:20,579 DEBUG GetCSTaskToPay 385 
+ [Debug Message] - User ID: [1234] Task: Name: Cantina do Social Exp: 26-04-2017 22:53:45 Topic: TecnicoLisboa 
+SensingTask: NULL 
+2017-04-19 22:54:21,609 DEBUG CalcCostCSTask 56 
+ [Debug Message] - User ID: [1234] has to Pay [50]
+2017-04-19 22:54:23,969 DEBUG GetCSTaskToCreate 360 
+ [Debug Message] - User ID: [1234] Task: Name: Cantina do Social Exp: 26-04-2017 22:53:45 Topic: TecnicoLisboa 
+SensingTask: NULL 
+2017-04-19 22:54:25,045 DEBUG CreateCSTask 310 
+ [Debug Message] - Task with the ID: [3364466c-6e42-40f6-9c28-6facb68321df] created with Success!
+2017-04-19 22:54:25,823 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [1]
+2017-04-19 22:54:32,799 DEBUG GetCSTaskToCreate 360 
+ [Debug Message] - User ID: [4ac05127] Task: Name: MyTask Exp: 04-03-2017 17:41:00 Topic: Temperature-Lisbon 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-19 22:54:32,894 ERROR CreateCSTask 307 
+ [Debug Message] - Cannot create crowd-sensing task!
+2017-04-19 22:54:47,676 DEBUG GetCSTaskToCreate 360 
+ [Debug Message] - User ID: [3f90281a] Task: Name: MyTask Exp: 04-03-2017 17:41:00 Topic: Temperature-Lisbon 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-19 22:54:47,756 DEBUG CreateCSTask 310 
+ [Debug Message] - Task with the ID: [ecb1aafc-2af2-4a2d-b617-e6f35803348c] created with Success!
+2017-04-19 22:54:53,163 DEBUG SubscribeTopic 234 
+ [Debug Message] - Topic: [Temperature-Lisbon] SUBSCRIBED by User ID: [1234]
+2017-04-19 22:54:55,580 DEBUG GetSubscribedTasks 260 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-19 22:56:59,368 DEBUG GetUserTasks 210 
+ [Debug Message] - Number of Tasks: [1]
+2017-04-19 22:57:05,694 DEBUG GetSubscribedTasks 260 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-20 09:15:57,355 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-04-20 09:15:57,442 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-04-20 09:15:57,449 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-04-20 09:16:01,180 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-04-20 09:16:01,212 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-04-20 09:16:01,243 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-04-20 09:16:01,271 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-04-20 09:16:01,299 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-04-20 09:16:43,905 DEBUG GetCSTaskToCreate 369 
+ [Debug Message] - User ID: [11b9eeca] Task: Name: MyTask1 Exp: 04-03-2017 17:41:00 Topic: Temperature-Lisbon 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-20 09:16:47,015 DEBUG CreateCSTask 319 
+ [Debug Message] - Task with the ID: [254438b2-4321-4c34-a330-28700171be15] created with Success!
+2017-04-20 09:17:53,580 DEBUG SubscribeTopic 235 
+ [Debug Message] - Topic: [Temperature-Lisbon] SUBSCRIBED by User ID: [1234]
+2017-04-20 09:18:39,059 DEBUG GetUserTopicNameFromRequest 420 
+ [Debug Message] - User ID: [1234] Topic: [Temperature-Lisbon]
+2017-04-20 09:44:13,485 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-04-20 09:44:13,603 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-04-20 09:44:13,613 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-04-20 09:45:05,680 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-04-20 09:45:05,786 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-04-20 09:45:05,794 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-04-20 09:45:08,676 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-04-20 09:45:08,709 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-04-20 09:45:08,740 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-04-20 09:45:08,788 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-04-20 09:45:08,835 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-04-20 09:47:01,699 DEBUG GetUserTasks 224 
+ [Debug Message] - Number of Tasks: [0]
+2017-04-20 09:47:04,308 DEBUG GetCSTaskToPay 411 
+ [Debug Message] - User ID: [1234] Task: Name: Cantina do Social Exp: 27-04-2017 09:46:28 Topic: TecnicoLisboa 
+SensingTask: NULL 
+2017-04-20 09:47:05,340 DEBUG CalcCostCSTask 58 
+ [Debug Message] - User ID: [1234] has to Pay [50]
+2017-04-20 09:47:07,134 DEBUG GetCSTaskToCreate 386 
+ [Debug Message] - User ID: [1234] Task: Name: Cantina do Social Exp: 27-04-2017 09:46:28 Topic: TecnicoLisboa 
+SensingTask: NULL 
+2017-04-20 09:47:08,213 DEBUG CreateCSTask 336 
+ [Debug Message] - Task with the ID: [bff27918-d049-4165-8454-f04dabd86b9d] created with Success!
+2017-04-20 09:47:12,030 DEBUG GetUserTasks 224 
+ [Debug Message] - Number of Tasks: [1]
+2017-04-20 09:55:22,439 DEBUG GetUserTasks 224 
+ [Debug Message] - Number of Tasks: [1]
+2017-04-20 09:55:40,108 DEBUG GetSubscribedTasks 279 
+ [Debug Message] - Number of Tasks: [0]
+2017-04-20 09:56:03,399 DEBUG GetCSTaskToCreate 386 
+ [Debug Message] - User ID: [b718ff0b] Task: Name: MyTask1 Exp: 04-03-2017 17:41:00 Topic: Temperature-Lisbon 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-20 09:56:03,457 DEBUG CreateCSTask 336 
+ [Debug Message] - Task with the ID: [050ef330-0bc6-488e-864c-5922a3ec76cb] created with Success!
+2017-04-20 09:57:37,631 DEBUG GetUserTasks 224 
+ [Debug Message] - Number of Tasks: [1]
+2017-04-20 09:57:39,948 DEBUG GetSubscribedTasks 279 
+ [Debug Message] - Number of Tasks: [0]
+2017-04-20 09:57:44,158 DEBUG GetUserTopicNameFromRequest 437 
+ [Debug Message] - User ID: [1234] Topic: [Temperature-Lisbon]
+2017-04-20 09:57:44,177 DEBUG SubscribeTopic 255 
+ [Debug Message] - Topic: [Temperature-Lisbon] SUBSCRIBED by User ID: [1234]
+2017-04-20 09:57:48,640 DEBUG GetSubscribedTasks 279 
+ [Debug Message] - Number of Tasks: [1]
+2017-04-20 09:57:52,089 DEBUG GetUserTasks 224 
+ [Debug Message] - Number of Tasks: [1]
+2017-04-20 09:57:54,319 DEBUG GetSubscribedTasks 279 
+ [Debug Message] - Number of Tasks: [1]
+2017-04-20 09:58:41,714 DEBUG GetCSTaskToCreate 386 
+ [Debug Message] - User ID: [b718ff0b] Task: Name: MyTask1 Exp: 04-03-2017 17:41:00 Topic: Temperatura Portugal 
+SensingTask: Sensor: TEMPERATURE 
+2017-04-20 09:58:41,845 DEBUG CreateCSTask 336 
+ [Debug Message] - Task with the ID: [7f4cab97-73b0-44ff-83cd-18a29c50aff7] created with Success!
+2017-04-20 09:58:47,992 DEBUG GetUserTopicNameFromRequest 437 
+ [Debug Message] - User ID: [1234] Topic: [Temperatura Portugal]
+2017-04-20 09:58:48,022 DEBUG SubscribeTopic 255 
+ [Debug Message] - Topic: [Temperatura Portugal] SUBSCRIBED by User ID: [1234]
+2017-04-20 09:58:50,599 DEBUG GetSubscribedTasks 279 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-20 09:58:53,068 DEBUG GetUserTasks 224 
+ [Debug Message] - Number of Tasks: [1]
+2017-04-20 09:58:59,038 DEBUG GetSubscribedTasks 279 
+ [Debug Message] - Number of Tasks: [2]
+2017-04-20 09:59:00,727 DEBUG GetUserTasks 224 
+ [Debug Message] - Number of Tasks: [1]

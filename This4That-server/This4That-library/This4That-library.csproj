@@ -61,6 +61,7 @@
     <Compile Include="Models\Integration\CalcTaskCostDTO\CalcTaskCostRequestDTO.cs" />
     <Compile Include="Models\Integration\CalcTaskCostDTO\CalcTaskCostResponseDTO.cs" />
     <Compile Include="Models\Integration\GetTasksByTopicDTO\GetTasksDTO.cs" />
+    <Compile Include="Models\Integration\GetUserTopicDTO\GetTopicRequestDTO.cs" />
     <Compile Include="Models\Integration\TaskPayCreateDTO\TaskPayCreateResponseDTO.cs" />
     <Compile Include="Models\Integration\TaskPayCreateDTO\TaskPayCreateRequestDTO.cs" />
     <Compile Include="Models\Integration\APIRequestDTO.cs" />

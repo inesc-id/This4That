@@ -38,8 +38,6 @@ public class MyTasksFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.globalApp = (GlobalApp) getParentActivity().getApplicationContext();
-        //FIXME: remove
-        this.globalApp.setServerAPI(new ServerAPI());
     }
 
     @Override

@@ -33,8 +33,8 @@ namespace This4That_library
         List<String> GetTopics();
         List<CSTask> GetUserTasks(string userID);
         List<CSTask> GetUserSubscribedTasks(string userID);
-        bool SubscribeTopic(string userId, string topic);
-        List<CSTask> GetSubscribedTasksByTopicName(string userID, string topicName);
+        bool SubscribeTopic(string userId, string topic, ref string errorMessage);
+        List<CSTask> GetSubscribedTasksByTopicName(string userID, string topicName, ref string errorMessage);
     }
 
     public interface IReportAggregator : IRemoteEntity
@@ -59,7 +59,7 @@ namespace This4That_library
         string RegisterUser();
         List<CSTask> GetTasksByUserID(string userID);
         List<CSTask> GetSubscribedTasksbyUserID(string userID);
-        List<CSTask> GetSubscribedTasksbyTopic(string userID, string topicName);
-        bool SubscribeTopic(string userId, string topicName);
+        List<CSTask> GetSubscribedTasksbyTopic(string userID, string topicName, ref string errorMessage);
+        bool SubscribeTopic(string userId, string topicName, ref string errorMessage);
     }
 }

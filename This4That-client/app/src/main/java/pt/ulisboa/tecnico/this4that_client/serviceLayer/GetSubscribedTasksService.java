@@ -31,8 +31,10 @@ public class GetSubscribedTasksService extends AsyncTask<String, Integer, String
 
     @Override
     protected String doInBackground(String... params) {
-        String url = params[0];
+        String url;
+        String postBody;
         try{
+            url = params[0];
             return HttpClient.makeGETRequest(url);
         }catch (Exception ex){
             this.ex = ex;

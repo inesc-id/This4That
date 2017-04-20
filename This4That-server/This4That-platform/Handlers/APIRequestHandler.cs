@@ -5,6 +5,8 @@ using This4That_library;
 using This4That_library.Models.Domain;
 using This4That_library.Models.Integration;
 using This4That_library.Models.Integration.CalcTaskCostDTO;
+using This4That_library.Models.Integration.GetTasksByTopicDTO;
+using This4That_library.Models.Integration.GetUserTopicDTO;
 using This4That_library.Models.Integration.TaskPayCreateDTO;
 using This4That_platform.Integration;
 using This4That_platform.Properties;
@@ -97,7 +99,7 @@ namespace This4That_platform.Handlers
             response = new APIResponseDTO();
             try
             {
-                //get the DTO containing the userID, refToPay and task meta-info
+                //get the DTO containing the userIDand task meta-info
                 if (!GetCSTaskToCreate(out payRequest))
                 {
                     response.SetResponse(new Dictionary<string, string>() { { "errorMessage", "Invalid Request please try again!" } }
@@ -136,13 +138,25 @@ namespace This4That_platform.Handlers
 
         }
 
-        public bool GetTasksByTopicName(string topicName, out APIResponseDTO response)
+        public bool GetTasksByTopicName(out APIResponseDTO response)
         {
+            GetTopicRequestDTO topicRequestDTO;
             response = new APIResponseDTO();
+            List<GetTasksDTO> listOfTasks;
             try
             {
-                response.SetResponse(new Dictionary<string, object>() {
-                                    { "tasks", serverMgr.RemoteTaskDistributor.GetTasksByTopicName(topicName) } }
+                if (!GetUserTopicNameFromRequest(this.request, out topicRequestDTO))
+                {
+                    response.SetErrorResponse("Invalid Request!", APIResponseDTO.RESULT_TYPE.ERROR);
+                    return false;
+                }
+                listOfTasks = serverMgr.RemoteTaskDistributor.GetTasksByTopicName(topicRequestDTO.TopicName);
+                if (listOfTasks == null)
+                {
+                    response.SetErrorResponse("Invalid TopicName!", APIResponseDTO.RESULT_TYPE.ERROR);
+                    return false;
+                }
+                response.SetResponse(new Dictionary<string, object>() {{ "tasks",  listOfTasks} }
                                     , APIResponseDTO.RESULT_TYPE.SUCCESS);
                 return true;
             }
@@ -219,21 +233,27 @@ namespace This4That_platform.Handlers
             }
         }
 
-        internal bool SubscribeTopic(string userId, string topicName, out APIResponseDTO response)
+        internal bool SubscribeTopic(out APIResponseDTO response)
         {
             response = new APIResponseDTO();
+            GetTopicRequestDTO topicRequestDTO;
+            string errorMessage = null;
 
             try
             {
-                if (!this.serverMgr.RemoteTaskDistributor.SubscribeTopic(userId, topicName))
+                if (!GetUserTopicNameFromRequest(this.request, out topicRequestDTO))
                 {
-                    Global.Log.ErrorFormat("Invalid User ID: [{0}] OR Invalid Topic: [{1}]", userId, topicName);
-                    response.SetErrorResponse("Invalid User ID OR Invalid Topic!", APIResponseDTO.RESULT_TYPE.ERROR);
+                    response.SetErrorResponse("Invalid Request!", APIResponseDTO.RESULT_TYPE.ERROR);
                     return false;
                 }
-                Global.Log.DebugFormat("Topic: [{0}] SUBSCRIBED by User ID: [{1}]", topicName, userId);
-                response.SetResponse("Subscribed"
-                                    , APIResponseDTO.RESULT_TYPE.SUCCESS);
+                if (!this.serverMgr.RemoteTaskDistributor.SubscribeTopic(topicRequestDTO.UserID, topicRequestDTO.TopicName, ref errorMessage))
+                {
+                    Global.Log.ErrorFormat(errorMessage);
+                    response.SetErrorResponse(errorMessage, APIResponseDTO.RESULT_TYPE.ERROR);
+                    return false;
+                }
+                Global.Log.DebugFormat("Topic: [{0}] SUBSCRIBED by User ID: [{1}]", topicRequestDTO.TopicName, topicRequestDTO.UserID);
+                response.SetResponse("Subscribed", APIResponseDTO.RESULT_TYPE.SUCCESS);
                 return true;
             }
             catch (Exception ex)
@@ -253,13 +273,11 @@ namespace This4That_platform.Handlers
                 if (subscribedTasks == null)
                 {
                     Global.Log.ErrorFormat("Invalid User ID: [{0}]", userID);
-                    response.SetResponse(new Dictionary<string, string>() { { "errorMessage", "Invalid User ID!" } },
-                                        APIResponseDTO.RESULT_TYPE.ERROR);
+                    response.SetErrorResponse("Invalid UserID!", APIResponseDTO.RESULT_TYPE.ERROR);
                     return false;
                 }
                 Global.Log.DebugFormat("Number of Tasks: [{0}]", subscribedTasks.Count);
-                response.SetResponse(subscribedTasks
-                                    , APIResponseDTO.RESULT_TYPE.SUCCESS);
+                response.SetResponse(subscribedTasks, APIResponseDTO.RESULT_TYPE.SUCCESS);
                 return true;
             }
             catch (Exception ex)
@@ -269,22 +287,30 @@ namespace This4That_platform.Handlers
             }
         }
 
-        internal bool GetSubscribedTasksByTopicName(string userId, string topicName, out APIResponseDTO response)
+        internal bool GetSubscribedTasksByTopicName(out APIResponseDTO response)
         {
             response = new APIResponseDTO();
             List<CSTask> subscribedTasks;
+            GetTopicRequestDTO topicRequestDTO = null;
+            string errorMessage = null;
             try
             {
-                subscribedTasks = this.serverMgr.RemoteTaskDistributor.GetSubscribedTasksByTopicName(userId, topicName);
-                if (subscribedTasks == null)
+                if (!GetUserTopicNameFromRequest(this.request, out topicRequestDTO))
                 {
-                    Global.Log.ErrorFormat("Invalid User ID: [{0}] OR Invalid Topic: [{1}]", userId, topicName);
-                    response.SetResponse(new Dictionary<string, string>() { { "errorMessage", "Invalid User ID OR Invalid Topic!" } },
-                                        APIResponseDTO.RESULT_TYPE.ERROR);
+                    response.SetErrorResponse("Invalid Request!", APIResponseDTO.RESULT_TYPE.ERROR);
                     return false;
                 }
-                response.SetResponse(subscribedTasks
-                                    , APIResponseDTO.RESULT_TYPE.SUCCESS);
+                subscribedTasks = this.serverMgr.RemoteTaskDistributor
+                                                .GetSubscribedTasksByTopicName(topicRequestDTO.UserID
+                                                                               , topicRequestDTO.TopicName
+                                                                               , ref errorMessage);
+                if (subscribedTasks == null)
+                {
+                    Global.Log.ErrorFormat(errorMessage);
+                    response.SetErrorResponse(errorMessage, APIResponseDTO.RESULT_TYPE.ERROR);
+                    return false;
+                }
+                response.SetResponse(subscribedTasks, APIResponseDTO.RESULT_TYPE.SUCCESS);
                 return true;
             }
             catch (Exception ex)
@@ -351,7 +377,7 @@ namespace This4That_platform.Handlers
             try
             {
                 typeFullName = typeof(TaskPayCreateRequestDTO).FullName;
-                if (!Library.GetCSTaskFromRequest(request, out requestDTO, typeFullName, ref errorMessage))
+                if (!Library.GetDTOFromRequest(request, out requestDTO, typeFullName, ref errorMessage))
                 {
                     Global.Log.Error(errorMessage);
                     return false;
@@ -376,13 +402,39 @@ namespace This4That_platform.Handlers
             try
             {
                 typeFullName = typeof(CalcTaskCostRequestDTO).FullName;
-                if (!Library.GetCSTaskFromRequest(request, out requestDTO, typeFullName, ref errorMessage))
+                if (!Library.GetDTOFromRequest(request, out requestDTO, typeFullName, ref errorMessage))
                 {
                     Global.Log.Error(errorMessage);
                     return false;
                 }
                 csTask = (CalcTaskCostRequestDTO) requestDTO;
                 Global.Log.DebugFormat("User ID: [{0}] Task: {1}", csTask.UserID, csTask.Task.ToString());
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Global.Log.Error(ex.Message);
+                return false;
+            }
+        }
+
+        private bool GetUserTopicNameFromRequest(HttpRequest request, out GetTopicRequestDTO topicDTO)
+        {
+            string errorMessage = null;
+            topicDTO = null;
+            string typeFullName = null;
+            APIRequestDTO requestDTO;
+
+            try
+            {
+                typeFullName = typeof(GetTopicRequestDTO).FullName;
+                if (!Library.GetDTOFromRequest(request, out requestDTO, typeFullName, ref errorMessage))
+                {
+                    Global.Log.Error(errorMessage);
+                    return false;
+                }
+                topicDTO = (GetTopicRequestDTO)requestDTO;
+                Global.Log.DebugFormat("User ID: [{0}] Topic: [{1}]", topicDTO.UserID, topicDTO.TopicName);
                 return true;
             }
             catch (Exception ex)

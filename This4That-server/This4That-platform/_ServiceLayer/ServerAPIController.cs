@@ -89,9 +89,9 @@ namespace This4That_platform.ServiceLayer
             }
         }
 
-        [HttpGet]
-        [Route("topic/{topicName}")]
-        public IHttpActionResult GetTasksByTopic(string topicName)
+        [HttpPost]
+        [Route("topic/tasks")]
+        public IHttpActionResult GetTasksByTopic()
         {
             ServerManager serverMgr = null;
             APIRequestHandler handler = null;
@@ -101,7 +101,7 @@ namespace This4That_platform.ServiceLayer
             {
                 serverMgr = Global.GetCreateServerManager(HttpContext.Current.Server);
                 handler = new APIRequestHandler(HttpContext.Current.Request, serverMgr);
-                if (!handler.GetTasksByTopicName(topicName, out response))
+                if (!handler.GetTasksByTopicName(out response))
                 {
                     return Content(HttpStatusCode.InternalServerError, response);
                 }
@@ -188,9 +188,9 @@ namespace This4That_platform.ServiceLayer
             }
         }
 
-        [HttpGet]
-        [Route("user/{userId}/topic/{topicName}/subscribe")]
-        public IHttpActionResult SubscribeTask(string userId, string topicName)
+        [HttpPost]
+        [Route("subscribe")]
+        public IHttpActionResult SubscribeTask()
         {
             ServerManager serverMgr = null;
             APIRequestHandler handler;
@@ -200,7 +200,7 @@ namespace This4That_platform.ServiceLayer
             {
                 serverMgr = Global.GetCreateServerManager(HttpContext.Current.Server);
                 handler = new APIRequestHandler(HttpContext.Current.Request, serverMgr);
-                if (!handler.SubscribeTopic(userId, topicName, out response))
+                if (!handler.SubscribeTopic(out response))
                 {
                     return Content(HttpStatusCode.InternalServerError, response);
                 }
@@ -242,9 +242,9 @@ namespace This4That_platform.ServiceLayer
 
         }
 
-        [HttpGet]
-        [Route("user/{userId}/topic/{topicName}/subscribedtasks")]
-        public IHttpActionResult GetSubscribedTasksByTopicName(string userId, string topicName)
+        [HttpPost]
+        [Route("subscribedtasks")]
+        public IHttpActionResult GetSubscribedTasksByTopicName()
         {
             ServerManager serverMgr = null;
             APIRequestHandler handler;
@@ -254,7 +254,7 @@ namespace This4That_platform.ServiceLayer
             {
                 serverMgr = Global.GetCreateServerManager(HttpContext.Current.Server);
                 handler = new APIRequestHandler(HttpContext.Current.Request, serverMgr);
-                if (!handler.GetSubscribedTasksByTopicName(userId, topicName, out response))
+                if (!handler.GetSubscribedTasksByTopicName(out response))
                 {
                     return Content(HttpStatusCode.InternalServerError, response);
                 }

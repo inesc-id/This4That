@@ -6,6 +6,7 @@ using System.Text;
 using System.Web;
 using This4That_library.Models.Integration;
 using This4That_library.Models.Integration.CalcTaskCostDTO;
+using This4That_library.Models.Integration.GetUserTopicDTO;
 using This4That_library.Models.Integration.TaskPayCreateDTO;
 using This4That_library.Properties;
 
@@ -13,9 +14,9 @@ namespace This4That_library
 {
     public class Library
     {
-        private static bool GetTaskFromPostBody(string postBody, out APIRequestDTO csTask, string typeFullName, ref string errorMessage)
+        private static bool GetDTOFromPostBody(string postBody, out APIRequestDTO requestDTO, string typeFullName, ref string errorMessage)
         {
-            csTask = null;
+            requestDTO = null;
             string calcTaskCostType = typeof(CalcTaskCostRequestDTO).FullName;
             try
             {
@@ -23,12 +24,17 @@ namespace This4That_library
                     return false;
                 if (typeof(CalcTaskCostRequestDTO).FullName.Equals(typeFullName))
                 {
-                    csTask = JsonConvert.DeserializeObject<CalcTaskCostRequestDTO>(postBody);
+                    requestDTO = JsonConvert.DeserializeObject<CalcTaskCostRequestDTO>(postBody);
                     return true;
                 }
                 if (typeof(TaskPayCreateRequestDTO).FullName.Equals(typeFullName))
                 {
-                    csTask = JsonConvert.DeserializeObject<TaskPayCreateRequestDTO>(postBody);
+                    requestDTO = JsonConvert.DeserializeObject<TaskPayCreateRequestDTO>(postBody);
+                    return true;
+                }
+                if (typeof(GetTopicRequestDTO).FullName.Equals(typeFullName))
+                {
+                    requestDTO = JsonConvert.DeserializeObject<GetTopicRequestDTO>(postBody);
                     return true;
                 }
                 return false;
@@ -37,7 +43,7 @@ namespace This4That_library
             catch (Exception)
             {
                 errorMessage = Resources.InvalidJSONFormat;
-                csTask = null;
+                requestDTO = null;
                 return false;
             }
         }
@@ -57,10 +63,10 @@ namespace This4That_library
             
         }
 
-        public static bool GetCSTaskFromRequest(HttpRequest request, out APIRequestDTO csTask, string typeFullName, ref string errorMessage)
+        public static bool GetDTOFromRequest(HttpRequest request, out APIRequestDTO requestDTO, string typeFullName, ref string errorMessage)
         {
             string postBody;
-            csTask = null;
+            requestDTO = null;
 
             try
             {
@@ -69,7 +75,7 @@ namespace This4That_library
                 {
                     return false;
                 }
-                if (!GetTaskFromPostBody(postBody, out csTask, typeFullName, ref errorMessage))
+                if (!GetDTOFromPostBody(postBody, out requestDTO, typeFullName, ref errorMessage))
                 {
                     return false;
                 }

@@ -27,9 +27,13 @@ public class SubscribeTopicService extends AsyncTask<String, Integer, String> {
 
     @Override
     protected String doInBackground(String... params) {
-        String url = params[0];
+        String url;
+        String postBody;
+
         try{
-            return HttpClient.makeGETRequest(url);
+            url = params[0];
+            postBody = params[1];
+            return HttpClient.makePOSTRequest(postBody, url);
         }catch (Exception ex){
             this.ex = ex;
             Log.d("This4That", ex.getMessage());

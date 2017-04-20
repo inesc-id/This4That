@@ -27,6 +27,7 @@ public class ServerAPI {
     private final String CALCTASK = "task/cost/";
     private final String CREATETASK = "task/";
     private String GETTOPICS = "topic/";
+    private String SUBSCRIBE = "subscribe/";
 
     public ServerAPI() {
         this.serverURL = "http://192.168.1.111:58949/api/";
@@ -132,11 +133,15 @@ public class ServerAPI {
 
     public boolean subscribeTopic(Context context, String topicName, String userID){
         SubscribeTopicService subscribeTopicService;
-        String subTasksURL = null;
+        HashMap<String, Object> jsonElements = new HashMap<>();
+        String postBody;
+
         try {
-            subTasksURL = "user/" + userID + "/topic/" + topicName + "/subscribe";
+            jsonElements.put("userId", userID);
+            jsonElements.put("topicName", topicName);
+            postBody = HttpClient.convertToJSON(jsonElements).toString();
             subscribeTopicService = new SubscribeTopicService(context);
-            subscribeTopicService.execute(this.serverURL + subTasksURL);
+            subscribeTopicService.execute(this.serverURL + SUBSCRIBE, postBody);
             return true;
         } catch (Exception ex) {
             Log.d(TAG, ex.getMessage());

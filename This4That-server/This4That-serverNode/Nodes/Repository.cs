@@ -150,14 +150,13 @@ namespace This4That_serverNode.Nodes
             User user;
             taskID = null;
             try {
-
-                if (!SaveTask(task, out taskID))
-                    return false;
                 if (!UserStorage.Users.TryGetValue(userID, out user))
                 {
                     Log.ErrorFormat("Invalid User ID: [{0}]", userID);
                     return false;
                 }
+                if (!SaveTask(task, out taskID))
+                    return false;
                 user.MyTasks.Add(taskID);
                 return true;                            
             }
@@ -240,19 +239,28 @@ namespace This4That_serverNode.Nodes
             return userId;
         }
 
-        public bool SubscribeTopic(string userId, string topicName)
+        public bool SubscribeTopic(string userId, string topicName, ref string errorMessage)
         {
             try
             {
-                Console.WriteLine("[INFO - REPOSITORY] : Going to Subscribe Task");
-                if (UserStorage.Users.ContainsKey(userId) && ColTopics.ContainsKey(topicName))
+                Console.WriteLine("[INFO - REPOSITORY] : Going to Subscribe Topic: [{0}] for UserID: [{1}]", topicName, userId);
+
+                if (!UserStorage.Users.ContainsKey(userId))
+                {
+                    errorMessage = "Invalid UserID!";
+                    return false;
+                }
+                if (ColTopics.ContainsKey(topicName))
                 {
                     if (!UserStorage.Users[userId].SubscribedTopics.Contains(topicName))
                         UserStorage.Users[userId].SubscribedTopics.Add(topicName);
                     return true;
                 }
                 else
+                {
+                    errorMessage = "Invalid TopicName!";
                     return false;
+                }                    
             }
             catch (Exception ex)
             {
@@ -330,15 +338,20 @@ namespace This4That_serverNode.Nodes
             }
         }
 
-        public List<CSTask> GetSubscribedTasksbyTopic(string userID, string topicName)
+        public List<CSTask> GetSubscribedTasksbyTopic(string userID, string topicName, ref string errorMessage)
         {
             List<string> subscribedTopics = new List<string>();
             List<CSTask> subscribedTasks = new List<CSTask>();
             Topic auxTopic;
             try
             {
-                Console.WriteLine("[INFO - REPOSITORY] : Fetching Subscribed Tasks");
-                if (UserStorage.Users.ContainsKey(userID) && (ColTopics.ContainsKey(topicName)))
+                Console.WriteLine("[INFO - REPOSITORY] : Fetching Subscribed Tasks For UserID: [{0}] and TopicName: [{1}]", userID, topicName);
+                if (!UserStorage.Users.ContainsKey(userID))
+                {
+                    errorMessage = "Invalid UserID!";
+                    return null;
+                }
+                if (ColTopics.ContainsKey(topicName))
                 {
                     auxTopic = ColTopics[topicName];
                     foreach (string taskId in auxTopic.ListOfTaskIDs)
@@ -351,7 +364,11 @@ namespace This4That_serverNode.Nodes
                     return subscribedTasks;
                 }
                 else
+                {
+                    errorMessage = "Invalid Topic Name!";
                     return null;
+                }
+                    
             }
             catch (Exception ex)
             {
