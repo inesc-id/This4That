@@ -3,10 +3,10 @@ using Newtonsoft.Json.Converters;
 using System;
 using System.Collections.Generic;
 
-namespace This4That_library.Models.Domain
+namespace This4That_library.Models.Integration
 {
     [Serializable]
-    public class CSTask
+    public class CSTaskDTO
     {
         private string taskID;
         private string name;
@@ -14,7 +14,6 @@ namespace This4That_library.Models.Domain
         private string topic;
         private SensingTask sensingTask;
         private InteractiveTask interactiveTask;
-
 
         #region PROPERTIES
 
@@ -102,6 +101,7 @@ namespace This4That_library.Models.Domain
                 interactiveTask = value;
             }
         }
+
         #endregion
 
         public override string ToString()
@@ -130,7 +130,7 @@ namespace This4That_library.Models.Domain
     {
         private SensorType sensor;
 
-        [JsonProperty(PropertyName = "sensor", Required = Required.Always), JsonConverter(typeof(StringEnumConverter))]
+        [JsonProperty(PropertyName = "sensor", Required = Required.Always)]
         public SensorType Sensor
         {
             get
@@ -153,19 +153,76 @@ namespace This4That_library.Models.Domain
     [Serializable]
     public class InteractiveTask
     {
-        [JsonProperty(PropertyName = "question", Required = Required.Always)]
         private string question;
+        private List<TaskAnswer> answers;
 
-        [JsonProperty(PropertyName ="answers", Required = Required.Always)]
-        List<TaskAnswer> answers;
+        [JsonProperty(PropertyName = "question", Required = Required.Always)]
+        public string Question
+        {
+            get
+            {
+                return question;
+            }
+
+            set
+            {
+                question = value;
+            }
+        }
+
+        [JsonProperty(PropertyName = "answers", Required = Required.Always)]
+        public List<TaskAnswer> Answers
+        {
+            get
+            {
+                return answers;
+            }
+
+            set
+            {
+                answers = value;
+            }
+        }
     }
 
     [Serializable]
     public class TaskAnswer
-    {
-        [JsonProperty(PropertyName = "answer")]
+    {        
         private string answer;
+        private string answerId;
 
+        [JsonProperty(PropertyName = "answer")]
+        public string Answer
+        {
+            get
+            {
+                return answer;
+            }
+
+            set
+            {
+                answer = value;
+            }
+        }
+
+        [JsonProperty(PropertyName = "answerId")]
+        public string AnswerId
+        {
+            get
+            {
+                return answerId;
+            }
+
+            set
+            {
+                answerId = value;
+            }
+        }
+
+        public TaskAnswer()
+        {
+            AnswerId = Guid.NewGuid().ToString().Substring(0, 8);
+        }
     }
 
     

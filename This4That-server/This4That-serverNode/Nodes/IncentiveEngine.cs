@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using This4That_library;
-using This4That_library.Models.Domain;
+using This4That_library.Models.Integration;
 using This4That_serverNode.Domain;
 using This4That_serverNode.IncentiveModels;
 
@@ -91,7 +91,7 @@ namespace This4That_serverNode.Nodes
         }
 
         #region REMOTE_INTERFACE
-        public bool CalcTaskCost(CSTask taskSpec, string userID, out object incentiveValue)
+        public bool CalcTaskCost(CSTaskDTO taskSpec, string userID, out object incentiveValue)
         {
             IncentiveSchemeBase incentiveScheme;
             incentiveValue = null;

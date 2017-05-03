@@ -5,12 +5,17 @@ import android.util.Log;
 
 import java.net.URL;
 import java.net.URLEncoder;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 
 import pt.ulisboa.tecnico.this4that_client.Domain.CSTask.CSTask;
+import pt.ulisboa.tecnico.this4that_client.Domain.CSTask.InteractiveTask;
+import pt.ulisboa.tecnico.this4that_client.Enums.TaskTypeEnum;
 import pt.ulisboa.tecnico.this4that_client.activity.CreateTaskActivity;
 import pt.ulisboa.tecnico.this4that_client.applicationLayer.HttpClient;
 import pt.ulisboa.tecnico.this4that_client.fragment.MyTasksFragment;
+import pt.ulisboa.tecnico.this4that_client.fragment.ReportDataFragment;
 import pt.ulisboa.tecnico.this4that_client.fragment.SearchTopicsFragment;
 import pt.ulisboa.tecnico.this4that_client.fragment.SubscribedTasksFragment;
 
@@ -26,8 +31,9 @@ public class ServerAPI {
 
     private final String CALCTASK = "task/cost/";
     private final String CREATETASK = "task/";
-    private String GETTOPICS = "topic/";
-    private String SUBSCRIBE = "subscribe/";
+    private final String GETTOPICS = "topic/";
+    private final String SUBSCRIBE = "subscribe/";
+    private final String REPORT = "report/";
 
     public ServerAPI() {
         this.serverURL = "http://192.168.1.111:58949/api/";
@@ -45,25 +51,6 @@ public class ServerAPI {
             postBody = HttpClient.convertToJSON(postParams).toString();
             calcTaskCostService = new CalcTaskCostService(createTaskActivity, postBody);
             calcTaskCostService.execute(this.serverURL + CALCTASK, postBody);
-            return true;
-
-        } catch (Exception ex) {
-            Log.d(TAG, ex.getMessage());
-            return false;
-        }
-    }
-
-    public boolean createCSTask(CSTask csTask, CreateTaskActivity createTaskActivity) {
-
-        CreateTaskService createTaskService;
-        String postBody;
-        HashMap<String, Object> postParams = new HashMap<>();
-        try {
-            createTaskService = new CreateTaskService(createTaskActivity);
-            postParams.put("userId", createTaskActivity.getGlobalApp().getUserInfo().getUserId());
-            postParams.put("task", csTask.toHashMap());
-            postBody = HttpClient.convertToJSON(postParams).toString();
-            createTaskService.execute(this.serverURL + CREATETASK, postBody);
             return true;
 
         } catch (Exception ex) {
@@ -144,10 +131,33 @@ public class ServerAPI {
             subscribeTopicService.execute(this.serverURL + SUBSCRIBE, postBody);
             return true;
         } catch (Exception ex) {
-            Log.d(TAG, ex.getMessage());
+            Log.d("This4That", ex.getMessage());
             return false;
         }
     }
 
 
+    public boolean reportTask(ReportDataFragment fragment, Object answerId, String taskID,
+                              String userId, TaskTypeEnum taskTypeEnum) {
+        HashMap<String, Object> jsonElements = new HashMap<>();
+        HashMap<String, Object> hashAnswer = new HashMap<>();
+        String postBody;
+        ReportService reportService;
+
+
+        try {
+            jsonElements.put("userId", userId);
+            jsonElements.put("taskId", taskID);
+            jsonElements.put("timestamp", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
+            hashAnswer.put("answerId", answerId);
+            jsonElements.put("result", hashAnswer);
+            postBody = HttpClient.convertToJSON(jsonElements).toString();
+            reportService = new ReportService(fragment.getContext());
+            reportService.execute(this.serverURL + REPORT + taskTypeEnum.toString(), postBody);
+            return true;
+        } catch (Exception ex) {
+            Log.d("This4That", ex.getMessage());
+            return false;
+        }
+    }
 }

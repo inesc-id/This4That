@@ -114,6 +114,8 @@ namespace This4That_serverNode
                     reportAggregator = new ReportAggregator(xmlNode.Attributes["hostName"].Value, port, Global.REPORT_AGGREGATOR_NAME);
                     if (!reportAggregator.StartConnectRemoteIntance(serverMgrURL))
                         return false;
+                    //Connect to repository
+                    reportAggregator.ConnectToRepository(repositoryURL);
                 }
                 /***********INCENTIVE ENGINE********/
                 xmlNode = xmlDoc.GetElementsByTagName(Global.INCENTIVE_ENGINE_NAME)[0];

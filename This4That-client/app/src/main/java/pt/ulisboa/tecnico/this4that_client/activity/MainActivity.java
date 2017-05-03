@@ -155,9 +155,4 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-
-    public TextView getTxtValToPay() {
-        return txtValToPay;
-    }
-
 }

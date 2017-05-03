@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using This4That_library;
-using This4That_library.Models.Domain;
+using This4That_library.Models.Integration;
 using This4That_library.Models.Integration.GetTasksByTopicDTO;
+using This4That_library.Models.Integration.ReportDTO;
 using This4That_serverNode.Domain;
 using This4That_serverNode.IncentiveModels;
 
@@ -14,8 +15,10 @@ namespace This4That_serverNode.Nodes
     public class Repository : Node, IRepository
     {
         private Dictionary<string, Topic> colTopics = new Dictionary<string, Topic>();
-        private Dictionary<string, CSTask> colTasks = new Dictionary<string, CSTask>();
+        
         private UserStorage userStorage = new UserStorage();
+        private ReportStorage reportStorage = new ReportStorage();
+        private TaskStorage taskStorage = new TaskStorage();
 
         public Dictionary<string, Topic> ColTopics
         {
@@ -29,18 +32,7 @@ namespace This4That_serverNode.Nodes
                 colTopics = value;
             }
         }
-        public Dictionary<string, CSTask> ColTasks
-        {
-            get
-            {
-                return colTasks;
-            }
 
-            set
-            {
-                colTasks = value;
-            }
-        }
         public UserStorage UserStorage
         {
             get
@@ -51,6 +43,32 @@ namespace This4That_serverNode.Nodes
             set
             {
                 userStorage = value;
+            }
+        }
+
+        public ReportStorage ReportStorage
+        {
+            get
+            {
+                return reportStorage;
+            }
+
+            set
+            {
+                reportStorage = value;
+            }
+        }
+
+        public TaskStorage TaskStorage
+        {
+            get
+            {
+                return taskStorage;
+            }
+
+            set
+            {
+                taskStorage = value;
             }
         }
 
@@ -89,7 +107,7 @@ namespace This4That_serverNode.Nodes
         }
 
         #region PRIVATE_METHODS
-        private bool SaveTask(CSTask task, out string taskID)
+        private bool SaveTask(CSTaskDTO task, out string taskID)
         {
             taskID = null;
             Topic topic;
@@ -100,14 +118,9 @@ namespace This4That_serverNode.Nodes
                     Log.Error("Task or Topic IS NULL");
                     return false;
                 }
-                //save task
-                taskID = Guid.NewGuid().ToString();
-                while (ColTasks.ContainsKey(taskID))
-                {
-                    taskID = Guid.NewGuid().ToString();
-                }
-                task.TaskID = taskID;
-                ColTasks.Add(taskID, task);
+                if (!TaskStorage.CreateTask(task))
+                    return false;
+                taskID = task.TaskID;
                 Log.DebugFormat("Generated TaskID: [{0}]", taskID);
                 Log.Debug("Task Saved with sucess!");
                 //save topic
@@ -145,12 +158,13 @@ namespace This4That_serverNode.Nodes
            return true;
         }
 
-        public bool RegisterTask(CSTask task, string userID, out string taskID)
+        public bool RegisterTask(CSTaskDTO task, string userID, out string taskID)
         {
             User user;
             taskID = null;
             try {
-                if (!UserStorage.Users.TryGetValue(userID, out user))
+                user = UserStorage.GetUser(userID);
+                if (user == null)
                 {
                     Log.ErrorFormat("Invalid User ID: [{0}]", userID);
                     return false;
@@ -185,17 +199,15 @@ namespace This4That_serverNode.Nodes
                 foreach (string taskID in topic.ListOfTaskIDs)
                 {
                     taskDTO = new GetTasksDTO();
-                    if (!ColTasks.TryGetValue(taskID, out task))
+                    task = TaskStorage.GetTaskByID(taskID);
+                    if (task == null)
                     {
-                        Log.ErrorFormat("TaskID: [{0}] already does not exist!. Going to remove from Topics.");
+                        Log.ErrorFormat("TaskID: [{0}] already does not exist!. Going to remove from Topics.", taskID);
                         topic.ListOfTaskIDs.Remove(taskID);
                     }
-                    else
-                    {
-                        taskDTO.TaskID = task.TaskID;
-                        taskDTO.TaskName = task.Name;
-                        listTaskDTO.Add(taskDTO);
-                    }
+                    taskDTO.TaskID = task.TaskID;
+                    taskDTO.TaskName = task.Name;
+                    listTaskDTO.Add(taskDTO);
                 }
                 return true;
             }
@@ -226,34 +238,34 @@ namespace This4That_serverNode.Nodes
 
         public string RegisterUser()
         {
-            User user;
-            string userId = Guid.NewGuid().ToString().Substring(0,8);
-
-            while (UserStorage.Users.ContainsKey(userId))
+            try
             {
-                userId = Guid.NewGuid().ToString().Substring(0, 8);
+                return UserStorage.CreateUser();
             }
-            user = new User();
-            user.UserID = userId;
-            UserStorage.Users.Add(userId, user);
-            return userId;
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return null;
+            }
+            
         }
 
         public bool SubscribeTopic(string userId, string topicName, ref string errorMessage)
         {
+            User user;
+
             try
             {
                 Console.WriteLine("[INFO - REPOSITORY] : Going to Subscribe Topic: [{0}] for UserID: [{1}]", topicName, userId);
-
-                if (!UserStorage.Users.ContainsKey(userId))
+                user = UserStorage.GetUser(userId); 
+                if (user == null)
                 {
                     errorMessage = "Invalid UserID!";
                     return false;
                 }
                 if (ColTopics.ContainsKey(topicName))
                 {
-                    if (!UserStorage.Users[userId].SubscribedTopics.Contains(topicName))
-                        UserStorage.Users[userId].SubscribedTopics.Add(topicName);
+                    user.SubscribeTopic(topicName);
                     return true;
                 }
                 else
@@ -269,21 +281,26 @@ namespace This4That_serverNode.Nodes
             }
         }
 
-        public List<CSTask> GetTasksByUserID(string userID)
+        public List<CSTaskDTO> GetTasksByUserID(string userID)
         {
             List<string> myTasksID = new List<string>();
-            List<CSTask> myTasks = new List<CSTask>();
+            List<CSTaskDTO> myTasks = new List<CSTaskDTO>();
+            CSTask task;
+            User user;
             try
             {
                 Console.WriteLine("[INFO - REPOSITORY] : Fetching My Tasks");
-                if (UserStorage.Users.ContainsKey(userID))
+                user = UserStorage.GetUser(userID);
+
+                if (user != null)
                 {
-                    myTasksID = UserStorage.Users[userID].MyTasks;
+                    myTasksID = user.MyTasks;
                     foreach (string taskID in myTasksID)
                     {
-                        if (ColTasks.ContainsKey(taskID))
+                        task = TaskStorage.GetTaskByID(taskID);
+                        if (task != null)
                         {
-                            myTasks.Add(ColTasks[taskID]);
+                            myTasks.Add(task.ToDTO());
                         }
                     }
                     return myTasks;
@@ -298,17 +315,20 @@ namespace This4That_serverNode.Nodes
             }
         }
 
-        public List<CSTask> GetSubscribedTasksbyUserID(string userID)
+        public List<CSTaskDTO> GetSubscribedTasksbyUserID(string userID)
         {
             List<string> subscribedTopics = new List<string>();
-            List<CSTask> subscribedTasks = new List<CSTask>();
+            List<CSTaskDTO> subscribedTasks = new List<CSTaskDTO>();
             Topic auxTopic;
+            CSTask task;
+            User user;
             try
             {
                 Console.WriteLine("[INFO - REPOSITORY] : Fetching Subscribed Tasks");
-                if (UserStorage.Users.ContainsKey(userID))
+                user = UserStorage.GetUser(userID);
+                if (user != null)
                 {
-                    subscribedTopics = UserStorage.Users[userID].SubscribedTopics;
+                    subscribedTopics = user.SubscribedTopics;
                     foreach (string topicName in subscribedTopics)
                     {
                         if (ColTopics.ContainsKey(topicName))
@@ -316,10 +336,11 @@ namespace This4That_serverNode.Nodes
                             auxTopic = ColTopics[topicName];
                             foreach (string taskId in auxTopic.ListOfTaskIDs)
                             {
-                                //is asubscribed task but not created by the user
-                                if (ColTasks.ContainsKey(taskId) && !UserStorage.Users[userID].MyTasks.Contains(taskId))
+                                //if is a subscribed task but not created by the user
+                                task = TaskStorage.GetTaskByID(taskId);
+                                if (task != null && !user.MyTasks.Contains(taskId))
                                 {
-                                    subscribedTasks.Add(ColTasks[taskId]);
+                                    subscribedTasks.Add(task.ToDTO());
                                 }
                             }
                         }
@@ -338,15 +359,16 @@ namespace This4That_serverNode.Nodes
             }
         }
 
-        public List<CSTask> GetSubscribedTasksbyTopic(string userID, string topicName, ref string errorMessage)
+        public List<CSTaskDTO> GetSubscribedTasksbyTopic(string userID, string topicName, ref string errorMessage)
         {
             List<string> subscribedTopics = new List<string>();
-            List<CSTask> subscribedTasks = new List<CSTask>();
+            List<CSTaskDTO> subscribedTasks = new List<CSTaskDTO>();
             Topic auxTopic;
+            CSTask task;
             try
             {
                 Console.WriteLine("[INFO - REPOSITORY] : Fetching Subscribed Tasks For UserID: [{0}] and TopicName: [{1}]", userID, topicName);
-                if (!UserStorage.Users.ContainsKey(userID))
+                if (UserStorage.GetUser(userID) == null)
                 {
                     errorMessage = "Invalid UserID!";
                     return null;
@@ -356,9 +378,10 @@ namespace This4That_serverNode.Nodes
                     auxTopic = ColTopics[topicName];
                     foreach (string taskId in auxTopic.ListOfTaskIDs)
                     {
-                        if (ColTasks.ContainsKey(taskId))
+                        task = TaskStorage.GetTaskByID(taskId);
+                        if (task != null)
                         {
-                            subscribedTasks.Add(ColTasks[taskId]);
+                            subscribedTasks.Add(task.ToDTO());
                         }
                     }
                     return subscribedTasks;
@@ -374,6 +397,43 @@ namespace This4That_serverNode.Nodes
             {
                 Log.Error(ex.Message);
                 return null;
+            }
+        }
+
+        public bool SaveReportInRepository(ReportDTO report)
+        {
+            try
+            {
+                if (!ReportStorage.SaveReport(report))
+                    return false;
+
+                if (!UserStorage.SaveUserReport(report))
+                    return false;
+
+                Log.Debug("[INFO - REPOSITORY] - Report Saved!");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return false;
+            }
+        }
+
+        public bool ExecuteTask(string userID, string taskId)
+        {
+            User user;
+
+            try
+            {
+                user = UserStorage.GetUser(userID);
+                user.MyTasks.Add(taskId);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return false;
             }
         }
 

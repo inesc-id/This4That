@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using This4That_library.Models.Domain;
+using This4That_library.Models.Integration;
 
 namespace This4That_test
 {
@@ -10,7 +10,7 @@ namespace This4That_test
         [TestMethod]
         public void CalcTaskCost()
         {
-            CSTask taskToCreate = new CSTask();
+            CSTaskDTO taskToCreate = new CSTaskDTO();
             try
             {
 

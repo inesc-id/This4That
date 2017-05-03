@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using This4That_library.Models.Domain;
+using This4That_library.Models.Integration;
+using This4That_library.Models.Integration.ReportDTO;
 
 namespace This4That_serverNode.Domain
 {
@@ -11,6 +12,7 @@ namespace This4That_serverNode.Domain
     {
         private string userID;
         private List<string> myTasks = new List<string>();
+        private List<string> myReports = new List<string>();    
         private List<string> subscribedTopics = new List<string>();
 
         public string UserID
@@ -50,6 +52,26 @@ namespace This4That_serverNode.Domain
             {
                 subscribedTopics = value;
             }
+        }
+
+        public List<string> MyReports
+        {
+            get
+            {
+                return myReports;
+            }
+
+            set
+            {
+                myReports = value;
+            }
+        }
+
+
+        public void SubscribeTopic(string topicName)
+        {
+            if (!SubscribedTopics.Contains(topicName))
+                SubscribedTopics.Add(topicName);
         }
     }
 }

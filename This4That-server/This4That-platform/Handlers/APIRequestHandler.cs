@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Web;
 using This4That_library;
-using This4That_library.Models.Domain;
 using This4That_library.Models.Integration;
 using This4That_library.Models.Integration.CalcTaskCostDTO;
+using This4That_library.Models.Integration.ExecuteTaskDTO;
 using This4That_library.Models.Integration.GetTasksByTopicDTO;
 using This4That_library.Models.Integration.GetUserTopicDTO;
+using This4That_library.Models.Integration.ReportDTO;
 using This4That_library.Models.Integration.TaskPayCreateDTO;
 using This4That_platform.Integration;
 using This4That_platform.Properties;
@@ -168,16 +169,31 @@ namespace This4That_platform.Handlers
             }
         }
 
-        public bool ReportResultsCSTask()
+        public bool ReportResultsCSTask(out APIResponseDTO response, string taskType)
         {
-            string jsonBody = null;
+            TaskTypeEnum taskTypeEnum;
+            response = new APIResponseDTO();
+            ReportDTO reportReqDTO = null;
             try
             {
-                if (!serverMgr.RemoteReportAggregator.CreateReport(jsonBody))
+                //get the enum type
+                if (!Enum.TryParse(taskType, out taskTypeEnum))
+                {
+                    Global.Log.ErrorFormat("Invalid Type of Task: [{0}]", taskType);
+                    response.SetErrorResponse("Cannot Report Task!", APIResponseDTO.RESULT_TYPE.ERROR);
+                    return false;
+                }
+                if (!GetReportFromRequest(this.request, taskTypeEnum, out reportReqDTO))
+                {
+                    response.SetErrorResponse("Invalid Request!", APIResponseDTO.RESULT_TYPE.ERROR);
+                    return false;
+                }
+                if (!serverMgr.RemoteReportAggregator.SaveReport(reportReqDTO))
                 {
                     Global.Log.Error("Cannot generate Report from user results!");
                     return false;
                 }
+                response.SetResponse("Reported", APIResponseDTO.RESULT_TYPE.SUCCESS);
                 Global.Log.Debug("Report generated with SUCCESS!");
                 return true;
             }
@@ -210,7 +226,7 @@ namespace This4That_platform.Handlers
         public bool GetUserTasks(string userID, out APIResponseDTO response)
         {
             response = new APIResponseDTO();
-            List<CSTask> myTasks;
+            List<CSTaskDTO> myTasks;
             try
             {
                 myTasks = this.serverMgr.RemoteTaskDistributor.GetUserTasks(userID);
@@ -263,10 +279,39 @@ namespace This4That_platform.Handlers
             }
         }
 
+        internal bool ExecuteSubscribedTask(out APIResponseDTO response)
+        {
+            ExecuteTaskDTO execTaskDTO;
+            response = new APIResponseDTO();
+
+            try
+            {
+                if (!GetTaskIdFromRequest(this.request, out execTaskDTO))
+                {
+                    response.SetErrorResponse("Invalid Request!", APIResponseDTO.RESULT_TYPE.ERROR);
+                    return false;
+                }
+                if (!this.serverMgr.RemoteTaskDistributor.ExecuteTask(execTaskDTO.UserID, execTaskDTO.TaskId))
+                {
+                    Global.Log.Error("Cannot execute Task!");
+                    response.SetErrorResponse("Cannot Execute Task!", APIResponseDTO.RESULT_TYPE.ERROR);
+                    return false;
+                }
+                response.SetResponse("Success", APIResponseDTO.RESULT_TYPE.SUCCESS);
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                Global.Log.Error(ex.Message);
+                return false;
+            }
+        }
+
         public bool GetSubscribedTasks(string userID, out APIResponseDTO response)
         {
             response = new APIResponseDTO();
-            List<CSTask> subscribedTasks;
+            List<CSTaskDTO> subscribedTasks;
             try
             {
                 subscribedTasks = this.serverMgr.RemoteTaskDistributor.GetUserSubscribedTasks(userID);
@@ -290,7 +335,7 @@ namespace This4That_platform.Handlers
         internal bool GetSubscribedTasksByTopicName(out APIResponseDTO response)
         {
             response = new APIResponseDTO();
-            List<CSTask> subscribedTasks;
+            List<CSTaskDTO> subscribedTasks;
             GetTopicRequestDTO topicRequestDTO = null;
             string errorMessage = null;
             try
@@ -444,6 +489,53 @@ namespace This4That_platform.Handlers
             }
         }
 
+        private bool GetReportFromRequest(HttpRequest request, TaskTypeEnum taskTypeEnum, out ReportDTO reportReqDTO)
+        {
+            string errorMessage = null;
+            reportReqDTO = null;
+            APIRequestDTO requestDTO;
+
+            try
+            {
+                if (!Library.GetDTOFromRequest(request, out requestDTO, taskTypeEnum.ToString(), ref errorMessage))
+                {
+                    Global.Log.Error(errorMessage);
+                    return false;
+                }
+                reportReqDTO = (ReportDTO)requestDTO;
+                Global.Log.DebugFormat("User ID: [{0}] reported Info for Task: [{1}]", reportReqDTO.UserID, reportReqDTO.TaskId);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Global.Log.Error(ex.Message);
+                return false;
+            }
+        }
+
+        private bool GetTaskIdFromRequest(HttpRequest request, out ExecuteTaskDTO execTaskDTO)
+        {
+            string errorMessage = null;
+            execTaskDTO = null;
+            APIRequestDTO requestDTO;
+
+            try
+            {
+                if (!Library.GetDTOFromRequest(request, out requestDTO, typeof(ExecuteTaskDTO).FullName, ref errorMessage))
+                {
+                    Global.Log.Error(errorMessage);
+                    return false;
+                }
+                execTaskDTO = (ExecuteTaskDTO)requestDTO;
+                Global.Log.DebugFormat("User ID: [{0}] going to execute Task: [{1}]", execTaskDTO.UserID, execTaskDTO.TaskId);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Global.Log.Error(ex.Message);
+                return false;
+            }
+        }
         #endregion
     }
 }

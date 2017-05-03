@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Web;
 using This4That_library;
-using This4That_library.Models.Domain;
+using This4That_library.Models.Integration;
 using This4That_serverNode.Domain;
 
 namespace This4That_serverNode.Nodes
@@ -80,7 +80,7 @@ namespace This4That_serverNode.Nodes
 
         #region REMOTE_INTERFACE
 
-        public bool CreateTask(CSTask task, string userID, out string taskID)
+        public bool CreateTask(CSTaskDTO task, string userID, out string taskID)
         {
             taskID = null;
             try

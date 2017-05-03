@@ -1,7 +1,9 @@
 ﻿using Newtonsoft.Json;
+using System;
 
 namespace This4That_library.Models.Integration
 {
+    [Serializable]
     public abstract class APIRequestDTO
     {
         private string userID;

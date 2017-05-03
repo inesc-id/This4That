@@ -22,3 +22,9 @@ hs_err_pid*
 /This4That-server/This4That-library/obj/Release/TempPE
 /This4That-server/This4That-test/obj/Release
 *.user
+/This4That-server/This4That-library/bin/Debug
+/This4That-server/This4That-platform/bin
+/This4That-server/This4That-library/obj/Debug
+/This4That-server/This4That-platform/obj/Debug
+/This4That-server/This4That-test/bin/Debug
+/This4That-server/This4That-test/obj/Debug

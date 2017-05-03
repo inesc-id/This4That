@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -80,5 +82,40 @@ public class MyTasksFragment extends Fragment {
 
     public void setLinearLayoutManager(LinearLayoutManager linearLayoutManager) {
         this.linearLayoutManager = linearLayoutManager;
+    }
+
+    /**
+     * Loads new fragment
+     *
+     * @param fragment - fragment to be showed
+     */
+    public void replaceFragment(Fragment fragment, boolean explicitReplace, boolean addToBackStack){
+        String backStateName =  fragment.getClass().getName();
+        String fragmentTag = backStateName;
+        boolean fragmentPopped = false;
+
+        FragmentManager manager = this.getActivity().getSupportFragmentManager();
+
+        if(!explicitReplace){
+            fragmentPopped = manager.popBackStackImmediate (backStateName, 0);
+        }
+
+        if(!fragmentPopped && manager.findFragmentByTag(fragmentTag) == null){ //fragment not in back stack, create it.
+
+            FragmentTransaction ft = manager.beginTransaction();
+            ft.replace(R.id.content_frame, fragment, fragmentTag);
+            if(addToBackStack) {
+                ft.addToBackStack(backStateName);
+            }
+            ft.commit();
+        }
+        else if(explicitReplace){
+
+            manager.popBackStack();
+            FragmentTransaction ft = manager.beginTransaction();
+            ft.replace(R.id.content_frame, fragment, fragmentTag);
+            ft.addToBackStack(backStateName);
+            ft.commit();
+        }
     }
 }

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using This4That_library.Models.Domain;
+using This4That_library.Models.Integration;
 using This4That_library.Models.Integration.GetTasksByTopicDTO;
+using This4That_library.Models.Integration.ReportDTO;
 using This4That_serverNode.IncentiveModels;
 
 namespace This4That_library
@@ -24,28 +25,29 @@ namespace This4That_library
 
     public interface ITaskCreator : IRemoteEntity
     {
-        bool CreateTask(CSTask task, string userID, out string taskID);
+        bool CreateTask(CSTaskDTO task, string userID, out string taskID);
     }
 
     public interface ITaskDistributor : IRemoteEntity
     {
         List<GetTasksDTO> GetTasksByTopicName(string topicName);
         List<String> GetTopics();
-        List<CSTask> GetUserTasks(string userID);
-        List<CSTask> GetUserSubscribedTasks(string userID);
+        List<CSTaskDTO> GetUserTasks(string userID);
+        List<CSTaskDTO> GetUserSubscribedTasks(string userID);
         bool SubscribeTopic(string userId, string topic, ref string errorMessage);
-        List<CSTask> GetSubscribedTasksByTopicName(string userID, string topicName, ref string errorMessage);
+        List<CSTaskDTO> GetSubscribedTasksByTopicName(string userID, string topicName, ref string errorMessage);
+        bool ExecuteTask(string userID, string taskId);
     }
 
     public interface IReportAggregator : IRemoteEntity
     {
-        bool CreateReport(string jsonBody);
+        bool SaveReport(ReportDTO reportTask);
 
     }
 
     public interface IIncentiveEngine : IRemoteEntity
     {
-        bool CalcTaskCost(CSTask taskSpec, string userID, out object incentiveValue);
+        bool CalcTaskCost(CSTaskDTO taskSpec, string userID, out object incentiveValue);
         bool PayTask(string userId, out string transactionId);
     }
 
@@ -53,13 +55,15 @@ namespace This4That_library
     {
         bool AuthenticateUser(string userID);
         bool GetUserIncentiveMechanism(string userID, out IncentiveSchemeBase incentiveScheme);
-        bool RegisterTask(CSTask topic, string userID, out string taskID);
+        bool RegisterTask(CSTaskDTO topic, string userID, out string taskID);
         bool GetTasksByTopicName(out List<GetTasksDTO> listTaskDTO, string topicName);
         List<String> GetTopicsFromRepository();
         string RegisterUser();
-        List<CSTask> GetTasksByUserID(string userID);
-        List<CSTask> GetSubscribedTasksbyUserID(string userID);
-        List<CSTask> GetSubscribedTasksbyTopic(string userID, string topicName, ref string errorMessage);
+        List<CSTaskDTO> GetTasksByUserID(string userID);
+        List<CSTaskDTO> GetSubscribedTasksbyUserID(string userID);
+        List<CSTaskDTO> GetSubscribedTasksbyTopic(string userID, string topicName, ref string errorMessage);
         bool SubscribeTopic(string userId, string topicName, ref string errorMessage);
+        bool SaveReportInRepository(ReportDTO report);
+        bool ExecuteTask(string userID, string taskId);
     }
 }

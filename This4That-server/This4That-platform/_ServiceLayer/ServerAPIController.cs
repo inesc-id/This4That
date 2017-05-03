@@ -116,17 +116,22 @@ namespace This4That_platform.ServiceLayer
         }
 
         [HttpPost]
-        [Route("report")]
-        public IHttpActionResult ReportTaskResults()
+        [Route("report/{taskType}")]
+        public IHttpActionResult ReportTaskResults(string taskType)
         {
             ServerManager serverMgr = null;
-            APIRequestHandler handler;
+            APIRequestHandler handler = null;
+            APIResponseDTO response = new APIResponseDTO();
+
             try
             {
                 serverMgr = Global.GetCreateServerManager(HttpContext.Current.Server);
                 handler = new APIRequestHandler(HttpContext.Current.Request, serverMgr);
-
-                return Content(HttpStatusCode.OK, "OK");
+                if (!handler.ReportResultsCSTask(out response, taskType))
+                {
+                    return Content(HttpStatusCode.InternalServerError, response);
+                }
+                return Content(HttpStatusCode.OK, response);
             }
             catch (Exception ex)
             {
@@ -255,6 +260,33 @@ namespace This4That_platform.ServiceLayer
                 serverMgr = Global.GetCreateServerManager(HttpContext.Current.Server);
                 handler = new APIRequestHandler(HttpContext.Current.Request, serverMgr);
                 if (!handler.GetSubscribedTasksByTopicName(out response))
+                {
+                    return Content(HttpStatusCode.InternalServerError, response);
+                }
+                return Content(HttpStatusCode.OK, response);
+            }
+            catch (Exception ex)
+            {
+                Global.Log.Error(ex.Message);
+                response.SetResponse("Cannot obtain subscribed tasks. Please try again!", APIResponseDTO.RESULT_TYPE.ERROR);
+                return Content(HttpStatusCode.InternalServerError, response);
+            }
+
+        }
+
+        [HttpPost]
+        [Route("subscribedtask/execute")]
+        public IHttpActionResult ExecuteSubscribedTask()
+        {
+            ServerManager serverMgr = null;
+            APIRequestHandler handler;
+            APIResponseDTO response = new APIResponseDTO();
+
+            try
+            {
+                serverMgr = Global.GetCreateServerManager(HttpContext.Current.Server);
+                handler = new APIRequestHandler(HttpContext.Current.Request, serverMgr);
+                if (!handler.ExecuteSubscribedTask(out response))
                 {
                     return Content(HttpStatusCode.InternalServerError, response);
                 }

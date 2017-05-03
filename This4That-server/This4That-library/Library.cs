@@ -6,7 +6,9 @@ using System.Text;
 using System.Web;
 using This4That_library.Models.Integration;
 using This4That_library.Models.Integration.CalcTaskCostDTO;
+using This4That_library.Models.Integration.ExecuteTaskDTO;
 using This4That_library.Models.Integration.GetUserTopicDTO;
+using This4That_library.Models.Integration.ReportDTO;
 using This4That_library.Models.Integration.TaskPayCreateDTO;
 using This4That_library.Properties;
 
@@ -20,6 +22,7 @@ namespace This4That_library
             string calcTaskCostType = typeof(CalcTaskCostRequestDTO).FullName;
             try
             {
+                //check the right type to serialize
                 if (String.IsNullOrEmpty(postBody))
                     return false;
                 if (typeof(CalcTaskCostRequestDTO).FullName.Equals(typeFullName))
@@ -37,8 +40,24 @@ namespace This4That_library
                     requestDTO = JsonConvert.DeserializeObject<GetTopicRequestDTO>(postBody);
                     return true;
                 }
-                return false;
+                //the typeFullName variable is used to check the sensingtasktype
+                if (typeFullName.Equals(TaskTypeEnum.InteractiveTask.ToString()))
+                {
+                    requestDTO = JsonConvert.DeserializeObject<InteractiveTaskReportDTO>(postBody);
+                    return true;
+                }
+                if (typeFullName.Equals(TaskTypeEnum.SensingTask.ToString()))
+                {
+                    requestDTO = JsonConvert.DeserializeObject<SensingTaskReportDTO>(postBody);
+                    return true;
+                }
 
+                if (typeFullName.Equals(typeof(ExecuteTaskDTO)))
+                {
+                    requestDTO = JsonConvert.DeserializeObject<ExecuteTaskDTO>(postBody);
+                    return true;
+                }
+                return false;
             }
             catch (Exception)
             {

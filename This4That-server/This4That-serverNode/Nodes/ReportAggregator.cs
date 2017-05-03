@@ -4,11 +4,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using This4That_library;
+using This4That_library.Models.Integration;
+using This4That_library.Models.Integration.ReportDTO;
 
 namespace This4That_serverNode.Nodes
 {
     public class ReportAggregator : Node, IReportAggregator
     {
+        private IRepository remoteRepository = null;
+
+        public IRepository RemoteRepository
+        {
+            get
+            {
+                return remoteRepository;
+            }
+
+            set
+            {
+                remoteRepository = value;
+            }
+        }
+
         public ReportAggregator(string hostName, int port, string name) : base(hostName, port, name)
         {
             Log = LogManager.GetLogger("ReportAggregatorLOG");
@@ -42,9 +59,38 @@ namespace This4That_serverNode.Nodes
             }
         }
 
-        public bool CreateReport(string jsonBody)
+        public bool ConnectToRepository(string repositoryUrl)
         {
-            return true;
+            try
+            {
+                this.RemoteRepository = (IRepository)Activator.GetObject(typeof(IRepository), repositoryUrl);
+                Log.DebugFormat("[INFO] Report Aggregator connected to Repository.");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return false;
+            }
+        }
+
+        public bool SaveReport(ReportDTO report)
+        {
+            try
+            {
+                Log.Debug("Report Received!");
+                Console.WriteLine("[INFO - REPORT_AGGREGATOR] - Report Received!");
+
+                if (!this.RemoteRepository.SaveReportInRepository(report))
+                    return false;
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return false;
+            }
         }
     }
 }

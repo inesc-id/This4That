@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace This4That_library.Models.Domain
+namespace This4That_library.Models.Integration
 {
     [Serializable]
     public class Topic

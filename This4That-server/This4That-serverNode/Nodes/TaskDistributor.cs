@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using This4That_library;
-using This4That_library.Models.Domain;
+using This4That_library.Models.Integration;
 using This4That_library.Models.Integration.GetTasksByTopicDTO;
 
 namespace This4That_serverNode.Nodes
@@ -124,7 +124,7 @@ namespace This4That_serverNode.Nodes
             }
         }
 
-        public List<CSTask> GetUserSubscribedTasks(string userID)
+        public List<CSTaskDTO> GetUserSubscribedTasks(string userID)
         {
             try
             {
@@ -139,7 +139,7 @@ namespace This4That_serverNode.Nodes
             }
         }
 
-        public List<CSTask> GetSubscribedTasksByTopicName(string userID, string topicName, ref string errorMessage)
+        public List<CSTaskDTO> GetSubscribedTasksByTopicName(string userID, string topicName, ref string errorMessage)
         {
             try
             {
@@ -154,7 +154,7 @@ namespace This4That_serverNode.Nodes
             }
         }
 
-        public List<CSTask> GetUserTasks(string userID)
+        public List<CSTaskDTO> GetUserTasks(string userID)
         {
             try
             {
@@ -166,6 +166,22 @@ namespace This4That_serverNode.Nodes
             {
                 Log.Error(ex.Message);
                 return null;
+            }
+        }
+
+        public bool ExecuteTask(string userID, string taskId)
+        {
+            try
+            {
+                if (!this.RemoteRepository.ExecuteTask(userID, taskId))
+                    return false;
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return false;
             }
         }
 

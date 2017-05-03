@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json;
-using This4That_library.Models.Domain;
+using This4That_library.Models.Integration;
 
 namespace This4That_library.Models.Integration.TaskPayCreateDTO
 {

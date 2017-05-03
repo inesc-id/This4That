@@ -71,7 +71,7 @@ public class GetMyTasksService extends AsyncTask<String,Integer, String> {
             globalApp = (GlobalApp) myTasksFragment.getParentActivity().getApplicationContext();
             myTasks = responseDTO.getResponse();
             globalApp.setMyTasks(myTasks);
-            MyTasksAdapter tasksAdapter = new MyTasksAdapter(myTasks);
+            MyTasksAdapter tasksAdapter = new MyTasksAdapter(myTasks, myTasksFragment);
             //new tasks list
             this.myTasksFragment.getRecyclerView().setAdapter(tasksAdapter);
 
