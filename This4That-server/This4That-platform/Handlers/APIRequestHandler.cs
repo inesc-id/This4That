@@ -103,27 +103,24 @@ namespace This4That_platform.Handlers
                 //get the DTO containing the userIDand task meta-info
                 if (!GetCSTaskToCreate(out payRequest))
                 {
-                    response.SetResponse(new Dictionary<string, string>() { { "errorMessage", "Invalid Request please try again!" } }
-                    , APIResponseDTO.RESULT_TYPE.ERROR);
+                    response.SetErrorResponse("Invalid Request please try again!", APIResponseDTO.RESULT_TYPE.ERROR);
                     return false;
                 }
                 //try to pay the task
                 if (!PayCSTask(out txId, payRequest))
                 {
-                    response.SetResponse(new Dictionary<string, string>() { { "errorMessage", "Cannot perform the payment!" } }
-                    , APIResponseDTO.RESULT_TYPE.ERROR);
+                    response.SetErrorResponse("Cannot perform the payment!", APIResponseDTO.RESULT_TYPE.ERROR);
                     return false;
                 }
-                if (txId.Equals(Resources.InsufficientFunds))
+                //transaction not performed due to insufficient credits
+                if (txId == null)
                 {
-                    response.SetResponse(new Dictionary<string, string>() { { "errorMessage", "Insufficient Credits!" } }
-                                        , APIResponseDTO.RESULT_TYPE.ERROR);
+                    response.SetErrorResponse("Insufficient Credits!", APIResponseDTO.RESULT_TYPE.INSUFFICIENT_CREDITS);
                     return true;
                 }
                 if (!CreateCSTask(out taskId, payRequest))
                 {
-                    response.SetResponse(new Dictionary<string, string>() { { "errorMessage", "Cannot create the crowd-sensing task, please try again!" } }
-                    , APIResponseDTO.RESULT_TYPE.ERROR);
+                    response.SetErrorResponse("Cannot create the crowd-sensing task, please try again!", APIResponseDTO.RESULT_TYPE.ERROR);
                     return false;
                 }
                 payResponse.TaskID = taskId;
@@ -206,11 +203,11 @@ namespace This4That_platform.Handlers
 
         public bool RegisterUser(out APIResponseDTO response)
         {
-            string userId = null;
+            string userId = null;            
             response = new APIResponseDTO();
             try
             {
-                userId = this.serverMgr.RemoteRepository.RegisterUser();
+                userId = this.serverMgr.RemoteIncentiveEngine.RegisterUser();
                 response.SetResponse(new Dictionary<string, object>() {
                                     { "userId", userId} }
                                     , APIResponseDTO.RESULT_TYPE.SUCCESS);
@@ -399,7 +396,7 @@ namespace This4That_platform.Handlers
                 {
                     return false;
                 }
-                if (!serverMgr.RemoteIncentiveEngine.PayTask(request.UserID, out transactionId))
+                if (!serverMgr.RemoteIncentiveEngine.PayTask(request.UserID, incentiveValue, out transactionId))
                 {
                     return false;
                 }

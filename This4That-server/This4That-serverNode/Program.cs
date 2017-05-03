@@ -10,9 +10,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using This4That_library;
-using This4That_serverNode.Nodes;
+using This4That_library.Nodes;
 
-namespace This4That_serverNode
+namespace This4That_library
 {
     class Program
     {

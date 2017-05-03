@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using This4That_library.Models.Integration;
 
-namespace This4That_serverNode.Domain
+namespace This4That_library.Domain
 {
     public class TaskStorage
     {

@@ -131,5 +131,10 @@ namespace This4That_library
                 return null;
             }
         }
+
+        public static long GetUnixTimestamp(DateTime time)
+        {
+            return (long)(time.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
+        }
     }
 }

@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using This4That_library.Models.Incentives;
 using This4That_library.Models.Integration.ReportDTO;
+using This4That_library.Models.IncentiveModels;
 
-namespace This4That_serverNode.Domain
+namespace This4That_library.Domain
 {
     public class UserStorage
     {
-        private Dictionary<string, User> users = new Dictionary<string, User>();
+        private Dictionary<string, @object> users = new Dictionary<string, @object>();
 
-        public Dictionary<string, User> Users
+        public Dictionary<string, @object> Users
         {
             get
             {
@@ -26,24 +28,23 @@ namespace This4That_serverNode.Domain
 
         public UserStorage()
         {
-            User user = new User();
-            user.UserID = "1234";
+            //FIXME: remove
+            @object user = new @object("1234", IncentiveSchemesEnum.Centralized, new Gamification());
             this.Users.Add("1234", user);
         }
 
-        public string CreateUser()
+        public string CreateUser(IncentiveSchemesEnum incentiveScheme, Incentive incentive)
         {
             try
             {
-                User user;
+                @object user;
                 string userId = Guid.NewGuid().ToString().Substring(0, 8);
 
                 while (Users.ContainsKey(userId))
                 {
                     userId = Guid.NewGuid().ToString().Substring(0, 8);
                 }
-                user = new User();
-                user.UserID = userId;
+                user = new @object(userId, incentiveScheme, incentive);
                 Users.Add(userId, user);
                 return user.UserID;
             }
@@ -66,7 +67,7 @@ namespace This4That_serverNode.Domain
             }
         }
 
-        public User GetUser(string userID)
+        public @object GetUserByID(string userID)
         {
             if (Users.Keys.Contains(userID))
                 return Users[userID];

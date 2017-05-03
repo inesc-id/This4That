@@ -12,9 +12,9 @@ C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\T
 C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\Server\This4That-master\This4That-serverNode\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\Server\This4That-master\This4That-serverNode\obj\Debug\This4That-serverNode.exe
 C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\Server\This4That-master\This4That-serverNode\obj\Debug\This4That-serverNode.pdb
-C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-serverNode\bin\Debug\This4That-serverNode.exe.config
 C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-serverNode\bin\Debug\Config\configInstances.xml
 C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-serverNode\bin\Debug\Config\configInstances.xsd
+C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-serverNode\bin\Debug\This4That-serverNode.exe.config
 C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-serverNode\bin\Debug\This4That-serverNode.exe
 C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-serverNode\bin\Debug\This4That-serverNode.pdb
 C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-serverNode\bin\Debug\log4net.dll

@@ -7,9 +7,9 @@ using System.Threading;
 using System.Web;
 using This4That_library;
 using This4That_library.Models.Integration;
-using This4That_serverNode.Domain;
+using This4That_library.Domain;
 
-namespace This4That_serverNode.Nodes
+namespace This4That_library.Nodes
 {
     public class TaskCreator : Node, ITaskCreator
     {

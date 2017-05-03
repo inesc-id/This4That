@@ -4,21 +4,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using This4That_library;
+using This4That_library.Models.Incentives;
 using This4That_library.Models.Integration;
 using This4That_library.Models.Integration.GetTasksByTopicDTO;
 using This4That_library.Models.Integration.ReportDTO;
-using This4That_serverNode.Domain;
-using This4That_serverNode.IncentiveModels;
+using This4That_library.Domain;
+using This4That_library.Models.IncentiveModels;
+using This4That_library.Models.Domain;
 
-namespace This4That_serverNode.Nodes
+namespace This4That_library.Nodes
 {
     public class Repository : Node, IRepository
     {
         private Dictionary<string, Topic> colTopics = new Dictionary<string, Topic>();
-        
         private UserStorage userStorage = new UserStorage();
         private ReportStorage reportStorage = new ReportStorage();
         private TaskStorage taskStorage = new TaskStorage();
+        private TransactionStorage txStorage = new TransactionStorage();
 
         public Dictionary<string, Topic> ColTopics
         {
@@ -69,6 +71,19 @@ namespace This4That_serverNode.Nodes
             set
             {
                 taskStorage = value;
+            }
+        }
+
+        public TransactionStorage TxStorage
+        {
+            get
+            {
+                return txStorage;
+            }
+
+            set
+            {
+                txStorage = value;
             }
         }
 
@@ -152,18 +167,25 @@ namespace This4That_serverNode.Nodes
             return true;
         }
 
-        public bool GetUserIncentiveMechanism(string userID, out IncentiveSchemeBase incentiveScheme)
+        public bool GetUserIncentiveScheme(string userID, out IncentiveSchemesEnum incentiveScheme)
         {
-           incentiveScheme = new CentralIncentiveScheme();
-           return true;
+            try
+            {
+                incentiveScheme = UserStorage.GetUserByID(userID).IncentiveScheme;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public bool RegisterTask(CSTaskDTO task, string userID, out string taskID)
         {
-            User user;
+            @object user;
             taskID = null;
             try {
-                user = UserStorage.GetUser(userID);
+                user = UserStorage.GetUserByID(userID);
                 if (user == null)
                 {
                     Log.ErrorFormat("Invalid User ID: [{0}]", userID);
@@ -236,11 +258,11 @@ namespace This4That_serverNode.Nodes
             }
         }
 
-        public string RegisterUser()
+        public string RegisterUser(Incentive incentive)
         {
             try
             {
-                return UserStorage.CreateUser();
+                return UserStorage.CreateUser(IncentiveSchemesEnum.Centralized, incentive);
             }
             catch (Exception ex)
             {
@@ -250,14 +272,28 @@ namespace This4That_serverNode.Nodes
             
         }
 
+        public object GetUserBalance(string userID)
+        {
+            @object user;
+
+            user = UserStorage.GetUserByID(userID);
+
+            if (user != null)
+            {
+                return user.Wallet.Balance;
+            }
+            return null;
+        }
+
+
         public bool SubscribeTopic(string userId, string topicName, ref string errorMessage)
         {
-            User user;
+            @object user;
 
             try
             {
                 Console.WriteLine("[INFO - REPOSITORY] : Going to Subscribe Topic: [{0}] for UserID: [{1}]", topicName, userId);
-                user = UserStorage.GetUser(userId); 
+                user = UserStorage.GetUserByID(userId); 
                 if (user == null)
                 {
                     errorMessage = "Invalid UserID!";
@@ -286,11 +322,11 @@ namespace This4That_serverNode.Nodes
             List<string> myTasksID = new List<string>();
             List<CSTaskDTO> myTasks = new List<CSTaskDTO>();
             CSTask task;
-            User user;
+            @object user;
             try
             {
                 Console.WriteLine("[INFO - REPOSITORY] : Fetching My Tasks");
-                user = UserStorage.GetUser(userID);
+                user = UserStorage.GetUserByID(userID);
 
                 if (user != null)
                 {
@@ -321,11 +357,11 @@ namespace This4That_serverNode.Nodes
             List<CSTaskDTO> subscribedTasks = new List<CSTaskDTO>();
             Topic auxTopic;
             CSTask task;
-            User user;
+            @object user;
             try
             {
                 Console.WriteLine("[INFO - REPOSITORY] : Fetching Subscribed Tasks");
-                user = UserStorage.GetUser(userID);
+                user = UserStorage.GetUserByID(userID);
                 if (user != null)
                 {
                     subscribedTopics = user.SubscribedTopics;
@@ -368,7 +404,7 @@ namespace This4That_serverNode.Nodes
             try
             {
                 Console.WriteLine("[INFO - REPOSITORY] : Fetching Subscribed Tasks For UserID: [{0}] and TopicName: [{1}]", userID, topicName);
-                if (UserStorage.GetUser(userID) == null)
+                if (UserStorage.GetUserByID(userID) == null)
                 {
                     errorMessage = "Invalid UserID!";
                     return null;
@@ -422,11 +458,11 @@ namespace This4That_serverNode.Nodes
 
         public bool ExecuteTask(string userID, string taskId)
         {
-            User user;
+            @object user;
 
             try
             {
-                user = UserStorage.GetUser(userID);
+                user = UserStorage.GetUserByID(userID);
                 user.MyTasks.Add(taskId);
                 return true;
             }
@@ -435,6 +471,17 @@ namespace This4That_serverNode.Nodes
                 Log.Error(ex.Message);
                 return false;
             }
+        }
+
+        public void AssociateTransactionUser(string userId, Incentive incentive, object incentiveValue, string transactionId)
+        {
+            UserStorage.GetUserByID(userId).Wallet.AssociateTransaction(incentive, incentiveValue, transactionId);
+        }
+
+        public void GenerateTransaction(string senderID, string receiverID, object incentiveValue, out string transactionId)
+        {
+            
+            TxStorage.GenerateTransaction(senderID, receiverID, incentiveValue, out transactionId);
         }
 
         #endregion

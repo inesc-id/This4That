@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using This4That_library.Models.Integration.ReportDTO;
 
-namespace This4That_serverNode.Domain
+namespace This4That_library.Domain
 {
     public class ReportStorage
     {
@@ -14,7 +14,6 @@ namespace This4That_serverNode.Domain
 
         public bool SaveReport(ReportDTO reportDTO)
         {
-            Object lockObj = new object();
             string reportId = Guid.NewGuid().ToString().Substring(0, 8);
             Report report;
             
@@ -33,7 +32,7 @@ namespace This4That_serverNode.Domain
                 {
                     return false;
                 }
-                lock (lockObj)
+                lock (reports)
                 {
                     while (reports.ContainsKey(reportId))
                     {

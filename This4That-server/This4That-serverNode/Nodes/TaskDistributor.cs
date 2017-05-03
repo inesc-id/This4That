@@ -7,7 +7,7 @@ using This4That_library;
 using This4That_library.Models.Integration;
 using This4That_library.Models.Integration.GetTasksByTopicDTO;
 
-namespace This4That_serverNode.Nodes
+namespace This4That_library.Nodes
 {
     public class TaskDistributor : Node, ITaskDistributor
     {

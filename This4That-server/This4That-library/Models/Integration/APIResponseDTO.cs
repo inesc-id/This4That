@@ -57,7 +57,8 @@ namespace This4That_platform.Integration
 
         public enum RESULT_TYPE{
             SUCCESS = 1,
-            ERROR = -1
+            ERROR = -1,
+            INSUFFICIENT_CREDITS = -10
         }
         
         public void SetResponse(object response, RESULT_TYPE type)

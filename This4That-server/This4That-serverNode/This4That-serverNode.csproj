@@ -62,12 +62,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\CSTask.cs" />
-    <Compile Include="Domain\Report.cs" />
-    <Compile Include="Domain\ReportStorage.cs" />
-    <Compile Include="Domain\TaskStorage.cs" />
-    <Compile Include="Domain\User.cs" />
-    <Compile Include="Domain\UserStorage.cs" />
     <Compile Include="Nodes\Node.cs" />
     <Compile Include="Nodes\ReportAggregator.cs" />
     <Compile Include="Nodes\IncentiveEngine.cs" />

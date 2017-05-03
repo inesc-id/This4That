@@ -7,7 +7,7 @@ using System.Runtime.Remoting.Lifetime;
 using System.Xml;
 using This4That_library;
 
-namespace This4That_serverNode.Nodes
+namespace This4That_library.Nodes
 {
     public abstract class Node : MarshalByRefObject
     {

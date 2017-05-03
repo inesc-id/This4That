@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using This4That_library.Models.Integration;
 
-namespace This4That_serverNode.Domain
+namespace This4That_library.Domain
 {
     public class CSTask
     {
@@ -118,7 +118,7 @@ namespace This4That_serverNode.Domain
             this.InteractiveTask = taskDTO.InteractiveTask;
         }
 
-        internal CSTaskDTO ToDTO()
+        public CSTaskDTO ToDTO()
         {
             CSTaskDTO taskDTO = new CSTaskDTO();
             try
