@@ -14,6 +14,7 @@ namespace This4That_test.IntegrationTests
         public void CalculateVALIDTaskCost()
         {
 
+
         }
 
         [TestMethod]

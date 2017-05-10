@@ -1,0 +1,29 @@
+﻿{  
+   "userId":"1234",
+   "task":{  
+      "name":"Fila Social",
+      "topic":"Tecnico Filas",
+      "expDate":"2017-06-04T17:41:00",
+      
+      "interactiveTask":{
+        "question" : "Como está a fila no Social, para almoçar?",
+        
+        "answers" :[
+          {
+            "answer" : "Vazia"
+          },
+          {
+            "answer" : "Algumas Pessoas"
+          },
+          {
+            "answer" : "Muitas Pessoas"
+          },
+          {
+            "answer" : "Impossível Almoçar"
+          }
+          ]
+      }
+   }
+}
+
+
