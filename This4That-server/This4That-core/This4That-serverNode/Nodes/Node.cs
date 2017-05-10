@@ -4,10 +4,9 @@ using System.Runtime.Remoting;
 using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Tcp;
 using System.Runtime.Remoting.Lifetime;
-using System.Xml;
 using This4That_library;
 
-namespace This4That_library.Nodes
+namespace This4That_ServerNode.Nodes
 {
     public abstract class Node : MarshalByRefObject
     {

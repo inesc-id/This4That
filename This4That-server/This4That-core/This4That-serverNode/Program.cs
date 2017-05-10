@@ -1,18 +1,9 @@
-﻿using log4net;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Runtime.Remoting;
-using System.Runtime.Remoting.Channels;
-using System.Runtime.Remoting.Channels.Tcp;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Xml;
 using This4That_library;
-using This4That_library.Nodes;
+using This4That_ServerNode.Nodes;
 
-namespace This4That_library
+namespace This4That_ServerNode
 {
     class Program
     {

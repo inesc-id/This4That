@@ -171,7 +171,7 @@ namespace This4That_platform.Handlers
             TaskTypeEnum taskTypeEnum;
             ReportDTO reportReqDTO = null;
             object rewardObj;
-
+            string txId = null;
             response = new APIResponseDTO();
 
             try
@@ -194,12 +194,13 @@ namespace This4That_platform.Handlers
                     return false;
                 }
                 //FIXME: here
-                if (!serverMgr.RemoteIncentiveEngine.RewardUser(reportReqDTO.UserID, out rewardObj))
+                if (!serverMgr.RemoteIncentiveEngine.RewardUser(reportReqDTO.UserID, out txId, out rewardObj))
                 {
                     Global.Log.Error("Cannot reward user!");
                     return false;
                 }
-                response.SetResponse("Reported", APIResponseDTO.RESULT_TYPE.SUCCESS);
+                response.SetResponse(new Dictionary<string, string>() { { "reward", rewardObj.ToString() }, { "txId", txId } }
+                                    , APIResponseDTO.RESULT_TYPE.SUCCESS);
                 Global.Log.Debug("Report generated with SUCCESS!");
                 return true;
             }

@@ -140,7 +140,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Domain\" />
     <Folder Include="_SecurityLayer\" />
   </ItemGroup>
   <PropertyGroup>

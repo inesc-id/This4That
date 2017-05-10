@@ -1,13 +1,9 @@
 ﻿using log4net;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using This4That_library;
-using This4That_library.Models.Integration;
 using This4That_library.Models.Integration.ReportDTO;
 
-namespace This4That_library.Nodes
+namespace This4That_ServerNode.Nodes
 {
     public class ReportAggregator : Node, IReportAggregator
     {

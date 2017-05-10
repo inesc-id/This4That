@@ -1,13 +1,11 @@
 ﻿using log4net;
 using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Threading;
 using This4That_library;
 using This4That_library.Models.Integration;
 using This4That_library.Models.Integration.GetTasksByTopicDTO;
 
-namespace This4That_library.Nodes
+namespace This4That_ServerNode.Nodes
 {
     public class TaskDistributor : Node, ITaskDistributor
     {

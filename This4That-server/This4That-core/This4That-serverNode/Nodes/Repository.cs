@@ -1,8 +1,6 @@
 ﻿using log4net;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using This4That_library;
 using This4That_library.Models.Incentives;
 using This4That_library.Models.Integration;
@@ -12,7 +10,7 @@ using This4That_library.Domain;
 using This4That_library.Models.IncentiveModels;
 using This4That_library.Models.Domain;
 
-namespace This4That_library.Nodes
+namespace This4That_ServerNode.Nodes
 {
     public class Repository : Node, IRepository
     {

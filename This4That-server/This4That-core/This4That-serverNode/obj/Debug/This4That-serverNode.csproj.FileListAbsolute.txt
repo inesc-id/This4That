@@ -1,2 +1,15 @@
 C:\Users\Calado\Desktop\This4That\This4That-server\This4That-serverNode\bin\Debug\This4That-serverNode.exe.config
 C:\Users\Calado\Desktop\This4That\This4That-server\This4That-core\This4That-serverNode\bin\Debug\This4That-serverNode.exe.config
+C:\Users\Calado\Desktop\This4That\This4That-server\This4That-core\This4That-serverNode\bin\Debug\Config\configInstances.xml
+C:\Users\Calado\Desktop\This4That\This4That-server\This4That-core\This4That-serverNode\bin\Debug\Config\configInstances.xsd
+C:\Users\Calado\Desktop\This4That\This4That-server\This4That-core\This4That-serverNode\bin\Debug\This4That-serverNode.exe
+C:\Users\Calado\Desktop\This4That\This4That-server\This4That-core\This4That-serverNode\bin\Debug\This4That-serverNode.pdb
+C:\Users\Calado\Desktop\This4That\This4That-server\This4That-core\This4That-serverNode\bin\Debug\log4net.dll
+C:\Users\Calado\Desktop\This4That\This4That-server\This4That-core\This4That-serverNode\bin\Debug\This4That-library.dll
+C:\Users\Calado\Desktop\This4That\This4That-server\This4That-core\This4That-serverNode\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Calado\Desktop\This4That\This4That-server\This4That-core\This4That-serverNode\bin\Debug\This4That-library.pdb
+C:\Users\Calado\Desktop\This4That\This4That-server\This4That-core\This4That-serverNode\bin\Debug\log4net.xml
+C:\Users\Calado\Desktop\This4That\This4That-server\This4That-core\This4That-serverNode\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Calado\Desktop\This4That\This4That-server\This4That-core\This4That-serverNode\obj\Debug\This4That-serverNode.csprojResolveAssemblyReference.cache
+C:\Users\Calado\Desktop\This4That\This4That-server\This4That-core\This4That-serverNode\obj\Debug\This4That-serverNode.exe
+C:\Users\Calado\Desktop\This4That\This4That-server\This4That-core\This4That-serverNode\obj\Debug\This4That-serverNode.pdb
