@@ -1,0 +1,2 @@
+C:\Users\Calado\Desktop\This4That\This4That-server\This4That-serverNode\bin\Debug\This4That-serverNode.exe.config
+C:\Users\Calado\Desktop\This4That\This4That-server\This4That-core\This4That-serverNode\bin\Debug\This4That-serverNode.exe.config
