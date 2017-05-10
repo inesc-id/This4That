@@ -11,9 +11,9 @@ namespace This4That_library.Domain
 {
     public class UserStorage
     {
-        private Dictionary<string, @object> users = new Dictionary<string, @object>();
+        private Dictionary<string, User> users = new Dictionary<string, User>();
 
-        public Dictionary<string, @object> Users
+        public Dictionary<string, User> Users
         {
             get
             {
@@ -29,7 +29,8 @@ namespace This4That_library.Domain
         public UserStorage()
         {
             //FIXME: remove
-            @object user = new @object("1234", IncentiveSchemesEnum.Centralized, new Gamification());
+            User user = new User("1234", IncentiveSchemesEnum.Centralized, new Gamification());
+            User platformUser = new User("Platform", IncentiveSchemesEnum.Centralized, new Gamification());
             this.Users.Add("1234", user);
         }
 
@@ -37,14 +38,14 @@ namespace This4That_library.Domain
         {
             try
             {
-                @object user;
+                User user;
                 string userId = Guid.NewGuid().ToString().Substring(0, 8);
 
                 while (Users.ContainsKey(userId))
                 {
                     userId = Guid.NewGuid().ToString().Substring(0, 8);
                 }
-                user = new @object(userId, incentiveScheme, incentive);
+                user = new User(userId, incentiveScheme, incentive);
                 Users.Add(userId, user);
                 return user.UserID;
             }
@@ -67,7 +68,7 @@ namespace This4That_library.Domain
             }
         }
 
-        public @object GetUserByID(string userID)
+        public User GetUserByID(string userID)
         {
             if (Users.Keys.Contains(userID))
                 return Users[userID];

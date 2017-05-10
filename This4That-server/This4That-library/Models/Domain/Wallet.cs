@@ -8,7 +8,8 @@ namespace This4That_library.Domain
     public class Wallet
     {
         private object balance = null;
-        private List<string> Transactions = new List<string>();
+        private List<string> transactions = new List<string>();
+
         public object Balance
         {
             get
@@ -22,11 +23,21 @@ namespace This4That_library.Domain
             }
         }
 
-
-
-        public void AssociateTransaction(Incentive incentive, object incentiveValue, string transactionId)
+        public List<string> Transactions
         {
-            Balance = incentive.CalcNewBalance(Balance, incentiveValue);
+            get
+            {
+                return transactions;
+            }
+
+            set
+            {
+                transactions = value;
+            }
+        }
+
+        public void AssociateTransaction(string transactionId)
+        {
             Transactions.Add(transactionId);
         }
     }

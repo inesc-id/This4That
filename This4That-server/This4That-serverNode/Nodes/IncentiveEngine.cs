@@ -13,7 +13,7 @@ namespace This4That_library.Nodes
     public class IncentiveEngine : Node, IIncentiveEngine
     {
         private IRepository repository = null;
-        private CentralIncentiveScheme centralizedIncentiveScheme;
+        private CentralizedIncentiveScheme centralizedIncentiveScheme;
         private DescentralizedIncentiveScheme descentralizedIncentiveScheme;
 
         public IRepository Repository
@@ -32,7 +32,7 @@ namespace This4That_library.Nodes
         public IncentiveEngine(string hostName, int port, string name) : base(hostName, port, name)
         {
             Log = LogManager.GetLogger("IncentiveEngineLOG");
-            this.centralizedIncentiveScheme = new CentralIncentiveScheme(new Gamification());
+            this.centralizedIncentiveScheme = new CentralizedIncentiveScheme(new Gamification());
             this.descentralizedIncentiveScheme = new DescentralizedIncentiveScheme(new Gamification());
             
         }
@@ -140,28 +140,25 @@ namespace This4That_library.Nodes
                 {
                     Log.ErrorFormat("Cannot load incentive scheme for User: [{0}]", userId);
                 }
-                userWalletBalance = Repository.GetUserBalance(userId);
+                userWalletBalance = incentiveScheme.CheckUserBalance(Repository, userId);
                 if (userWalletBalance == null)
                 {
                     Log.ErrorFormat("Invalid UserID!");
                     return false;
                 }
                 //check if user has sufficient credits, depending the incentive type
-                if (!incentiveScheme.HasUserSufficientCredits(userWalletBalance, incentiveValue))
+                if (!incentiveScheme.CanPerformTransaction(userWalletBalance, incentiveValue))
                 {
                     Console.WriteLine("[INFO - INCENTIVE ENGINE] - User: [{0}] Insufficient Balance!", userId);
                     transactionId = null;
                     return true;
                 }
                 //create the transaction and store it into the TransactionStorage
-                if (!incentiveScheme.RegisterTaskPayment(this.Repository, userId, incentiveValue, out transactionId))
+                if (!incentiveScheme.RegisterPayment(this.Repository, userId, "Platform", incentiveValue, out transactionId))
                 {
                     Log.ErrorFormat("Cannot register payment task for UserId: [{0}]", userId);
                     Console.WriteLine("[ERROR - INCENTIVE ENGINE] - Cannot register task payment!");
                 }
-                //associate in the user wallet the transaction ID and calc the new wallet balance
-                this.Repository.AssociateTransactionUser(userId, incentiveScheme.Incentive, incentiveValue, transactionId);
-                Console.WriteLine("[INFO - INCENTIVE ENGINE] - UserID: [{0}] Account Balance: [{1}]", userId, Repository.GetUserBalance(userId));
                 Console.WriteLine("[INFO - INCENTIVE ENGINE] - Payment Registered with Success!");
                 return true;
             }
@@ -172,10 +169,47 @@ namespace This4That_library.Nodes
             }
         }
 
+        public bool RewardUser(string userId, out string transactionId, out object rewardObj)
+        {
+            IncentiveSchemeBase incentiveScheme;
+            object taskReward;
+
+            transactionId = null;
+            rewardObj = null;
+            try
+            {
+                //get user incentive scheme
+                if (!GetUserIncentiveScheme(userId, out incentiveScheme))
+                {
+                    Log.ErrorFormat("Cannot load incentive scheme for User: [{0}]", userId);
+                    return false;
+                }
+                //obtain the reward for completing the task
+                taskReward = incentiveScheme.IncentiveType.GetTaskReward();
+
+                //create the transaction and store it into the TransactionStorage
+                if (!incentiveScheme.RegisterPayment(this.Repository, "Platform", userId, taskReward, out transactionId))
+                {
+                    Log.ErrorFormat("Cannot register reward for UserId: [{0}]", userId);
+                    Console.WriteLine("[ERROR - INCENTIVE ENGINE] - Cannot register task reward!");
+                    return false;
+                }
+                Console.WriteLine("[INFO - INCENTIVE ENGINE] - Payment Registered with Success!");
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return false;
+            }
+
+        }
+
         public string RegisterUser()
         {
             //centralized version as default
-            return this.Repository.RegisterUser(this.centralizedIncentiveScheme.Incentive);
+            return this.Repository.RegisterUser(this.centralizedIncentiveScheme.IncentiveType);
         }
         #endregion
     }

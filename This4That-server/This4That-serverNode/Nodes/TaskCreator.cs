@@ -66,7 +66,7 @@ namespace This4That_library.Nodes
             try
             {
                 this.RemoteRepository = (IRepository)Activator.GetObject(typeof(IRepository), repositoryUrl);
-                Log.DebugFormat("[INFO] Task Creator connected to Repository.");
+                Log.DebugFormat("[INFO - TASK CREATOR] - Connected to Repository.");
                 return true;
             }
             catch (Exception ex)
@@ -85,12 +85,12 @@ namespace This4That_library.Nodes
             taskID = null;
             try
             {                
-                Console.WriteLine("[INFO-TaskCreator] - Going to create a new Task!");
                 if (!this.RemoteRepository.RegisterTask(task, userID, out taskID))
                 {
                     Log.Error("Cannot save task on Repository!");
                     return false;
                 }
+                Console.WriteLine("[INFO - TASK CREATOR] - Task created with Sucess!");
                 return true;
             }
             catch (Exception ex)

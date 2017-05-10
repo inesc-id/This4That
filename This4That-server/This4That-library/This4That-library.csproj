@@ -67,7 +67,7 @@
     <Compile Include="Models\Incentives\Incentive.cs" />
     <Compile Include="Models\Integration\CSTaskDTO.cs" />
     <Compile Include="Models\Domain\Topic.cs" />
-    <Compile Include="Models\IncentiveModels\CentralIncentiveScheme.cs" />
+    <Compile Include="Models\IncentiveModels\CentralizedIncentiveScheme.cs" />
     <Compile Include="Models\IncentiveModels\IncentiveSchemeBase.cs" />
     <Compile Include="Models\Integration\APIResponseDTO.cs" />
     <Compile Include="Models\Integration\CalcTaskCostDTO\CalcTaskCostRequestDTO.cs" />
@@ -75,6 +75,7 @@
     <Compile Include="Models\Integration\ExecuteTaskDTO\ExecuteTaskDTO.cs" />
     <Compile Include="Models\Integration\GetTasksByTopicDTO\GetTasksDTO.cs" />
     <Compile Include="Models\Integration\GetUserTopicDTO\GetTopicRequestDTO.cs" />
+    <Compile Include="Models\Integration\IncentiveDTO\RewardUserDTO.cs" />
     <Compile Include="Models\Integration\ReportDTO\ReportDTO.cs" />
     <Compile Include="Models\Integration\ReportDTO\InteractiveTaskReportDTO.cs" />
     <Compile Include="Models\Integration\ReportDTO\SensingTaskReportDTO.cs" />

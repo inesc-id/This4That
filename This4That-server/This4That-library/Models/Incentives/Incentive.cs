@@ -13,8 +13,10 @@ namespace This4That_library.Models.Incentives
         public abstract object GetTaskCreationValue();
 
         public abstract bool CheckSufficientCredits(object balance, object incentiveValue);
-        internal abstract object CalcNewBalance(object balance, object incentiveValue);
-        internal abstract object InitWalletValue();
+        public abstract object CalcSenderNewBalance(object balance, object incentiveValue);
+        public abstract object CalcReceiverNewBalance(object balance, object incentiveValue);
+        public abstract object InitWalletValue();
+        public abstract object GetTaskReward();
     }
 
     [Serializable]

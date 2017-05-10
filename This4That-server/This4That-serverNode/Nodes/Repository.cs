@@ -182,7 +182,7 @@ namespace This4That_library.Nodes
 
         public bool RegisterTask(CSTaskDTO task, string userID, out string taskID)
         {
-            @object user;
+            User user;
             taskID = null;
             try {
                 user = UserStorage.GetUserByID(userID);
@@ -274,7 +274,7 @@ namespace This4That_library.Nodes
 
         public object GetUserBalance(string userID)
         {
-            @object user;
+            User user;
 
             user = UserStorage.GetUserByID(userID);
 
@@ -288,7 +288,7 @@ namespace This4That_library.Nodes
 
         public bool SubscribeTopic(string userId, string topicName, ref string errorMessage)
         {
-            @object user;
+            User user;
 
             try
             {
@@ -322,7 +322,7 @@ namespace This4That_library.Nodes
             List<string> myTasksID = new List<string>();
             List<CSTaskDTO> myTasks = new List<CSTaskDTO>();
             CSTask task;
-            @object user;
+            User user;
             try
             {
                 Console.WriteLine("[INFO - REPOSITORY] : Fetching My Tasks");
@@ -357,7 +357,7 @@ namespace This4That_library.Nodes
             List<CSTaskDTO> subscribedTasks = new List<CSTaskDTO>();
             Topic auxTopic;
             CSTask task;
-            @object user;
+            User user;
             try
             {
                 Console.WriteLine("[INFO - REPOSITORY] : Fetching Subscribed Tasks");
@@ -458,7 +458,7 @@ namespace This4That_library.Nodes
 
         public bool ExecuteTask(string userID, string taskId)
         {
-            @object user;
+            User user;
 
             try
             {
@@ -473,15 +473,49 @@ namespace This4That_library.Nodes
             }
         }
 
-        public void AssociateTransactionUser(string userId, Incentive incentive, object incentiveValue, string transactionId)
+        public void AssociateTransactionUser(string sender, string receiver, string transactionId)
         {
-            UserStorage.GetUserByID(userId).Wallet.AssociateTransaction(incentive, incentiveValue, transactionId);
+            UserStorage.GetUserByID(sender).Wallet.AssociateTransaction(transactionId);
+            UserStorage.GetUserByID(receiver).Wallet.AssociateTransaction(transactionId);
         }
 
-        public void GenerateTransaction(string senderID, string receiverID, object incentiveValue, out string transactionId)
+        public List<string> GetUserTransactions(string userId)
         {
-            
-            TxStorage.GenerateTransaction(senderID, receiverID, incentiveValue, out transactionId);
+            Transaction tx;
+
+            Console.WriteLine("[INFO - REPOSITORY] - Wallet of User: [{0}]", userId);
+            foreach (string txID in UserStorage.GetUserByID(userId).Wallet.Transactions)
+            {
+                tx = TxStorage.GetTransaction(txID);
+
+                if (tx != null)
+                {
+                    Console.WriteLine(tx.ToString());
+                }
+            }
+            return UserStorage.GetUserByID(userId).Wallet.Transactions;
+        }
+
+        public bool GenerateTransaction(string senderID, string receiverID, Incentive incentiveObj, object incentiveValue, out string transactionId)
+        {
+            User user;
+            try
+            {
+                TxStorage.GenerateTransaction(senderID, receiverID, incentiveValue, out transactionId);
+                user = UserStorage.GetUserByID(senderID);
+                //calc the new balance for the sender
+                user.Wallet.Balance = incentiveObj.CalcSenderNewBalance(user.Wallet.Balance, incentiveValue);
+                //calc the new balance for the receiver
+                user = UserStorage.GetUserByID(receiverID);
+                user.Wallet.Balance = incentiveObj.CalcReceiverNewBalance(user.Wallet.Balance, incentiveValue);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                transactionId = null;
+                return false;
+            }
         }
 
         #endregion

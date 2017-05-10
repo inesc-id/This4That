@@ -195,7 +195,7 @@ namespace This4That_platform.ServiceLayer
 
         [HttpPost]
         [Route("subscribe")]
-        public IHttpActionResult SubscribeTask()
+        public IHttpActionResult SubscribeTopic()
         {
             ServerManager serverMgr = null;
             APIRequestHandler handler;

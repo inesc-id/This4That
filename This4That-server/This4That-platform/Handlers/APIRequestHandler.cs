@@ -169,8 +169,11 @@ namespace This4That_platform.Handlers
         public bool ReportResultsCSTask(out APIResponseDTO response, string taskType)
         {
             TaskTypeEnum taskTypeEnum;
-            response = new APIResponseDTO();
             ReportDTO reportReqDTO = null;
+            object rewardObj;
+
+            response = new APIResponseDTO();
+
             try
             {
                 //get the enum type
@@ -188,6 +191,12 @@ namespace This4That_platform.Handlers
                 if (!serverMgr.RemoteReportAggregator.SaveReport(reportReqDTO))
                 {
                     Global.Log.Error("Cannot generate Report from user results!");
+                    return false;
+                }
+                //FIXME: here
+                if (!serverMgr.RemoteIncentiveEngine.RewardUser(reportReqDTO.UserID, out rewardObj))
+                {
+                    Global.Log.Error("Cannot reward user!");
                     return false;
                 }
                 response.SetResponse("Reported", APIResponseDTO.RESULT_TYPE.SUCCESS);

@@ -11,7 +11,7 @@ using This4That_library.Models.IncentiveModels;
 namespace This4That_library.Domain
 {
     [Serializable]
-    public class @object
+    public class User
     {
         private string userID;
         private List<string> myTasks = new List<string>();
@@ -98,7 +98,7 @@ namespace This4That_library.Domain
             }
         }
 
-        public @object(string userId, IncentiveSchemesEnum incentiveScheme, Incentive incentive)
+        public User(string userId, IncentiveSchemesEnum incentiveScheme, Incentive incentive)
         {
             userID = userId;
             this.IncentiveScheme = incentiveScheme;

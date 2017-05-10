@@ -49,6 +49,7 @@ namespace This4That_library
     {
         bool CalcTaskCost(CSTaskDTO taskSpec, string userID, out object incentiveValue);
         bool PayTask(string userId, object inventiveValue, out string transactionId);
+        bool RewardUser(string userId, out string transactionId, out object rewardObj);
         string RegisterUser();
     }
 
@@ -67,7 +68,8 @@ namespace This4That_library
         bool SubscribeTopic(string userId, string topicName, ref string errorMessage);
         bool SaveReportInRepository(ReportDTO report);
         bool ExecuteTask(string userID, string taskId);
-        void AssociateTransactionUser(string userId, Incentive incentive, object incentiveValue, string transactionId);
-        void GenerateTransaction(string sender, string receiver, object incentiveValue, out string transactionId);
+        void AssociateTransactionUser(string sender, string receiver, string transactionId);
+        bool GenerateTransaction(string senderID, string receiverID, Incentive incentiveObj, object incentiveValue, out string transactionId);
+        List<string> GetUserTransactions(string userId);
     }
 }

@@ -158,7 +158,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>58949</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://192.168.1.111:58949/</IISUrl>
+          <IISUrl>http://localhost:58949/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -15,7 +15,7 @@ namespace This4That_library.Models.IncentiveModels
     {
         Incentive incentive = null;
 
-        public Incentive Incentive
+        public Incentive IncentiveType
         {
             get
             {
@@ -30,18 +30,19 @@ namespace This4That_library.Models.IncentiveModels
 
         public object CalcTaskCost(CSTaskDTO taskSpec)
         {
-            return this.Incentive.GetTaskCreationValue();
+            return this.IncentiveType.GetTaskCreationValue();
         }
         
-        public bool HasUserSufficientCredits(object balance, object incentiveValue)
+        public bool CanPerformTransaction(object balance, object incentiveValue)
         {
-            if (!Incentive.CheckSufficientCredits(balance, incentiveValue))
+            if (!IncentiveType.CheckSufficientCredits(balance, incentiveValue))
                 return false;
 
             return true;
         }
 
-        public abstract bool RegisterTaskPayment(IRepository repository, string userId, object incentiveValue, out string transactionId);
+        public abstract bool RegisterPayment(IRepository repository, string sender, string recipient, object incentiveValue, out string transactionId);
+        public abstract object CheckUserBalance(IRepository repository, string userId);
     }
 
     [Serializable]

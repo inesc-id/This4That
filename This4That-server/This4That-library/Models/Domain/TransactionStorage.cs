@@ -36,5 +36,13 @@ namespace This4That_library.Models.Domain
             }
 
         }
+
+        public Transaction GetTransaction(string txID)
+        {
+            if (transactions.ContainsKey(txID))
+                return transactions[txID];
+            else
+                return null;
+        }
     }
 }

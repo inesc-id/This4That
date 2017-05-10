@@ -17,7 +17,12 @@ namespace This4That_library.Models.IncentiveModels
 
         }
 
-        public override bool RegisterTaskPayment(IRepository repository, string userId, object incentiveValue, out string transactionId)
+        public override object CheckUserBalance(IRepository repository, string userId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool RegisterPayment(IRepository repository, string sender, string recipient, object incentiveValue, out string transactionId)
         {
             throw new NotImplementedException();
         }
