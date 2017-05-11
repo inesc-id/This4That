@@ -6,9 +6,9 @@ using This4That_library.Models.Incentives;
 using This4That_library.Models.Integration;
 using This4That_library.Models.Integration.GetTasksByTopicDTO;
 using This4That_library.Models.Integration.ReportDTO;
-using This4That_library.Domain;
 using This4That_library.Models.IncentiveModels;
 using This4That_library.Models.Domain;
+using This4That_library.Integration;
 
 namespace This4That_ServerNode.Nodes
 {
@@ -477,21 +477,25 @@ namespace This4That_ServerNode.Nodes
             UserStorage.GetUserByID(receiver).Wallet.AssociateTransaction(transactionId);
         }
 
-        public List<string> GetUserTransactions(string userId)
+        public List<Transaction> GetUserTransactions(string userId)
         {
             Transaction tx;
+            List<Transaction> userTransactions = new List<Transaction>();
 
-            Console.WriteLine("[INFO - REPOSITORY] - Wallet of User: [{0}]", userId);
             foreach (string txID in UserStorage.GetUserByID(userId).Wallet.Transactions)
             {
                 tx = TxStorage.GetTransaction(txID);
 
                 if (tx != null)
                 {
-                    Console.WriteLine(tx.ToString());
+                    userTransactions.Add(tx);
+                }
+                else
+                {
+                    Log.ErrorFormat("Transaction ID: [{0}] does not exist", tx.TxID);
                 }
             }
-            return UserStorage.GetUserByID(userId).Wallet.Transactions;
+            return userTransactions;
         }
 
         public bool GenerateTransaction(string senderID, string receiverID, Incentive incentiveObj, object incentiveValue, out string transactionId)

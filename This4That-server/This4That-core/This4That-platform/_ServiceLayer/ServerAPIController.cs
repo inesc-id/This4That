@@ -2,12 +2,12 @@
 using System.Net;
 using System.Web;
 using System.Web.Http;
-using This4That_platform.Integration;
 using This4That_platform.Handlers;
+using This4That_platform.Models.Integration;
 
 namespace This4That_platform.ServiceLayer
 {
-    [RoutePrefix("api")]
+    [RoutePrefix("api/v1")]
     public class ServerAPIController : ApiController
     {
         [HttpPost]
@@ -296,6 +296,34 @@ namespace This4That_platform.ServiceLayer
             {
                 Global.Log.Error(ex.Message);
                 response.SetResponse("Cannot obtain subscribed tasks. Please try again!", APIResponseDTO.RESULT_TYPE.ERROR);
+                return Content(HttpStatusCode.InternalServerError, response);
+            }
+
+        }
+
+        [HttpGet]
+        [Route("user/{userId}/transactions")]
+        public IHttpActionResult GetUserTransactions(string userId)
+        {
+            ServerManager serverMgr = null;
+            APIRequestHandler handler;
+            APIResponseDTO response = new APIResponseDTO();
+
+            try
+            {
+                serverMgr = Global.GetCreateServerManager(HttpContext.Current.Server);
+                handler = new APIRequestHandler(HttpContext.Current.Request, serverMgr);
+                if (!handler.GetUserTransactions(userId, out response))
+                {
+                    return Content(HttpStatusCode.InternalServerError, response);
+                }
+                return Content(HttpStatusCode.OK, response);
+
+            }
+            catch (Exception ex)
+            {
+                Global.Log.Error(ex.Message);
+                response.SetResponse("Cannot obtain user transactions. Please try again!", APIResponseDTO.RESULT_TYPE.ERROR);
                 return Content(HttpStatusCode.InternalServerError, response);
             }
 

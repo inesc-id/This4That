@@ -13,25 +13,27 @@ namespace This4That_test.IntegrationTests
         [TestMethod]
         public void GetTopics()
         {
+            throw new Exception();
 
         }
 
         [TestMethod]
         public void GetTasksByTopicName()
         {
-
+            throw new Exception();
         }
 
         [TestMethod]
         public void SubscribeVALIDTopic()
         {
+            throw new Exception();
 
         }
 
         [TestMethod]
         public void SubscribeINVALIDTopic()
         {
-
+            throw new Exception();
         }
     }
 }

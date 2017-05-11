@@ -2,15 +2,16 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace This4That_platform.Models.Integration
+namespace This4That_test.IntegrationDTOs
 {
-    public class APIResponseDTO
+    public class CreateTaskResponseDTO
     {
-        private int errorCode = -1;
-        private string errorMessage = null;
-        private object response = null;
+        private int errorCode;
+        private string errorMessage;
+        private TransactionInfo response;
 
         [JsonProperty(PropertyName = "errorCode")]
         public int ErrorCode
@@ -41,7 +42,7 @@ namespace This4That_platform.Models.Integration
         }
 
         [JsonProperty(PropertyName = "response")]
-        public object Response
+        public TransactionInfo Response
         {
             get
             {
@@ -53,26 +54,39 @@ namespace This4That_platform.Models.Integration
                 response = value;
             }
         }
+    }
 
+    public class TransactionInfo
+    {
+        private string taskID;
+        private string transactionID;
 
-        public enum RESULT_TYPE{
-            SUCCESS = 1,
-            ERROR = -1,
-            INSUFFICIENT_CREDITS = -10
-        }
-        
-        public void SetResponse(object response, RESULT_TYPE type)
+        [JsonProperty(PropertyName = "taskId")]
+        public string TaskID
         {
-            this.Response = response;
-            this.ErrorMessage = "success";
-            ErrorCode = (int)type;
+            get
+            {
+                return taskID;
+            }
+
+            set
+            {
+                taskID = value;
+            }
         }
 
-        public void SetErrorResponse(string errorMessage, RESULT_TYPE type)
+        [JsonProperty(PropertyName = "transactionId")]
+        public string TransactionID
         {
-            this.ErrorCode = (int)type;
-            this.ErrorMessage = errorMessage;
-            this.Response = null;
+            get
+            {
+                return transactionID;
+            }
+
+            set
+            {
+                transactionID = value;
+            }
         }
     }
 }

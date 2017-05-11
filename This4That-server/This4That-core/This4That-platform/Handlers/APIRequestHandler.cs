@@ -9,8 +9,8 @@ using This4That_library.Models.Integration.GetTasksByTopicDTO;
 using This4That_library.Models.Integration.GetUserTopicDTO;
 using This4That_library.Models.Integration.ReportDTO;
 using This4That_library.Models.Integration.TaskPayCreateDTO;
-using This4That_platform.Integration;
-using This4That_platform.Properties;
+using This4That_platform.Models.Integration;
+using This4That_library.Models.Domain;
 
 namespace This4That_platform.Handlers
 {
@@ -43,15 +43,13 @@ namespace This4That_platform.Handlers
             {
                 if (!GetCSTaskToPay(out csTask))
                 {
-                    response.SetResponse(new Dictionary<string, string>() { { "errorMessage", "Invalid Request please try again!" } }
-                                        , APIResponseDTO.RESULT_TYPE.ERROR);
+                    response.SetErrorResponse("Invalid Request please try again!", APIResponseDTO.RESULT_TYPE.ERROR);
                     return false;
                 }                    
                 if (!serverMgr.RemoteIncentiveEngine.CalcTaskCost(csTask.Task, csTask.UserID, out incentiveValue) 
                     || incentiveValue == null)
                 {
-                    response.SetResponse(new Dictionary<string, string>() { { "errorMessage", "Cannot calculate the task cost. Please try again!" } }
-                                        , APIResponseDTO.RESULT_TYPE.ERROR);
+                    response.SetErrorResponse("Cannot calculate the task cost. Please try again!", APIResponseDTO.RESULT_TYPE.ERROR);
                     return false;
                 }
                 calcCostDTO.ValToPay = incentiveValue.ToString();
@@ -193,7 +191,6 @@ namespace This4That_platform.Handlers
                     Global.Log.Error("Cannot generate Report from user results!");
                     return false;
                 }
-                //FIXME: here
                 if (!serverMgr.RemoteIncentiveEngine.RewardUser(reportReqDTO.UserID, out txId, out rewardObj))
                 {
                     Global.Log.Error("Cannot reward user!");
@@ -286,7 +283,7 @@ namespace This4That_platform.Handlers
             }
         }
 
-        internal bool ExecuteSubscribedTask(out APIResponseDTO response)
+        public bool ExecuteSubscribedTask(out APIResponseDTO response)
         {
             ExecuteTaskDTO execTaskDTO;
             response = new APIResponseDTO();
@@ -307,6 +304,26 @@ namespace This4That_platform.Handlers
                 response.SetResponse("Success", APIResponseDTO.RESULT_TYPE.SUCCESS);
                 return true;
 
+            }
+            catch (Exception ex)
+            {
+                Global.Log.Error(ex.Message);
+                return false;
+            }
+        }
+
+        public bool GetUserTransactions(string userId, out APIResponseDTO response)
+        {
+            response = new APIResponseDTO();
+            List<Transaction> userTransactions = null;
+            try
+            {
+                if (!this.serverMgr.RemoteIncentiveEngine.GetUserTransactions(userId, out userTransactions))
+                {
+                    response.SetErrorResponse("Cannot obtain transactions!", APIResponseDTO.RESULT_TYPE.ERROR);
+                    return false;
+                }
+                return true;
             }
             catch (Exception ex)
             {
@@ -461,6 +478,11 @@ namespace This4That_platform.Handlers
                 }
                 csTask = (CalcTaskCostRequestDTO) requestDTO;
                 Global.Log.DebugFormat("User ID: [{0}] Task: {1}", csTask.UserID, csTask.Task.ToString());
+                if (csTask.Task.InteractiveTask == null && csTask.Task.SensingTask == null)
+                {
+                    Global.Log.Error("No Task Specified!");
+                    return false;
+                }
                 return true;
             }
             catch (Exception ex)

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using This4That_library.Models.Incentives;
 
-namespace This4That_library.Domain
+namespace This4That_library.Models.Domain
 {
     [Serializable]
     public class Wallet

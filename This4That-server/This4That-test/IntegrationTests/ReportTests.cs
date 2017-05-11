@@ -13,7 +13,7 @@ namespace This4That_test.IntegrationTests
         [TestMethod]
         public void ReportTaskResults()
         {
-
+            throw new Exception();
         }
 
     }

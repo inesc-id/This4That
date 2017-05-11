@@ -8,7 +8,7 @@ using This4That_library.Models.Integration;
 using This4That_library.Models.Integration.ReportDTO;
 using This4That_library.Models.IncentiveModels;
 
-namespace This4That_library.Domain
+namespace This4That_library.Models.Domain
 {
     [Serializable]
     public class User

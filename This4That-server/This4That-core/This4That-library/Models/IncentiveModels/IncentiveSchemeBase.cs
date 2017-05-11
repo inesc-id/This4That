@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using This4That_library.Domain;
-using This4That_library.Models.Domain;
 using This4That_library.Models.Incentives;
 using This4That_library.Models.Integration;
 

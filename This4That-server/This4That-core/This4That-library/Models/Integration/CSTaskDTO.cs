@@ -111,8 +111,10 @@ namespace This4That_library.Models.Integration
             result = $"Name: {name} Exp: {expirationDate.ToString()} Topic: {topic} " + Environment.NewLine;
             if (SensingTask != null)
                 result += $"SensingTask: {sensingTask.ToString()} ";
-            else
-                result += $"SensingTask: NULL ";
+
+            if (InteractiveTask != null)
+                result += $"InteractiveTask: {interactiveTask.ToString()} ";
+
             return result;
         }
     }
@@ -182,6 +184,18 @@ namespace This4That_library.Models.Integration
             {
                 answers = value;
             }
+        }
+
+        public override string ToString()
+        {
+            string result = null;
+
+            result += $"Question: {Question} ";
+            foreach (TaskAnswer answer in Answers)
+            {
+                result += Environment.NewLine + "Answer: [" + answer.Answer + "] Generated ID: [" + answer.AnswerId + "]";
+            }
+            return result;
         }
     }
 

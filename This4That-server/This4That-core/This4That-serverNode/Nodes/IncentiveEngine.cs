@@ -4,6 +4,8 @@ using This4That_library;
 using This4That_library.Models.IncentiveModels;
 using This4That_library.Models.Incentives;
 using This4That_library.Models.Integration;
+using System.Collections.Generic;
+using This4That_library.Models.Domain;
 
 namespace This4That_ServerNode.Nodes
 {
@@ -207,6 +209,35 @@ namespace This4That_ServerNode.Nodes
         {
             //centralized version as default
             return this.Repository.RegisterUser(this.centralizedIncentiveScheme.IncentiveType);
+        }
+
+        public bool GetUserTransactions(string userId, out List<Transaction> transactions)
+        {
+            IncentiveSchemeBase incentiveScheme;
+            transactions = null;
+
+            try
+            {
+                //get user incentive scheme
+                if (!GetUserIncentiveScheme(userId, out incentiveScheme))
+                {
+                    Log.ErrorFormat("Cannot load incentive scheme for User: [{0}]", userId);
+                    return false;
+                }
+                transactions = this.Repository.GetUserTransactions(userId);
+                if (transactions == null)
+                {
+                    Log.Error("Transactions List IS NULL");
+                    return false;
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return false;
+            }
         }
         #endregion
     }

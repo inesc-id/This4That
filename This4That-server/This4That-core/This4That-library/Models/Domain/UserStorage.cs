@@ -7,7 +7,7 @@ using This4That_library.Models.Incentives;
 using This4That_library.Models.Integration.ReportDTO;
 using This4That_library.Models.IncentiveModels;
 
-namespace This4That_library.Domain
+namespace This4That_library.Models.Domain
 {
     public class UserStorage
     {
@@ -31,7 +31,8 @@ namespace This4That_library.Domain
             //FIXME: remove
             User user = new User("1234", IncentiveSchemesEnum.Centralized, new Gamification());
             User platformUser = new User("Platform", IncentiveSchemesEnum.Centralized, new Gamification());
-            this.Users.Add("1234", user);
+            this.Users.Add(user.UserID, user);
+            this.Users.Add(platformUser.UserID, platformUser);
         }
 
         public string CreateUser(IncentiveSchemesEnum incentiveScheme, Incentive incentive)

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using This4That_library.Models.Integration;
 
-namespace This4That_library.Domain
+namespace This4That_library.Integration
 {
     public class CSTask
     {

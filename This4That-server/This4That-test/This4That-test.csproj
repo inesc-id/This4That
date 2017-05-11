@@ -35,6 +35,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -50,19 +54,19 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="IntegrationDTOs\CalcTaskCostResponseDTO.cs" />
+    <Compile Include="IntegrationDTOs\CreateTaskResponseDTO.cs" />
     <Compile Include="IntegrationTests\ReportTests.cs" />
     <Compile Include="IntegrationTests\TaskTests.cs" />
     <Compile Include="IntegrationTests\TopicTests.cs" />
+    <Compile Include="Library.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\This4That-library\This4That-library.csproj">
-      <Project>{30844b3a-646c-4339-9678-85c5d0fb230b}</Project>
-      <Name>This4That-library</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="IntegrationFiles\CalcTaskCost_CreateTask_input.json" />
+    <None Include="app.config" />
+    <None Include="IntegrationFiles\CalcTaskCost\invalid.json" />
+    <None Include="IntegrationFiles\CalcTaskCost\valid.json" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

@@ -4,7 +4,6 @@ using This4That_library.Models.Integration;
 using This4That_library.Models.Integration.GetTasksByTopicDTO;
 using This4That_library.Models.Integration.ReportDTO;
 using This4That_library.Models.IncentiveModels;
-using This4That_library.Domain;
 using This4That_library.Models.Domain;
 using This4That_library.Models.Incentives;
 
@@ -51,6 +50,7 @@ namespace This4That_library
         bool PayTask(string userId, object inventiveValue, out string transactionId);
         bool RewardUser(string userId, out string transactionId, out object rewardObj);
         string RegisterUser();
+        bool GetUserTransactions(string userId, out List<Transaction> transactions);
     }
 
     public interface IRepository : IRemoteEntity
@@ -70,6 +70,6 @@ namespace This4That_library
         bool ExecuteTask(string userID, string taskId);
         void AssociateTransactionUser(string sender, string receiver, string transactionId);
         bool GenerateTransaction(string senderID, string receiverID, Incentive incentiveObj, object incentiveValue, out string transactionId);
-        List<string> GetUserTransactions(string userId);
+        List<Transaction> GetUserTransactions(string userId);
     }
 }
