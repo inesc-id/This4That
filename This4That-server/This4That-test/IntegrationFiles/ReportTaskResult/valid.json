@@ -1,0 +1,9 @@
+﻿{
+  "userId": "1234",
+  "taskId": "##taskId_replace##",
+  "timestamp": "2017-06-04T17:41:00",
+  "result": {
+      "answerId" :  "##answerId_replace##"
+  }
+
+}

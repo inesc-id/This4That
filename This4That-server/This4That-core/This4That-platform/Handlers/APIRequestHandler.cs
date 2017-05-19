@@ -323,6 +323,7 @@ namespace This4That_platform.Handlers
                     response.SetErrorResponse("Cannot obtain transactions!", APIResponseDTO.RESULT_TYPE.ERROR);
                     return false;
                 }
+                response.SetResponse(userTransactions, APIResponseDTO.RESULT_TYPE.SUCCESS);
                 return true;
             }
             catch (Exception ex)
@@ -451,7 +452,12 @@ namespace This4That_platform.Handlers
                     Global.Log.Error(errorMessage);
                     return false;
                 }
-                csTask = (TaskPayCreateRequestDTO) requestDTO;
+                csTask = (TaskPayCreateRequestDTO)requestDTO;
+                if (csTask.Task.InteractiveTask == null && csTask.Task.SensingTask == null)
+                {
+                    Global.Log.Error("No Task Specified!");
+                    return false;
+                }
                 Global.Log.DebugFormat("User ID: [{0}] Task: {1}", csTask.UserID, csTask.Task.ToString());
                 return true;
             }

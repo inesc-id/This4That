@@ -127,6 +127,5 @@ namespace This4That_ServerNode
                 return false;
             }
         }
-
     }
 }

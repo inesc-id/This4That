@@ -168,13 +168,12 @@ namespace This4That_ServerNode.Nodes
             }
         }
 
-        public bool RewardUser(string userId, out string transactionId, out object rewardObj)
+        public bool RewardUser(string userId, out string transactionId, out object taskReward)
         {
             IncentiveSchemeBase incentiveScheme;
-            object taskReward;
 
             transactionId = null;
-            rewardObj = null;
+            taskReward = null;
             try
             {
                 //get user incentive scheme

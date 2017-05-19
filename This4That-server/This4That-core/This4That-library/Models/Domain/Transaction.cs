@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 
 namespace This4That_library.Models.Domain
 {
     [Serializable]
     public class Transaction
     {
+        [JsonProperty(PropertyName = "transactionId")]
         private string txID;
         private string sender;
         private string receiver;
@@ -19,6 +21,7 @@ namespace This4That_library.Models.Domain
             }
         }
 
+        [JsonProperty(PropertyName = "sender")]
         public string Sender
         {
             get
@@ -27,6 +30,7 @@ namespace This4That_library.Models.Domain
             }
         }
 
+        [JsonProperty(PropertyName = "receiver")]
         public string Receiver
         {
             get
@@ -35,6 +39,7 @@ namespace This4That_library.Models.Domain
             }
         }
 
+        [JsonProperty(PropertyName = "value")]
         public object Value
         {
             get
@@ -43,6 +48,7 @@ namespace This4That_library.Models.Domain
             }
         }
 
+        [JsonProperty(PropertyName = "timestamp")]
         public long Timestamp
         {
             get

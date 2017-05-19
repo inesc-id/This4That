@@ -10,6 +10,11 @@ namespace This4That_platform.ServiceLayer
     [RoutePrefix("api/v1")]
     public class ServerAPIController : ApiController
     {
+
+        /// <summary>
+        /// Calculate the Task cost.
+        /// </summary>
+        /// <returns></returns>
         [HttpPost]
         [Route("task/cost")]
         public IHttpActionResult GetCostCSTaskAPI()
@@ -37,6 +42,10 @@ namespace This4That_platform.ServiceLayer
             }
         }
 
+        /// <summary>
+        /// Create a task.
+        /// </summary>
+        /// <returns></returns>
         [HttpPost]
         [Route("task")]
         public IHttpActionResult PayCreateCSTaskAPI()
@@ -63,6 +72,10 @@ namespace This4That_platform.ServiceLayer
             }
         }
 
+        /// <summary>
+        /// Get a list of topics.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [Route("topic")]
         public IHttpActionResult GetTopics()
@@ -89,6 +102,10 @@ namespace This4That_platform.ServiceLayer
             }
         }
 
+        /// <summary>
+        /// Get tasks info for a given topic name.
+        /// </summary>
+        /// <returns></returns>
         [HttpPost]
         [Route("topic/tasks")]
         public IHttpActionResult GetTasksByTopic()
@@ -115,6 +132,11 @@ namespace This4That_platform.ServiceLayer
             }
         }
 
+        /// <summary>
+        /// Report the tasks result based on the task type.
+        /// </summary>
+        /// <param name="taskType"></param>
+        /// <returns></returns>
         [HttpPost]
         [Route("report/{taskType}")]
         public IHttpActionResult ReportTaskResults(string taskType)
@@ -141,6 +163,10 @@ namespace This4That_platform.ServiceLayer
         }
 
 
+        /// <summary>
+        /// Creates a new user.
+        /// </summary>
+        /// <returns></returns>
         [HttpPost]
         [Route("user")]
         public IHttpActionResult RegisterNewUser()
@@ -167,6 +193,12 @@ namespace This4That_platform.ServiceLayer
             }
         }
 
+
+        /// <summary>
+        /// Get user's tasks.
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
         [HttpGet]
         [Route("user/{userId}/task")]
         public IHttpActionResult GetMyTasks(string userId)
@@ -193,6 +225,10 @@ namespace This4That_platform.ServiceLayer
             }
         }
 
+        /// <summary>
+        /// Subscribes a topic.
+        /// </summary>
+        /// <returns></returns>
         [HttpPost]
         [Route("subscribe")]
         public IHttpActionResult SubscribeTopic()
@@ -220,6 +256,11 @@ namespace This4That_platform.ServiceLayer
 
         }
 
+        /// <summary>
+        /// Get all tasks that belong to the topics subscribed.
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
         [HttpGet]
         [Route("user/{userId}/subscribedtasks")]
         public IHttpActionResult GetSubscribedTasks(string userId)
@@ -247,6 +288,10 @@ namespace This4That_platform.ServiceLayer
 
         }
 
+        /// <summary>
+        /// Get all subscribed tasks based on a topic name.
+        /// </summary>
+        /// <returns></returns>
         [HttpPost]
         [Route("subscribedtasks")]
         public IHttpActionResult GetSubscribedTasksByTopicName()
@@ -274,6 +319,10 @@ namespace This4That_platform.ServiceLayer
 
         }
 
+        /// <summary>
+        /// Execute a subscribed task.
+        /// </summary>
+        /// <returns></returns>
         [HttpPost]
         [Route("subscribedtask/execute")]
         public IHttpActionResult ExecuteSubscribedTask()
@@ -301,6 +350,11 @@ namespace This4That_platform.ServiceLayer
 
         }
 
+        /// <summary>
+        /// Get user's transactions.
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
         [HttpGet]
         [Route("user/{userId}/transactions")]
         public IHttpActionResult GetUserTransactions(string userId)

@@ -290,7 +290,6 @@ namespace This4That_ServerNode.Nodes
 
             try
             {
-                Console.WriteLine("[INFO - REPOSITORY] : Going to Subscribe Topic: [{0}] for UserID: [{1}]", topicName, userId);
                 user = UserStorage.GetUserByID(userId); 
                 if (user == null)
                 {
@@ -300,6 +299,7 @@ namespace This4That_ServerNode.Nodes
                 if (ColTopics.ContainsKey(topicName))
                 {
                     user.SubscribeTopic(topicName);
+                    Console.WriteLine("[INFO - REPOSITORY] : Topic Subscribed: [{0}] for UserID: [{1}]", topicName, userId);
                     return true;
                 }
                 else
@@ -461,7 +461,13 @@ namespace This4That_ServerNode.Nodes
             try
             {
                 user = UserStorage.GetUserByID(userID);
-                user.MyTasks.Add(taskId);
+                if (TaskStorage.GetTaskByID(taskId) != null)
+                    user.MyTasks.Add(taskId);
+                else
+                {
+                    Log.ErrorFormat("Invalid Task Id: [{0}]", taskId);
+                    return false;
+                }
                 return true;
             }
             catch (Exception ex)

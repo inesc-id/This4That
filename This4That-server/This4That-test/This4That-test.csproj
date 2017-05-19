@@ -56,6 +56,12 @@
   <ItemGroup>
     <Compile Include="IntegrationDTOs\CalcTaskCostResponseDTO.cs" />
     <Compile Include="IntegrationDTOs\CreateTaskResponseDTO.cs" />
+    <Compile Include="IntegrationDTOs\GetMyTasksDTO.cs" />
+    <Compile Include="IntegrationDTOs\GetTasksByTopicNameDTO.cs" />
+    <Compile Include="IntegrationDTOs\GetTopicsDTO.cs" />
+    <Compile Include="IntegrationDTOs\GetTransactionsDTO.cs" />
+    <Compile Include="IntegrationDTOs\ReportTaskDTO.cs" />
+    <Compile Include="IntegrationDTOs\SubscribeDTO.cs" />
     <Compile Include="IntegrationTests\ReportTests.cs" />
     <Compile Include="IntegrationTests\TaskTests.cs" />
     <Compile Include="IntegrationTests\TopicTests.cs" />
@@ -66,6 +72,9 @@
     <None Include="app.config" />
     <None Include="IntegrationFiles\CalcTaskCost\invalid.json" />
     <None Include="IntegrationFiles\CalcTaskCost\valid.json" />
+    <None Include="IntegrationFiles\GetTasksByTopic\invalid.json" />
+    <None Include="IntegrationFiles\GetTasksByTopic\valid.json" />
+    <None Include="IntegrationFiles\ReportTaskResult\valid.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <Choose>

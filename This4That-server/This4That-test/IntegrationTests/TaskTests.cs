@@ -12,20 +12,6 @@ namespace This4That_test.IntegrationTests
     [TestClass]
     public class TaskTests
     {
-        //endpoints URL
-        private const string API_URL = @"http://localhost:58949/api/v1/";
-        private const string CALC_TASK_API_URL = API_URL  + "task/cost";
-        private const string CREATE_TASK_API_URL = API_URL + "task";
-
-        //integration files path
-        private const string INTEGRATION_FILES_PATH = @"C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-test\IntegrationFiles\";
-        private const string VALID_CALC_TASK_COST_PATH = INTEGRATION_FILES_PATH + @"\CalcTaskCost\valid.json";
-        private const string INVALID_CALC_TASK_COST_PATH = INTEGRATION_FILES_PATH + @"\CalcTaskCost\invalid.json";
-
-        //errorCode
-        private const int ERROR_CODE_SUCCESS = 1;
-        private const int ERROR_CODE_FAIL = -1;
-
         [TestMethod]
         public void CalculateVALIDTaskCost()
         {
@@ -33,12 +19,12 @@ namespace This4That_test.IntegrationTests
             string response = null;
             CalcTaskCostResponseDTO responseDTO;
 
-            jsonBody = Library.ReadStringFromFile(VALID_CALC_TASK_COST_PATH);
+            jsonBody = Library.ReadStringFromFile(Library.VALID_CALC_TASK_COST_PATH);
 
-            response = Library.MakeHttpPOSTJSONRequest(CALC_TASK_API_URL, jsonBody);
+            response = Library.MakeHttpPOSTJSONRequest(Library.CALC_TASK_API_URL, jsonBody);
             responseDTO = JsonConvert.DeserializeObject<CalcTaskCostResponseDTO>(response);
 
-            Assert.AreEqual(responseDTO.ErrorCode, ERROR_CODE_SUCCESS);
+            Assert.AreEqual(Library.ERROR_CODE_SUCCESS, responseDTO.ErrorCode);
             Assert.IsNotNull(responseDTO.Response.ValToPay);
         }
 
@@ -49,12 +35,12 @@ namespace This4That_test.IntegrationTests
             string response = null;
             CalcTaskCostResponseDTO responseDTO;
 
-            jsonBody = Library.ReadStringFromFile(INVALID_CALC_TASK_COST_PATH);
+            jsonBody = Library.ReadStringFromFile(Library.INVALID_CALC_TASK_COST_PATH);
 
-            response = Library.MakeHttpPOSTJSONRequest(CALC_TASK_API_URL, jsonBody);
+            response = Library.MakeHttpPOSTJSONRequest(Library.CALC_TASK_API_URL, jsonBody);
             responseDTO = JsonConvert.DeserializeObject<CalcTaskCostResponseDTO>(response);
 
-            Assert.AreEqual(responseDTO.ErrorCode, ERROR_CODE_FAIL);
+            Assert.AreEqual(Library.ERROR_CODE_FAIL, responseDTO.ErrorCode);
             Assert.IsNull(responseDTO.Response);
 
         }
@@ -64,25 +50,63 @@ namespace This4That_test.IntegrationTests
         {
             string jsonBody = null;
             string response = null;
-            CreateTaskResponseDTO responseDTO;
+            CreateTaskResponseDTO responseCreateTaskDTO;
+            GetTransactionsDTO responseGetTransactionsDTO;
+            GetMyTasksDTO responseGetMyTasksDTO;
 
-            jsonBody = Library.ReadStringFromFile(VALID_CALC_TASK_COST_PATH);
+            bool txFound = false;
+            bool taskFound = false;
 
-            response = Library.MakeHttpPOSTJSONRequest(CREATE_TASK_API_URL, jsonBody);
+            jsonBody = Library.ReadStringFromFile(Library.VALID_CALC_TASK_COST_PATH);
 
-            responseDTO = JsonConvert.DeserializeObject<CreateTaskResponseDTO>(response);
+            //create task
+            response = Library.MakeHttpPOSTJSONRequest(Library.CREATE_TASK_API_URL, jsonBody);
+            responseCreateTaskDTO = JsonConvert.DeserializeObject<CreateTaskResponseDTO>(response);
 
-            Assert.AreEqual(responseDTO.ErrorCode, ERROR_CODE_SUCCESS);
-            Assert.IsNotNull(responseDTO.Response.TaskID);
-            Assert.IsNotNull(responseDTO.Response.TransactionID);
+            Assert.AreEqual(Library.ERROR_CODE_SUCCESS, responseCreateTaskDTO.ErrorCode);
+            Assert.IsNotNull(responseCreateTaskDTO.Response.TaskID);
+            Assert.IsNotNull(responseCreateTaskDTO.Response.TransactionID);
 
+            //check for transaction
+            response = Library.MakeHttpGETRequest(Library.GET_USER_TRANSACTIONS_API_URL);
+            responseGetTransactionsDTO = JsonConvert.DeserializeObject<GetTransactionsDTO>(response);
+           
+            foreach(Transaction transaction in responseGetTransactionsDTO.Response)
+            {
+                if (transaction.TxID == responseCreateTaskDTO.Response.TransactionID)
+                    txFound = true;
+            }
+            Assert.AreEqual(Library.ERROR_CODE_SUCCESS, responseGetTransactionsDTO.ErrorCode);
+            Assert.IsTrue(txFound);
 
+            //check for task created
+            response = Library.MakeHttpGETRequest(Library.GET_USER_TASKS_API_URL);
+            responseGetMyTasksDTO = JsonConvert.DeserializeObject<GetMyTasksDTO>(response);
+
+            foreach (CSTaskDTO task in responseGetMyTasksDTO.Response)
+            {
+                if (task.TaskID == responseCreateTaskDTO.Response.TaskID)
+                    taskFound = true;
+            }
+            Assert.AreEqual(Library.ERROR_CODE_SUCCESS, responseGetMyTasksDTO.ErrorCode);
+            Assert.IsTrue(taskFound);
         }
 
         [TestMethod]
         public void CreateINVALIDTask()
         {
-            throw new Exception();
+            string jsonBody = null;
+            string response = null;
+            CreateTaskResponseDTO responseCreateTaskDTO;
+
+            jsonBody = Library.ReadStringFromFile(Library.INVALID_CALC_TASK_COST_PATH);
+
+            //create task
+            response = Library.MakeHttpPOSTJSONRequest(Library.CREATE_TASK_API_URL, jsonBody);
+            responseCreateTaskDTO = JsonConvert.DeserializeObject<CreateTaskResponseDTO>(response);
+
+            Assert.AreEqual(Library.ERROR_CODE_FAIL, responseCreateTaskDTO.ErrorCode);
+            Assert.IsNull(responseCreateTaskDTO.Response);
         }
     }
 }

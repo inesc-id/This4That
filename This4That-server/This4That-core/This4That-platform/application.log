@@ -8173,3 +8173,620 @@ Answer: [Muitas Pessoas] Generated ID: [bc82230f]
 Answer: [Impossível Almoçar] Generated ID: [61155da0] 
 2017-05-10 21:05:11,099 DEBUG CalcCostCSTask 56 
  [Debug Message] - User ID: [1234] has to Pay [100]
+2017-05-17 17:05:43,391 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-05-17 17:05:43,467 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-05-17 17:05:43,476 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-05-17 17:07:37,503 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-05-17 17:07:37,541 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-05-17 17:07:37,581 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-05-17 17:07:37,608 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-05-17 17:07:37,640 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-05-17 17:13:04,251 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-05-17 17:13:04,362 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-05-17 17:13:04,371 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-05-17 17:13:15,336 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-05-17 17:13:15,370 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-05-17 17:13:15,405 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-05-17 17:13:15,438 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-05-17 17:13:15,475 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-05-17 17:13:34,973 DEBUG GetCSTaskToCreate 456 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [10d42566]
+Answer: [Algumas Pessoas] Generated ID: [b61e4d8e]
+Answer: [Muitas Pessoas] Generated ID: [88ea792e]
+Answer: [Impossível Almoçar] Generated ID: [804d77e2] 
+2017-05-17 17:13:38,116 DEBUG CreateCSTask 406 
+ [Debug Message] - Task with the ID: [c4e70f31-4a69-4198-ba90-c517ae0d20fb] created with Success!
+2017-05-17 17:28:40,308 DEBUG GetSubscribedTasks 349 
+ [Debug Message] - Number of Tasks: [0]
+2017-05-17 17:28:57,518 DEBUG GetUserTasks 244 
+ [Debug Message] - Number of Tasks: [1]
+2017-05-17 17:42:44,269 DEBUG GetCSTaskToPay 481 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [58196870]
+Answer: [Algumas Pessoas] Generated ID: [03804180]
+Answer: [Muitas Pessoas] Generated ID: [98619d9b]
+Answer: [Impossível Almoçar] Generated ID: [7e6f9ee2] 
+2017-05-17 17:42:44,309 DEBUG CalcCostCSTask 57 
+ [Debug Message] - User ID: [1234] has to Pay [100]
+2017-05-17 17:42:44,590 DEBUG GetCSTaskToPay 481 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+
+2017-05-17 17:42:44,597 ERROR GetCSTaskToPay 484 
+ [Debug Message] - No Task Specified!
+2017-05-17 17:42:44,619 DEBUG GetCSTaskToCreate 456 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [917ce736]
+Answer: [Algumas Pessoas] Generated ID: [de658e91]
+Answer: [Muitas Pessoas] Generated ID: [c2ca3ce4]
+Answer: [Impossível Almoçar] Generated ID: [138ceb2a] 
+2017-05-17 17:42:44,664 DEBUG CreateCSTask 406 
+ [Debug Message] - Task with the ID: [f294c420-d170-4ce4-b737-6097854a9c38] created with Success!
+2017-05-17 17:44:52,778 DEBUG GetCSTaskToPay 481 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [3cc1221f]
+Answer: [Algumas Pessoas] Generated ID: [62758f7e]
+Answer: [Muitas Pessoas] Generated ID: [25401544]
+Answer: [Impossível Almoçar] Generated ID: [55aefd14] 
+2017-05-17 17:44:52,807 DEBUG CalcCostCSTask 57 
+ [Debug Message] - User ID: [1234] has to Pay [100]
+2017-05-17 17:44:53,242 DEBUG GetCSTaskToPay 481 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+
+2017-05-17 17:44:53,253 ERROR GetCSTaskToPay 484 
+ [Debug Message] - No Task Specified!
+2017-05-17 17:45:13,183 DEBUG GetCSTaskToCreate 456 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [08daa32f]
+Answer: [Algumas Pessoas] Generated ID: [df788b2c]
+Answer: [Muitas Pessoas] Generated ID: [466252b0]
+Answer: [Impossível Almoçar] Generated ID: [fde7a05b] 
+2017-05-17 17:45:13,227 DEBUG CreateCSTask 406 
+ [Debug Message] - Task with the ID: [580cdcc8-0235-4b86-9833-f41102c695f8] created with Success!
+2017-05-17 17:47:28,132 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-05-17 17:47:28,273 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-05-17 17:47:28,282 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-05-17 17:47:32,038 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-05-17 17:47:32,127 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-05-17 17:47:32,177 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-05-17 17:47:32,206 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-05-17 17:47:32,237 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-05-17 17:47:41,484 DEBUG GetCSTaskToCreate 456 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [a2dc9c51]
+Answer: [Algumas Pessoas] Generated ID: [ca320983]
+Answer: [Muitas Pessoas] Generated ID: [8a963174]
+Answer: [Impossível Almoçar] Generated ID: [d5ca0f92] 
+2017-05-17 17:47:44,558 DEBUG CreateCSTask 406 
+ [Debug Message] - Task with the ID: [de84dd02-d989-4334-9031-0915c20bd635] created with Success!
+2017-05-17 17:49:28,180 DEBUG GetCSTaskToCreate 456 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [38de2af4]
+Answer: [Algumas Pessoas] Generated ID: [9128aae5]
+Answer: [Muitas Pessoas] Generated ID: [ae1f716e]
+Answer: [Impossível Almoçar] Generated ID: [ba52c92a] 
+2017-05-17 17:49:28,223 DEBUG CreateCSTask 406 
+ [Debug Message] - Task with the ID: [74ee446a-1e75-4fe2-9851-4a1174a34011] created with Success!
+2017-05-17 17:50:12,403 DEBUG GetUserTasks 244 
+ [Debug Message] - Number of Tasks: [2]
+2017-05-17 17:51:57,583 DEBUG GetCSTaskToCreate 456 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [8c9b4d3a]
+Answer: [Algumas Pessoas] Generated ID: [dca995bb]
+Answer: [Muitas Pessoas] Generated ID: [ede6849a]
+Answer: [Impossível Almoçar] Generated ID: [f347d883] 
+2017-05-17 17:51:57,619 DEBUG CreateCSTask 406 
+ [Debug Message] - Task with the ID: [423f34fa-83cb-4d62-bbad-20157223c4da] created with Success!
+2017-05-17 17:52:27,042 DEBUG GetUserTasks 244 
+ [Debug Message] - Number of Tasks: [3]
+2017-05-17 17:53:16,004 ERROR GetCSTaskToCreate 452 
+ [Debug Message] - Invalid request format!
+2017-05-17 17:54:55,937 DEBUG GetCSTaskToCreate 456 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [b612aeb1]
+Answer: [Algumas Pessoas] Generated ID: [b3ada1f6]
+Answer: [Muitas Pessoas] Generated ID: [66d9d082]
+Answer: [Impossível Almoçar] Generated ID: [6e7f914b] 
+2017-05-17 17:54:55,992 DEBUG CreateCSTask 406 
+ [Debug Message] - Task with the ID: [ce887017-7e4b-47ef-9f8f-c1db568d7039] created with Success!
+2017-05-17 17:55:25,796 DEBUG GetCSTaskToCreate 456 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+
+2017-05-17 17:55:25,826 DEBUG CreateCSTask 406 
+ [Debug Message] - Task with the ID: [e54b5531-f944-4c1d-aee5-5d3311109909] created with Success!
+2017-05-17 17:57:50,119 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-05-17 17:57:50,419 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-05-17 17:57:50,432 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-05-17 17:58:35,806 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-05-17 17:58:35,840 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-05-17 17:58:35,875 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-05-17 17:58:35,921 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-05-17 17:58:36,004 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-05-17 17:58:49,019 ERROR GetCSTaskToCreate 458 
+ [Debug Message] - No Task Specified!
+2017-05-17 17:59:09,843 ERROR GetCSTaskToCreate 458 
+ [Debug Message] - No Task Specified!
+2017-05-17 18:00:36,597 DEBUG GetCSTaskToCreate 461 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [06ffa81f]
+Answer: [Algumas Pessoas] Generated ID: [0fb8820d]
+Answer: [Muitas Pessoas] Generated ID: [8dae16f5]
+Answer: [Impossível Almoçar] Generated ID: [f26c7217] 
+2017-05-17 18:00:38,711 DEBUG CreateCSTask 406 
+ [Debug Message] - Task with the ID: [330c73a1-09d2-4e98-88ad-8f95407ad0cb] created with Success!
+2017-05-17 18:09:42,996 DEBUG GetCSTaskToPay 486 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+
+2017-05-17 18:09:43,003 ERROR GetCSTaskToPay 489 
+ [Debug Message] - No Task Specified!
+2017-05-17 18:14:16,331 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-05-17 18:14:16,418 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-05-17 18:14:16,426 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-05-17 18:14:21,547 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-05-17 18:14:21,587 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-05-17 18:14:21,623 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-05-17 18:14:21,659 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-05-17 18:14:21,694 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-05-17 18:15:31,975 DEBUG GetCSTaskToCreate 461 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [80e3f709]
+Answer: [Algumas Pessoas] Generated ID: [bdead5a0]
+Answer: [Muitas Pessoas] Generated ID: [4287dcd2]
+Answer: [Impossível Almoçar] Generated ID: [3d3b165b] 
+2017-05-17 18:15:34,074 DEBUG CreateCSTask 406 
+ [Debug Message] - Task with the ID: [449727ec-ef86-4cd5-bc3a-e151c37e5ce2] created with Success!
+2017-05-17 18:17:05,199 ERROR GetUserTopicNameFromRequest 513 
+ [Debug Message] - Invalid request format!
+2017-05-17 18:17:22,174 ERROR GetUserTopicNameFromRequest 513 
+ [Debug Message] - Invalid request format!
+2017-05-17 18:18:05,499 ERROR GetUserTopicNameFromRequest 513 
+ [Debug Message] - Invalid request format!
+2017-05-17 18:18:11,892 DEBUG GetUserTopicNameFromRequest 517 
+ [Debug Message] - User ID: [1234] Topic: [Tecnico Lisboa]
+2017-05-17 18:18:29,984 DEBUG GetUserTopicNameFromRequest 517 
+ [Debug Message] - User ID: [1234] Topic: [Tecnico Filas]
+2017-05-17 18:30:56,826 DEBUG GetUserTopicNameFromRequest 517 
+ [Debug Message] - User ID: [1234] Topic: [Tecnico Filas]
+2017-05-17 18:31:38,591 DEBUG GetUserTopicNameFromRequest 517 
+ [Debug Message] - User ID: [1234] Topic: [Tecnico Filas]
+2017-05-17 18:33:27,876 DEBUG GetUserTopicNameFromRequest 517 
+ [Debug Message] - User ID: [1234] Topic: [Tecnico Filas]
+2017-05-17 18:51:49,243 ERROR ReportResultsCSTask 180 
+ [Debug Message] - Invalid Type of Task: [interactivetask]
+2017-05-17 18:52:28,113 ERROR ReportResultsCSTask 180 
+ [Debug Message] - Invalid Type of Task: [interactivetask]
+2017-05-17 18:52:43,520 DEBUG GetUserTasks 244 
+ [Debug Message] - Number of Tasks: [1]
+2017-05-17 18:53:06,390 ERROR ReportResultsCSTask 180 
+ [Debug Message] - Invalid Type of Task: [interactivetask]
+2017-05-17 18:53:34,232 ERROR ReportResultsCSTask 180 
+ [Debug Message] - Invalid Type of Task: [interactivetask]
+2017-05-17 18:53:56,216 DEBUG GetReportFromRequest 541 
+ [Debug Message] - User ID: [1234] reported Info for Task: [449727ec-ef86-4cd5-bc3a-e151c37e5ce2]
+2017-05-17 18:53:57,293 ERROR ReportResultsCSTask 206 
+ [Debug Message] - A referência de objecto não foi definida como uma instância de um objecto.
+2017-05-17 18:58:52,994 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-05-17 18:58:53,096 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-05-17 18:58:53,111 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-05-17 18:58:55,521 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-05-17 18:58:55,552 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-05-17 18:58:55,581 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-05-17 18:58:55,612 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-05-17 18:58:55,651 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-05-17 18:59:00,787 DEBUG GetCSTaskToCreate 461 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [c8f64930]
+Answer: [Algumas Pessoas] Generated ID: [666cf702]
+Answer: [Muitas Pessoas] Generated ID: [ece6ed69]
+Answer: [Impossível Almoçar] Generated ID: [ab43d131] 
+2017-05-17 18:59:03,904 DEBUG CreateCSTask 406 
+ [Debug Message] - Task with the ID: [63b0d743-9a59-4d72-b6e4-38e32b5c03d4] created with Success!
+2017-05-17 18:59:24,060 DEBUG GetUserTasks 244 
+ [Debug Message] - Number of Tasks: [1]
+2017-05-17 19:00:33,306 DEBUG GetUserTasks 244 
+ [Debug Message] - Number of Tasks: [1]
+2017-05-17 19:00:51,330 DEBUG GetReportFromRequest 541 
+ [Debug Message] - User ID: [1234] reported Info for Task: [63b0d743-9a59-4d72-b6e4-38e32b5c03d4]
+2017-05-17 19:22:19,836 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-05-17 19:22:19,935 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-05-17 19:22:19,942 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-05-17 19:22:27,065 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-05-17 19:22:27,111 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-05-17 19:22:27,155 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-05-17 19:22:27,192 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-05-17 19:22:27,228 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-05-17 19:22:43,579 DEBUG GetUserTasks 244 
+ [Debug Message] - Number of Tasks: [0]
+2017-05-17 19:22:47,959 DEBUG GetCSTaskToCreate 461 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [31ff105b]
+Answer: [Algumas Pessoas] Generated ID: [92146b3c]
+Answer: [Muitas Pessoas] Generated ID: [269e0c9d]
+Answer: [Impossível Almoçar] Generated ID: [f2aa15dc] 
+2017-05-17 19:22:50,012 DEBUG CreateCSTask 406 
+ [Debug Message] - Task with the ID: [1b8c5c07-8cd7-4c52-ac06-bfc6d417d5b8] created with Success!
+2017-05-17 19:23:31,878 DEBUG GetUserTasks 244 
+ [Debug Message] - Number of Tasks: [1]
+2017-05-17 19:23:42,408 DEBUG GetReportFromRequest 541 
+ [Debug Message] - User ID: [1234] reported Info for Task: [1b8c5c07-8cd7-4c52-ac06-bfc6d417d5b8]
+2017-05-17 19:23:50,570 DEBUG ReportResultsCSTask 201 
+ [Debug Message] - Report generated with SUCCESS!
+2017-05-17 19:41:52,979 DEBUG GetCSTaskToCreate 461 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [900721ec]
+Answer: [Algumas Pessoas] Generated ID: [edcae3a3]
+Answer: [Muitas Pessoas] Generated ID: [97ac5520]
+Answer: [Impossível Almoçar] Generated ID: [9d08fa03] 
+2017-05-17 19:41:53,020 DEBUG CreateCSTask 406 
+ [Debug Message] - Task with the ID: [1ed01a4e-94e1-4b8a-b693-8335bfa0cde7] created with Success!
+2017-05-17 19:43:22,773 DEBUG GetUserTasks 244 
+ [Debug Message] - Number of Tasks: [2]
+2017-05-17 19:44:09,741 DEBUG GetUserTasks 244 
+ [Debug Message] - Number of Tasks: [2]
+2017-05-17 19:45:23,907 DEBUG GetUserTasks 244 
+ [Debug Message] - Number of Tasks: [2]
+2017-05-17 19:45:26,921 DEBUG GetReportFromRequest 541 
+ [Debug Message] - User ID: [1234] reported Info for Task: [1b8c5c07-8cd7-4c52-ac06-bfc6d417d5b8]
+2017-05-17 19:45:26,956 DEBUG ReportResultsCSTask 201 
+ [Debug Message] - Report generated with SUCCESS!
+2017-05-17 19:48:56,719 DEBUG GetUserTasks 244 
+ [Debug Message] - Number of Tasks: [2]
+2017-05-17 19:49:08,755 DEBUG GetUserTopicNameFromRequest 517 
+ [Debug Message] - User ID: [1234] Topic: [Tecnico Filas]
+2017-05-17 19:49:31,675 DEBUG GetSubscribedTasks 349 
+ [Debug Message] - Number of Tasks: [0]
+2017-05-17 19:50:25,045 DEBUG GetUserTasks 244 
+ [Debug Message] - Number of Tasks: [2]
+2017-05-18 11:05:14,464 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-05-18 11:05:14,841 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-05-18 11:05:15,149 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-05-18 11:05:18,679 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-05-18 11:05:18,715 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-05-18 11:05:18,751 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-05-18 11:05:18,789 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-05-18 11:05:18,819 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-05-19 15:25:12,728 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-05-19 15:25:12,870 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-05-19 15:25:12,880 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-05-19 15:30:04,090 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-05-19 15:30:04,234 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-05-19 15:30:04,244 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-05-19 15:30:13,197 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-05-19 15:30:22,034 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-05-19 15:30:22,092 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-05-19 15:30:22,180 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-05-19 15:30:22,236 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-05-19 15:30:33,307 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-05-19 15:30:33,386 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-05-19 15:30:33,397 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-05-19 15:30:33,808 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-05-19 15:30:48,150 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-05-19 15:30:48,187 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-05-19 15:30:48,262 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-05-19 15:30:48,310 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-05-19 15:31:14,544 DEBUG GetUserTasks 244 
+ [Debug Message] - Number of Tasks: [0]
+2017-05-19 15:31:15,514 DEBUG GetCSTaskToPay 486 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [8e154d8b]
+Answer: [Algumas Pessoas] Generated ID: [a7a305fb]
+Answer: [Muitas Pessoas] Generated ID: [2f679685]
+Answer: [Impossível Almoçar] Generated ID: [596048ad] 
+2017-05-19 15:31:16,617 DEBUG CalcCostCSTask 57 
+ [Debug Message] - User ID: [1234] has to Pay [100]
+2017-05-19 15:31:16,645 DEBUG GetCSTaskToPay 486 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+
+2017-05-19 15:31:16,653 ERROR GetCSTaskToPay 489 
+ [Debug Message] - No Task Specified!
+2017-05-19 15:31:16,755 DEBUG GetCSTaskToCreate 461 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [a7cbd50e]
+Answer: [Algumas Pessoas] Generated ID: [d4cc9e1c]
+Answer: [Muitas Pessoas] Generated ID: [c192ed27]
+Answer: [Impossível Almoçar] Generated ID: [ebe269bd] 
+2017-05-19 15:31:17,814 DEBUG CreateCSTask 406 
+ [Debug Message] - Task with the ID: [394aedf1-f83a-4cfe-83ac-af69dddb96e4] created with Success!
+2017-05-19 15:31:17,872 DEBUG GetUserTasks 244 
+ [Debug Message] - Number of Tasks: [1]
+2017-05-19 15:31:17,921 ERROR GetCSTaskToCreate 458 
+ [Debug Message] - No Task Specified!
+2017-05-19 15:31:17,948 DEBUG GetUserTopicNameFromRequest 517 
+ [Debug Message] - User ID: [1234] Topic: [Tecnico Filas]
+2017-05-19 15:31:52,240 DEBUG GetUserTasks 244 
+ [Debug Message] - Number of Tasks: [1]
+2017-05-19 15:31:58,208 DEBUG GetReportFromRequest 541 
+ [Debug Message] - User ID: [1234] reported Info for Task: [394aedf1-f83a-4cfe-83ac-af69dddb96e4]
+2017-05-19 15:31:59,283 DEBUG ReportResultsCSTask 201 
+ [Debug Message] - Report generated with SUCCESS!
+2017-05-19 15:32:21,440 DEBUG GetUserTasks 244 
+ [Debug Message] - Number of Tasks: [1]
+2017-05-19 15:32:21,758 DEBUG GetReportFromRequest 541 
+ [Debug Message] - User ID: [1234] reported Info for Task: [394aedf1-f83a-4cfe-83ac-af69dddb96e4]
+2017-05-19 15:32:21,781 DEBUG ReportResultsCSTask 201 
+ [Debug Message] - Report generated with SUCCESS!
+2017-05-19 15:32:21,817 DEBUG GetCSTaskToPay 486 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [c85381a7]
+Answer: [Algumas Pessoas] Generated ID: [6c0b23f6]
+Answer: [Muitas Pessoas] Generated ID: [dabb8167]
+Answer: [Impossível Almoçar] Generated ID: [279ab8f1] 
+2017-05-19 15:32:21,825 DEBUG CalcCostCSTask 57 
+ [Debug Message] - User ID: [1234] has to Pay [100]
+2017-05-19 15:32:21,838 DEBUG GetCSTaskToPay 486 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+
+2017-05-19 15:32:21,846 ERROR GetCSTaskToPay 489 
+ [Debug Message] - No Task Specified!
+2017-05-19 15:32:21,865 DEBUG GetCSTaskToCreate 461 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [f2295a3d]
+Answer: [Algumas Pessoas] Generated ID: [46b9d5cc]
+Answer: [Muitas Pessoas] Generated ID: [ecb02155]
+Answer: [Impossível Almoçar] Generated ID: [b9c8694d] 
+2017-05-19 15:32:21,903 DEBUG CreateCSTask 406 
+ [Debug Message] - Task with the ID: [f46eed59-3eeb-45c4-96b9-287f58432690] created with Success!
+2017-05-19 15:32:21,946 DEBUG GetUserTasks 244 
+ [Debug Message] - Number of Tasks: [2]
+2017-05-19 15:32:21,961 ERROR GetCSTaskToCreate 458 
+ [Debug Message] - No Task Specified!
+2017-05-19 15:32:21,981 DEBUG GetUserTopicNameFromRequest 517 
+ [Debug Message] - User ID: [1234] Topic: [Tecnico Filas]
+2017-05-19 15:34:33,806 DEBUG GetUserTopicNameFromRequest 517 
+ [Debug Message] - User ID: [1234] Topic: [Tecnico Filas]
+2017-05-19 15:34:33,838 DEBUG SubscribeTopic 275 
+ [Debug Message] - Topic: [Tecnico Filas] SUBSCRIBED by User ID: [1234]
+2017-05-19 15:40:22,787 DEBUG GetUserTopicNameFromRequest 517 
+ [Debug Message] - User ID: [1234] Topic: [Tecnico Filas]
+2017-05-19 15:40:22,814 DEBUG SubscribeTopic 275 
+ [Debug Message] - Topic: [Tecnico Filas] SUBSCRIBED by User ID: [1234]
+2017-05-19 15:46:14,496 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-05-19 15:46:14,562 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-05-19 15:46:14,568 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-05-19 15:46:16,456 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-05-19 15:46:16,486 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-05-19 15:46:16,538 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-05-19 15:46:16,578 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-05-19 15:46:16,611 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-05-19 15:46:22,139 DEBUG GetUserTopicNameFromRequest 517 
+ [Debug Message] - User ID: [1234] Topic: [wrong topic]
+2017-05-19 15:46:24,221 ERROR SubscribeTopic 271 
+ [Debug Message] - Invalid TopicName!
+2017-05-19 15:47:17,228 DEBUG GetUserTopicNameFromRequest 517 
+ [Debug Message] - User ID: [1234] Topic: [Tecnico Filas - not exist]
+2017-05-19 15:47:17,254 ERROR SubscribeTopic 271 
+ [Debug Message] - Invalid TopicName!
+2017-05-19 15:49:56,005 DEBUG GetUserTasks 244 
+ [Debug Message] - Number of Tasks: [0]
+2017-05-19 15:49:56,450 DEBUG GetCSTaskToPay 486 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [12a08439]
+Answer: [Algumas Pessoas] Generated ID: [ab2bd6c2]
+Answer: [Muitas Pessoas] Generated ID: [15ea02e6]
+Answer: [Impossível Almoçar] Generated ID: [babcb993] 
+2017-05-19 15:49:57,537 DEBUG CalcCostCSTask 57 
+ [Debug Message] - User ID: [1234] has to Pay [100]
+2017-05-19 15:49:57,576 DEBUG GetCSTaskToPay 486 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+
+2017-05-19 15:49:57,596 ERROR GetCSTaskToPay 489 
+ [Debug Message] - No Task Specified!
+2017-05-19 15:49:57,658 DEBUG GetCSTaskToCreate 461 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [e6a93ebd]
+Answer: [Algumas Pessoas] Generated ID: [b23aced9]
+Answer: [Muitas Pessoas] Generated ID: [0ce35483]
+Answer: [Impossível Almoçar] Generated ID: [77d890b9] 
+2017-05-19 15:49:58,706 DEBUG CreateCSTask 406 
+ [Debug Message] - Task with the ID: [f02d30cd-30d0-4ef2-acea-c56bdb557b4d] created with Success!
+2017-05-19 15:49:58,836 DEBUG GetUserTasks 244 
+ [Debug Message] - Number of Tasks: [1]
+2017-05-19 15:49:58,924 ERROR GetCSTaskToCreate 458 
+ [Debug Message] - No Task Specified!
+2017-05-19 15:49:59,024 DEBUG GetUserTopicNameFromRequest 517 
+ [Debug Message] - User ID: [1234] Topic: [Tecnico Filas]
+2017-05-19 15:49:59,081 DEBUG GetUserTopicNameFromRequest 517 
+ [Debug Message] - User ID: [1234] Topic: [Tecnico Filas]
+2017-05-19 15:49:59,110 DEBUG SubscribeTopic 275 
+ [Debug Message] - Topic: [Tecnico Filas] SUBSCRIBED by User ID: [1234]
+2017-05-19 15:49:59,143 DEBUG GetUserTopicNameFromRequest 517 
+ [Debug Message] - User ID: [1234] Topic: [Tecnico Filas - not exist]
+2017-05-19 15:49:59,175 ERROR SubscribeTopic 271 
+ [Debug Message] - Invalid TopicName!
+2017-05-19 15:51:40,305 DEBUG GetUserTasks 244 
+ [Debug Message] - Number of Tasks: [1]
+2017-05-19 15:51:52,505 DEBUG GetReportFromRequest 541 
+ [Debug Message] - User ID: [1234] reported Info for Task: [f02d30cd-30d0-4ef2-acea-c56bdb557b4d]
+2017-05-19 15:51:53,575 DEBUG ReportResultsCSTask 201 
+ [Debug Message] - Report generated with SUCCESS!
+2017-05-19 15:51:53,641 DEBUG GetCSTaskToPay 486 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [d1a94c3a]
+Answer: [Algumas Pessoas] Generated ID: [dbd2fc74]
+Answer: [Muitas Pessoas] Generated ID: [7debc4fc]
+Answer: [Impossível Almoçar] Generated ID: [f4e0b6f3] 
+2017-05-19 15:51:53,674 DEBUG CalcCostCSTask 57 
+ [Debug Message] - User ID: [1234] has to Pay [100]
+2017-05-19 15:51:53,702 DEBUG GetCSTaskToPay 486 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+
+2017-05-19 15:51:53,714 ERROR GetCSTaskToPay 489 
+ [Debug Message] - No Task Specified!
+2017-05-19 15:51:53,775 DEBUG GetCSTaskToCreate 461 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [3c635295]
+Answer: [Algumas Pessoas] Generated ID: [00be4381]
+Answer: [Muitas Pessoas] Generated ID: [f62e30e7]
+Answer: [Impossível Almoçar] Generated ID: [f990066b] 
+2017-05-19 15:51:53,826 DEBUG CreateCSTask 406 
+ [Debug Message] - Task with the ID: [df64b5c2-c365-484f-9dee-74b9b53d310c] created with Success!
+2017-05-19 15:51:53,886 DEBUG GetUserTasks 244 
+ [Debug Message] - Number of Tasks: [2]
+2017-05-19 15:51:53,921 ERROR GetCSTaskToCreate 458 
+ [Debug Message] - No Task Specified!
+2017-05-19 15:51:53,969 DEBUG GetUserTopicNameFromRequest 517 
+ [Debug Message] - User ID: [1234] Topic: [Tecnico Filas]
+2017-05-19 15:51:53,998 DEBUG GetUserTopicNameFromRequest 517 
+ [Debug Message] - User ID: [1234] Topic: [Tecnico Filas]
+2017-05-19 15:51:54,024 DEBUG SubscribeTopic 275 
+ [Debug Message] - Topic: [Tecnico Filas] SUBSCRIBED by User ID: [1234]
+2017-05-19 15:51:54,055 DEBUG GetUserTopicNameFromRequest 517 
+ [Debug Message] - User ID: [1234] Topic: [Tecnico Filas - not exist]
+2017-05-19 15:51:54,123 ERROR SubscribeTopic 271 
+ [Debug Message] - Invalid TopicName!
+2017-05-19 15:52:02,731 DEBUG GetUserTasks 244 
+ [Debug Message] - Number of Tasks: [2]
+2017-05-19 15:52:03,071 DEBUG GetReportFromRequest 541 
+ [Debug Message] - User ID: [1234] reported Info for Task: [f02d30cd-30d0-4ef2-acea-c56bdb557b4d]
+2017-05-19 15:52:03,092 DEBUG ReportResultsCSTask 201 
+ [Debug Message] - Report generated with SUCCESS!
+2017-05-19 15:52:03,125 DEBUG GetCSTaskToPay 486 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [01a6e74a]
+Answer: [Algumas Pessoas] Generated ID: [dcc1d794]
+Answer: [Muitas Pessoas] Generated ID: [9e1976f9]
+Answer: [Impossível Almoçar] Generated ID: [18ff78d3] 
+2017-05-19 15:52:03,133 DEBUG CalcCostCSTask 57 
+ [Debug Message] - User ID: [1234] has to Pay [100]
+2017-05-19 15:52:03,146 DEBUG GetCSTaskToPay 486 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+
+2017-05-19 15:52:03,156 ERROR GetCSTaskToPay 489 
+ [Debug Message] - No Task Specified!
+2017-05-19 15:52:03,175 DEBUG GetCSTaskToCreate 461 
+ [Debug Message] - User ID: [1234] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [30532b4d]
+Answer: [Algumas Pessoas] Generated ID: [1a75ea98]
+Answer: [Muitas Pessoas] Generated ID: [020178e1]
+Answer: [Impossível Almoçar] Generated ID: [c0140523] 
+2017-05-19 15:52:03,209 DEBUG CreateCSTask 406 
+ [Debug Message] - Task with the ID: [cb5093de-c306-408f-9271-01944fe217d8] created with Success!
+2017-05-19 15:52:03,248 DEBUG GetUserTasks 244 
+ [Debug Message] - Number of Tasks: [3]
+2017-05-19 15:52:03,259 ERROR GetCSTaskToCreate 458 
+ [Debug Message] - No Task Specified!
+2017-05-19 15:52:03,277 DEBUG GetUserTopicNameFromRequest 517 
+ [Debug Message] - User ID: [1234] Topic: [Tecnico Filas]
+2017-05-19 15:52:03,295 DEBUG GetUserTopicNameFromRequest 517 
+ [Debug Message] - User ID: [1234] Topic: [Tecnico Filas]
+2017-05-19 15:52:03,312 DEBUG SubscribeTopic 275 
+ [Debug Message] - Topic: [Tecnico Filas] SUBSCRIBED by User ID: [1234]
+2017-05-19 15:52:03,324 DEBUG GetUserTopicNameFromRequest 517 
+ [Debug Message] - User ID: [1234] Topic: [Tecnico Filas - not exist]
+2017-05-19 15:52:03,338 ERROR SubscribeTopic 271 
+ [Debug Message] - Invalid TopicName!
