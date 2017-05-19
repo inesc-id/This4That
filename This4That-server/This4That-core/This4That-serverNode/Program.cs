@@ -12,6 +12,7 @@ namespace This4That_ServerNode
             XMLParser xmlParser;
             string errorMessage = null;
 
+            TransactionNode transactionNode;
             TaskCreator taskCreator;
             TaskDistributor taskDistributor;
             ReportAggregator reportAggregator;
@@ -30,23 +31,27 @@ namespace This4That_ServerNode
             else
                 Console.WriteLine(errorMessage);
 
-            StartInstances(xmlParser.XmlDoc, out taskCreator, out taskDistributor, out reportAggregator, out incentiveEngine, out repository);
+            StartInstances(xmlParser.XmlDoc, out taskCreator, out taskDistributor, out reportAggregator
+                           , out incentiveEngine, out repository, out transactionNode);
 
             Console.ReadLine();
         }
 
 
         private static bool StartInstances(XmlDocument xmlDoc, out TaskCreator taskCreator, out TaskDistributor taskDistributor, 
-                                           out ReportAggregator reportAggregator, out IncentiveEngine incentiveEngine, out Repository repository)
+                                           out ReportAggregator reportAggregator, out IncentiveEngine incentiveEngine, out Repository repository,
+                                           out TransactionNode transactionNode)
         {
             taskCreator = null;
             taskDistributor = null;
             reportAggregator = null;
             incentiveEngine = null;
             repository = null;
+            transactionNode = null;
             int port;
             string serverMgrURL;
             string repositoryURL = null;
+            string transactionNodeURL = null;
             XmlNode xmlNode;
             try
             {
@@ -75,6 +80,21 @@ namespace This4That_ServerNode
                     if (!repository.StartConnectRemoteIntance(serverMgrURL))
                         return false;
                 }
+
+                /**************TRANSACTION NODE********/
+                xmlNode = xmlDoc.GetElementsByTagName(Global.TRANSACTION_NODE_NAME)[0];
+                if (xmlNode != null)
+                {
+                    int.TryParse(xmlNode.Attributes["port"].Value, out port);
+                    transactionNode = new TransactionNode(xmlNode.Attributes["hostName"].Value, port, Global.TRANSACTION_NODE_NAME);
+                    if (!transactionNode.StartRemoteTransactionNodeInstance())
+                        return false;
+
+                    transactionNodeURL = $"tcp://{xmlNode.Attributes["hostName"].Value}:{xmlNode.Attributes["port"].Value}/{Global.TRANSACTION_NODE_NAME}";
+                    if (!repository.ConnectoTransactionNode(transactionNodeURL))
+                        return false;
+                }
+
                 /**************TASK CREATOR********/
                 xmlNode = xmlDoc.GetElementsByTagName(Global.TASK_CREATOR_NAME)[0];
                 if (xmlNode != null)

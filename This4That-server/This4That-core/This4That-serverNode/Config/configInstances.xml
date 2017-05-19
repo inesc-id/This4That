@@ -5,4 +5,5 @@
   <ReportAggregator hostName="localhost" port="5003"/>
   <IncentiveEngine hostName="localhost" port="5004"/>
   <Repository hostName="localhost" port="5005"/>
+  <TransactionNode hostName="localhost" port="5006"/>
 </Config>

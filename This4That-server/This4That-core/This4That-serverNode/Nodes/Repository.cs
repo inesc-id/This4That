@@ -18,7 +18,7 @@ namespace This4That_ServerNode.Nodes
         private UserStorage userStorage = new UserStorage();
         private ReportStorage reportStorage = new ReportStorage();
         private TaskStorage taskStorage = new TaskStorage();
-        private TransactionStorage txStorage = new TransactionStorage();
+        private ITransactionNode transactionNode = null;
 
         public Dictionary<string, Topic> ColTopics
         {
@@ -72,16 +72,16 @@ namespace This4That_ServerNode.Nodes
             }
         }
 
-        public TransactionStorage TxStorage
+        public ITransactionNode RemoteTransactionNode
         {
             get
             {
-                return txStorage;
+                return transactionNode;
             }
 
             set
             {
-                txStorage = value;
+                transactionNode = value;
             }
         }
 
@@ -115,6 +115,21 @@ namespace This4That_ServerNode.Nodes
             {
                 Log.Error(ex.Message);
                 Log.ErrorFormat("Cannot connect Repository to ServerManager: [{0}", serverMgrURL);
+                return false;
+            }
+        }
+
+        public bool ConnectoTransactionNode(string transactionNodeURL)
+        {
+            try
+            {
+                this.RemoteTransactionNode = (ITransactionNode)Activator.GetObject(typeof(ITransactionNode), transactionNodeURL);
+                Log.DebugFormat("[INFO - TRANSACTION NODE] - Connected to Repository.");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
                 return false;
             }
         }
@@ -490,7 +505,7 @@ namespace This4That_ServerNode.Nodes
 
             foreach (string txID in UserStorage.GetUserByID(userId).Wallet.Transactions)
             {
-                tx = TxStorage.GetTransaction(txID);
+                tx = this.RemoteTransactionNode.GetTransactionById(txID);
 
                 if (tx != null)
                 {
@@ -509,7 +524,7 @@ namespace This4That_ServerNode.Nodes
             User user;
             try
             {
-                TxStorage.GenerateTransaction(senderID, receiverID, incentiveValue, out transactionId);
+                this.RemoteTransactionNode.GenerateTransaction(senderID, receiverID, incentiveValue, out transactionId);
                 user = UserStorage.GetUserByID(senderID);
                 //calc the new balance for the sender
                 user.Wallet.Balance = incentiveObj.CalcSenderNewBalance(user.Wallet.Balance, incentiveValue);

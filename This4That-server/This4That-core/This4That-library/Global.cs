@@ -14,5 +14,6 @@ namespace This4That_library
         public static string INCENTIVE_ENGINE_NAME = "IncentiveEngine";
         public static string REPORT_AGGREGATOR_NAME = "ReportAggregator";
         public static string REPOSITORY_NAME = "Repository";
+        public static string TRANSACTION_NODE_NAME = "TransactionNode";
     }
 }

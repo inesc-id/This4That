@@ -72,4 +72,11 @@ namespace This4That_library
         bool GenerateTransaction(string senderID, string receiverID, Incentive incentiveObj, object incentiveValue, out string transactionId);
         List<Transaction> GetUserTransactions(string userId);
     }
+
+    public interface ITransactionNode : IRemoteEntity
+    {
+        Transaction GetTransactionById(string txId);
+        bool GenerateTransaction(string sender, string receiver, object value, out string transactionID);
+
+    }
 }
