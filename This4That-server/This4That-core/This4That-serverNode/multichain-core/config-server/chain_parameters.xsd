@@ -1,0 +1,15 @@
+<xs:schema targetNamespace="This4ThatNS" attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element xmlns="This4ThatNS" name="MultiChainConfig" type="configType"/>
+
+
+  <xs:complexType name="configType">
+    <xs:sequence>
+      <xs:element xmlns="This4ThatNS" type="xs:int" name="Port"/>
+      <xs:element xmlns="This4ThatNS" type="xs:string" name="Username"/>
+      <xs:element xmlns="This4ThatNS" type="xs:string" name="Password"/>
+      <xs:element xmlns="This4ThatNS" type="xs:string" name="ChainName"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -7,6 +7,7 @@ using System.Web;
 using This4That_library.Models.Integration;
 using This4That_library.Models.Integration.CalcTaskCostDTO;
 using This4That_library.Models.Integration.ExecuteTaskDTO;
+using This4That_library.Models.Integration.GetMultichainAddress;
 using This4That_library.Models.Integration.GetUserTopicDTO;
 using This4That_library.Models.Integration.ReportDTO;
 using This4That_library.Models.Integration.TaskPayCreateDTO;
@@ -19,12 +20,18 @@ namespace This4That_library
         private static bool GetDTOFromPostBody(string postBody, out APIRequestDTO requestDTO, string typeFullName, ref string errorMessage)
         {
             requestDTO = null;
-            string calcTaskCostType = typeof(CalcTaskCostRequestDTO).FullName;
+
             try
             {
-                //check the right type to serialize
+                //check the right type to deserialize
                 if (String.IsNullOrEmpty(postBody))
                     return false;
+
+                if (typeof(APIRequestDTO).FullName.Equals(typeFullName))
+                {
+                    requestDTO = JsonConvert.DeserializeObject<APIRequestDTO>(postBody);
+                    return true;
+                }
                 if (typeof(CalcTaskCostRequestDTO).FullName.Equals(typeFullName))
                 {
                     requestDTO = JsonConvert.DeserializeObject<CalcTaskCostRequestDTO>(postBody);
@@ -55,6 +62,11 @@ namespace This4That_library
                 if (typeFullName.Equals(typeof(ExecuteTaskDTO)))
                 {
                     requestDTO = JsonConvert.DeserializeObject<ExecuteTaskDTO>(postBody);
+                    return true;
+                }
+                if (typeof(GetMultichainAddressDTO).FullName.Equals(typeFullName))
+                {
+                    requestDTO = JsonConvert.DeserializeObject<GetMultichainAddressDTO>(postBody);
                     return true;
                 }
                 return false;

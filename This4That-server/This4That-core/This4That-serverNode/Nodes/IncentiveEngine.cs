@@ -30,10 +30,20 @@ namespace This4That_ServerNode.Nodes
 
         public IncentiveEngine(string hostName, int port, string name) : base(hostName, port, name)
         {
+            Console.WriteLine("INCENTIVE ENGINE");
+            Console.WriteLine($"HOST: {this.HostName} PORT: {this.Port}");
+
             Log = LogManager.GetLogger("IncentiveEngineLOG");
             this.centralizedIncentiveScheme = new CentralizedIncentiveScheme(new Gamification());
-            this.descentralizedIncentiveScheme = new DescentralizedIncentiveScheme(new Gamification());
-            
+            try
+            {
+                this.descentralizedIncentiveScheme = new DescentralizedIncentiveScheme(new Gamification());
+            }
+            catch (Exception ex)
+            {
+                Log.ErrorFormat(ex.Message + " Failed to connect to the Multichain node.");
+                Console.WriteLine("[ERROR] - FAILED TO CONNECT THE MULTICHAIN NODE!");
+            }            
         }
 
         /// <summary>
@@ -51,9 +61,8 @@ namespace This4That_ServerNode.Nodes
                     Log.Error("Cannot connect to Server Manager!");
                 }
                 Log.DebugFormat("ServerManager: [{0}]", serverMgrURL);
-                Console.WriteLine("INCENTIVE ENGINE");
-                Console.WriteLine($"HOST: {this.HostName} PORT: {this.Port} CONNECTED to ServerManager");
-                Console.WriteLine("----------------------------");
+                Console.WriteLine("[INFO] - CONNECTED to ServerManager");
+                Console.WriteLine("----------------------------" + Environment.NewLine);
                 return true;
             }
             catch (Exception ex)
@@ -88,6 +97,12 @@ namespace This4That_ServerNode.Nodes
                 if (!this.Repository.GetUserIncentiveScheme(userID, out incentiveSchemeEnum))
                     return false;
 
+                if (incentiveSchemeEnum == IncentiveSchemesEnum.None)
+                {
+                    Log.Error("Cannot obtain incentive scheme!");
+                    return false;
+                }
+                    
                 if (incentiveSchemeEnum == IncentiveSchemesEnum.Centralized)
                     incentiveScheme = this.centralizedIncentiveScheme;
                 else
@@ -230,6 +245,48 @@ namespace This4That_ServerNode.Nodes
                     return false;
                 }
 
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return false;
+            }
+        }
+
+        public bool EnableDescentralizedScheme(string userID)
+        {
+            
+            try
+            {
+                //change the incentive scheme mode
+                if (!this.Repository.SetUserIncentiveScheme(userID, IncentiveSchemesEnum.Descentralized))
+                {
+                    Log.Error("Failed to enable descentralized scheme.");
+                    return false;
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return false;
+            }
+            
+        }
+
+        public bool AddNodeToChain(string userID, string multichainAddress)
+        {
+            List<string> listofAddresses = new List<string>();
+            
+            try
+            {
+                listofAddresses.Add(multichainAddress);
+                this.descentralizedIncentiveScheme.MultichainClient.GrantAsync(listofAddresses, MultiChainLib.BlockchainPermissions.Connect);
+                this.descentralizedIncentiveScheme.MultichainClient.GrantAsync(listofAddresses, MultiChainLib.BlockchainPermissions.Send);
+                this.descentralizedIncentiveScheme.MultichainClient.GrantAsync(listofAddresses, MultiChainLib.BlockchainPermissions.Receive);
+                this.descentralizedIncentiveScheme.MultichainClient.GrantAsync(listofAddresses, MultiChainLib.BlockchainPermissions.Mine);
+                
                 return true;
             }
             catch (Exception ex)

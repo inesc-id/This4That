@@ -15,5 +15,10 @@ namespace This4That_library
         public static string REPORT_AGGREGATOR_NAME = "ReportAggregator";
         public static string REPOSITORY_NAME = "Repository";
         public static string TRANSACTION_NODE_NAME = "TransactionNode";
+
+        public static string PORT_TAG = "Port";
+        public static string USERNAME_TAG = "Username";
+        public static string PASSWORD_TAG = "Password";
+        public static string CHAINNAME_TAG = "ChainName";
     }
 }

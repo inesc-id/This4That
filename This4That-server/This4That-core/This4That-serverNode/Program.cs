@@ -28,8 +28,6 @@ namespace This4That_ServerNode
                 Console.WriteLine(errorMessage);
                 return;
             }
-            else
-                Console.WriteLine(errorMessage);
 
             StartInstances(xmlParser.XmlDoc, out taskCreator, out taskDistributor, out reportAggregator
                            , out incentiveEngine, out repository, out transactionNode);
@@ -66,9 +64,8 @@ namespace This4That_ServerNode
                     Console.WriteLine("Server Manager Parameters are not defined in the XML!");
                     return false;
                 }
-                Console.WriteLine("[INFO - SERVER MANAGER] - Node Started");
-                Console.WriteLine(serverMgrURL);
-                Console.WriteLine("----------------------------");
+                Console.WriteLine("[SERVER MANAGER] - Node Started");
+                Console.WriteLine("----------------------------" + Environment.NewLine);
                 
                 /*********REPOSITORY**************/
                 xmlNode = xmlDoc.GetElementsByTagName(Global.REPOSITORY_NAME)[0];

@@ -13,6 +13,8 @@ namespace This4That_ServerNode.Nodes
 
         public TaskDistributor(string hostName, int port, string name) : base(hostName, port, name)
         {
+            Console.WriteLine("TASK DISTRIBUTOR");
+            Console.WriteLine($"HOST: {this.HostName} PORT: {this.Port}");
             Log = LogManager.GetLogger("TaskDistributorLOG");
         }
 
@@ -45,9 +47,8 @@ namespace This4That_ServerNode.Nodes
                     Log.Error("Cannot connect to Server Manager!");
                 }
                 Log.DebugFormat("ServerManager: [{0}]", serverMgrURL);
-                Console.WriteLine("TASK DISTRIBUTOR");
-                Console.WriteLine($"HOST: {this.HostName} PORT: {this.Port} CONNECTED to ServerManager");
-                Console.WriteLine("----------------------------");
+                Console.WriteLine("[INFO] - CONNECTED to ServerManager");
+                Console.WriteLine("----------------------------" + Environment.NewLine);
                 return true;
             }
             catch (Exception ex)

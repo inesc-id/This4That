@@ -131,8 +131,6 @@ namespace This4That_ServerNode.Nodes
                 channel = new TcpServerChannel(this.Name, this.Port);
                 ChannelServices.RegisterChannel(channel, false);
                 RemotingServices.Marshal(this, this.Name, this.GetType());
-                Log.DebugFormat("Node: [{0}] IS RUNNING!", this.Name);
-                Console.WriteLine(this.HostName + " - IS RUNNING");
                 //connect remote instance to server manager
                 if (!this.ConnectServerManager(serverMgrURL))
                     return false;
@@ -144,34 +142,6 @@ namespace This4That_ServerNode.Nodes
                 return false;
             }
         }
-
-        public bool StartRemoteTransactionNodeInstance()
-        {
-            TcpServerChannel channel;
-            try
-            {
-                if (String.IsNullOrEmpty(this.HostName) || this.Port < 0)
-                {
-                    Log.ErrorFormat("Invalid Hostname: [{0}] or Port: [{1}]", this.HostName, this.Port);
-                    return false;
-                }
-                //register remote instance
-                Log.DebugFormat("Valid Hostname: [{0}] Port: [{1}]", this.HostName, this.Port);
-                channel = new TcpServerChannel(this.Name, this.Port);
-                ChannelServices.RegisterChannel(channel, false);
-                RemotingServices.Marshal(this, this.Name, this.GetType());
-                Log.DebugFormat("Node: [{0}] IS RUNNING!", this.Name);
-                Console.WriteLine("TRANSACTION NODE - IS RUNNING!");
-                Console.WriteLine("----------------------------");
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Log.Error(ex.Message);
-                return false;
-            }
-        }
-
         
     }
 }

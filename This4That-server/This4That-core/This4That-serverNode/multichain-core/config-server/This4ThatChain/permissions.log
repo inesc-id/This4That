@@ -1,0 +1,134 @@
+2017-05-22 11:31:18	Initialized: Admin count: 0, Miner count: 0, DB rows: 1, ledger rows: 1
+2017-05-22 11:31:19	Grant: (00000000-026513e5-00000001-026513e5) (0--1, 1495449079), In consensus: 1, Admin count: 0, Miner count: 0
+2017-05-22 11:31:19	Grant: (00000000-026513e5-00000002-026513e5) (0--1, 1495449079), In consensus: 1, Admin count: 0, Miner count: 0
+2017-05-22 11:31:20	Grant: (00000000-026513e5-00000004-026513e5) (0--1, 1495449079), In consensus: 1, Admin count: 0, Miner count: 0
+2017-05-22 11:31:20	Grant: (00000000-026513e5-00000020-026513e5) (0--1, 1495449079), In consensus: 1, Admin count: 0, Miner count: 0
+2017-05-22 11:31:20	Grant: (00000000-026513e5-00000010-026513e5) (0--1, 1495449079), In consensus: 1, Admin count: 0, Miner count: 0
+2017-05-22 11:31:20	Grant: (00000000-026513e5-00002000-026513e5) (0--1, 1495449079), In consensus: 1, Admin count: 0, Miner count: 0
+2017-05-22 11:31:20	Grant: (00000000-026513e5-00000100-026513e5) (0--1, 1495449079), In consensus: 1, Admin count: 0, Miner count: 1
+2017-05-22 11:31:20	Grant: (00000000-026513e5-00001000-026513e5) (0--1, 1495449079), In consensus: 1, Admin count: 1, Miner count: 1
+2017-05-22 11:31:20	Grant: (18be62db-00000000-00000001-026513e5) (0--1, 0), In consensus: 1, Admin count: 1, Miner count: 1
+2017-05-22 11:31:20	Grant: (18be62db-026513e5-00000008-026513e5) (0--1, 0), In consensus: 1, Admin count: 1, Miner count: 1
+2017-05-22 11:31:20	Grant: (18be62db-026513e5-00002000-026513e5) (0--1, 0), In consensus: 1, Admin count: 1, Miner count: 1
+2017-05-22 11:31:20	Grant: (18be62db-026513e5-00001000-026513e5) (0--1, 0), In consensus: 1, Admin count: 1, Miner count: 1
+2017-05-22 11:31:20	Block commit:         0 (Hash: 692234ab, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 15, Ledger Rows: 15
+2017-05-22 11:31:20	Block commit:         1 (Hash: 15fdeaeb, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 16, Ledger Rows: 17
+2017-05-22 11:31:20	Block commit:         2 (Hash: a75d77ea, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 17, Ledger Rows: 19
+2017-05-22 11:31:28	Block commit:         3 (Hash: c6d48bb3, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 18, Ledger Rows: 21
+2017-05-22 11:31:44	Block commit:         4 (Hash: 6b9cf055, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 19, Ledger Rows: 23
+2017-05-22 11:31:55	Block commit:         5 (Hash: 1e7ae1a7, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 20, Ledger Rows: 25
+2017-05-22 11:32:15	Block commit:         6 (Hash: 5e662216, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 21, Ledger Rows: 27
+2017-05-22 11:32:32	Block commit:         7 (Hash: 9ecc821a, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 22, Ledger Rows: 29
+2017-05-22 11:32:47	Block commit:         8 (Hash: d536c4ac, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 23, Ledger Rows: 31
+2017-05-22 11:33:01	Block commit:         9 (Hash: 6dab1d29, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 24, Ledger Rows: 33
+2017-05-22 11:33:21	Block commit:        10 (Hash: 4258bfbd, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 25, Ledger Rows: 35
+2017-05-22 11:33:41	Block commit:        11 (Hash: c63a3c9b, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 26, Ledger Rows: 37
+2017-05-22 11:34:00	Block commit:        12 (Hash: f2a1f772, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 27, Ledger Rows: 39
+2017-05-22 11:34:04	Block commit:        13 (Hash: 4839baaf, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 28, Ledger Rows: 41
+2017-05-22 11:34:24	Block commit:        14 (Hash: eb1cc00d, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 29, Ledger Rows: 43
+2017-05-22 11:34:37	Block commit:        15 (Hash: 6f2d928f, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 30, Ledger Rows: 45
+2017-05-22 11:34:50	Block commit:        16 (Hash: ccc1d73e, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 31, Ledger Rows: 47
+2017-05-22 11:35:02	Block commit:        17 (Hash: ee870343, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 32, Ledger Rows: 49
+2017-05-22 11:35:13	Block commit:        18 (Hash: b7972982, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 33, Ledger Rows: 51
+2017-05-22 11:35:30	Block commit:        19 (Hash: d512db68, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 34, Ledger Rows: 53
+2017-05-22 11:35:49	Block commit:        20 (Hash: db9c56ba, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 35, Ledger Rows: 55
+2017-05-22 11:36:01	Block commit:        21 (Hash: 0fe1a1d8, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 36, Ledger Rows: 57
+2017-05-22 11:36:15	Block commit:        22 (Hash: c8a35e42, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 37, Ledger Rows: 59
+2017-05-22 11:36:43	Block commit:        23 (Hash: 26d3e599, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 38, Ledger Rows: 61
+2017-05-22 11:36:51	Block commit:        24 (Hash: 03c82172, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 39, Ledger Rows: 63
+2017-05-22 11:36:58	Block commit:        25 (Hash: dd55d12d, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 40, Ledger Rows: 65
+2017-05-22 11:37:12	Block commit:        26 (Hash: 9b4b4d0e, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 41, Ledger Rows: 67
+2017-05-22 11:37:26	Block commit:        27 (Hash: 52d421a8, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 42, Ledger Rows: 69
+2017-05-22 11:37:45	Block commit:        28 (Hash: fd21ccc4, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 43, Ledger Rows: 71
+2017-05-22 11:38:03	Block commit:        29 (Hash: 8f453ffc, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 44, Ledger Rows: 73
+2017-05-22 11:38:18	Block commit:        30 (Hash: 11b37d87, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 45, Ledger Rows: 75
+2017-05-22 11:38:34	Block commit:        31 (Hash: f2f9eeb4, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 46, Ledger Rows: 77
+2017-05-22 11:38:49	Block commit:        32 (Hash: 87f499a1, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 47, Ledger Rows: 79
+2017-05-22 11:38:58	Block commit:        33 (Hash: b3f037cb, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 48, Ledger Rows: 81
+2017-05-22 11:39:20	Block commit:        34 (Hash: 52a76f22, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 49, Ledger Rows: 83
+2017-05-22 11:39:32	Block commit:        35 (Hash: 64ddd8fa, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 50, Ledger Rows: 85
+2017-05-22 11:39:45	Block commit:        36 (Hash: 1ccf0be2, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 51, Ledger Rows: 87
+2017-05-22 11:39:55	Block commit:        37 (Hash: 7a929b92, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 52, Ledger Rows: 89
+2017-05-22 11:40:18	Block commit:        38 (Hash: 076b22b9, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 53, Ledger Rows: 91
+2017-05-22 11:40:35	Block commit:        39 (Hash: c59a2cec, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 54, Ledger Rows: 93
+2017-05-22 11:40:52	Block commit:        40 (Hash: 8c8c280a, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 55, Ledger Rows: 95
+2017-05-22 11:41:03	Block commit:        41 (Hash: b9ebb1d2, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 56, Ledger Rows: 97
+2017-05-22 11:41:15	Block commit:        42 (Hash: 1ddedf8d, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 57, Ledger Rows: 99
+2017-05-22 11:41:39	Block commit:        43 (Hash: 3fcf296f, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 58, Ledger Rows: 101
+2017-05-22 11:41:51	Block commit:        44 (Hash: 8764175b, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 59, Ledger Rows: 103
+2017-05-22 11:42:10	Block commit:        45 (Hash: 8d30f757, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 60, Ledger Rows: 105
+2017-05-22 11:42:25	Block commit:        46 (Hash: 5881d449, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 61, Ledger Rows: 107
+2017-05-22 11:42:35	Block commit:        47 (Hash: 5b268b25, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 62, Ledger Rows: 109
+2017-05-22 11:42:44	Block commit:        48 (Hash: b5a50a88, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 63, Ledger Rows: 111
+2017-05-22 11:43:04	Block commit:        49 (Hash: 5cfb198a, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 64, Ledger Rows: 113
+2017-05-22 11:43:16	Block commit:        50 (Hash: 607a5ea8, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 65, Ledger Rows: 115
+2017-05-22 11:43:41	Block commit:        51 (Hash: e8523f01, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 66, Ledger Rows: 117
+2017-05-22 11:43:46	Block commit:        52 (Hash: 527cb900, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 67, Ledger Rows: 119
+2017-05-22 11:44:09	Block commit:        53 (Hash: b19140e4, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 68, Ledger Rows: 121
+2017-05-22 11:44:26	Block commit:        54 (Hash: 8d5f6f25, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 69, Ledger Rows: 123
+2017-05-22 11:44:45	Block commit:        55 (Hash: 10b1219c, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 70, Ledger Rows: 125
+2017-05-22 11:45:00	Block commit:        56 (Hash: b6d80904, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 71, Ledger Rows: 127
+2017-05-22 11:45:10	Block commit:        57 (Hash: 85ea189f, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 72, Ledger Rows: 129
+2017-05-22 11:45:21	Block commit:        58 (Hash: a84d7be2, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 73, Ledger Rows: 131
+2017-05-22 11:45:35	Block commit:        59 (Hash: 0badb995, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 74, Ledger Rows: 133
+2017-05-22 11:57:25	Initialized: Admin count: 1, Miner count: 1, DB rows: 74, ledger rows: 133
+2017-05-22 11:57:27	Block rollback:        59, Admin count: 1, Miner count: 1, DB rows: 74, Ledger Rows: 133
+2017-05-22 16:16:35	Initialized: Admin count: 1, Miner count: 1, DB rows: 74, ledger rows: 133
+2017-05-22 16:16:37	Block rollback:        59, Admin count: 1, Miner count: 1, DB rows: 74, Ledger Rows: 133
+2017-05-22 17:59:17	Grant: (00000000-00fb903f-00000001-026513e5) (0--1, 1495472357), In consensus: 1, Admin count: 1, Miner count: 1
+2017-05-22 17:59:34	Mempool copy:        59, Admin count: 1, Miner count: 1, DB rows: 74, Ledger Rows: 134
+2017-05-22 17:59:34	Mempool clr :        59, Admin count: 1, Miner count: 1, DB rows: 74, Ledger Rows: 133
+2017-05-22 17:59:34	Mempool rstr:        59, Admin count: 1, Miner count: 1, DB rows: 74, Ledger Rows: 134
+2017-05-22 17:59:34	Mempool clr :        59, Admin count: 1, Miner count: 1, DB rows: 74, Ledger Rows: 133
+2017-05-22 17:59:34	Grant: (00000000-00fb903f-00000001-026513e5) (0--1, 1495472357), In consensus: 1, Admin count: 1, Miner count: 1
+2017-05-22 17:59:34	Block commit:        60 (Hash: 9e512f5b, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 76, Ledger Rows: 136
+2017-05-22 17:59:45	Block commit:        61 (Hash: ab36e42f, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 77, Ledger Rows: 138
+2017-05-22 18:00:05	Block commit:        62 (Hash: e9e03c1f, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 78, Ledger Rows: 140
+2017-05-22 18:00:22	Block commit:        63 (Hash: fd694424, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 79, Ledger Rows: 142
+2017-05-22 18:00:37	Block commit:        64 (Hash: b2dfb984, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 80, Ledger Rows: 144
+2017-05-22 18:00:50	Block commit:        65 (Hash: 068abda2, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 81, Ledger Rows: 146
+2017-05-22 18:01:11	Block commit:        66 (Hash: 12954cc3, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 82, Ledger Rows: 148
+2017-05-22 18:01:31	Block commit:        67 (Hash: bd29b6a3, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 83, Ledger Rows: 150
+2017-05-22 18:01:50	Block commit:        68 (Hash: 65d3184b, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 84, Ledger Rows: 152
+2017-05-22 18:02:01	Block commit:        69 (Hash: 4f7feb0c, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 85, Ledger Rows: 154
+2017-05-22 18:02:22	Block commit:        70 (Hash: db637b13, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 86, Ledger Rows: 156
+2017-05-22 18:25:11	Grant: (00000000-00fb903f-00000001-026513e5) (0--1, 1495473911), In consensus: 1, Admin count: 1, Miner count: 1
+2017-05-22 18:25:27	Mempool copy:        70, Admin count: 1, Miner count: 1, DB rows: 86, Ledger Rows: 157
+2017-05-22 18:25:27	Mempool clr :        70, Admin count: 1, Miner count: 1, DB rows: 86, Ledger Rows: 156
+2017-05-22 18:25:27	Mempool rstr:        70, Admin count: 1, Miner count: 1, DB rows: 86, Ledger Rows: 157
+2017-05-22 18:25:27	Mempool clr :        70, Admin count: 1, Miner count: 1, DB rows: 86, Ledger Rows: 156
+2017-05-22 18:25:27	Grant: (00000000-00fb903f-00000001-026513e5) (0--1, 1495473911), In consensus: 1, Admin count: 1, Miner count: 1
+2017-05-22 18:25:27	Block commit:        71 (Hash: 90185377, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 87, Ledger Rows: 159
+2017-05-22 18:25:32	Block commit:        72 (Hash: 6f2afc8c, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 88, Ledger Rows: 161
+2017-05-22 18:25:33	Block commit:        73 (Hash: 9ec9ba36, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 89, Ledger Rows: 163
+2017-05-22 18:25:35	Block commit:        74 (Hash: 920448cd, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 90, Ledger Rows: 165
+2017-05-22 18:25:41	Block commit:        75 (Hash: 01be5c6d, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 91, Ledger Rows: 167
+2017-05-22 18:25:43	Block commit:        76 (Hash: 5847f794, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 92, Ledger Rows: 169
+2017-05-22 18:25:47	Block commit:        77 (Hash: 3016daef, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 93, Ledger Rows: 171
+2017-05-22 18:26:02	Block commit:        78 (Hash: eb614287, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 94, Ledger Rows: 173
+2017-05-22 18:26:09	Block commit:        79 (Hash: f0325197, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 95, Ledger Rows: 175
+2017-05-22 18:26:11	Block commit:        80 (Hash: a02989c3, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 96, Ledger Rows: 177
+2017-05-22 18:26:11	Block commit:        81 (Hash: 12b4ce4f, Miner: 026513e5), Admin count: 1, Miner count: 1, DB rows: 97, Ledger Rows: 179
+2017-05-22 18:43:43	Grant: (00000000-00fb903f-00000001-026513e5) (0--1, 1495475023), In consensus: 1, Admin count: 1, Miner count: 1
+2017-05-22 18:43:43	Grant: (00000000-00fb903f-00000002-026513e5) (0--1, 1495475023), In consensus: 1, Admin count: 1, Miner count: 1
+2017-05-22 18:43:45	Grant: (00000000-00fb903f-00000004-026513e5) (0--1, 1495475025), In consensus: 1, Admin count: 1, Miner count: 1
+2017-05-22 18:43:57	Grant: (00000000-00fb903f-00000100-026513e5) (0--1, 1495475037), In consensus: 1, Admin count: 1, Miner count: 2
+2017-05-22 18:48:16	Mempool copy:        81, Admin count: 1, Miner count: 2, DB rows: 97, Ledger Rows: 183
+2017-05-22 18:48:16	Mempool clr :        81, Admin count: 1, Miner count: 1, DB rows: 97, Ledger Rows: 179
+2017-05-22 18:48:16	Mempool rstr:        81, Admin count: 1, Miner count: 2, DB rows: 97, Ledger Rows: 183
+2017-05-22 18:48:16	Mempool clr :        81, Admin count: 1, Miner count: 1, DB rows: 97, Ledger Rows: 179
+2017-05-22 18:48:16	Grant: (00000000-00fb903f-00000001-026513e5) (0--1, 1495475023), In consensus: 1, Admin count: 1, Miner count: 1
+2017-05-22 18:48:17	Grant: (00000000-00fb903f-00000002-026513e5) (0--1, 1495475023), In consensus: 1, Admin count: 1, Miner count: 1
+2017-05-22 18:48:17	Grant: (00000000-00fb903f-00000004-026513e5) (0--1, 1495475025), In consensus: 1, Admin count: 1, Miner count: 1
+2017-05-22 18:48:17	Grant: (00000000-00fb903f-00000100-026513e5) (0--1, 1495475037), In consensus: 1, Admin count: 1, Miner count: 2
+2017-05-22 18:48:17	Block commit:        82 (Hash: ed6cd2cc, Miner: 026513e5), Admin count: 1, Miner count: 2, DB rows: 101, Ledger Rows: 185
+2017-05-22 18:48:26	Block commit:        83 (Hash: 84ebada0, Miner: 026513e5), Admin count: 1, Miner count: 2, DB rows: 102, Ledger Rows: 187
+2017-05-22 18:48:34	Block commit:        84 (Hash: 3d0f794f, Miner: 026513e5), Admin count: 1, Miner count: 2, DB rows: 103, Ledger Rows: 189
+2017-05-22 18:48:44	Block commit:        85 (Hash: bdd22a97, Miner: 026513e5), Admin count: 1, Miner count: 2, DB rows: 104, Ledger Rows: 191
+2017-05-22 18:49:02	Block commit:        86 (Hash: 0a4da0e0, Miner: 026513e5), Admin count: 1, Miner count: 2, DB rows: 105, Ledger Rows: 193
+2017-05-22 18:49:06	Block commit:        87 (Hash: 3ed16fec, Miner: 026513e5), Admin count: 1, Miner count: 2, DB rows: 106, Ledger Rows: 195
+2017-05-22 18:49:15	Block commit:        88 (Hash: a7533c01, Miner: 026513e5), Admin count: 1, Miner count: 2, DB rows: 107, Ledger Rows: 197
+2017-05-22 18:49:23	Block commit:        89 (Hash: bd1ecc82, Miner: 026513e5), Admin count: 1, Miner count: 2, DB rows: 108, Ledger Rows: 199
+2017-05-22 18:49:29	Block commit:        90 (Hash: 6137bb57, Miner: 026513e5), Admin count: 1, Miner count: 2, DB rows: 109, Ledger Rows: 201
+2017-05-22 18:49:30	Block commit:        91 (Hash: 749a2867, Miner: 026513e5), Admin count: 1, Miner count: 2, DB rows: 110, Ledger Rows: 203
+2017-05-22 18:49:40	Block commit:        92 (Hash: 0d75e7b2, Miner: 026513e5), Admin count: 1, Miner count: 2, DB rows: 111, Ledger Rows: 205

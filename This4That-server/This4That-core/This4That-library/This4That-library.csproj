@@ -35,6 +35,9 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MultiChainLib">
+      <HintPath>multichain-lib\MultiChainLib.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -73,6 +76,7 @@
     <Compile Include="Models\Integration\CalcTaskCostDTO\CalcTaskCostRequestDTO.cs" />
     <Compile Include="Models\Integration\CalcTaskCostDTO\CalcTaskCostResponseDTO.cs" />
     <Compile Include="Models\Integration\ExecuteTaskDTO\ExecuteTaskDTO.cs" />
+    <Compile Include="Models\Integration\GetMultichainAddress\GetMultichainAddressDTO.cs" />
     <Compile Include="Models\Integration\GetTasksByTopicDTO\GetTasksDTO.cs" />
     <Compile Include="Models\Integration\GetUserTopicDTO\GetTopicRequestDTO.cs" />
     <Compile Include="Models\Integration\IncentiveDTO\RewardUserDTO.cs" />

@@ -87,6 +87,8 @@ namespace This4That_ServerNode.Nodes
 
         public Repository(string hostName, int port, string name) : base(hostName, port, name)
         {
+            Console.WriteLine("REPOSITORY");
+            Console.WriteLine($"HOST: {this.HostName} PORT: {this.Port}");
             Log = LogManager.GetLogger("RepositoryLOG");
         }
 
@@ -106,9 +108,8 @@ namespace This4That_ServerNode.Nodes
                     Log.Error("Cannot connect to Server Manager!");
                 }
                 Log.DebugFormat("ServerManager: [{0}]", serverMgrURL);
-                Console.WriteLine("REPOSITORY");
-                Console.WriteLine($"HOST: {this.HostName} PORT: {this.Port} CONNECTED to ServerManager");
-                Console.WriteLine("----------------------------");
+                Console.WriteLine("[INFO] - CONNECTED to ServerManager");
+                Console.WriteLine("----------------------------" + Environment.NewLine);
                 return true;
             }
             catch (Exception ex)
@@ -189,7 +190,24 @@ namespace This4That_ServerNode.Nodes
             }
             catch (Exception ex)
             {
-                throw ex;
+                Log.Error(ex.Message);
+                incentiveScheme = IncentiveSchemesEnum.None;
+                return false;
+            }
+        }
+
+        public bool SetUserIncentiveScheme(string userID, IncentiveSchemesEnum incentiveScheme)
+        {
+            try
+            {
+                UserStorage.GetUserByID(userID).IncentiveScheme = incentiveScheme;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                incentiveScheme = IncentiveSchemesEnum.None;
+                return false;
             }
         }
 

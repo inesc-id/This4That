@@ -11,6 +11,7 @@ using This4That_library.Models.Integration.ReportDTO;
 using This4That_library.Models.Integration.TaskPayCreateDTO;
 using This4That_platform.Models.Integration;
 using This4That_library.Models.Domain;
+using This4That_library.Models.Integration.GetMultichainAddress;
 
 namespace This4That_platform.Handlers
 {
@@ -390,6 +391,68 @@ namespace This4That_platform.Handlers
             }
         }
 
+        public bool AddNodeToChain(out APIResponseDTO response)
+        {
+            response = new APIResponseDTO();
+            APIRequestDTO requestDTO;
+            GetMultichainAddressDTO multichainAddressDTO;
+            string errorMessage = null;
+            try
+            {
+                //get post parameters
+                if (!Library.GetDTOFromRequest(request, out requestDTO, typeof(GetMultichainAddressDTO).FullName, ref errorMessage))
+                {
+                    Global.Log.Error(errorMessage);
+                    response.SetErrorResponse("Invalid Request", APIResponseDTO.RESULT_TYPE.ERROR);
+                    return false;
+                }
+                multichainAddressDTO = (GetMultichainAddressDTO)requestDTO;
+
+                if (!this.serverMgr.RemoteIncentiveEngine.AddNodeToChain(multichainAddressDTO.UserID
+                                                                        , multichainAddressDTO.MultichainAddress))
+                {
+                    Global.Log.ErrorFormat("Cannot add the node [{0}] to the multichain", multichainAddressDTO.MultichainAddress);
+                    response.SetErrorResponse("Not Connected", APIResponseDTO.RESULT_TYPE.ERROR);
+                    return false;
+                }
+                Global.Log.DebugFormat("Node [{0}] added to multichain", multichainAddressDTO.MultichainAddress);
+                response.SetResponse("Connected", APIResponseDTO.RESULT_TYPE.SUCCESS);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Global.Log.Debug(ex.Message);
+                return false;
+            }
+        }
+
+        public bool EnableDescentralizedScheme(out APIResponseDTO response)
+        {
+            response = new APIResponseDTO();
+            APIRequestDTO requestDTO = null;
+            try
+            {
+                //get post parameters
+                if (!GetUserFromRequest(this.request, out requestDTO))
+                    return false;
+
+                if (!this.serverMgr.RemoteIncentiveEngine
+                    .EnableDescentralizedScheme(requestDTO.UserID))
+                {
+                    Global.Log.ErrorFormat("Cannot enable the descentralized scheme for User: [{0}]", requestDTO.UserID);
+                    response.SetErrorResponse("Cannot enable the descentralized scheme!", APIResponseDTO.RESULT_TYPE.ERROR);
+                    return false;
+                }
+                response.SetResponse("Activated", APIResponseDTO.RESULT_TYPE.SUCCESS);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Global.Log.Debug(ex.Message);
+                return false;
+            }
+        }
+
         #endregion
 
         #region PRIVATE_METHODS
@@ -563,6 +626,28 @@ namespace This4That_platform.Handlers
                 }
                 execTaskDTO = (ExecuteTaskDTO)requestDTO;
                 Global.Log.DebugFormat("User ID: [{0}] going to execute Task: [{1}]", execTaskDTO.UserID, execTaskDTO.TaskId);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Global.Log.Error(ex.Message);
+                return false;
+            }
+        }
+
+        private bool GetUserFromRequest(HttpRequest request, out APIRequestDTO requestDTO)
+        {
+            string errorMessage = null;
+            requestDTO = null;
+
+            try
+            {
+                if (!Library.GetDTOFromRequest(request, out requestDTO, typeof(APIRequestDTO).FullName, ref errorMessage))
+                {
+                    Global.Log.Error(errorMessage);
+                    return false;
+                }
+                Global.Log.DebugFormat("User ID: [{0}] changed the scheme to [Descentralized]", requestDTO.UserID);
                 return true;
             }
             catch (Exception ex)

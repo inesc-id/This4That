@@ -1,0 +1,27 @@
+﻿**************************************
+HOW TO DEPLOY A MULTICHAIN-NODE
+**************************************
+
+1. Create a blockchain (the chain name, This4ThatChain, can be changed)
+
+multichain-util.exe create This4ThatChain -datadir=.\config-server
+
+2. Launch the Blockchain node
+
+multichaind.exe This4ThatChain -datadir=.\config-server
+
+3. Fill configuration file to read the necessary multichain parameters
+
+On config-server/chain_parameters.xml fill up the fields with the necessary information.
+	- The rpcUser and password can be found in file /config-server/{ChainName}/multichain.conf
+	- The port number and the chainName can be found in file /config-server/{ChainName}/params.dat
+	NOTE: These parameters are only available after creating the blockchain.
+
+4. Connect another node to the existent blockchain
+
+multichaind.exe This4ThatChain@192.168.1.115:7741 -datadir=.\config-client
+NOTE : -port={port} is needed if two clients are running in the same machine.
+
+A address will be presented in the output, this address must be delivered to the multichain admin, in order to give access to this address.
+
+

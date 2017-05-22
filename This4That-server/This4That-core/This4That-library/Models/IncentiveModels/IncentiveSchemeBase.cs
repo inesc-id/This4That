@@ -42,6 +42,7 @@ namespace This4That_library.Models.IncentiveModels
     [Serializable]
     public enum IncentiveSchemesEnum
     {
+        None,
         Centralized,
         Descentralized
     }
