@@ -52,12 +52,11 @@ namespace This4That_library
         string RegisterUser();
         bool GetUserTransactions(string userId, out List<Transaction> transactions);
         bool EnableDescentralizedScheme(string userID);
-        bool AddNodeToChain(string userID, string multichainAddress);
+        bool AddNodeToChain(string userID, string multichainAddress, ref string message);
     }
 
     public interface IRepository : IRemoteEntity
     {
-        bool AuthenticateUser(string userID);
         bool GetUserIncentiveScheme(string userID, out IncentiveSchemesEnum incentiveType);
         bool SetUserIncentiveScheme(string userID, IncentiveSchemesEnum incentiveScheme);
         bool RegisterTask(CSTaskDTO topic, string userID, out string taskID);
@@ -71,15 +70,16 @@ namespace This4That_library
         bool SubscribeTopic(string userId, string topicName, ref string errorMessage);
         bool SaveReportInRepository(ReportDTO report);
         bool ExecuteTask(string userID, string taskId);
-        void AssociateTransactionUser(string sender, string receiver, string transactionId);
-        bool GenerateTransaction(string senderID, string receiverID, Incentive incentiveObj, object incentiveValue, out string transactionId);
-        List<Transaction> GetUserTransactions(string userId);
+        bool CreateTransactionCentralized(string senderID, string receiverID, Incentive incentiveObj, object incentiveValue, out string transactionId);
+        bool ExecuteTransactionCentralized(string senderId, string receiverId, Incentive incentive, object incentiveValue, string txId);
+        List<Transaction> GetUserTransactionsCentralized(string userId);
+        bool AddNodeToUserWalletDescentralized(string userId, string address);
     }
 
     public interface ITransactionNode : IRemoteEntity
     {
         Transaction GetTransactionById(string txId);
-        bool GenerateTransaction(string sender, string receiver, object value, out string transactionID);
+        bool CreateTransaction(string sender, string receiver, object value, out string transactionID);
 
     }
 }

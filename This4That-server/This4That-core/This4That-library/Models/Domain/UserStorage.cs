@@ -30,9 +30,11 @@ namespace This4That_library.Models.Domain
         {
             //FIXME: remove
             User user = new User("1234", IncentiveSchemesEnum.Centralized, new Gamification());
+            User user1 = new User("12345", IncentiveSchemesEnum.Descentralized, new Gamification());
             User platformUser = new User("Platform", IncentiveSchemesEnum.Centralized, new Gamification());
             this.Users.Add(user.UserID, user);
             this.Users.Add(platformUser.UserID, platformUser);
+            this.Users.Add(user1.UserID, user1);
         }
 
         public string CreateUser(IncentiveSchemesEnum incentiveScheme, Incentive incentive)

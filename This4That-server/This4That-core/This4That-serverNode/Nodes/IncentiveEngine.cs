@@ -221,8 +221,39 @@ namespace This4That_ServerNode.Nodes
 
         public string RegisterUser()
         {
-            //centralized version as default
-            return this.Repository.RegisterUser(this.centralizedIncentiveScheme.IncentiveType);
+            string userId;
+            IncentiveSchemeBase incentiveScheme;
+            object initValue;
+            string transactionId;
+
+            try
+            {
+                //FIXME: change this
+                //centralized version as default
+                userId = this.Repository.RegisterUser(this.centralizedIncentiveScheme.IncentiveType);
+                //get user incentive scheme
+                if (!GetUserIncentiveScheme(userId, out incentiveScheme))
+                {
+                    Log.ErrorFormat("Cannot load incentive scheme for User: [{0}]", userId);
+                }
+                //get init value based on the incentive
+                initValue = incentiveScheme.IncentiveType.InitWalletValue();
+                //register transaction
+                if (!incentiveScheme.RegisterPayment(Repository, "Platform", userId, initValue, out transactionId))
+                {
+                    Log.ErrorFormat("Cannot register init value transaction for UserId: [{0}]", userId);
+                    Console.WriteLine("[ERROR - INCENTIVE ENGINE] - Cannot register init value transaction!");
+                }
+                Console.WriteLine("[INFO - INCENTIVE ENGINE] - User: [{0}] has an initial wallet value: [{1}]", userId, initValue.ToString());
+                return userId;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return null;
+            }
+            
+
         }
 
         public bool GetUserTransactions(string userId, out List<Transaction> transactions)
@@ -238,7 +269,8 @@ namespace This4That_ServerNode.Nodes
                     Log.ErrorFormat("Cannot load incentive scheme for User: [{0}]", userId);
                     return false;
                 }
-                transactions = this.Repository.GetUserTransactions(userId);
+                //get user transaction based on the actual incentive scheme
+                transactions = incentiveScheme.GetUserTransactions(Repository, userId);
                 if (transactions == null)
                 {
                     Log.Error("Transactions List IS NULL");
@@ -254,6 +286,8 @@ namespace This4That_ServerNode.Nodes
             }
         }
 
+
+        #region DESCENTRALIZED_SCHEME_METHODS
         public bool EnableDescentralizedScheme(string userID)
         {
             
@@ -275,19 +309,39 @@ namespace This4That_ServerNode.Nodes
             
         }
 
-        public bool AddNodeToChain(string userID, string multichainAddress)
+        public bool AddNodeToChain(string userId, string multichainAddress, ref string message)
         {
-            List<string> listofAddresses = new List<string>();
-            
+            IncentiveSchemeBase incentiveScheme;
+            message = null;
             try
             {
-                listofAddresses.Add(multichainAddress);
-                this.descentralizedIncentiveScheme.MultichainClient.GrantAsync(listofAddresses, MultiChainLib.BlockchainPermissions.Connect);
-                this.descentralizedIncentiveScheme.MultichainClient.GrantAsync(listofAddresses, MultiChainLib.BlockchainPermissions.Send);
-                this.descentralizedIncentiveScheme.MultichainClient.GrantAsync(listofAddresses, MultiChainLib.BlockchainPermissions.Receive);
-                this.descentralizedIncentiveScheme.MultichainClient.GrantAsync(listofAddresses, MultiChainLib.BlockchainPermissions.Mine);
-                
-                return true;
+                //get user incentive scheme
+                if (!GetUserIncentiveScheme(userId, out incentiveScheme))
+                {
+                    Log.ErrorFormat("Cannot load incentive scheme for User: [{0}]", userId);
+                    message = "Cannot load incentive scheme!";
+                    return false;
+                }
+                if (incentiveScheme.GetType() == typeof(DescentralizedIncentiveScheme))
+                {
+                    //add node
+                    if (!((DescentralizedIncentiveScheme)incentiveScheme).AddNodeToChain(multichainAddress))
+                    {
+                        Log.ErrorFormat("Invalid Chain address: [{0}]", multichainAddress);
+                        message = "Invalid address!";
+                        return false;
+                    }
+                    //add association to user wallet
+                    if (!this.Repository.AddNodeToUserWalletDescentralized(userId, multichainAddress))
+                    {
+                        Log.Error("Cannot associate the multichain node to the user's wallet.");
+                        message = "Cannot associate block-chain node to user!";
+                        return false;
+                    }
+                    return true;
+                }
+                message = "Your scheme must be changed to the descentralized version!";
+                return false;
             }
             catch (Exception ex)
             {
@@ -295,6 +349,9 @@ namespace This4That_ServerNode.Nodes
                 return false;
             }
         }
+
+        #endregion
+
         #endregion
     }
 }

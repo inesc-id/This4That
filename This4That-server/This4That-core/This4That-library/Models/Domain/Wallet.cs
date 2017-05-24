@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using This4That_library.Models.IncentiveModels;
 using This4That_library.Models.Incentives;
 
 namespace This4That_library.Models.Domain
@@ -8,7 +9,8 @@ namespace This4That_library.Models.Domain
     public class Wallet
     {
         private object balance = null;
-        private List<string> transactions = new List<string>();
+        private List<KeyValuePair<IncentiveSchemesEnum, string>> transactions = new List<KeyValuePair<IncentiveSchemesEnum, string>>();
+        private List<string> chainAddresses = new List<string>();
 
         public object Balance
         {
@@ -23,7 +25,7 @@ namespace This4That_library.Models.Domain
             }
         }
 
-        public List<string> Transactions
+        public List<KeyValuePair<IncentiveSchemesEnum, string>> Transactions
         {
             get
             {
@@ -36,9 +38,22 @@ namespace This4That_library.Models.Domain
             }
         }
 
-        public void AssociateTransaction(string transactionId)
+        public List<string> ChainAddresses
         {
-            Transactions.Add(transactionId);
+            get
+            {
+                return chainAddresses;
+            }
+
+            set
+            {
+                chainAddresses = value;
+            }
+        }
+
+        public void AssociateTransaction(string transactionId, IncentiveSchemesEnum incentiveScheme)
+        {
+            Transactions.Add(new KeyValuePair<IncentiveSchemesEnum, string>(incentiveScheme, transactionId));
         }
     }
 }

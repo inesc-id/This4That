@@ -38,6 +38,7 @@ namespace This4That_library.Models.Incentives
             return intBalance - intIncentiveValue;
         }
 
+        //FIXME: nao pode ser aqui, tem de ser uma transacao do mecanismo de incentivos
         public override object InitWalletValue()
         {
             return 1000;

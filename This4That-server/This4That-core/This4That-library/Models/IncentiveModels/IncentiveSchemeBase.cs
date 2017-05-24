@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using This4That_library.Models.Domain;
 using This4That_library.Models.Incentives;
 using This4That_library.Models.Integration;
 
@@ -7,7 +9,7 @@ namespace This4That_library.Models.IncentiveModels
     [Serializable]
     public abstract class IncentiveSchemeBase
     {
-        Incentive incentive = null;
+        private Incentive incentive = null;
 
         public Incentive IncentiveType
         {
@@ -37,6 +39,7 @@ namespace This4That_library.Models.IncentiveModels
 
         public abstract bool RegisterPayment(IRepository repository, string sender, string recipient, object incentiveValue, out string transactionId);
         public abstract object CheckUserBalance(IRepository repository, string userId);
+        public abstract List<Transaction> GetUserTransactions(IRepository repository, string userId);
     }
 
     [Serializable]

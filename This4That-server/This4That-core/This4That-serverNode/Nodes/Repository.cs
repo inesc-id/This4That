@@ -176,11 +176,6 @@ namespace This4That_ServerNode.Nodes
         #endregion
 
         #region REMOTE_INTERFACE
-        public bool AuthenticateUser(string userID)
-        {
-            return true;
-        }
-
         public bool GetUserIncentiveScheme(string userID, out IncentiveSchemesEnum incentiveScheme)
         {
             try
@@ -293,6 +288,7 @@ namespace This4That_ServerNode.Nodes
         {
             try
             {
+                //FIXME: nao pode ser centralized as default, tem de ser o que a plataforma é
                 return UserStorage.CreateUser(IncentiveSchemesEnum.Centralized, incentive);
             }
             catch (Exception ex)
@@ -510,20 +506,17 @@ namespace This4That_ServerNode.Nodes
             }
         }
 
-        public void AssociateTransactionUser(string sender, string receiver, string transactionId)
-        {
-            UserStorage.GetUserByID(sender).Wallet.AssociateTransaction(transactionId);
-            UserStorage.GetUserByID(receiver).Wallet.AssociateTransaction(transactionId);
-        }
-
-        public List<Transaction> GetUserTransactions(string userId)
+        public List<Transaction> GetUserTransactionsCentralized(string userId)
         {
             Transaction tx;
             List<Transaction> userTransactions = new List<Transaction>();
-
-            foreach (string txID in UserStorage.GetUserByID(userId).Wallet.Transactions)
+            foreach (KeyValuePair<IncentiveSchemesEnum, string> transaction in UserStorage.GetUserByID(userId).Wallet.Transactions)
             {
-                tx = this.RemoteTransactionNode.GetTransactionById(txID);
+                //get only transactions stored in TransactionStorage
+                if (transaction.Key.Equals(IncentiveSchemesEnum.Centralized))
+                    tx = this.RemoteTransactionNode.GetTransactionById(transaction.Value);
+                else
+                    continue;
 
                 if (tx != null)
                 {
@@ -537,18 +530,11 @@ namespace This4That_ServerNode.Nodes
             return userTransactions;
         }
 
-        public bool GenerateTransaction(string senderID, string receiverID, Incentive incentiveObj, object incentiveValue, out string transactionId)
+        public bool CreateTransactionCentralized(string senderID, string receiverID, Incentive incentiveObj, object incentiveValue, out string transactionId)
         {
-            User user;
             try
             {
-                this.RemoteTransactionNode.GenerateTransaction(senderID, receiverID, incentiveValue, out transactionId);
-                user = UserStorage.GetUserByID(senderID);
-                //calc the new balance for the sender
-                user.Wallet.Balance = incentiveObj.CalcSenderNewBalance(user.Wallet.Balance, incentiveValue);
-                //calc the new balance for the receiver
-                user = UserStorage.GetUserByID(receiverID);
-                user.Wallet.Balance = incentiveObj.CalcReceiverNewBalance(user.Wallet.Balance, incentiveValue);
+                this.RemoteTransactionNode.CreateTransaction(senderID, receiverID, incentiveValue, out transactionId);
                 return true;
             }
             catch (Exception ex)
@@ -559,6 +545,43 @@ namespace This4That_ServerNode.Nodes
             }
         }
 
+        public bool ExecuteTransactionCentralized(string senderId, string receiverId, Incentive incentive, object incentiveValue, string txId)
+        {
+            User user;
+
+            try
+            {
+                user = UserStorage.GetUserByID(senderId);
+                //calc the new balance for the sender
+                user.Wallet.Balance = incentive.CalcSenderNewBalance(user.Wallet.Balance, incentiveValue);
+                user.Wallet.AssociateTransaction(txId, user.IncentiveScheme);
+                //calc the new balance for the receiver
+                user = UserStorage.GetUserByID(receiverId);
+                user.Wallet.Balance = incentive.CalcReceiverNewBalance(user.Wallet.Balance, incentiveValue);
+                user.Wallet.AssociateTransaction(txId, user.IncentiveScheme);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return false;
+            }
+        }
+
+        public bool AddNodeToUserWalletDescentralized(string userId, string address)
+        {
+            User user;
+
+            user = this.UserStorage.GetUserByID(userId);
+
+            if (user != null)
+            {
+                user.Wallet.ChainAddresses.Add(address);
+                return true;
+            }
+            return false;
+                
+        }
         #endregion
 
     }

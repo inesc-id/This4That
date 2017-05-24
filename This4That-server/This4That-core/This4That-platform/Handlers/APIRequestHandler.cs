@@ -407,12 +407,13 @@ namespace This4That_platform.Handlers
                     return false;
                 }
                 multichainAddressDTO = (GetMultichainAddressDTO)requestDTO;
-
+                
                 if (!this.serverMgr.RemoteIncentiveEngine.AddNodeToChain(multichainAddressDTO.UserID
-                                                                        , multichainAddressDTO.MultichainAddress))
+                                                                        , multichainAddressDTO.MultichainAddress
+                                                                        , ref errorMessage))
                 {
                     Global.Log.ErrorFormat("Cannot add the node [{0}] to the multichain", multichainAddressDTO.MultichainAddress);
-                    response.SetErrorResponse("Not Connected", APIResponseDTO.RESULT_TYPE.ERROR);
+                    response.SetErrorResponse(errorMessage, APIResponseDTO.RESULT_TYPE.ERROR);
                     return false;
                 }
                 Global.Log.DebugFormat("Node [{0}] added to multichain", multichainAddressDTO.MultichainAddress);

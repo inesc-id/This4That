@@ -627,3 +627,741 @@
 2017-05-22 19:18:21 StopNode()
 2017-05-22 19:18:21 Node stopped
 2017-05-22 19:18:21 Shutdown: done
+2017-05-22 19:52:21 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2017-05-22 19:52:21 MultiChain version build 1.0 beta 1 protocol 10008 (Feb 15 2017, 01:56:08)
+2017-05-22 19:52:21 Using OpenSSL version OpenSSL 1.0.1k 8 Jan 2015
+2017-05-22 19:52:21 Using BerkeleyDB version Berkeley DB 4.8.30: (April  9, 2010)
+2017-05-22 19:52:21 Default data directory C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain
+2017-05-22 19:52:21 Using data directory C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain
+2017-05-22 19:52:21 Using config file C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\This4ThatChain.conf
+2017-05-22 19:52:21 Using at most 125 connections (2048 file descriptors available)
+2017-05-22 19:52:21 Using 4 threads for script verification
+2017-05-22 19:52:21 Using wallet wallet.dat
+2017-05-22 19:52:21 init message: Verifying wallet...
+2017-05-22 19:52:21 CDBEnv::Open : LogDir=C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\database ErrorFile=C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\db.log
+2017-05-22 19:52:21 init message: Initializing multichain...
+2017-05-22 19:52:21 mchn: Parameter set is valid - initializing blockchain parameters...
+2017-05-22 19:52:21 Wallet mode: 00000003
+2017-05-22 19:52:21 nFileVersion = 100000
+2017-05-22 19:52:21 Keys: 3 plaintext, 0 encrypted, 3 w/ metadata, 3 total
+2017-05-22 19:52:21 Node paused state is set to 00000000
+2017-05-22 19:52:21 Binding RPC on address ::1 port 7740 (IPv4+IPv6 bind any: 0)
+2017-05-22 19:52:21 Binding RPC on address 127.0.0.1 port 7740 (IPv4+IPv6 bind any: 0)
+2017-05-22 19:52:21 Bound to [::]:7741
+2017-05-22 19:52:21 Bound to 0.0.0.0:7741
+2017-05-22 19:52:21 Setting banned transaction list:    0 transactions
+2017-05-22 19:52:21 init message: Loading block index...
+2017-05-22 19:52:21 Opening LevelDB in C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\blocks\index
+2017-05-22 19:52:21 Opened LevelDB successfully
+2017-05-22 19:52:21 Opening LevelDB in C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\chainstate
+2017-05-22 19:52:21 Opened LevelDB successfully
+2017-05-22 19:52:21 nFileVersion = 100000
+2017-05-22 19:52:21 Keys: 3 plaintext, 0 encrypted, 3 w/ metadata, 3 total
+2017-05-22 19:52:21 LoadBlockIndexDB: last block file = 0
+2017-05-22 19:52:21 LoadBlockIndexDB: last block file info: CBlockFileInfo(blocks=93, size=26961, heights=0...92, time=2017-05-22...2017-05-22)
+2017-05-22 19:52:21 Checking all blk files are present...
+2017-05-22 19:52:21 LoadBlockIndexDB(): transaction index enabled
+2017-05-22 19:52:21 LoadBlockIndexDB(): hashBestChain=0057ff9b1cdf882b32c647f7176eb34837198a00b029e90185edadb30d75e7b2 height=92 date=2017-05-22 17:49:40 progress=1.000000
+2017-05-22 19:52:21 init message: Verifying blocks...
+2017-05-22 19:52:21 Verifying last 92 blocks at level 3
+2017-05-22 19:52:21 No coin database inconsistencies in last 92 blocks (98 transactions)
+2017-05-22 19:52:21  block index             372ms
+2017-05-22 19:52:21 init message: Loading wallet...
+2017-05-22 19:52:21 nFileVersion = 100000
+2017-05-22 19:52:21 Keys: 3 plaintext, 0 encrypted, 3 w/ metadata, 3 total
+2017-05-22 19:52:21  wallet                    1ms
+2017-05-22 19:52:21 mapBlockIndex.size() = 93
+2017-05-22 19:52:21 nBestHeight = 92
+2017-05-22 19:52:21 setKeyPool.size() = 2
+2017-05-22 19:52:21 oldWallet.size() = 0
+2017-05-22 19:52:21 mapWallet.size() = 7
+2017-05-22 19:52:21 mapAddressBook.size() = 1
+2017-05-22 19:52:21 init message: Loading addresses...
+2017-05-22 19:52:21 Loaded 3 addresses from peers.dat  1ms
+2017-05-22 19:52:21 AddLocal([fe80::51a:2527:4b39:db0b]:7741,1)
+2017-05-22 19:52:21 Discover: Calado-PC - fe80::51a:2527:4b39:db0b
+2017-05-22 19:52:21 AddLocal([fe80::cc1e:3422:b21e:c113]:7741,1)
+2017-05-22 19:52:21 Discover: Calado-PC - fe80::cc1e:3422:b21e:c113
+2017-05-22 19:52:21 AddLocal([fe80::68c8:50fd:6ef:3a36]:7741,1)
+2017-05-22 19:52:21 Discover: Calado-PC - fe80::68c8:50fd:6ef:3a36
+2017-05-22 19:52:21 AddLocal([fe80::4d76:32ed:aa0d:f85]:7741,1)
+2017-05-22 19:52:21 Discover: Calado-PC - fe80::4d76:32ed:aa0d:f85
+2017-05-22 19:52:21 AddLocal([fe80::ac99:693d:848c:470f]:7741,1)
+2017-05-22 19:52:21 Discover: Calado-PC - fe80::ac99:693d:848c:470f
+2017-05-22 19:52:21 AddLocal([fe80::2049:67:4373:eae4]:7741,1)
+2017-05-22 19:52:21 Discover: Calado-PC - fe80::2049:67:4373:eae4
+2017-05-22 19:52:21 AddLocal(169.254.219.11:7741,1)
+2017-05-22 19:52:21 Discover: Calado-PC - 169.254.219.11
+2017-05-22 19:52:21 AddLocal(192.168.13.1:7741,1)
+2017-05-22 19:52:21 Discover: Calado-PC - 192.168.13.1
+2017-05-22 19:52:21 AddLocal(169.254.58.54:7741,1)
+2017-05-22 19:52:21 Discover: Calado-PC - 169.254.58.54
+2017-05-22 19:52:21 AddLocal(192.168.128.1:7741,1)
+2017-05-22 19:52:21 Discover: Calado-PC - 192.168.128.1
+2017-05-22 19:52:21 AddLocal(192.168.1.105:7741,1)
+2017-05-22 19:52:21 Discover: Calado-PC - 192.168.1.105
+2017-05-22 19:52:21 AddLocal([2001:0:9d38:90d7:2049:67:4373:eae4]:7741,1)
+2017-05-22 19:52:21 Discover: Calado-PC - 2001:0:9d38:90d7:2049:67:4373:eae4
+2017-05-22 19:52:21 init message: Done loading
+2017-05-22 19:52:21 Node started
+2017-05-22 19:52:21 net thread start
+2017-05-22 19:52:21 dumpaddr thread start
+2017-05-22 19:52:21 opencon thread start
+2017-05-22 19:52:21 addcon thread start
+2017-05-22 19:52:21 dnsseed thread start
+2017-05-22 19:52:21 MultiChainMiner started
+2017-05-22 19:52:21 msghand thread start
+2017-05-22 19:52:22 connected to self at 192.168.1.115:57423, disconnecting
+2017-05-22 19:52:23 addcon thread interrupt
+2017-05-22 19:52:23 dnsseed thread interrupt
+2017-05-22 19:52:23 dumpaddr thread stop
+2017-05-22 19:52:23 msghand thread interrupt
+2017-05-22 19:52:23 net thread interrupt
+2017-05-22 19:52:27 opencon thread interrupt
+2017-05-22 19:52:27 Shutdown: In progress...
+2017-05-22 19:52:27 RPCAcceptHandler: Error: A operação de E/S foi cancelada devido a uma saída do módulo ou a um pedido da aplicação
+2017-05-22 19:52:27 RPCAcceptHandler: Error: A operação de E/S foi cancelada devido a uma saída do módulo ou a um pedido da aplicação
+2017-05-22 19:52:27 MultiChainMiner terminated
+2017-05-22 19:52:27 StopNode()
+2017-05-22 19:52:27 Node stopped
+2017-05-22 19:52:28 Shutdown: done
+2017-05-22 19:53:48 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2017-05-22 19:53:48 MultiChain version build 1.0 beta 1 protocol 10008 (Feb 15 2017, 01:56:08)
+2017-05-22 19:53:48 Using OpenSSL version OpenSSL 1.0.1k 8 Jan 2015
+2017-05-22 19:53:48 Using BerkeleyDB version Berkeley DB 4.8.30: (April  9, 2010)
+2017-05-22 19:53:48 Default data directory C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain
+2017-05-22 19:53:48 Using data directory C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain
+2017-05-22 19:53:48 Using config file C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\This4ThatChain.conf
+2017-05-22 19:53:48 Using at most 125 connections (2048 file descriptors available)
+2017-05-22 19:53:48 Using 4 threads for script verification
+2017-05-22 19:53:48 Using wallet wallet.dat
+2017-05-22 19:53:48 init message: Verifying wallet...
+2017-05-22 19:53:48 CDBEnv::Open : LogDir=C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\database ErrorFile=C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\db.log
+2017-05-22 19:53:48 init message: Initializing multichain...
+2017-05-22 19:53:48 mchn: Parameter set is valid - initializing blockchain parameters...
+2017-05-22 19:53:48 Wallet mode: 00000003
+2017-05-22 19:53:48 nFileVersion = 100000
+2017-05-22 19:53:48 Keys: 3 plaintext, 0 encrypted, 3 w/ metadata, 3 total
+2017-05-22 19:53:48 Node paused state is set to 00000000
+2017-05-22 19:53:48 Binding RPC on address ::1 port 7740 (IPv4+IPv6 bind any: 0)
+2017-05-22 19:53:48 Binding RPC on address 127.0.0.1 port 7740 (IPv4+IPv6 bind any: 0)
+2017-05-22 19:53:48 Bound to [::]:7741
+2017-05-22 19:53:48 Bound to 0.0.0.0:7741
+2017-05-22 19:53:48 Setting banned transaction list:    0 transactions
+2017-05-22 19:53:48 init message: Loading block index...
+2017-05-22 19:53:48 Opening LevelDB in C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\blocks\index
+2017-05-22 19:53:48 Opened LevelDB successfully
+2017-05-22 19:53:48 Opening LevelDB in C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\chainstate
+2017-05-22 19:53:48 Opened LevelDB successfully
+2017-05-22 19:53:48 nFileVersion = 100000
+2017-05-22 19:53:48 Keys: 3 plaintext, 0 encrypted, 3 w/ metadata, 3 total
+2017-05-22 19:53:48 LoadBlockIndexDB: last block file = 0
+2017-05-22 19:53:48 LoadBlockIndexDB: last block file info: CBlockFileInfo(blocks=93, size=26961, heights=0...92, time=2017-05-22...2017-05-22)
+2017-05-22 19:53:48 Checking all blk files are present...
+2017-05-22 19:53:48 LoadBlockIndexDB(): transaction index enabled
+2017-05-22 19:53:48 LoadBlockIndexDB(): hashBestChain=0057ff9b1cdf882b32c647f7176eb34837198a00b029e90185edadb30d75e7b2 height=92 date=2017-05-22 17:49:40 progress=1.000000
+2017-05-22 19:53:48 init message: Verifying blocks...
+2017-05-22 19:53:48 Verifying last 92 blocks at level 3
+2017-05-22 19:53:49 No coin database inconsistencies in last 92 blocks (98 transactions)
+2017-05-22 19:53:49  block index             366ms
+2017-05-22 19:53:49 init message: Loading wallet...
+2017-05-22 19:53:49 nFileVersion = 100000
+2017-05-22 19:53:49 Keys: 3 plaintext, 0 encrypted, 3 w/ metadata, 3 total
+2017-05-22 19:53:49  wallet                    1ms
+2017-05-22 19:53:49 mapBlockIndex.size() = 93
+2017-05-22 19:53:49 nBestHeight = 92
+2017-05-22 19:53:49 setKeyPool.size() = 2
+2017-05-22 19:53:49 oldWallet.size() = 0
+2017-05-22 19:53:49 mapWallet.size() = 7
+2017-05-22 19:53:49 mapAddressBook.size() = 1
+2017-05-22 19:53:49 init message: Loading addresses...
+2017-05-22 19:53:49 Loaded 3 addresses from peers.dat  1ms
+2017-05-22 19:53:49 AddLocal([fe80::51a:2527:4b39:db0b]:7741,1)
+2017-05-22 19:53:49 Discover: Calado-PC - fe80::51a:2527:4b39:db0b
+2017-05-22 19:53:49 AddLocal([fe80::cc1e:3422:b21e:c113]:7741,1)
+2017-05-22 19:53:49 Discover: Calado-PC - fe80::cc1e:3422:b21e:c113
+2017-05-22 19:53:49 AddLocal([fe80::68c8:50fd:6ef:3a36]:7741,1)
+2017-05-22 19:53:49 Discover: Calado-PC - fe80::68c8:50fd:6ef:3a36
+2017-05-22 19:53:49 AddLocal([fe80::4d76:32ed:aa0d:f85]:7741,1)
+2017-05-22 19:53:49 Discover: Calado-PC - fe80::4d76:32ed:aa0d:f85
+2017-05-22 19:53:49 AddLocal([fe80::ac99:693d:848c:470f]:7741,1)
+2017-05-22 19:53:49 Discover: Calado-PC - fe80::ac99:693d:848c:470f
+2017-05-22 19:53:49 AddLocal([fe80::2049:67:4373:eae4]:7741,1)
+2017-05-22 19:53:49 Discover: Calado-PC - fe80::2049:67:4373:eae4
+2017-05-22 19:53:49 AddLocal(169.254.219.11:7741,1)
+2017-05-22 19:53:49 Discover: Calado-PC - 169.254.219.11
+2017-05-22 19:53:49 AddLocal(192.168.13.1:7741,1)
+2017-05-22 19:53:49 Discover: Calado-PC - 192.168.13.1
+2017-05-22 19:53:49 AddLocal(169.254.58.54:7741,1)
+2017-05-22 19:53:49 Discover: Calado-PC - 169.254.58.54
+2017-05-22 19:53:49 AddLocal(192.168.128.1:7741,1)
+2017-05-22 19:53:49 Discover: Calado-PC - 192.168.128.1
+2017-05-22 19:53:49 AddLocal(192.168.1.105:7741,1)
+2017-05-22 19:53:49 Discover: Calado-PC - 192.168.1.105
+2017-05-22 19:53:49 AddLocal([2001:0:9d38:90d7:2049:67:4373:eae4]:7741,1)
+2017-05-22 19:53:49 Discover: Calado-PC - 2001:0:9d38:90d7:2049:67:4373:eae4
+2017-05-22 19:53:49 addcon thread start
+2017-05-22 19:53:49 init message: Done loading
+2017-05-22 19:53:49 dnsseed thread start
+2017-05-22 19:53:49 msghand thread start
+2017-05-22 19:53:49 MultiChainMiner started
+2017-05-22 19:53:49 Node started
+2017-05-22 19:53:49 net thread start
+2017-05-22 19:53:49 dumpaddr thread start
+2017-05-22 19:53:49 opencon thread start
+2017-05-22 19:53:49 connected to self at 192.168.1.115:57452, disconnecting
+2017-05-22 19:54:00 Loading addresses from DNS seeds (could take a while)
+2017-05-22 19:54:00 0 addresses found from DNS seeds
+2017-05-22 19:54:00 dnsseed thread exit
+2017-05-22 19:54:12 connected to self at 192.168.1.115:57464, disconnecting
+2017-05-22 19:54:58 connected to self at 192.168.1.115:57481, disconnecting
+2017-05-22 19:56:00 connected to self at 192.168.1.115:57499, disconnecting
+2017-05-22 19:59:34 connected to self at 192.168.1.115:57589, disconnecting
+2017-05-22 20:02:11 connected to self at 192.168.1.115:57648, disconnecting
+2017-05-22 20:03:08 connected to self at 192.168.1.115:57668, disconnecting
+2017-05-22 20:06:53 connected to self at 192.168.1.115:57778, disconnecting
+2017-05-22 20:07:05 connected to self at 192.168.1.115:57784, disconnecting
+2017-05-22 20:08:41 connected to self at 192.168.1.115:57833, disconnecting
+2017-05-22 20:09:37 connected to self at 192.168.1.115:57861, disconnecting
+2017-05-22 20:09:38 connected to self at 192.168.1.115:57862, disconnecting
+2017-05-22 20:10:29 dumpaddr thread stop
+2017-05-22 20:10:29 addcon thread interrupt
+2017-05-22 20:10:29 msghand thread interrupt
+2017-05-22 20:10:29 net thread interrupt
+2017-05-22 20:10:34 opencon thread interrupt
+2017-05-22 20:10:34 Shutdown: In progress...
+2017-05-22 20:10:34 RPCAcceptHandler: Error: A operação de E/S foi cancelada devido a uma saída do módulo ou a um pedido da aplicação
+2017-05-22 20:10:34 RPCAcceptHandler: Error: A operação de E/S foi cancelada devido a uma saída do módulo ou a um pedido da aplicação
+2017-05-22 20:10:34 MultiChainMiner terminated
+2017-05-22 20:10:34 StopNode()
+2017-05-22 20:10:34 Node stopped
+2017-05-22 20:11:07 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2017-05-22 20:11:07 MultiChain version build 1.0 beta 1 protocol 10008 (Feb 15 2017, 01:56:08)
+2017-05-22 20:11:07 Using OpenSSL version OpenSSL 1.0.1k 8 Jan 2015
+2017-05-22 20:11:07 Using BerkeleyDB version Berkeley DB 4.8.30: (April  9, 2010)
+2017-05-22 20:11:07 Default data directory C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain
+2017-05-22 20:11:07 Using data directory C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain
+2017-05-22 20:11:07 Using config file C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\This4ThatChain.conf
+2017-05-22 20:11:07 Using at most 125 connections (2048 file descriptors available)
+2017-05-22 20:11:07 Using 4 threads for script verification
+2017-05-22 20:11:07 Using wallet wallet.dat
+2017-05-22 20:11:07 init message: Verifying wallet...
+2017-05-22 20:11:07 CDBEnv::Open : LogDir=C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\database ErrorFile=C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\db.log
+2017-05-22 20:11:07 init message: Initializing multichain...
+2017-05-22 20:11:07 mchn: Parameter set is valid - initializing blockchain parameters...
+2017-05-22 20:11:07 Wallet mode: 00000003
+2017-05-22 20:11:07 nFileVersion = 100000
+2017-05-22 20:11:07 Keys: 3 plaintext, 0 encrypted, 3 w/ metadata, 3 total
+2017-05-22 20:11:07 Node paused state is set to 00000000
+2017-05-22 20:11:07 Binding RPC on address ::1 port 7740 (IPv4+IPv6 bind any: 0)
+2017-05-22 20:11:07 Binding RPC on address 127.0.0.1 port 7740 (IPv4+IPv6 bind any: 0)
+2017-05-22 20:11:07 Bound to [::]:7741
+2017-05-22 20:11:07 Bound to 0.0.0.0:7741
+2017-05-22 20:11:07 Setting banned transaction list:    0 transactions
+2017-05-22 20:11:07 init message: Loading block index...
+2017-05-22 20:11:07 Opening LevelDB in C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\blocks\index
+2017-05-22 20:11:07 Opened LevelDB successfully
+2017-05-22 20:11:07 Opening LevelDB in C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\chainstate
+2017-05-22 20:11:07 Opened LevelDB successfully
+2017-05-22 20:11:07 nFileVersion = 100000
+2017-05-22 20:11:07 Keys: 3 plaintext, 0 encrypted, 3 w/ metadata, 3 total
+2017-05-22 20:11:07 LoadBlockIndexDB: last block file = 0
+2017-05-22 20:11:07 LoadBlockIndexDB: last block file info: CBlockFileInfo(blocks=93, size=26961, heights=0...92, time=2017-05-22...2017-05-22)
+2017-05-22 20:11:07 Checking all blk files are present...
+2017-05-22 20:11:07 LoadBlockIndexDB(): transaction index enabled
+2017-05-22 20:11:07 LoadBlockIndexDB(): hashBestChain=0057ff9b1cdf882b32c647f7176eb34837198a00b029e90185edadb30d75e7b2 height=92 date=2017-05-22 17:49:40 progress=1.000000
+2017-05-22 20:11:07 init message: Verifying blocks...
+2017-05-22 20:11:07 Verifying last 92 blocks at level 3
+2017-05-22 20:11:07 No coin database inconsistencies in last 92 blocks (98 transactions)
+2017-05-22 20:11:07  block index             322ms
+2017-05-22 20:11:07 init message: Loading wallet...
+2017-05-22 20:11:07 nFileVersion = 100000
+2017-05-22 20:11:07 Keys: 3 plaintext, 0 encrypted, 3 w/ metadata, 3 total
+2017-05-22 20:11:07  wallet                    1ms
+2017-05-22 20:11:07 mapBlockIndex.size() = 93
+2017-05-22 20:11:07 nBestHeight = 92
+2017-05-22 20:11:07 setKeyPool.size() = 2
+2017-05-22 20:11:07 oldWallet.size() = 0
+2017-05-22 20:11:07 mapWallet.size() = 7
+2017-05-22 20:11:07 mapAddressBook.size() = 1
+2017-05-22 20:11:07 init message: Loading addresses...
+2017-05-22 20:11:07 Loaded 3 addresses from peers.dat  0ms
+2017-05-22 20:11:07 AddLocal([fe80::51a:2527:4b39:db0b]:7741,1)
+2017-05-22 20:11:07 Discover: Calado-PC - fe80::51a:2527:4b39:db0b
+2017-05-22 20:11:07 AddLocal([fe80::cc1e:3422:b21e:c113]:7741,1)
+2017-05-22 20:11:07 Discover: Calado-PC - fe80::cc1e:3422:b21e:c113
+2017-05-22 20:11:07 AddLocal([fe80::68c8:50fd:6ef:3a36]:7741,1)
+2017-05-22 20:11:07 Discover: Calado-PC - fe80::68c8:50fd:6ef:3a36
+2017-05-22 20:11:07 AddLocal([fe80::4d76:32ed:aa0d:f85]:7741,1)
+2017-05-22 20:11:07 Discover: Calado-PC - fe80::4d76:32ed:aa0d:f85
+2017-05-22 20:11:07 AddLocal([fe80::ac99:693d:848c:470f]:7741,1)
+2017-05-22 20:11:07 Discover: Calado-PC - fe80::ac99:693d:848c:470f
+2017-05-22 20:11:07 AddLocal([fe80::2049:67:4373:eae4]:7741,1)
+2017-05-22 20:11:07 Discover: Calado-PC - fe80::2049:67:4373:eae4
+2017-05-22 20:11:07 AddLocal(169.254.219.11:7741,1)
+2017-05-22 20:11:07 Discover: Calado-PC - 169.254.219.11
+2017-05-22 20:11:07 AddLocal(192.168.13.1:7741,1)
+2017-05-22 20:11:07 Discover: Calado-PC - 192.168.13.1
+2017-05-22 20:11:07 AddLocal(169.254.58.54:7741,1)
+2017-05-22 20:11:07 Discover: Calado-PC - 169.254.58.54
+2017-05-22 20:11:07 AddLocal(192.168.128.1:7741,1)
+2017-05-22 20:11:07 Discover: Calado-PC - 192.168.128.1
+2017-05-22 20:11:07 AddLocal(192.168.1.105:7741,1)
+2017-05-22 20:11:07 Discover: Calado-PC - 192.168.1.105
+2017-05-22 20:11:07 AddLocal([2001:0:9d38:90d7:2049:67:4373:eae4]:7741,1)
+2017-05-22 20:11:07 Discover: Calado-PC - 2001:0:9d38:90d7:2049:67:4373:eae4
+2017-05-22 20:11:07 addcon thread start
+2017-05-22 20:11:07 init message: Done loading
+2017-05-22 20:11:07 net thread start
+2017-05-22 20:11:07 dumpaddr thread start
+2017-05-22 20:11:07 MultiChainMiner started
+2017-05-22 20:11:07 opencon thread start
+2017-05-22 20:11:07 dnsseed thread start
+2017-05-22 20:11:07 msghand thread start
+2017-05-22 20:11:07 Node started
+2017-05-22 20:11:18 Loading addresses from DNS seeds (could take a while)
+2017-05-22 20:11:18 0 addresses found from DNS seeds
+2017-05-22 20:11:18 dnsseed thread exit
+2017-05-22 20:11:41 mchn: Granting connect permission(s) to address 19bJ77qwGjDb8axGzA18hHhWiTVxoNCxdSegN1 (0-4294967295)
+2017-05-22 20:11:41 CommitTransaction: c364024631cb2b8f04408f0aa00483b1d5c6295dac4230e13a2844456ee27154, vin: 1, vout: 2
+2017-05-22 20:11:42 mchn: Granting send permission(s) to address 19bJ77qwGjDb8axGzA18hHhWiTVxoNCxdSegN1 (0-4294967295)
+2017-05-22 20:11:42 CommitTransaction: fc36fcd66e21b9aec5d0f4ebb9e926a73a491d09ee0c87b05c8d5fb78fe2606f, vin: 1, vout: 2
+2017-05-22 20:11:43 mchn: Granting receive permission(s) to address 19bJ77qwGjDb8axGzA18hHhWiTVxoNCxdSegN1 (0-4294967295)
+2017-05-22 20:11:43 CommitTransaction: 1428d75b5d7b9fa8758d8740746d862f890cd1c1535f43bf76e1a8b6e20406e3, vin: 1, vout: 2
+2017-05-22 20:11:44 mchn: Granting mine permission(s) to address 19bJ77qwGjDb8axGzA18hHhWiTVxoNCxdSegN1 (0-4294967295)
+2017-05-22 20:11:44 CommitTransaction: 81ba69992b984255554d66b914886495f3793c2863533e41d9e39dabb7c70d04, vin: 1, vout: 3
+2017-05-22 20:13:50 connected to self at 192.168.1.115:57964, disconnecting
+2017-05-22 20:19:50 connected to self at 192.168.1.115:58085, disconnecting
+2017-05-22 20:21:43 connected to self at 192.168.1.115:58124, disconnecting
+2017-05-22 20:22:00 connected to self at 192.168.1.115:58130, disconnecting
+2017-05-22 20:23:50 dumpaddr thread stop
+2017-05-22 20:23:50 addcon thread interrupt
+2017-05-22 20:23:50 msghand thread interrupt
+2017-05-22 20:23:50 net thread interrupt
+2017-05-22 20:23:53 opencon thread interrupt
+2017-05-22 20:23:53 Shutdown: In progress...
+2017-05-22 20:23:53 RPCAcceptHandler: Error: A operação de E/S foi cancelada devido a uma saída do módulo ou a um pedido da aplicação
+2017-05-22 20:23:53 RPCAcceptHandler: Error: A operação de E/S foi cancelada devido a uma saída do módulo ou a um pedido da aplicação
+2017-05-22 20:23:53 MultiChainMiner terminated
+2017-05-22 20:23:53 StopNode()
+2017-05-22 20:23:53 Node stopped
+2017-05-22 20:23:53 Shutdown: done
+2017-05-23 12:44:20 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2017-05-23 12:44:20 MultiChain version build 1.0 beta 1 protocol 10008 (Feb 15 2017, 01:56:08)
+2017-05-23 12:44:20 Using OpenSSL version OpenSSL 1.0.1k 8 Jan 2015
+2017-05-23 12:44:20 Using BerkeleyDB version Berkeley DB 4.8.30: (April  9, 2010)
+2017-05-23 12:44:20 Default data directory C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain
+2017-05-23 12:44:20 Using data directory C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain
+2017-05-23 12:44:20 Using config file C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\This4ThatChain.conf
+2017-05-23 12:44:20 Using at most 125 connections (2048 file descriptors available)
+2017-05-23 12:44:20 Using 4 threads for script verification
+2017-05-23 12:44:20 Using wallet wallet.dat
+2017-05-23 12:44:20 init message: Verifying wallet...
+2017-05-23 12:44:20 CDBEnv::Open : LogDir=C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\database ErrorFile=C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\db.log
+2017-05-23 12:44:20 init message: Initializing multichain...
+2017-05-23 12:44:20 mchn: Parameter set is valid - initializing blockchain parameters...
+2017-05-23 12:44:20 Wallet mode: 00000003
+2017-05-23 12:44:20 nFileVersion = 100000
+2017-05-23 12:44:20 Keys: 3 plaintext, 0 encrypted, 3 w/ metadata, 3 total
+2017-05-23 12:44:20 Node paused state is set to 00000000
+2017-05-23 12:44:20 Binding RPC on address ::1 port 7740 (IPv4+IPv6 bind any: 0)
+2017-05-23 12:44:20 Binding RPC on address 127.0.0.1 port 7740 (IPv4+IPv6 bind any: 0)
+2017-05-23 12:44:20 Bound to [::]:7741
+2017-05-23 12:44:20 Bound to 0.0.0.0:7741
+2017-05-23 12:44:20 Setting banned transaction list:    0 transactions
+2017-05-23 12:44:20 init message: Loading block index...
+2017-05-23 12:44:20 Opening LevelDB in C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\blocks\index
+2017-05-23 12:44:20 Opened LevelDB successfully
+2017-05-23 12:44:20 Opening LevelDB in C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\chainstate
+2017-05-23 12:44:20 Opened LevelDB successfully
+2017-05-23 12:44:20 nFileVersion = 100000
+2017-05-23 12:44:20 Keys: 3 plaintext, 0 encrypted, 3 w/ metadata, 3 total
+2017-05-23 12:44:20 LoadBlockIndexDB: last block file = 0
+2017-05-23 12:44:20 LoadBlockIndexDB: last block file info: CBlockFileInfo(blocks=93, size=26961, heights=0...92, time=2017-05-22...2017-05-22)
+2017-05-23 12:44:20 Checking all blk files are present...
+2017-05-23 12:44:20 LoadBlockIndexDB(): transaction index enabled
+2017-05-23 12:44:20 LoadBlockIndexDB(): hashBestChain=0057ff9b1cdf882b32c647f7176eb34837198a00b029e90185edadb30d75e7b2 height=92 date=2017-05-22 17:49:40 progress=1.000000
+2017-05-23 12:44:20 init message: Verifying blocks...
+2017-05-23 12:44:20 Verifying last 92 blocks at level 3
+2017-05-23 12:44:21 No coin database inconsistencies in last 92 blocks (98 transactions)
+2017-05-23 12:44:21  block index             300ms
+2017-05-23 12:44:21 init message: Loading wallet...
+2017-05-23 12:44:21 nFileVersion = 100000
+2017-05-23 12:44:21 Keys: 3 plaintext, 0 encrypted, 3 w/ metadata, 3 total
+2017-05-23 12:44:21  wallet                    0ms
+2017-05-23 12:44:21 mapBlockIndex.size() = 93
+2017-05-23 12:44:21 nBestHeight = 92
+2017-05-23 12:44:21 setKeyPool.size() = 2
+2017-05-23 12:44:21 oldWallet.size() = 0
+2017-05-23 12:44:21 mapWallet.size() = 7
+2017-05-23 12:44:21 mapAddressBook.size() = 1
+2017-05-23 12:44:21 init message: Loading addresses...
+2017-05-23 12:44:21 Loaded 3 addresses from peers.dat  1ms
+2017-05-23 12:44:21 AddLocal([fe80::51a:2527:4b39:db0b]:7741,1)
+2017-05-23 12:44:21 Discover: Calado-PC - fe80::51a:2527:4b39:db0b
+2017-05-23 12:44:21 AddLocal([fe80::cc1e:3422:b21e:c113]:7741,1)
+2017-05-23 12:44:21 Discover: Calado-PC - fe80::cc1e:3422:b21e:c113
+2017-05-23 12:44:21 AddLocal([fe80::91e6:ed4e:b8e:b2c3]:7741,1)
+2017-05-23 12:44:21 Discover: Calado-PC - fe80::91e6:ed4e:b8e:b2c3
+2017-05-23 12:44:21 AddLocal([fe80::68c8:50fd:6ef:3a36]:7741,1)
+2017-05-23 12:44:21 Discover: Calado-PC - fe80::68c8:50fd:6ef:3a36
+2017-05-23 12:44:21 AddLocal([fe80::4d76:32ed:aa0d:f85]:7741,1)
+2017-05-23 12:44:21 Discover: Calado-PC - fe80::4d76:32ed:aa0d:f85
+2017-05-23 12:44:21 AddLocal([fe80::2049:67:4373:eae4]:7741,1)
+2017-05-23 12:44:21 Discover: Calado-PC - fe80::2049:67:4373:eae4
+2017-05-23 12:44:21 AddLocal(169.254.219.11:7741,1)
+2017-05-23 12:44:21 Discover: Calado-PC - 169.254.219.11
+2017-05-23 12:44:21 AddLocal(192.168.13.1:7741,1)
+2017-05-23 12:44:21 Discover: Calado-PC - 192.168.13.1
+2017-05-23 12:44:21 AddLocal(169.254.58.54:7741,1)
+2017-05-23 12:44:21 Discover: Calado-PC - 169.254.58.54
+2017-05-23 12:44:21 AddLocal(192.168.1.115:7741,1)
+2017-05-23 12:44:21 Discover: Calado-PC - 192.168.1.115
+2017-05-23 12:44:21 AddLocal(192.168.128.1:7741,1)
+2017-05-23 12:44:21 Discover: Calado-PC - 192.168.128.1
+2017-05-23 12:44:21 AddLocal([2001:0:9d38:90d7:2049:67:4373:eae4]:7741,1)
+2017-05-23 12:44:21 Discover: Calado-PC - 2001:0:9d38:90d7:2049:67:4373:eae4
+2017-05-23 12:44:21 dnsseed thread start
+2017-05-23 12:44:21 net thread start
+2017-05-23 12:44:21 opencon thread start
+2017-05-23 12:44:21 msghand thread start
+2017-05-23 12:44:21 dumpaddr thread start
+2017-05-23 12:44:21 addcon thread start
+2017-05-23 12:44:21 MultiChainMiner started
+2017-05-23 12:44:21 init message: Done loading
+2017-05-23 12:44:21 Node started
+2017-05-23 12:44:32 Loading addresses from DNS seeds (could take a while)
+2017-05-23 12:44:32 0 addresses found from DNS seeds
+2017-05-23 12:44:32 dnsseed thread exit
+2017-05-23 13:00:40 dumpaddr thread stop
+2017-05-23 13:00:40 addcon thread interrupt
+2017-05-23 13:00:40 msghand thread interrupt
+2017-05-23 13:00:40 net thread interrupt
+2017-05-23 13:00:45 opencon thread interrupt
+2017-05-23 13:00:45 Shutdown: In progress...
+2017-05-23 13:00:45 RPCAcceptHandler: Error: A operação de E/S foi cancelada devido a uma saída do módulo ou a um pedido da aplicação
+2017-05-23 13:00:45 RPCAcceptHandler: Error: A operação de E/S foi cancelada devido a uma saída do módulo ou a um pedido da aplicação
+2017-05-23 13:00:45 MultiChainMiner terminated
+2017-05-23 13:00:45 StopNode()
+2017-05-23 13:00:45 Node stopped
+2017-05-23 13:00:45 Shutdown: done
+2017-05-23 13:19:25 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2017-05-23 13:19:25 MultiChain version build 1.0 beta 1 protocol 10008 (Feb 15 2017, 01:56:08)
+2017-05-23 13:19:25 Using OpenSSL version OpenSSL 1.0.1k 8 Jan 2015
+2017-05-23 13:19:25 Using BerkeleyDB version Berkeley DB 4.8.30: (April  9, 2010)
+2017-05-23 13:19:25 Default data directory C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain
+2017-05-23 13:19:25 Using data directory C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain
+2017-05-23 13:19:25 Using config file C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\This4ThatChain.conf
+2017-05-23 13:19:25 Using at most 125 connections (2048 file descriptors available)
+2017-05-23 13:19:25 Using 4 threads for script verification
+2017-05-23 13:19:25 Using wallet wallet.dat
+2017-05-23 13:19:25 init message: Verifying wallet...
+2017-05-23 13:19:25 CDBEnv::Open : LogDir=C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\database ErrorFile=C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\db.log
+2017-05-23 13:19:25 init message: Initializing multichain...
+2017-05-23 13:19:25 mchn: Parameter set is valid - initializing blockchain parameters...
+2017-05-23 13:19:25 Wallet mode: 00000003
+2017-05-23 13:19:25 nFileVersion = 100000
+2017-05-23 13:19:25 Keys: 3 plaintext, 0 encrypted, 3 w/ metadata, 3 total
+2017-05-23 13:19:25 Node paused state is set to 00000000
+2017-05-23 13:19:25 Binding RPC on address ::1 port 7740 (IPv4+IPv6 bind any: 0)
+2017-05-23 13:19:25 Binding RPC on address 127.0.0.1 port 7740 (IPv4+IPv6 bind any: 0)
+2017-05-23 13:19:25 Bound to [::]:7741
+2017-05-23 13:19:25 Bound to 0.0.0.0:7741
+2017-05-23 13:19:25 Setting banned transaction list:    0 transactions
+2017-05-23 13:19:25 init message: Loading block index...
+2017-05-23 13:19:25 Opening LevelDB in C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\blocks\index
+2017-05-23 13:19:25 Opened LevelDB successfully
+2017-05-23 13:19:25 Opening LevelDB in C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\chainstate
+2017-05-23 13:19:25 Opened LevelDB successfully
+2017-05-23 13:19:25 nFileVersion = 100000
+2017-05-23 13:19:25 Keys: 3 plaintext, 0 encrypted, 3 w/ metadata, 3 total
+2017-05-23 13:19:25 LoadBlockIndexDB: last block file = 0
+2017-05-23 13:19:25 LoadBlockIndexDB: last block file info: CBlockFileInfo(blocks=93, size=26961, heights=0...92, time=2017-05-22...2017-05-22)
+2017-05-23 13:19:25 Checking all blk files are present...
+2017-05-23 13:19:25 LoadBlockIndexDB(): transaction index enabled
+2017-05-23 13:19:25 LoadBlockIndexDB(): hashBestChain=0057ff9b1cdf882b32c647f7176eb34837198a00b029e90185edadb30d75e7b2 height=92 date=2017-05-22 17:49:40 progress=1.000000
+2017-05-23 13:19:25 init message: Verifying blocks...
+2017-05-23 13:19:25 Verifying last 92 blocks at level 3
+2017-05-23 13:19:26 No coin database inconsistencies in last 92 blocks (98 transactions)
+2017-05-23 13:19:26  block index             237ms
+2017-05-23 13:19:26 init message: Loading wallet...
+2017-05-23 13:19:26 nFileVersion = 100000
+2017-05-23 13:19:26 Keys: 3 plaintext, 0 encrypted, 3 w/ metadata, 3 total
+2017-05-23 13:19:26  wallet                    1ms
+2017-05-23 13:19:26 mapBlockIndex.size() = 93
+2017-05-23 13:19:26 nBestHeight = 92
+2017-05-23 13:19:26 setKeyPool.size() = 2
+2017-05-23 13:19:26 oldWallet.size() = 0
+2017-05-23 13:19:26 mapWallet.size() = 7
+2017-05-23 13:19:26 mapAddressBook.size() = 1
+2017-05-23 13:19:26 init message: Loading addresses...
+2017-05-23 13:19:26 Loaded 3 addresses from peers.dat  0ms
+2017-05-23 13:19:26 AddLocal([fe80::51a:2527:4b39:db0b]:7741,1)
+2017-05-23 13:19:26 Discover: Calado-PC - fe80::51a:2527:4b39:db0b
+2017-05-23 13:19:26 AddLocal([fe80::cc1e:3422:b21e:c113]:7741,1)
+2017-05-23 13:19:26 Discover: Calado-PC - fe80::cc1e:3422:b21e:c113
+2017-05-23 13:19:26 AddLocal([fe80::91e6:ed4e:b8e:b2c3]:7741,1)
+2017-05-23 13:19:26 Discover: Calado-PC - fe80::91e6:ed4e:b8e:b2c3
+2017-05-23 13:19:26 AddLocal([fe80::68c8:50fd:6ef:3a36]:7741,1)
+2017-05-23 13:19:26 Discover: Calado-PC - fe80::68c8:50fd:6ef:3a36
+2017-05-23 13:19:26 AddLocal([fe80::4d76:32ed:aa0d:f85]:7741,1)
+2017-05-23 13:19:26 Discover: Calado-PC - fe80::4d76:32ed:aa0d:f85
+2017-05-23 13:19:26 AddLocal([fe80::2049:67:4373:eae4]:7741,1)
+2017-05-23 13:19:26 Discover: Calado-PC - fe80::2049:67:4373:eae4
+2017-05-23 13:19:26 AddLocal(169.254.219.11:7741,1)
+2017-05-23 13:19:26 Discover: Calado-PC - 169.254.219.11
+2017-05-23 13:19:26 AddLocal(192.168.13.1:7741,1)
+2017-05-23 13:19:26 Discover: Calado-PC - 192.168.13.1
+2017-05-23 13:19:26 AddLocal(169.254.58.54:7741,1)
+2017-05-23 13:19:26 Discover: Calado-PC - 169.254.58.54
+2017-05-23 13:19:26 AddLocal(192.168.1.115:7741,1)
+2017-05-23 13:19:26 Discover: Calado-PC - 192.168.1.115
+2017-05-23 13:19:26 AddLocal(192.168.128.1:7741,1)
+2017-05-23 13:19:26 Discover: Calado-PC - 192.168.128.1
+2017-05-23 13:19:26 AddLocal([2001:0:9d38:90d7:2049:67:4373:eae4]:7741,1)
+2017-05-23 13:19:26 Discover: Calado-PC - 2001:0:9d38:90d7:2049:67:4373:eae4
+2017-05-23 13:19:26 dnsseed thread start
+2017-05-23 13:19:26 addcon thread start
+2017-05-23 13:19:26 opencon thread start
+2017-05-23 13:19:26 msghand thread start
+2017-05-23 13:19:26 net thread start
+2017-05-23 13:19:26 dumpaddr thread start
+2017-05-23 13:19:26 MultiChainMiner started
+2017-05-23 13:19:26 init message: Done loading
+2017-05-23 13:19:26 Node started
+2017-05-23 13:19:37 Loading addresses from DNS seeds (could take a while)
+2017-05-23 13:19:37 0 addresses found from DNS seeds
+2017-05-23 13:19:37 dnsseed thread exit
+2017-05-23 13:24:13 mchn: Granting connect permission(s) to address 19bJ77qwGjDb8axGzA18hHhWiTVxoNCxdSegN1 (0-4294967295)
+2017-05-23 13:24:13 CommitTransaction: 5c7b56995799134e9f33932bab186e6c78877e4ddb0c89a081a7b38e41bea495, vin: 1, vout: 2
+2017-05-23 13:24:13 mchn: Granting send permission(s) to address 19bJ77qwGjDb8axGzA18hHhWiTVxoNCxdSegN1 (0-4294967295)
+2017-05-23 13:24:13 CommitTransaction: 70f5e53331d7d6a7eb36acba55637d11b99d5ef00c9d2caacb7b71f714b857b0, vin: 1, vout: 2
+2017-05-23 13:24:13 mchn: Granting receive permission(s) to address 19bJ77qwGjDb8axGzA18hHhWiTVxoNCxdSegN1 (0-4294967295)
+2017-05-23 13:24:13 CommitTransaction: 7577a83185ed5ae137e83c3eb874fae473d98bdf24fdf20f1abd51428f858c07, vin: 1, vout: 2
+2017-05-23 13:24:13 mchn: Granting mine permission(s) to address 19bJ77qwGjDb8axGzA18hHhWiTVxoNCxdSegN1 (0-4294967295)
+2017-05-23 13:24:13 CommitTransaction: 0674b87bbd7d36945e7b75e7633007cd1037bd5f9f8dda5ad4bcceb8912d5cce, vin: 1, vout: 3
+2017-05-23 13:26:41 dumpaddr thread stop
+2017-05-23 13:26:41 addcon thread interrupt
+2017-05-23 13:26:41 msghand thread interrupt
+2017-05-23 13:26:41 net thread interrupt
+2017-05-23 13:26:46 opencon thread interrupt
+2017-05-23 13:26:46 Shutdown: In progress...
+2017-05-23 13:26:46 RPCAcceptHandler: Error: A operação de E/S foi cancelada devido a uma saída do módulo ou a um pedido da aplicação
+2017-05-23 13:26:46 RPCAcceptHandler: Error: A operação de E/S foi cancelada devido a uma saída do módulo ou a um pedido da aplicação
+2017-05-23 13:26:46 MultiChainMiner terminated
+2017-05-23 13:26:46 StopNode()
+2017-05-23 13:26:46 Node stopped
+2017-05-23 13:26:46 Shutdown: done
+2017-05-24 09:25:02 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2017-05-24 09:25:02 MultiChain version build 1.0 beta 1 protocol 10008 (Feb 15 2017, 01:56:08)
+2017-05-24 09:25:02 Using OpenSSL version OpenSSL 1.0.1k 8 Jan 2015
+2017-05-24 09:25:02 Using BerkeleyDB version Berkeley DB 4.8.30: (April  9, 2010)
+2017-05-24 09:25:02 Default data directory C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain
+2017-05-24 09:25:02 Using data directory C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain
+2017-05-24 09:25:02 Using config file C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\This4ThatChain.conf
+2017-05-24 09:25:02 Using at most 125 connections (2048 file descriptors available)
+2017-05-24 09:25:02 Using 4 threads for script verification
+2017-05-24 09:25:02 Using wallet wallet.dat
+2017-05-24 09:25:02 init message: Verifying wallet...
+2017-05-24 09:25:02 CDBEnv::Open : LogDir=C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\database ErrorFile=C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\db.log
+2017-05-24 09:25:02 init message: Initializing multichain...
+2017-05-24 09:25:02 mchn: Parameter set is valid - initializing blockchain parameters...
+2017-05-24 09:25:02 Wallet mode: 00000003
+2017-05-24 09:25:02 nFileVersion = 100000
+2017-05-24 09:25:02 Keys: 3 plaintext, 0 encrypted, 3 w/ metadata, 3 total
+2017-05-24 09:25:02 Node paused state is set to 00000000
+2017-05-24 09:25:02 Binding RPC on address ::1 port 7740 (IPv4+IPv6 bind any: 0)
+2017-05-24 09:25:02 Binding RPC on address 127.0.0.1 port 7740 (IPv4+IPv6 bind any: 0)
+2017-05-24 09:25:02 Bound to [::]:7741
+2017-05-24 09:25:02 Bound to 0.0.0.0:7741
+2017-05-24 09:25:02 Setting banned transaction list:    0 transactions
+2017-05-24 09:25:02 init message: Loading block index...
+2017-05-24 09:25:02 Opening LevelDB in C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\blocks\index
+2017-05-24 09:25:02 Opened LevelDB successfully
+2017-05-24 09:25:02 Opening LevelDB in C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\chainstate
+2017-05-24 09:25:02 Opened LevelDB successfully
+2017-05-24 09:25:02 nFileVersion = 100000
+2017-05-24 09:25:02 Keys: 3 plaintext, 0 encrypted, 3 w/ metadata, 3 total
+2017-05-24 09:25:02 LoadBlockIndexDB: last block file = 0
+2017-05-24 09:25:02 LoadBlockIndexDB: last block file info: CBlockFileInfo(blocks=93, size=26961, heights=0...92, time=2017-05-22...2017-05-22)
+2017-05-24 09:25:02 Checking all blk files are present...
+2017-05-24 09:25:02 LoadBlockIndexDB(): transaction index enabled
+2017-05-24 09:25:02 LoadBlockIndexDB(): hashBestChain=0057ff9b1cdf882b32c647f7176eb34837198a00b029e90185edadb30d75e7b2 height=92 date=2017-05-22 17:49:40 progress=1.000000
+2017-05-24 09:25:02 init message: Verifying blocks...
+2017-05-24 09:25:02 Verifying last 92 blocks at level 3
+2017-05-24 09:25:02 No coin database inconsistencies in last 92 blocks (98 transactions)
+2017-05-24 09:25:02  block index             316ms
+2017-05-24 09:25:02 init message: Loading wallet...
+2017-05-24 09:25:02 nFileVersion = 100000
+2017-05-24 09:25:02 Keys: 3 plaintext, 0 encrypted, 3 w/ metadata, 3 total
+2017-05-24 09:25:02  wallet                    0ms
+2017-05-24 09:25:02 mapBlockIndex.size() = 93
+2017-05-24 09:25:02 nBestHeight = 92
+2017-05-24 09:25:02 setKeyPool.size() = 2
+2017-05-24 09:25:02 oldWallet.size() = 0
+2017-05-24 09:25:02 mapWallet.size() = 7
+2017-05-24 09:25:02 mapAddressBook.size() = 1
+2017-05-24 09:25:02 init message: Loading addresses...
+2017-05-24 09:25:02 Loaded 3 addresses from peers.dat  1ms
+2017-05-24 09:25:02 AddLocal([fe80::51a:2527:4b39:db0b]:7741,1)
+2017-05-24 09:25:02 Discover: Calado-PC - fe80::51a:2527:4b39:db0b
+2017-05-24 09:25:02 AddLocal([fe80::cc1e:3422:b21e:c113]:7741,1)
+2017-05-24 09:25:02 Discover: Calado-PC - fe80::cc1e:3422:b21e:c113
+2017-05-24 09:25:02 AddLocal([fe80::91e6:ed4e:b8e:b2c3]:7741,1)
+2017-05-24 09:25:02 Discover: Calado-PC - fe80::91e6:ed4e:b8e:b2c3
+2017-05-24 09:25:02 AddLocal([fe80::68c8:50fd:6ef:3a36]:7741,1)
+2017-05-24 09:25:02 Discover: Calado-PC - fe80::68c8:50fd:6ef:3a36
+2017-05-24 09:25:02 AddLocal([fe80::4d76:32ed:aa0d:f85]:7741,1)
+2017-05-24 09:25:02 Discover: Calado-PC - fe80::4d76:32ed:aa0d:f85
+2017-05-24 09:25:02 AddLocal([fe80::2049:67:4373:eae4]:7741,1)
+2017-05-24 09:25:02 Discover: Calado-PC - fe80::2049:67:4373:eae4
+2017-05-24 09:25:02 AddLocal(169.254.219.11:7741,1)
+2017-05-24 09:25:02 Discover: Calado-PC - 169.254.219.11
+2017-05-24 09:25:02 AddLocal(192.168.13.1:7741,1)
+2017-05-24 09:25:02 Discover: Calado-PC - 192.168.13.1
+2017-05-24 09:25:02 AddLocal(169.254.58.54:7741,1)
+2017-05-24 09:25:02 Discover: Calado-PC - 169.254.58.54
+2017-05-24 09:25:02 AddLocal(192.168.1.115:7741,1)
+2017-05-24 09:25:02 Discover: Calado-PC - 192.168.1.115
+2017-05-24 09:25:02 AddLocal(192.168.128.1:7741,1)
+2017-05-24 09:25:02 Discover: Calado-PC - 192.168.128.1
+2017-05-24 09:25:02 AddLocal([2001:0:9d38:90d7:2049:67:4373:eae4]:7741,1)
+2017-05-24 09:25:02 Discover: Calado-PC - 2001:0:9d38:90d7:2049:67:4373:eae4
+2017-05-24 09:25:02 dnsseed thread start
+2017-05-24 09:25:02 dumpaddr thread start
+2017-05-24 09:25:02 addcon thread start
+2017-05-24 09:25:02 opencon thread start
+2017-05-24 09:25:02 msghand thread start
+2017-05-24 09:25:02 net thread start
+2017-05-24 09:25:02 MultiChainMiner started
+2017-05-24 09:25:02 init message: Done loading
+2017-05-24 09:25:02 Node started
+2017-05-24 09:25:13 Loading addresses from DNS seeds (could take a while)
+2017-05-24 09:25:13 0 addresses found from DNS seeds
+2017-05-24 09:25:13 dnsseed thread exit
+2017-05-24 09:27:41 addcon thread interrupt
+2017-05-24 09:27:41 dumpaddr thread stop
+2017-05-24 09:27:41 msghand thread interrupt
+2017-05-24 09:27:41 net thread interrupt
+2017-05-24 09:27:44 opencon thread interrupt
+2017-05-24 09:27:44 Shutdown: In progress...
+2017-05-24 09:27:44 RPCAcceptHandler: Error: A operação de E/S foi cancelada devido a uma saída do módulo ou a um pedido da aplicação
+2017-05-24 09:27:44 RPCAcceptHandler: Error: A operação de E/S foi cancelada devido a uma saída do módulo ou a um pedido da aplicação
+2017-05-24 09:27:44 MultiChainMiner terminated
+2017-05-24 09:27:44 StopNode()
+2017-05-24 09:27:45 Node stopped
+2017-05-24 09:27:45 Shutdown: done
