@@ -102,7 +102,7 @@ namespace This4That_library.Models.Domain
         {
             userID = userId;
             this.IncentiveScheme = incentiveScheme;
-            this.Wallet.Balance = incentive.InitWalletValue();
+            this.Wallet.Balance = incentive.InitWalletBalance();
         }
 
         public void SubscribeTopic(string topicName)

@@ -12,6 +12,7 @@ namespace This4That_ServerNode.Nodes
     public class IncentiveEngine : Node, IIncentiveEngine
     {
         private IRepository repository = null;
+        private IncentiveSchemeBase incentiveScheme;
         private CentralizedIncentiveScheme centralizedIncentiveScheme;
         private DescentralizedIncentiveScheme descentralizedIncentiveScheme;
 
@@ -168,7 +169,7 @@ namespace This4That_ServerNode.Nodes
                     return true;
                 }
                 //create the transaction and store it into the TransactionStorage
-                if (!incentiveScheme.RegisterPayment(this.Repository, userId, "Platform", incentiveValue, out transactionId))
+                if (!incentiveScheme.RegisterTransaction(this.Repository, userId, "Platform", incentiveValue, out transactionId))
                 {
                     Log.ErrorFormat("Cannot register payment task for UserId: [{0}]", userId);
                     Console.WriteLine("[ERROR - INCENTIVE ENGINE] - Cannot register task payment!");
@@ -201,7 +202,7 @@ namespace This4That_ServerNode.Nodes
                 taskReward = incentiveScheme.IncentiveType.GetTaskReward();
 
                 //create the transaction and store it into the TransactionStorage
-                if (!incentiveScheme.RegisterPayment(this.Repository, "Platform", userId, taskReward, out transactionId))
+                if (!incentiveScheme.RegisterTransaction(this.Repository, "Platform", userId, taskReward, out transactionId))
                 {
                     Log.ErrorFormat("Cannot register reward for UserId: [{0}]", userId);
                     Console.WriteLine("[ERROR - INCENTIVE ENGINE] - Cannot register task reward!");
@@ -229,6 +230,7 @@ namespace This4That_ServerNode.Nodes
             try
             {
                 //FIXME: change this
+                //in the descentralized way we have to create a wallet address for the user
                 //centralized version as default
                 userId = this.Repository.RegisterUser(this.centralizedIncentiveScheme.IncentiveType);
                 //get user incentive scheme
@@ -237,9 +239,9 @@ namespace This4That_ServerNode.Nodes
                     Log.ErrorFormat("Cannot load incentive scheme for User: [{0}]", userId);
                 }
                 //get init value based on the incentive
-                initValue = incentiveScheme.IncentiveType.InitWalletValue();
+                initValue = incentiveScheme.IncentiveType.GiveInitialIncentive();
                 //register transaction
-                if (!incentiveScheme.RegisterPayment(Repository, "Platform", userId, initValue, out transactionId))
+                if (!incentiveScheme.RegisterTransaction(Repository, "Platform", userId, initValue, out transactionId))
                 {
                     Log.ErrorFormat("Cannot register init value transaction for UserId: [{0}]", userId);
                     Console.WriteLine("[ERROR - INCENTIVE ENGINE] - Cannot register init value transaction!");
@@ -313,6 +315,7 @@ namespace This4That_ServerNode.Nodes
         {
             IncentiveSchemeBase incentiveScheme;
             message = null;
+
             try
             {
                 //get user incentive scheme

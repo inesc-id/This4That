@@ -73,7 +73,7 @@ namespace This4That_library
         bool CreateTransactionCentralized(string senderID, string receiverID, Incentive incentiveObj, object incentiveValue, out string transactionId);
         bool ExecuteTransactionCentralized(string senderId, string receiverId, Incentive incentive, object incentiveValue, string txId);
         List<Transaction> GetUserTransactionsCentralized(string userId);
-        bool AddNodeToUserWalletDescentralized(string userId, string address);
+        bool AddNodeToUserWalletDescentralized(string userId, string nodeAddress);
     }
 
     public interface ITransactionNode : IRemoteEntity

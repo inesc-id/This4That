@@ -5,8 +5,10 @@ namespace This4That_library.Models.Incentives
     [Serializable]
     public class Gamification : Incentive
     {
+        private const int WALLET_INIT_VALUE = 1000;
         private const int TASK_CREATION_VALUE = 100;
         private const int TASK_REWARD_VALUE = 50;
+        private const int WALLET_EMPTY = 0;
 
 
         public override object GetTaskCreationValue()
@@ -38,10 +40,9 @@ namespace This4That_library.Models.Incentives
             return intBalance - intIncentiveValue;
         }
 
-        //FIXME: nao pode ser aqui, tem de ser uma transacao do mecanismo de incentivos
-        public override object InitWalletValue()
+        public override object GiveInitialIncentive()
         {
-            return 1000;
+            return WALLET_INIT_VALUE;
         }
 
         public override object CalcReceiverNewBalance(object balance, object incentiveValue)
@@ -58,6 +59,11 @@ namespace This4That_library.Models.Incentives
         public override object GetTaskReward()
         {
             return TASK_REWARD_VALUE;
+        }
+
+        public override object InitWalletBalance()
+        {
+            return WALLET_EMPTY;
         }
     }
 }

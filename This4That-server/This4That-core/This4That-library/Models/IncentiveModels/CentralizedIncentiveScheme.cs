@@ -18,7 +18,7 @@ namespace This4That_library.Models.IncentiveModels
             return repository.GetUserBalance(userId);
         }
 
-        public override bool RegisterPayment(IRepository repository, string sender, string receiver, object incentiveValue, out string transactionId)
+        public override bool RegisterTransaction(IRepository repository, string sender, string receiver, object incentiveValue, out string transactionId)
         {
             //in the centralized version the transactions are stored in the TransactionNode
             //create the transaction

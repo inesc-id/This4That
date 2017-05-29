@@ -11,6 +11,7 @@ namespace This4That_library.Models.Domain
         private object balance = null;
         private List<KeyValuePair<IncentiveSchemesEnum, string>> transactions = new List<KeyValuePair<IncentiveSchemesEnum, string>>();
         private List<string> chainAddresses = new List<string>();
+        private string walletAdress = null;
 
         public object Balance
         {
@@ -48,6 +49,19 @@ namespace This4That_library.Models.Domain
             set
             {
                 chainAddresses = value;
+            }
+        }
+
+        public string WalletAdress
+        {
+            get
+            {
+                return walletAdress;
+            }
+
+            set
+            {
+                walletAdress = value;
             }
         }
 

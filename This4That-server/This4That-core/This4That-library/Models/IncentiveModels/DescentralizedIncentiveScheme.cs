@@ -54,7 +54,7 @@ namespace This4That_library.Models.IncentiveModels
             throw new NotImplementedException();
         }
 
-        public override bool RegisterPayment(IRepository repository, string sender, string recipient, object incentiveValue, out string transactionId)
+        public override bool RegisterTransaction(IRepository repository, string sender, string recipient, object incentiveValue, out string transactionId)
         {
             throw new NotImplementedException();
         }

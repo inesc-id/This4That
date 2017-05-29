@@ -37,7 +37,7 @@ namespace This4That_library.Models.IncentiveModels
             return true;
         }
 
-        public abstract bool RegisterPayment(IRepository repository, string sender, string recipient, object incentiveValue, out string transactionId);
+        public abstract bool RegisterTransaction(IRepository repository, string sender, string recipient, object incentiveValue, out string transactionId);
         public abstract object CheckUserBalance(IRepository repository, string userId);
         public abstract List<Transaction> GetUserTransactions(IRepository repository, string userId);
     }

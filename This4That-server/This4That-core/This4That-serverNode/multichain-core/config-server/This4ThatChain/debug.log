@@ -1365,3 +1365,507 @@
 2017-05-24 09:27:44 StopNode()
 2017-05-24 09:27:45 Node stopped
 2017-05-24 09:27:45 Shutdown: done
+2017-05-24 11:37:45 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2017-05-24 11:37:45 MultiChain version build 1.0 beta 1 protocol 10008 (Feb 15 2017, 01:56:08)
+2017-05-24 11:37:45 Using OpenSSL version OpenSSL 1.0.1k 8 Jan 2015
+2017-05-24 11:37:45 Using BerkeleyDB version Berkeley DB 4.8.30: (April  9, 2010)
+2017-05-24 11:37:45 Default data directory C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain
+2017-05-24 11:37:45 Using data directory C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain
+2017-05-24 11:37:45 Using config file C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\This4ThatChain.conf
+2017-05-24 11:37:45 Using at most 125 connections (2048 file descriptors available)
+2017-05-24 11:37:45 Using 4 threads for script verification
+2017-05-24 11:37:45 Using wallet wallet.dat
+2017-05-24 11:37:45 init message: Verifying wallet...
+2017-05-24 11:37:45 CDBEnv::Open : LogDir=C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\database ErrorFile=C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\db.log
+2017-05-24 11:37:45 init message: Initializing multichain...
+2017-05-24 11:37:45 mchn: Parameter set is valid - initializing blockchain parameters...
+2017-05-24 11:37:45 Wallet mode: 00000003
+2017-05-24 11:37:45 nFileVersion = 100000
+2017-05-24 11:37:45 Keys: 3 plaintext, 0 encrypted, 3 w/ metadata, 3 total
+2017-05-24 11:37:45 Node paused state is set to 00000000
+2017-05-24 11:37:45 Binding RPC on address ::1 port 7740 (IPv4+IPv6 bind any: 0)
+2017-05-24 11:37:45 Binding RPC on address 127.0.0.1 port 7740 (IPv4+IPv6 bind any: 0)
+2017-05-24 11:37:45 Bound to [::]:7741
+2017-05-24 11:37:45 Bound to 0.0.0.0:7741
+2017-05-24 11:37:45 Setting banned transaction list:    0 transactions
+2017-05-24 11:37:45 init message: Loading block index...
+2017-05-24 11:37:45 Opening LevelDB in C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\blocks\index
+2017-05-24 11:37:45 Opened LevelDB successfully
+2017-05-24 11:37:45 Opening LevelDB in C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\chainstate
+2017-05-24 11:37:45 Opened LevelDB successfully
+2017-05-24 11:37:45 nFileVersion = 100000
+2017-05-24 11:37:45 Keys: 3 plaintext, 0 encrypted, 3 w/ metadata, 3 total
+2017-05-24 11:37:45 LoadBlockIndexDB: last block file = 0
+2017-05-24 11:37:45 LoadBlockIndexDB: last block file info: CBlockFileInfo(blocks=93, size=26961, heights=0...92, time=2017-05-22...2017-05-22)
+2017-05-24 11:37:45 Checking all blk files are present...
+2017-05-24 11:37:45 LoadBlockIndexDB(): transaction index enabled
+2017-05-24 11:37:46 LoadBlockIndexDB(): hashBestChain=0057ff9b1cdf882b32c647f7176eb34837198a00b029e90185edadb30d75e7b2 height=92 date=2017-05-22 17:49:40 progress=1.000000
+2017-05-24 11:37:46 init message: Verifying blocks...
+2017-05-24 11:37:46 Verifying last 92 blocks at level 3
+2017-05-24 11:37:46 No coin database inconsistencies in last 92 blocks (98 transactions)
+2017-05-24 11:37:46  block index             382ms
+2017-05-24 11:37:46 init message: Loading wallet...
+2017-05-24 11:37:46 nFileVersion = 100000
+2017-05-24 11:37:46 Keys: 3 plaintext, 0 encrypted, 3 w/ metadata, 3 total
+2017-05-24 11:37:46  wallet                    2ms
+2017-05-24 11:37:46 mapBlockIndex.size() = 93
+2017-05-24 11:37:46 nBestHeight = 92
+2017-05-24 11:37:46 setKeyPool.size() = 2
+2017-05-24 11:37:46 oldWallet.size() = 0
+2017-05-24 11:37:46 mapWallet.size() = 7
+2017-05-24 11:37:46 mapAddressBook.size() = 1
+2017-05-24 11:37:46 init message: Loading addresses...
+2017-05-24 11:37:46 Loaded 3 addresses from peers.dat  1ms
+2017-05-24 11:37:46 AddLocal([fe80::51a:2527:4b39:db0b]:7741,1)
+2017-05-24 11:37:46 Discover: Calado-PC - fe80::51a:2527:4b39:db0b
+2017-05-24 11:37:46 AddLocal([fe80::cc1e:3422:b21e:c113]:7741,1)
+2017-05-24 11:37:46 Discover: Calado-PC - fe80::cc1e:3422:b21e:c113
+2017-05-24 11:37:46 AddLocal([fe80::91e6:ed4e:b8e:b2c3]:7741,1)
+2017-05-24 11:37:46 Discover: Calado-PC - fe80::91e6:ed4e:b8e:b2c3
+2017-05-24 11:37:46 AddLocal([fe80::68c8:50fd:6ef:3a36]:7741,1)
+2017-05-24 11:37:46 Discover: Calado-PC - fe80::68c8:50fd:6ef:3a36
+2017-05-24 11:37:46 AddLocal([fe80::4d76:32ed:aa0d:f85]:7741,1)
+2017-05-24 11:37:46 Discover: Calado-PC - fe80::4d76:32ed:aa0d:f85
+2017-05-24 11:37:46 AddLocal([fe80::2049:67:4373:eae4]:7741,1)
+2017-05-24 11:37:46 Discover: Calado-PC - fe80::2049:67:4373:eae4
+2017-05-24 11:37:46 AddLocal(169.254.219.11:7741,1)
+2017-05-24 11:37:46 Discover: Calado-PC - 169.254.219.11
+2017-05-24 11:37:46 AddLocal(192.168.13.1:7741,1)
+2017-05-24 11:37:46 Discover: Calado-PC - 192.168.13.1
+2017-05-24 11:37:46 AddLocal(169.254.58.54:7741,1)
+2017-05-24 11:37:46 Discover: Calado-PC - 169.254.58.54
+2017-05-24 11:37:46 AddLocal(192.168.1.115:7741,1)
+2017-05-24 11:37:46 Discover: Calado-PC - 192.168.1.115
+2017-05-24 11:37:46 AddLocal(192.168.128.1:7741,1)
+2017-05-24 11:37:46 Discover: Calado-PC - 192.168.128.1
+2017-05-24 11:37:46 AddLocal([2001:0:9d38:90d7:2049:67:4373:eae4]:7741,1)
+2017-05-24 11:37:46 Discover: Calado-PC - 2001:0:9d38:90d7:2049:67:4373:eae4
+2017-05-24 11:37:46 dnsseed thread start
+2017-05-24 11:37:46 opencon thread start
+2017-05-24 11:37:46 msghand thread start
+2017-05-24 11:37:46 net thread start
+2017-05-24 11:37:46 dumpaddr thread start
+2017-05-24 11:37:46 addcon thread start
+2017-05-24 11:37:46 MultiChainMiner started
+2017-05-24 11:37:46 init message: Done loading
+2017-05-24 11:37:46 Node started
+2017-05-24 11:37:57 Loading addresses from DNS seeds (could take a while)
+2017-05-24 11:37:57 0 addresses found from DNS seeds
+2017-05-24 11:37:57 dnsseed thread exit
+2017-05-24 11:41:06 ThreadRPCServer incorrect password attempt from 127.0.0.1
+2017-05-24 11:42:40 ThreadRPCServer incorrect password attempt from 127.0.0.1
+2017-05-24 11:43:23 mchn: Sending minimal parameter set to 192.168.1.115:50854
+2017-05-24 11:43:23 receive version message: /MultiChain:0.1.0.8/: version 70002, blocks=92, us=192.168.1.115:7741, peer=1
+2017-05-24 11:43:23 Added time data, samples 2, offset +0 (+0 minutes)
+2017-05-24 11:43:23 mchn: Connection from 19bJ77qwGjDb8axGzA18hHhWiTVxoNCxdSegN1 received on peer=1 in verack
+2017-05-24 11:43:23 mchn: Connection from 19bJ77qwGjDb8axGzA18hHhWiTVxoNCxdSegN1 received on peer=1 in verackack (192.168.1.115:50854)
+2017-05-24 11:43:23 mchn: Parameter set from peer=1 verified
+2017-05-24 11:43:27 mchn: Sending minimal parameter set to 192.168.1.115:7742
+2017-05-24 11:43:27 receive version message: /MultiChain:0.1.0.8/: version 70002, blocks=92, us=192.168.1.115:50855, peer=2
+2017-05-24 11:43:27 mchn: Connection from 19bJ77qwGjDb8axGzA18hHhWiTVxoNCxdSegN1 received on peer=2 in verack
+2017-05-24 11:43:27 mchn: Connection from 19bJ77qwGjDb8axGzA18hHhWiTVxoNCxdSegN1 received on peer=2 in verackack (192.168.1.115:7742)
+2017-05-24 11:43:27 mchn: Parameter set from peer=2 verified
+2017-05-24 11:43:31 MultiChainMiner: Block Found - 00cb02838ef05284ee1396a02e71337b2778f901c0cef14271a929be36c67dc4, prev: 0057ff9b1cdf882b32c647f7176eb34837198a00b029e90185edadb30d75e7b2, height: 93, txs: 9
+2017-05-24 11:43:31 UpdateTip:            new best=00cb02838ef05284ee1396a02e71337b2778f901c0cef14271a929be36c67dc4  height=93  log2_work=14.554589  tx=108  date=2017-05-24 11:43:31 progress=1.000000  cache=0
+2017-05-24 11:43:48 MultiChainMiner: Block Found - 00e1ab46a18cea80d9f09cd1dfa0c49b2237bc3b4997a69f7b46002b8158bc2f, prev: 00cb02838ef05284ee1396a02e71337b2778f901c0cef14271a929be36c67dc4, height: 94, txs: 1
+2017-05-24 11:43:48 UpdateTip:            new best=00e1ab46a18cea80d9f09cd1dfa0c49b2237bc3b4997a69f7b46002b8158bc2f  height=94  log2_work=14.569856  tx=109  date=2017-05-24 11:43:48 progress=1.000000  cache=0
+2017-05-24 11:43:59 MultiChainMiner: Block Found - 00dcb16333d79059b69198b9a3cbcf70ccd6ca62f487cd5c13a9f3849ca30ba2, prev: 00e1ab46a18cea80d9f09cd1dfa0c49b2237bc3b4997a69f7b46002b8158bc2f, height: 95, txs: 1
+2017-05-24 11:43:59 UpdateTip:            new best=00dcb16333d79059b69198b9a3cbcf70ccd6ca62f487cd5c13a9f3849ca30ba2  height=95  log2_work=14.584963  tx=110  date=2017-05-24 11:43:59 progress=1.000000  cache=0
+2017-05-24 11:44:01 ThreadRPCServer incorrect password attempt from 127.0.0.1
+2017-05-24 11:44:08 ResendWalletTransactions()
+2017-05-24 11:44:19 MultiChainMiner: Block Found - 00d13d543cdcb932e0fc3cb79d0528bf19911008b3ad258043abd4c15fc8d2ee, prev: 00dcb16333d79059b69198b9a3cbcf70ccd6ca62f487cd5c13a9f3849ca30ba2, height: 96, txs: 1
+2017-05-24 11:44:19 UpdateTip:            new best=00d13d543cdcb932e0fc3cb79d0528bf19911008b3ad258043abd4c15fc8d2ee  height=96  log2_work=14.599913  tx=111  date=2017-05-24 11:44:19 progress=1.000000  cache=0
+2017-05-24 11:44:35 ResendWalletTransactions()
+2017-05-24 11:44:35 MultiChainMiner: Block Found - 000e9d5379e2f05beb40709cf28c4f386675cf1769639af3118dd550fb1b41ba, prev: 00d13d543cdcb932e0fc3cb79d0528bf19911008b3ad258043abd4c15fc8d2ee, height: 97, txs: 1
+2017-05-24 11:44:35 UpdateTip:            new best=000e9d5379e2f05beb40709cf28c4f386675cf1769639af3118dd550fb1b41ba  height=97  log2_work=14.61471  tx=112  date=2017-05-24 11:44:35 progress=1.000000  cache=0
+2017-05-24 11:44:48 UpdateTip:            new best=008c00c1c230789030e93af8e56d16c528144b23bfc15b3de53ff1e60bddb279  height=98  log2_work=14.629357  tx=113  date=2017-05-24 11:44:47 progress=1.000000  cache=0
+2017-05-24 11:44:48 mchn: Synced with node 2 on block 98 - requesting mempool
+2017-05-24 11:45:00 ResendWalletTransactions()
+2017-05-24 11:45:03 MultiChainMiner: Block Found - 009f54ec7a81e7da376ebc0a224b4ccae6551beff5cfe30b33185ba929c3c3ea, prev: 008c00c1c230789030e93af8e56d16c528144b23bfc15b3de53ff1e60bddb279, height: 99, txs: 1
+2017-05-24 11:45:03 UpdateTip:            new best=009f54ec7a81e7da376ebc0a224b4ccae6551beff5cfe30b33185ba929c3c3ea  height=99  log2_work=14.643856  tx=114  date=2017-05-24 11:45:03 progress=1.000000  cache=0
+2017-05-24 11:45:15 UpdateTip:            new best=008c00c1c230789030e93af8e56d16c528144b23bfc15b3de53ff1e60bddb279  height=98  log2_work=14.629357  tx=113  date=2017-05-24 11:44:47 progress=1.000000  cache=0
+2017-05-24 11:45:15 UpdateTip:            new best=0081f776e0e316b799a72bf8287c826c3a6b47de3eba5417cd2d56206cb567ca  height=99  log2_work=14.643856  tx=114  date=2017-05-24 11:45:03 progress=1.000000  cache=0
+2017-05-24 11:45:15 UpdateTip:            new best=00403492f3ea49cd9a287b6f50af20a4f0cff4ce8636346cec66a571b437e804  height=100  log2_work=14.658211  tx=115  date=2017-05-24 11:45:15 progress=1.000000  cache=0
+2017-05-24 11:45:20 ResendWalletTransactions()
+2017-05-24 11:45:29 UpdateTip:            new best=0010f0e87ca487c84dc828ecdc53404b4d34ca1a99f22c12320b61ad672e7053  height=101  log2_work=14.672425  tx=116  date=2017-05-24 11:45:28 progress=1.000000  cache=0
+2017-05-24 11:45:42 mchn: Sending minimal parameter set to 169.254.58.54:7742
+2017-05-24 11:45:42 receive version message: /MultiChain:0.1.0.8/: version 70002, blocks=101, us=169.254.58.54:50889, peer=3
+2017-05-24 11:45:42 Added time data, samples 3, offset +0 (+0 minutes)
+2017-05-24 11:45:42 mchn: Connection from 19bJ77qwGjDb8axGzA18hHhWiTVxoNCxdSegN1 received on peer=3 in verack
+2017-05-24 11:45:42 mchn: Connection from 19bJ77qwGjDb8axGzA18hHhWiTVxoNCxdSegN1 received on peer=3 in verackack (169.254.58.54:7742)
+2017-05-24 11:45:42 mchn: Parameter set from peer=3 verified
+2017-05-24 11:45:42 mchn: Synced with node 3 on block 101 - requesting mempool
+2017-05-24 11:45:43 ResendWalletTransactions()
+2017-05-24 11:45:50 MultiChainMiner: Block Found - 00271a740cccd847b32e2274d529de890b283f551ddde46875f83a3efb9e0b70, prev: 0010f0e87ca487c84dc828ecdc53404b4d34ca1a99f22c12320b61ad672e7053, height: 102, txs: 1
+2017-05-24 11:45:50 UpdateTip:            new best=00271a740cccd847b32e2274d529de890b283f551ddde46875f83a3efb9e0b70  height=102  log2_work=14.686501  tx=117  date=2017-05-24 11:45:50 progress=1.000000  cache=0
+2017-05-24 11:46:04 MultiChainMiner: Block Found - 003f9c328a9780254a9174aefa8cffa92a8a253b0d1d5b2318f417ba77daf504, prev: 00271a740cccd847b32e2274d529de890b283f551ddde46875f83a3efb9e0b70, height: 103, txs: 1
+2017-05-24 11:46:04 UpdateTip:            new best=003f9c328a9780254a9174aefa8cffa92a8a253b0d1d5b2318f417ba77daf504  height=103  log2_work=14.70044  tx=118  date=2017-05-24 11:46:04 progress=1.000000  cache=0
+2017-05-24 11:46:16 ResendWalletTransactions()
+2017-05-24 11:56:23 ThreadRPCServer incorrect password attempt from 127.0.0.1
+2017-05-24 11:57:10 ThreadRPCServer incorrect password attempt from 127.0.0.1
+2017-05-24 11:58:33 mchn: Sending minimal parameter set to 192.168.1.115:51080
+2017-05-24 11:58:33 receive version message: /MultiChain:0.1.0.8/: version 70002, blocks=103, us=192.168.1.115:7741, peer=4
+2017-05-24 11:58:33 mchn: Connection from 19bJ77qwGjDb8axGzA18hHhWiTVxoNCxdSegN1 received on peer=4 in verack
+2017-05-24 11:58:33 mchn: Connection from 19bJ77qwGjDb8axGzA18hHhWiTVxoNCxdSegN1 received on peer=4 in verackack (192.168.1.115:51080)
+2017-05-24 11:58:33 mchn: Parameter set from peer=4 verified
+2017-05-24 11:58:33 mchn: Synced with node 4 on block 103 - requesting mempool
+2017-05-24 11:58:34 mchn: Sending minimal parameter set to 192.168.1.115:7742
+2017-05-24 11:58:34 receive version message: /MultiChain:0.1.0.8/: version 70002, blocks=103, us=192.168.1.115:51081, peer=5
+2017-05-24 11:58:34 mchn: Connection from 19bJ77qwGjDb8axGzA18hHhWiTVxoNCxdSegN1 received on peer=5 in verack
+2017-05-24 11:58:34 mchn: Connection from 19bJ77qwGjDb8axGzA18hHhWiTVxoNCxdSegN1 received on peer=5 in verackack (192.168.1.115:7742)
+2017-05-24 11:58:34 mchn: Parameter set from peer=5 verified
+2017-05-24 11:58:34 mchn: Synced with node 5 on block 103 - requesting mempool
+2017-05-24 11:59:37 ThreadRPCServer incorrect password attempt from 127.0.0.1
+2017-05-24 12:03:03 mchn: Sending minimal parameter set to 192.168.1.115:51129
+2017-05-24 12:03:03 receive version message: /MultiChain:0.1.0.8/: version 70002, blocks=103, us=192.168.1.115:7741, peer=6
+2017-05-24 12:03:03 mchn: Connection from 19bJ77qwGjDb8axGzA18hHhWiTVxoNCxdSegN1 received on peer=6 in verack
+2017-05-24 12:03:03 mchn: Connection from 19bJ77qwGjDb8axGzA18hHhWiTVxoNCxdSegN1 received on peer=6 in verackack (192.168.1.115:51129)
+2017-05-24 12:03:03 mchn: Parameter set from peer=6 verified
+2017-05-24 12:03:04 mchn: Synced with node 6 on block 103 - requesting mempool
+2017-05-24 12:03:04 mchn: Sending minimal parameter set to 192.168.1.115:7742
+2017-05-24 12:03:04 receive version message: /MultiChain:0.1.0.8/: version 70002, blocks=103, us=192.168.1.115:51128, peer=7
+2017-05-24 12:03:04 mchn: Connection from 19bJ77qwGjDb8axGzA18hHhWiTVxoNCxdSegN1 received on peer=7 in verack
+2017-05-24 12:03:04 mchn: Connection from 19bJ77qwGjDb8axGzA18hHhWiTVxoNCxdSegN1 received on peer=7 in verackack (192.168.1.115:7742)
+2017-05-24 12:03:04 mchn: Parameter set from peer=7 verified
+2017-05-24 12:03:04 mchn: Synced with node 7 on block 103 - requesting mempool
+2017-05-24 12:03:04 mchn: Sending minimal parameter set to 169.254.58.54:7742
+2017-05-24 12:03:04 receive version message: /MultiChain:0.1.0.8/: version 70002, blocks=103, us=169.254.58.54:51130, peer=8
+2017-05-24 12:03:04 mchn: Connection from 19bJ77qwGjDb8axGzA18hHhWiTVxoNCxdSegN1 received on peer=8 in verack
+2017-05-24 12:03:04 mchn: Connection from 19bJ77qwGjDb8axGzA18hHhWiTVxoNCxdSegN1 received on peer=8 in verackack (169.254.58.54:7742)
+2017-05-24 12:03:04 mchn: Parameter set from peer=8 verified
+2017-05-24 12:03:04 mchn: Synced with node 8 on block 103 - requesting mempool
+2017-05-24 12:03:36 ThreadRPCServer incorrect password attempt from 127.0.0.1
+2017-05-24 12:06:18 ThreadRPCServer incorrect password attempt from 127.0.0.1
+2017-05-24 12:24:09 dumpaddr thread stop
+2017-05-24 12:24:09 addcon thread interrupt
+2017-05-24 12:24:09 msghand thread interrupt
+2017-05-24 12:24:10 net thread interrupt
+2017-05-24 12:24:14 opencon thread interrupt
+2017-05-24 12:24:14 Shutdown: In progress...
+2017-05-24 12:24:14 RPCAcceptHandler: Error: A operação de E/S foi cancelada devido a uma saída do módulo ou a um pedido da aplicação
+2017-05-24 12:24:14 RPCAcceptHandler: Error: A operação de E/S foi cancelada devido a uma saída do módulo ou a um pedido da aplicação
+2017-05-24 12:24:14 MultiChainMiner terminated
+2017-05-24 12:24:14 StopNode()
+2017-05-24 12:24:14 Node stopped
+2017-05-24 12:24:14 Shutdown: done
+2017-05-24 14:45:24 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2017-05-24 14:45:24 MultiChain version build 1.0 beta 1 protocol 10008 (Feb 15 2017, 01:56:08)
+2017-05-24 14:45:24 Using OpenSSL version OpenSSL 1.0.1k 8 Jan 2015
+2017-05-24 14:45:24 Using BerkeleyDB version Berkeley DB 4.8.30: (April  9, 2010)
+2017-05-24 14:45:24 Default data directory C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain
+2017-05-24 14:45:24 Using data directory C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain
+2017-05-24 14:45:24 Using config file C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\This4ThatChain.conf
+2017-05-24 14:45:24 Using at most 125 connections (2048 file descriptors available)
+2017-05-24 14:45:24 Using 4 threads for script verification
+2017-05-24 14:45:24 Using wallet wallet.dat
+2017-05-24 14:45:24 init message: Verifying wallet...
+2017-05-24 14:45:24 CDBEnv::Open : LogDir=C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\database ErrorFile=C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\db.log
+2017-05-24 14:45:24 init message: Initializing multichain...
+2017-05-24 14:45:24 mchn: Parameter set is valid - initializing blockchain parameters...
+2017-05-24 14:45:24 Wallet mode: 00000003
+2017-05-24 14:45:24 nFileVersion = 100000
+2017-05-24 14:45:24 Keys: 3 plaintext, 0 encrypted, 3 w/ metadata, 3 total
+2017-05-24 14:45:24 Node paused state is set to 00000000
+2017-05-24 14:45:24 Binding RPC on address ::1 port 7740 (IPv4+IPv6 bind any: 0)
+2017-05-24 14:45:24 Binding RPC on address 127.0.0.1 port 7740 (IPv4+IPv6 bind any: 0)
+2017-05-24 14:45:24 Bound to [::]:7741
+2017-05-24 14:45:24 Bound to 0.0.0.0:7741
+2017-05-24 14:45:24 Setting banned transaction list:    0 transactions
+2017-05-24 14:45:24 init message: Loading block index...
+2017-05-24 14:45:24 Opening LevelDB in C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\blocks\index
+2017-05-24 14:45:24 Opened LevelDB successfully
+2017-05-24 14:45:24 Opening LevelDB in C:\Users\Calado\Documents\Documentos Word\Faculdade\IST 5ano\Tese\Dissertation\This4That\This4That-server\This4That-core\This4That-serverNode\multichain-core\config-server\This4ThatChain\chainstate
+2017-05-24 14:45:24 Opened LevelDB successfully
+2017-05-24 14:45:24 nFileVersion = 100000
+2017-05-24 14:45:24 Keys: 3 plaintext, 0 encrypted, 3 w/ metadata, 3 total
+2017-05-24 14:45:24 LoadBlockIndexDB: last block file = 0
+2017-05-24 14:45:24 LoadBlockIndexDB: last block file info: CBlockFileInfo(blocks=105, size=32312, heights=0...103, time=2017-05-22...2017-05-24)
+2017-05-24 14:45:24 Checking all blk files are present...
+2017-05-24 14:45:24 LoadBlockIndexDB(): transaction index enabled
+2017-05-24 14:45:24 LoadBlockIndexDB(): hashBestChain=003f9c328a9780254a9174aefa8cffa92a8a253b0d1d5b2318f417ba77daf504 height=103 date=2017-05-24 11:46:04 progress=1.000000
+2017-05-24 14:45:24 init message: Verifying blocks...
+2017-05-24 14:45:24 Verifying last 103 blocks at level 3
+2017-05-24 14:45:24 No coin database inconsistencies in last 103 blocks (117 transactions)
+2017-05-24 14:45:24  block index             379ms
+2017-05-24 14:45:24 init message: Loading wallet...
+2017-05-24 14:45:24 nFileVersion = 100000
+2017-05-24 14:45:24 Keys: 3 plaintext, 0 encrypted, 3 w/ metadata, 3 total
+2017-05-24 14:45:24  wallet                    2ms
+2017-05-24 14:45:24 mapBlockIndex.size() = 105
+2017-05-24 14:45:24 nBestHeight = 103
+2017-05-24 14:45:24 setKeyPool.size() = 2
+2017-05-24 14:45:24 oldWallet.size() = 0
+2017-05-24 14:45:24 mapWallet.size() = 15
+2017-05-24 14:45:24 mapAddressBook.size() = 1
+2017-05-24 14:45:24 init message: Loading addresses...
+2017-05-24 14:45:24 Loaded 3 addresses from peers.dat  1ms
+2017-05-24 14:45:24 AddLocal([fe80::51a:2527:4b39:db0b]:7741,1)
+2017-05-24 14:45:24 Discover: Calado-PC - fe80::51a:2527:4b39:db0b
+2017-05-24 14:45:24 AddLocal([fe80::cc1e:3422:b21e:c113]:7741,1)
+2017-05-24 14:45:24 Discover: Calado-PC - fe80::cc1e:3422:b21e:c113
+2017-05-24 14:45:24 AddLocal([fe80::91e6:ed4e:b8e:b2c3]:7741,1)
+2017-05-24 14:45:24 Discover: Calado-PC - fe80::91e6:ed4e:b8e:b2c3
+2017-05-24 14:45:24 AddLocal([fe80::68c8:50fd:6ef:3a36]:7741,1)
+2017-05-24 14:45:24 Discover: Calado-PC - fe80::68c8:50fd:6ef:3a36
+2017-05-24 14:45:24 AddLocal([fe80::4d76:32ed:aa0d:f85]:7741,1)
+2017-05-24 14:45:24 Discover: Calado-PC - fe80::4d76:32ed:aa0d:f85
+2017-05-24 14:45:24 AddLocal([fe80::2049:67:4373:eae4]:7741,1)
+2017-05-24 14:45:24 Discover: Calado-PC - fe80::2049:67:4373:eae4
+2017-05-24 14:45:24 AddLocal(169.254.219.11:7741,1)
+2017-05-24 14:45:24 Discover: Calado-PC - 169.254.219.11
+2017-05-24 14:45:24 AddLocal(192.168.13.1:7741,1)
+2017-05-24 14:45:24 Discover: Calado-PC - 192.168.13.1
+2017-05-24 14:45:24 AddLocal(169.254.58.54:7741,1)
+2017-05-24 14:45:24 Discover: Calado-PC - 169.254.58.54
+2017-05-24 14:45:24 AddLocal(192.168.1.115:7741,1)
+2017-05-24 14:45:24 Discover: Calado-PC - 192.168.1.115
+2017-05-24 14:45:24 AddLocal(192.168.128.1:7741,1)
+2017-05-24 14:45:24 Discover: Calado-PC - 192.168.128.1
+2017-05-24 14:45:24 AddLocal([2001:0:9d38:90d7:2049:67:4373:eae4]:7741,1)
+2017-05-24 14:45:24 Discover: Calado-PC - 2001:0:9d38:90d7:2049:67:4373:eae4
+2017-05-24 14:45:24 dnsseed thread start
+2017-05-24 14:45:24 net thread start
+2017-05-24 14:45:24 addcon thread start
+2017-05-24 14:45:24 opencon thread start
+2017-05-24 14:45:24 msghand thread start
+2017-05-24 14:45:24 dumpaddr thread start
+2017-05-24 14:45:24 MultiChainMiner started
+2017-05-24 14:45:24 init message: Done loading
+2017-05-24 14:45:24 Node started
+2017-05-24 14:45:35 Loading addresses from DNS seeds (could take a while)
+2017-05-24 14:45:35 0 addresses found from DNS seeds
+2017-05-24 14:45:35 dnsseed thread exit
+2017-05-24 14:46:01 mchn: Sending minimal parameter set to 192.168.1.115:52990
+2017-05-24 14:46:01 receive version message: /MultiChain:0.1.0.8/: version 70002, blocks=103, us=192.168.1.115:7741, peer=1
+2017-05-24 14:46:01 Added time data, samples 2, offset +0 (+0 minutes)
+2017-05-24 14:46:01 mchn: Connection from 19bJ77qwGjDb8axGzA18hHhWiTVxoNCxdSegN1 received on peer=1 in verack
+2017-05-24 14:46:01 mchn: Connection from 19bJ77qwGjDb8axGzA18hHhWiTVxoNCxdSegN1 received on peer=1 in verackack (192.168.1.115:52990)
+2017-05-24 14:46:01 mchn: Parameter set from peer=1 verified
+2017-05-24 14:46:01 mchn: Synced with node 1 on block 103 - requesting mempool
+2017-05-24 14:46:05 mchn: Sending minimal parameter set to 192.168.1.115:7742
+2017-05-24 14:46:05 receive version message: /MultiChain:0.1.0.8/: version 70002, blocks=103, us=192.168.1.115:52994, peer=2
+2017-05-24 14:46:05 mchn: Connection from 19bJ77qwGjDb8axGzA18hHhWiTVxoNCxdSegN1 received on peer=2 in verack
+2017-05-24 14:46:05 mchn: Connection from 19bJ77qwGjDb8axGzA18hHhWiTVxoNCxdSegN1 received on peer=2 in verackack (192.168.1.115:7742)
+2017-05-24 14:46:05 mchn: Parameter set from peer=2 verified
+2017-05-24 14:46:05 mchn: Synced with node 2 on block 103 - requesting mempool
+2017-05-24 14:46:45 ResendWalletTransactions()
+2017-05-24 14:49:20 CommitTransaction: 8576b30b510135d29537c2c851b56f8eb0daac459993ff74db87482017063176, vin: 1, vout: 3
+2017-05-24 14:49:39 MultiChainMiner: Block Found - 008c4147688598344eb24fea12fb93847cca0939b2ad87cf7f6d8bdc61a30554, prev: 003f9c328a9780254a9174aefa8cffa92a8a253b0d1d5b2318f417ba77daf504, height: 104, txs: 2
+2017-05-24 14:49:39 UpdateTip:            new best=008c4147688598344eb24fea12fb93847cca0939b2ad87cf7f6d8bdc61a30554  height=104  log2_work=14.714246  tx=120  date=2017-05-24 14:49:39 progress=1.000000  cache=0
+2017-05-24 14:49:40 UpdateTip:            new best=00f3ac482db4115b17323df5644a7372f3569031072b13e95e9ae7d45a28d495  height=105  log2_work=14.72792  tx=121  date=2017-05-24 14:49:40 progress=1.000000  cache=0
+2017-05-24 14:49:50 ResendWalletTransactions()
+2017-05-24 14:49:53 UpdateTip:            new best=002d86d2999d050c324f32035b98672410a1d32bd31a814e6bd40eb1fbdd29d8  height=106  log2_work=14.741467  tx=122  date=2017-05-24 14:49:53 progress=1.000000  cache=0
+2017-05-24 14:50:12 MultiChainMiner: Block Found - 00e6b91e34c5b491d9e28dcf1b558e33b1d8f98698e108c2dd126b4056563b63, prev: 002d86d2999d050c324f32035b98672410a1d32bd31a814e6bd40eb1fbdd29d8, height: 107, txs: 1
+2017-05-24 14:50:12 UpdateTip:            new best=00e6b91e34c5b491d9e28dcf1b558e33b1d8f98698e108c2dd126b4056563b63  height=107  log2_work=14.754888  tx=123  date=2017-05-24 14:50:12 progress=1.000000  cache=0
+2017-05-24 14:50:19 ResendWalletTransactions()
+2017-05-24 14:50:30 MultiChainMiner: Block Found - 006a62d237a7f2307ae28e5659b34619fa80eaac697f000476d7ea4c2816fad5, prev: 00e6b91e34c5b491d9e28dcf1b558e33b1d8f98698e108c2dd126b4056563b63, height: 108, txs: 1
+2017-05-24 14:50:30 UpdateTip:            new best=006a62d237a7f2307ae28e5659b34619fa80eaac697f000476d7ea4c2816fad5  height=108  log2_work=14.768184  tx=124  date=2017-05-24 14:50:30 progress=1.000000  cache=0
+2017-05-24 14:50:45 MultiChainMiner: Block Found - 00893b30f87d5ce6e30384001f1c3bbe8d8fe5b4610989e8f479dd045b50fac0, prev: 006a62d237a7f2307ae28e5659b34619fa80eaac697f000476d7ea4c2816fad5, height: 109, txs: 1
+2017-05-24 14:50:46 UpdateTip:            new best=00893b30f87d5ce6e30384001f1c3bbe8d8fe5b4610989e8f479dd045b50fac0  height=109  log2_work=14.78136  tx=125  date=2017-05-24 14:50:45 progress=1.000000  cache=0
+2017-05-24 14:50:52 ResendWalletTransactions()
+2017-05-24 14:51:02 UpdateTip:            new best=00a130e39bf343b4abcd6520c4a5fa88f2ebcced0e1111ef774d5abbba92f9f9  height=110  log2_work=14.794416  tx=126  date=2017-05-24 14:51:01 progress=1.000000  cache=0
+2017-05-24 14:51:23 ResendWalletTransactions()
+2017-05-24 14:51:24 MultiChainMiner: Block Found - 00894ac7eef7488350d3518100d9c2b52d161850d6612fafd4004a0a5eb0061f, prev: 00a130e39bf343b4abcd6520c4a5fa88f2ebcced0e1111ef774d5abbba92f9f9, height: 111, txs: 1
+2017-05-24 14:51:24 UpdateTip:            new best=00894ac7eef7488350d3518100d9c2b52d161850d6612fafd4004a0a5eb0061f  height=111  log2_work=14.807355  tx=127  date=2017-05-24 14:51:24 progress=1.000000  cache=0
+2017-05-24 14:51:25 ResendWalletTransactions()
+2017-05-24 14:51:46 MultiChainMiner: Block Found - 00dbb6f5348d3c795951deae547f6c929f7e2e591291a1c7cb400504f49463f7, prev: 00894ac7eef7488350d3518100d9c2b52d161850d6612fafd4004a0a5eb0061f, height: 112, txs: 1
+2017-05-24 14:51:46 UpdateTip:            new best=00dbb6f5348d3c795951deae547f6c929f7e2e591291a1c7cb400504f49463f7  height=112  log2_work=14.820179  tx=128  date=2017-05-24 14:51:46 progress=1.000000  cache=0
+2017-05-24 14:51:59 MultiChainMiner: Block Found - 006777335922951faf43ebc5df60e137ab60a115042f559689773796befeda13, prev: 00dbb6f5348d3c795951deae547f6c929f7e2e591291a1c7cb400504f49463f7, height: 113, txs: 1
+2017-05-24 14:52:00 UpdateTip:            new best=006777335922951faf43ebc5df60e137ab60a115042f559689773796befeda13  height=113  log2_work=14.83289  tx=129  date=2017-05-24 14:51:59 progress=1.000000  cache=0
+2017-05-24 14:52:08 ResendWalletTransactions()
+2017-05-24 14:52:13 UpdateTip:            new best=0051d327066d67a1314230e2430ec0bb8f7247d71c46ab1a075a6e13444328ff  height=114  log2_work=14.84549  tx=130  date=2017-05-24 14:52:13 progress=1.000000  cache=0
+2017-05-24 14:52:51 ResendWalletTransactions()
+2017-05-24 14:56:11 mchn: Sending minimal parameter set to 169.254.58.54:7742
+2017-05-24 14:56:11 receive version message: /MultiChain:0.1.0.8/: version 70002, blocks=114, us=169.254.58.54:53107, peer=3
+2017-05-24 14:56:11 Added time data, samples 3, offset +0 (+0 minutes)
+2017-05-24 14:56:11 mchn: Connection from 19bJ77qwGjDb8axGzA18hHhWiTVxoNCxdSegN1 received on peer=3 in verack
+2017-05-24 14:56:11 mchn: Connection from 19bJ77qwGjDb8axGzA18hHhWiTVxoNCxdSegN1 received on peer=3 in verackack (169.254.58.54:7742)
+2017-05-24 14:56:11 mchn: Parameter set from peer=3 verified
+2017-05-24 14:56:11 mchn: Synced with node 3 on block 114 - requesting mempool
+2017-05-24 15:15:33 mchn: Coin selection: Insufficient funds
+2017-05-24 15:15:33 SendMoney() : Insufficient funds
+2017-05-24 15:18:36 MultiChainMiner: Block Found - 006f2af403ef803f8664664b79ff29f9496954aeed5a94f99564d23221405d19, prev: 0051d327066d67a1314230e2430ec0bb8f7247d71c46ab1a075a6e13444328ff, height: 115, txs: 2
+2017-05-24 15:18:36 UpdateTip:            new best=006f2af403ef803f8664664b79ff29f9496954aeed5a94f99564d23221405d19  height=115  log2_work=14.857981  tx=132  date=2017-05-24 15:18:36 progress=1.000000  cache=0
+2017-05-24 15:18:44 MultiChainMiner: Block Found - 00c4e2542719dd553f7638ca8451b42de5c6c862e2047819b74ad63f3f1a0ad3, prev: 006f2af403ef803f8664664b79ff29f9496954aeed5a94f99564d23221405d19, height: 116, txs: 1
+2017-05-24 15:18:44 UpdateTip:            new best=00c4e2542719dd553f7638ca8451b42de5c6c862e2047819b74ad63f3f1a0ad3  height=116  log2_work=14.870365  tx=133  date=2017-05-24 15:18:44 progress=1.000000  cache=0
+2017-05-24 15:18:47 MultiChainMiner: Block Found - 007478d6ccffc80310abd8b60030769662b78bf22b6277891266d4aefc8eeeaf, prev: 00c4e2542719dd553f7638ca8451b42de5c6c862e2047819b74ad63f3f1a0ad3, height: 117, txs: 1
+2017-05-24 15:18:47 UpdateTip:            new best=007478d6ccffc80310abd8b60030769662b78bf22b6277891266d4aefc8eeeaf  height=117  log2_work=14.882643  tx=134  date=2017-05-24 15:18:47 progress=1.000000  cache=0
+2017-05-24 15:18:48 ResendWalletTransactions()
+2017-05-24 15:18:51 UpdateTip:            new best=0092853309a9c6ce8bbb471c56a211ea65e8266490e125d2af1a8c5990e8239e  height=118  log2_work=14.894818  tx=135  date=2017-05-24 15:18:51 progress=1.000000  cache=0
+2017-05-24 15:18:55 UpdateTip:            new best=00497bc6b650e9d669b3aeae65f0b9da0f60d26241f34d56adee31a39fd5d42f  height=119  log2_work=14.906891  tx=136  date=2017-05-24 15:18:55 progress=1.000000  cache=0
+2017-05-24 15:19:00 ResendWalletTransactions()
+2017-05-24 15:19:00 MultiChainMiner: Block Found - 00bab4fcd511817e174bd6ab6004e5f47697a0417c6fb0ece144a4b8d192037e, prev: 00497bc6b650e9d669b3aeae65f0b9da0f60d26241f34d56adee31a39fd5d42f, height: 120, txs: 1
+2017-05-24 15:19:00 UpdateTip:            new best=00bab4fcd511817e174bd6ab6004e5f47697a0417c6fb0ece144a4b8d192037e  height=120  log2_work=14.918863  tx=137  date=2017-05-24 15:19:00 progress=1.000000  cache=0
+2017-05-24 15:19:06 MultiChainMiner: Block Found - 0022f5a2288fdc1e5e20305e78633b5fef2687992b84899ca0be21bcd74b4d42, prev: 00bab4fcd511817e174bd6ab6004e5f47697a0417c6fb0ece144a4b8d192037e, height: 121, txs: 1
+2017-05-24 15:19:06 UpdateTip:            new best=0022f5a2288fdc1e5e20305e78633b5fef2687992b84899ca0be21bcd74b4d42  height=121  log2_work=14.930737  tx=138  date=2017-05-24 15:19:06 progress=1.000000  cache=0
+2017-05-24 15:19:06 UpdateTip:            new best=0003d305d0582df4882180db2679865c042d3f1461eff0a1b1cd610cb521db72  height=122  log2_work=14.942515  tx=139  date=2017-05-24 15:19:06 progress=1.000000  cache=0
+2017-05-24 15:19:12 UpdateTip:            new best=0020e8ddd5a54c9f82d475a1cd85c6f5dc7dde8c78b9db94e990f9b7e6262409  height=123  log2_work=14.954196  tx=140  date=2017-05-24 15:19:12 progress=1.000000  cache=0
+2017-05-24 15:19:16 ResendWalletTransactions()
+2017-05-24 15:19:17 MultiChainMiner: Block Found - 008f98c79dab1bd2ab3a5cc4e737da05db32a3bccaa37f444b06773c7e6588c3, prev: 0020e8ddd5a54c9f82d475a1cd85c6f5dc7dde8c78b9db94e990f9b7e6262409, height: 124, txs: 1
+2017-05-24 15:19:17 UpdateTip:            new best=008f98c79dab1bd2ab3a5cc4e737da05db32a3bccaa37f444b06773c7e6588c3  height=124  log2_work=14.965784  tx=141  date=2017-05-24 15:19:17 progress=1.000000  cache=0
+2017-05-24 15:19:20 MultiChainMiner: Block Found - 0048b4ae98c374ee15cd2fc2e9238f2b85bc8adaeccd7176a06bb7eea917d207, prev: 008f98c79dab1bd2ab3a5cc4e737da05db32a3bccaa37f444b06773c7e6588c3, height: 125, txs: 1
+2017-05-24 15:19:20 UpdateTip:            new best=0048b4ae98c374ee15cd2fc2e9238f2b85bc8adaeccd7176a06bb7eea917d207  height=125  log2_work=14.97728  tx=142  date=2017-05-24 15:19:20 progress=1.000000  cache=0
+2017-05-24 15:19:52 ResendWalletTransactions()
+2017-05-24 15:23:13 mchn: Destination address doesn't have receive permission: 1RuKjs4TcNM9ee6BKbbL9vrFzehdCkgBSJa8cF
+2017-05-24 15:24:30 mchn: Granting connect,send,receive,mine permission(s) to address 1RuKjs4TcNM9ee6BKbbL9vrFzehdCkgBSJa8cF (0-4294967295)
+2017-05-24 15:24:30 CommitTransaction: 18e31ba1d78afeb4b24fee5f82fa93d02d5950538680540fe404a366c0666507, vin: 1, vout: 3
+2017-05-24 15:24:42 UpdateTip:            new best=00fd2c3e3f7271b2ad6660fd92c140245b154bc776ce799a9cc897b59f63e0e1  height=126  log2_work=14.988685  tx=144  date=2017-05-24 15:24:42 progress=1.000000  cache=0
+2017-05-24 15:24:46 UpdateTip:            new best=004f4d07158f6a687c6a661cb0789388e630c1894002063f6281d467652f3941  height=127  log2_work=15  tx=145  date=2017-05-24 15:24:45 progress=1.000000  cache=0
+2017-05-24 15:24:47 ResendWalletTransactions()
+2017-05-24 15:24:48 CommitTransaction: 6ea5e8c8e045118a794c4abace1ee5c904dec0565e9a793fae3c2138b8a333ee, vin: 1, vout: 2
+2017-05-24 15:24:54 UpdateTip:            new best=002ab71fd3a6c986cf55f1c907277a26129158923a59ba3b9bdb9937b38044e7  height=128  log2_work=15.011227  tx=147  date=2017-05-24 15:24:54 progress=1.000000  cache=0
+2017-05-24 15:24:55 ResendWalletTransactions()
+2017-05-24 15:25:05 UpdateTip:            new best=00ad77951fedfb7a6d7d0685df9f6483d203bdc83b1149911793c96e2f2f2f3f  height=129  log2_work=15.022368  tx=148  date=2017-05-24 15:25:05 progress=1.000000  cache=0
+2017-05-24 15:25:08 ResendWalletTransactions()
+2017-05-24 15:25:17 UpdateTip:            new best=004a0014ebccbe06b606cea214c921cc1b0731c30ec68a8ff80c9325341a85fe  height=130  log2_work=15.033423  tx=149  date=2017-05-24 15:25:16 progress=1.000000  cache=0
+2017-05-24 15:25:19 ResendWalletTransactions()
+2017-05-24 15:25:22 MultiChainMiner: Block Found - 00d0ab4c8a87407cd7457f32240f6465b0c089a55812642e1d4765b6f3bdb8f4, prev: 004a0014ebccbe06b606cea214c921cc1b0731c30ec68a8ff80c9325341a85fe, height: 131, txs: 1
+2017-05-24 15:25:22 UpdateTip:            new best=00d0ab4c8a87407cd7457f32240f6465b0c089a55812642e1d4765b6f3bdb8f4  height=131  log2_work=15.044394  tx=150  date=2017-05-24 15:25:22 progress=1.000000  cache=0
+2017-05-24 15:25:35 ResendWalletTransactions()
+2017-05-24 15:25:35 UpdateTip:            new best=007b9c5f57f560eadaa76b9d2a6c150046aa67c5f869e528d767997c395485af  height=132  log2_work=15.055282  tx=151  date=2017-05-24 15:25:35 progress=1.000000  cache=0
+2017-05-24 15:25:41 UpdateTip:            new best=00716e6a9d4042ae4ab6f76851e6fc4ea30d6b44e2f1b47aba4c43cdd03d94b6  height=133  log2_work=15.066089  tx=152  date=2017-05-24 15:25:41 progress=1.000000  cache=0
+2017-05-24 15:25:49 MultiChainMiner: Block Found - 00a433b134b2bcb7fd9a0fd4dc078b72ab0ed03a683956260d452ce46ac68b90, prev: 00716e6a9d4042ae4ab6f76851e6fc4ea30d6b44e2f1b47aba4c43cdd03d94b6, height: 134, txs: 1
+2017-05-24 15:25:49 UpdateTip:            new best=00a433b134b2bcb7fd9a0fd4dc078b72ab0ed03a683956260d452ce46ac68b90  height=134  log2_work=15.076816  tx=153  date=2017-05-24 15:25:49 progress=1.000000  cache=0
+2017-05-24 15:25:52 MultiChainMiner: Block Found - 00133af9d4a097811ce052954bb6cada54c5452bd7a68b272dd0af7b70c2cc8f, prev: 00a433b134b2bcb7fd9a0fd4dc078b72ab0ed03a683956260d452ce46ac68b90, height: 135, txs: 1
+2017-05-24 15:25:52 UpdateTip:            new best=00133af9d4a097811ce052954bb6cada54c5452bd7a68b272dd0af7b70c2cc8f  height=135  log2_work=15.087463  tx=154  date=2017-05-24 15:25:52 progress=1.000000  cache=0
+2017-05-24 15:26:01 UpdateTip:            new best=00ea0124ddc5e0274593e4a6c622f3fb9e42da9d8f3d65f2563953b78e156999  height=136  log2_work=15.098032  tx=155  date=2017-05-24 15:26:01 progress=1.000000  cache=0
+2017-05-24 15:26:17 ResendWalletTransactions()
+2017-05-24 15:26:20 UpdateTip:            new best=000c4e0d68ac0d874c623a90ef6f7411b1898b133f65c3ea2f664ed867c4e005  height=137  log2_work=15.108524  tx=156  date=2017-05-24 15:26:19 progress=1.000000  cache=0
+2017-05-24 15:26:47 UpdateTip:            new best=0071cd7da608a6f321ba21bd80decc90dda5bb4622845fb31114b1cf48290802  height=138  log2_work=15.118941  tx=157  date=2017-05-24 15:26:47 progress=1.000000  cache=0
+2017-05-24 15:26:58 ResendWalletTransactions()
+2017-05-24 15:27:20 MultiChainMiner: Block Found - 008cf8b38465fffb64af83ba52bd4c4cba615ba285394eb32373775cd1ff431e, prev: 0071cd7da608a6f321ba21bd80decc90dda5bb4622845fb31114b1cf48290802, height: 139, txs: 2
+2017-05-24 15:27:20 UpdateTip:            new best=008cf8b38465fffb64af83ba52bd4c4cba615ba285394eb32373775cd1ff431e  height=139  log2_work=15.129283  tx=159  date=2017-05-24 15:27:20 progress=1.000000  cache=0
+2017-05-24 15:27:31 UpdateTip:            new best=00ae6b2fec1c87702eefa186fdf0cccf7674fbc8cb5a2dab5a5607c49c70ff0b  height=140  log2_work=15.139551  tx=160  date=2017-05-24 15:27:31 progress=1.000000  cache=0
+2017-05-24 15:27:36 ResendWalletTransactions()
+2017-05-24 15:27:41 UpdateTip:            new best=00fa4cf38ca790d7551f7111a6d7f8e57e65125fa01cf3bce551d1398f7e64de  height=141  log2_work=15.149747  tx=161  date=2017-05-24 15:27:41 progress=1.000000  cache=0
+2017-05-24 15:28:02 UpdateTip:            new best=00782e8ab2ce7a98bc7f1eac6266c6952bed051b0a3b86da67274e97393034ae  height=142  log2_work=15.159871  tx=162  date=2017-05-24 15:28:02 progress=1.000000  cache=0
+2017-05-24 15:28:14 ResendWalletTransactions()
+2017-05-24 15:28:17 UpdateTip:            new best=00efc4365816f7446e46aff63ecceb159d1ebf5cdfc1a108398a2ce54e2c397c  height=143  log2_work=15.169925  tx=163  date=2017-05-24 15:28:16 progress=1.000000  cache=0
+2017-05-24 15:28:27 MultiChainMiner: Block Found - 00c9606e2d9db3f19c27212770cb3bb132abbeb638fc1a8c6ca92372ea76096f, prev: 00efc4365816f7446e46aff63ecceb159d1ebf5cdfc1a108398a2ce54e2c397c, height: 144, txs: 1
+2017-05-24 15:28:28 UpdateTip:            new best=00c9606e2d9db3f19c27212770cb3bb132abbeb638fc1a8c6ca92372ea76096f  height=144  log2_work=15.179909  tx=164  date=2017-05-24 15:28:27 progress=1.000000  cache=0
+2017-05-24 15:28:34 MultiChainMiner: Block Found - 00751d290ed713c29d75231e56deafa91f85724d4d83190bd830807cf7d6c4b2, prev: 00c9606e2d9db3f19c27212770cb3bb132abbeb638fc1a8c6ca92372ea76096f, height: 145, txs: 1
+2017-05-24 15:28:34 UpdateTip:            new best=00751d290ed713c29d75231e56deafa91f85724d4d83190bd830807cf7d6c4b2  height=145  log2_work=15.189825  tx=165  date=2017-05-24 15:28:34 progress=1.000000  cache=0
+2017-05-24 15:28:35 ResendWalletTransactions()
+2017-05-24 15:28:53 MultiChainMiner: Block Found - 002a86c4de6247e7bf65334bad7d8a20c7d3918f2baf434be5bda753218845da, prev: 00751d290ed713c29d75231e56deafa91f85724d4d83190bd830807cf7d6c4b2, height: 146, txs: 1
+2017-05-24 15:28:53 UpdateTip:            new best=002a86c4de6247e7bf65334bad7d8a20c7d3918f2baf434be5bda753218845da  height=146  log2_work=15.199672  tx=166  date=2017-05-24 15:28:53 progress=1.000000  cache=0
+2017-05-24 15:29:05 UpdateTip:            new best=004ed5b2c8430650a73774096572c96d07849c87804126dc07dbb9817fdf3755  height=147  log2_work=15.209453  tx=167  date=2017-05-24 15:29:04 progress=1.000000  cache=0
+2017-05-24 15:29:13 ResendWalletTransactions()
+2017-05-24 15:29:25 UpdateTip:            new best=00076f59295fff4954b19c33793c94318e0d6317a591c0b95fc754794d4e1b4f  height=148  log2_work=15.219169  tx=168  date=2017-05-24 15:29:25 progress=1.000000  cache=0
+2017-05-24 15:29:38 MultiChainMiner: Block Found - 00d02cc11f6463bf327640f2ec1aa60121c621e92f60961756e0446f6c8bf15d, prev: 00076f59295fff4954b19c33793c94318e0d6317a591c0b95fc754794d4e1b4f, height: 149, txs: 1
+2017-05-24 15:29:38 UpdateTip:            new best=00d02cc11f6463bf327640f2ec1aa60121c621e92f60961756e0446f6c8bf15d  height=149  log2_work=15.228819  tx=169  date=2017-05-24 15:29:38 progress=1.000000  cache=0
+2017-05-24 15:29:48 ResendWalletTransactions()
+2017-05-24 15:30:04 MultiChainMiner: Block Found - 00eb7959832404bdeaae0d176a906a9a8656c4a69af738fb50544cf25dc818e5, prev: 00d02cc11f6463bf327640f2ec1aa60121c621e92f60961756e0446f6c8bf15d, height: 150, txs: 1
+2017-05-24 15:30:04 UpdateTip:            new best=00eb7959832404bdeaae0d176a906a9a8656c4a69af738fb50544cf25dc818e5  height=150  log2_work=15.238405  tx=170  date=2017-05-24 15:30:04 progress=1.000000  cache=0
+2017-05-24 15:30:25 ResendWalletTransactions()
+2017-05-24 15:54:32 mchn: Coin selection: Insufficient funds
+2017-05-24 15:54:32 SendMoney() : Insufficient funds
+2017-05-24 15:56:12 UpdateTip:            new best=0050c7495c7d7b1ee368e606adeaddef743a536b572f3ce83ee4d0e56937cc6d  height=151  log2_work=15.247928  tx=172  date=2017-05-24 15:56:12 progress=1.000000  cache=0
+2017-05-24 15:56:17 ResendWalletTransactions()
+2017-05-24 15:56:27 UpdateTip:            new best=00d238f1c221b622e28dedfb742318650af63c346e4bd96cd34dab906dd2a841  height=152  log2_work=15.257388  tx=173  date=2017-05-24 15:56:27 progress=1.000000  cache=0
+2017-05-24 15:56:39 MultiChainMiner: Block Found - 003abedc4f5f0812f0b37b80aacba27661f2ab32876b856f76280c340f49f9de, prev: 00d238f1c221b622e28dedfb742318650af63c346e4bd96cd34dab906dd2a841, height: 153, txs: 1
+2017-05-24 15:56:39 UpdateTip:            new best=003abedc4f5f0812f0b37b80aacba27661f2ab32876b856f76280c340f49f9de  height=153  log2_work=15.266787  tx=174  date=2017-05-24 15:56:39 progress=1.000000  cache=0
+2017-05-24 15:56:48 MultiChainMiner: Block Found - 000994629528cd30e704a5081584755991f0528c4a840e55c22a56c514c83df3, prev: 003abedc4f5f0812f0b37b80aacba27661f2ab32876b856f76280c340f49f9de, height: 154, txs: 1
+2017-05-24 15:56:48 UpdateTip:            new best=000994629528cd30e704a5081584755991f0528c4a840e55c22a56c514c83df3  height=154  log2_work=15.276124  tx=175  date=2017-05-24 15:56:48 progress=1.000000  cache=0
+2017-05-24 15:56:49 ResendWalletTransactions()
+2017-05-24 15:56:55 MultiChainMiner: Block Found - 004035d96eb29402c27370a6812a12d63bbc06d9c0a61a92228d893aae681ba3, prev: 000994629528cd30e704a5081584755991f0528c4a840e55c22a56c514c83df3, height: 155, txs: 1
+2017-05-24 15:56:55 UpdateTip:            new best=004035d96eb29402c27370a6812a12d63bbc06d9c0a61a92228d893aae681ba3  height=155  log2_work=15.285402  tx=176  date=2017-05-24 15:56:55 progress=1.000000  cache=0
+2017-05-24 15:57:00 ResendWalletTransactions()
+2017-05-24 15:57:02 MultiChainMiner: Block Found - 003f7fffb731b3537d1a9c3b56085c36e9aac839f1e81b1f72a49ecf096f10f2, prev: 004035d96eb29402c27370a6812a12d63bbc06d9c0a61a92228d893aae681ba3, height: 156, txs: 1
+2017-05-24 15:57:02 UpdateTip:            new best=003f7fffb731b3537d1a9c3b56085c36e9aac839f1e81b1f72a49ecf096f10f2  height=156  log2_work=15.294621  tx=177  date=2017-05-24 15:57:02 progress=1.000000  cache=0
+2017-05-24 15:57:10 UpdateTip:            new best=0050cdf0ccdebdb8bafe13fc28ad6d029f1d1a923cb1f3f5ea4035409c3bf851  height=157  log2_work=15.303781  tx=178  date=2017-05-24 15:57:10 progress=1.000000  cache=0
+2017-05-24 15:57:13 MultiChainMiner: Block Found - 00eb19e72a6ac3fb9715ef51befdc6a22f77bf79aa49e8e46427636cbbed6560, prev: 0050cdf0ccdebdb8bafe13fc28ad6d029f1d1a923cb1f3f5ea4035409c3bf851, height: 158, txs: 1
+2017-05-24 15:57:13 UpdateTip:            new best=00eb19e72a6ac3fb9715ef51befdc6a22f77bf79aa49e8e46427636cbbed6560  height=158  log2_work=15.312883  tx=179  date=2017-05-24 15:57:13 progress=1.000000  cache=0
+2017-05-24 15:57:22 MultiChainMiner: Block Found - 00fbbb946cb4608fe93ff78844b6e466937a71c4f97c7851cceb2ab4203ca32b, prev: 00eb19e72a6ac3fb9715ef51befdc6a22f77bf79aa49e8e46427636cbbed6560, height: 159, txs: 1
+2017-05-24 15:57:22 UpdateTip:            new best=00fbbb946cb4608fe93ff78844b6e466937a71c4f97c7851cceb2ab4203ca32b  height=159  log2_work=15.321928  tx=180  date=2017-05-24 15:57:22 progress=1.000000  cache=0
+2017-05-24 15:57:26 UpdateTip:            new best=00b878b8eec875b0acb26968d22a4aab27e1632e136c5843f2ea7710c7d662e2  height=160  log2_work=15.330917  tx=181  date=2017-05-24 15:57:25 progress=1.000000  cache=0
+2017-05-24 15:57:29 ResendWalletTransactions()
+2017-05-24 15:57:35 UpdateTip:            new best=006572b43e71c11beb3fc4e6c5ec151eed9bbefed2bda0f2d830243f09743a6e  height=161  log2_work=15.33985  tx=182  date=2017-05-24 15:57:34 progress=1.000000  cache=0
+2017-05-24 15:58:13 ResendWalletTransactions()
+2017-05-24 15:59:36 MultiChainMiner: Block Found - 0023acb19331e79273a3b4e92e72653df1ab94c3de8969fa91193676fecd0f32, prev: 006572b43e71c11beb3fc4e6c5ec151eed9bbefed2bda0f2d830243f09743a6e, height: 162, txs: 2
+2017-05-24 15:59:36 UpdateTip:            new best=0023acb19331e79273a3b4e92e72653df1ab94c3de8969fa91193676fecd0f32  height=162  log2_work=15.348728  tx=184  date=2017-05-24 15:59:36 progress=1.000000  cache=0
+2017-05-24 15:59:40 UpdateTip:            new best=0076cfb45dc1741ae61a31efb9d5e49b5c383612b2d4ab3c5a54dc969961467e  height=163  log2_work=15.357552  tx=185  date=2017-05-24 15:59:40 progress=1.000000  cache=0
+2017-05-24 15:59:42 ResendWalletTransactions()
+2017-05-24 15:59:44 UpdateTip:            new best=00cf6b0b4573fd42cbe46e78d994ef48a6823153bbf5a7bd561f256a86ec5318  height=164  log2_work=15.366322  tx=186  date=2017-05-24 15:59:43 progress=1.000000  cache=0
+2017-05-24 15:59:51 MultiChainMiner: Block Found - 00f49752e670749b7b20783ea988352a52bdab04195509b74b3e33e05cb398c2, prev: 00cf6b0b4573fd42cbe46e78d994ef48a6823153bbf5a7bd561f256a86ec5318, height: 165, txs: 1
+2017-05-24 15:59:51 UpdateTip:            new best=00f49752e670749b7b20783ea988352a52bdab04195509b74b3e33e05cb398c2  height=165  log2_work=15.375039  tx=187  date=2017-05-24 15:59:51 progress=1.000000  cache=0
+2017-05-24 15:59:58 ResendWalletTransactions()
+2017-05-24 15:59:59 UpdateTip:            new best=00e9f0f00796ed9c5199a1bd316f0a9d108a4b0979cbda5a0752015aa6046584  height=166  log2_work=15.383704  tx=188  date=2017-05-24 15:59:59 progress=1.000000  cache=0
+2017-05-24 16:00:05 ResendWalletTransactions()
+2017-05-24 16:00:06 UpdateTip:            new best=00d4376bf854a2433db4eb2dc738d9e0638d114a3ab6fadb7d5a455772b3b06d  height=167  log2_work=15.392317  tx=189  date=2017-05-24 16:00:05 progress=1.000000  cache=0
+2017-05-24 16:00:13 ResendWalletTransactions()
+2017-05-24 16:00:18 UpdateTip:            new best=00bf21584d7b3e3d39d70fdc68d310eed6e2dd1b059ff78bd8733d7f2dfd0cf3  height=168  log2_work=15.400879  tx=190  date=2017-05-24 16:00:18 progress=1.000000  cache=0
+2017-05-24 16:00:20 CommitTransaction: d473ed78588f5c240eb641ca72d026c93c7a2cd8a425b8a2202e9d993d284ead, vin: 1, vout: 2
+2017-05-24 16:00:23 ResendWalletTransactions()
+2017-05-24 16:00:33 UpdateTip:            new best=00fd2589e7238e209187f30c512634b2ed113ee9964bdf430a27eca0512d38c8  height=169  log2_work=15.409391  tx=192  date=2017-05-24 16:00:33 progress=1.000000  cache=0
+2017-05-24 16:00:46 ResendWalletTransactions()
+2017-05-24 16:00:47 MultiChainMiner: Block Found - 00ed0ecba193273ff226ec34a5513d9f8775085f414ab6622ae48db652d549dc, prev: 00fd2589e7238e209187f30c512634b2ed113ee9964bdf430a27eca0512d38c8, height: 170, txs: 1
+2017-05-24 16:00:47 UpdateTip:            new best=00ed0ecba193273ff226ec34a5513d9f8775085f414ab6622ae48db652d549dc  height=170  log2_work=15.417853  tx=193  date=2017-05-24 16:00:47 progress=1.000000  cache=0
+2017-05-24 16:01:01 MultiChainMiner: Block Found - 0068908ab746c3e20bc49535700606fcc9234b9d3643f6eef8c9f49529af74f6, prev: 00ed0ecba193273ff226ec34a5513d9f8775085f414ab6622ae48db652d549dc, height: 171, txs: 1
+2017-05-24 16:01:01 UpdateTip:            new best=0068908ab746c3e20bc49535700606fcc9234b9d3643f6eef8c9f49529af74f6  height=171  log2_work=15.426265  tx=194  date=2017-05-24 16:01:01 progress=1.000000  cache=0
+2017-05-24 16:01:23 UpdateTip:            new best=007bb9c674ec9bad1ca114427e6ceb65cf09d3ba5fd39fa1c3d4d39e5eb51273  height=172  log2_work=15.434628  tx=195  date=2017-05-24 16:01:23 progress=1.000000  cache=0
+2017-05-24 16:01:29 ResendWalletTransactions()
+2017-05-24 16:01:38 UpdateTip:            new best=003f9618c11960d6346af15e9b8906b83095b89e6fe6ff4055e3a6f3a49e2615  height=173  log2_work=15.442943  tx=196  date=2017-05-24 16:01:38 progress=1.000000  cache=0
+2017-05-24 16:01:56 ResendWalletTransactions()
+2017-05-24 16:02:03 MultiChainMiner: Block Found - 005c730c92a51d6a977e82b8dc849ed06d9d38c04251f994f94fd1a84db09f3b, prev: 003f9618c11960d6346af15e9b8906b83095b89e6fe6ff4055e3a6f3a49e2615, height: 174, txs: 1
+2017-05-24 16:02:03 UpdateTip:            new best=005c730c92a51d6a977e82b8dc849ed06d9d38c04251f994f94fd1a84db09f3b  height=174  log2_work=15.451211  tx=197  date=2017-05-24 16:02:03 progress=1.000000  cache=0
+2017-05-24 16:02:16 UpdateTip:            new best=00b5efac57b5427614d5471b2b88800dfa6a0fa8398060e0edbc1ab9b6636d13  height=175  log2_work=15.459432  tx=198  date=2017-05-24 16:02:16 progress=1.000000  cache=0
+2017-05-24 16:02:24 ResendWalletTransactions()
+2017-05-24 16:02:28 UpdateTip:            new best=0047e2d9ac191e2f176a5f7f160e45a6d46b151c28ef4020d29084f42741d89a  height=176  log2_work=15.467606  tx=199  date=2017-05-24 16:02:28 progress=1.000000  cache=0
+2017-05-24 16:02:36 MultiChainMiner: Block Found - 00ef7ff0bc8e174b0164ed9006d0cae67f2aa3d64f3f8405f6ea3cd07b9808cd, prev: 0047e2d9ac191e2f176a5f7f160e45a6d46b151c28ef4020d29084f42741d89a, height: 177, txs: 1
+2017-05-24 16:02:36 UpdateTip:            new best=00ef7ff0bc8e174b0164ed9006d0cae67f2aa3d64f3f8405f6ea3cd07b9808cd  height=177  log2_work=15.475733  tx=200  date=2017-05-24 16:02:36 progress=1.000000  cache=0
+2017-05-24 16:02:51 ResendWalletTransactions()
+2017-05-24 16:02:57 MultiChainMiner: Block Found - 006dfd384d8913059c6d4b9a37aa38af1255d7c26764248553bc80e5220515b8, prev: 00ef7ff0bc8e174b0164ed9006d0cae67f2aa3d64f3f8405f6ea3cd07b9808cd, height: 178, txs: 1
+2017-05-24 16:02:57 UpdateTip:            new best=006dfd384d8913059c6d4b9a37aa38af1255d7c26764248553bc80e5220515b8  height=178  log2_work=15.483816  tx=201  date=2017-05-24 16:02:57 progress=1.000000  cache=0
+2017-05-24 16:03:06 UpdateTip:            new best=00c74904b914a37d2089d7085ae6251ee8f4af216f5f1436b9fc1a88cd3b6aac  height=179  log2_work=15.491853  tx=202  date=2017-05-24 16:03:05 progress=1.000000  cache=0
+2017-05-24 16:03:13 ResendWalletTransactions()
+2017-05-24 16:07:21 keypool added key 4, size=2
+2017-05-24 18:16:57 opencon thread interrupt
+2017-05-24 18:16:57 addcon thread interrupt
+2017-05-24 18:16:57 dumpaddr thread stop
+2017-05-24 18:16:57 msghand thread interrupt
+2017-05-24 18:16:57 net thread interrupt
+2017-05-24 18:16:57 Shutdown: In progress...
+2017-05-24 18:16:57 RPCAcceptHandler: Error: A operação de E/S foi cancelada devido a uma saída do módulo ou a um pedido da aplicação
+2017-05-24 18:16:57 RPCAcceptHandler: Error: A operação de E/S foi cancelada devido a uma saída do módulo ou a um pedido da aplicação
+2017-05-24 18:16:57 MultiChainMiner terminated
+2017-05-24 18:16:57 StopNode()
+2017-05-24 18:16:57 Node stopped
+2017-05-24 18:16:57 Shutdown: done
