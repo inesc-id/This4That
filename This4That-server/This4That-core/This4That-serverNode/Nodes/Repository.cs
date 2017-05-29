@@ -176,35 +176,6 @@ namespace This4That_ServerNode.Nodes
         #endregion
 
         #region REMOTE_INTERFACE
-        public bool GetUserIncentiveScheme(string userID, out IncentiveSchemesEnum incentiveScheme)
-        {
-            try
-            {
-                incentiveScheme = UserStorage.GetUserByID(userID).IncentiveScheme;
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Log.Error(ex.Message);
-                incentiveScheme = IncentiveSchemesEnum.None;
-                return false;
-            }
-        }
-
-        public bool SetUserIncentiveScheme(string userID, IncentiveSchemesEnum incentiveScheme)
-        {
-            try
-            {
-                UserStorage.GetUserByID(userID).IncentiveScheme = incentiveScheme;
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Log.Error(ex.Message);
-                incentiveScheme = IncentiveSchemesEnum.None;
-                return false;
-            }
-        }
 
         public bool RegisterTask(CSTaskDTO task, string userID, out string taskID)
         {
@@ -288,8 +259,7 @@ namespace This4That_ServerNode.Nodes
         {
             try
             {
-                //FIXME: nao pode ser centralized as default, tem de ser o que a plataforma é
-                return UserStorage.CreateUser(IncentiveSchemesEnum.Centralized, incentive);
+                return UserStorage.CreateUser(incentive);
             }
             catch (Exception ex)
             {
@@ -510,13 +480,9 @@ namespace This4That_ServerNode.Nodes
         {
             Transaction tx;
             List<Transaction> userTransactions = new List<Transaction>();
-            foreach (KeyValuePair<IncentiveSchemesEnum, string> transaction in UserStorage.GetUserByID(userId).Wallet.Transactions)
+            foreach (string transaction in UserStorage.GetUserByID(userId).Wallet.Transactions)
             {
-                //get only transactions stored in TransactionStorage
-                if (transaction.Key.Equals(IncentiveSchemesEnum.Centralized))
-                    tx = this.RemoteTransactionNode.GetTransactionById(transaction.Value);
-                else
-                    continue;
+                tx = this.RemoteTransactionNode.GetTransactionById(transaction);
 
                 if (tx != null)
                 {
@@ -554,11 +520,11 @@ namespace This4That_ServerNode.Nodes
                 user = UserStorage.GetUserByID(senderId);
                 //calc the new balance for the sender
                 user.Wallet.Balance = incentive.CalcSenderNewBalance(user.Wallet.Balance, incentiveValue);
-                user.Wallet.AssociateTransaction(txId, user.IncentiveScheme);
+                user.Wallet.AssociateTransaction(txId);
                 //calc the new balance for the receiver
                 user = UserStorage.GetUserByID(receiverId);
                 user.Wallet.Balance = incentive.CalcReceiverNewBalance(user.Wallet.Balance, incentiveValue);
-                user.Wallet.AssociateTransaction(txId, user.IncentiveScheme);
+                user.Wallet.AssociateTransaction(txId);
                 return true;
             }
             catch (Exception ex)

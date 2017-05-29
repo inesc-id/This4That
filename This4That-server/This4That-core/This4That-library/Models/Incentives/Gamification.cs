@@ -40,11 +40,6 @@ namespace This4That_library.Models.Incentives
             return intBalance - intIncentiveValue;
         }
 
-        public override object GiveInitialIncentive()
-        {
-            return WALLET_INIT_VALUE;
-        }
-
         public override object CalcReceiverNewBalance(object balance, object incentiveValue)
         {
             int intBalance;
@@ -63,7 +58,7 @@ namespace This4That_library.Models.Incentives
 
         public override object InitWalletBalance()
         {
-            return WALLET_EMPTY;
+            return WALLET_INIT_VALUE;
         }
     }
 }

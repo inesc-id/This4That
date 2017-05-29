@@ -383,32 +383,6 @@ namespace This4That_platform.ServiceLayer
 
         }
 
-        [HttpPost]
-        [Route("user/scheme/descentralized")]
-        public IHttpActionResult EnableDescentralizedScheme()
-        {
-            ServerManager serverMgr = null;
-            APIRequestHandler handler;
-            APIResponseDTO response = new APIResponseDTO();
-
-            try
-            {
-                serverMgr = Global.GetCreateServerManager(HttpContext.Current.Server);
-                handler = new APIRequestHandler(HttpContext.Current.Request, serverMgr);
-                if (!handler.EnableDescentralizedScheme(out response))
-                {
-                    return Content(HttpStatusCode.InternalServerError, response);
-                }
-                return Content(HttpStatusCode.OK, response);
-
-            }
-            catch (Exception ex)
-            {
-                Global.Log.Error(ex.Message);
-                response.SetResponse("Cannot change the scheme to descentralized. Please try again!", APIResponseDTO.RESULT_TYPE.ERROR);
-                return Content(HttpStatusCode.InternalServerError, response);
-            }
-        }
 
         [HttpPost]
         [Route("user/scheme/descentralized/node")]

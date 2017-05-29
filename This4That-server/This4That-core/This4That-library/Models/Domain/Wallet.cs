@@ -9,7 +9,7 @@ namespace This4That_library.Models.Domain
     public class Wallet
     {
         private object balance = null;
-        private List<KeyValuePair<IncentiveSchemesEnum, string>> transactions = new List<KeyValuePair<IncentiveSchemesEnum, string>>();
+        private List<string> transactions = new List<string>();
         private List<string> chainAddresses = new List<string>();
         private string walletAdress = null;
 
@@ -26,7 +26,7 @@ namespace This4That_library.Models.Domain
             }
         }
 
-        public List<KeyValuePair<IncentiveSchemesEnum, string>> Transactions
+        public List<string> Transactions
         {
             get
             {
@@ -65,9 +65,9 @@ namespace This4That_library.Models.Domain
             }
         }
 
-        public void AssociateTransaction(string transactionId, IncentiveSchemesEnum incentiveScheme)
+        public void AssociateTransaction(string transactionId)
         {
-            Transactions.Add(new KeyValuePair<IncentiveSchemesEnum, string>(incentiveScheme, transactionId));
+            Transactions.Add(transactionId);
         }
     }
 }

@@ -13,8 +13,6 @@ namespace This4That_ServerNode.Nodes
     {
         private IRepository repository = null;
         private IncentiveSchemeBase incentiveScheme;
-        private CentralizedIncentiveScheme centralizedIncentiveScheme;
-        private DescentralizedIncentiveScheme descentralizedIncentiveScheme;
 
         public IRepository Repository
         {
@@ -29,16 +27,28 @@ namespace This4That_ServerNode.Nodes
             }
         }
 
+        public IncentiveSchemeBase IncentiveScheme
+        {
+            get
+            {
+                return incentiveScheme;
+            }
+
+            set
+            {
+                incentiveScheme = value;
+            }
+        }
+
         public IncentiveEngine(string hostName, int port, string name) : base(hostName, port, name)
         {
             Console.WriteLine("INCENTIVE ENGINE");
             Console.WriteLine($"HOST: {this.HostName} PORT: {this.Port}");
 
             Log = LogManager.GetLogger("IncentiveEngineLOG");
-            this.centralizedIncentiveScheme = new CentralizedIncentiveScheme(new Gamification());
             try
             {
-                this.descentralizedIncentiveScheme = new DescentralizedIncentiveScheme(new Gamification());
+                this.IncentiveScheme = new CentralizedIncentiveScheme(new Gamification());
             }
             catch (Exception ex)
             {
@@ -89,49 +99,15 @@ namespace This4That_ServerNode.Nodes
             }
         }
 
-        private bool GetUserIncentiveScheme(string userID, out IncentiveSchemeBase incentiveScheme)
-        {
-            IncentiveSchemesEnum incentiveSchemeEnum;
-            incentiveScheme = null;
-            try
-            {
-                if (!this.Repository.GetUserIncentiveScheme(userID, out incentiveSchemeEnum))
-                    return false;
-
-                if (incentiveSchemeEnum == IncentiveSchemesEnum.None)
-                {
-                    Log.Error("Cannot obtain incentive scheme!");
-                    return false;
-                }
-                    
-                if (incentiveSchemeEnum == IncentiveSchemesEnum.Centralized)
-                    incentiveScheme = this.centralizedIncentiveScheme;
-                else
-                    incentiveScheme = this.descentralizedIncentiveScheme;
-                return true;
-            }
-            catch (Exception ex)
-            {
-                log.Error(ex.Message);
-                return false;
-            }
-        }
-
         #region REMOTE_INTERFACE
 
         public bool CalcTaskCost(CSTaskDTO taskSpec, string userID, out object incentiveValue)
         {
-            IncentiveSchemeBase incentiveScheme;
             incentiveValue = null;
             try
             {
                 Console.WriteLine("[INFO - INCENTIVE ENGINE] - Calc Task Cost for User: " + userID);
-                if (!GetUserIncentiveScheme(userID, out incentiveScheme))
-                {
-                    Log.Error("Cannot obtain User incentive scheme!");
-                    return false;
-                }
-                incentiveValue = incentiveScheme.CalcTaskCost(taskSpec);
+                incentiveValue = IncentiveScheme.CalcTaskCost(taskSpec);
                 Console.WriteLine("[INFO - INCENTIVE ENGINE] - Incentive Value: " + incentiveValue.ToString());
                 return true;
             }
@@ -146,30 +122,24 @@ namespace This4That_ServerNode.Nodes
         public bool PayTask(string userId, object incentiveValue, out string transactionId)
         {
             transactionId = null;
-            IncentiveSchemeBase incentiveScheme;
             object userWalletBalance;
             try
             {
-                //get user incentive scheme
-                if (!GetUserIncentiveScheme(userId, out incentiveScheme))
-                {
-                    Log.ErrorFormat("Cannot load incentive scheme for User: [{0}]", userId);
-                }
-                userWalletBalance = incentiveScheme.CheckUserBalance(Repository, userId);
+                userWalletBalance = IncentiveScheme.CheckUserBalance(Repository, userId);
                 if (userWalletBalance == null)
                 {
                     Log.ErrorFormat("Invalid UserID!");
                     return false;
                 }
                 //check if user has sufficient credits, depending the incentive type
-                if (!incentiveScheme.CanPerformTransaction(userWalletBalance, incentiveValue))
+                if (!IncentiveScheme.CanPerformTransaction(userWalletBalance, incentiveValue))
                 {
                     Console.WriteLine("[INFO - INCENTIVE ENGINE] - User: [{0}] Insufficient Balance!", userId);
                     transactionId = null;
                     return true;
                 }
                 //create the transaction and store it into the TransactionStorage
-                if (!incentiveScheme.RegisterTransaction(this.Repository, userId, "Platform", incentiveValue, out transactionId))
+                if (!IncentiveScheme.RegisterTransaction(this.Repository, userId, "Platform", incentiveValue, out transactionId))
                 {
                     Log.ErrorFormat("Cannot register payment task for UserId: [{0}]", userId);
                     Console.WriteLine("[ERROR - INCENTIVE ENGINE] - Cannot register task payment!");
@@ -186,23 +156,15 @@ namespace This4That_ServerNode.Nodes
 
         public bool RewardUser(string userId, out string transactionId, out object taskReward)
         {
-            IncentiveSchemeBase incentiveScheme;
-
             transactionId = null;
             taskReward = null;
             try
             {
-                //get user incentive scheme
-                if (!GetUserIncentiveScheme(userId, out incentiveScheme))
-                {
-                    Log.ErrorFormat("Cannot load incentive scheme for User: [{0}]", userId);
-                    return false;
-                }
                 //obtain the reward for completing the task
-                taskReward = incentiveScheme.IncentiveType.GetTaskReward();
+                taskReward = IncentiveScheme.Incentive.GetTaskReward();
 
                 //create the transaction and store it into the TransactionStorage
-                if (!incentiveScheme.RegisterTransaction(this.Repository, "Platform", userId, taskReward, out transactionId))
+                if (!IncentiveScheme.RegisterTransaction(this.Repository, "Platform", userId, taskReward, out transactionId))
                 {
                     Log.ErrorFormat("Cannot register reward for UserId: [{0}]", userId);
                     Console.WriteLine("[ERROR - INCENTIVE ENGINE] - Cannot register task reward!");
@@ -223,25 +185,16 @@ namespace This4That_ServerNode.Nodes
         public string RegisterUser()
         {
             string userId;
-            IncentiveSchemeBase incentiveScheme;
             object initValue;
             string transactionId;
 
             try
             {
-                //FIXME: change this
-                //in the descentralized way we have to create a wallet address for the user
-                //centralized version as default
-                userId = this.Repository.RegisterUser(this.centralizedIncentiveScheme.IncentiveType);
-                //get user incentive scheme
-                if (!GetUserIncentiveScheme(userId, out incentiveScheme))
-                {
-                    Log.ErrorFormat("Cannot load incentive scheme for User: [{0}]", userId);
-                }
+                userId = this.Repository.RegisterUser(this.IncentiveScheme.Incentive);
                 //get init value based on the incentive
-                initValue = incentiveScheme.IncentiveType.GiveInitialIncentive();
+                initValue = IncentiveScheme.Incentive.InitWalletBalance();
                 //register transaction
-                if (!incentiveScheme.RegisterTransaction(Repository, "Platform", userId, initValue, out transactionId))
+                if (!IncentiveScheme.RegisterTransaction(Repository, "Platform", userId, initValue, out transactionId))
                 {
                     Log.ErrorFormat("Cannot register init value transaction for UserId: [{0}]", userId);
                     Console.WriteLine("[ERROR - INCENTIVE ENGINE] - Cannot register init value transaction!");
@@ -260,19 +213,12 @@ namespace This4That_ServerNode.Nodes
 
         public bool GetUserTransactions(string userId, out List<Transaction> transactions)
         {
-            IncentiveSchemeBase incentiveScheme;
             transactions = null;
 
             try
             {
-                //get user incentive scheme
-                if (!GetUserIncentiveScheme(userId, out incentiveScheme))
-                {
-                    Log.ErrorFormat("Cannot load incentive scheme for User: [{0}]", userId);
-                    return false;
-                }
                 //get user transaction based on the actual incentive scheme
-                transactions = incentiveScheme.GetUserTransactions(Repository, userId);
+                transactions = IncentiveScheme.GetUserTransactions(Repository, userId);
                 if (transactions == null)
                 {
                     Log.Error("Transactions List IS NULL");
@@ -290,45 +236,17 @@ namespace This4That_ServerNode.Nodes
 
 
         #region DESCENTRALIZED_SCHEME_METHODS
-        public bool EnableDescentralizedScheme(string userID)
-        {
-            
-            try
-            {
-                //change the incentive scheme mode
-                if (!this.Repository.SetUserIncentiveScheme(userID, IncentiveSchemesEnum.Descentralized))
-                {
-                    Log.Error("Failed to enable descentralized scheme.");
-                    return false;
-                }
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Log.Error(ex.Message);
-                return false;
-            }
-            
-        }
 
         public bool AddNodeToChain(string userId, string multichainAddress, ref string message)
         {
-            IncentiveSchemeBase incentiveScheme;
             message = null;
 
             try
             {
-                //get user incentive scheme
-                if (!GetUserIncentiveScheme(userId, out incentiveScheme))
-                {
-                    Log.ErrorFormat("Cannot load incentive scheme for User: [{0}]", userId);
-                    message = "Cannot load incentive scheme!";
-                    return false;
-                }
-                if (incentiveScheme.GetType() == typeof(DescentralizedIncentiveScheme))
+                if (IncentiveScheme.GetType() == typeof(DescentralizedIncentiveScheme))
                 {
                     //add node
-                    if (!((DescentralizedIncentiveScheme)incentiveScheme).AddNodeToChain(multichainAddress))
+                    if (!((DescentralizedIncentiveScheme)IncentiveScheme).AddNodeToChain(multichainAddress))
                     {
                         Log.ErrorFormat("Invalid Chain address: [{0}]", multichainAddress);
                         message = "Invalid address!";

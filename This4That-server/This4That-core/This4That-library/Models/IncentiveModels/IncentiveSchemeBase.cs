@@ -11,7 +11,7 @@ namespace This4That_library.Models.IncentiveModels
     {
         private Incentive incentive = null;
 
-        public Incentive IncentiveType
+        public Incentive Incentive
         {
             get
             {
@@ -26,12 +26,12 @@ namespace This4That_library.Models.IncentiveModels
 
         public object CalcTaskCost(CSTaskDTO taskSpec)
         {
-            return this.IncentiveType.GetTaskCreationValue();
+            return this.Incentive.GetTaskCreationValue();
         }
         
         public bool CanPerformTransaction(object balance, object incentiveValue)
         {
-            if (!IncentiveType.CheckSufficientCredits(balance, incentiveValue))
+            if (!Incentive.CheckSufficientCredits(balance, incentiveValue))
                 return false;
 
             return true;

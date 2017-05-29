@@ -29,15 +29,15 @@ namespace This4That_library.Models.Domain
         public UserStorage()
         {
             //FIXME: remove
-            User user = new User("1234", IncentiveSchemesEnum.Centralized, new Gamification());
-            User user1 = new User("12345", IncentiveSchemesEnum.Descentralized, new Gamification());
-            User platformUser = new User("Platform", IncentiveSchemesEnum.Centralized, new Gamification());
+            User user = new User("1234", new Gamification());
+            User user1 = new User("12345", new Gamification());
+            User platformUser = new User("Platform", new Gamification());
             this.Users.Add(user.UserID, user);
             this.Users.Add(platformUser.UserID, platformUser);
             this.Users.Add(user1.UserID, user1);
         }
 
-        public string CreateUser(IncentiveSchemesEnum incentiveScheme, Incentive incentive)
+        public string CreateUser(Incentive incentive)
         {
             try
             {
@@ -48,7 +48,7 @@ namespace This4That_library.Models.Domain
                 {
                     userId = Guid.NewGuid().ToString().Substring(0, 8);
                 }
-                user = new User(userId, incentiveScheme, incentive);
+                user = new User(userId, incentive);
                 Users.Add(userId, user);
                 return user.UserID;
             }

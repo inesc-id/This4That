@@ -17,7 +17,7 @@ namespace This4That_library.Models.Domain
         private List<string> myTasks = new List<string>();
         private List<string> myReports = new List<string>();    
         private List<string> subscribedTopics = new List<string>();
-        private IncentiveSchemesEnum incentiveScheme;
+
         private Wallet wallet = new Wallet();
 
         public string UserID
@@ -72,19 +72,6 @@ namespace This4That_library.Models.Domain
             }
         }
 
-        public IncentiveSchemesEnum IncentiveScheme
-        {
-            get
-            {
-                return incentiveScheme;
-            }
-
-            set
-            {
-                incentiveScheme = value;
-            }
-        }
-
         public Wallet Wallet
         {
             get
@@ -98,10 +85,9 @@ namespace This4That_library.Models.Domain
             }
         }
 
-        public User(string userId, IncentiveSchemesEnum incentiveScheme, Incentive incentive)
+        public User(string userId, Incentive incentive)
         {
             userID = userId;
-            this.IncentiveScheme = incentiveScheme;
             this.Wallet.Balance = incentive.InitWalletBalance();
         }
 

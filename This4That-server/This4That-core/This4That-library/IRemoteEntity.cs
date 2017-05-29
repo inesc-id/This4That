@@ -51,14 +51,11 @@ namespace This4That_library
         bool RewardUser(string userId, out string transactionId, out object rewardObj);
         string RegisterUser();
         bool GetUserTransactions(string userId, out List<Transaction> transactions);
-        bool EnableDescentralizedScheme(string userID);
         bool AddNodeToChain(string userID, string multichainAddress, ref string message);
     }
 
     public interface IRepository : IRemoteEntity
     {
-        bool GetUserIncentiveScheme(string userID, out IncentiveSchemesEnum incentiveType);
-        bool SetUserIncentiveScheme(string userID, IncentiveSchemesEnum incentiveScheme);
         bool RegisterTask(CSTaskDTO topic, string userID, out string taskID);
         bool GetTasksByTopicName(out List<GetTasksDTO> listTaskDTO, string topicName);
         List<String> GetTopicsFromRepository();

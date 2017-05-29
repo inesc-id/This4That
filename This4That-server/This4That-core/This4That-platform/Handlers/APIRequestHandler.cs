@@ -427,32 +427,6 @@ namespace This4That_platform.Handlers
             }
         }
 
-        public bool EnableDescentralizedScheme(out APIResponseDTO response)
-        {
-            response = new APIResponseDTO();
-            APIRequestDTO requestDTO = null;
-            try
-            {
-                //get post parameters
-                if (!GetUserFromRequest(this.request, out requestDTO))
-                    return false;
-
-                if (!this.serverMgr.RemoteIncentiveEngine
-                    .EnableDescentralizedScheme(requestDTO.UserID))
-                {
-                    Global.Log.ErrorFormat("Cannot enable the descentralized scheme for User: [{0}]", requestDTO.UserID);
-                    response.SetErrorResponse("Cannot enable the descentralized scheme!", APIResponseDTO.RESULT_TYPE.ERROR);
-                    return false;
-                }
-                response.SetResponse("Activated", APIResponseDTO.RESULT_TYPE.SUCCESS);
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Global.Log.Debug(ex.Message);
-                return false;
-            }
-        }
 
         #endregion
 
