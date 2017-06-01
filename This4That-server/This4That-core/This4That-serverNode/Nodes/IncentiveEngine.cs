@@ -40,15 +40,18 @@ namespace This4That_ServerNode.Nodes
             }
         }
 
-        public IncentiveEngine(string hostName, int port, string name) : base(hostName, port, name)
+        public IncentiveEngine(string hostName, int port, string name) : base(hostName, port, name, "IncentiveEngineLOG")
         {
             Console.WriteLine("INCENTIVE ENGINE");
             Console.WriteLine($"HOST: {this.HostName} PORT: {this.Port}");
+            List<string> incentives = new List<string>();
 
-            Log = LogManager.GetLogger("IncentiveEngineLOG");
             try
             {
-                this.IncentiveScheme = new CentralizedIncentiveScheme(new Gamification());
+                //get the repository ref
+                ConnectToRepository();
+                incentives.Add(Gamification.GOLD_BADGE);
+                this.IncentiveScheme = new DescentralizedIncentiveScheme(this.Repository, new Gamification(incentives));
             }
             catch (Exception ex)
             {
@@ -62,16 +65,16 @@ namespace This4That_ServerNode.Nodes
         /// </summary>
         /// <param name="serverMgrURL"></param>
         /// <returns></returns>
-        public override bool ConnectServerManager(string serverMgrURL)
+        public override bool ConnectServerManager()
         {
             try
             {
-                this.RemoteServerMgr = (IServerManager)Activator.GetObject(typeof(IServerManager), serverMgrURL);
+                this.RemoteServerMgr = (IServerManager)Activator.GetObject(typeof(IServerManager), Global.SERVER_MANAGER_URL);
                 if (!this.RemoteServerMgr.RegisterIncentiveEngineNode($"tcp://{this.HostName}:{this.Port}/{Global.INCENTIVE_ENGINE_NAME}"))
                 {
                     Log.Error("Cannot connect to Server Manager!");
                 }
-                Log.DebugFormat("ServerManager: [{0}]", serverMgrURL);
+                Log.DebugFormat("ServerManager: [{0}]", Global.SERVER_MANAGER_URL);
                 Console.WriteLine("[INFO] - CONNECTED to ServerManager");
                 Console.WriteLine("----------------------------" + Environment.NewLine);
                 return true;
@@ -79,16 +82,16 @@ namespace This4That_ServerNode.Nodes
             catch (Exception ex)
             {
                 Log.Error(ex.Message);
-                Log.ErrorFormat("Cannot connect Incentive Engine to ServerManager: [{0}", serverMgrURL);
+                Log.ErrorFormat("Cannot connect Incentive Engine to ServerManager: [{0}", Global.SERVER_MANAGER_URL);
                 return false;
             }
         }
 
-        public bool ConnectToRepository(string repositoryUrl)
+        private bool ConnectToRepository()
         {
             try
             {
-                this.Repository = (IRepository)Activator.GetObject(typeof(IRepository), repositoryUrl);
+                this.Repository = (IRepository)Activator.GetObject(typeof(IRepository), Global.REPOSITORY_URL);
                 Log.DebugFormat("[INFO] Incentive Engine connected to Repository.");
                 return true;
             }
@@ -123,9 +126,10 @@ namespace This4That_ServerNode.Nodes
         {
             transactionId = null;
             object userWalletBalance;
+            
             try
             {
-                userWalletBalance = IncentiveScheme.CheckUserBalance(Repository, userId);
+                userWalletBalance = IncentiveScheme.CheckUserBalance(userId);
                 if (userWalletBalance == null)
                 {
                     Log.ErrorFormat("Invalid UserID!");
@@ -139,7 +143,7 @@ namespace This4That_ServerNode.Nodes
                     return true;
                 }
                 //create the transaction and store it into the TransactionStorage
-                if (!IncentiveScheme.RegisterTransaction(this.Repository, userId, "Platform", incentiveValue, out transactionId))
+                if (!IncentiveScheme.RegisterTransaction(userId, "Platform", incentiveValue, out transactionId))
                 {
                     Log.ErrorFormat("Cannot register payment task for UserId: [{0}]", userId);
                     Console.WriteLine("[ERROR - INCENTIVE ENGINE] - Cannot register task payment!");
@@ -164,7 +168,7 @@ namespace This4That_ServerNode.Nodes
                 taskReward = IncentiveScheme.Incentive.GetTaskReward();
 
                 //create the transaction and store it into the TransactionStorage
-                if (!IncentiveScheme.RegisterTransaction(this.Repository, "Platform", userId, taskReward, out transactionId))
+                if (!IncentiveScheme.RegisterTransaction("Platform", userId, taskReward, out transactionId))
                 {
                     Log.ErrorFormat("Cannot register reward for UserId: [{0}]", userId);
                     Console.WriteLine("[ERROR - INCENTIVE ENGINE] - Cannot register task reward!");
@@ -182,30 +186,31 @@ namespace This4That_ServerNode.Nodes
 
         }
 
-        public string RegisterUser()
+        public bool RegisterUser(out string  userId, out string userMultichainAddress)
         {
-            string userId;
             object initValue;
             string transactionId;
-
+            string errorMessage = null;
+            userId = null;
+            userMultichainAddress = null;
             try
             {
                 userId = this.Repository.RegisterUser(this.IncentiveScheme.Incentive);
                 //get init value based on the incentive
                 initValue = IncentiveScheme.Incentive.InitWalletBalance();
-                //register transaction
-                if (!IncentiveScheme.RegisterTransaction(Repository, "Platform", userId, initValue, out transactionId))
+                
+                if (!IncentiveScheme.SaveCreateUserTransaction(userId, initValue, out transactionId, out userMultichainAddress, ref errorMessage))
                 {
-                    Log.ErrorFormat("Cannot register init value transaction for UserId: [{0}]", userId);
-                    Console.WriteLine("[ERROR - INCENTIVE ENGINE] - Cannot register init value transaction!");
+                    Log.Error(errorMessage);
+                    Console.WriteLine("[ERROR - INCENTIVE ENGINE] - Cannot save user creation transaction!");
                 }
-                Console.WriteLine("[INFO - INCENTIVE ENGINE] - User: [{0}] has an initial wallet value: [{1}]", userId, initValue.ToString());
-                return userId;
+                Console.WriteLine("[INFO - INCENTIVE ENGINE] - New User: [{0}] Wallet Balance: [{1}]", userId, initValue.ToString());
+                return true;
             }
             catch (Exception ex)
             {
                 Log.Error(ex.Message);
-                return null;
+                return false;
             }
             
 
@@ -218,7 +223,7 @@ namespace This4That_ServerNode.Nodes
             try
             {
                 //get user transaction based on the actual incentive scheme
-                transactions = IncentiveScheme.GetUserTransactions(Repository, userId);
+                transactions = IncentiveScheme.GetUserTransactions(userId);
                 if (transactions == null)
                 {
                     Log.Error("Transactions List IS NULL");

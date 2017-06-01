@@ -1,5 +1,4 @@
 ﻿using log4net;
-using MultiChainLib;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -19,21 +18,7 @@ namespace This4That_ServerNode.Nodes
 {
     public class TransactionNode : Node, ITransactionNode
     {
-        IRepository remoteRepository = null;
         private TransactionStorage txStorage = new TransactionStorage();
-
-        public IRepository RemoteRepository
-        {
-            get
-            {
-                return remoteRepository;
-            }
-
-            set
-            {
-                remoteRepository = value;
-            }
-        }
 
         public TransactionStorage TxStorage
         {
@@ -48,45 +33,19 @@ namespace This4That_ServerNode.Nodes
             }
         }
 
-        public TransactionNode(string hostName, int port, string name) : base(hostName, port, name)
+        public TransactionNode(string hostName, int port, string name) : base(hostName, port, name, "TransactionNodeLOG")
         {
             Console.WriteLine("TRANSACTION NODE");
             Console.WriteLine($"HOST: {this.HostName} PORT: {this.Port}");
             Console.WriteLine("----------------------------" + Environment.NewLine);
-            Log = LogManager.GetLogger("TransactionNodeLOG");
         }
 
         #region PUBLIC_METHODS
 
-        public override bool ConnectServerManager(string serverMgrURL)
+        public override bool ConnectServerManager()
         {
             //do nothing
             return true;
-        }
-
-        public bool StartRemoteTransactionNodeInstance()
-        {
-            TcpServerChannel channel;
-            try
-            {
-                if (String.IsNullOrEmpty(this.HostName) || this.Port < 0)
-                {
-                    Log.ErrorFormat("Invalid Hostname: [{0}] or Port: [{1}]", this.HostName, this.Port);
-                    return false;
-                }
-                //register remote instance
-                Log.DebugFormat("Valid Hostname: [{0}] Port: [{1}]", this.HostName, this.Port);
-                channel = new TcpServerChannel(this.Name, this.Port);
-                ChannelServices.RegisterChannel(channel, false);
-                RemotingServices.Marshal(this, this.Name, this.GetType());
-                Log.DebugFormat("Node: [{0}] IS RUNNING!", this.Name);
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Log.Error(ex.Message);
-                return false;
-            }
         }
 
         #endregion

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace This4That_library.Models.Incentives
 {
@@ -9,7 +10,14 @@ namespace This4That_library.Models.Incentives
         private const int TASK_CREATION_VALUE = 100;
         private const int TASK_REWARD_VALUE = 50;
         private const int WALLET_EMPTY = 0;
+        public const string GOLD_BADGE = "GOLD_BADGE";
+        public const string SILVER_BADGE = "SILVER_BADGE";
+        public const string BRONZE_BADGE = "BRONZE_BADGE";
 
+        public Gamification(List<string> incentives) : base(incentives)
+        {
+
+        }
 
         public override object GetTaskCreationValue()
         {
@@ -59,6 +67,16 @@ namespace This4That_library.Models.Incentives
         public override object InitWalletBalance()
         {
             return WALLET_INIT_VALUE;
+        }
+
+        public override List<string> GetIncentivesName()
+        {
+            return Incentives;
+        }
+
+        public override object WalletEmpty()
+        {
+            return WALLET_EMPTY;
         }
     }
 }

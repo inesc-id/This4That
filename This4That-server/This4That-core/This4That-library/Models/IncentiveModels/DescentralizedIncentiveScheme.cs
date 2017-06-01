@@ -13,6 +13,7 @@ namespace This4That_library.Models.IncentiveModels
     {
 
         private MultiChainClient multichainClient;
+        private string managerAddress = null;
 
         public MultiChainClient MultichainClient
         {
@@ -27,7 +28,20 @@ namespace This4That_library.Models.IncentiveModels
             }
         }
 
-        public DescentralizedIncentiveScheme(Incentive incentive) : base(incentive)
+        public string ManagerAddress
+        {
+            get
+            {
+                return managerAddress;
+            }
+
+            set
+            {
+                managerAddress = value;
+            }
+        }
+
+        public DescentralizedIncentiveScheme(IRepository repository, Incentive incentive) : base(repository, incentive)
         {
             bool chainAlreadyExist = false;
             int chainPort;
@@ -47,21 +61,70 @@ namespace This4That_library.Models.IncentiveModels
             var response = this.MultichainClient.GetInfoAsync();
 
             Console.WriteLine("[INFO] - Connected to Blockchain : [" + response.Result.Result.ChainName + "] with SUCCESS!");
+            //generates and assoaciates an address for the system Manager
+            GetAddressForManager();
+            //create the incentives to be distributed in the blockchain
+            IssueIncentives();
         }
 
-        public override object CheckUserBalance(IRepository repository, string userId)
+        public override object CheckUserBalance(string userId)
         {
             throw new NotImplementedException();
         }
 
-        public override bool RegisterTransaction(IRepository repository, string sender, string recipient, object incentiveValue, out string transactionId)
+        public override bool RegisterTransaction(string sender, string recipient, object incentiveValue, out string transactionId)
+        {
+            throw new NotImplementedException();
+        }
+        /*
+        public bool IssueIncentiveToUser(string sender, string recipient, object incentiveValue, out string transactionId)
+        {
+            try
+            {
+                var response = this.MultichainClient.IssAsync(recipient, )
+
+            }
+            catch (Exception ex)
+            {
+
+                return false;
+            }
+        }*/
+
+        public override List<Transaction> GetUserTransactions(string userId)
         {
             throw new NotImplementedException();
         }
 
-        public override List<Transaction> GetUserTransactions(IRepository repository, string userId)
+        public override bool SaveCreateUserTransaction(string userId, object initValue, out string transactionId, out string userAddress, ref string errorMessage)
         {
-            throw new NotImplementedException();
+            transactionId = null;
+            try
+            {
+                //get multichain address. this address will be used to deposit and raise rewards.
+                var response = this.MultichainClient.GetNewAddressAsync();
+                response.Result.AssertOk();
+                userAddress = response.Result.Result;
+                //associate the address to user
+                if (!Repository.AddMultiChainAddressToUser(userId, userAddress))
+                {
+                    errorMessage = "Cannot add Multichain address to the user's wallet.";
+                    transactionId = null;
+                    return false;
+                }
+                /*
+                //register the transaction
+                if (!IssueIncentiveToUser("Platform", userAddress, initValue, out transactionId))
+                {
+                    errorMessage = "Cannot register transaction on multichain.";
+                    return false;
+                }*/
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }            
         }
 
         public bool AddNodeToChain(string address)
@@ -152,6 +215,65 @@ namespace This4That_library.Models.IncentiveModels
             //give time to client, to connect to the node
             Thread.Sleep(2000);
             Console.WriteLine("[INFO] - Chain INITIALIZED");
+        }
+
+        private void GetAddressForManager()
+        {
+            string managerAddress;
+            List<string> addressesPermissions = new List<string>();
+            try
+            {
+                var response = this.MultichainClient.GetNewAddressAsync();
+                response.Result.AssertOk();
+                managerAddress = response.Result.Result;
+                addressesPermissions.Add(managerAddress);
+                //permission to connect to the blockchain
+                var resPermissionConnect = this.MultichainClient.GrantAsync(addressesPermissions, BlockchainPermissions.Connect);
+                resPermissionConnect.Result.AssertOk();
+                //permission to perform trasactions
+                var resPermissionSend = this.MultichainClient.GrantAsync(addressesPermissions, BlockchainPermissions.Send);
+                resPermissionSend.Result.AssertOk();
+                //permission to receive transactions
+                var resPermissionsReceive = this.MultichainClient.GrantAsync(addressesPermissions, BlockchainPermissions.Receive);
+                resPermissionsReceive.Result.AssertOk();
+                //permission to issue assets to the blockchain
+                var resPermissionsIssue = this.MultichainClient.GrantAsync(addressesPermissions, BlockchainPermissions.Issue);
+                resPermissionsIssue.Result.AssertOk();
+                //permission to admin the blockchain
+                var resPermissionsAdmin = this.MultichainClient.GrantAsync(addressesPermissions, BlockchainPermissions.Admin);
+                resPermissionsAdmin.Result.AssertOk();
+
+                Repository.AddMultiChainAddressToUser("Platform", managerAddress);
+                this.ManagerAddress = managerAddress;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Create the incentives in the blockchain
+        /// </summary>
+        private void IssueIncentives()
+        {
+            List<string> incentives;
+
+            try
+            {
+                incentives = Incentive.GetIncentivesName();
+                
+                foreach (string incentiveName in incentives)
+                {
+                    var response = this.MultichainClient.IssueAsync(managerAddress, incentiveName, true, 0, 1);
+                    response.Result.AssertOk();
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         #endregion

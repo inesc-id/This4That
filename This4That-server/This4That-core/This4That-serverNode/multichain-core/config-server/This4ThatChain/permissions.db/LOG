@@ -1,9 +1,0 @@
-2017/05/24-15:45:45.000690 1a54 Recovering log #32
-2017/05/24-15:45:45.000690 1a54 Level-0 table #34: started
-2017/05/24-15:45:45.000698 1a54 Level-0 table #34: 2116 bytes OK
-2017/05/24-15:45:45.000702 1a54 Delete type=0 #32
-2017/05/24-15:45:45.000702 1a54 Delete type=3 #30
-2017/05/24-16:24:24.000895 2ab8 Compacting 2@0 + 1@1 files
-2017/05/24-16:24:24.000902 2ab8 Generated table #36: 123 keys, 6288 bytes
-2017/05/24-16:24:24.000902 2ab8 Compacted 2@0 + 1@1 files => 6288 bytes
-2017/05/24-16:24:24.000903 2ab8 compacted to: files[ 0 1 0 0 0 0 0 ]

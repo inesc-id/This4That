@@ -10,8 +10,8 @@ namespace This4That_library.Models.Domain
     {
         private object balance = null;
         private List<string> transactions = new List<string>();
-        private List<string> chainAddresses = new List<string>();
-        private string walletAdress = null;
+        private List<string> chainNodesAddresses = new List<string>();
+        private string walletAddress = null;
 
         public object Balance
         {
@@ -39,29 +39,29 @@ namespace This4That_library.Models.Domain
             }
         }
 
-        public List<string> ChainAddresses
+        public List<string> ChainNodesAddresses
         {
             get
             {
-                return chainAddresses;
+                return chainNodesAddresses;
             }
 
             set
             {
-                chainAddresses = value;
+                chainNodesAddresses = value;
             }
         }
 
-        public string WalletAdress
+        public string WalletAddress
         {
             get
             {
-                return walletAdress;
+                return walletAddress;
             }
 
             set
             {
-                walletAdress = value;
+                walletAddress = value;
             }
         }
 

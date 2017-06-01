@@ -49,7 +49,7 @@ namespace This4That_library
         bool CalcTaskCost(CSTaskDTO taskSpec, string userID, out object incentiveValue);
         bool PayTask(string userId, object inventiveValue, out string transactionId);
         bool RewardUser(string userId, out string transactionId, out object rewardObj);
-        string RegisterUser();
+        bool RegisterUser(out string userId, out string userMultichainAddress);
         bool GetUserTransactions(string userId, out List<Transaction> transactions);
         bool AddNodeToChain(string userID, string multichainAddress, ref string message);
     }
@@ -65,9 +65,10 @@ namespace This4That_library
         List<CSTaskDTO> GetSubscribedTasksbyUserID(string userID);
         List<CSTaskDTO> GetSubscribedTasksbyTopic(string userID, string topicName, ref string errorMessage);
         bool SubscribeTopic(string userId, string topicName, ref string errorMessage);
+        bool AddMultiChainAddressToUser(string userId, string userAddress);
         bool SaveReportInRepository(ReportDTO report);
         bool ExecuteTask(string userID, string taskId);
-        bool CreateTransactionCentralized(string senderID, string receiverID, Incentive incentiveObj, object incentiveValue, out string transactionId);
+        bool CreateTransactionCentralized(string senderID, string receiverID, object incentiveValue, out string transactionId);
         bool ExecuteTransactionCentralized(string senderId, string receiverId, Incentive incentive, object incentiveValue, string txId);
         List<Transaction> GetUserTransactionsCentralized(string userId);
         bool AddNodeToUserWalletDescentralized(string userId, string nodeAddress);

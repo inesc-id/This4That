@@ -85,11 +85,10 @@ namespace This4That_ServerNode.Nodes
             }
         }
 
-        public Repository(string hostName, int port, string name) : base(hostName, port, name)
+        public Repository(string hostName, int port, string name) : base(hostName, port, name, "RepositoryLOG")
         {
             Console.WriteLine("REPOSITORY");
             Console.WriteLine($"HOST: {this.HostName} PORT: {this.Port}");
-            Log = LogManager.GetLogger("RepositoryLOG");
         }
 
 
@@ -98,16 +97,16 @@ namespace This4That_ServerNode.Nodes
         /// </summary>
         /// <param name="serverMgrURL"></param>
         /// <returns></returns>
-        public override bool ConnectServerManager(string serverMgrURL)
+        public override bool ConnectServerManager()
         {
             try
             {
-                this.RemoteServerMgr = (IServerManager)Activator.GetObject(typeof(IServerManager), serverMgrURL);
+                this.RemoteServerMgr = (IServerManager)Activator.GetObject(typeof(IServerManager), Global.SERVER_MANAGER_URL);
                 if (!this.RemoteServerMgr.RegisterRepositoryNode($"tcp://{this.HostName}:{this.Port}/{Global.REPOSITORY_NAME}"))
                 {
                     Log.Error("Cannot connect to Server Manager!");
                 }
-                Log.DebugFormat("ServerManager: [{0}]", serverMgrURL);
+                Log.DebugFormat(" Connected to ServerManager: [{0}]", Global.SERVER_MANAGER_URL);
                 Console.WriteLine("[INFO] - CONNECTED to ServerManager");
                 Console.WriteLine("----------------------------" + Environment.NewLine);
                 return true;
@@ -115,7 +114,7 @@ namespace This4That_ServerNode.Nodes
             catch (Exception ex)
             {
                 Log.Error(ex.Message);
-                Log.ErrorFormat("Cannot connect Repository to ServerManager: [{0}", serverMgrURL);
+                Log.ErrorFormat("Cannot connect Repository to ServerManager: [{0}", Global.SERVER_MANAGER_URL);
                 return false;
             }
         }
@@ -496,7 +495,7 @@ namespace This4That_ServerNode.Nodes
             return userTransactions;
         }
 
-        public bool CreateTransactionCentralized(string senderID, string receiverID, Incentive incentiveObj, object incentiveValue, out string transactionId)
+        public bool CreateTransactionCentralized(string senderID, string receiverID, object incentiveValue, out string transactionId)
         {
             try
             {
@@ -542,11 +541,25 @@ namespace This4That_ServerNode.Nodes
 
             if (user != null)
             {
-                user.Wallet.ChainAddresses.Add(address);
+                user.Wallet.ChainNodesAddresses.Add(address);
                 return true;
             }
             return false;
                 
+        }
+
+        public bool AddMultiChainAddressToUser(string userId, string userAddress)
+        {
+            User user;
+
+            user = this.UserStorage.GetUserByID(userId);
+
+            if (user != null && userAddress != null)
+            {
+                user.Wallet.WalletAddress = userAddress;
+                return true;
+            }
+            return false;
         }
         #endregion
 

@@ -211,13 +211,18 @@ namespace This4That_platform.Handlers
 
         public bool RegisterUser(out APIResponseDTO response)
         {
-            string userId = null;            
+            string userId = null;
+            string userMultichainAddress = null;  
             response = new APIResponseDTO();
             try
             {
-                userId = this.serverMgr.RemoteIncentiveEngine.RegisterUser();
-                response.SetResponse(new Dictionary<string, object>() {
-                                    { "userId", userId} }
+                if (!this.serverMgr.RemoteIncentiveEngine.RegisterUser(out userId, out userMultichainAddress))
+                {
+                    response.SetErrorResponse("Cannot Register User!", APIResponseDTO.RESULT_TYPE.ERROR);
+                    return false;
+                }
+                response.SetResponse(new Dictionary<string, string>()
+                                    { {"userId", userId}, {"multichainAddress", userMultichainAddress }}
                                     , APIResponseDTO.RESULT_TYPE.SUCCESS);
                 return true;
             }

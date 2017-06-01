@@ -22,11 +22,11 @@ namespace This4That_ServerNode.Nodes
             }
         }
 
-        public ReportAggregator(string hostName, int port, string name) : base(hostName, port, name)
+        public ReportAggregator(string hostName, int port, string name) : base(hostName, port, name, "ReportAggregatorLOG")
         {
+            ConnectToRepository();
             Console.WriteLine("REPORT AGGREGATOR");
             Console.WriteLine($"HOST: {this.HostName} PORT: {this.Port}");
-            Log = LogManager.GetLogger("ReportAggregatorLOG");
         }
 
         /// <summary>
@@ -34,16 +34,16 @@ namespace This4That_ServerNode.Nodes
         /// </summary>
         /// <param name="serverMgrURL"></param>
         /// <returns></returns>
-        public override bool ConnectServerManager(string serverMgrURL)
+        public override bool ConnectServerManager()
         {
             try
             {
-                this.RemoteServerMgr = (IServerManager)Activator.GetObject(typeof(IServerManager), serverMgrURL);
+                this.RemoteServerMgr = (IServerManager)Activator.GetObject(typeof(IServerManager), Global.SERVER_MANAGER_URL);
                 if (!this.RemoteServerMgr.RegisterReportAggregatorNode($"tcp://{this.HostName}:{this.Port}/{Global.REPORT_AGGREGATOR_NAME}"))
                 {
                     Log.Error("Cannot connect to Server Manager!");
                 }
-                Log.DebugFormat("ServerManager: [{0}]", serverMgrURL);
+                Log.DebugFormat("ServerManager: [{0}]", Global.SERVER_MANAGER_URL);
                 Console.WriteLine("[INFO] - CONNECTED to ServerManager");
                 Console.WriteLine("----------------------------" + Environment.NewLine);
                 return true;
@@ -51,16 +51,16 @@ namespace This4That_ServerNode.Nodes
             catch (Exception ex)
             {
                 Log.Error(ex.Message);
-                Log.ErrorFormat("Cannot connect Report Aggregator to ServerManager: [{0}", serverMgrURL);
+                Log.ErrorFormat("Cannot connect Report Aggregator to ServerManager: [{0}", Global.SERVER_MANAGER_URL);
                 return false;
             }
         }
 
-        public bool ConnectToRepository(string repositoryUrl)
+        private bool ConnectToRepository()
         {
             try
             {
-                this.RemoteRepository = (IRepository)Activator.GetObject(typeof(IRepository), repositoryUrl);
+                this.RemoteRepository = (IRepository)Activator.GetObject(typeof(IRepository), Global.REPOSITORY_URL);
                 Log.DebugFormat("[INFO] Report Aggregator connected to Repository.");
                 return true;
             }

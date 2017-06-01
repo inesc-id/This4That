@@ -28,10 +28,10 @@ namespace This4That_library.Models.Domain
 
         public UserStorage()
         {
-            //FIXME: remove
-            User user = new User("1234", new Gamification());
-            User user1 = new User("12345", new Gamification());
-            User platformUser = new User("Platform", new Gamification());
+            //FIXME: remove, o incentivo nao pode ser incicializado aqui, pois o incentive engine é que o deve fazer
+            User user = new User("1234", new Gamification(new List<string>() { { Gamification.GOLD_BADGE } }));
+            User user1 = new User("12345", new Gamification(new List<string>() { { Gamification.GOLD_BADGE } }));
+            User platformUser = new User("Platform", new Gamification(new List<string>() { { Gamification.GOLD_BADGE } }));
             this.Users.Add(user.UserID, user);
             this.Users.Add(platformUser.UserID, platformUser);
             this.Users.Add(user1.UserID, user1);

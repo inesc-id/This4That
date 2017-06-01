@@ -35,3 +35,6 @@ hs_err_pid*
 /This4That-server/This4That-test/packages/Newtonsoft.Json.10.0.2/Newtonsoft.Json.10.0.2.nupkg
 /This4That-server/This4That-core/This4That-serverNode/multichain-core/config-client
 /This4That-server/This4That-core/MultiChainLib-master
+/This4That-server/This4That-core/This4That-serverNode/obj
+/This4That-server/This4That-core/This4That-library/obj
+/This4That-server/This4That-core/This4That-platform/obj

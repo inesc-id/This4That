@@ -83,11 +83,13 @@ namespace This4That_ServerNode.Nodes
         #endregion
 
 
-        public Node(string hostName, int port, string name)
+        public Node(string hostName, int port, string name, string loggerName)
         {
             this.HostName = hostName;
             this.Port = port;
             this.Name = name;
+            this.Log = LogManager.GetLogger(loggerName);
+            StartConnectRemoteInstance();
 
         }
 
@@ -109,36 +111,35 @@ namespace This4That_ServerNode.Nodes
         /// </summary>
         /// <param name="serverMgrURL"></param>
         /// <returns></returns>
-        public abstract bool ConnectServerManager(string serverMgrURL);
+        public abstract bool ConnectServerManager();
 
         /// <summary>
         /// Register Remote Object.
         /// </summary>
         /// <param name="networkNode"></param>
         /// <returns></returns>
-        public bool StartConnectRemoteIntance(string serverMgrURL)
+        private bool StartConnectRemoteInstance()
         {
             TcpServerChannel channel;
             try
             {
+                Log.DebugFormat("NAME: [{0}] HOST: [{1}] PORT: [{2}]", Name, HostName, Port);
                 if (String.IsNullOrEmpty(this.HostName) || this.Port < 0)
                 {
-                    Log.ErrorFormat("Invalid Hostname: [{0}] or Port: [{1}]", this.HostName, this.Port);
+                    Log.Error("INVALID HOSTNAME OR PORT!");
                     return false;
                 }
-                //register remote instance
-                Log.DebugFormat("Valid Hostname: [{0}] Port: [{1}]", this.HostName, this.Port);
                 channel = new TcpServerChannel(this.Name, this.Port);
                 ChannelServices.RegisterChannel(channel, false);
                 RemotingServices.Marshal(this, this.Name, this.GetType());
+                Log.DebugFormat("Listening on Port: [{0}]", Port);
                 //connect remote instance to server manager
-                if (!this.ConnectServerManager(serverMgrURL))
+                if (!this.ConnectServerManager())
                     return false;
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Log.Error(ex.Message);
                 return false;
             }
         }

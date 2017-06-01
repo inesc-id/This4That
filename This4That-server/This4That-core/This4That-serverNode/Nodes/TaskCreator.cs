@@ -22,11 +22,11 @@ namespace This4That_ServerNode.Nodes
             }
         }
 
-        public TaskCreator(string hostName, int port, string name) : base(hostName, port, name)
+        public TaskCreator(string hostName, int port, string name) : base(hostName, port, name, "TaskCreatorLOG")
         {
+            ConnectToRepository();
             Console.WriteLine("TASK CREATOR");
             Console.WriteLine($"HOST: {this.HostName} PORT: {this.Port}");
-            Log = LogManager.GetLogger("TaskCreatorLOG");
         }
 
         /// <summary>
@@ -34,16 +34,16 @@ namespace This4That_ServerNode.Nodes
         /// </summary>
         /// <param name="serverMgrURL"></param>
         /// <returns></returns>
-        public override bool ConnectServerManager(string serverMgrURL)
+        public override bool ConnectServerManager()
         {
             try
             {
-                this.RemoteServerMgr = (IServerManager)Activator.GetObject(typeof(IServerManager), serverMgrURL);
+                this.RemoteServerMgr = (IServerManager)Activator.GetObject(typeof(IServerManager), Global.SERVER_MANAGER_URL);
                 if (!this.RemoteServerMgr.RegisterTaskCreatorNode($"tcp://{this.HostName}:{this.Port}/{Global.TASK_CREATOR_NAME}"))
                 {
                     Log.Error("Cannot connect to Server Manager!");
                 }
-                Log.DebugFormat("ServerManager: [{0}]", serverMgrURL);
+                Log.DebugFormat("ServerManager: [{0}]", Global.REPOSITORY_URL);
                 Console.WriteLine("[INFO] - CONNECTED to ServerManager");
                 Console.WriteLine("----------------------------" + Environment.NewLine);
                 return true;
@@ -51,16 +51,16 @@ namespace This4That_ServerNode.Nodes
             catch (Exception ex)
             {
                 Log.Error(ex.Message);
-                Log.ErrorFormat("Cannot connect TaskCreator to ServerManager: [{0}", serverMgrURL);
+                Log.ErrorFormat("Cannot connect TaskCreator to ServerManager: [{0}", Global.REPOSITORY_URL);
                 return false;
             }
         }
 
-        public bool ConnectToRepository(string repositoryUrl)
+        private bool ConnectToRepository()
         {
             try
             {
-                this.RemoteRepository = (IRepository)Activator.GetObject(typeof(IRepository), repositoryUrl);
+                this.RemoteRepository = (IRepository)Activator.GetObject(typeof(IRepository), Global.REPOSITORY_URL);
                 Log.DebugFormat("[INFO - TASK CREATOR] - Connected to Repository.");
                 return true;
             }
