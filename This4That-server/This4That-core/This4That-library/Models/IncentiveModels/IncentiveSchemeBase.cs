@@ -38,30 +38,12 @@ namespace This4That_library.Models.IncentiveModels
             this.Repository = repository;
         }
 
-
-        public object CalcTaskCost(CSTaskDTO taskSpec)
-        {
-            return this.Incentive.GetTaskCreationValue();
-        }
-        public bool CanPerformTransaction(object balance, object incentiveValue)
-        {
-            if (!Incentive.CheckSufficientCredits(balance, incentiveValue))
-                return false;
-
-            return true;
-        }
-
+        public abstract bool PayTask(string sender, out string transactionId);
+        public abstract bool RewardUser(string receiver, out object reward, out string transactionId);
         public abstract bool RegisterTransaction(string sender, string recipient, object incentiveValue, out string transactionId);
-        public abstract object CheckUserBalance(string userId);
+        public abstract bool CheckUserBalance(string userId, int incentiveQty, string incentiveName);
         public abstract List<Transaction> GetUserTransactions(string userId);
-        public abstract bool SaveCreateUserTransaction(string userId, object incentiveValue, out string transactionId, out string userAddress, ref string errorMessage);
+        public abstract bool RegisterUser(out string transactionId, out string userAddress, ref string errorMessage);
     }
 
-    [Serializable]
-    public enum IncentiveSchemesEnum
-    {
-        None,
-        Centralized,
-        Descentralized
-    }
 }

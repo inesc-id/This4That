@@ -13,9 +13,17 @@ namespace This4That_library.Models.IncentiveModels
 
         }
 
-        public override object CheckUserBalance(string userId)
+        public override bool CheckUserBalance(string userId, int incentiveQty, string incentiveName)
         {
-            return Repository.GetUserBalance(userId);
+            /*
+            object balance; 
+
+            balance = Repository.GetUserBalance(userId);
+
+            if (!Incentive.CheckSufficientCredits(balance, incentiveQty))
+                return false;*/
+
+            return false;
         }
 
         public override bool RegisterTransaction(string sender, string receiver, object incentiveValue, out string transactionId)
@@ -39,14 +47,86 @@ namespace This4That_library.Models.IncentiveModels
             return Repository.GetUserTransactionsCentralized(userId);
         }
 
-        public override bool SaveCreateUserTransaction(string userId, object initValue, out string transactionId, out string userAddress, ref string errorMessage)
+        public override bool RegisterUser(out string transactionId, out string userAddress, ref string errorMessage)
         {
-            userAddress = null;
+            //FIXME: alterar initValue, para quantity e o incentivo atribuido
+            object initValue = Incentive.InitIncentiveQuantity();
+            userAddress = GenerateUserId();
+
+            //register user on repository
+            this.Repository.RegisterUser(userAddress, this.Incentive);
+
             //register transaction
-            if (!RegisterTransaction("Platform", userId, initValue, out transactionId))
+            if (!RegisterTransaction("Platform", userAddress, initValue, out transactionId))
                 return false;
 
             return true;
         }
+
+        public override bool PayTask(string sender, out string transactionId)
+        {
+            transactionId = null;
+            string incentiveName;
+            int assetQty;
+            try
+            {
+                incentiveName = this.Incentive.CreateTaskIncentiveName();
+                assetQty = this.Incentive.CreateTaskIncentiveQty();
+
+                //FIXME: in this version the object Incentive must distinct the balance between the Incentives Objects
+
+                //check if user has sufficient credits, depending the incentive type
+                if (!CheckUserBalance(sender, assetQty, incentiveName))
+                {
+                    //return true and tx = null for insuf. funds
+                    Console.WriteLine("[INFO - INCENTIVE ENGINE] - User: [{0}] Insufficient Balance!", sender);
+                    transactionId = null;
+                    return true;
+                }
+                //create the transaction and store it into the TransactionStorage
+                if (!RegisterTransaction(sender, "Platform", assetQty, out transactionId))
+                {
+                    Console.WriteLine("[ERROR - INCENTIVE ENGINE] - Cannot register task payment!");
+                    return false;
+                }
+                return true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public override bool RewardUser(string receiver, out object reward, out string transactionId)
+        {
+            reward = null;
+            transactionId = null;
+            try
+            {
+                //obtain the reward for completing the task
+                object taskReward = Incentive.GetTaskReward();
+
+                //create the transaction and store it into the TransactionStorage
+                if (!RegisterTransaction("Platform", receiver, taskReward, out transactionId))
+                {
+                    return false;
+                }
+                return true;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+
+        #region PRIVATE_METHODS
+
+        private string GenerateUserId()
+        {
+            return Guid.NewGuid().ToString().Substring(0, 8);
+        }
+        #endregion
     }
 }

@@ -88,7 +88,8 @@ namespace This4That_library.Models.Domain
         public User(string userId, Incentive incentive)
         {
             userID = userId;
-            this.Wallet.Balance = incentive.InitWalletBalance();
+            this.Wallet.WalletAddress = userId;
+            this.Wallet.Balance = incentive.WalletEmpty();
         }
 
         public void SubscribeTopic(string topicName)

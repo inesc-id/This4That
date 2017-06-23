@@ -25,7 +25,7 @@ namespace This4That_library.Models.Domain
                 users = value;
             }
         }
-
+        /* USE IN CENTRALIZED VERSION
         public UserStorage()
         {
             //FIXME: remove, o incentivo nao pode ser incicializado aqui, pois o incentive engine é que o deve fazer
@@ -35,22 +35,20 @@ namespace This4That_library.Models.Domain
             this.Users.Add(user.UserID, user);
             this.Users.Add(platformUser.UserID, platformUser);
             this.Users.Add(user1.UserID, user1);
-        }
+        }*/
 
-        public string CreateUser(Incentive incentive)
+        public bool CreateUser(string userAddress, Incentive incentive)
         {
             try
             {
                 User user;
-                string userId = Guid.NewGuid().ToString().Substring(0, 8);
 
-                while (Users.ContainsKey(userId))
-                {
-                    userId = Guid.NewGuid().ToString().Substring(0, 8);
-                }
-                user = new User(userId, incentive);
-                Users.Add(userId, user);
-                return user.UserID;
+                user = new User(userAddress, incentive);
+                if (Users.Keys.Contains(userAddress))
+                    return false;
+
+                Users.Add(userAddress, user);
+                return true;
             }
             catch (Exception ex)
             {

@@ -19,11 +19,6 @@ namespace This4That_library.Models.Incentives
 
         }
 
-        public override object GetTaskCreationValue()
-        {
-            return TASK_CREATION_VALUE;
-        }
-
         public override bool CheckSufficientCredits(object balance, object incentiveValue)
         {
             int intPoints;
@@ -64,7 +59,7 @@ namespace This4That_library.Models.Incentives
             return TASK_REWARD_VALUE;
         }
 
-        public override object InitWalletBalance()
+        public override int InitIncentiveQuantity()
         {
             return WALLET_INIT_VALUE;
         }
@@ -77,6 +72,16 @@ namespace This4That_library.Models.Incentives
         public override object WalletEmpty()
         {
             return WALLET_EMPTY;
+        }
+
+        public override int CreateTaskIncentiveQty()
+        {
+            return TASK_CREATION_VALUE;
+        }
+
+        public override string CreateTaskIncentiveName()
+        {
+            return this.Incentives.Find(elem => elem.Equals(GOLD_BADGE));
         }
     }
 }

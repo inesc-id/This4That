@@ -10399,3 +10399,637 @@ Answer: [Impossível Almoçar] Generated ID: [1124112f]
  [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
 2017-06-01 10:22:00,434 DEBUG RegisterIncentiveEngineNode 227 
  [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-06-01 11:06:43,547 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-06-01 11:06:43,617 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-06-01 11:06:43,626 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-06-01 11:06:45,234 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-06-01 11:06:45,300 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-06-01 11:06:45,338 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-06-01 11:06:45,372 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-06-01 11:06:45,410 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-06-01 11:07:20,771 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-06-01 11:07:20,866 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-06-01 11:07:20,872 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-06-01 11:07:25,140 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-06-01 11:07:25,196 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-06-01 11:07:25,239 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-06-01 11:07:25,272 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-06-01 11:07:25,317 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-06-01 11:07:47,661 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-06-01 11:07:47,746 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-06-01 11:07:47,754 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-06-01 11:07:51,278 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-06-01 11:07:51,346 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-06-01 11:07:51,381 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-06-01 11:07:51,423 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-06-01 11:07:51,477 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-06-01 11:10:05,607 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-06-01 11:10:05,707 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-06-01 11:10:05,717 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-06-01 11:10:08,302 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-06-01 11:10:08,382 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-06-01 11:10:08,423 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-06-01 11:10:08,462 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-06-01 11:10:08,505 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-06-01 11:10:28,666 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-06-01 11:10:28,748 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-06-01 11:10:28,760 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-06-01 11:10:31,877 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-06-01 11:10:31,934 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-06-01 11:10:31,975 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-06-01 11:10:32,037 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-06-01 11:10:32,095 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-06-01 11:12:12,728 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-06-01 11:12:12,812 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-06-01 11:12:12,822 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-06-01 11:12:13,441 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-06-01 11:12:13,591 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-06-01 11:12:13,651 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-06-01 11:12:13,694 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-06-01 11:12:13,752 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-06-01 11:14:20,479 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-06-01 11:14:20,528 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-06-01 11:14:20,543 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-06-01 11:14:26,240 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-06-01 11:14:26,317 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-06-01 11:14:26,348 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-06-01 11:14:26,385 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-06-01 11:14:26,425 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-06-01 11:17:50,047 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-06-01 11:17:50,152 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-06-01 11:17:50,161 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-06-01 11:18:20,166 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-06-01 11:18:20,236 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-06-01 11:18:20,327 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-06-01 11:18:20,373 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-06-01 11:18:20,407 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-06-01 11:18:43,838 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-06-01 11:18:43,928 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-06-01 11:18:43,937 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-06-01 11:18:48,232 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-06-01 11:18:48,286 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-06-01 11:18:48,317 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-06-01 11:18:48,362 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-06-01 11:18:48,427 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-06-01 11:20:24,886 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-06-01 11:20:24,965 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-06-01 11:20:24,972 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-06-01 11:20:25,406 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-06-01 11:20:25,469 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-06-01 11:20:25,547 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-06-01 11:20:25,677 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-06-02 15:50:57,665 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-06-02 15:50:57,765 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-06-02 15:50:57,772 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-06-02 15:51:00,451 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-06-02 15:51:00,507 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-06-02 15:51:00,549 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-06-02 15:51:00,586 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-06-02 15:51:00,627 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-06-02 15:56:39,255 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-06-02 15:56:39,356 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-06-02 15:56:39,367 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-06-02 15:56:43,616 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-06-02 15:56:43,678 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-06-02 15:56:43,727 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-06-02 15:56:43,760 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-06-02 15:56:43,793 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-06-17 10:30:26,516 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-06-17 10:30:26,607 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-06-17 10:30:26,617 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-06-17 10:30:31,264 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-06-17 10:30:31,333 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-06-17 10:30:31,363 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-06-17 10:30:31,395 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-06-17 10:30:31,427 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-06-17 10:31:10,091 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-06-17 10:31:10,143 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-06-17 10:31:10,152 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-06-17 10:31:13,103 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-06-17 10:31:13,175 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-06-17 10:31:13,215 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-06-17 10:31:13,246 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-06-17 10:31:13,280 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-06-17 10:33:53,134 DEBUG GetCSTaskToCreate 504 
+ [Debug Message] - User ID: [e217a3f3] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [17d05c62]
+Answer: [Algumas Pessoas] Generated ID: [861f7ba6]
+Answer: [Muitas Pessoas] Generated ID: [ddb30d1d]
+Answer: [Impossível Almoçar] Generated ID: [f7d06b60] 
+2017-06-17 10:34:43,979 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-06-17 10:34:44,058 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-06-17 10:34:44,067 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-06-17 10:34:47,248 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-06-17 10:34:47,313 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-06-17 10:34:47,353 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-06-17 10:34:47,394 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-06-17 10:34:47,451 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-06-17 10:35:35,962 DEBUG GetCSTaskToCreate 504 
+ [Debug Message] - User ID: [3384d4f9] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [e382b0c7]
+Answer: [Algumas Pessoas] Generated ID: [a41959fb]
+Answer: [Muitas Pessoas] Generated ID: [f21e0d9e]
+Answer: [Impossível Almoçar] Generated ID: [21226569] 
+2017-06-17 10:36:38,536 DEBUG CreateCSTask 449 
+ [Debug Message] - Task with the ID: [2a6f58c5-4a9a-454d-a6bf-2f9f4b6f3bbd] created with Success!
+2017-06-17 10:54:58,110 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-06-17 10:54:58,214 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-06-17 10:54:58,221 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-06-17 10:55:01,330 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-06-17 10:55:01,386 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-06-17 10:55:01,421 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-06-17 10:55:01,459 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-06-17 10:55:01,515 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-06-17 10:55:26,435 DEBUG GetCSTaskToCreate 504 
+ [Debug Message] - User ID: [04974238] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [81e846d7]
+Answer: [Algumas Pessoas] Generated ID: [5db17307]
+Answer: [Muitas Pessoas] Generated ID: [a4959880]
+Answer: [Impossível Almoçar] Generated ID: [408489e3] 
+2017-06-17 10:55:29,086 DEBUG CreateCSTask 449 
+ [Debug Message] - Task with the ID: [6609f885-7df6-4add-81fd-6738c191fb72] created with Success!
+2017-06-17 11:02:38,414 DEBUG GetCSTaskToCreate 504 
+ [Debug Message] - User ID: [04974238] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [2ee5ea35]
+Answer: [Algumas Pessoas] Generated ID: [791eeb90]
+Answer: [Muitas Pessoas] Generated ID: [2b022dc8]
+Answer: [Impossível Almoçar] Generated ID: [66d5578a] 
+2017-06-17 11:03:45,823 DEBUG CreateCSTask 449 
+ [Debug Message] - Task with the ID: [3e3d87c2-a572-4896-97e2-a3f9c6c316b1] created with Success!
+2017-06-17 11:07:43,083 DEBUG GetCSTaskToCreate 504 
+ [Debug Message] - User ID: [04974238] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [3d1a0f5f]
+Answer: [Algumas Pessoas] Generated ID: [7267208d]
+Answer: [Muitas Pessoas] Generated ID: [dffccb87]
+Answer: [Impossível Almoçar] Generated ID: [8beb6f5e] 
+2017-06-17 11:07:45,124 DEBUG CreateCSTask 449 
+ [Debug Message] - Task with the ID: [86333790-a584-4f83-83bc-da691b3119c6] created with Success!
+2017-06-23 10:51:25,362 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-06-23 10:51:25,451 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-06-23 10:51:25,500 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-06-23 10:51:40,844 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-06-23 10:51:40,907 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-06-23 10:51:40,943 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-06-23 10:51:40,983 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-06-23 10:51:41,040 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-06-23 10:54:35,403 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-06-23 10:54:35,458 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-06-23 10:54:35,467 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-06-23 10:54:37,756 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-06-23 10:54:37,824 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-06-23 10:54:37,854 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-06-23 10:54:37,887 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-06-23 10:54:37,934 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-06-23 10:55:22,655 DEBUG GetCSTaskToCreate 504 
+ [Debug Message] - User ID: [2088c347] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [47c51922]
+Answer: [Algumas Pessoas] Generated ID: [8d6e12e7]
+Answer: [Muitas Pessoas] Generated ID: [f60babb5]
+Answer: [Impossível Almoçar] Generated ID: [e3bc152d] 
+2017-06-23 11:25:54,484 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-06-23 11:25:54,568 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-06-23 11:25:54,574 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-06-23 11:26:00,591 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-06-23 11:26:00,661 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-06-23 11:26:00,704 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-06-23 11:26:00,762 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-06-23 11:26:00,812 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-06-23 11:28:05,340 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-06-23 11:28:05,394 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-06-23 11:28:05,403 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-06-23 11:28:08,721 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-06-23 11:28:08,788 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-06-23 11:28:08,830 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-06-23 11:28:08,865 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-06-23 11:28:08,901 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-06-23 14:49:36,779 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-06-23 14:49:36,862 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-06-23 14:49:36,869 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-06-23 14:49:39,038 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-06-23 14:49:39,128 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-06-23 14:49:39,170 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-06-23 14:49:39,201 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-06-23 14:49:39,240 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-06-23 14:58:59,363 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-06-23 14:58:59,432 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-06-23 14:58:59,440 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-06-23 14:59:01,810 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-06-23 14:59:01,871 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-06-23 14:59:01,902 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-06-23 14:59:01,936 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-06-23 14:59:01,970 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-06-23 15:07:56,460 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-06-23 15:07:56,571 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-06-23 15:07:56,579 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-06-23 15:13:53,473 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-06-23 15:13:53,552 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-06-23 15:13:53,561 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-06-23 15:13:55,978 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-06-23 15:13:56,040 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-06-23 15:13:56,074 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-06-23 15:13:56,110 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-06-23 15:13:56,146 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-06-23 15:18:40,401 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-06-23 15:18:40,452 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-06-23 15:18:40,458 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-06-23 15:18:43,725 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-06-23 15:18:43,779 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-06-23 15:18:43,817 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-06-23 15:18:43,853 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-06-23 15:18:43,890 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-06-23 15:22:11,803 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-06-23 15:22:11,889 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-06-23 15:22:11,896 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-06-23 15:22:17,628 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-06-23 15:22:17,680 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-06-23 15:22:17,711 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-06-23 15:22:17,741 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-06-23 15:22:17,774 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-06-23 15:28:54,808 DEBUG GetCSTaskToCreate 504 
+ [Debug Message] - User ID: [1YMW4Ra3kBfEcR9CbzKbkF4X67ZksydXECUU4P] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [97624b53]
+Answer: [Algumas Pessoas] Generated ID: [64548f0d]
+Answer: [Muitas Pessoas] Generated ID: [ccd28130]
+Answer: [Impossível Almoçar] Generated ID: [13e7c69e] 
+2017-06-23 15:29:02,535 DEBUG CreateCSTask 449 
+ [Debug Message] - Task with the ID: [5e1bd4a7-648a-45c3-89e4-5d6588a9489a] created with Success!
+2017-06-23 15:32:12,961 DEBUG GetCSTaskToCreate 504 
+ [Debug Message] - User ID: [1YMW4Ra3kBfEcR9CbzKbkF4X67ZksydXECUU4P] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [8dadc35c]
+Answer: [Algumas Pessoas] Generated ID: [e11b70ba]
+Answer: [Muitas Pessoas] Generated ID: [e7a6989a]
+Answer: [Impossível Almoçar] Generated ID: [99e74c3b] 
+2017-06-23 15:32:16,645 DEBUG CreateCSTask 449 
+ [Debug Message] - Task with the ID: [8aa20886-7593-49f4-bca0-cdc60f85d264] created with Success!
+2017-06-23 15:33:01,699 DEBUG GetCSTaskToCreate 504 
+ [Debug Message] - User ID: [1YMW4Ra3kBfEcR9CbzKbkF4X67ZksydXECUU4P] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [f890ca84]
+Answer: [Algumas Pessoas] Generated ID: [f924dcc0]
+Answer: [Muitas Pessoas] Generated ID: [b90031eb]
+Answer: [Impossível Almoçar] Generated ID: [b7aa15a6] 
+2017-06-23 15:33:01,761 DEBUG CreateCSTask 449 
+ [Debug Message] - Task with the ID: [aa7fa17a-d9ce-4752-8b80-e3b1f8b9e532] created with Success!
+2017-06-23 15:33:04,029 DEBUG GetCSTaskToCreate 504 
+ [Debug Message] - User ID: [1YMW4Ra3kBfEcR9CbzKbkF4X67ZksydXECUU4P] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [f15b744c]
+Answer: [Algumas Pessoas] Generated ID: [459bb272]
+Answer: [Muitas Pessoas] Generated ID: [2a1febbc]
+Answer: [Impossível Almoçar] Generated ID: [e9bb8fa1] 
+2017-06-23 15:33:04,095 DEBUG CreateCSTask 449 
+ [Debug Message] - Task with the ID: [c00bf9ec-bf9e-444f-90c5-dba8ad68af87] created with Success!
+2017-06-23 15:33:05,125 DEBUG GetCSTaskToCreate 504 
+ [Debug Message] - User ID: [1YMW4Ra3kBfEcR9CbzKbkF4X67ZksydXECUU4P] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [b6a150e5]
+Answer: [Algumas Pessoas] Generated ID: [5242f5b3]
+Answer: [Muitas Pessoas] Generated ID: [f9762d40]
+Answer: [Impossível Almoçar] Generated ID: [c863f0fd] 
+2017-06-23 15:33:05,186 DEBUG CreateCSTask 449 
+ [Debug Message] - Task with the ID: [139cc2f6-a102-4d3d-8d20-a0c6cc623210] created with Success!
+2017-06-23 15:35:34,283 DEBUG GetCSTaskToCreate 504 
+ [Debug Message] - User ID: [1YMW4Ra3kBfEcR9CbzKbkF4X67ZksydXECUU4P] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [2514b545]
+Answer: [Algumas Pessoas] Generated ID: [c4a70a12]
+Answer: [Muitas Pessoas] Generated ID: [dbfa052a]
+Answer: [Impossível Almoçar] Generated ID: [1706fc7e] 
+2017-06-23 15:35:34,724 DEBUG CreateCSTask 449 
+ [Debug Message] - Task with the ID: [1906b367-d4c9-4794-97a4-e55d0984ab80] created with Success!
+2017-06-23 15:35:44,989 DEBUG GetCSTaskToCreate 504 
+ [Debug Message] - User ID: [1YMW4Ra3kBfEcR9CbzKbkF4X67ZksydXECUU4P] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [7f1186e7]
+Answer: [Algumas Pessoas] Generated ID: [1c4670a3]
+Answer: [Muitas Pessoas] Generated ID: [a667d93c]
+Answer: [Impossível Almoçar] Generated ID: [5c80653a] 
+2017-06-23 15:35:45,051 DEBUG CreateCSTask 449 
+ [Debug Message] - Task with the ID: [860e1a98-5221-4ef1-a5fd-c8d332aaf90f] created with Success!
+2017-06-23 15:35:45,775 DEBUG GetCSTaskToCreate 504 
+ [Debug Message] - User ID: [1YMW4Ra3kBfEcR9CbzKbkF4X67ZksydXECUU4P] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [0ebc7d4a]
+Answer: [Algumas Pessoas] Generated ID: [a59232e6]
+Answer: [Muitas Pessoas] Generated ID: [86b9d9f0]
+Answer: [Impossível Almoçar] Generated ID: [18d37e7d] 
+2017-06-23 15:35:45,842 DEBUG CreateCSTask 449 
+ [Debug Message] - Task with the ID: [38c753c2-3703-49d8-acb2-6ce64691b601] created with Success!
+2017-06-23 15:35:47,222 DEBUG GetCSTaskToCreate 504 
+ [Debug Message] - User ID: [1YMW4Ra3kBfEcR9CbzKbkF4X67ZksydXECUU4P] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [1bc78556]
+Answer: [Algumas Pessoas] Generated ID: [88bad4ea]
+Answer: [Muitas Pessoas] Generated ID: [9724d7ec]
+Answer: [Impossível Almoçar] Generated ID: [527486e8] 
+2017-06-23 15:35:47,274 DEBUG CreateCSTask 449 
+ [Debug Message] - Task with the ID: [e5c48ef2-44cc-41e7-bf89-21a6c9442eed] created with Success!
+2017-06-23 15:35:48,227 DEBUG GetCSTaskToCreate 504 
+ [Debug Message] - User ID: [1YMW4Ra3kBfEcR9CbzKbkF4X67ZksydXECUU4P] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [bcf6d6d6]
+Answer: [Algumas Pessoas] Generated ID: [e2fe1b15]
+Answer: [Muitas Pessoas] Generated ID: [95f58147]
+Answer: [Impossível Almoçar] Generated ID: [e651cc80] 
+2017-06-23 15:35:48,287 DEBUG CreateCSTask 449 
+ [Debug Message] - Task with the ID: [88a54565-c81f-4a86-bc38-35183395f40a] created with Success!
+2017-06-23 15:36:17,854 DEBUG GetCSTaskToCreate 504 
+ [Debug Message] - User ID: [1YMW4Ra3kBfEcR9CbzKbkF4X67ZksydXECUU4P] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [db539c9e]
+Answer: [Algumas Pessoas] Generated ID: [6ddb39d1]
+Answer: [Muitas Pessoas] Generated ID: [08abc81b]
+Answer: [Impossível Almoçar] Generated ID: [018f09d7] 
+2017-06-23 16:44:21,013 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-06-23 16:44:21,063 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-06-23 16:44:21,070 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-06-23 16:44:22,637 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-06-23 16:44:22,685 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-06-23 16:44:22,715 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-06-23 16:44:22,746 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-06-23 16:44:22,783 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-06-23 16:45:15,234 DEBUG GetCSTaskToCreate 499 
+ [Debug Message] - User ID: [1YMW4Ra3kBfEcR9CbzKbkF4X67ZksydXECUU4P] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [62f0b55f]
+Answer: [Algumas Pessoas] Generated ID: [d2ebaedb]
+Answer: [Muitas Pessoas] Generated ID: [e9df5c90]
+Answer: [Impossível Almoçar] Generated ID: [4de470a3] 
+2017-06-23 16:46:29,215 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-06-23 16:46:29,279 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-06-23 16:46:29,287 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-06-23 16:46:32,038 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-06-23 16:46:32,094 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-06-23 16:46:32,124 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-06-23 16:46:32,157 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-06-23 16:46:32,191 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-06-23 16:46:39,914 DEBUG GetCSTaskToCreate 499 
+ [Debug Message] - User ID: [1YMW4Ra3kBfEcR9CbzKbkF4X67ZksydXECUU4P] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [5db512de]
+Answer: [Algumas Pessoas] Generated ID: [5d55e8ed]
+Answer: [Muitas Pessoas] Generated ID: [abda663c]
+Answer: [Impossível Almoçar] Generated ID: [03bbecb7] 
+2017-06-23 16:46:57,612 DEBUG GetCSTaskToCreate 499 
+ [Debug Message] - User ID: [1YMW4Ra3kBfEcR9CbzKbkF4X67ZksydXECUU4P] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [6fda62e0]
+Answer: [Algumas Pessoas] Generated ID: [de68e29a]
+Answer: [Muitas Pessoas] Generated ID: [983c5a8d]
+Answer: [Impossível Almoçar] Generated ID: [8ca36faf] 
+2017-06-23 16:47:05,837 DEBUG GetCSTaskToCreate 499 
+ [Debug Message] - User ID: [1YMW4Ra3kBfEcR9CbzKbkF4X67ZksydXECUU4P] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [ac3574b1]
+Answer: [Algumas Pessoas] Generated ID: [5800ac9a]
+Answer: [Muitas Pessoas] Generated ID: [10a47a77]
+Answer: [Impossível Almoçar] Generated ID: [a89dfe7c] 
+2017-06-23 16:50:00,025 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-06-23 16:50:00,086 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-06-23 16:50:00,095 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-06-23 16:50:05,154 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-06-23 16:50:05,201 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-06-23 16:50:05,230 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-06-23 16:50:05,263 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-06-23 16:50:05,293 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-06-23 16:50:19,448 DEBUG GetCSTaskToCreate 499 
+ [Debug Message] - User ID: [1YMW4Ra3kBfEcR9CbzKbkF4X67ZksydXECUU4P] Task: Name: Fila Social Exp: 04-06-2017 17:41:00 Topic: Tecnico Filas 
+InteractiveTask: Question: Como está a fila no Social, para almoçar? 
+Answer: [Vazia] Generated ID: [4edf9c54]
+Answer: [Algumas Pessoas] Generated ID: [89895c82]
+Answer: [Muitas Pessoas] Generated ID: [bf485c4f]
+Answer: [Impossível Almoçar] Generated ID: [24005e74] 

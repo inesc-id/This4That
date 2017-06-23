@@ -459,15 +459,10 @@ namespace This4That_platform.Handlers
         private bool PayCSTask(out string transactionId, TaskPayCreateRequestDTO request)
         {
             transactionId = null;
-            object incentiveValue;
+
             try
             {
-                if (!serverMgr.RemoteIncentiveEngine.CalcTaskCost(request.Task, request.UserID, out incentiveValue)
-                    || incentiveValue == null)
-                {
-                    return false;
-                }
-                if (!serverMgr.RemoteIncentiveEngine.PayTask(request.UserID, incentiveValue, out transactionId))
+                if (!serverMgr.RemoteIncentiveEngine.PayTask(request.UserID, out transactionId))
                 {
                     return false;
                 }

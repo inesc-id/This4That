@@ -254,16 +254,19 @@ namespace This4That_ServerNode.Nodes
             }
         }
 
-        public string RegisterUser(Incentive incentive)
+        public bool RegisterUser(string userAddress, Incentive incentive)
         {
             try
             {
-                return UserStorage.CreateUser(incentive);
+                if (!UserStorage.CreateUser(userAddress, incentive))
+                    return false;
+
+                return true;
             }
             catch (Exception ex)
             {
                 Log.Error(ex.Message);
-                return null;
+                return false;
             }
             
         }
@@ -548,19 +551,6 @@ namespace This4That_ServerNode.Nodes
                 
         }
 
-        public bool AddMultiChainAddressToUser(string userId, string userAddress)
-        {
-            User user;
-
-            user = this.UserStorage.GetUserByID(userId);
-
-            if (user != null && userAddress != null)
-            {
-                user.Wallet.WalletAddress = userAddress;
-                return true;
-            }
-            return false;
-        }
         #endregion
 
     }

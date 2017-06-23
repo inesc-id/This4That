@@ -47,7 +47,7 @@ namespace This4That_library
     public interface IIncentiveEngine : IRemoteEntity
     {
         bool CalcTaskCost(CSTaskDTO taskSpec, string userID, out object incentiveValue);
-        bool PayTask(string userId, object inventiveValue, out string transactionId);
+        bool PayTask(string userId, out string transactionId);
         bool RewardUser(string userId, out string transactionId, out object rewardObj);
         bool RegisterUser(out string userId, out string userMultichainAddress);
         bool GetUserTransactions(string userId, out List<Transaction> transactions);
@@ -59,13 +59,12 @@ namespace This4That_library
         bool RegisterTask(CSTaskDTO topic, string userID, out string taskID);
         bool GetTasksByTopicName(out List<GetTasksDTO> listTaskDTO, string topicName);
         List<String> GetTopicsFromRepository();
-        string RegisterUser(Incentive incentive);
+        bool RegisterUser(string userAddress, Incentive incentive);
         object GetUserBalance(string userID);
         List<CSTaskDTO> GetTasksByUserID(string userID);
         List<CSTaskDTO> GetSubscribedTasksbyUserID(string userID);
         List<CSTaskDTO> GetSubscribedTasksbyTopic(string userID, string topicName, ref string errorMessage);
         bool SubscribeTopic(string userId, string topicName, ref string errorMessage);
-        bool AddMultiChainAddressToUser(string userId, string userAddress);
         bool SaveReportInRepository(ReportDTO report);
         bool ExecuteTask(string userID, string taskId);
         bool CreateTransactionCentralized(string senderID, string receiverID, object incentiveValue, out string transactionId);

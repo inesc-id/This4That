@@ -104,49 +104,38 @@ namespace This4That_ServerNode.Nodes
 
         #region REMOTE_INTERFACE
 
-        public bool CalcTaskCost(CSTaskDTO taskSpec, string userID, out object incentiveValue)
+        public bool CalcTaskCost(CSTaskDTO taskSpec, string userID, out object incentive)
         {
-            incentiveValue = null;
+            int incentiveQty;
+            string incentiveName;
             try
             {
                 Console.WriteLine("[INFO - INCENTIVE ENGINE] - Calc Task Cost for User: " + userID);
-                incentiveValue = IncentiveScheme.CalcTaskCost(taskSpec);
-                Console.WriteLine("[INFO - INCENTIVE ENGINE] - Incentive Value: " + incentiveValue.ToString());
+                incentiveQty = IncentiveScheme.Incentive.CreateTaskIncentiveQty();
+                incentiveName = IncentiveScheme.Incentive.CreateTaskIncentiveName();
+
+                incentive = incentiveQty + " " + incentiveName;
+                Console.WriteLine("[INFO - INCENTIVE ENGINE] - Incentive Value: " + incentiveQty + " " + incentiveName);
                 return true;
             }
             catch (Exception ex)
             {
                 Log.Error(ex.Message);
-                incentiveValue = null;
+                incentive = null;
                 return false;
             }
         }
 
-        public bool PayTask(string userId, object incentiveValue, out string transactionId)
+        public bool PayTask(string userId, out string transactionId)
         {
             transactionId = null;
-            object userWalletBalance;
-            
+                        
             try
             {
-                userWalletBalance = IncentiveScheme.CheckUserBalance(userId);
-                if (userWalletBalance == null)
+                if (!IncentiveScheme.PayTask(userId, out transactionId))
                 {
-                    Log.ErrorFormat("Invalid UserID!");
-                    return false;
-                }
-                //check if user has sufficient credits, depending the incentive type
-                if (!IncentiveScheme.CanPerformTransaction(userWalletBalance, incentiveValue))
-                {
-                    Console.WriteLine("[INFO - INCENTIVE ENGINE] - User: [{0}] Insufficient Balance!", userId);
-                    transactionId = null;
+                    Console.WriteLine("[INFO - INCENTIVE ENGINE] - Insufficient funds!");
                     return true;
-                }
-                //create the transaction and store it into the TransactionStorage
-                if (!IncentiveScheme.RegisterTransaction(userId, "Platform", incentiveValue, out transactionId))
-                {
-                    Log.ErrorFormat("Cannot register payment task for UserId: [{0}]", userId);
-                    Console.WriteLine("[ERROR - INCENTIVE ENGINE] - Cannot register task payment!");
                 }
                 Console.WriteLine("[INFO - INCENTIVE ENGINE] - Payment Registered with Success!");
                 return true;
@@ -164,18 +153,13 @@ namespace This4That_ServerNode.Nodes
             taskReward = null;
             try
             {
-                //obtain the reward for completing the task
-                taskReward = IncentiveScheme.Incentive.GetTaskReward();
-
-                //create the transaction and store it into the TransactionStorage
-                if (!IncentiveScheme.RegisterTransaction("Platform", userId, taskReward, out transactionId))
+                if (!IncentiveScheme.RewardUser(userId, out taskReward, out transactionId))
                 {
                     Log.ErrorFormat("Cannot register reward for UserId: [{0}]", userId);
                     Console.WriteLine("[ERROR - INCENTIVE ENGINE] - Cannot register task reward!");
                     return false;
                 }
                 Console.WriteLine("[INFO - INCENTIVE ENGINE] - Payment Registered with Success!");
-
                 return true;
             }
             catch (Exception ex)
@@ -188,23 +172,17 @@ namespace This4That_ServerNode.Nodes
 
         public bool RegisterUser(out string  userId, out string userMultichainAddress)
         {
-            object initValue;
             string transactionId;
             string errorMessage = null;
             userId = null;
             userMultichainAddress = null;
             try
-            {
-                userId = this.Repository.RegisterUser(this.IncentiveScheme.Incentive);
-                //get init value based on the incentive
-                initValue = IncentiveScheme.Incentive.InitWalletBalance();
-                
-                if (!IncentiveScheme.SaveCreateUserTransaction(userId, initValue, out transactionId, out userMultichainAddress, ref errorMessage))
+            {                
+                if (!IncentiveScheme.RegisterUser(out transactionId, out userMultichainAddress, ref errorMessage))
                 {
                     Log.Error(errorMessage);
                     Console.WriteLine("[ERROR - INCENTIVE ENGINE] - Cannot save user creation transaction!");
                 }
-                Console.WriteLine("[INFO - INCENTIVE ENGINE] - New User: [{0}] Wallet Balance: [{1}]", userId, initValue.ToString());
                 return true;
             }
             catch (Exception ex)

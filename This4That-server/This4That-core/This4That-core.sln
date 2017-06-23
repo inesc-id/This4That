@@ -8,6 +8,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "This4That-serverNode", "This4That-serverNode\This4That-serverNode.csproj", "{B6D973AD-93EA-4747-9E57-A9B15AEF97B9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "This4That-library", "This4That-library\This4That-library.csproj", "{30844B3A-646C-4339-9678-85C5D0FB230B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F7C35562-FDD5-4124-86DF-B8BE94CF816D} = {F7C35562-FDD5-4124-86DF-B8BE94CF816D}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiChainLib", "..\..\..\MultiChainLib-master\MultiChainLib\MultiChainLib.csproj", "{F7C35562-FDD5-4124-86DF-B8BE94CF816D}"
 EndProject

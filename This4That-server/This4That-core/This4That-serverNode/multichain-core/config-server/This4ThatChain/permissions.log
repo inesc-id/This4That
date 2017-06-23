@@ -607,3 +607,788 @@
 2017-06-01 10:22:37	Grant: (7c526772-00000000-00000001-2c1b4e0e) (0--1, 0), In consensus: 1, Admin count: 3, Miner count: 3
 2017-06-01 10:22:37	Grant: (7c526772-2c1b4e0e-00000010-2c1b4e0e) (0--1, 0), In consensus: 1, Admin count: 3, Miner count: 3
 2017-06-01 10:22:37	Grant: (7c526772-2c1b4e0e-00001000-2c1b4e0e) (0--1, 0), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:06:47	Initialize: Cannot open database
+2017-06-01 11:06:49	Grant: (00000000-c463ec49-00000001-2c1b4e0e) (0--1, 1496311609), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:06:49	Grant: (00000000-c463ec49-00000002-7ea4020c) (0--1, 1496311609), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:06:49	Grant: (00000000-c463ec49-00000004-026513e5) (0--1, 1496311609), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:06:49	Grant: (00000000-c463ec49-00000010-026513e5) (0--1, 1496311609), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:06:49	Grant: (00000000-c463ec49-00001000-7ea4020c) (0--1, 1496311609), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-01 11:07:27	Initialize: Cannot open database
+2017-06-01 11:07:28	Grant: (00000000-06f8d9ad-00000001-7ea4020c) (0--1, 1496311648), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:07:28	Grant: (00000000-06f8d9ad-00000002-026513e5) (0--1, 1496311648), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:07:28	Grant: (00000000-06f8d9ad-00000004-7ea4020c) (0--1, 1496311648), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:07:28	Grant: (00000000-06f8d9ad-00000010-2c1b4e0e) (0--1, 1496311648), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:07:28	Grant: (00000000-06f8d9ad-00001000-7ea4020c) (0--1, 1496311648), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-01 11:07:53	Initialize: Cannot open database
+2017-06-01 11:08:00	Grant: (00000000-435673c9-00000001-026513e5) (0--1, 1496311680), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:08:00	Grant: (00000000-435673c9-00000002-026513e5) (0--1, 1496311680), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:08:00	Grant: (00000000-435673c9-00000004-2c1b4e0e) (0--1, 1496311680), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:08:01	Grant: (00000000-435673c9-00000010-7ea4020c) (0--1, 1496311680), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:08:01	Grant: (00000000-435673c9-00001000-2c1b4e0e) (0--1, 1496311681), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-01 11:10:10	Initialize: Cannot open database
+2017-06-01 11:10:13	Grant: (00000000-e2a75a52-00000001-026513e5) (0--1, 1496311813), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:10:13	Grant: (00000000-e2a75a52-00000002-7ea4020c) (0--1, 1496311813), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:10:13	Grant: (00000000-e2a75a52-00000004-7ea4020c) (0--1, 1496311813), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:10:13	Grant: (00000000-e2a75a52-00000010-026513e5) (0--1, 1496311813), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:10:13	Grant: (00000000-e2a75a52-00001000-2c1b4e0e) (0--1, 1496311813), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-01 11:10:34	Initialize: Cannot open database
+2017-06-01 11:10:37	Grant: (00000000-a04a6559-00000001-2c1b4e0e) (0--1, 1496311837), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:10:37	Grant: (00000000-a04a6559-00000002-026513e5) (0--1, 1496311837), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:10:37	Grant: (00000000-a04a6559-00000004-026513e5) (0--1, 1496311837), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:10:37	Grant: (00000000-a04a6559-00000010-026513e5) (0--1, 1496311837), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:10:37	Grant: (00000000-a04a6559-00001000-2c1b4e0e) (0--1, 1496311837), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-01 11:12:15	Initialize: Cannot open database
+2017-06-01 11:12:16	Grant: (00000000-69cfcd80-00000001-026513e5) (0--1, 1496311936), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:12:16	Grant: (00000000-69cfcd80-00000002-2c1b4e0e) (0--1, 1496311936), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:12:16	Grant: (00000000-69cfcd80-00000004-7ea4020c) (0--1, 1496311936), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:12:16	Grant: (00000000-69cfcd80-00000010-2c1b4e0e) (0--1, 1496311936), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:12:16	Grant: (00000000-69cfcd80-00001000-7ea4020c) (0--1, 1496311936), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-01 11:14:29	Initialize: Cannot open database
+2017-06-01 11:14:29	Grant: (00000000-e187518d-00000001-026513e5) (0--1, 1496312069), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:14:29	Grant: (00000000-e187518d-00000002-2c1b4e0e) (0--1, 1496312069), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:14:29	Grant: (00000000-e187518d-00000004-7ea4020c) (0--1, 1496312069), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:14:29	Grant: (00000000-e187518d-00000010-7ea4020c) (0--1, 1496312069), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:14:29	Grant: (00000000-e187518d-00001000-026513e5) (0--1, 1496312069), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-01 11:18:22	Initialize: Cannot open database
+2017-06-01 11:18:24	Grant: (00000000-496b4f10-00000001-7ea4020c) (0--1, 1496312304), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:18:24	Grant: (00000000-496b4f10-00000002-7ea4020c) (0--1, 1496312304), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:18:24	Grant: (00000000-496b4f10-00000004-2c1b4e0e) (0--1, 1496312304), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:18:24	Grant: (00000000-496b4f10-00000010-7ea4020c) (0--1, 1496312304), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:18:25	Grant: (00000000-496b4f10-00001000-7ea4020c) (0--1, 1496312304), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-01 11:18:50	Initialize: Cannot open database
+2017-06-01 11:18:51	Grant: (00000000-a622950c-00000001-2c1b4e0e) (0--1, 1496312331), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:18:51	Grant: (00000000-a622950c-00000002-026513e5) (0--1, 1496312331), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:18:51	Grant: (00000000-a622950c-00000004-7ea4020c) (0--1, 1496312331), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:18:51	Grant: (00000000-a622950c-00000010-7ea4020c) (0--1, 1496312331), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:18:51	Grant: (00000000-a622950c-00001000-7ea4020c) (0--1, 1496312331), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-01 11:20:27	Initialize: Cannot open database
+2017-06-01 11:20:28	Grant: (00000000-08a370b3-00000001-7ea4020c) (0--1, 1496312428), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:20:28	Grant: (00000000-08a370b3-00000002-2c1b4e0e) (0--1, 1496312428), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:20:28	Grant: (00000000-08a370b3-00000004-7ea4020c) (0--1, 1496312428), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:20:28	Grant: (00000000-08a370b3-00000010-026513e5) (0--1, 1496312428), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-01 11:20:28	Grant: (00000000-08a370b3-00001000-2c1b4e0e) (0--1, 1496312428), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-02 15:51:02	Initialized: Admin count: 1, Miner count: 3, DB rows: 324, ledger rows: 609
+2017-06-02 15:51:04	Block rollback:       276, Admin count: 1, Miner count: 3, DB rows: 324, Ledger Rows: 609
+2017-06-02 15:51:06	Grant: (00000000-2c1b4e0e-00000001-026513e5) (0--1, 1496305216), In consensus: 1, Admin count: 1, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-2c1b4e0e-00000002-026513e5) (0--1, 1496305218), In consensus: 1, Admin count: 1, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-2c1b4e0e-00000004-026513e5) (0--1, 1496305218), In consensus: 1, Admin count: 1, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-2c1b4e0e-00000010-026513e5) (0--1, 1496305219), In consensus: 1, Admin count: 1, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-2c1b4e0e-00001000-026513e5) (0--1, 1496305221), In consensus: 1, Admin count: 2, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-7ea4020c-00000001-026513e5) (0--1, 1496305338), In consensus: 1, Admin count: 2, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-7ea4020c-00000002-2c1b4e0e) (0--1, 1496305338), In consensus: 1, Admin count: 2, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-7ea4020c-00000004-2c1b4e0e) (0--1, 1496305338), In consensus: 1, Admin count: 2, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-7ea4020c-00000010-2c1b4e0e) (0--1, 1496305338), In consensus: 1, Admin count: 2, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-7ea4020c-00001000-2c1b4e0e) (0--1, 1496305339), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-c6ec2ee2-00000001-026513e5) (0--1, 1496305517), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-c6ec2ee2-00000002-2c1b4e0e) (0--1, 1496305517), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-c6ec2ee2-00000004-7ea4020c) (0--1, 1496305517), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-c6ec2ee2-00000010-2c1b4e0e) (0--1, 1496305517), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-c6ec2ee2-00001000-7ea4020c) (0--1, 1496305517), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-9fec86f3-00000001-2c1b4e0e) (0--1, 1496306313), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-9fec86f3-00000002-2c1b4e0e) (0--1, 1496306314), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-9fec86f3-00000004-7ea4020c) (0--1, 1496306317), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-9fec86f3-00000010-2c1b4e0e) (0--1, 1496306319), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-9fec86f3-00001000-2c1b4e0e) (0--1, 1496306321), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-5794d85b-00000001-7ea4020c) (0--1, 1496306766), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-5794d85b-00000002-2c1b4e0e) (0--1, 1496306767), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-5794d85b-00000004-2c1b4e0e) (0--1, 1496306767), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-5794d85b-00000010-7ea4020c) (0--1, 1496306768), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-5794d85b-00001000-2c1b4e0e) (0--1, 1496306775), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-be0a7ea9-00000001-2c1b4e0e) (0--1, 1496307108), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-be0a7ea9-00000002-026513e5) (0--1, 1496307108), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-be0a7ea9-00000004-7ea4020c) (0--1, 1496307108), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-be0a7ea9-00000010-026513e5) (0--1, 1496307108), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-be0a7ea9-00001000-7ea4020c) (0--1, 1496307108), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-09902e1d-00000001-7ea4020c) (0--1, 1496307571), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-09902e1d-00000002-7ea4020c) (0--1, 1496307571), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-09902e1d-00000004-2c1b4e0e) (0--1, 1496307571), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-09902e1d-00000010-7ea4020c) (0--1, 1496307572), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:06	Grant: (00000000-09902e1d-00001000-2c1b4e0e) (0--1, 1496307572), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-11a6a6ed-00000001-7ea4020c) (0--1, 1496307704), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-11a6a6ed-00000002-7ea4020c) (0--1, 1496307704), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-11a6a6ed-00000004-026513e5) (0--1, 1496307704), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-11a6a6ed-00000010-2c1b4e0e) (0--1, 1496307704), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-11a6a6ed-00001000-2c1b4e0e) (0--1, 1496307704), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (cb3b42dc-00000000-00000001-be0a7ea9) (0--1, 0), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (cb3b42dc-be0a7ea9-00000010-be0a7ea9) (0--1, 0), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (cb3b42dc-be0a7ea9-00001000-be0a7ea9) (0--1, 0), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-e29c4992-00000001-7ea4020c) (0--1, 1496308924), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-e29c4992-00000002-026513e5) (0--1, 1496308924), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-e29c4992-00000004-7ea4020c) (0--1, 1496308924), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-e29c4992-00000010-026513e5) (0--1, 1496308924), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-e29c4992-00001000-026513e5) (0--1, 1496308924), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (7c526772-00000000-00000001-2c1b4e0e) (0--1, 0), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (7c526772-2c1b4e0e-00000010-2c1b4e0e) (0--1, 0), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (7c526772-2c1b4e0e-00001000-2c1b4e0e) (0--1, 0), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-c463ec49-00000001-2c1b4e0e) (0--1, 1496311609), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-c463ec49-00000002-7ea4020c) (0--1, 1496311609), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-c463ec49-00000004-026513e5) (0--1, 1496311609), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-c463ec49-00000010-026513e5) (0--1, 1496311609), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-c463ec49-00001000-7ea4020c) (0--1, 1496311609), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-06f8d9ad-00000001-7ea4020c) (0--1, 1496311648), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-06f8d9ad-00000002-026513e5) (0--1, 1496311648), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-06f8d9ad-00000004-7ea4020c) (0--1, 1496311648), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-06f8d9ad-00000010-2c1b4e0e) (0--1, 1496311648), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-06f8d9ad-00001000-7ea4020c) (0--1, 1496311648), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-435673c9-00000001-026513e5) (0--1, 1496311680), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-435673c9-00000002-026513e5) (0--1, 1496311680), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-435673c9-00000004-2c1b4e0e) (0--1, 1496311680), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-435673c9-00000010-7ea4020c) (0--1, 1496311680), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-435673c9-00001000-2c1b4e0e) (0--1, 1496311681), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-e2a75a52-00000001-026513e5) (0--1, 1496311813), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-e2a75a52-00000002-7ea4020c) (0--1, 1496311813), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-e2a75a52-00000004-7ea4020c) (0--1, 1496311813), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-e2a75a52-00000010-026513e5) (0--1, 1496311813), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-e2a75a52-00001000-2c1b4e0e) (0--1, 1496311813), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-a04a6559-00000001-2c1b4e0e) (0--1, 1496311837), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-a04a6559-00000002-026513e5) (0--1, 1496311837), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-a04a6559-00000004-026513e5) (0--1, 1496311837), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-a04a6559-00000010-026513e5) (0--1, 1496311837), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-a04a6559-00001000-2c1b4e0e) (0--1, 1496311837), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-69cfcd80-00000001-026513e5) (0--1, 1496311936), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-69cfcd80-00000002-2c1b4e0e) (0--1, 1496311936), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-69cfcd80-00000004-7ea4020c) (0--1, 1496311936), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-69cfcd80-00000010-2c1b4e0e) (0--1, 1496311936), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-69cfcd80-00001000-7ea4020c) (0--1, 1496311936), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-e187518d-00000001-026513e5) (0--1, 1496312069), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-e187518d-00000002-2c1b4e0e) (0--1, 1496312069), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-e187518d-00000004-7ea4020c) (0--1, 1496312069), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-e187518d-00000010-7ea4020c) (0--1, 1496312069), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-e187518d-00001000-026513e5) (0--1, 1496312069), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-496b4f10-00000001-7ea4020c) (0--1, 1496312304), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-496b4f10-00000002-7ea4020c) (0--1, 1496312304), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-496b4f10-00000004-2c1b4e0e) (0--1, 1496312304), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-496b4f10-00000010-7ea4020c) (0--1, 1496312304), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-496b4f10-00001000-7ea4020c) (0--1, 1496312304), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-02 15:51:07	Grant: (00000000-a622950c-00000001-2c1b4e0e) (0--1, 1496312331), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:08	Grant: (00000000-a622950c-00000002-026513e5) (0--1, 1496312331), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:08	Grant: (00000000-a622950c-00000004-7ea4020c) (0--1, 1496312331), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:08	Grant: (00000000-a622950c-00000010-7ea4020c) (0--1, 1496312331), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:08	Grant: (00000000-a622950c-00001000-7ea4020c) (0--1, 1496312331), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-02 15:51:08	Grant: (00000000-08a370b3-00000001-7ea4020c) (0--1, 1496312428), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:08	Grant: (00000000-08a370b3-00000002-2c1b4e0e) (0--1, 1496312428), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:08	Grant: (00000000-08a370b3-00000004-7ea4020c) (0--1, 1496312428), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:08	Grant: (00000000-08a370b3-00000010-026513e5) (0--1, 1496312428), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:51:08	Grant: (00000000-08a370b3-00001000-2c1b4e0e) (0--1, 1496312428), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-02 15:56:45	Initialize: Cannot open database
+2017-06-02 15:56:46	Grant: (00000000-83acac41-00000001-7ea4020c) (0--1, 1496415406), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:56:46	Grant: (00000000-83acac41-00000002-026513e5) (0--1, 1496415406), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:56:46	Grant: (00000000-83acac41-00000004-026513e5) (0--1, 1496415406), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:56:46	Grant: (00000000-83acac41-00000010-7ea4020c) (0--1, 1496415406), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-02 15:56:46	Grant: (00000000-83acac41-00001000-7ea4020c) (0--1, 1496415406), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:30:33	Initialized: Admin count: 1, Miner count: 3, DB rows: 324, ledger rows: 609
+2017-06-17 10:30:35	Block rollback:       276, Admin count: 1, Miner count: 3, DB rows: 324, Ledger Rows: 609
+2017-06-17 10:30:36	Grant: (00000000-2c1b4e0e-00000001-026513e5) (0--1, 1496305216), In consensus: 1, Admin count: 1, Miner count: 3
+2017-06-17 10:30:36	Grant: (00000000-2c1b4e0e-00000002-026513e5) (0--1, 1496305218), In consensus: 1, Admin count: 1, Miner count: 3
+2017-06-17 10:30:36	Grant: (00000000-2c1b4e0e-00000004-026513e5) (0--1, 1496305218), In consensus: 1, Admin count: 1, Miner count: 3
+2017-06-17 10:30:36	Grant: (00000000-2c1b4e0e-00000010-026513e5) (0--1, 1496305219), In consensus: 1, Admin count: 1, Miner count: 3
+2017-06-17 10:30:36	Grant: (00000000-2c1b4e0e-00001000-026513e5) (0--1, 1496305221), In consensus: 1, Admin count: 2, Miner count: 3
+2017-06-17 10:30:36	Grant: (00000000-7ea4020c-00000001-026513e5) (0--1, 1496305338), In consensus: 1, Admin count: 2, Miner count: 3
+2017-06-17 10:30:36	Grant: (00000000-7ea4020c-00000002-2c1b4e0e) (0--1, 1496305338), In consensus: 1, Admin count: 2, Miner count: 3
+2017-06-17 10:30:36	Grant: (00000000-7ea4020c-00000004-2c1b4e0e) (0--1, 1496305338), In consensus: 1, Admin count: 2, Miner count: 3
+2017-06-17 10:30:36	Grant: (00000000-7ea4020c-00000010-2c1b4e0e) (0--1, 1496305338), In consensus: 1, Admin count: 2, Miner count: 3
+2017-06-17 10:30:36	Grant: (00000000-7ea4020c-00001000-2c1b4e0e) (0--1, 1496305339), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:36	Grant: (00000000-c6ec2ee2-00000001-026513e5) (0--1, 1496305517), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:36	Grant: (00000000-c6ec2ee2-00000002-2c1b4e0e) (0--1, 1496305517), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:36	Grant: (00000000-c6ec2ee2-00000004-7ea4020c) (0--1, 1496305517), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:36	Grant: (00000000-c6ec2ee2-00000010-2c1b4e0e) (0--1, 1496305517), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:36	Grant: (00000000-c6ec2ee2-00001000-7ea4020c) (0--1, 1496305517), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:30:36	Grant: (00000000-9fec86f3-00000001-2c1b4e0e) (0--1, 1496306313), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:36	Grant: (00000000-9fec86f3-00000002-2c1b4e0e) (0--1, 1496306314), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:36	Grant: (00000000-9fec86f3-00000004-7ea4020c) (0--1, 1496306317), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:36	Grant: (00000000-9fec86f3-00000010-2c1b4e0e) (0--1, 1496306319), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:36	Grant: (00000000-9fec86f3-00001000-2c1b4e0e) (0--1, 1496306321), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:30:36	Grant: (00000000-5794d85b-00000001-7ea4020c) (0--1, 1496306766), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:36	Grant: (00000000-5794d85b-00000002-2c1b4e0e) (0--1, 1496306767), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:36	Grant: (00000000-5794d85b-00000004-2c1b4e0e) (0--1, 1496306767), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:36	Grant: (00000000-5794d85b-00000010-7ea4020c) (0--1, 1496306768), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:36	Grant: (00000000-5794d85b-00001000-2c1b4e0e) (0--1, 1496306775), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:30:36	Grant: (00000000-be0a7ea9-00000001-2c1b4e0e) (0--1, 1496307108), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:36	Grant: (00000000-be0a7ea9-00000002-026513e5) (0--1, 1496307108), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:36	Grant: (00000000-be0a7ea9-00000004-7ea4020c) (0--1, 1496307108), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:36	Grant: (00000000-be0a7ea9-00000010-026513e5) (0--1, 1496307108), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-be0a7ea9-00001000-7ea4020c) (0--1, 1496307108), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-09902e1d-00000001-7ea4020c) (0--1, 1496307571), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-09902e1d-00000002-7ea4020c) (0--1, 1496307571), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-09902e1d-00000004-2c1b4e0e) (0--1, 1496307571), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-09902e1d-00000010-7ea4020c) (0--1, 1496307572), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-09902e1d-00001000-2c1b4e0e) (0--1, 1496307572), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-11a6a6ed-00000001-7ea4020c) (0--1, 1496307704), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-11a6a6ed-00000002-7ea4020c) (0--1, 1496307704), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-11a6a6ed-00000004-026513e5) (0--1, 1496307704), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-11a6a6ed-00000010-2c1b4e0e) (0--1, 1496307704), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-11a6a6ed-00001000-2c1b4e0e) (0--1, 1496307704), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (cb3b42dc-00000000-00000001-be0a7ea9) (0--1, 0), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (cb3b42dc-be0a7ea9-00000010-be0a7ea9) (0--1, 0), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (cb3b42dc-be0a7ea9-00001000-be0a7ea9) (0--1, 0), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-e29c4992-00000001-7ea4020c) (0--1, 1496308924), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-e29c4992-00000002-026513e5) (0--1, 1496308924), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-e29c4992-00000004-7ea4020c) (0--1, 1496308924), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-e29c4992-00000010-026513e5) (0--1, 1496308924), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-e29c4992-00001000-026513e5) (0--1, 1496308924), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (7c526772-00000000-00000001-2c1b4e0e) (0--1, 0), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (7c526772-2c1b4e0e-00000010-2c1b4e0e) (0--1, 0), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (7c526772-2c1b4e0e-00001000-2c1b4e0e) (0--1, 0), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-c463ec49-00000001-2c1b4e0e) (0--1, 1496311609), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-c463ec49-00000002-7ea4020c) (0--1, 1496311609), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-c463ec49-00000004-026513e5) (0--1, 1496311609), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-c463ec49-00000010-026513e5) (0--1, 1496311609), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-c463ec49-00001000-7ea4020c) (0--1, 1496311609), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-06f8d9ad-00000001-7ea4020c) (0--1, 1496311648), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-06f8d9ad-00000002-026513e5) (0--1, 1496311648), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-06f8d9ad-00000004-7ea4020c) (0--1, 1496311648), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-06f8d9ad-00000010-2c1b4e0e) (0--1, 1496311648), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-06f8d9ad-00001000-7ea4020c) (0--1, 1496311648), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-435673c9-00000001-026513e5) (0--1, 1496311680), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-435673c9-00000002-026513e5) (0--1, 1496311680), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-435673c9-00000004-2c1b4e0e) (0--1, 1496311680), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-435673c9-00000010-7ea4020c) (0--1, 1496311680), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-435673c9-00001000-2c1b4e0e) (0--1, 1496311681), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-e2a75a52-00000001-026513e5) (0--1, 1496311813), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-e2a75a52-00000002-7ea4020c) (0--1, 1496311813), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-e2a75a52-00000004-7ea4020c) (0--1, 1496311813), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-e2a75a52-00000010-026513e5) (0--1, 1496311813), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-e2a75a52-00001000-2c1b4e0e) (0--1, 1496311813), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-a04a6559-00000001-2c1b4e0e) (0--1, 1496311837), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-a04a6559-00000002-026513e5) (0--1, 1496311837), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-a04a6559-00000004-026513e5) (0--1, 1496311837), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-a04a6559-00000010-026513e5) (0--1, 1496311837), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-a04a6559-00001000-2c1b4e0e) (0--1, 1496311837), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-69cfcd80-00000001-026513e5) (0--1, 1496311936), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-69cfcd80-00000002-2c1b4e0e) (0--1, 1496311936), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-69cfcd80-00000004-7ea4020c) (0--1, 1496311936), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-69cfcd80-00000010-2c1b4e0e) (0--1, 1496311936), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-69cfcd80-00001000-7ea4020c) (0--1, 1496311936), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-e187518d-00000001-026513e5) (0--1, 1496312069), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-e187518d-00000002-2c1b4e0e) (0--1, 1496312069), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-e187518d-00000004-7ea4020c) (0--1, 1496312069), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-e187518d-00000010-7ea4020c) (0--1, 1496312069), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-e187518d-00001000-026513e5) (0--1, 1496312069), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-496b4f10-00000001-7ea4020c) (0--1, 1496312304), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-496b4f10-00000002-7ea4020c) (0--1, 1496312304), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-496b4f10-00000004-2c1b4e0e) (0--1, 1496312304), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-496b4f10-00000010-7ea4020c) (0--1, 1496312304), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-496b4f10-00001000-7ea4020c) (0--1, 1496312304), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-a622950c-00000001-2c1b4e0e) (0--1, 1496312331), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-a622950c-00000002-026513e5) (0--1, 1496312331), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-a622950c-00000004-7ea4020c) (0--1, 1496312331), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-a622950c-00000010-7ea4020c) (0--1, 1496312331), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-a622950c-00001000-7ea4020c) (0--1, 1496312331), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-08a370b3-00000001-7ea4020c) (0--1, 1496312428), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-08a370b3-00000002-2c1b4e0e) (0--1, 1496312428), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-08a370b3-00000004-7ea4020c) (0--1, 1496312428), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-08a370b3-00000010-026513e5) (0--1, 1496312428), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-08a370b3-00001000-2c1b4e0e) (0--1, 1496312428), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:30:37	Grant: (00000000-83acac41-00000001-7ea4020c) (0--1, 1496415406), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:38	Grant: (00000000-83acac41-00000002-026513e5) (0--1, 1496415406), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:38	Grant: (00000000-83acac41-00000004-026513e5) (0--1, 1496415406), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:38	Grant: (00000000-83acac41-00000010-7ea4020c) (0--1, 1496415406), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:30:38	Grant: (00000000-83acac41-00001000-7ea4020c) (0--1, 1496415406), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:31:15	Initialize: Cannot open database
+2017-06-17 10:31:16	Grant: (00000000-77bcb160-00000001-2c1b4e0e) (0--1, 1497691876), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:31:16	Grant: (00000000-77bcb160-00000002-7ea4020c) (0--1, 1497691876), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:31:16	Grant: (00000000-77bcb160-00000004-2c1b4e0e) (0--1, 1497691876), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:31:16	Grant: (00000000-77bcb160-00000010-2c1b4e0e) (0--1, 1497691876), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:31:16	Grant: (00000000-77bcb160-00001000-2c1b4e0e) (0--1, 1497691876), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:34:49	Initialize: Cannot open database
+2017-06-17 10:34:50	Grant: (00000000-d4723b0b-00000001-7ea4020c) (0--1, 1497692090), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:34:50	Grant: (00000000-d4723b0b-00000002-2c1b4e0e) (0--1, 1497692090), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:34:50	Grant: (00000000-d4723b0b-00000004-2c1b4e0e) (0--1, 1497692090), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:34:50	Grant: (00000000-d4723b0b-00000010-2c1b4e0e) (0--1, 1497692090), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:34:50	Grant: (00000000-d4723b0b-00001000-2c1b4e0e) (0--1, 1497692090), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:55:03	Initialize: Cannot open database
+2017-06-17 10:55:04	Grant: (00000000-b9b3b97b-00000001-2c1b4e0e) (0--1, 1497693304), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:55:04	Grant: (00000000-b9b3b97b-00000002-2c1b4e0e) (0--1, 1497693304), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:55:04	Grant: (00000000-b9b3b97b-00000004-026513e5) (0--1, 1497693304), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:55:04	Grant: (00000000-b9b3b97b-00000010-7ea4020c) (0--1, 1497693304), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:55:04	Grant: (00000000-b9b3b97b-00001000-7ea4020c) (0--1, 1497693304), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Mempool copy:       276, Admin count: 3, Miner count: 3, DB rows: 324, Ledger Rows: 730
+2017-06-17 10:57:03	Mempool clr :       276, Admin count: 1, Miner count: 3, DB rows: 324, Ledger Rows: 609
+2017-06-17 10:57:03	Mempool rstr:       276, Admin count: 3, Miner count: 3, DB rows: 324, Ledger Rows: 730
+2017-06-17 10:57:03	Mempool clr :       276, Admin count: 1, Miner count: 3, DB rows: 324, Ledger Rows: 609
+2017-06-17 10:57:03	Grant: (00000000-2c1b4e0e-00000001-026513e5) (0--1, 1496305216), In consensus: 1, Admin count: 1, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-2c1b4e0e-00000002-026513e5) (0--1, 1496305218), In consensus: 1, Admin count: 1, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-2c1b4e0e-00000004-026513e5) (0--1, 1496305218), In consensus: 1, Admin count: 1, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-2c1b4e0e-00000010-026513e5) (0--1, 1496305219), In consensus: 1, Admin count: 1, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-2c1b4e0e-00001000-026513e5) (0--1, 1496305221), In consensus: 1, Admin count: 2, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-7ea4020c-00000001-026513e5) (0--1, 1496305338), In consensus: 1, Admin count: 2, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-7ea4020c-00000002-2c1b4e0e) (0--1, 1496305338), In consensus: 1, Admin count: 2, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-7ea4020c-00000004-2c1b4e0e) (0--1, 1496305338), In consensus: 1, Admin count: 2, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-7ea4020c-00000010-2c1b4e0e) (0--1, 1496305338), In consensus: 1, Admin count: 2, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-7ea4020c-00001000-2c1b4e0e) (0--1, 1496305339), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-c6ec2ee2-00000001-026513e5) (0--1, 1496305517), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-c6ec2ee2-00000002-2c1b4e0e) (0--1, 1496305517), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-c6ec2ee2-00000004-7ea4020c) (0--1, 1496305517), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-c6ec2ee2-00000010-2c1b4e0e) (0--1, 1496305517), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-c6ec2ee2-00001000-7ea4020c) (0--1, 1496305517), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-9fec86f3-00000001-2c1b4e0e) (0--1, 1496306313), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-9fec86f3-00000002-2c1b4e0e) (0--1, 1496306314), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-9fec86f3-00000004-7ea4020c) (0--1, 1496306317), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-9fec86f3-00000010-2c1b4e0e) (0--1, 1496306319), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-9fec86f3-00001000-2c1b4e0e) (0--1, 1496306321), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-5794d85b-00000001-7ea4020c) (0--1, 1496306766), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-5794d85b-00000002-2c1b4e0e) (0--1, 1496306767), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-5794d85b-00000004-2c1b4e0e) (0--1, 1496306767), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-5794d85b-00000010-7ea4020c) (0--1, 1496306768), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-5794d85b-00001000-2c1b4e0e) (0--1, 1496306775), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-be0a7ea9-00000001-2c1b4e0e) (0--1, 1496307108), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-be0a7ea9-00000002-026513e5) (0--1, 1496307108), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-be0a7ea9-00000004-7ea4020c) (0--1, 1496307108), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-be0a7ea9-00000010-026513e5) (0--1, 1496307108), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-be0a7ea9-00001000-7ea4020c) (0--1, 1496307108), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-09902e1d-00000001-7ea4020c) (0--1, 1496307571), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-09902e1d-00000002-7ea4020c) (0--1, 1496307571), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-09902e1d-00000004-2c1b4e0e) (0--1, 1496307571), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-09902e1d-00000010-7ea4020c) (0--1, 1496307572), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-09902e1d-00001000-2c1b4e0e) (0--1, 1496307572), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-11a6a6ed-00000001-7ea4020c) (0--1, 1496307704), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-11a6a6ed-00000002-7ea4020c) (0--1, 1496307704), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-11a6a6ed-00000004-026513e5) (0--1, 1496307704), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-11a6a6ed-00000010-2c1b4e0e) (0--1, 1496307704), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-11a6a6ed-00001000-2c1b4e0e) (0--1, 1496307704), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (cb3b42dc-00000000-00000001-be0a7ea9) (0--1, 0), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (cb3b42dc-be0a7ea9-00000010-be0a7ea9) (0--1, 0), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (cb3b42dc-be0a7ea9-00001000-be0a7ea9) (0--1, 0), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-e29c4992-00000001-7ea4020c) (0--1, 1496308924), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-e29c4992-00000002-026513e5) (0--1, 1496308924), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:03	Grant: (00000000-e29c4992-00000004-7ea4020c) (0--1, 1496308924), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-e29c4992-00000010-026513e5) (0--1, 1496308924), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-e29c4992-00001000-026513e5) (0--1, 1496308924), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (7c526772-00000000-00000001-2c1b4e0e) (0--1, 0), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (7c526772-2c1b4e0e-00000010-2c1b4e0e) (0--1, 0), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (7c526772-2c1b4e0e-00001000-2c1b4e0e) (0--1, 0), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-c463ec49-00000001-2c1b4e0e) (0--1, 1496311609), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-c463ec49-00000002-7ea4020c) (0--1, 1496311609), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-c463ec49-00000004-026513e5) (0--1, 1496311609), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-c463ec49-00000010-026513e5) (0--1, 1496311609), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-c463ec49-00001000-7ea4020c) (0--1, 1496311609), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-06f8d9ad-00000001-7ea4020c) (0--1, 1496311648), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-06f8d9ad-00000002-026513e5) (0--1, 1496311648), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-06f8d9ad-00000004-7ea4020c) (0--1, 1496311648), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-06f8d9ad-00000010-2c1b4e0e) (0--1, 1496311648), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-06f8d9ad-00001000-7ea4020c) (0--1, 1496311648), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-435673c9-00000001-026513e5) (0--1, 1496311680), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-435673c9-00000002-026513e5) (0--1, 1496311680), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-435673c9-00000004-2c1b4e0e) (0--1, 1496311680), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-435673c9-00000010-7ea4020c) (0--1, 1496311680), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-435673c9-00001000-2c1b4e0e) (0--1, 1496311681), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-e2a75a52-00000001-026513e5) (0--1, 1496311813), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-e2a75a52-00000002-7ea4020c) (0--1, 1496311813), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-e2a75a52-00000004-7ea4020c) (0--1, 1496311813), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-e2a75a52-00000010-026513e5) (0--1, 1496311813), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-e2a75a52-00001000-2c1b4e0e) (0--1, 1496311813), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-a04a6559-00000001-2c1b4e0e) (0--1, 1496311837), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-a04a6559-00000002-026513e5) (0--1, 1496311837), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-a04a6559-00000004-026513e5) (0--1, 1496311837), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-a04a6559-00000010-026513e5) (0--1, 1496311837), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-a04a6559-00001000-2c1b4e0e) (0--1, 1496311837), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-69cfcd80-00000001-026513e5) (0--1, 1496311936), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-69cfcd80-00000002-2c1b4e0e) (0--1, 1496311936), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-69cfcd80-00000004-7ea4020c) (0--1, 1496311936), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-69cfcd80-00000010-2c1b4e0e) (0--1, 1496311936), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-69cfcd80-00001000-7ea4020c) (0--1, 1496311936), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-e187518d-00000001-026513e5) (0--1, 1496312069), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-e187518d-00000002-2c1b4e0e) (0--1, 1496312069), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-e187518d-00000004-7ea4020c) (0--1, 1496312069), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-e187518d-00000010-7ea4020c) (0--1, 1496312069), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-e187518d-00001000-026513e5) (0--1, 1496312069), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-496b4f10-00000001-7ea4020c) (0--1, 1496312304), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-496b4f10-00000002-7ea4020c) (0--1, 1496312304), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-496b4f10-00000004-2c1b4e0e) (0--1, 1496312304), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-496b4f10-00000010-7ea4020c) (0--1, 1496312304), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-496b4f10-00001000-7ea4020c) (0--1, 1496312304), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-a622950c-00000001-2c1b4e0e) (0--1, 1496312331), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-a622950c-00000002-026513e5) (0--1, 1496312331), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-a622950c-00000004-7ea4020c) (0--1, 1496312331), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-a622950c-00000010-7ea4020c) (0--1, 1496312331), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-a622950c-00001000-7ea4020c) (0--1, 1496312331), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-08a370b3-00000001-7ea4020c) (0--1, 1496312428), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-08a370b3-00000002-2c1b4e0e) (0--1, 1496312428), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-08a370b3-00000004-7ea4020c) (0--1, 1496312428), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-08a370b3-00000010-026513e5) (0--1, 1496312428), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-08a370b3-00001000-2c1b4e0e) (0--1, 1496312428), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-83acac41-00000001-7ea4020c) (0--1, 1496415406), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-83acac41-00000002-026513e5) (0--1, 1496415406), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-83acac41-00000004-026513e5) (0--1, 1496415406), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-83acac41-00000010-7ea4020c) (0--1, 1496415406), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-83acac41-00001000-7ea4020c) (0--1, 1496415406), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-77bcb160-00000001-2c1b4e0e) (0--1, 1497691876), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-77bcb160-00000002-7ea4020c) (0--1, 1497691876), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-77bcb160-00000004-2c1b4e0e) (0--1, 1497691876), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-77bcb160-00000010-2c1b4e0e) (0--1, 1497691876), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-77bcb160-00001000-2c1b4e0e) (0--1, 1497691876), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-d4723b0b-00000001-7ea4020c) (0--1, 1497692090), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-d4723b0b-00000002-2c1b4e0e) (0--1, 1497692090), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-d4723b0b-00000004-2c1b4e0e) (0--1, 1497692090), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-d4723b0b-00000010-2c1b4e0e) (0--1, 1497692090), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-d4723b0b-00001000-2c1b4e0e) (0--1, 1497692090), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-b9b3b97b-00000001-2c1b4e0e) (0--1, 1497693304), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-b9b3b97b-00000002-2c1b4e0e) (0--1, 1497693304), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-b9b3b97b-00000004-026513e5) (0--1, 1497693304), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-b9b3b97b-00000010-7ea4020c) (0--1, 1497693304), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Grant: (00000000-b9b3b97b-00001000-7ea4020c) (0--1, 1497693304), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-17 10:57:04	Block commit:       277 (Hash: 5aa169d4, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 446, Ledger Rows: 732
+2017-06-17 10:57:22	Block commit:       278 (Hash: 22e91cb5, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 447, Ledger Rows: 734
+2017-06-17 10:57:36	Block commit:       279 (Hash: ecb59b1b, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 448, Ledger Rows: 736
+2017-06-17 10:57:58	Block commit:       280 (Hash: 9bdaabd5, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 449, Ledger Rows: 738
+2017-06-17 10:58:18	Block commit:       281 (Hash: 890dcd56, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 450, Ledger Rows: 740
+2017-06-17 10:58:35	Block commit:       282 (Hash: c2055cc5, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 451, Ledger Rows: 742
+2017-06-17 10:58:47	Block commit:       283 (Hash: 339d952f, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 452, Ledger Rows: 744
+2017-06-17 10:59:04	Block commit:       284 (Hash: dff2e4a4, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 453, Ledger Rows: 746
+2017-06-17 10:59:27	Block commit:       285 (Hash: 09bfd733, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 454, Ledger Rows: 748
+2017-06-17 10:59:38	Block commit:       286 (Hash: 6cc4ffa0, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 455, Ledger Rows: 750
+2017-06-17 10:59:52	Block commit:       287 (Hash: 39564c65, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 456, Ledger Rows: 752
+2017-06-17 11:03:21	Block commit:       288 (Hash: bef12fb8, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 457, Ledger Rows: 754
+2017-06-17 11:03:25	Block commit:       289 (Hash: feef14ae, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 458, Ledger Rows: 756
+2017-06-17 11:03:33	Block commit:       290 (Hash: f987eb6d, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 459, Ledger Rows: 758
+2017-06-17 11:03:36	Block commit:       291 (Hash: 70ea2c2c, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 460, Ledger Rows: 760
+2017-06-17 11:03:41	Block commit:       292 (Hash: 00495bf0, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 461, Ledger Rows: 762
+2017-06-17 11:03:49	Block commit:       293 (Hash: bccbd33b, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 462, Ledger Rows: 764
+2017-06-17 11:03:55	Block rollback:       292, Admin count: 3, Miner count: 3, DB rows: 462, Ledger Rows: 762
+2017-06-17 11:03:55	Block commit:       293 (Hash: 79d08c6a, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 462, Ledger Rows: 764
+2017-06-17 11:03:55	Block commit:       294 (Hash: 1c3f138b, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 463, Ledger Rows: 766
+2017-06-17 11:04:01	Block commit:       295 (Hash: cde53767, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 464, Ledger Rows: 768
+2017-06-17 11:04:16	Block commit:       296 (Hash: 6e1788b4, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 465, Ledger Rows: 770
+2017-06-17 11:04:24	Block commit:       297 (Hash: a80529d5, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 466, Ledger Rows: 772
+2017-06-17 11:04:43	Block commit:       298 (Hash: 65680342, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 467, Ledger Rows: 774
+2017-06-17 11:07:57	Block commit:       299 (Hash: c64bbd7b, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 468, Ledger Rows: 776
+2017-06-17 11:08:04	Block commit:       300 (Hash: f8a21e4f, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 469, Ledger Rows: 778
+2017-06-17 11:08:15	Block commit:       301 (Hash: 0037a357, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 470, Ledger Rows: 780
+2017-06-17 11:08:26	Block commit:       302 (Hash: 52023c19, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 471, Ledger Rows: 782
+2017-06-17 11:08:33	Block commit:       303 (Hash: 21fda06d, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 472, Ledger Rows: 784
+2017-06-17 11:08:45	Block commit:       304 (Hash: ffce1cec, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 473, Ledger Rows: 786
+2017-06-17 11:08:51	Block commit:       305 (Hash: 560a65b8, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 474, Ledger Rows: 788
+2017-06-17 11:09:00	Block commit:       306 (Hash: 47597d69, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 475, Ledger Rows: 790
+2017-06-17 11:09:11	Block commit:       307 (Hash: 81fdaae8, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 476, Ledger Rows: 792
+2017-06-17 11:09:19	Block commit:       308 (Hash: f4003e26, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 477, Ledger Rows: 794
+2017-06-17 11:09:31	Block commit:       309 (Hash: 744d7aa2, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 478, Ledger Rows: 796
+2017-06-23 10:51:43	Initialized: Admin count: 3, Miner count: 3, DB rows: 478, ledger rows: 796
+2017-06-23 10:51:45	Block rollback:       309, Admin count: 3, Miner count: 3, DB rows: 478, Ledger Rows: 796
+2017-06-23 10:54:39	Initialized: Admin count: 3, Miner count: 3, DB rows: 478, ledger rows: 796
+2017-06-23 10:54:41	Block rollback:       309, Admin count: 3, Miner count: 3, DB rows: 478, Ledger Rows: 796
+2017-06-23 10:54:43	Grant: (00000000-85e88013-00000001-026513e5) (0--1, 1498211683), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 10:54:43	Grant: (00000000-85e88013-00000002-2c1b4e0e) (0--1, 1498211683), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 10:54:43	Grant: (00000000-85e88013-00000004-026513e5) (0--1, 1498211683), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 10:54:43	Grant: (00000000-85e88013-00000010-7ea4020c) (0--1, 1498211683), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 10:54:44	Grant: (00000000-85e88013-00001000-2c1b4e0e) (0--1, 1498211684), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-23 11:26:03	Initialize: Cannot open database
+2017-06-23 11:26:08	Grant: (00000000-66872733-00000001-7ea4020c) (0--1, 1498213567), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 11:26:08	Grant: (00000000-66872733-00000002-2c1b4e0e) (0--1, 1498213568), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 11:26:08	Grant: (00000000-66872733-00000004-026513e5) (0--1, 1498213568), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 11:26:08	Grant: (00000000-66872733-00000010-2c1b4e0e) (0--1, 1498213568), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 11:26:08	Grant: (00000000-66872733-00001000-7ea4020c) (0--1, 1498213568), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-23 11:28:11	Initialize: Cannot open database
+2017-06-23 11:28:14	Grant: (00000000-3af15d6b-00000001-7ea4020c) (0--1, 1498213694), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 11:28:14	Grant: (00000000-3af15d6b-00000002-7ea4020c) (0--1, 1498213694), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 11:28:14	Grant: (00000000-3af15d6b-00000004-026513e5) (0--1, 1498213694), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 11:28:14	Grant: (00000000-3af15d6b-00000010-026513e5) (0--1, 1498213694), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 11:28:15	Grant: (00000000-3af15d6b-00001000-7ea4020c) (0--1, 1498213694), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-23 11:28:25	Grant: (00000000-4d5bc98f-00000001-2c1b4e0e) (0--1, 1498213705), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 11:28:25	Grant: (00000000-4d5bc98f-00000002-7ea4020c) (0--1, 1498213705), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 11:28:25	Grant: (00000000-4d5bc98f-00000004-7ea4020c) (0--1, 1498213705), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 11:28:25	Grant: (00000000-4d5bc98f-00000100-2c1b4e0e) (0--1, 1498213705), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-23 11:45:16	Mempool copy:       309, Admin count: 3, Miner count: 3, DB rows: 478, Ledger Rows: 815
+2017-06-23 11:45:16	Mempool clr :       309, Admin count: 3, Miner count: 3, DB rows: 478, Ledger Rows: 796
+2017-06-23 11:45:16	Mempool rstr:       309, Admin count: 3, Miner count: 3, DB rows: 478, Ledger Rows: 815
+2017-06-23 11:45:16	Mempool clr :       309, Admin count: 3, Miner count: 3, DB rows: 478, Ledger Rows: 796
+2017-06-23 11:45:16	Grant: (00000000-85e88013-00000001-026513e5) (0--1, 1498211683), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 11:45:16	Grant: (00000000-85e88013-00000002-2c1b4e0e) (0--1, 1498211683), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 11:45:16	Grant: (00000000-85e88013-00000004-026513e5) (0--1, 1498211683), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 11:45:16	Grant: (00000000-85e88013-00000010-7ea4020c) (0--1, 1498211683), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 11:45:16	Grant: (00000000-85e88013-00001000-2c1b4e0e) (0--1, 1498211684), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-23 11:45:16	Grant: (00000000-66872733-00000001-7ea4020c) (0--1, 1498213567), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 11:45:16	Grant: (00000000-66872733-00000002-2c1b4e0e) (0--1, 1498213568), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 11:45:16	Grant: (00000000-66872733-00000004-026513e5) (0--1, 1498213568), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 11:45:16	Grant: (00000000-66872733-00000010-2c1b4e0e) (0--1, 1498213568), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 11:45:16	Grant: (00000000-66872733-00001000-7ea4020c) (0--1, 1498213568), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-23 11:45:16	Grant: (00000000-3af15d6b-00000001-7ea4020c) (0--1, 1498213694), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 11:45:16	Grant: (00000000-3af15d6b-00000002-7ea4020c) (0--1, 1498213694), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 11:45:16	Grant: (00000000-3af15d6b-00000004-026513e5) (0--1, 1498213694), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 11:45:16	Grant: (00000000-3af15d6b-00000010-026513e5) (0--1, 1498213694), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 11:45:16	Grant: (00000000-3af15d6b-00001000-7ea4020c) (0--1, 1498213694), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-23 11:45:16	Grant: (00000000-4d5bc98f-00000001-2c1b4e0e) (0--1, 1498213705), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 11:45:16	Grant: (00000000-4d5bc98f-00000002-7ea4020c) (0--1, 1498213705), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 11:45:16	Grant: (00000000-4d5bc98f-00000004-7ea4020c) (0--1, 1498213705), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 11:45:16	Grant: (00000000-4d5bc98f-00000100-2c1b4e0e) (0--1, 1498213705), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-23 11:45:16	Block commit:       310 (Hash: 1a7bbe15, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 498, Ledger Rows: 817
+2017-06-23 11:45:26	Block commit:       311 (Hash: 5c9b6db7, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 499, Ledger Rows: 819
+2017-06-23 11:45:37	Block commit:       312 (Hash: f2414e7a, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 500, Ledger Rows: 821
+2017-06-23 11:45:54	Block commit:       313 (Hash: 5b76f24b, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 501, Ledger Rows: 823
+2017-06-23 11:46:13	Block commit:       314 (Hash: 36399f1c, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 502, Ledger Rows: 825
+2017-06-23 11:46:13	Block commit:       315 (Hash: c0eee907, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 503, Ledger Rows: 827
+2017-06-23 11:46:31	Block commit:       316 (Hash: a275a3df, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 504, Ledger Rows: 829
+2017-06-23 11:46:47	Block commit:       317 (Hash: 6ff45acb, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 505, Ledger Rows: 831
+2017-06-23 11:47:00	Block commit:       318 (Hash: ceafa4f9, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 506, Ledger Rows: 833
+2017-06-23 11:47:21	Block commit:       319 (Hash: 17f2ac85, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 507, Ledger Rows: 835
+2017-06-23 11:47:39	Block commit:       320 (Hash: 743df97b, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 508, Ledger Rows: 837
+2017-06-23 14:49:41	Initialize: Cannot open database
+2017-06-23 14:49:45	Grant: (00000000-14727a82-00000001-7ea4020c) (0--1, 1498225785), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 14:49:45	Grant: (00000000-14727a82-00000002-026513e5) (0--1, 1498225785), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 14:49:45	Grant: (00000000-14727a82-00000004-7ea4020c) (0--1, 1498225785), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 14:49:45	Grant: (00000000-14727a82-00000010-2c1b4e0e) (0--1, 1498225785), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 14:49:45	Grant: (00000000-14727a82-00001000-7ea4020c) (0--1, 1498225785), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-23 14:49:55	Grant: (00000000-8d5a4115-00000001-7ea4020c) (0--1, 1498225795), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 14:49:55	Grant: (00000000-8d5a4115-00000002-026513e5) (0--1, 1498225795), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 14:49:55	Grant: (00000000-8d5a4115-00000004-026513e5) (0--1, 1498225795), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 14:49:55	Grant: (00000000-8d5a4115-00000100-2c1b4e0e) (0--1, 1498225795), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-23 14:49:56	Mempool copy:       320, Admin count: 3, Miner count: 3, DB rows: 508, Ledger Rows: 846
+2017-06-23 14:49:56	Mempool clr :       320, Admin count: 3, Miner count: 3, DB rows: 508, Ledger Rows: 837
+2017-06-23 14:49:56	Mempool rstr:       320, Admin count: 3, Miner count: 3, DB rows: 508, Ledger Rows: 846
+2017-06-23 14:49:56	Mempool clr :       320, Admin count: 3, Miner count: 3, DB rows: 508, Ledger Rows: 837
+2017-06-23 14:49:56	Grant: (00000000-14727a82-00000001-7ea4020c) (0--1, 1498225785), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 14:49:56	Grant: (00000000-14727a82-00000002-026513e5) (0--1, 1498225785), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 14:49:56	Grant: (00000000-14727a82-00000004-7ea4020c) (0--1, 1498225785), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 14:49:56	Grant: (00000000-14727a82-00000010-2c1b4e0e) (0--1, 1498225785), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 14:49:56	Grant: (00000000-14727a82-00001000-7ea4020c) (0--1, 1498225785), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-23 14:49:56	Grant: (00000000-8d5a4115-00000001-7ea4020c) (0--1, 1498225795), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 14:49:56	Grant: (00000000-8d5a4115-00000002-026513e5) (0--1, 1498225795), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 14:49:56	Grant: (00000000-8d5a4115-00000004-026513e5) (0--1, 1498225795), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 14:49:56	Grant: (00000000-8d5a4115-00000100-2c1b4e0e) (0--1, 1498225795), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-23 14:49:56	Block commit:       321 (Hash: 6cee4ffd, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 518, Ledger Rows: 848
+2017-06-23 14:50:02	Block commit:       322 (Hash: 18f184a8, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 519, Ledger Rows: 850
+2017-06-23 14:50:12	Block commit:       323 (Hash: 182795f1, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 520, Ledger Rows: 852
+2017-06-23 14:50:19	Block commit:       324 (Hash: c266733d, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 521, Ledger Rows: 854
+2017-06-23 14:50:23	Block commit:       325 (Hash: f32d7640, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 522, Ledger Rows: 856
+2017-06-23 14:50:27	Block commit:       326 (Hash: c6cf4fe1, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 523, Ledger Rows: 858
+2017-06-23 14:50:36	Block commit:       327 (Hash: e7d21fc7, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 524, Ledger Rows: 860
+2017-06-23 14:50:42	Block commit:       328 (Hash: 7d5a5d58, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 525, Ledger Rows: 862
+2017-06-23 14:50:47	Block commit:       329 (Hash: dcc6e408, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 526, Ledger Rows: 864
+2017-06-23 14:51:05	Block commit:       330 (Hash: 75b0cebf, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 527, Ledger Rows: 866
+2017-06-23 14:51:15	Block rollback:       329, Admin count: 3, Miner count: 3, DB rows: 527, Ledger Rows: 864
+2017-06-23 14:51:15	Block commit:       330 (Hash: b88a5537, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 527, Ledger Rows: 866
+2017-06-23 14:51:15	Block commit:       331 (Hash: 4843f3f6, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 528, Ledger Rows: 868
+2017-06-23 15:14:06	Initialize: Cannot open database
+2017-06-23 15:14:12	Grant: (00000000-40f7fb9f-00000001-7ea4020c) (0--1, 1498227251), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:14:12	Grant: (00000000-40f7fb9f-00000002-026513e5) (0--1, 1498227252), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:14:12	Grant: (00000000-40f7fb9f-00000004-7ea4020c) (0--1, 1498227252), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:14:12	Grant: (00000000-40f7fb9f-00000010-7ea4020c) (0--1, 1498227252), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:14:12	Grant: (00000000-40f7fb9f-00001000-2c1b4e0e) (0--1, 1498227252), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-23 15:14:24	Mempool copy:       331, Admin count: 3, Miner count: 3, DB rows: 528, Ledger Rows: 873
+2017-06-23 15:14:24	Mempool clr :       331, Admin count: 3, Miner count: 3, DB rows: 528, Ledger Rows: 868
+2017-06-23 15:14:24	Mempool rstr:       331, Admin count: 3, Miner count: 3, DB rows: 528, Ledger Rows: 873
+2017-06-23 15:14:24	Mempool clr :       331, Admin count: 3, Miner count: 3, DB rows: 528, Ledger Rows: 868
+2017-06-23 15:14:24	Grant: (00000000-40f7fb9f-00000001-7ea4020c) (0--1, 1498227251), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:14:24	Grant: (00000000-40f7fb9f-00000002-026513e5) (0--1, 1498227252), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:14:24	Grant: (00000000-40f7fb9f-00001000-2c1b4e0e) (0--1, 1498227252), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-23 15:14:24	Grant: (00000000-40f7fb9f-00000004-7ea4020c) (0--1, 1498227252), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:14:24	Grant: (00000000-40f7fb9f-00000010-7ea4020c) (0--1, 1498227252), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:14:24	Block commit:       332 (Hash: 7de3c1ed, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 534, Ledger Rows: 875
+2017-06-23 15:14:27	Block commit:       333 (Hash: 5367a122, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 535, Ledger Rows: 877
+2017-06-23 15:14:36	Block commit:       334 (Hash: 42304522, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 536, Ledger Rows: 879
+2017-06-23 15:14:45	Block commit:       335 (Hash: df4fa3bf, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 537, Ledger Rows: 881
+2017-06-23 15:14:49	Block commit:       336 (Hash: 2c344c58, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 538, Ledger Rows: 883
+2017-06-23 15:15:02	Block commit:       337 (Hash: 87ce9adc, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 539, Ledger Rows: 885
+2017-06-23 15:15:06	Block commit:       338 (Hash: e2d889c9, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 540, Ledger Rows: 887
+2017-06-23 15:15:09	Block commit:       339 (Hash: 44e9bc48, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 541, Ledger Rows: 889
+2017-06-23 15:15:23	Block commit:       340 (Hash: d766bea4, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 542, Ledger Rows: 891
+2017-06-23 15:15:30	Block commit:       341 (Hash: 78b41b3d, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 543, Ledger Rows: 893
+2017-06-23 15:15:37	Block commit:       342 (Hash: 310ce99b, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 544, Ledger Rows: 895
+2017-06-23 15:19:14	Initialize: Cannot open database
+2017-06-23 15:19:17	Grant: (00000000-d975958a-00000001-7ea4020c) (0--1, 1498227557), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:19:17	Grant: (00000000-d975958a-00000002-026513e5) (0--1, 1498227557), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:19:17	Grant: (00000000-d975958a-00000004-2c1b4e0e) (0--1, 1498227557), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:19:18	Grant: (00000000-d975958a-00000010-2c1b4e0e) (0--1, 1498227557), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:19:18	Grant: (00000000-d975958a-00001000-026513e5) (0--1, 1498227558), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-23 15:19:38	Mempool copy:       342, Admin count: 3, Miner count: 3, DB rows: 544, Ledger Rows: 900
+2017-06-23 15:19:38	Mempool clr :       342, Admin count: 3, Miner count: 3, DB rows: 544, Ledger Rows: 895
+2017-06-23 15:19:38	Mempool rstr:       342, Admin count: 3, Miner count: 3, DB rows: 544, Ledger Rows: 900
+2017-06-23 15:19:38	Mempool clr :       342, Admin count: 3, Miner count: 3, DB rows: 544, Ledger Rows: 895
+2017-06-23 15:19:38	Grant: (00000000-d975958a-00000001-7ea4020c) (0--1, 1498227557), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:19:38	Grant: (00000000-d975958a-00000002-026513e5) (0--1, 1498227557), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:19:38	Grant: (00000000-d975958a-00000004-2c1b4e0e) (0--1, 1498227557), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:19:38	Grant: (00000000-d975958a-00000010-2c1b4e0e) (0--1, 1498227557), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:19:38	Grant: (00000000-d975958a-00001000-026513e5) (0--1, 1498227558), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-23 15:19:38	Block commit:       343 (Hash: f8fcbfcf, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 550, Ledger Rows: 902
+2017-06-23 15:19:52	Block commit:       344 (Hash: cd458428, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 551, Ledger Rows: 904
+2017-06-23 15:20:06	Block commit:       345 (Hash: 53c2740e, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 552, Ledger Rows: 906
+2017-06-23 15:20:16	Block commit:       346 (Hash: 0f8fcd20, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 553, Ledger Rows: 908
+2017-06-23 15:20:22	Block commit:       347 (Hash: c7b263b3, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 554, Ledger Rows: 910
+2017-06-23 15:20:36	Block commit:       348 (Hash: dc69bc16, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 555, Ledger Rows: 912
+2017-06-23 15:20:46	Block commit:       349 (Hash: a4ce8b6b, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 556, Ledger Rows: 914
+2017-06-23 15:20:57	Block commit:       350 (Hash: b82ba742, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 557, Ledger Rows: 916
+2017-06-23 15:21:13	Block commit:       351 (Hash: 4580ae74, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 558, Ledger Rows: 918
+2017-06-23 15:21:14	Block commit:       352 (Hash: 7bc31c7e, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 559, Ledger Rows: 920
+2017-06-23 15:21:19	Block commit:       353 (Hash: 2f351ca3, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 560, Ledger Rows: 922
+2017-06-23 15:22:23	Initialize: Cannot open database
+2017-06-23 15:22:27	Grant: (00000000-516c4684-00000001-7ea4020c) (0--1, 1498227746), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:22:27	Grant: (00000000-516c4684-00000002-2c1b4e0e) (0--1, 1498227747), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:22:27	Grant: (00000000-516c4684-00000004-2c1b4e0e) (0--1, 1498227747), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:22:27	Grant: (00000000-516c4684-00000010-026513e5) (0--1, 1498227747), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:22:27	Grant: (00000000-516c4684-00001000-7ea4020c) (0--1, 1498227747), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-23 15:22:44	Mempool copy:       353, Admin count: 3, Miner count: 3, DB rows: 560, Ledger Rows: 927
+2017-06-23 15:22:44	Mempool clr :       353, Admin count: 3, Miner count: 3, DB rows: 560, Ledger Rows: 922
+2017-06-23 15:22:44	Mempool rstr:       353, Admin count: 3, Miner count: 3, DB rows: 560, Ledger Rows: 927
+2017-06-23 15:22:44	Mempool clr :       353, Admin count: 3, Miner count: 3, DB rows: 560, Ledger Rows: 922
+2017-06-23 15:22:44	Grant: (00000000-516c4684-00000001-7ea4020c) (0--1, 1498227746), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:22:44	Grant: (00000000-516c4684-00000002-2c1b4e0e) (0--1, 1498227747), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:22:44	Grant: (00000000-516c4684-00000004-2c1b4e0e) (0--1, 1498227747), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:22:44	Grant: (00000000-516c4684-00000010-026513e5) (0--1, 1498227747), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:22:44	Grant: (00000000-516c4684-00001000-7ea4020c) (0--1, 1498227747), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-23 15:22:44	Block commit:       354 (Hash: a2f90b7a, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 566, Ledger Rows: 929
+2017-06-23 15:22:51	Block commit:       355 (Hash: 05cb7c01, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 567, Ledger Rows: 931
+2017-06-23 15:23:03	Block commit:       356 (Hash: 0bc4327f, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 568, Ledger Rows: 933
+2017-06-23 15:23:10	Block commit:       357 (Hash: 1547fcc3, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 569, Ledger Rows: 935
+2017-06-23 15:23:18	Block commit:       358 (Hash: 2f0cc785, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 570, Ledger Rows: 937
+2017-06-23 15:23:24	Block commit:       359 (Hash: cfc0706f, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 571, Ledger Rows: 939
+2017-06-23 15:23:40	Block commit:       360 (Hash: 5c9fd3a2, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 572, Ledger Rows: 941
+2017-06-23 15:23:41	Grant: (00000000-2262fbe7-00000001-2c1b4e0e) (0--1, 1498227821), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:23:41	Grant: (00000000-2262fbe7-00000002-026513e5) (0--1, 1498227821), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:23:41	Grant: (00000000-2262fbe7-00000004-7ea4020c) (0--1, 1498227821), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:23:41	Grant: (00000000-2262fbe7-00000100-026513e5) (0--1, 1498227821), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-23 15:23:57	Mempool copy:       360, Admin count: 3, Miner count: 3, DB rows: 572, Ledger Rows: 945
+2017-06-23 15:23:57	Mempool clr :       360, Admin count: 3, Miner count: 3, DB rows: 572, Ledger Rows: 941
+2017-06-23 15:23:57	Mempool rstr:       360, Admin count: 3, Miner count: 3, DB rows: 572, Ledger Rows: 945
+2017-06-23 15:23:57	Mempool clr :       360, Admin count: 3, Miner count: 3, DB rows: 572, Ledger Rows: 941
+2017-06-23 15:23:57	Grant: (00000000-2262fbe7-00000001-2c1b4e0e) (0--1, 1498227821), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:23:57	Grant: (00000000-2262fbe7-00000002-026513e5) (0--1, 1498227821), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:23:57	Grant: (00000000-2262fbe7-00000004-7ea4020c) (0--1, 1498227821), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:23:57	Grant: (00000000-2262fbe7-00000100-026513e5) (0--1, 1498227821), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-23 15:23:57	Block commit:       361 (Hash: 97754961, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 577, Ledger Rows: 947
+2017-06-23 15:24:17	Block commit:       362 (Hash: 7d02072f, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 578, Ledger Rows: 949
+2017-06-23 15:24:30	Block commit:       363 (Hash: 1254b8d9, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 579, Ledger Rows: 951
+2017-06-23 15:24:44	Block commit:       364 (Hash: bd8e2b99, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 580, Ledger Rows: 953
+2017-06-23 15:25:02	Block commit:       365 (Hash: 26b5df75, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 581, Ledger Rows: 955
+2017-06-23 15:25:21	Block commit:       366 (Hash: 4ac8da4c, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 582, Ledger Rows: 957
+2017-06-23 15:25:30	Block commit:       367 (Hash: 2f0a83ca, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 583, Ledger Rows: 959
+2017-06-23 15:25:48	Block commit:       368 (Hash: 6de9d440, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 584, Ledger Rows: 961
+2017-06-23 15:25:58	Block commit:       369 (Hash: 67eb5f27, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 585, Ledger Rows: 963
+2017-06-23 15:26:12	Block commit:       370 (Hash: 7445e361, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 586, Ledger Rows: 965
+2017-06-23 15:26:26	Block commit:       371 (Hash: e3a0fa11, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 587, Ledger Rows: 967
+2017-06-23 15:29:12	Block commit:       372 (Hash: 81792e98, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 588, Ledger Rows: 969
+2017-06-23 15:29:20	Block commit:       373 (Hash: 60d00cda, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 589, Ledger Rows: 971
+2017-06-23 15:29:25	Block commit:       374 (Hash: d53525a9, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 590, Ledger Rows: 973
+2017-06-23 15:29:37	Block commit:       375 (Hash: 6081853f, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 591, Ledger Rows: 975
+2017-06-23 15:29:50	Block commit:       376 (Hash: d5b65c6e, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 592, Ledger Rows: 977
+2017-06-23 15:29:58	Block commit:       377 (Hash: b676ac76, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 593, Ledger Rows: 979
+2017-06-23 15:30:07	Block commit:       378 (Hash: 6f471cd5, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 594, Ledger Rows: 981
+2017-06-23 15:30:11	Block commit:       379 (Hash: 6b852be6, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 595, Ledger Rows: 983
+2017-06-23 15:30:17	Block commit:       380 (Hash: ec5da1d9, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 596, Ledger Rows: 985
+2017-06-23 15:30:37	Block commit:       381 (Hash: 526a8399, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 597, Ledger Rows: 987
+2017-06-23 15:30:51	Block commit:       382 (Hash: 930b05e6, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 598, Ledger Rows: 989
+2017-06-23 15:32:40	Block commit:       383 (Hash: 633c635d, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 599, Ledger Rows: 991
+2017-06-23 15:32:52	Block commit:       384 (Hash: 117d14aa, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 600, Ledger Rows: 993
+2017-06-23 15:32:57	Block commit:       385 (Hash: 03f5f60a, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 601, Ledger Rows: 995
+2017-06-23 15:33:03	Block commit:       386 (Hash: b97b0785, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 602, Ledger Rows: 997
+2017-06-23 15:33:12	Block commit:       387 (Hash: 5334a76d, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 603, Ledger Rows: 999
+2017-06-23 15:33:23	Block commit:       388 (Hash: 10dcf567, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 604, Ledger Rows: 1001
+2017-06-23 15:33:29	Block commit:       389 (Hash: fa0bdfcf, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 605, Ledger Rows: 1003
+2017-06-23 15:33:40	Block commit:       390 (Hash: 39c0dd3e, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 606, Ledger Rows: 1005
+2017-06-23 15:33:54	Block commit:       391 (Hash: 97e9998f, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 607, Ledger Rows: 1007
+2017-06-23 15:34:10	Block commit:       392 (Hash: 0a20b533, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 608, Ledger Rows: 1009
+2017-06-23 15:34:31	Block commit:       393 (Hash: 30f19257, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 609, Ledger Rows: 1011
+2017-06-23 15:34:53	Block commit:       394 (Hash: 19377382, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 610, Ledger Rows: 1013
+2017-06-23 15:35:17	Block commit:       395 (Hash: ce67ba7e, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 611, Ledger Rows: 1015
+2017-06-23 15:35:28	Block commit:       396 (Hash: 1e6149aa, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 612, Ledger Rows: 1017
+2017-06-23 15:35:43	Block commit:       397 (Hash: 7b5f5994, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 613, Ledger Rows: 1019
+2017-06-23 15:35:54	Block commit:       398 (Hash: 3e59d6fd, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 614, Ledger Rows: 1021
+2017-06-23 15:36:03	Block commit:       399 (Hash: f3366642, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 615, Ledger Rows: 1023
+2017-06-23 15:36:18	Block commit:       400 (Hash: 1c4e56e2, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 616, Ledger Rows: 1025
+2017-06-23 15:36:40	Block commit:       401 (Hash: 6b6a9f0d, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 617, Ledger Rows: 1027
+2017-06-23 15:36:46	Block commit:       402 (Hash: b75b325b, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 618, Ledger Rows: 1029
+2017-06-23 15:37:02	Block commit:       403 (Hash: e039d250, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 619, Ledger Rows: 1031
+2017-06-23 15:37:27	Block commit:       404 (Hash: 53bb6eb3, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 620, Ledger Rows: 1033
+2017-06-23 15:37:39	Block commit:       405 (Hash: 7d33d726, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 621, Ledger Rows: 1035
+2017-06-23 15:37:50	Block commit:       406 (Hash: 4e0d8f71, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 622, Ledger Rows: 1037
+2017-06-23 15:38:18	Block commit:       407 (Hash: d228e8a9, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 623, Ledger Rows: 1039
+2017-06-23 15:38:24	Block rollback:       406, Admin count: 3, Miner count: 3, DB rows: 623, Ledger Rows: 1037
+2017-06-23 15:38:24	Block commit:       407 (Hash: e9442bcb, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 623, Ledger Rows: 1039
+2017-06-23 15:38:24	Block commit:       408 (Hash: 1d024513, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 624, Ledger Rows: 1041
+2017-06-23 15:46:49	Grant: (6ae3fee1-00000000-00000001-be0a7ea9) (0--1, 0), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:46:49	Grant: (6ae3fee1-be0a7ea9-00000010-be0a7ea9) (0--1, 0), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:46:49	Grant: (6ae3fee1-be0a7ea9-00001000-be0a7ea9) (0--1, 0), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:47:05	Mempool copy:       408, Admin count: 3, Miner count: 3, DB rows: 624, Ledger Rows: 1044
+2017-06-23 15:47:05	Mempool clr :       408, Admin count: 3, Miner count: 3, DB rows: 624, Ledger Rows: 1041
+2017-06-23 15:47:05	Mempool rstr:       408, Admin count: 3, Miner count: 3, DB rows: 624, Ledger Rows: 1044
+2017-06-23 15:47:05	Mempool clr :       408, Admin count: 3, Miner count: 3, DB rows: 624, Ledger Rows: 1041
+2017-06-23 15:47:05	Grant: (6ae3fee1-00000000-00000001-be0a7ea9) (0--1, 0), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:47:05	Grant: (6ae3fee1-be0a7ea9-00000010-be0a7ea9) (0--1, 0), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:47:05	Grant: (6ae3fee1-be0a7ea9-00001000-be0a7ea9) (0--1, 0), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 15:47:05	Block commit:       409 (Hash: 3a6ab0fa, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 628, Ledger Rows: 1046
+2017-06-23 15:47:13	Block commit:       410 (Hash: ee1c522c, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 629, Ledger Rows: 1048
+2017-06-23 15:47:22	Block commit:       411 (Hash: c27b10df, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 630, Ledger Rows: 1050
+2017-06-23 15:47:26	Block commit:       412 (Hash: 66a04731, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 631, Ledger Rows: 1052
+2017-06-23 15:47:34	Block commit:       413 (Hash: 5d754ac1, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 632, Ledger Rows: 1054
+2017-06-23 15:47:44	Block commit:       414 (Hash: e6af5717, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 633, Ledger Rows: 1056
+2017-06-23 15:47:49	Block commit:       415 (Hash: 802a1e72, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 634, Ledger Rows: 1058
+2017-06-23 15:48:06	Block commit:       416 (Hash: bf30b10e, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 635, Ledger Rows: 1060
+2017-06-23 15:48:14	Block commit:       417 (Hash: aad85e59, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 636, Ledger Rows: 1062
+2017-06-23 15:48:26	Block commit:       418 (Hash: 946c839c, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 637, Ledger Rows: 1064
+2017-06-23 15:48:31	Block commit:       419 (Hash: 76d9b271, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 638, Ledger Rows: 1066
+2017-06-23 16:44:27	Initialize: Cannot open database
+2017-06-23 16:44:32	Grant: (00000000-3b49b602-00000001-2c1b4e0e) (0--1, 1498232672), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 16:44:32	Grant: (00000000-3b49b602-00000002-7ea4020c) (0--1, 1498232672), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 16:44:32	Grant: (00000000-3b49b602-00000004-7ea4020c) (0--1, 1498232672), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 16:44:32	Grant: (00000000-3b49b602-00000010-7ea4020c) (0--1, 1498232672), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 16:44:32	Grant: (00000000-3b49b602-00001000-026513e5) (0--1, 1498232672), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-23 16:44:54	Mempool copy:       419, Admin count: 3, Miner count: 3, DB rows: 638, Ledger Rows: 1071
+2017-06-23 16:44:54	Mempool clr :       419, Admin count: 3, Miner count: 3, DB rows: 638, Ledger Rows: 1066
+2017-06-23 16:44:54	Mempool rstr:       419, Admin count: 3, Miner count: 3, DB rows: 638, Ledger Rows: 1071
+2017-06-23 16:44:54	Mempool clr :       419, Admin count: 3, Miner count: 3, DB rows: 638, Ledger Rows: 1066
+2017-06-23 16:44:54	Grant: (00000000-3b49b602-00000001-2c1b4e0e) (0--1, 1498232672), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 16:44:54	Grant: (00000000-3b49b602-00000002-7ea4020c) (0--1, 1498232672), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 16:44:54	Grant: (00000000-3b49b602-00000004-7ea4020c) (0--1, 1498232672), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 16:44:54	Grant: (00000000-3b49b602-00000010-7ea4020c) (0--1, 1498232672), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 16:44:54	Grant: (00000000-3b49b602-00001000-026513e5) (0--1, 1498232672), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-23 16:44:54	Block commit:       420 (Hash: 9cb241d4, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 644, Ledger Rows: 1073
+2017-06-23 16:45:05	Block commit:       421 (Hash: 730ff6e8, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 645, Ledger Rows: 1075
+2017-06-23 16:45:11	Block commit:       422 (Hash: 408e2df9, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 646, Ledger Rows: 1077
+2017-06-23 16:45:21	Block commit:       423 (Hash: 2d9a636a, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 647, Ledger Rows: 1079
+2017-06-23 16:45:35	Block commit:       424 (Hash: cd7cdd62, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 648, Ledger Rows: 1081
+2017-06-23 16:45:39	Block commit:       425 (Hash: fed1989f, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 649, Ledger Rows: 1083
+2017-06-23 16:45:46	Block commit:       426 (Hash: 25bf65e5, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 650, Ledger Rows: 1085
+2017-06-23 16:45:57	Block commit:       427 (Hash: 7ff0eb67, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 651, Ledger Rows: 1087
+2017-06-23 16:46:01	Block commit:       428 (Hash: f1f609e5, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 652, Ledger Rows: 1089
+2017-06-23 16:46:12	Block commit:       429 (Hash: 41c82b00, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 653, Ledger Rows: 1091
+2017-06-23 16:46:18	Block commit:       430 (Hash: e93f9e94, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 654, Ledger Rows: 1093
+2017-06-23 16:46:37	Initialize: Cannot open database
+2017-06-23 16:46:41	Grant: (00000000-630aa993-00000001-7ea4020c) (0--1, 1498232800), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 16:46:41	Grant: (00000000-630aa993-00000002-7ea4020c) (0--1, 1498232801), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 16:46:41	Grant: (00000000-630aa993-00000004-2c1b4e0e) (0--1, 1498232801), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 16:46:41	Grant: (00000000-630aa993-00000010-7ea4020c) (0--1, 1498232801), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 16:46:41	Grant: (00000000-630aa993-00001000-026513e5) (0--1, 1498232801), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-23 16:46:54	Mempool copy:       430, Admin count: 3, Miner count: 3, DB rows: 654, Ledger Rows: 1098
+2017-06-23 16:46:54	Mempool clr :       430, Admin count: 3, Miner count: 3, DB rows: 654, Ledger Rows: 1093
+2017-06-23 16:46:54	Mempool rstr:       430, Admin count: 3, Miner count: 3, DB rows: 654, Ledger Rows: 1098
+2017-06-23 16:46:54	Mempool clr :       430, Admin count: 3, Miner count: 3, DB rows: 654, Ledger Rows: 1093
+2017-06-23 16:46:54	Grant: (00000000-630aa993-00000001-7ea4020c) (0--1, 1498232800), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 16:46:54	Grant: (00000000-630aa993-00000002-7ea4020c) (0--1, 1498232801), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 16:46:54	Grant: (00000000-630aa993-00000004-2c1b4e0e) (0--1, 1498232801), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 16:46:54	Grant: (00000000-630aa993-00000010-7ea4020c) (0--1, 1498232801), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 16:46:54	Grant: (00000000-630aa993-00001000-026513e5) (0--1, 1498232801), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-23 16:46:54	Block commit:       431 (Hash: 3b3d50df, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 660, Ledger Rows: 1100
+2017-06-23 16:47:17	Block commit:       432 (Hash: f8f68fc5, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 661, Ledger Rows: 1102
+2017-06-23 16:47:32	Block commit:       433 (Hash: e7cdb64b, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 662, Ledger Rows: 1104
+2017-06-23 16:47:42	Block commit:       434 (Hash: c792bf89, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 663, Ledger Rows: 1106
+2017-06-23 16:47:56	Block commit:       435 (Hash: 42c80fec, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 664, Ledger Rows: 1108
+2017-06-23 16:48:09	Block commit:       436 (Hash: 53796a07, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 665, Ledger Rows: 1110
+2017-06-23 16:48:26	Block commit:       437 (Hash: d5f7a1b5, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 666, Ledger Rows: 1112
+2017-06-23 16:48:35	Block commit:       438 (Hash: 8cd38c25, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 667, Ledger Rows: 1114
+2017-06-23 16:49:02	Block commit:       439 (Hash: ea8c6732, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 668, Ledger Rows: 1116
+2017-06-23 16:49:10	Block commit:       440 (Hash: 16970106, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 669, Ledger Rows: 1118
+2017-06-23 16:49:24	Block commit:       441 (Hash: b157acde, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 670, Ledger Rows: 1120
+2017-06-23 16:50:07	Initialize: Cannot open database
+2017-06-23 16:50:11	Grant: (00000000-1062b26f-00000001-026513e5) (0--1, 1498233011), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 16:50:11	Grant: (00000000-1062b26f-00000002-026513e5) (0--1, 1498233011), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 16:50:11	Grant: (00000000-1062b26f-00000004-2c1b4e0e) (0--1, 1498233011), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 16:50:11	Grant: (00000000-1062b26f-00000010-7ea4020c) (0--1, 1498233011), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 16:50:11	Grant: (00000000-1062b26f-00001000-7ea4020c) (0--1, 1498233011), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-23 16:50:30	Mempool copy:       441, Admin count: 3, Miner count: 3, DB rows: 670, Ledger Rows: 1125
+2017-06-23 16:50:30	Mempool clr :       441, Admin count: 3, Miner count: 3, DB rows: 670, Ledger Rows: 1120
+2017-06-23 16:50:30	Mempool rstr:       441, Admin count: 3, Miner count: 3, DB rows: 670, Ledger Rows: 1125
+2017-06-23 16:50:30	Mempool clr :       441, Admin count: 3, Miner count: 3, DB rows: 670, Ledger Rows: 1120
+2017-06-23 16:50:30	Grant: (00000000-1062b26f-00000001-026513e5) (0--1, 1498233011), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 16:50:30	Grant: (00000000-1062b26f-00000002-026513e5) (0--1, 1498233011), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 16:50:30	Grant: (00000000-1062b26f-00000004-2c1b4e0e) (0--1, 1498233011), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 16:50:30	Grant: (00000000-1062b26f-00000010-7ea4020c) (0--1, 1498233011), In consensus: 1, Admin count: 3, Miner count: 3
+2017-06-23 16:50:30	Grant: (00000000-1062b26f-00001000-7ea4020c) (0--1, 1498233011), In consensus: 0, Admin count: 3, Miner count: 3
+2017-06-23 16:50:30	Block commit:       442 (Hash: 0aef30ea, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 676, Ledger Rows: 1127
+2017-06-23 16:50:39	Block commit:       443 (Hash: 29a76767, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 677, Ledger Rows: 1129
+2017-06-23 16:50:52	Block commit:       444 (Hash: 3263ed0c, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 678, Ledger Rows: 1131
+2017-06-23 16:51:01	Block commit:       445 (Hash: 8ac910d4, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 679, Ledger Rows: 1133
+2017-06-23 16:51:11	Block commit:       446 (Hash: 29ecf491, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 680, Ledger Rows: 1135
+2017-06-23 16:51:17	Block commit:       447 (Hash: b0d86607, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 681, Ledger Rows: 1137
+2017-06-23 16:51:26	Block commit:       448 (Hash: 9d2df40a, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 682, Ledger Rows: 1139
+2017-06-23 16:51:41	Block commit:       449 (Hash: 8456c1ac, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 683, Ledger Rows: 1141
+2017-06-23 16:51:57	Block commit:       450 (Hash: 722ba6ed, Miner: 026513e5), Admin count: 3, Miner count: 3, DB rows: 684, Ledger Rows: 1143
+2017-06-23 16:52:22	Block commit:       451 (Hash: 4fe1c747, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 685, Ledger Rows: 1145
+2017-06-23 16:52:34	Block commit:       452 (Hash: 9a9cf9b9, Miner: 00fb903f), Admin count: 3, Miner count: 3, DB rows: 686, Ledger Rows: 1147
