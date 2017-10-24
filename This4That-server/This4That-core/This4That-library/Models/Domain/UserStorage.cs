@@ -56,7 +56,7 @@ namespace This4That_library.Models.Domain
             }
         }
 
-        public bool SaveUserReport(ReportDTO report)
+        public bool SaveUserReport(Report report)
         {
             try
             {

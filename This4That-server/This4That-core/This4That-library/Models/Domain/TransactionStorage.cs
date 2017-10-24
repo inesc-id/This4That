@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using This4That_library.Models.Incentives;
 
 namespace This4That_library.Models.Domain
 {
     [Serializable]
     public class TransactionStorage
     {
+        //col of Txs
         private Dictionary<string, Transaction> transactions = new Dictionary<string, Transaction>();
-
         
 
-        public bool GenerateTransaction(string sender, string receiver, object value, out string transactionID)
+        public bool GenerateTransaction(string sender, string receiver, IncentiveAssigned incentive, out string transactionID)
         {
             Transaction tx;
             transactionID = null;
@@ -24,7 +25,7 @@ namespace This4That_library.Models.Domain
                     {
                         transactionID = Guid.NewGuid().ToString();
                     }
-                    tx = new Transaction(transactionID, sender, receiver, value);
+                    tx = new Transaction(transactionID, sender, receiver, incentive);
                     transactions.Add(transactionID, tx);
                 }
                 

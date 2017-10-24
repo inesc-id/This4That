@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+using System;
 using System.Collections.Generic;
 
 namespace This4That_library.Models.Incentives
@@ -22,20 +24,66 @@ namespace This4That_library.Models.Incentives
         }
 
         public abstract bool CheckSufficientCredits(object balance, object incentiveValue);
-        public abstract object CalcSenderNewBalance(object balance, object incentiveValue);
-        public abstract object CalcReceiverNewBalance(object balance, object incentiveValue);
-        public abstract int CreateTaskIncentiveQty();
-        public abstract int InitIncentiveQuantity();
-        public abstract object WalletEmpty();
-        public abstract object GetTaskReward();
+
+        public abstract Dictionary<string, int> InitIncentivesWallet();
+
         public abstract List<string> GetIncentivesName();
-        public abstract string CreateTaskIncentiveName();
+
+        public abstract IncentiveAssigned RegisterUserIncentive();
+
+        public abstract IncentiveAssigned CompleteTaskIncentive();
+
+        public abstract IncentiveAssigned CreateTaskIncentive();
+
     }
 
     [Serializable]
-    public enum IncentivesEnum
+    public class IncentiveAssigned
     {
-        Gamification,
-        Money
+        [JsonProperty(PropertyName = "name")]
+        private string incentiveName;
+        [JsonProperty(PropertyName = "quantity")]
+        private int incentiveQty;
+
+        public IncentiveAssigned()
+        {
+
+        }
+        public IncentiveAssigned(string incentiveName, int incentiveQty)
+        {
+            this.incentiveName = incentiveName;
+            this.incentiveQty = incentiveQty;
+        }
+
+        public string IncentiveName
+        {
+            get
+            {
+                return incentiveName;
+            }
+
+            set
+            {
+                incentiveName = value;
+            }
+        }
+
+        public int IncentiveQty
+        {
+            get
+            {
+                return incentiveQty;
+            }
+
+            set
+            {
+                incentiveQty = value;
+            }
+        }
+
+        public override string ToString()
+        {
+            return $"Incentive Name: [{IncentiveName}] Quantity: [{incentiveQty}]";
+        }
     }
 }

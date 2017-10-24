@@ -7,6 +7,7 @@ using This4That_library.Models.Integration;
 
 namespace This4That_library.Integration
 {
+    [Serializable]
     public class CSTask
     {
         private string taskID;
@@ -15,7 +16,8 @@ namespace This4That_library.Integration
         private string topic;
         private SensingTask sensingTask;
         private InteractiveTask interactiveTask;
-        private List<string> reportsID = new List<string>();
+        private Dictionary<string, string> reportsID = new Dictionary<string, string>();
+        private bool reportsValidated = false;
 
         public string TaskID
         {
@@ -95,7 +97,7 @@ namespace This4That_library.Integration
             }
         }
 
-        public List<string> ReportsID
+        public Dictionary<string, string> ReportsID
         {
             get
             {
@@ -105,6 +107,19 @@ namespace This4That_library.Integration
             set
             {
                 reportsID = value;
+            }
+        }
+
+        public bool ReportsValidated
+        {
+            get
+            {
+                return reportsValidated;
+            }
+
+            set
+            {
+                reportsValidated = value;
             }
         }
 

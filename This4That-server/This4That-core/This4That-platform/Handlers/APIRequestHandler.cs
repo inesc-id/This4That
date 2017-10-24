@@ -12,6 +12,8 @@ using This4That_library.Models.Integration.TaskPayCreateDTO;
 using This4That_platform.Models.Integration;
 using This4That_library.Models.Domain;
 using This4That_library.Models.Integration.GetMultichainAddress;
+using This4That_library.Models.Incentives;
+using System.Diagnostics;
 
 namespace This4That_platform.Handlers
 {
@@ -19,11 +21,26 @@ namespace This4That_platform.Handlers
     {
         private HttpRequest request;
         private ServerManager serverMgr;
+        private Stopwatch watch;
+
+        public Stopwatch Watch
+        {
+            get
+            {
+                return watch;
+            }
+
+            set
+            {
+                watch = value;
+            }
+        }
 
         public APIRequestHandler(HttpRequest request, ServerManager serverMgr)
         {
             this.request = request;
             this.serverMgr = serverMgr;
+            this.watch = new Stopwatch();
         }
 
         #region PUBLIC_METHODS
@@ -34,7 +51,7 @@ namespace This4That_platform.Handlers
         /// <returns></returns>
         public bool CalcCostCSTask(out APIResponseDTO response)
         {
-            object incentiveValue = null;
+            IncentiveAssigned incentiveValue = null;
             CalcTaskCostRequestDTO csTask;
             CalcTaskCostResponseDTO calcCostDTO = new CalcTaskCostResponseDTO();
 
@@ -46,14 +63,16 @@ namespace This4That_platform.Handlers
                 {
                     response.SetErrorResponse("Invalid Request please try again!", APIResponseDTO.RESULT_TYPE.ERROR);
                     return false;
-                }                    
+                }
+                Global.Log.DebugFormat("Client ID: {0}", csTask.UserID);
+                       
                 if (!serverMgr.RemoteIncentiveEngine.CalcTaskCost(csTask.Task, csTask.UserID, out incentiveValue) 
                     || incentiveValue == null)
                 {
                     response.SetErrorResponse("Cannot calculate the task cost. Please try again!", APIResponseDTO.RESULT_TYPE.ERROR);
                     return false;
                 }
-                calcCostDTO.ValToPay = incentiveValue.ToString();
+                calcCostDTO.IncentiveToPay = incentiveValue;
                 response.SetResponse(calcCostDTO, APIResponseDTO.RESULT_TYPE.SUCCESS);
                 Global.Log.DebugFormat("User ID: [{0}] has to Pay [{1}]", csTask.UserID, incentiveValue.ToString());
                 return true;
@@ -92,8 +111,10 @@ namespace This4That_platform.Handlers
         /// <returns></returns>
         public bool PayCreateCSTask(out APIResponseDTO response)
         {
+            Watch.Start();
             string txId = null;
             string taskId = null;
+            bool hasFunds = false;
             TaskPayCreateRequestDTO payRequest = null;
             TaskPayCreateResponseDTO payResponse = new TaskPayCreateResponseDTO();
             response = new APIResponseDTO();
@@ -105,26 +126,33 @@ namespace This4That_platform.Handlers
                     response.SetErrorResponse("Invalid Request please try again!", APIResponseDTO.RESULT_TYPE.ERROR);
                     return false;
                 }
+                Watch.Stop();
                 //try to pay the task
-                if (!PayCSTask(out txId, payRequest))
+                if (!PayCSTask(out txId, out hasFunds, payRequest))
                 {
                     response.SetErrorResponse("Cannot perform the payment!", APIResponseDTO.RESULT_TYPE.ERROR);
                     return false;
                 }
+                Watch.Start();
                 //transaction not performed due to insufficient credits
-                if (txId == null)
+                if (hasFunds == false)
                 {
                     response.SetErrorResponse("Insufficient Credits!", APIResponseDTO.RESULT_TYPE.INSUFFICIENT_CREDITS);
                     return true;
                 }
+                Watch.Stop();
                 if (!CreateCSTask(out taskId, payRequest))
                 {
                     response.SetErrorResponse("Cannot create the crowd-sensing task, please try again!", APIResponseDTO.RESULT_TYPE.ERROR);
                     return false;
                 }
+                Watch.Start();
                 payResponse.TaskID = taskId;
                 payResponse.TransactionID = txId;
                 response.SetResponse(payResponse, APIResponseDTO.RESULT_TYPE.SUCCESS);
+                Watch.Stop();
+                Global.Log.DebugFormat("Execution Time Create Task: [{0}] in Milliseconds", Watch.ElapsedMilliseconds);
+                watch.Reset();
                 return true;
             }
             catch (Exception ex)
@@ -165,12 +193,38 @@ namespace This4That_platform.Handlers
             }
         }
 
+        internal bool GetTaskReward(out APIResponseDTO response)
+        {
+            Watch.Start();
+            ExecuteTaskDTO checkRewardDTO = null;
+            response = new APIResponseDTO();
+            string transactionId = null;
+            object taskReward = null;
+            
+
+            try
+            {
+                if (!GetTaskIdFromRequest(this.request, out checkRewardDTO))
+                {
+                    response.SetErrorResponse("Invalid Request!", APIResponseDTO.RESULT_TYPE.ERROR);
+                    return false;
+                }
+                this.serverMgr.RemoteIncentiveEngine.RewardUser(checkRewardDTO.UserID, checkRewardDTO.TaskId, out transactionId, out taskReward);
+                response.SetResponse(taskReward, APIResponseDTO.RESULT_TYPE.SUCCESS);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Global.Log.Error(ex.Message);
+                return false;
+            }
+        }
+
         public bool ReportResultsCSTask(out APIResponseDTO response, string taskType)
         {
+            Watch.Start();
             TaskTypeEnum taskTypeEnum;
             ReportDTO reportReqDTO = null;
-            object rewardObj;
-            string txId = null;
             response = new APIResponseDTO();
 
             try
@@ -187,19 +241,19 @@ namespace This4That_platform.Handlers
                     response.SetErrorResponse("Invalid Request!", APIResponseDTO.RESULT_TYPE.ERROR);
                     return false;
                 }
+                Watch.Stop();
                 if (!serverMgr.RemoteReportAggregator.SaveReport(reportReqDTO))
                 {
                     Global.Log.Error("Cannot generate Report from user results!");
                     return false;
                 }
-                if (!serverMgr.RemoteIncentiveEngine.RewardUser(reportReqDTO.UserID, out txId, out rewardObj))
-                {
-                    Global.Log.Error("Cannot reward user!");
-                    return false;
-                }
-                response.SetResponse(new Dictionary<string, string>() { { "reward", rewardObj.ToString() }, { "txId", txId } }
+                Watch.Start();
+                response.SetResponse(new Dictionary<string, object>() { { "status", "submited" } }
                                     , APIResponseDTO.RESULT_TYPE.SUCCESS);
                 Global.Log.Debug("Report generated with SUCCESS!");
+                Watch.Stop();
+                Global.Log.DebugFormat("Execution Time Reward Task: [{0}] in Milliseconds", Watch.ElapsedMilliseconds);
+                Watch.Reset();
                 return true;
             }
             catch (Exception ex)
@@ -456,13 +510,14 @@ namespace This4That_platform.Handlers
             }
         }
 
-        private bool PayCSTask(out string transactionId, TaskPayCreateRequestDTO request)
+        private bool PayCSTask(out string transactionId, out bool hasFunds, TaskPayCreateRequestDTO request)
         {
             transactionId = null;
+            hasFunds = false;
 
             try
             {
-                if (!serverMgr.RemoteIncentiveEngine.PayTask(request.UserID, out transactionId))
+                if (!serverMgr.RemoteIncentiveEngine.PayTask(request.UserID, out transactionId, out hasFunds))
                 {
                     return false;
                 }
@@ -521,7 +576,7 @@ namespace This4That_platform.Handlers
                     return false;
                 }
                 csTask = (CalcTaskCostRequestDTO) requestDTO;
-                Global.Log.DebugFormat("User ID: [{0}] Task: {1}", csTask.UserID, csTask.Task.ToString());
+                //Global.Log.DebugFormat("User ID: [{0}] Task: {1}", csTask.UserID, csTask.Task.ToString());
                 if (csTask.Task.InteractiveTask == null && csTask.Task.SensingTask == null)
                 {
                     Global.Log.Error("No Task Specified!");

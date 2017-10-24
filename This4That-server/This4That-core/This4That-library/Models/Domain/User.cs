@@ -17,8 +17,7 @@ namespace This4That_library.Models.Domain
         private List<string> myTasks = new List<string>();
         private List<string> myReports = new List<string>();    
         private List<string> subscribedTopics = new List<string>();
-
-        private Wallet wallet = new Wallet();
+        private List<string> chainNodesAddresses = new List<string>();
 
         public string UserID
         {
@@ -72,24 +71,22 @@ namespace This4That_library.Models.Domain
             }
         }
 
-        public Wallet Wallet
+        public List<string> ChainNodesAddresses
         {
             get
             {
-                return wallet;
+                return chainNodesAddresses;
             }
 
             set
             {
-                wallet = value;
+                chainNodesAddresses = value;
             }
         }
 
         public User(string userId, Incentive incentive)
         {
             userID = userId;
-            this.Wallet.WalletAddress = userId;
-            this.Wallet.Balance = incentive.WalletEmpty();
         }
 
         public void SubscribeTopic(string topicName)

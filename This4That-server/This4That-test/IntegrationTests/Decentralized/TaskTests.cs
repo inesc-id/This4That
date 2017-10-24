@@ -2,12 +2,13 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using This4That_test.IntegrationDTOs;
 
-namespace This4That_test.IntegrationTests
+namespace This4That_test.IntegrationTests.Decentralized
 {
     [TestClass]
     public class TaskTests
@@ -18,14 +19,44 @@ namespace This4That_test.IntegrationTests
             string jsonBody = null;
             string response = null;
             CalcTaskCostResponseDTO responseDTO;
-
+            
             jsonBody = Library.ReadStringFromFile(Library.VALID_CALC_TASK_COST_PATH);
 
             response = Library.MakeHttpPOSTJSONRequest(Library.CALC_TASK_API_URL, jsonBody);
             responseDTO = JsonConvert.DeserializeObject<CalcTaskCostResponseDTO>(response);
 
             Assert.AreEqual(Library.ERROR_CODE_SUCCESS, responseDTO.ErrorCode);
-            Assert.IsNotNull(responseDTO.Response.ValToPay);
+            Assert.IsNotNull(responseDTO.Response.IncentiveToPay.Name);
+            Assert.IsNotNull(responseDTO.Response.IncentiveToPay.Quantity);
+        }
+
+        [TestMethod]
+        public void CalcMultipleProxieRequests()
+        {
+            string jsonBody = null;
+            string response = null;
+            CalcTaskCostResponseDTO responseDTO;
+            int loopTimes = 20;
+            List<ProxyDTO> listProxies = new List<ProxyDTO>();
+            ProxyDTO proxyInfo = null;
+
+            for(int i = 0; i < loopTimes; i++)
+            {
+                
+                jsonBody = Library.ReadStringFromFile(Library.VALID_CALC_TASK_COST_PATH);
+                response = Library.MakeHttpPostJSONRequestWithTime(Library.CALC_TASK_API_URL, jsonBody, ref proxyInfo);
+                responseDTO = JsonConvert.DeserializeObject<CalcTaskCostResponseDTO>(response);
+                listProxies.Add(proxyInfo);
+            }
+            foreach (ProxyDTO proxy in listProxies)
+            {
+                proxy.ToString();
+            }
+            /*
+            Assert.AreEqual(Library.ERROR_CODE_SUCCESS, responseDTO.ErrorCode);
+            Assert.IsNotNull(responseDTO.Response.IncentiveToPay.Name);
+            Assert.IsNotNull(responseDTO.Response.IncentiveToPay.Quantity);
+            */
         }
 
         [TestMethod]
@@ -46,15 +77,13 @@ namespace This4That_test.IntegrationTests
         }
 
         [TestMethod]
-        public void CreateVALIDTask_CheckTransaction_Centralized()
+        public void CreateVALIDTask_Decentralized()
         {
             string jsonBody = null;
             string response = null;
             CreateTaskResponseDTO responseCreateTaskDTO;
-            GetTransactionsDTO responseGetTransactionsDTO;
             GetMyTasksDTO responseGetMyTasksDTO;
 
-            bool txFound = false;
             bool taskFound = false;
 
             jsonBody = Library.ReadStringFromFile(Library.VALID_CALC_TASK_COST_PATH);
@@ -67,18 +96,7 @@ namespace This4That_test.IntegrationTests
             Assert.IsNotNull(responseCreateTaskDTO.Response.TaskID);
             Assert.IsNotNull(responseCreateTaskDTO.Response.TransactionID);
 
-            //check for transaction
-            response = Library.MakeHttpGETRequest(Library.GET_USER_TRANSACTIONS_API_URL);
-            responseGetTransactionsDTO = JsonConvert.DeserializeObject<GetTransactionsDTO>(response);
-           
-            foreach(Transaction transaction in responseGetTransactionsDTO.Response)
-            {
-                if (transaction.TxID == responseCreateTaskDTO.Response.TransactionID)
-                    txFound = true;
-            }
-            Assert.AreEqual(Library.ERROR_CODE_SUCCESS, responseGetTransactionsDTO.ErrorCode);
-            Assert.IsTrue(txFound);
-
+            /*
             //check for task created
             response = Library.MakeHttpGETRequest(Library.GET_USER_TASKS_API_URL);
             responseGetMyTasksDTO = JsonConvert.DeserializeObject<GetMyTasksDTO>(response);
@@ -90,6 +108,7 @@ namespace This4That_test.IntegrationTests
             }
             Assert.AreEqual(Library.ERROR_CODE_SUCCESS, responseGetMyTasksDTO.ErrorCode);
             Assert.IsTrue(taskFound);
+            */
         }
 
         [TestMethod]

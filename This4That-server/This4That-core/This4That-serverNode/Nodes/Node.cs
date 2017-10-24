@@ -89,6 +89,8 @@ namespace This4That_ServerNode.Nodes
             this.Port = port;
             this.Name = name;
             this.Log = LogManager.GetLogger(loggerName);
+            Console.WriteLine(name);
+            Console.WriteLine($"HOST: {this.HostName} PORT: {this.Port}");
             StartConnectRemoteInstance();
 
         }

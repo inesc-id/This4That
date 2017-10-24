@@ -1,5 +1,6 @@
 ﻿using log4net;
 using System;
+using System.Diagnostics;
 using This4That_library;
 using This4That_library.Models.Integration;
 
@@ -8,6 +9,7 @@ namespace This4That_ServerNode.Nodes
     public class TaskCreator : Node, ITaskCreator
     {
         private IRepository remoteRepository = null;
+        private Stopwatch watch;
 
         public IRepository RemoteRepository
         {
@@ -25,8 +27,7 @@ namespace This4That_ServerNode.Nodes
         public TaskCreator(string hostName, int port, string name) : base(hostName, port, name, "TaskCreatorLOG")
         {
             ConnectToRepository();
-            Console.WriteLine("TASK CREATOR");
-            Console.WriteLine($"HOST: {this.HostName} PORT: {this.Port}");
+            watch = new Stopwatch();
         }
 
         /// <summary>
@@ -79,7 +80,7 @@ namespace This4That_ServerNode.Nodes
         {
             taskID = null;
             try
-            {                
+            {
                 if (!this.RemoteRepository.RegisterTask(task, userID, out taskID))
                 {
                     Log.Error("Cannot save task on Repository!");

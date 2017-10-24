@@ -13,7 +13,6 @@ namespace This4That_platform
         private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
         private static ServerManager serverMgr;
 
-
         public static ILog Log
         {
             get

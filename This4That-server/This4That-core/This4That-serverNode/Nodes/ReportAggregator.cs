@@ -1,5 +1,6 @@
 ﻿using log4net;
 using System;
+using System.Diagnostics;
 using This4That_library;
 using This4That_library.Models.Integration.ReportDTO;
 
@@ -8,7 +9,6 @@ namespace This4That_ServerNode.Nodes
     public class ReportAggregator : Node, IReportAggregator
     {
         private IRepository remoteRepository = null;
-
         public IRepository RemoteRepository
         {
             get
@@ -25,8 +25,6 @@ namespace This4That_ServerNode.Nodes
         public ReportAggregator(string hostName, int port, string name) : base(hostName, port, name, "ReportAggregatorLOG")
         {
             ConnectToRepository();
-            Console.WriteLine("REPORT AGGREGATOR");
-            Console.WriteLine($"HOST: {this.HostName} PORT: {this.Port}");
         }
 
         /// <summary>

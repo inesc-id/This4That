@@ -1,6 +1,6 @@
 <MultiChainConfig>
-  <Port>7740</Port>
+  <Port>9242</Port>
   <Username>multichainrpc</Username>
-  <Password>2DuRKcUTXJUydUbVnZG32aGrUoP7e1MFpwkCL4GMwBww</Password>
+  <Password>123456</Password>
   <ChainName>This4ThatChain</ChainName>
 </MultiChainConfig>

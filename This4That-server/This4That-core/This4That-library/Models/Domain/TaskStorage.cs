@@ -57,5 +57,17 @@ namespace This4That_library.Models.Domain
 
             return task;
         }
+
+        public bool AssociateReport(string userID, string reportID, string taskId)
+        {
+            CSTask task;
+
+            if (!Tasks.TryGetValue(taskId, out task))
+                return false;
+
+            if (!task.ReportsID.ContainsKey(userID))
+                task.ReportsID.Add(userID, reportID);
+            return true;
+        }
     }
 }

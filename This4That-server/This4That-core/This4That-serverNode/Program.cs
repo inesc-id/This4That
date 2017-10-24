@@ -84,8 +84,6 @@ namespace This4That_ServerNode
                     transactionNode = new TransactionNode(xmlNode.Attributes["hostName"].Value, port, Global.TRANSACTION_NODE_NAME);
 
                     transactionNodeURL = $"tcp://{xmlNode.Attributes["hostName"].Value}:{xmlNode.Attributes["port"].Value}/{Global.TRANSACTION_NODE_NAME}";
-                    if (!repository.ConnectoTransactionNode(transactionNodeURL))
-                        return false;
                 }
 
                 /**************TASK CREATOR********/
@@ -114,7 +112,8 @@ namespace This4That_ServerNode
                 if (xmlNode != null)
                 {
                     int.TryParse(xmlNode.Attributes["port"].Value, out port);
-                    incentiveEngine = new IncentiveEngine(xmlNode.Attributes["hostName"].Value, port, Global.INCENTIVE_ENGINE_NAME);
+                    incentiveEngine = new IncentiveEngine(xmlNode.Attributes["hostName"].Value, port, Global.INCENTIVE_ENGINE_NAME,
+                                                          repositoryURL, transactionNodeURL);
                 }
                 return true;
             }

@@ -60,11 +60,14 @@
     <Compile Include="IntegrationDTOs\GetTasksByTopicNameDTO.cs" />
     <Compile Include="IntegrationDTOs\GetTopicsDTO.cs" />
     <Compile Include="IntegrationDTOs\GetTransactionsDTO.cs" />
+    <Compile Include="IntegrationDTOs\ProxyDTO.cs" />
     <Compile Include="IntegrationDTOs\ReportTaskDTO.cs" />
     <Compile Include="IntegrationDTOs\SubscribeDTO.cs" />
-    <Compile Include="IntegrationTests\ReportTests.cs" />
-    <Compile Include="IntegrationTests\TaskTests.cs" />
-    <Compile Include="IntegrationTests\TopicTests.cs" />
+    <Compile Include="IntegrationTests\Centralized\ReportTests.cs" />
+    <Compile Include="IntegrationTests\Centralized\TaskTests.cs" />
+    <Compile Include="IntegrationTests\Centralized\TopicTests.cs" />
+    <Compile Include="IntegrationTests\Decentralized\ReportTests.cs" />
+    <Compile Include="IntegrationTests\Decentralized\TaskTests.cs" />
     <Compile Include="Library.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

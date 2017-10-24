@@ -34,7 +34,7 @@ Client 1:
 	- multichain-cli.exe This4ThatChain -datadir=.\config-server [comand]
 
 Client 2 :
-	- start multichaind.exe This4ThatChain@[machine]:[port] -datadir=.\config-client -port=7742 -rpcport=7743
+	- start multichaind.exe This4ThatChain@[machine]:[port] -datadir=.\config-client -rpcport=7743
 	- multichain-cli.exe This4ThatChain -datadir=.\config-client -rpcport=7743 [command]
 
 When the client 2 connects to the multichain, it will download the multichain's configuration file which contains 

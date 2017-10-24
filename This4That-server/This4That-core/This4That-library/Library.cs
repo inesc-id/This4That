@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Text;
@@ -59,7 +60,7 @@ namespace This4That_library
                     return true;
                 }
 
-                if (typeFullName.Equals(typeof(ExecuteTaskDTO)))
+                if (typeof(ExecuteTaskDTO).FullName.Equals(typeFullName))
                 {
                     requestDTO = JsonConvert.DeserializeObject<ExecuteTaskDTO>(postBody);
                     return true;
@@ -147,6 +148,37 @@ namespace This4That_library
         public static long GetUnixTimestamp(DateTime time)
         {
             return (long)(time.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
+        }
+
+
+        //STATISTICAL METHODS
+        // https://www.mathsisfun.com/data/quartiles.html -> Quartiles
+        //https://en.wikipedia.org/wiki/Outlier -> Tukeys Test
+        // Q1 - 1.5* IQR and Q3 + 1.5IQR
+
+        public static double GetMedian(List<double> colValues)
+        {
+            // Create a copy of the input, and sort the copy
+            double[] temp = colValues.ToArray();
+            Array.Sort(temp);
+
+            int count = temp.Length;
+            if (count == 0)
+            {
+                return -1;
+            }
+            else if (count % 2 == 0)
+            {
+                // count is even, average two middle elements
+                double a = temp[ count / 2 - 1];
+                double b = temp[count / 2];
+                return (a + b) / 2;
+            }
+            else
+            {
+                // count is odd, return the middle element
+                return temp[count / 2];
+            }
         }
     }
 }

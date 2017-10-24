@@ -13,6 +13,7 @@ namespace This4That_library.Models.Incentives
         public const string GOLD_BADGE = "GOLD_BADGE";
         public const string SILVER_BADGE = "SILVER_BADGE";
         public const string BRONZE_BADGE = "BRONZE_BADGE";
+        public const string POINTS = "POINTS";
 
         public Gamification(List<string> incentives) : base(incentives)
         {
@@ -21,47 +22,9 @@ namespace This4That_library.Models.Incentives
 
         public override bool CheckSufficientCredits(object balance, object incentiveValue)
         {
-            int intPoints;
-            int intBalance;
-
-            int.TryParse(incentiveValue.ToString(), out intPoints);
-            int.TryParse(balance.ToString(), out intBalance);
-
-            if (intBalance < intPoints)
+            if ((int)balance < (int)incentiveValue)
                 return false;
             return true;
-        }
-
-        public override object CalcSenderNewBalance(object balance, object incentiveValue)
-        {
-            int intBalance;
-            int intIncentiveValue;
-
-            int.TryParse(balance.ToString(), out intBalance);
-            int.TryParse(incentiveValue.ToString(), out intIncentiveValue);
-
-            return intBalance - intIncentiveValue;
-        }
-
-        public override object CalcReceiverNewBalance(object balance, object incentiveValue)
-        {
-            int intBalance;
-            int intIncentiveValue;
-
-            int.TryParse(balance.ToString(), out intBalance);
-            int.TryParse(incentiveValue.ToString(), out intIncentiveValue);
-
-            return intBalance + intIncentiveValue;
-        }
-
-        public override object GetTaskReward()
-        {
-            return TASK_REWARD_VALUE;
-        }
-
-        public override int InitIncentiveQuantity()
-        {
-            return WALLET_INIT_VALUE;
         }
 
         public override List<string> GetIncentivesName()
@@ -69,19 +32,30 @@ namespace This4That_library.Models.Incentives
             return Incentives;
         }
 
-        public override object WalletEmpty()
+        public override Dictionary<string, int> InitIncentivesWallet()
         {
-            return WALLET_EMPTY;
+            Dictionary<string, int> incentivesDict = new Dictionary<string, int>();
+
+            foreach (string incentive in Incentives)
+            {
+                incentivesDict.Add(incentive, WALLET_EMPTY);
+            }
+            return incentivesDict;
         }
 
-        public override int CreateTaskIncentiveQty()
+        public override IncentiveAssigned RegisterUserIncentive()
         {
-            return TASK_CREATION_VALUE;
+            return new IncentiveAssigned(POINTS, WALLET_INIT_VALUE);
         }
 
-        public override string CreateTaskIncentiveName()
+        public override IncentiveAssigned CreateTaskIncentive()
         {
-            return this.Incentives.Find(elem => elem.Equals(GOLD_BADGE));
+            return new IncentiveAssigned(POINTS, TASK_CREATION_VALUE);
+        }
+
+        public override IncentiveAssigned CompleteTaskIncentive()
+        {
+            return new IncentiveAssigned(POINTS, TASK_REWARD_VALUE);
         }
     }
 }

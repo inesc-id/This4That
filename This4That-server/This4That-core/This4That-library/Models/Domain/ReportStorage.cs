@@ -11,11 +11,18 @@ namespace This4That_library.Models.Domain
     {
         private Dictionary<string, Report> reports = new Dictionary<string, Report>();
 
+        public Dictionary<string, Report> Reports
+        {
+            get
+            {
+                return reports;
+            }
+        }
 
-        public bool SaveReport(ReportDTO reportDTO)
+        public bool SaveReport(ref ReportDTO reportDTO, out Report report)
         {
             string reportId = Guid.NewGuid().ToString().Substring(0, 8);
-            Report report;
+            report = null;
             
             try
             {
@@ -32,14 +39,14 @@ namespace This4That_library.Models.Domain
                 {
                     return false;
                 }
-                lock (reports)
+                lock (Reports)
                 {
-                    while (reports.ContainsKey(reportId))
+                    while (Reports.ContainsKey(reportId))
                     {
                         reportId = Guid.NewGuid().ToString().Substring(0, 8);
                     }
                     report.ReportID = reportId;
-                    reports.Add(reportId, report);
+                    Reports.Add(reportId, report);
                 }
                 return true;
             }
@@ -47,6 +54,17 @@ namespace This4That_library.Models.Domain
             {
                 return false;
             }            
+        }
+
+        public void AssociateReportReward(string reportId, Dictionary<string, string> reward, string txId)
+        {
+            ReportReward reportReward = new ReportReward();
+
+            reportReward.IncentiveName = reward["incentive"];
+            reportReward.IncentiveValue = reward["quantity"];
+            reportReward.TransactionId = txId;
+
+            this.Reports[reportId].ReportReward = reportReward;
         }
     }
 }

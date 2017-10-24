@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using This4That_library.Models.Incentives;
 
 namespace This4That_library.Models.Domain
 {
@@ -10,7 +11,7 @@ namespace This4That_library.Models.Domain
         private string txID;
         private string sender;
         private string receiver;
-        private object value;
+        private IncentiveAssigned incentive;
         private long timestamp;
 
         public string TxID
@@ -39,12 +40,12 @@ namespace This4That_library.Models.Domain
             }
         }
 
-        [JsonProperty(PropertyName = "value")]
-        public object Value
+        [JsonProperty(PropertyName = "incentive")]
+        public IncentiveAssigned Incentive
         {
             get
             {
-                return value;
+                return incentive;
             }
         }
 
@@ -57,19 +58,19 @@ namespace This4That_library.Models.Domain
             }
         }
 
-        public Transaction(string ptxID, string pSender, string pReceiver, object pValue)
+        public Transaction(string ptxID, string pSender, string pReceiver, IncentiveAssigned pIncentive)
         {
             this.txID = ptxID;
             this.sender = pSender;
             this.receiver = pReceiver;
-            this.value = pValue;
+            this.incentive = pIncentive;
             this.timestamp = Library.GetUnixTimestamp(DateTime.Now);
         }
 
         public override string ToString()
         {
             return String.Format("TxID: [{0}] Sender:[{1}] Receiver:[{2}] IncentiveValue: [{3}] TimeStamp: [{4}]",
-                                 TxID.ToString(), Sender.ToString(), Receiver.ToString(), Value.ToString(), Timestamp.ToString()); 
+                                 TxID.ToString(), Sender.ToString(), Receiver.ToString(), Incentive.ToString(), Timestamp.ToString()); 
         }
     }
 }

@@ -7,12 +7,15 @@ using This4That_library.Models.Integration.ReportDTO;
 
 namespace This4That_library.Models.Domain
 {
+    [Serializable]
     public abstract class Report
     {
         private string userID;
         private string taskId;
         private DateTime timestamp;
         private string reportId;
+        private ReportReward reportReward;
+        
 
         public string UserID
         {
@@ -65,6 +68,19 @@ namespace This4That_library.Models.Domain
                 reportId = value;
             }
         }
+
+        public ReportReward ReportReward
+        {
+            get
+            {
+                return reportReward;
+            }
+
+            set
+            {
+                reportReward = value;
+            }
+        }
     }
 
 
@@ -79,6 +95,7 @@ namespace This4That_library.Models.Domain
             this.Timestamp = reportDTO.Timestamp;
             this.UserID = reportDTO.UserID;
             this.Result = ((SensingTaskReportDTO)reportDTO).Result;
+            this.ReportReward = null;
         }
 
         public SensingTaskResult Result
@@ -96,7 +113,7 @@ namespace This4That_library.Models.Domain
     }
 
 
-
+    [Serializable]
     public class InteractiveReport : Report
     {
         private InteractiveTaskResult result;
@@ -119,6 +136,53 @@ namespace This4That_library.Models.Domain
             set
             {
                 result = value;
+            }
+        }
+    }
+
+    [Serializable]
+    public class ReportReward
+    {
+        private string incentiveName;
+        private string incentiveValue;
+        private string transactionId;
+
+        public string IncentiveName
+        {
+            get
+            {
+                return incentiveName;
+            }
+
+            set
+            {
+                incentiveName = value;
+            }
+        }
+
+        public string IncentiveValue
+        {
+            get
+            {
+                return incentiveValue;
+            }
+
+            set
+            {
+                incentiveValue = value;
+            }
+        }
+
+        public string TransactionId
+        {
+            get
+            {
+                return transactionId;
+            }
+
+            set
+            {
+                transactionId = value;
             }
         }
     }

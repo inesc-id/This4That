@@ -8,87 +8,149 @@ namespace This4That_library.Models.IncentiveModels
     [Serializable]
     public class CentralizedIncentiveScheme : IncentiveSchemeBase
     {
-        public CentralizedIncentiveScheme(IRepository repository, Incentive incentive) : base(repository, incentive)
+        public CentralizedIncentiveScheme(IRepository repository, ITransactionNode txNode, Incentive incentive) : base(repository, txNode, incentive)
         {
-
+            InitManager(incentive);
         }
 
-        public override bool CheckUserBalance(string userId, int incentiveQty, string incentiveName)
+        public override bool CheckUserBalance(string userId, IncentiveAssigned incentiveAssigned)
         {
-            /*
-            object balance; 
+            
+            Dictionary<string, int> incentivesBalance;
+            int balance;
 
-            balance = Repository.GetUserBalance(userId);
 
-            if (!Incentive.CheckSufficientCredits(balance, incentiveQty))
-                return false;*/
+            Log.DebugFormat("Going to check the balance for UserId: [{0}]", userId);
+            Watch.Stop();
+            incentivesBalance = GetUserBalance(userId);
+            Watch.Start();
+            balance = incentivesBalance[incentiveAssigned.IncentiveName];
 
-            return false;
-        }
-
-        public override bool RegisterTransaction(string sender, string receiver, object incentiveValue, out string transactionId)
-        {
-            //in the centralized version the transactions are stored in the TransactionNode
-            //create the transaction
-            if (!Repository.CreateTransactionCentralized(sender, receiver, incentiveValue, out transactionId) || transactionId == null)
+            Log.DebugFormat("Balance: [{0}] for Incentive: [{1}]", balance, incentiveAssigned.IncentiveName);
+            if (!Incentive.CheckSufficientCredits(balance, incentiveAssigned.IncentiveQty))
             {
+                log.Debug("Insufficient Funds.");
                 return false;
             }
-            //calculate the new balances for the sender and receiver
-            //associate in the user wallet the transaction ID
-            if (!Repository.ExecuteTransactionCentralized(sender, receiver, Incentive, incentiveValue, transactionId))
-                return false;
+            return true;
+        }
 
+        public override bool RegisterTransaction(string sender, string receiver, IncentiveAssigned incentiveAssigned, out string transactionId, out bool hasFunds)
+        {
+            transactionId = null;
+            hasFunds = false;
+
+            //check if the user can make the transaction
+            if (!CheckUserBalance(sender, incentiveAssigned))
+            {
+
+                //check if the Manager has  the necessary incentives to distribute among the users
+                if (sender.Equals(this.ManagerAddress))
+                {
+                    log.Debug("Manager does not have the necessary incentive quantity. Going to issue more incentives!");
+                    IssueMoreIncentives(incentiveAssigned);
+                }
+                else
+                {
+                    hasFunds = false;
+                    return true;
+                }
+            }
+            hasFunds = true;
+            log.DebugFormat("Going to create transaction for transfer [{0}] of incentive [{1}] from [{2}] to [{3}]", incentiveAssigned.IncentiveQty
+                                                                                                                   , incentiveAssigned.IncentiveName
+                                                                                                                   , sender
+                                                                                                                   , receiver);
+            Watch.Stop();
+            //in the centralized version the transactions are stored in the TransactionNode
+            //create the transaction
+            if (!this.TxNode.CreateTransaction(sender, receiver, incentiveAssigned, out transactionId))
+            {
+                Log.Error("Cannot Create transaction!");
+                return false;
+            }
+            Log.DebugFormat("Transaction Create with Sucess!. ID: [{0}]", transactionId);
             return true;
         }
 
         public override List<Transaction> GetUserTransactions(string userId)
         {
-            return Repository.GetUserTransactionsCentralized(userId);
+            Transaction tx;
+            List<Transaction> userTransactions = new List<Transaction>();
+            Wallet wallet;
+
+            if (!this.TxNode.GetUserWallet(userId, out wallet))
+            {
+                return null;
+            }
+            foreach (string transaction in wallet.Transactions)
+            {
+                tx = this.TxNode.GetTransactionById(transaction);
+
+                if (tx != null)
+                {
+                    userTransactions.Add(tx);
+                }
+                else
+                {
+                    Log.ErrorFormat("Transaction ID: [{0}] does not exist", tx.TxID);
+                }
+            }
+            return userTransactions;
         }
 
         public override bool RegisterUser(out string transactionId, out string userAddress, ref string errorMessage)
         {
-            //FIXME: alterar initValue, para quantity e o incentivo atribuido
-            object initValue = Incentive.InitIncentiveQuantity();
+            IncentiveAssigned incentiveAssigned;
+            bool hasFunds;
+            userAddress = null;
+            transactionId = null;
+
+            incentiveAssigned = Incentive.RegisterUserIncentive();
             userAddress = GenerateUserId();
 
             //register user on repository
-            this.Repository.RegisterUser(userAddress, this.Incentive);
-
-            //register transaction
-            if (!RegisterTransaction("Platform", userAddress, initValue, out transactionId))
+            if (!this.Repository.RegisterUser(userAddress, this.Incentive))
+            {
                 return false;
-
+            }
+            
+            //create user wallet on TransactionNode
+            if (!this.TxNode.CreateUserWallet(userAddress, this.Incentive))
+            {
+                return false;
+            }
+            //register transaction
+            if (!RegisterTransaction(this.ManagerAddress, userAddress, incentiveAssigned, out transactionId, out hasFunds))
+            {
+                Log.ErrorFormat("Cannot make transaction for registering user ID: [{0}]", userAddress);
+                return false;
+            }
             return true;
         }
 
-        public override bool PayTask(string sender, out string transactionId)
+
+        public override bool PayTask(string sender, out string transactionId, out bool hasFunds)
         {
+            Watch.Start();
             transactionId = null;
-            string incentiveName;
-            int assetQty;
+            IncentiveAssigned incentiveAssigned;
+            hasFunds = false;
+
             try
             {
-                incentiveName = this.Incentive.CreateTaskIncentiveName();
-                assetQty = this.Incentive.CreateTaskIncentiveQty();
+                incentiveAssigned = Incentive.CreateTaskIncentive();
 
-                //FIXME: in this version the object Incentive must distinct the balance between the Incentives Objects
-
-                //check if user has sufficient credits, depending the incentive type
-                if (!CheckUserBalance(sender, assetQty, incentiveName))
-                {
-                    //return true and tx = null for insuf. funds
-                    Console.WriteLine("[INFO - INCENTIVE ENGINE] - User: [{0}] Insufficient Balance!", sender);
-                    transactionId = null;
-                    return true;
-                }
                 //create the transaction and store it into the TransactionStorage
-                if (!RegisterTransaction(sender, "Platform", assetQty, out transactionId))
+                log.DebugFormat("User: [{0}] going to pay [{1}] to create a Task", sender, incentiveAssigned.IncentiveQty);
+                if (!RegisterTransaction(sender, this.ManagerAddress, incentiveAssigned, out transactionId, out hasFunds))
                 {
                     Console.WriteLine("[ERROR - INCENTIVE ENGINE] - Cannot register task payment!");
                     return false;
                 }
+                Watch.Stop();
+                Log.DebugFormat("Execution Time on IncentiveEngineNode Centralized: [{0}] milliseconds to Pay Task", Watch.ElapsedMilliseconds);
+                Watch.Reset();
                 return true;
             }
             catch (Exception)
@@ -97,28 +159,35 @@ namespace This4That_library.Models.IncentiveModels
             }
         }
 
-        public override bool RewardUser(string receiver, out object reward, out string transactionId)
+        public override bool RewardUser(string receiver, IncentiveAssigned incentiveAssigned, out object reward, out string transactionId)
         {
+            Watch.Start();
             reward = null;
             transactionId = null;
+            bool hasFunds = false;
+            
             try
             {
                 //obtain the reward for completing the task
-                object taskReward = Incentive.GetTaskReward();
+                incentiveAssigned = Incentive.CompleteTaskIncentive();
 
                 //create the transaction and store it into the TransactionStorage
-                if (!RegisterTransaction("Platform", receiver, taskReward, out transactionId))
+                if (!RegisterTransaction(this.ManagerAddress, receiver, incentiveAssigned, out transactionId, out hasFunds))
                 {
                     return false;
                 }
+                reward = new Dictionary<string, string>() { { "quantity", incentiveAssigned.IncentiveQty.ToString()},
+                                                            { "incentive", incentiveAssigned.IncentiveName } };
+                Watch.Stop();
+                Log.DebugFormat("Execution Time on IncentiveEngineNode Centralized: [{0}] milliseconds to Reward User", Watch.ElapsedMilliseconds);
+                Watch.Reset();
                 return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                log.ErrorFormat(ex.Message);
+                return false;
             }
-
         }
 
         #region PRIVATE_METHODS
@@ -127,6 +196,42 @@ namespace This4That_library.Models.IncentiveModels
         {
             return Guid.NewGuid().ToString().Substring(0, 8);
         }
+
+        private Dictionary<string, int> GetUserBalance(string userID)
+        {
+            Wallet wallet;
+
+            if (this.TxNode.GetUserWallet(userID, out wallet))
+                return wallet.Balance;
+            else
+                return null;
+        }
+
+        private bool InitManager(Incentive incentive)
+        {
+            this.ManagerAddress = GenerateUserId();
+
+            //register on repository the Manager
+            if (!this.Repository.RegisterUser(ManagerAddress, incentive))
+            {
+                return false;
+            }
+            //create user wallet on TransactionNode
+            if (!this.TxNode.CreateUserWallet(ManagerAddress, this.Incentive))
+            {
+                return false;
+            }
+            return true;
+        }
+
+        private bool IssueMoreIncentives(IncentiveAssigned incentiveAssigned)
+        {
+            if (!this.TxNode.IssueMoreIncentives(ManagerAddress, incentiveAssigned))
+                return false;
+
+            return true;
+        }
+
         #endregion
     }
 }

@@ -14,8 +14,6 @@ namespace This4That_library.Models.IncentiveModels
     {
 
         private MultiChainClient multichainClient;
-        private string managerAddress = null;
-        protected ILog log;
 
         public MultiChainClient MultichainClient
         {
@@ -30,32 +28,8 @@ namespace This4That_library.Models.IncentiveModels
             }
         }
 
-        public string ManagerAddress
-        {
-            get
-            {
-                return managerAddress;
-            }
-
-            set
-            {
-                managerAddress = value;
-            }
-        }
-
-        protected ILog Log
-        {
-            get
-            {
-                return log;
-            }
-
-            set
-            {
-                log = value;
-            }
-        }
-        public DescentralizedIncentiveScheme(IRepository repository, Incentive incentive) : base(repository, incentive)
+        
+        public DescentralizedIncentiveScheme(IRepository repository, Incentive incentive) : base(repository, null, incentive)
         {
             bool chainAlreadyExist = false;
             int chainPort;
@@ -63,7 +37,6 @@ namespace This4That_library.Models.IncentiveModels
             string password;
             string chainName;
 
-            this.log = LogManager.GetLogger("MultichainLOG");
             //create the blockchain if it does not exist
             CreateBlockChain(out chainAlreadyExist);
             //start the blockchain
@@ -80,22 +53,45 @@ namespace This4That_library.Models.IncentiveModels
             GetAddressForManager();
             //create the incentives to be distributed in the blockchain
             IssueIncentives();
+
+            //FIXME: remove, just for testing
+            //UserTesting();
+            
         }
 
-        public override bool CheckUserBalance(string sender, int incentiveQty, string incentiveName)
+        public void UserTesting()
         {
+            IncentiveAssigned incentive = new IncentiveAssigned("BRONZE_BADGE", 2000);
+            string transactionId;
+            string userId = "1FwQkWSxzFMz8utyhZzwF2K5QqtZ59uQuGbAb8";
+            bool hasfunds;
+
+            //FIXME: remove
+            this.Repository.RegisterUser(userId, this.Incentive);
+            IssueMoreIncentives(incentive);
+            RegisterTransaction(this.ManagerAddress, userId, incentive, out transactionId, out hasfunds);
+        }
+
+
+        #region MULTICHAIN_OPERATIONS
+
+        public override bool CheckUserBalance(string sender, IncentiveAssigned incentiveAssigned)
+        {
+            int balance;
             try
             {
-                var respMultibal = this.MultichainClient.GetMultiBalancesAsync(sender, incentiveName);
-                respMultibal.Result.AssertOk();
+                var respMultibal = this.MultichainClient.GetMultiBalancesAsync(sender, incentiveAssigned.IncentiveName);
+                //respMultibal.Result.AssertOk();
 
                 foreach (AssetBalanceResponse asset in respMultibal.Result.Result.Assets)
                 {
-                    if (asset.Name.Equals(incentiveName))
+                    if (asset.Name.Equals(incentiveAssigned.IncentiveName))
                     {
-                        if (!this.Incentive.CheckSufficientCredits(asset.Qty, incentiveQty))
+                        balance = (int)asset.Qty;
+
+                        if (!this.Incentive.CheckSufficientCredits(balance, incentiveAssigned.IncentiveQty))
                         {
-                            log.DebugFormat("Insufficient Funds. User Balance: [{0}] for Incentive:  [{1}]", asset.Qty, incentiveQty);
+                            log.DebugFormat("Insufficient Funds. User Balance: [{0}] for Incentive:  [{1}]", asset.Qty, incentiveAssigned.IncentiveQty);
                             return false;
                         }
                         return true;
@@ -103,194 +99,109 @@ namespace This4That_library.Models.IncentiveModels
                 }
                 throw new Exception("Incentive not Found");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                log.Error(ex.InnerException.Message);
+                return false;
             }
         }
 
-        public override bool RegisterTransaction(string sender, string recipient, object incentiveValue, out string transactionId)
+        public override bool RegisterTransaction(string sender, string recipient, IncentiveAssigned incentiveAssigned, out string transactionId, out bool hasFunds)
         {
             transactionId = null;
-            decimal assetQty;
+
+            hasFunds = false;
+
             try
             {
-                decimal.TryParse(incentiveValue.ToString(), out assetQty);
-
-                //FIXME: do not send all incentives
-                foreach (string incentive in this.Incentive.Incentives)
+                //check if the user can make the transaction
+                if (!CheckUserBalance(sender, incentiveAssigned))
                 {
-                    log.DebugFormat("Going to transfer [{0}] from incentive [{1}]", assetQty, incentive);
-                    var response = this.MultichainClient.SendAssetFromAsync(sender, recipient,
-                                                                            incentive, assetQty);
-                    response.Result.AssertOk();
-                    transactionId = response.Result.Result;
-                    log.DebugFormat("Transaction Id: [{0}]", transactionId);
+                    
+                    //check if the Manager has  the necessary incentives to distribute among the users
+                    if (sender.Equals(this.ManagerAddress))
+                    {
+                        log.Debug("Manager does not have the necessary incentive quantity. Going to issue more incentives!");
+                        IssueMoreIncentives(incentiveAssigned);
+                    }
+                    else
+                    {
+                        hasFunds = false;
+                        return true;
+                    }
                 }
-                return true;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-        
-        public override List<Transaction> GetUserTransactions(string mutichainAddress)
-        {
-            try
-            {
-                throw new NotImplementedException();
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
-
-        public override bool RegisterUser(out string transactionId, out string userAddress, ref string errorMessage)
-        {
-            transactionId = null;
-            int incentiveQty = -1;
-            try
-            {
-                log.DebugFormat("Goin to register a new user.");
-                //get multichain address. this address will be used to deposit and raise rewards.
-                var response = this.MultichainClient.GetNewAddressAsync();
+                hasFunds = true;
+                log.DebugFormat("Going to transfer [{0}] from incentive [{1}]", incentiveAssigned.IncentiveQty, incentiveAssigned.IncentiveName);
+                var response = this.MultichainClient.SendAssetFromAsync(sender, recipient, incentiveAssigned.IncentiveName, incentiveAssigned.IncentiveQty);
                 response.Result.AssertOk();
-                userAddress = response.Result.Result;
-                log.DebugFormat("User Address: [{0}]", userAddress);
-
-                //register user on repository
-                this.Repository.RegisterUser(userAddress, this.Incentive);
-
-                //give user permissions
-                GiveUserPermissions(userAddress);
-
-                incentiveQty = Incentive.InitIncentiveQuantity();
-                //create value for the asset (creates the necessary incentive's quantity to give to the user)
-                if (!CreateAssetValue(incentiveQty))
-                {
-                    errorMessage = "Cannot register transaction on multichain.";
-                    return false;
-                }
-
-                if (!RegisterTransaction(this.ManagerAddress, userAddress, incentiveQty, out transactionId))
-                {
-                    errorMessage = String.Format("Cannot Register transaction! From UserManager: [{0}] to User: [{1}]", managerAddress, userAddress);
-                    return false;
-                }
+                transactionId = response.Result.Result;
+                log.DebugFormat("Transaction Id: [{0}]", transactionId);
                 return true;
             }
             catch (Exception ex)
             {
-                throw ex;
-            }            
+                log.Error(ex.InnerException.Message);
+                return false;
+            }
         }
 
-        public bool CreateAssetValue(int incentiveQty)
+        private bool IssueMoreIncentives(IncentiveAssigned incentiveAsseigned)
+        {
+
+            try
+            {
+                log.DebugFormat("Going to issue more [{0}] from asset [{1}]", incentiveAsseigned.IncentiveQty, incentiveAsseigned.IncentiveName);
+                var response = this.MultichainClient.IssueMoreAsync(ManagerAddress, incentiveAsseigned.IncentiveName, incentiveAsseigned.IncentiveQty);
+                response.Result.AssertOk();
+                return true;                
+
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex.InnerException.Message);
+                return false;
+            }
+        }
+        
+        /// <summary>
+        /// Create the incentives in the blockchain
+        /// </summary>
+        private void IssueIncentives()
         {
             List<string> incentives;
-
+            List<string> assets = new List<string>();
             try
             {
                 incentives = Incentive.GetIncentivesName();
 
+                var respAssetExist = this.MultichainClient.ListAssetsAsync();
+                respAssetExist.Result.AssertOk();
+                
+                foreach (AssetResponse asset in respAssetExist.Result.Result)
+                {
+                    assets.Add(asset.Name);
+                }
+
                 foreach (string incentiveName in incentives)
                 {
-                    log.DebugFormat("Going to issue more [{0}] from asset [{1}]", incentiveQty, incentiveName);
-                    var response = this.MultichainClient.IssueMoreAsync(ManagerAddress, incentiveName, incentiveQty);
-                    response.Result.AssertOk();
+                    
+                    //if the asset already exists, do not create
+                    if (assets.Contains(incentiveName))
+                    {
+                        log.DebugFormat("Asset: [{0}] already created in blockchain", incentiveName);
+                        continue;
+                    }
+                    //Create asset
+                    var resCreateAsset = this.MultichainClient.IssueAsync(this.ManagerAddress, incentiveName, true, 0, 1);
+                    resCreateAsset.Result.AssertOk();
+                    log.DebugFormat("Asset: [{0}] Created", incentiveName);
                 }
-                return true;
-                
 
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-        }
-        public bool AddNodeToChain(string address)
-        {
-            try
-            {
-                GiveUserPermissions(address);
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            
-        }
-
-        #region PRIVATE_METHODS
-
-        private void LoadMultichainParameters(out int port, out string username, out string password, out string chainName)
-        {
-            XMLParser xmlParser;
-            string errorMessage = null;
-            port = -1;
-            username = null;
-            password = null;
-            chainName = null;
-
-            try
-            {
-                //take care of xml path, because it's realtive to the process which is running the app
-                xmlParser = new XMLParser(@"..\..\multichain-core\config-server\chain_parameters.xml", @"..\..\multichain-core\config-server\chain_parameters.xsd", "This4ThatNS");
-                if (!xmlParser.LoadXMLConfiguration(ref errorMessage))
-                {
-                    throw new Exception(errorMessage);
-                }
-                int.TryParse(xmlParser.XmlDoc.GetElementsByTagName(Global.PORT_TAG)[0].InnerText, out port);
-                username = xmlParser.XmlDoc.GetElementsByTagName(Global.USERNAME_TAG)[0].InnerText;
-                password = xmlParser.XmlDoc.GetElementsByTagName(Global.PASSWORD_TAG)[0].InnerText;
-                chainName = xmlParser.XmlDoc.GetElementsByTagName(Global.CHAINNAME_TAG)[0].InnerText;
-
-                if (port != -1 && username != null && password != null && chainName != null)
-                    return;
-
-                throw new Exception("Invalid chain_parameters.xml file!");
             }
             catch (Exception ex)
             {
-                throw ex;
+                log.Error(ex.InnerException.Message);
             }
-        }
-
-        private void CreateBlockChain(out bool alreadyExists)
-        {
-            DirectoryInfo dirInfo;
-
-            //if the folder exists, so the we assume the blockchain is initialized
-            if (Directory.Exists(@"..\..\multichain-core\config-server\"))
-            {
-                alreadyExists = true;
-                log.Debug("Multichain installation detected!");
-                return;
-            }
-            //else, the blockchain was not initialized, going to create the directory
-            dirInfo = Directory.CreateDirectory(@"..\..\multichain-core\config-server\");
-            log.Debug("Multichain installation NOT detected!");
-            if (dirInfo.Exists)
-            {
-                Process.Start(@"..\..\multichain-core\multichain-util.exe", @"create This4ThatChain -datadir=..\..\multichain-core\config-server");
-                Console.Write("[INFO] - Chain CREATED");
-                alreadyExists = false;
-            }
-            else
-                throw new Exception("Cannot create config-server folder to initialize blockchain");
-        }
-
-        private void StartBlockChain()
-        {
-            Process.Start(@"..\..\multichain-core\multichaind.exe", @"This4ThatChain -datadir=..\..\multichain-core\config-server");
-            //give time to client, to connect to the node
-            Thread.Sleep(5000);
-            Console.WriteLine("[INFO] - Chain INITIALIZED");
-            log.Debug("Blockchain initialized with SUCESS!");
         }
 
         private void GiveUserPermissions(string multichainId)
@@ -359,7 +270,7 @@ namespace This4That_library.Models.IncentiveModels
             try
             {
                 var response = this.MultichainClient.GetNewAddressAsync();
-                response.Result.AssertOk();
+               // response.Result.AssertOk();
                 managerAddress = response.Result.Result;
                 log.DebugFormat("Manager has the following address: [{0}]", managerAddress);
                 addressesPermissions.Add(managerAddress);
@@ -372,36 +283,40 @@ namespace This4That_library.Models.IncentiveModels
             }
             catch (Exception ex)
             {
-                throw ex;
+                log.Error(ex.InnerException.Message);
             }
         }
 
-        /// <summary>
-        /// Create the incentives in the blockchain
-        /// </summary>
-        private void IssueIncentives()
+        #endregion
+
+        #region MULTICHAIN_SETUP
+
+        private void LoadMultichainParameters(out int port, out string username, out string password, out string chainName)
         {
-            List<string> incentives;
+            XMLParser xmlParser;
+            string errorMessage = null;
+            port = -1;
+            username = null;
+            password = null;
+            chainName = null;
 
             try
             {
-                incentives = Incentive.GetIncentivesName();
-                
-                foreach (string incentiveName in incentives)
+                //take care of xml path, because it's realtive to the process which is running the app
+                xmlParser = new XMLParser(@"..\..\multichain-core\config-server\chain_parameters.xml", @"..\..\multichain-core\config-server\chain_parameters.xsd", "This4ThatNS");
+                if (!xmlParser.LoadXMLConfiguration(ref errorMessage))
                 {
-                    var respAssetExist = this.MultichainClient.ListAssetsAsync(incentiveName);
-                    //if the asset already exists, do not create
-                    if (respAssetExist.Result.Result.Count == 1)
-                    {
-                        log.DebugFormat("Asset: [{0}] already created in blockchain", incentiveName);
-                        continue;
-                    }
-                    //Create asset
-                    var resCreateAsset = this.MultichainClient.IssueAsync(managerAddress, incentiveName, true, 0, 1);
-                    resCreateAsset.Result.AssertOk();
-                    log.DebugFormat("Asset: [{0}] Created", incentiveName);
+                    throw new Exception(errorMessage);
                 }
-                
+                int.TryParse(xmlParser.XmlDoc.GetElementsByTagName(Global.PORT_TAG)[0].InnerText, out port);
+                username = xmlParser.XmlDoc.GetElementsByTagName(Global.USERNAME_TAG)[0].InnerText;
+                password = xmlParser.XmlDoc.GetElementsByTagName(Global.PASSWORD_TAG)[0].InnerText;
+                chainName = xmlParser.XmlDoc.GetElementsByTagName(Global.CHAINNAME_TAG)[0].InnerText;
+
+                if (port != -1 && username != null && password != null && chainName != null)
+                    return;
+
+                throw new Exception("Invalid chain_parameters.xml file!");
             }
             catch (Exception ex)
             {
@@ -409,24 +324,73 @@ namespace This4That_library.Models.IncentiveModels
             }
         }
 
-        public override bool PayTask(string sender, out string transactionId)
+        private void CreateBlockChain(out bool alreadyExists)
         {
-            int assetQty;
+            DirectoryInfo dirInfo;
+
+            //if the folder exists, so the we assume the blockchain is initialized
+            if (Directory.Exists(@"..\..\multichain-core\config-server\"))
+            {
+                alreadyExists = true;
+                log.Debug("Multichain installation detected!");
+                return;
+            }
+            //else, the blockchain was not initialized, going to create the directory
+            dirInfo = Directory.CreateDirectory(@"..\..\multichain-core\config-server\");
+            log.Debug("Multichain installation NOT detected!");
+            if (dirInfo.Exists)
+            {
+                Process.Start(@"..\..\multichain-core\multichain-util.exe", @"create This4ThatChain -datadir=..\..\multichain-core\config-server");
+                Console.Write("[INFO] - Chain CREATED");
+                alreadyExists = false;
+            }
+            else
+                throw new Exception("Cannot create config-server folder to initialize blockchain");
+        }
+
+        private void StartBlockChain()
+        {
+            Process.Start(@"..\..\multichain-core\multichaind.exe", @"This4ThatChain -datadir=..\..\multichain-core\config-server");
+            //give time to client, to connect to the node
+            Console.WriteLine("[INFO] - Connecting to Multichain...");
+            Thread.Sleep(10000);
+            Console.WriteLine("[INFO] - Chain INITIALIZED");
+            log.Debug("Blockchain initialized with SUCESS!");
+        }
+
+        #endregion
+
+
+        public override bool RegisterUser(out string transactionId, out string userAddress, ref string errorMessage)
+        {
             transactionId = null;
-            string incentiveName = null;
-            
+            IncentiveAssigned incentiveAssigned;
+            bool hasfunds;
             try
             {
-                incentiveName = this.Incentive.CreateTaskIncentiveName();
-                assetQty = this.Incentive.CreateTaskIncentiveQty();
+                log.DebugFormat("Goin to register a new user.");
+                //get multichain address. this address will be used to deposit and raise rewards.
+                var response = this.MultichainClient.GetNewAddressAsync();
+                response.Result.AssertOk();
+                userAddress = response.Result.Result;
+                log.DebugFormat("User Address: [{0}]", userAddress);
 
-                //check if the user can make the transaction
-                if (!CheckUserBalance(sender, assetQty, incentiveName))
+                //register user on repository
+                this.Repository.RegisterUser(userAddress, this.Incentive);
+
+                //add useraddress to the user nodes list
+                this.Repository.AddUserMultichainNode(userAddress, userAddress);
+
+                //give user permissions
+                GiveUserPermissions(userAddress);
+                incentiveAssigned = Incentive.RegisterUserIncentive();
+
+                if (!RegisterTransaction(this.ManagerAddress, userAddress, incentiveAssigned, out transactionId, out hasfunds))
+                {
+                    errorMessage = String.Format("Cannot Register transaction! From UserManager: [{0}] to User: [{1}]", this.ManagerAddress, userAddress);
                     return false;
-
-                //register the transaction                
-                log.DebugFormat("User: [{0}] going to pay [{1}]", sender, assetQty);
-                RegisterTransaction(sender, this.ManagerAddress, assetQty, out transactionId);
+                }
+                
                 return true;
             }
             catch (Exception ex)
@@ -435,11 +399,98 @@ namespace This4That_library.Models.IncentiveModels
             }
         }
 
-        public override bool RewardUser(string receiver, out object reward, out string transactionId)
+        public override bool PayTask(string sender, out string transactionId, out bool hasFunds)
         {
-            throw new NotImplementedException();
+            Watch.Start();
+            transactionId = null;
+            hasFunds = false;
+            IncentiveAssigned incentiveAssigned;
+
+            try
+            {
+                incentiveAssigned = this.Incentive.CreateTaskIncentive();
+                                                
+                //register the transaction                
+                log.DebugFormat("User: [{0}] going to pay [{1}] to create a Task", sender, incentiveAssigned.IncentiveQty);
+                RegisterTransaction(sender, this.ManagerAddress, incentiveAssigned, out transactionId, out hasFunds);
+                Watch.Stop();
+                Log.DebugFormat("Execution Time on IncentiveEngineNode Decentralized: [{0}] milliseconds to Pay Task", Watch.ElapsedMilliseconds);
+                Watch.Reset();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex.Message);
+                return false;
+            }
         }
 
-        #endregion
+        public override bool RewardUser(string receiver, IncentiveAssigned incentiveAssigned, out object reward, out string transactionId)
+        {
+            Watch.Start();
+            List<string> userNodes;
+            reward = null;
+            transactionId = null;
+            bool hasFunds;
+
+            try
+            {
+                userNodes = this.Repository.GetUserMultichainNodes(receiver);
+                
+                if (userNodes != null)
+                {
+                    //increase the incentive based on the number of nodes contributing to the blockchain
+                    if (userNodes.Count != 0)
+                        incentiveAssigned.IncentiveQty *= userNodes.Count;
+                }
+                else
+                {
+                    return false;
+                }
+                //transfer the incentive to the user
+                if (!RegisterTransaction(ManagerAddress, receiver, incentiveAssigned, out transactionId, out hasFunds))
+                {
+                    return false;
+                }
+                reward = new Dictionary<string, string>() { { "quantity", incentiveAssigned.IncentiveQty.ToString()},
+                                                            { "incentive", incentiveAssigned.IncentiveName } };
+                Watch.Stop();
+                Log.DebugFormat("Execution Time on IncentiveEngineNode Decentralized: [{0}] milliseconds to Reward User", Watch.ElapsedMilliseconds);
+                Watch.Reset();
+                return true;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public override List<Transaction> GetUserTransactions(string mutichainAddress)
+        {
+            try
+            {
+                throw new NotImplementedException();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public bool AddNodeToChain(string address)
+        {
+            try
+            {
+                GiveUserPermissions(address);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+        }
     }
 }

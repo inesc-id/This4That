@@ -14,8 +14,6 @@ namespace This4That_ServerNode.Nodes
         public TaskDistributor(string hostName, int port, string name) : base(hostName, port, name, "TaskDistributorLOG")
         {
             ConnectToRepository();
-            Console.WriteLine("TASK DISTRIBUTOR");
-            Console.WriteLine($"HOST: {this.HostName} PORT: {this.Port}");
         }
 
         public IRepository RemoteRepository

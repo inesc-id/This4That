@@ -9,6 +9,8 @@ using This4That_library.Models.Integration.ReportDTO;
 using This4That_library.Models.IncentiveModels;
 using This4That_library.Models.Domain;
 using This4That_library.Integration;
+using System.Diagnostics;
+using System.Threading;
 
 namespace This4That_ServerNode.Nodes
 {
@@ -18,7 +20,8 @@ namespace This4That_ServerNode.Nodes
         private UserStorage userStorage = new UserStorage();
         private ReportStorage reportStorage = new ReportStorage();
         private TaskStorage taskStorage = new TaskStorage();
-        private ITransactionNode transactionNode = null;
+
+        private Stopwatch watch = new Stopwatch();
 
         public Dictionary<string, Topic> ColTopics
         {
@@ -72,24 +75,12 @@ namespace This4That_ServerNode.Nodes
             }
         }
 
-        public ITransactionNode RemoteTransactionNode
-        {
-            get
-            {
-                return transactionNode;
-            }
-
-            set
-            {
-                transactionNode = value;
-            }
-        }
-
         public Repository(string hostName, int port, string name) : base(hostName, port, name, "RepositoryLOG")
         {
-            Console.WriteLine("REPOSITORY");
-            Console.WriteLine($"HOST: {this.HostName} PORT: {this.Port}");
+
         }
+
+        
 
 
         /// <summary>
@@ -115,21 +106,6 @@ namespace This4That_ServerNode.Nodes
             {
                 Log.Error(ex.Message);
                 Log.ErrorFormat("Cannot connect Repository to ServerManager: [{0}", Global.SERVER_MANAGER_URL);
-                return false;
-            }
-        }
-
-        public bool ConnectoTransactionNode(string transactionNodeURL)
-        {
-            try
-            {
-                this.RemoteTransactionNode = (ITransactionNode)Activator.GetObject(typeof(ITransactionNode), transactionNodeURL);
-                Log.DebugFormat("[INFO - TRANSACTION NODE] - Connected to Repository.");
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Log.Error(ex.Message);
                 return false;
             }
         }
@@ -178,6 +154,7 @@ namespace This4That_ServerNode.Nodes
 
         public bool RegisterTask(CSTaskDTO task, string userID, out string taskID)
         {
+            watch.Start();
             User user;
             taskID = null;
             try {
@@ -190,6 +167,9 @@ namespace This4That_ServerNode.Nodes
                 if (!SaveTask(task, out taskID))
                     return false;
                 user.MyTasks.Add(taskID);
+                watch.Stop();
+                Log.DebugFormat("Execution Time: [{0}] in milliseconds to Register a task", watch.ElapsedMilliseconds);
+                watch.Reset();
                 return true;                            
             }
             catch (Exception ex)
@@ -271,19 +251,19 @@ namespace This4That_ServerNode.Nodes
             
         }
 
-        public object GetUserBalance(string userID)
+        
+
+        public List<string> GetUserMultichainNodes(string userId)
         {
             User user;
 
-            user = UserStorage.GetUserByID(userID);
+            user = this.UserStorage.GetUserByID(userId);
 
             if (user != null)
-            {
-                return user.Wallet.Balance;
-            }
+                return user.ChainNodesAddresses;
+
             return null;
         }
-
 
         public bool SubscribeTopic(string userId, string topicName, ref string errorMessage)
         {
@@ -435,17 +415,62 @@ namespace This4That_ServerNode.Nodes
             }
         }
 
-        public bool SaveReportInRepository(ReportDTO report)
+        public List<CSTask> GetCSTasks()
         {
+            List<CSTask> taskList = new List<CSTask>();
+
+            foreach (CSTask task in TaskStorage.Tasks.Values)
+            {
+                taskList.Add(task);
+            }
+
+            return taskList;
+        }
+
+        public InteractiveReport GetInteractiveReportsByID(string reportID)
+        {
+            return (InteractiveReport) ReportStorage.Reports[reportID];
+        }
+
+        public string GetUserReportByTaskId(string taskId, string userId)
+        {
+            CSTask task;
+
+            task = this.TaskStorage.GetTaskByID(taskId);
+            if (!task.ReportsID.ContainsKey(userId))
+                return null;
+            else
+                return task.ReportsID[userId];
+        }
+
+        public bool SaveReportInRepository(ReportDTO reportDTO)
+        {
+            Report report;
+            watch.Start();
+
             try
             {
-                if (!ReportStorage.SaveReport(report))
+                if (UserStorage.GetUserByID(reportDTO.UserID) == null)
+                {
+                    Log.ErrorFormat("User Id: [{0}] does not exist!", reportDTO.UserID);
+                    return false;
+                }
+                //Save report info
+                if (!ReportStorage.SaveReport(ref reportDTO, out report))
                     return false;
 
+                //associate to user
                 if (!UserStorage.SaveUserReport(report))
                     return false;
 
+                //associate to task
+                if (!TaskStorage.AssociateReport(report.UserID, report.ReportID, report.TaskId))
+                    return false;
+
                 Log.Debug("[INFO - REPOSITORY] - Report Saved!");
+                watch.Stop();
+                Log.DebugFormat("Execution Time: [{0}] in milliseconds to Save a Report", watch.ElapsedMilliseconds);
+                watch.Reset();
                 return true;
             }
             catch (Exception ex)
@@ -477,66 +502,8 @@ namespace This4That_ServerNode.Nodes
                 return false;
             }
         }
-
-        public List<Transaction> GetUserTransactionsCentralized(string userId)
-        {
-            Transaction tx;
-            List<Transaction> userTransactions = new List<Transaction>();
-            foreach (string transaction in UserStorage.GetUserByID(userId).Wallet.Transactions)
-            {
-                tx = this.RemoteTransactionNode.GetTransactionById(transaction);
-
-                if (tx != null)
-                {
-                    userTransactions.Add(tx);
-                }
-                else
-                {
-                    Log.ErrorFormat("Transaction ID: [{0}] does not exist", tx.TxID);
-                }
-            }
-            return userTransactions;
-        }
-
-        public bool CreateTransactionCentralized(string senderID, string receiverID, object incentiveValue, out string transactionId)
-        {
-            try
-            {
-                this.RemoteTransactionNode.CreateTransaction(senderID, receiverID, incentiveValue, out transactionId);
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Log.Error(ex.Message);
-                transactionId = null;
-                return false;
-            }
-        }
-
-        public bool ExecuteTransactionCentralized(string senderId, string receiverId, Incentive incentive, object incentiveValue, string txId)
-        {
-            User user;
-
-            try
-            {
-                user = UserStorage.GetUserByID(senderId);
-                //calc the new balance for the sender
-                user.Wallet.Balance = incentive.CalcSenderNewBalance(user.Wallet.Balance, incentiveValue);
-                user.Wallet.AssociateTransaction(txId);
-                //calc the new balance for the receiver
-                user = UserStorage.GetUserByID(receiverId);
-                user.Wallet.Balance = incentive.CalcReceiverNewBalance(user.Wallet.Balance, incentiveValue);
-                user.Wallet.AssociateTransaction(txId);
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Log.Error(ex.Message);
-                return false;
-            }
-        }
-
-        public bool AddNodeToUserWalletDescentralized(string userId, string address)
+        
+        public bool AddUserMultichainNode(string userId, string address)
         {
             User user;
 
@@ -544,11 +511,30 @@ namespace This4That_ServerNode.Nodes
 
             if (user != null)
             {
-                user.Wallet.ChainNodesAddresses.Add(address);
+                user.ChainNodesAddresses.Add(address);
                 return true;
             }
             return false;
                 
+        }
+
+        public void SaveReportReward(string taskId, string reportId, Dictionary<string, string> reward, string txId)
+        {
+            this.TaskStorage.GetTaskByID(taskId).ReportsValidated = true;
+            this.ReportStorage.AssociateReportReward(reportId, reward, txId);
+        }
+
+        public List<CSTask> GetCSTasksToValidate()
+        {
+            List<CSTask> taskList = new List<CSTask>();
+
+            foreach (CSTask task in TaskStorage.Tasks.Values)
+            {
+                if (task.ReportsValidated == false && (DateTime.Now > task.ExpirationDate))
+                    taskList.Add(task);
+            }
+
+            return taskList;
         }
 
         #endregion

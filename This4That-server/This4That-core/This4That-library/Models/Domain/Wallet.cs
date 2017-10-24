@@ -8,12 +8,18 @@ namespace This4That_library.Models.Domain
     [Serializable]
     public class Wallet
     {
-        private object balance = null;
+        private Dictionary<string, int> balance = null;
         private List<string> transactions = new List<string>();
-        private List<string> chainNodesAddresses = new List<string>();
+
         private string walletAddress = null;
 
-        public object Balance
+        public Wallet(string userAddress, Dictionary<string, int> userInitBalance)
+        {
+            this.WalletAddress = userAddress;
+            this.Balance = userInitBalance;
+        }
+
+        public Dictionary<string, int> Balance
         {
             get
             {
@@ -36,19 +42,6 @@ namespace This4That_library.Models.Domain
             set
             {
                 transactions = value;
-            }
-        }
-
-        public List<string> ChainNodesAddresses
-        {
-            get
-            {
-                return chainNodesAddresses;
-            }
-
-            set
-            {
-                chainNodesAddresses = value;
             }
         }
 

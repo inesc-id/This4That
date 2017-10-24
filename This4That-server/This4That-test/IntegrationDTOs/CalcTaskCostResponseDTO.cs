@@ -11,7 +11,9 @@ namespace This4That_test.IntegrationDTOs
     {
         private int errorCode;
         private string errorMessage;
-        private ValtoPay response;
+
+        [JsonProperty(PropertyName = "response")]
+        private Response response;
 
         [JsonProperty(PropertyName = "errorCode")]
         public int ErrorCode
@@ -41,8 +43,7 @@ namespace This4That_test.IntegrationDTOs
             }
         }
 
-        [JsonProperty(PropertyName = "response")]
-        public ValtoPay Response
+        public Response Response
         {
             get
             {
@@ -56,21 +57,56 @@ namespace This4That_test.IntegrationDTOs
         }
     }
 
-    public class ValtoPay
+    public class Response
     {
-        private object valToPay;
+        [JsonProperty(PropertyName = "incentiveToPay")]
+        private IncentiveToPay incentiveToPay;
 
-        [JsonProperty(PropertyName = "valToPay")]
-        public object ValToPay
+        public IncentiveToPay IncentiveToPay
         {
             get
             {
-                return valToPay;
+                return incentiveToPay;
             }
 
             set
             {
-                valToPay = value;
+                incentiveToPay = value;
+            }
+        }
+    }
+
+    public class IncentiveToPay
+    {
+        [JsonProperty(PropertyName = "name")]
+        private string name;
+
+        [JsonProperty(PropertyName = "quantity")]
+        private int quantity;
+
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+
+            set
+            {
+                name = value;
+            }
+        }
+
+        public int Quantity
+        {
+            get
+            {
+                return quantity;
+            }
+
+            set
+            {
+                quantity = value;
             }
         }
     }

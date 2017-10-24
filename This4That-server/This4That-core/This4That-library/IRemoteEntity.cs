@@ -6,6 +6,7 @@ using This4That_library.Models.Integration.ReportDTO;
 using This4That_library.Models.IncentiveModels;
 using This4That_library.Models.Domain;
 using This4That_library.Models.Incentives;
+using This4That_library.Integration;
 
 namespace This4That_library
 {
@@ -46,9 +47,9 @@ namespace This4That_library
 
     public interface IIncentiveEngine : IRemoteEntity
     {
-        bool CalcTaskCost(CSTaskDTO taskSpec, string userID, out object incentiveValue);
-        bool PayTask(string userId, out string transactionId);
-        bool RewardUser(string userId, out string transactionId, out object rewardObj);
+        bool CalcTaskCost(CSTaskDTO taskSpec, string userID, out IncentiveAssigned incentive);
+        bool PayTask(string userId, out string transactionId, out bool hasfunds);
+        bool RewardUser(string userId, string taskId, out string transactionId, out object response);
         bool RegisterUser(out string userId, out string userMultichainAddress);
         bool GetUserTransactions(string userId, out List<Transaction> transactions);
         bool AddNodeToChain(string userID, string multichainAddress, ref string message);
@@ -60,23 +61,28 @@ namespace This4That_library
         bool GetTasksByTopicName(out List<GetTasksDTO> listTaskDTO, string topicName);
         List<String> GetTopicsFromRepository();
         bool RegisterUser(string userAddress, Incentive incentive);
-        object GetUserBalance(string userID);
         List<CSTaskDTO> GetTasksByUserID(string userID);
         List<CSTaskDTO> GetSubscribedTasksbyUserID(string userID);
         List<CSTaskDTO> GetSubscribedTasksbyTopic(string userID, string topicName, ref string errorMessage);
         bool SubscribeTopic(string userId, string topicName, ref string errorMessage);
         bool SaveReportInRepository(ReportDTO report);
         bool ExecuteTask(string userID, string taskId);
-        bool CreateTransactionCentralized(string senderID, string receiverID, object incentiveValue, out string transactionId);
-        bool ExecuteTransactionCentralized(string senderId, string receiverId, Incentive incentive, object incentiveValue, string txId);
-        List<Transaction> GetUserTransactionsCentralized(string userId);
-        bool AddNodeToUserWalletDescentralized(string userId, string nodeAddress);
+        bool AddUserMultichainNode(string userId, string nodeAddress);
+        List<string> GetUserMultichainNodes(string userId);
+        List<CSTask> GetCSTasks();
+        List<CSTask> GetCSTasksToValidate();
+        InteractiveReport GetInteractiveReportsByID(string reportID);
+        void SaveReportReward(string taskId, string reportId, Dictionary<string, string> reward, string txId);
+        string GetUserReportByTaskId(string taskId, string userId);
+
     }
 
     public interface ITransactionNode : IRemoteEntity
     {
         Transaction GetTransactionById(string txId);
-        bool CreateTransaction(string sender, string receiver, object value, out string transactionID);
-
+        bool CreateTransaction(string sender, string receiver, IncentiveAssigned incentiveAssigned, out string transactionID);
+        bool GetUserWallet(string userId, out Wallet wallet);
+        bool CreateUserWallet(string userAddress, Incentive incentive);
+        bool IssueMoreIncentives(string managerAddress, IncentiveAssigned incentiveAssigned);
     }
 }

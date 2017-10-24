@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Net;
 using System.Web;
 using System.Web.Http;
@@ -22,12 +23,14 @@ namespace This4That_platform.ServiceLayer
             ServerManager serverMgr = null;
             APIRequestHandler handler = null;
             APIResponseDTO response = new APIResponseDTO();
+            string clientAddress;
             try
             {
-
+                clientAddress = HttpContext.Current.Request.UserHostAddress;
                 serverMgr = Global.GetCreateServerManager(HttpContext.Current.Server);
                 handler = new APIRequestHandler(HttpContext.Current.Request, serverMgr);
 
+                Global.Log.DebugFormat("Client Ip Address: {0}", clientAddress);
                 if (!handler.CalcCostCSTask(out response))
                 {
                     return Content(HttpStatusCode.InternalServerError, response);
@@ -53,11 +56,14 @@ namespace This4That_platform.ServiceLayer
             ServerManager serverMgr = null;
             APIRequestHandler handler = null;
             APIResponseDTO response = new APIResponseDTO();
+            string clientAddress = null;
 
             try
             {
+                clientAddress = HttpContext.Current.Request.UserHostAddress;
                 serverMgr = Global.GetCreateServerManager(HttpContext.Current.Server);
                 handler = new APIRequestHandler(HttpContext.Current.Request, serverMgr);
+
                 if (!handler.PayCreateCSTask(out response))
                 {
                     return Content(HttpStatusCode.InternalServerError, response);
@@ -162,6 +168,32 @@ namespace This4That_platform.ServiceLayer
             }
         }
 
+        [HttpPost]
+        [Route("task/reward")]
+        public IHttpActionResult GetTaskReward()
+        {
+            ServerManager serverMgr = null;
+            APIRequestHandler handler = null;
+            APIResponseDTO response = new APIResponseDTO();
+
+            try
+            {
+                serverMgr = Global.GetCreateServerManager(HttpContext.Current.Server);
+                handler = new APIRequestHandler(HttpContext.Current.Request, serverMgr);
+                if (!handler.GetTaskReward(out response))
+                {
+                    return Content(HttpStatusCode.InternalServerError, response);
+                }
+                return Content(HttpStatusCode.OK, response);
+            }
+            catch (Exception ex)
+            {
+                Global.Log.Error(ex.Message);
+                return Content(HttpStatusCode.InternalServerError, "ERROR");
+            }
+        }
+
+
 
         /// <summary>
         /// Creates a new user.
@@ -174,9 +206,11 @@ namespace This4That_platform.ServiceLayer
             ServerManager serverMgr = null;
             APIRequestHandler handler;
             APIResponseDTO response = new APIResponseDTO();
+            string clientAddress = null;
 
             try
             {
+                clientAddress = HttpContext.Current.Request.UserHostAddress;
                 serverMgr = Global.GetCreateServerManager(HttpContext.Current.Server);
                 handler = new APIRequestHandler(HttpContext.Current.Request, serverMgr);
                 if (!handler.RegisterUser(out response))
