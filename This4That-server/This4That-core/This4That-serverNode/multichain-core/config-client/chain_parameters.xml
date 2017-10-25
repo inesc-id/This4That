@@ -1,0 +1,6 @@
+<MultiChainConfig>
+  <Port>2902</Port>
+  <Username>multichainrpc</Username>
+  <Password>Dms6STaBi41kwKchmw8LWEbxU2ZpbfyYQqechrinMWtC</Password>
+  <ChainName>This4ThatChain</ChainName>
+</MultiChainConfig>

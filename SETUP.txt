@@ -2,12 +2,19 @@
 HOW TO DEPLOY A MULTICHAIN-NODE
 **************************************
 Pre-Requisites
-	- Ubuntu Machine
-	- Brigde Network (to be visible from the host machine)
+	- Ubuntu Machine with Brigde Network (to be visible from the host machine)
+	- Windows Machine with Visual 2015
 
 ******************************
 DEPLOY Multichain NODE on LINUX Machine
 ******************************
+
+Folder structure after completing the deploy process:
+This4That
+	-multichain-1.0-alpha-29
+		-config-server
+	-multichain-explorer-master
+
 1. Get Multichain software
 Get Multichain Version 1.0 alpha 29
 tar -xvzf multichain-1.0-alpha-29.tar.gz
@@ -29,6 +36,7 @@ NOTE: if you want to shutdown the node, enter the following command:
 ******************************
 DEPLOY BLOCKCHAIN EXPLORER on LINUX Machine
 ******************************
+NOTES: Any trouble during the setup, consult the README file on https://github.com/MultiChain/multichain-explorer
 
 1. Get Multichain Explorer zip
 	https://github.com/MultiChain/multichain-explorer
