@@ -15618,3 +15618,30 @@ Answer: [Impossible to lunch] Generated ID: [0b183bde]
  [Debug Message] - Execution Time Reward Task: [22] in Milliseconds
 2017-10-24 22:55:26,896 DEBUG GetTaskIdFromRequest 658 
  [Debug Message] - User ID: [13RBktV6uCkkZcgjoUUVRig6mFxa6GFDLLJy2h] going to execute Task: [f6881823-7c0a-4a1d-a02e-46537a0dd955]
+2017-10-25 22:57:09,916 DEBUG LoadServerInstance 117 
+ [Debug Message] - Valid XML File!
+2017-10-25 22:57:10,009 DEBUG RegisterServerManagerNode 150 
+ [Debug Message] - ServerManager INITIATED!
+2017-10-25 22:57:10,020 DEBUG LoadServerInstance 121 
+ [Debug Message] - ServerManager LOADED!
+2017-10-25 22:57:13,239 DEBUG RegisterRepositoryNode 239 
+ [Debug Message] - Connected to Repository Node! Address: [tcp://localhost:5005/Repository]
+2017-10-25 22:57:13,302 DEBUG RegisterTaskCreatorNode 177 
+ [Debug Message] - Connected to TaskCreator Node! Address: [tcp://localhost:5001/TaskCreator]
+2017-10-25 22:57:13,353 DEBUG RegisterTaskDistributorNode 197 
+ [Debug Message] - Connected to Task Distributor Node! Address: [tcp://localhost:5002/TaskDistributor]
+2017-10-25 22:57:13,401 DEBUG RegisterReportAggregatorNode 215 
+ [Debug Message] - Connected to Report Aggregator Node! Address: [tcp://localhost:5003/ReportAggregator]
+2017-10-25 22:57:13,444 DEBUG RegisterIncentiveEngineNode 227 
+ [Debug Message] - Connected to Incentive Engine Node! Address: [tcp://localhost:5004/IncentiveEngine]
+2017-10-25 22:59:19,226 DEBUG GetCSTaskToCreate 554 
+ [Debug Message] - User ID: [1BnhkZaSLgPaVTHP9smHeppgFzn1dGyoxHBgWE] Task: Name: Lunch Queue Exp: 24-10-2017 22:55:00 Topic: Tecnico Lisboa Canteen 
+InteractiveTask: Question: How is the queue to lunch today at university canteen? 
+Answer: [Empty] Generated ID: [39df73d1]
+Answer: [Few People] Generated ID: [01ccd641]
+Answer: [Lot of People] Generated ID: [ddd38af5]
+Answer: [Impossible to lunch] Generated ID: [91b53a05] 
+2017-10-25 22:59:20,460 DEBUG CreateCSTask 503 
+ [Debug Message] - Task with the ID: [5d4fd78a-bd5c-4c69-9194-b378c41139b3] created with Success!
+2017-10-25 22:59:20,476 DEBUG PayCreateCSTask 154 
+ [Debug Message] - Execution Time Create Task: [98] in Milliseconds

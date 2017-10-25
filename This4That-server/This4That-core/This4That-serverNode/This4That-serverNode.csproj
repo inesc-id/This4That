@@ -78,6 +78,98 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="multichain-core\config-client\chain_parameters.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="multichain-core\config-client\multichain.conf" />
+    <None Include="multichain-core\config-client\This4ThatChain\.lock" />
+    <None Include="multichain-core\config-client\This4ThatChain\blocks\blk00000.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\blocks\index\000003.log" />
+    <None Include="multichain-core\config-client\This4ThatChain\blocks\index\CURRENT" />
+    <None Include="multichain-core\config-client\This4ThatChain\blocks\index\LOCK" />
+    <None Include="multichain-core\config-client\This4ThatChain\blocks\index\LOG" />
+    <None Include="multichain-core\config-client\This4ThatChain\blocks\index\MANIFEST-000002" />
+    <None Include="multichain-core\config-client\This4ThatChain\blocks\rev00000.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\chainstate\000003.log" />
+    <None Include="multichain-core\config-client\This4ThatChain\chainstate\CURRENT" />
+    <None Include="multichain-core\config-client\This4ThatChain\chainstate\LOCK" />
+    <None Include="multichain-core\config-client\This4ThatChain\chainstate\LOG" />
+    <None Include="multichain-core\config-client\This4ThatChain\chainstate\MANIFEST-000002" />
+    <None Include="multichain-core\config-client\This4ThatChain\db.log" />
+    <None Include="multichain-core\config-client\This4ThatChain\debug.log" />
+    <None Include="multichain-core\config-client\This4ThatChain\entities.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\entities.db\000003.log" />
+    <None Include="multichain-core\config-client\This4ThatChain\entities.db\CURRENT" />
+    <None Include="multichain-core\config-client\This4ThatChain\entities.db\LOCK" />
+    <None Include="multichain-core\config-client\This4ThatChain\entities.db\LOG" />
+    <None Include="multichain-core\config-client\This4ThatChain\entities.db\MANIFEST-000002" />
+    <None Include="multichain-core\config-client\This4ThatChain\fee_estimates.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\multichain.conf" />
+    <None Include="multichain-core\config-client\This4ThatChain\params.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\params.dat.bak" />
+    <None Include="multichain-core\config-client\This4ThatChain\peers.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\permissions.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\permissions.db\000005.ldb" />
+    <None Include="multichain-core\config-client\This4ThatChain\permissions.db\000008.ldb" />
+    <None Include="multichain-core\config-client\This4ThatChain\permissions.db\000011.ldb" />
+    <None Include="multichain-core\config-client\This4ThatChain\permissions.db\000012.log" />
+    <None Include="multichain-core\config-client\This4ThatChain\permissions.db\CURRENT" />
+    <None Include="multichain-core\config-client\This4ThatChain\permissions.db\LOCK" />
+    <None Include="multichain-core\config-client\This4ThatChain\permissions.db\LOG" />
+    <None Include="multichain-core\config-client\This4ThatChain\permissions.db\LOG.old" />
+    <None Include="multichain-core\config-client\This4ThatChain\permissions.db\MANIFEST-000010" />
+    <None Include="multichain-core\config-client\This4ThatChain\permissions.log" />
+    <None Include="multichain-core\config-client\This4ThatChain\seed.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\txs.db\000003.log" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\txs.db\CURRENT" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\txs.db\LOCK" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\txs.db\LOG" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\txs.db\MANIFEST-000002" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\txs.log" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\txs00000.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\uncsend_65.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\uncsend_66.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\uncsend_67.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\uncsend_68.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\uncsend_69.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\uncsend_70.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\uncsend_71.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\uncsend_72.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\uncsend_73.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\uncsend_74.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\uncsend_75.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\uncsend_76.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\uncsend_77.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\uncsend_78.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\uncsend_79.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\uncsend_80.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\uncsend_81.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\uncsend_82.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\uncsend_83.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\uncsend_84.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\uncsend_85.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\utxo0_65.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\utxo0_66.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\utxo0_67.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\utxo0_68.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\utxo0_69.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\utxo0_70.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\utxo0_71.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\utxo0_72.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\utxo0_73.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\utxo0_74.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\utxo0_75.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\utxo0_76.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\utxo0_77.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\utxo0_78.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\utxo0_79.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\utxo0_80.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\utxo0_81.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\utxo0_82.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\utxo0_83.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\utxo0_84.dat" />
+    <None Include="multichain-core\config-client\This4ThatChain\wallet\utxo0_85.dat" />
     <None Include="multichain-core\config-server\chain_parameters.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -187,11 +279,13 @@
     <Content Include="Config\configInstances.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="multichain-core\config-client\chain_parameters.xml" />
     <Content Include="multichain-core\config-server\chain_parameters.xml" />
     <Content Include="multichain-core\multichain-cli.exe" />
     <Content Include="multichain-core\multichain-util.exe" />
     <Content Include="multichain-core\multichaind.exe" />
     <Content Include="multichain-core\README.txt" />
+    <Content Include="multichain-core\SETUP_linux.txt" />
     <Content Include="multichain-core\SETUP.txt" />
   </ItemGroup>
   <ItemGroup>

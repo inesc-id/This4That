@@ -38,7 +38,7 @@ namespace This4That_library.Models.IncentiveModels
             string chainName;
 
             //create the blockchain if it does not exist
-            CreateBlockChain(out chainAlreadyExist);
+            //CreateBlockChain(out chainAlreadyExist);
             //start the blockchain
             StartBlockChain();
             //load the multichain parameters
@@ -303,7 +303,7 @@ namespace This4That_library.Models.IncentiveModels
             try
             {
                 //take care of xml path, because it's realtive to the process which is running the app
-                xmlParser = new XMLParser(@"..\..\multichain-core\config-server\chain_parameters.xml", @"..\..\multichain-core\config-server\chain_parameters.xsd", "This4ThatNS");
+                xmlParser = new XMLParser(@"..\..\multichain-core\config-client\chain_parameters.xml", @"..\..\multichain-core\config-client\chain_parameters.xsd", "This4ThatNS");
                 if (!xmlParser.LoadXMLConfiguration(ref errorMessage))
                 {
                     throw new Exception(errorMessage);
@@ -350,7 +350,7 @@ namespace This4That_library.Models.IncentiveModels
 
         private void StartBlockChain()
         {
-            Process.Start(@"..\..\multichain-core\multichaind.exe", @"This4ThatChain -datadir=..\..\multichain-core\config-server");
+            Process.Start(@"..\..\multichain-core\multichaind.exe", @"This4ThatChain -datadir=..\..\multichain-core\config-client");
             //give time to client, to connect to the node
             Console.WriteLine("[INFO] - Connecting to Multichain...");
             Thread.Sleep(10000);
