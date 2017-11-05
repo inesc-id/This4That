@@ -94,9 +94,9 @@ THIS4THAT CLIENT - Windows Client
 	NOTE: now the node must connect to the Linux node
 
 4. Go to the This4That-serverNode\multichain-core\config-client and edit the chain_parameters.xml:
-	Change <port> according to the <default-rpc-port> defined in \config-client\This4ThatChain\params.dat
-	Change <username> and <password> according to file \config-client\This4That\multichain.conf
-	Change <ChainName> according to the blockchain name
+	Change [port] according to the [default-rpc-port] defined in \config-client\This4ThatChain\params.dat
+	Change [username] and [password] according to file \config-client\This4That\multichain.conf
+	Change [ChainName] according to the blockchain name
 
 
 5. Now the it just launch the Start on Visual Studio to start Thi4That Application.
