@@ -82,7 +82,7 @@ THIS4THAT CLIENT - Windows Client
 
 1. Connect client node to This4ThatNode
 	\This4That-serverNode\multichain-core:
-	multichaind.exe This4ThatChain@<linuxIpAddress>:<port> -datadir=.\config-client
+	multichaind.exe This4ThatChain@[linuxIpAddress>]:[port] -datadir=.\config-client
 	NOTE: annotate the multichain address
 
 2. Allow Multichain Node to connect (execute on Linux Machine)
@@ -90,7 +90,7 @@ THIS4THAT CLIENT - Windows Client
 	NOTE: the address (17...LFo) is presented in the console after the This4ThatNode tries to connect to the blockchain
 
 3. Connect the client node to This4ThatNode
-	start multichaind.exe This4ThatChain@<linuxIpAddress>:<port> -datadir=.\config-client
+	start multichaind.exe This4ThatChain@[linuxIpAddress]:[port] -datadir=.\config-client
 	NOTE: now the node must connect to the Linux node
 
 4. Go to the This4That-serverNode\multichain-core\config-client and edit the chain_parameters.xml:
